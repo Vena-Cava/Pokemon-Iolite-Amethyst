@@ -1,0 +1,6 @@
+Name = Teal mask
+Version = 1.0
+Website = https://www.reliccastle.com/threads/5817/
+Credits = Vena
+Essentials = 21.1
+Requires = v21.1 Hotfixes

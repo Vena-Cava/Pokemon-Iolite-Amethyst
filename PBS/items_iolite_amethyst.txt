@@ -1,0 +1,259 @@
+#-------------------------------
+[STUFFEDGYRO]
+Name = Stuffed Gyro
+NamePlural = Stuffed Gyros
+Pocket = 2
+Price = 350
+FieldUse = OnPokemon
+BattleUse = OnPokemon
+Flags = Fling_30
+Description = The Niphos region's specialty--big meaty wrap. It can be used once to heal all the status conditions of a Pokémon.
+#-------------------------------
+[HEARTYGYRO]
+Name = Hearty Gyro
+NamePlural = Hearty Gyros
+Pocket = 2
+Price = 300
+FieldUse = OnPokemon
+BattleUse = OnPokemon
+Flags = Fling_30
+Description = The Niphos region's specialty--veggie and meat wrap. It can be used to restore 80 HP to a single Pokémon.
+#-------------------------------
+[LEANGYRO]
+Name = Lean Gyro
+NamePlural = Lean Gyros
+Pocket = 2
+Price = 3000
+BattleUse = OnPokemon
+Flags = Fling_30,BattleEnhancer
+Description = The Niphos region's specialty--egg and meat wrap. It raises the Attack stat of a Pokémon in battle immensely.
+#-------------------------------
+[TOUGHGYRO]
+Name = Tough Gyro
+NamePlural = Tough Gyros
+Pocket = 2
+Price = 3000
+BattleUse = OnPokemon
+Flags = Fling_30,BattleEnhancer
+Description = The Niphos region's specialty--bean and meat wrap. It raises the Defense stat of a Pokémon in battle immensely.
+#-------------------------------
+[CHEESYGYRO]
+Name = Cheesy Gyro
+NamePlural = Cheesy Gyros
+Pocket = 2
+Price = 3000
+BattleUse = OnPokemon
+Flags = Fling_30,BattleEnhancer
+Description = The Niphos region's specialty--cheese and meat wrap. It raises the Sp. Atk stat of a Pokémon in battle immensely.
+#-------------------------------
+[SEAFOODGYRO]
+Name = Seafood Gyro
+NamePlural = Seafood Gyros
+Pocket = 2
+Price = 3000
+BattleUse = OnPokemon
+Flags = Fling_30,BattleEnhancer
+Description = The Niphos region's specialty--fish and meat wrap. It raises the Sp. Def stat of a Pokémon in battle immensely.
+#-------------------------------
+[LOWFATGYRO]
+Name = Low-Fat Gyro
+NamePlural = Low-Fat Gyros
+Pocket = 2
+Price = 3000
+BattleUse = OnPokemon
+Flags = Fling_30,BattleEnhancer
+Description = The Niphos region's specialty--low-fat meat wrap. It raises the Speed stat of a Pokémon in battle immensely.
+#-------------------------------
+[MASTERFULGYRO]
+Name = Masterful Gyro
+NamePlural = Masterful Gyros
+Pocket = 2
+Price = 20000
+BattleUse = OnPokemon
+Flags = Fling_30,BattleEnhancer
+Description = The Niphos region's specialty--high-grade meat wrap. It raises all stats of a Pokémon in battle immensely.
+#-------------------------------
+[SYLVSITE]
+Name = Sylvsite
+NamePlural = Sylvsites
+Pocket = 1
+Price = 0
+BPPrice = 50
+Flags = MegaStone,Fling_80
+Description = One of a variety of mysterious Mega Stones. Have Sylvstag hold it, and it will be able to Mega Evolve.
+#-------------------------------
+[FERRVORITE]
+Name = Ferrvorite
+NamePlural = Ferrvorites
+Pocket = 1
+Price = 0
+BPPrice = 50
+Flags = MegaStone,Fling_80
+Description = One of a variety of mysterious Mega Stones. Have Ferrvoram hold it, and it will be able to Mega Evolve.
+#-------------------------------
+[BARBEARIENITEX]
+Name = Barbearienite X
+NamePlural = Barbearienite Xs
+Pocket = 1
+Price = 0
+BPPrice = 50
+Flags = MegaStone,Fling_80
+Description = One of a variety of mysterious Mega Stones. Have Barbearien hold it, and it will be able to Mega Evolve.
+#-------------------------------
+[BARBEARIENITEY]
+Name = Barbearienite Y
+NamePlural = Barbearienite Ys
+Pocket = 1
+Price = 0
+BPPrice = 50
+Flags = MegaStone,Fling_80
+Description = One of a variety of mysterious Mega Stones. Have Barbearien hold it, and it will be able to Mega Evolve.
+#-------------------------------
+[FERMENTITE]
+Name = Fermentite
+NamePlural = Fermentites
+Pocket = 1
+Price = 0
+BPPrice = 50
+Flags = MegaStone,Fling_80
+Description = One of a variety of mysterious Mega Stones. Have Fermental hold it, and it will be able to Mega Evolve.
+#-------------------------------
+[KAFFIENITE]
+Name = Kaffienite
+NamePlural = Kaffienites
+Pocket = 1
+Price = 0
+BPPrice = 50
+Flags = MegaStone,Fling_80
+Description = One of a variety of mysterious Mega Stones. Have Kaffiend hold it, and it will be able to Mega Evolve.
+#-------------------------------
+[MAXITAURITE]
+Name = Maxitaurite
+NamePlural = Maxitaurites
+Pocket = 1
+Price = 0
+BPPrice = 50
+Flags = MegaStone,Fling_80
+Description = One of a variety of mysterious Mega Stones. Have Maxitaur hold it, and it will be able to Mega Evolve.
+#-------------------------------
+[ABRACADAVRITE]
+Name = Abracadavrite
+NamePlural = Abracadavrites
+Pocket = 1
+Price = 0
+BPPrice = 50
+Flags = MegaStone,Fling_80
+Description = One of a variety of mysterious Mega Stones. Have Abracadavre hold it, and it will be able to Mega Evolve.
+#-------------------------------
+[SAUCERITE]
+Name = Saucerite
+NamePlural = Saucerites
+Pocket = 1
+Price = 0
+BPPrice = 50
+Flags = MegaStone,Fling_80
+Description = One of a variety of mysterious Mega Stones. Have Saucerer hold it, and it will be able to Mega Evolve.
+#-------------------------------
+[TWREXXITE]
+Name = T-Wrexxite
+NamePlural = T-Wrexxites
+Pocket = 1
+Price = 0
+BPPrice = 50
+Flags = MegaStone,Fling_80
+Description = One of a variety of mysterious Mega Stones. Have T-Wrexx hold it, and it will be able to Mega Evolve.
+#-------------------------------
+[BASILISKITE]
+Name = Basiliskite
+NamePlural = Basiliskites
+Pocket = 1
+Price = 0
+BPPrice = 50
+Flags = MegaStone,Fling_80
+Description = One of a variety of mysterious Mega Stones. Have Basiliskos hold it, and it will be able to Mega Evolve.
+#-------------------------------
+[OGLITE]
+Name = Oglite
+NamePlural = Oglites
+Pocket = 1
+Price = 0
+BPPrice = 50
+Flags = MegaStone,Fling_80
+Description = One of a variety of mysterious Mega Stones. Have Oglace hold it, and it will be able to Mega Evolve.
+#-------------------------------
+[MIYILNITE]
+Name = Miyilnite
+NamePlural = Miyilnites
+Pocket = 1
+Price = 0
+BPPrice = 50
+Flags = MegaStone,Fling_80
+Description = One of a variety of mysterious Mega Stones. Have Miyilnagon hold it, and it will be able to Mega Evolve.
+#-------------------------------
+[CRYSTALCORE]
+Name = Crystal Core
+NamePlural = Crystal Cores
+Pocket = 1
+Price = 20000
+SellPrice = 0
+Flags = Fling_80
+Description = When held by Mechanylos, this large, crystallised gearbox wells with power and boosts its Attack and Defense stats.
+#-------------------------------
+[INDIGOROSE]
+Name = Indigo Rose
+NamePlural = Indigo Roses
+Pocket = 1
+Price = 20000
+SellPrice = 0
+Flags = Fling_40
+Description = When held by Raseriol, this delicate, blue flower wells with power and boosts its Sp. Atk and Sp. Def stats.
+#-------------------------------
+[SPECIALSCOOP]
+Name = Special Scoop
+NamePlural = Special Scoops
+Pocket = 1
+Price = 1000
+BPPrice = 25
+Flags = Fling_60
+Description = An ice-cold scoop, it adds one extra chance to hit to Multi-Strike Moves.
+#-------------------------------
+[COZMIUMZ]
+Name = Cozmium Z
+NamePlural = Cozmium Z
+Pocket = 9
+Price = 0
+FieldUse = OnPokemon
+Flags = ZCrystal,KeyItem
+Description = It converts Z-Power into crystals that upgrade Cozmix's Celestial Contact to an exclusive Z-Move.
+HeldDescription = This is a crystallized form of Z-Power. It upgrades Cozmix's Celestial Contact to a Z-Move.
+#-------------------------------
+[JOTUNIUMZ]
+Name = Jotunium Z
+NamePlural = Jotunium Z
+Pocket = 9
+Price = 0
+FieldUse = OnPokemon
+Flags = ZCrystal,KeyItem
+Description = It converts Z-Power into crystals that upgrade the Jotuns' Giant's Wrath to an exclusive Z-Move.
+HeldDescription = This is a crystallized form of Z-Power. It upgrades Jotuns' Giant's Wrath to a Z-Move.
+#-------------------------------
+[MECHANIUMZ]
+Name = Mechanium Z
+NamePlural = Mechanium Z
+Pocket = 9
+Price = 0
+FieldUse = OnPokemon
+Flags = ZCrystal,KeyItem
+Description = It converts Z-Power into crystals that upgrade Mechanylos's Piston-Powered Punch to an exclusive Z-Move.
+HeldDescription = This is a crystallized form of Z-Power. It upgrades Mechanylos's Piston-Powered Punch to a Z-Move.
+#-------------------------------
+[RASERIUMZ]
+Name = Raserium Z
+NamePlural = Raserium Z
+Pocket = 9
+Price = 0
+FieldUse = OnPokemon
+Flags = ZCrystal,KeyItem
+Description = It converts Z-Power into crystals that upgrade Raseriol's Nature's Reclamation to an exclusive Z-Move.
+HeldDescription = This is a crystallized form of Z-Power. It upgrades Raseriol's Nature's Reclamation to a Z-Move.
+#-------------------------------

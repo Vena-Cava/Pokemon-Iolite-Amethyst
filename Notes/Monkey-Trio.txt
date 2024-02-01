@@ -1,0 +1,9 @@
+ikos
+
+Mati - Eyes
+Stom - Mouth
+Afti - Ears
+
+Matikos
+Aftikos
+Stomikos

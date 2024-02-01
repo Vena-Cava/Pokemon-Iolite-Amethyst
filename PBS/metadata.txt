@@ -1,0 +1,43 @@
+﻿# See the documentation on the wiki to learn how to edit this file.
+#-------------------------------
+[0]
+StartMoney = 3000
+StartItemStorage = POTION
+Home = 3,7,5,8
+StorageCreator = Bill
+WildBattleBGM = Battle wild
+TrainerBattleBGM = Battle trainer
+WildVictoryBGM = Battle victory wild
+TrainerVictoryBGM = Battle victory trainer
+SurfBGM = Surfing
+BicycleBGM = Bicycle
+#-------------------------------
+[1]
+TrainerType = POKEMONTRAINER_Red
+WalkCharset = Amethyst Protagonists/trProtag_BoyWalk
+RunCharset = B2W2 Protagonists/trProtag_BoyRun
+CycleCharset = B2W2 Protagonists/trProtag_BoyBike
+SurfCharset = B2W2 Protagonists/trProtag_BoySurf
+DiveCharset = B2W2 Protagonists/trProtag_BoySurf
+FishCharset = B2W2 Protagonists/trProtag_BoyFish
+SurfFishCharset = B2W2 Protagonists/trProtag_BoyFish
+#-------------------------------
+[2]
+TrainerType = POKEMONTRAINER_Leaf
+WalkCharset = B2W2 Protagonists/trProtag_GirlWalk
+RunCharset = B2W2 Protagonists/trProtag_GirlRun
+CycleCharset = B2W2 Protagonists/trProtag_GirlBike
+SurfCharset = B2W2 Protagonists/trProtag_GirlSurf
+DiveCharset = B2W2 Protagonists/trProtag_GirlSurf
+FishCharset = B2W2 Protagonists/trProtag_GirlFish
+SurfFishCharset = B2W2 Protagonists/trProtag_GirlFish
+#-------------------------------
+#[3]
+#TrainerType = POKEMONTRAINER_Alex
+#WalkCharset = B2W2 Protagonists/trProtag_NBWalk
+#RunCharset = B2W2 Protagonists/trProtag_NBRun
+#CycleCharset = B2W2 Protagonists/trProtag_NBBike
+#SurfCharset = B2W2 Protagonists/trProtag_NBSurf
+#DiveCharset = B2W2 Protagonists/trProtag_NBSurf
+#FishCharset = B2W2 Protagonists/trProtag_NBFish
+#SurfFishCharset = B2W2 Protagonists/trProtag_NBFish
