@@ -28063,7 +28063,8 @@ Color = Red
 Shape = Quadruped
 Habitat = Grassland
 Category = Smokey Goat
-Pokedex = baa
+Pokedex = A kid with a metallic coating of fluff. Like a sweater, it builds up nightmarish amounts of static.
+Evolutions = SMOULDOE,Level,16
 #-------------------------------
 [SMOULDOE]
 Name = Smouldoe
@@ -28086,7 +28087,8 @@ Color = Red
 Shape = Quadruped
 Habitat = Grassland
 Category = Smokey Goat
-Pokedex = baa
+Pokedex = The static within its coat is causing the wool to form jagged points. The electricity is picking iron out of the dirt, causing it to grow more wool.
+Evolutions = FERRVORAM,Level,36
 #-------------------------------
 [FERRVORAM]
 Name = Ferrvoram
@@ -28109,7 +28111,7 @@ Color = Red
 Shape = Quadruped
 Habitat = Grassland
 Category = Smokey Goat
-Pokedex = baa
+Pokedex = Its body is actively sparking with the sheer amount of static within its coat. It can short out electronics.
 #-------------------------------
 [BRAKKUB]
 Name = Brakkub
@@ -28132,7 +28134,7 @@ Color = Blue
 Shape = BipedalTail
 Habitat = WatersEdge
 Category = River Bear
-Pokedex = If not friend, why friend shaped?
+Pokedex = Living near streams, Brakkub practice catching Palmon. Their claws aren't sharp yet, so they often lose their catch.
 #-------------------------------
 [FROSSPRITE]
 Name = Frossprite
