@@ -11,7 +11,7 @@ module VMS
   # Server
   # ===========
   # The hostname of the server. This is the IP address or domain name that the server is hosted on.
-  HOST = "localhost"
+  HOST = "192.168.0.112"
   # The port that the server is hosted on. This is the port that the server is listening on.
   PORT = 25565
   # Whether or not to use TCP instead of UDP. TCP is more reliable, but UDP is faster.
@@ -59,7 +59,7 @@ module VMS
   # Whether or not VMS is accessible. (set to 'proc { next true }' to always be accessible) (only used if ACCESSIBLE_FROM_PAUSE_MENU is true)
   ACCESSIBLE_PROC = proc { next true }
   # The name of the VMS option in the pause menu. (only used if ACCESSIBLE_FROM_PAUSE_MENU is true)
-  MENU_NAME = "VMS"
+  MENU_NAME = "Multiplayer"
   # Whether or not to show the cluster ID in the pause menu.
   SHOW_CLUSTER_ID_IN_PAUSE_MENU = true
   
