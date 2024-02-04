@@ -15,7 +15,7 @@ BicycleBGM = Bicycle
 [1]
 TrainerType = POKEMONTRAINER_Red
 WalkCharset = Amethyst Protagonists/trProtag_BoyWalk
-RunCharset = B2W2 Protagonists/trProtag_BoyRun
+RunCharset = Amethyst Protagonists/trProtag_BoyRun
 CycleCharset = B2W2 Protagonists/trProtag_BoyBike
 SurfCharset = B2W2 Protagonists/trProtag_BoySurf
 DiveCharset = B2W2 Protagonists/trProtag_BoySurf

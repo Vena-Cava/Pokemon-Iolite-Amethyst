@@ -5,13 +5,13 @@ module VMS
   # Whether or not to log messages to the console.
   LOG_TO_CONSOLE = true
   # Whether or not to show yourself from the server's perspective. This is useful for testing.
-  SHOW_SELF = false
+  SHOW_SELF = true
 
   # ===========
   # Server
   # ===========
   # The hostname of the server. This is the IP address or domain name that the server is hosted on.
-  HOST = "192.168.0.112"
+  HOST = "10.150.0.3"
   # The port that the server is hosted on. This is the port that the server is listening on.
   PORT = 25565
   # Whether or not to use TCP instead of UDP. TCP is more reliable, but UDP is faster.
