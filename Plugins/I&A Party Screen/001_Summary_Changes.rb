@@ -525,6 +525,9 @@ class PokemonSummary_Scene
       when 1
         ownerbase = Color.new(255, 124, 109)
         ownershadow = Color.new(168, 53, 40)
+	  when 2
+        ownerbase = Color.new(75, 221, 75)
+        ownershadow = Color.new(10, 138, 10)
       end
       textpos.push([@pokemon.owner.name, 607, 182, 2, ownerbase, ownershadow])
       textpos.push([sprintf("%05d", @pokemon.owner.public_id), 607, 214, 2,

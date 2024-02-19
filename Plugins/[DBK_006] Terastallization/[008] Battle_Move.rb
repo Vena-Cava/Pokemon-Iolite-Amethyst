@@ -140,6 +140,42 @@ class Battle::AI::AIMove
   end
 end
 
+#===============================================================================
+# Hidden Power
+#===============================================================================
+# Excludes Stellar as a potential Hidden Power type.
+#-------------------------------------------------------------------------------
+def pbHiddenPower(pkmn)
+  iv = pkmn.iv
+  idxType = 0
+  power = 60
+  types = []
+  GameData::Type.each do |t|
+    types[t.icon_position] ||= []
+    types[t.icon_position].push(t.id) if !t.pseudo_type && ![:NORMAL, :STELLAR, :SHADOW].include?(t.id)
+  end
+  types.flatten!.compact!
+  idxType |= (iv[:HP] & 1)
+  idxType |= (iv[:ATTACK] & 1) << 1
+  idxType |= (iv[:DEFENSE] & 1) << 2
+  idxType |= (iv[:SPEED] & 1) << 3
+  idxType |= (iv[:SPECIAL_ATTACK] & 1) << 4
+  idxType |= (iv[:SPECIAL_DEFENSE] & 1) << 5
+  idxType = (types.length - 1) * idxType / 63
+  type = types[idxType]
+  if Settings::MECHANICS_GENERATION <= 5
+    powerMin = 30
+    powerMax = 70
+    power |= (iv[:HP] & 2) >> 1
+    power |= (iv[:ATTACK] & 2)
+    power |= (iv[:DEFENSE] & 2) << 1
+    power |= (iv[:SPEED] & 2) << 2
+    power |= (iv[:SPECIAL_ATTACK] & 2) << 3
+    power |= (iv[:SPECIAL_DEFENSE] & 2) << 4
+    power = powerMin + ((powerMax - powerMin) * power / 63)
+  end
+  return [type, power]
+end
 
 #===============================================================================
 # Revelation Dance

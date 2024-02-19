@@ -87,17 +87,17 @@ class Battle
   end
 
   #-----------------------------------------------------------------------------
-  # Resets various effects at the end of round.
+  # Aliased to add Syrupy effect.
   #-----------------------------------------------------------------------------
-  alias paldea_pbEndOfRoundPhase pbEndOfRoundPhase
-  def pbEndOfRoundPhase
-    paldea_pbEndOfRoundPhase
-    allBattlers.each_with_index do |battler, i|
-	  battler.effects[PBEffects::AllySwitch]  = false
-      if Settings::MECHANICS_GENERATION >= 9
-        battler.effects[PBEffects::Charge]   += 1 if battler.effects[PBEffects::Charge]     > 0
-      end
-      battler.effects[PBEffects::GlaiveRush] -= 1 if battler.effects[PBEffects::GlaiveRush] > 0
+  alias paldea_pbEOREndBattlerSelfEffects pbEOREndBattlerSelfEffects
+  def pbEOREndBattlerSelfEffects(battler)
+    paldea_pbEOREndBattlerSelfEffects(battler)
+    return if battler.fainted?
+    if battler.effects[PBEffects::Syrupy] > 0
+      pbCommonAnimation("Syrupy", battler)
+      battler.effects[PBEffects::Syrupy] -= 1
+      battler.pbLowerStatStage(:SPEED, 1, battler) if battler.pbCanLowerStatStage?(:SPEED)
+      pbDisplay(_INTL("{1} was freed from the sticky candy syrup!", battler.pbThis)) if battler.effects[PBEffects::Syrupy] == 0
     end
   end
   
@@ -126,6 +126,22 @@ class Battle
       battler.pbTakeEffectDamage(battler.totalhp / fraction) { |hp_lost|
         pbDisplay(_INTL("{1} is hurt by Salt Cure!", battler.pbThis))
       }
+    end
+  end
+  
+  #-----------------------------------------------------------------------------
+  # Resets various effects at the end of round.
+  #-----------------------------------------------------------------------------
+  alias paldea_pbEndOfRoundPhase pbEndOfRoundPhase
+  def pbEndOfRoundPhase
+    paldea_pbEndOfRoundPhase
+    allBattlers.each_with_index do |battler, i|
+	  battler.effects[PBEffects::AllySwitch]     = false
+	  battler.effects[PBEffects::BurningBulwark] = false
+      if Settings::MECHANICS_GENERATION >= 9
+        battler.effects[PBEffects::Charge]   += 1 if battler.effects[PBEffects::Charge]     > 0
+      end
+      battler.effects[PBEffects::GlaiveRush] -= 1 if battler.effects[PBEffects::GlaiveRush] > 0
     end
   end
   
@@ -180,15 +196,45 @@ class Battle::Move
   def windMove?;        return @flags.any? { |f| f[/^Wind$/i] };            end
   def slicingMove?;     return @flags.any? { |f| f[/^Slicing$/i] };         end
   def electrocuteUser?; return @flags.any? { |f| f[/^ElectrocuteUser$/i] }; end
-  
+
   #-----------------------------------------------------------------------------
-  # Aliased to add type displays for Judgement and Raging Bull.
+  # Aliased to add Mind's Eye effect.
+  #-----------------------------------------------------------------------------  
+  alias paldea_pbCalcTypeModSingle pbCalcTypeModSingle
+  def pbCalcTypeModSingle(moveType, defType, user, target)
+    ret = paldea_pbCalcTypeModSingle(moveType, defType, user, target)
+    if Effectiveness.ineffective_type?(moveType, defType)
+      if user.hasActiveAbility?(:MINDSEYE) && defType == :GHOST
+        ret = Effectiveness::NORMAL_EFFECTIVE_MULTIPLIER
+      end
+    end
+    return ret
+  end
+
+  #-----------------------------------------------------------------------------
+  # Aliased to add Tera Shell effect.
+  #-----------------------------------------------------------------------------  
+  alias paldea_pbCalcTypeMod pbCalcTypeMod
+  def pbCalcTypeMod(moveType, user, target)
+    ret = Effectiveness::NORMAL_EFFECTIVE_MULTIPLIER
+    return ret if !moveType
+    ret = paldea_pbCalcTypeMod(moveType, user, target)
+    if target.abilityActive?
+      ret = Battle::AbilityEffects.triggerModifyTypeEffectiveness(
+	    target.ability, user, target, self, @battle, ret)
+    end
+    return ret
+  end
+
+  #-----------------------------------------------------------------------------
+  # Aliased to add type displays for certain moves that change type.
   #-----------------------------------------------------------------------------  
   alias paldea_display_type display_type
   def display_type(battler)
-    case @function
-    when "TypeDependsOnUserPlate", # Judgement
-         "TypeDependsOnUserForm"   # Raging Bull
+    case @function_code
+    when "TypeDependsOnUserPlate",            # Judgement
+         "TypeIsUserSecondType",              # Ivy Cudgel
+         "TypeIsUserSecondTypeRemoveScreens"  # Raging Bull
       return pbBaseType(battler)
     else
       return paldea_display_type(battler)
@@ -227,8 +273,8 @@ class Battle::Move
     ret = paldea_pbAdditionalEffectChance(user, target, effectChance)
     return ret if [0, 100].include?(ret)
     if @battle.pbWeather == :Hail &&
-       (@function.include?("FrostbiteTarget") ||
-       (Settings::FREEZE_EFFECTS_CAUSE_FROSTBITE && @function.include?("FreezeTarget")))
+       (@function_code.include?("FrostbiteTarget") ||
+       (Settings::FREEZE_EFFECTS_CAUSE_FROSTBITE && @function_code.include?("FreezeTarget")))
       ret *= 2
     end
     return [ret, 100].min
@@ -241,7 +287,7 @@ class Battle::Move
   end
   
   #-----------------------------------------------------------------------------
-  # -Aliased for accuracy checks on targets with certain effects.
+  # Aliased for accuracy checks on targets with certain effects.
   # -Moves on Pokemon who's Commander ability is currently active always miss.
   # -Moves on Pokemon who are under the negative effects of Glaive Rush always hit.
   #-----------------------------------------------------------------------------
@@ -255,7 +301,8 @@ class Battle::Move
   #-----------------------------------------------------------------------------
   # Aliased to add a variety of new effects that affect damage calculation.
   #  -Applies the effects of the various "of Ruin" abilities.
-  #  -Negates the damage reduction the move Hydro Steam would have in the Sun.
+  #  -Calculates the power of Psyblade in Electric Terrain.
+  #  -Calculates the power of Hydro Steam in Sun.
   #  -Increases the Defense of Ice-types during Snow weather (Gen 9 version).
   #  -Halves the damage dealt by special attacks if the user has the Frostbite status.
   #  -Increases damage taken if the targer has the Drowsy status.
@@ -263,33 +310,37 @@ class Battle::Move
   #-----------------------------------------------------------------------------
   alias paldea_pbCalcDamageMultipliers pbCalcDamageMultipliers
   def pbCalcDamageMultipliers(user, target, numTargets, type, baseDmg, multipliers)
+    # "of Ruin" abilities
     [:TABLETSOFRUIN, :SWORDOFRUIN, :VESSELOFRUIN, :BEADSOFRUIN].each_with_index do |abil, i|
       category = (i < 2) ? physicalMove? : specialMove?
       category = !category if i.odd? && @battle.field.effects[PBEffects::WonderRoom] > 0
       mult = (i.even?) ? multipliers[:attack_multiplier] : multipliers[:defense_multiplier]
       mult *= 0.75 if @battle.pbCheckGlobalAbility(abil) && !user.hasActiveAbility?(abil) && category
     end
-	if @battle.field.terrain == :Electric && user.affectedByTerrain? &&
-	   @function == "IncreasePowerWhileElectricTerrain"
-	  multipliers[:power_multiplier] *= 1.5 if type != :ELECTRIC
-	end
+    if @battle.field.terrain == :Electric && user.affectedByTerrain? &&
+       @function_code == "IncreasePowerWhileElectricTerrain"
+      multipliers[:power_multiplier] *= 1.5 if type != :ELECTRIC
+    end
     case user.effectiveWeather
     when :Sun, :HarshSun
-      if @function = "IncreasePowerInSunWeather"
+      if @function_code = "IncreasePowerInSunWeather"
         multipliers[:final_damage_multiplier] *= (type == :FIRE) ? 1 : (type == :WATER) ? 3 : 1.5
       end
     when :Hail
       if Settings::HAIL_WEATHER_TYPE > 0 && target.pbHasType?(:ICE) && 
-         (physicalMove? || @function == "UseTargetDefenseInsteadOfTargetSpDef")
+         (physicalMove? || @function_code == "UseTargetDefenseInsteadOfTargetSpDef")
         multipliers[:defense_multiplier] *= 1.5
       end
     end
+    # Frostbite
     if user.status == :FROSTBITE && specialMove?
       multipliers[:final_damage_multiplier] /= 2
     end
+    # Drowsy
     if target.status == :DROWSY
       multipliers[:final_damage_multiplier] *= 4 / 3.0
     end
+    # Glaive Rush
     multipliers[:final_damage_multiplier] *= 2 if target.effects[PBEffects::GlaiveRush] > 0
     paldea_pbCalcDamageMultipliers(user, target, numTargets, type, baseDmg, multipliers)
   end
@@ -362,5 +413,20 @@ class Battle::Scene
     target = target[0] if target.is_a?(Array)
     return if target && target.isCommander?
     paldea_pbCommonAnimation(animName, user, target)  
+  end
+end
+
+################################################################################
+# 
+# Battle::DamageState class changes.
+# 
+################################################################################
+class Battle::DamageState
+  attr_accessor :terashell # Tera Shell ability used
+
+  alias paldea_reset reset
+  def reset
+    @terashell = false
+    paldea_reset
   end
 end

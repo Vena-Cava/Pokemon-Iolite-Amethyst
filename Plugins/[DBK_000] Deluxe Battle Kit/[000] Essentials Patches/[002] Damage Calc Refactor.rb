@@ -381,7 +381,7 @@ class Battle::Move
     @flags.each do |flag|
       next if !flag.include?("HighCriticalHitRate")
       stage = flag.split("_")[1]
-      return (stage) ? stage : 1
+      return (stage) ? stage.to_i : 1
     end
     return 0
   end

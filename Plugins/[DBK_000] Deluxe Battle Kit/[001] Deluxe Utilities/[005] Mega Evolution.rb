@@ -8,9 +8,9 @@
 # Adds a toggle for Mega Evolution in the debug menu.
 #-------------------------------------------------------------------------------
 MenuHandlers.add(:debug_menu, :deluxe_plugins_menu, {
-  "name"        => _INTL("Deluxe battle settings..."),
+  "name"        => _INTL("Deluxe plugin settings..."),
   "parent"      => :main,
-  "description" => _INTL("Settings added by the Deluxe Battle Kit and other supported plugins."),
+  "description" => _INTL("Settings added by the Deluxe Battle Kit and other add-on plugins."),
   "always_show" => false
 })
 

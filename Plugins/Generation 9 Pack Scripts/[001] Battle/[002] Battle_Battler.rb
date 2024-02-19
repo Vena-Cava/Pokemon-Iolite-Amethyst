@@ -15,18 +15,26 @@ class Battle::Battler
     paldea_pbInitEffects(batonPass)
     @effects[PBEffects::AllySwitch]      = false
     @effects[PBEffects::BoosterEnergy]   = false
+    @effects[PBEffects::BurningBulwark]  = false
     @effects[PBEffects::Commander]       = nil
     @effects[PBEffects::CudChew]         = 0
     @effects[PBEffects::DoubleShock]     = false
     @effects[PBEffects::GlaiveRush]      = 0
     @effects[PBEffects::ParadoxStat]     = nil
-    @effects[PBEffects::Protean]         = nil
+    @effects[PBEffects::OneUseAbility]   = nil
     @effects[PBEffects::SaltCure]        = false
     @effects[PBEffects::Splinters]       = 0
     @effects[PBEffects::SplintersType]   = nil
     @effects[PBEffects::SilkTrap]        = false
     @effects[PBEffects::SuccessiveMove]  = nil
     @effects[PBEffects::SupremeOverlord] = 0
+    @effects[PBEffects::Syrupy]          = 0
+    @effects[PBEffects::SyrupyUser]      = -1
+    @battle.allBattlers.each do |b|
+      next if b.effects[PBEffects::SyrupyUser] != @index
+      b.effects[PBEffects::Syrupy] = 0
+      b.effects[PBEffects::SyrupyUser] = -1
+    end
     @proteanTrigger  = false
     @mirrorHerbUsed  = false
     @legendPlateType = nil
@@ -199,11 +207,9 @@ class Battle::Battler
     abil = GameData::Ability.try_get(abil)
     return false if !abil
     return true if paldea_unstoppableAbility?(abil)
-    return [
-      :COMMANDER,
-      :PROTOSYNTHESIS,
-      :QUARKDRIVE,	  
-      :ZEROTOHERO
+    return [  
+      :ZEROTOHERO,
+      :TERASHIFT
     ].include?(abil.id)
   end
   
@@ -218,10 +224,18 @@ class Battle::Battler
     return true if paldea_ungainableAbility?(abil)
     return [
       :WONDERGUARD,
+      :HUNGERSWITCH,
       :COMMANDER,
       :PROTOSYNTHESIS,
       :QUARKDRIVE,	  
-      :ZEROTOHERO
+      :ZEROTOHERO,
+      :EMBODYASPECT,
+      :EMBODYASPECT_1,
+      :EMBODYASPECT_2,
+      :EMBODYASPECT_3,
+      :TERASHIFT,
+      :TERAFORMZERO,
+      :POISONPUPPETEER
     ].include?(abil.id)
   end
   
@@ -261,7 +275,7 @@ class Battle::Battler
     return false if fainted? && !ignore_fainted
     if Settings::MECHANICS_GENERATION >= 9
       return true if !check_ability && self.ability == :BATTLEBOND
-      if @proteanTrigger && self.ability == @effects[PBEffects::Protean]
+      if @proteanTrigger && self.ability == @effects[PBEffects::OneUseAbility]
         return false if !check_ability || check_ability == self.ability
         return false if check_ability.is_a?(Array) && check_ability.include?(@ability_id)
       end
@@ -303,6 +317,22 @@ class Battle::Battler
       Battle::AbilityEffects.triggerOnSwitchIn(self.ability, self, @battle, false)
     end
     paldea_pbCheckFormOnWeatherChange(ability_changed)
+  end
+  
+  #-----------------------------------------------------------------------------
+  # Aliased to include Terapagos's Tera Shift form change.
+  #-----------------------------------------------------------------------------
+  alias paldea_pbCheckForm pbCheckForm
+  def pbCheckForm(endOfRound = false)
+    return if fainted? || @effects[PBEffects::Transform]
+    if isSpecies?(:TERAPAGOS) && self.ability == :TERASHIFT
+      if @form == 0
+        @battle.pbShowAbilitySplash(self, true)
+        @battle.pbHideAbilitySplash(self)
+        pbChangeForm(1, _INTL("{1} transformed!", pbThis))
+      end
+    end
+    paldea_pbCheckForm(endOfRound)
   end
   
   #-----------------------------------------------------------------------------
@@ -360,7 +390,7 @@ class Battle::Battler
   def pbFindTargets(choice, move, user)
     targets = paldea_pbFindTargets(choice, move, user)
     if !targets.empty?
-      @battle.moldBreaker = user.hasMoldBreaker? || (move.statusMove? && user.hasActiveAbility?(:MYCELIUMMIGHT))
+      @battle.moldBreaker = user.hasMoldBreaker? || (move.statusMove? && user.hasActiveAbility?(:MYCELIUMMIGHT)) if !@battle.moldBreaker
       @battle.moldBreaker = false if targets[0].hasActiveItem?(:ABILITYSHIELD)
     end
     return targets
@@ -370,7 +400,7 @@ class Battle::Battler
   def pbChangeTargets(move, user, targets)
     targets = paldea_pbChangeTargets(move, user, targets)
     if !targets.empty?
-      @battle.moldBreaker = user.hasMoldBreaker? || (move.statusMove? && user.hasActiveAbility?(:MYCELIUMMIGHT))
+      @battle.moldBreaker = user.hasMoldBreaker? || (move.statusMove? && user.hasActiveAbility?(:MYCELIUMMIGHT)) if !@battle.moldBreaker
       @battle.moldBreaker = false if targets[0].hasActiveItem?(:ABILITYSHIELD)
     end
     return targets
@@ -437,7 +467,7 @@ class Battle::Battler
   end
   
   #-----------------------------------------------------------------------------
-  # Aliased so Gigaton Hammer can't be selected consecutively.
+  # Aliased so Gigaton Hammer/Blood Moon can't be selected consecutively.
   #-----------------------------------------------------------------------------
   alias paldea_pbCanChooseMove? pbCanChooseMove?
   def pbCanChooseMove?(move, commandPhase, showMessages = true, specialUsage = false)
@@ -458,10 +488,11 @@ class Battle::Battler
   #-----------------------------------------------------------------------------
   alias paldea_pbSuccessCheckAgainstTarget pbSuccessCheckAgainstTarget
   def pbSuccessCheckAgainstTarget(move, user, target, targets)
-    @battle.moldBreaker = user.hasMoldBreaker? || (move.statusMove? && user.hasActiveAbility?(:MYCELIUMMIGHT))
+    @battle.moldBreaker = user.hasMoldBreaker? || (move.statusMove? && user.hasActiveAbility?(:MYCELIUMMIGHT)) if !@battle.moldBreaker
     @battle.moldBreaker = false if target.hasActiveItem?(:ABILITYSHIELD)
     if !(user.hasActiveAbility?(:UNSEENFIST) && move.contactMove?)
-      if move.canProtectAgainst?
+      if move.canProtectAgainst? && !user.effects[PBEffects::TwoTurnAttack]
+        # Silk Trap
         if target.effects[PBEffects::SilkTrap] && move.damagingMove?
           if move.pbShowFailMessages?(targets)
             @battle.pbCommonAnimation("SilkTrap", target)
@@ -475,17 +506,36 @@ class Battle::Battler
           end
           return false
         end
+        # Burning Bulwark
+        if target.effects[PBEffects::BurningBulwark] && move.damagingMove?
+          if move.pbShowFailMessages?(targets)
+            @battle.pbCommonAnimation("BurningBulwark", target)
+            @battle.pbDisplay(_INTL("{1} protected itself!", target.pbThis))
+          end
+          target.damageState.protected = true
+          @battle.successStates[user.index].protected = true
+          if move.pbContactMove?(user) && user.affectedByContactEffect? &&
+             user.pbCanBurn?(target, false)
+            user.pbBurn(target)
+          end
+          return false
+        end
       end
     end
-    return paldea_pbSuccessCheckAgainstTarget(move, user, target, targets)
+    ret = paldea_pbSuccessCheckAgainstTarget(move, user, target, targets)
+    if ret
+      Battle::AbilityEffects.triggerOnMoveSuccessCheck(
+        target.ability, user, target, move, @battle)
+    end
+    return ret
   end
+end
 
-  #-----------------------------------------------------------------------------
-  # -Aliased to add Snow mode check.
-  #-----------------------------------------------------------------------------
-  alias paldea_takesHailDamage? takesHailDamage?
-  def takesHailDamage?
-    return false if Settings::HAIL_WEATHER_TYPE == 1
-    return paldea_takesHailDamage?
-  end
+
+#===============================================================================
+# Safari Zone compatibility.
+#===============================================================================
+class Battle::FakeBattler
+  def isCommander?;     return false; end
+  def isCommanderHost?; return false; end
 end

@@ -43,6 +43,8 @@ module Settings
   # -Dauntless Shield/Intrepid Sword now only trigger once per battle.
   # -Ally Switch now fails with consecutive use.
   # -Charge effect now lasts until the next Electric-type move is used.
+  # -Transistor ability grants a 30% power boost, down from 50%.
+  # -Incense is no longer required to hatch baby species of certain Pokemon.
   #-----------------------------------------------------------------------------
   MECHANICS_GENERATION = 9
 end

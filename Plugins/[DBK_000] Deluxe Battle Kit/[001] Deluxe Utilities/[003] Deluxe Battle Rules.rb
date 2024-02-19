@@ -139,12 +139,12 @@ module BattleCreationHelperMethods
     end
     specialActions = [
       "noMegaEvolution",          
-      "noZMoves", "noUltraBurst", # Z-Power Phenomenon 
-      "noDynamax",                # Dynamax Phenomenon
-      "noTerastallize",           # Terastal Phenomenon
-      "noBattleStyles",           # PLA Battle Styles
-      "noZodiacPowers",           # Pokemon Birthsigns
-      "noFocusMeter"              # Focus Meter System
+      "noZMoves", "noUltraBurst", # Z-Power Add-on
+      "noDynamax",                # Dynamax Add-on
+      "noTerastallize",           # Terastallization Add-on
+      "noBattleStyles",           # PLA Battle Styles (TBD)
+      "noZodiacPowers",           # Pokemon Birthsigns (TBD)
+      "noFocusMeter"              # Focus Meter System (TBD)
     ]
     specialActions.each do |rule|
       next if !battleRules[rule]
@@ -428,8 +428,13 @@ class Battle::Scene::Animation::Intro < Battle::Scene::Animation
         s.moveDelta(0, appearTime, (-Graphics.width * deltaMult).floor, 0)
       #-------------------------------------------------------------------------
       when "top"    # Sprite slides in from top.
+        if hideBase
+          s.setVisible(0, false) if base
+        elsif spriteName.include?("shadow_")
+          s.setOpacity(0, 0)
+          s.moveOpacity(0, appearTime, 255)
+        end
         appearTime = 0 if base
-        s.setVisible(0, false) if base && hideBase
         s.setDelta(0, 0, (Graphics.height * deltaMult).floor)
         s.moveDelta(0, appearTime, 0, (-Graphics.height * deltaMult).floor)
       #-------------------------------------------------------------------------

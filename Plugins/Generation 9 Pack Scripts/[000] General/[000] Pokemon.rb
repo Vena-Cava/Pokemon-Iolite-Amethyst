@@ -5,17 +5,28 @@
 ################################################################################
 
 
-#-------------------------------------------------------------------------------
-# Edited so that moves can be set as learnable at Lvl -1.
-# This is used for Move Reminder-exclusive moves.
-#-------------------------------------------------------------------------------
 module GameData
   class Species
+    #---------------------------------------------------------------------------
+    # Aliased so that moves can be set as learnable at Lvl -1.
+    # This is used for Move Reminder-exclusive moves.
+    #---------------------------------------------------------------------------
     Species.singleton_class.alias_method :paldea_schema, :schema
     def self.schema(compiling_forms = false)
       ret = self.paldea_schema(compiling_forms)
       ret["Moves"] = [:moves, "*ie", nil, :Move]
       return ret
+    end
+	
+    #---------------------------------------------------------------------------
+    # Aliased so that Incense is no longer required for hatching baby Pokemon.
+    #---------------------------------------------------------------------------
+    alias paldea_get_baby_species get_baby_species
+    def get_baby_species(*args)
+      if Settings::MECHANICS_GENERATION >= 9
+        return paldea_get_baby_species(false, nil, nil)
+      end
+      return paldea_get_baby_species(*args)
     end
   end
 end
@@ -314,13 +325,12 @@ EventHandlers.add(:on_player_step_taken, :mirrorherb_step, proc {
 MultipleForms.copy(:RATTATA, :SANDSHREW, :VULPIX, :DIGLETT, :MEOWTH, :GEODUDE, :GRIMER,      # Alolan
                    :PONYTA, :FARFETCHD, :CORSOLA, :ZIGZAGOON, :DARUMAKA, :YAMASK, :STUNFISK, # Galarian                                   
                    :SLOWPOKE, :ARTICUNO, :ZAPDOS, :MOLTRES,                                  # Galarian (DLC)
-                   :PETILIL, :RUFFLET, :GOOMY, :BERGMITE,                                    # Hisuian
                    :WOOPER, :TAUROS                                                          # Paldean
-                  )                                                       
+                  )                                                
 
 #-------------------------------------------------------------------------------
 # Species with regional evolutions (Hisuian forms).
-#-------------------------------------------------------------------------------			  
+#-------------------------------------------------------------------------------              
 MultipleForms.register(:QUILAVA, {
   "getForm" => proc { |pkmn|
     next if pkmn.form_simple >= 2
@@ -332,7 +342,7 @@ MultipleForms.register(:QUILAVA, {
   }
 })
 
-MultipleForms.copy(:QUILAVA, :DEWOTT, :DARTRIX)
+MultipleForms.copy(:QUILAVA, :DEWOTT, :DARTRIX, :PETILIL, :RUFFLET, :GOOMY, :BERGMITE)
 
 #-------------------------------------------------------------------------------
 # Dundunsparce - Segment sizes.
@@ -370,12 +380,22 @@ MultipleForms.register(:PALKIA, {
 #-------------------------------------------------------------------------------
 MultipleForms.register(:GIRATINA, {
   "getForm" => proc { |pkmn|
-    next 1 if pkmn.hasItem?(:GRISEOUSORB) || pkmn.hasItem?(:GRISEOUSCORE)
+    next 1 if pkmn.hasItem?(:GRISEOUSCORE)
+    next 1 if Settings::MECHANICS_GENERATION < 9 && pkmn.hasItem?(:GRISEOUSORB)
     if $game_map &&
        GameData::MapMetadata.try_get($game_map.map_id)&.has_flag?("DistortionWorld")
       next 1
     end
     next 0
+  }
+})
+
+#-------------------------------------------------------------------------------
+# Shaymin - Sky Forme.
+#-------------------------------------------------------------------------------
+MultipleForms.register(:SHAYMIN, {
+  "getForm" => proc { |pkmn|
+    next 0 if pkmn.fainted? || [:FROZEN, :FROSTBITE].include?(pkmn.status) || PBDayNight.isNight?
   }
 })
 
@@ -396,6 +416,9 @@ MultipleForms.register(:BASCULEGION, {
 #-------------------------------------------------------------------------------
 MultipleForms.register(:LECHONK, {
   "getForm" => proc { |pkmn|
+    next pkmn.gender
+  },
+  "getFormOnCreation" => proc { |pkmn|
     next pkmn.gender
   }
 })
@@ -428,5 +451,64 @@ MultipleForms.register(:SQUAWKABILLY, {
 MultipleForms.register(:PALAFIN, {
   "getFormOnLeavingBattle" => proc { |pkmn, battle, usedInBattle, endBattle|
     next 0 if endBattle
+  }
+})
+
+#-------------------------------------------------------------------------------
+# Poltchageist/Sinistcha - Unremarkable/Masterpiece forms.
+#-------------------------------------------------------------------------------
+MultipleForms.copy(:SINISTEA, :POLTEAGEIST, :POLTCHAGEIST, :SINISTCHA)
+
+#-------------------------------------------------------------------------------
+# Ogerpon - Masked forms.
+#-------------------------------------------------------------------------------
+MultipleForms.register(:OGERPON, {
+  "getForm" => proc { |pkmn|
+    next 1 if pkmn.hasItem?(:WELLSPRINGMASK)
+    next 2 if pkmn.hasItem?(:HEARTHFLAMEMASK)
+    next 3 if pkmn.hasItem?(:CORNERSTONEMASK)
+    next 0
+  },
+  "getFormOnEnteringBattle" => proc { |pkmn, wild|
+    next pkmn.form + 4 if pkmn.form <= 3
+  },
+  "getFormOnLeavingBattle" => proc { |pkmn, battle, usedInBattle, endBattle|
+    next pkmn.form - 4 if pkmn.form > 3 && endBattle
+  },
+  "getTerastalForm" => proc { |pkmn|
+    next pkmn.form + 4
+  },
+  "getUnTerastalForm" => proc { |pkmn|
+    next pkmn.form - 4
+  },
+  # Compability for Pokedex Data Page plugin
+  "getDataPageInfo" => proc { |pkmn|
+    next if pkmn.form < 8
+    mask = nil
+    case pkmn.form
+    when 9  then mask = :WELLSPRINGMASK
+    when 10 then mask = :HEARTHFLAMEMASK
+    when 11 then mask = :CORNERSTONEMASK
+    end
+    next [pkmn.form, pkmn.form - 4, mask]
+  }
+})
+
+#-------------------------------------------------------------------------------
+# Terapagos - Terastal and Stellar form.
+#-------------------------------------------------------------------------------
+MultipleForms.register(:TERAPAGOS, {
+  "getFormOnLeavingBattle" => proc { |pkmn, battle, usedInBattle, endBattle|
+    next 0 if pkmn.form > 0 && endBattle
+  },
+  "getTerastalForm" => proc { |pkmn|
+    next 2
+  },
+  "getUnTerastalForm" => proc { |pkmn|
+    next 1
+  },
+  "getDataPageInfo" => proc { |pkmn|
+    next if pkmn.form < 2
+    next [pkmn.form, 1]
   }
 })
