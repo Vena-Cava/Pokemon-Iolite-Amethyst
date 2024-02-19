@@ -25087,3 +25087,25 @@ Shape = Bipedal
 Habitat = Cave
 Category = Clockwork
 Pokedex = ???
+#-------------------------------
+[COZMIX]
+Name = Cozmix
+Types = PSYCHIC
+BaseStats = 100,100,100,100,100,100
+GenderRatio = Genderless
+GrowthRate = Slow
+BaseExp = 300
+EVs = ATTACK,3
+CatchRate = 3
+Happiness = 0
+Abilities = LEVITATE
+Moves = 1,ZENHEADBUTT,50,CELESTIALCONTACT
+EggGroups = Undiscovered
+HatchSteps = 10240
+height = 1.4
+weight = 69.7
+Color = Blue
+Shape = HeadArms
+Category = Cosmos
+Pokedex = ???
+#-------------------------------
