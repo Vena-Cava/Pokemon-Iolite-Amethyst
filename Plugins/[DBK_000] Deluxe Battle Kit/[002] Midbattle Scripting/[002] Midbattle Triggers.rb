@@ -20,12 +20,23 @@ module MidbattleHandlers
   def self.exists?(midbattle, id)
     return !@@scripts[midbattle][id].nil?
   end
+  
+  def self.has_any?(midbattle)
+    return @@scripts[midbattle]&.keys.length > 0
+  end
 
   def self.trigger(midbattle, id, battle, idxBattler, idxTarget, params)
     return nil if !@@scripts.has_key?(midbattle)
     script_hash = @@scripts[midbattle][id]
     return nil if !script_hash
     return script_hash.call(battle, idxBattler, idxTarget, params)
+  end
+  
+  def self.trigger_each(midbattle, battle, idxBattler, idxTarget, trigger)
+    return if !@@scripts.has_key?(midbattle)
+    @@scripts[midbattle].keys.each do |id|
+      @@scripts[midbattle][id].call(battle, idxBattler, idxTarget, trigger)
+    end
   end
 end
 
@@ -294,6 +305,24 @@ MidbattleHandlers.add(:midbattle_triggers, "changeBGM",
     pbBGMFade(fade)
     pbWait(fade)
     pbBGMPlay(bgm, vol, pitch)
+  }
+)
+
+#-------------------------------------------------------------------------------
+# Pauses current BGM and begins playing a new one.
+#-------------------------------------------------------------------------------
+MidbattleHandlers.add(:midbattle_triggers, "pauseAndPlayBGM",
+  proc { |battle, idxBattler, idxTarget, params|
+    battle.pbPauseAndPlayBGM(params)
+  }
+)
+
+#-------------------------------------------------------------------------------
+# Resumes playing the previously paused BGM.
+#-------------------------------------------------------------------------------
+MidbattleHandlers.add(:midbattle_triggers, "resumeBGM",
+  proc { |battle, idxBattler, idxTarget, params|
+    battle.pbResumeBattleBGM
   }
 )
 

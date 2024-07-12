@@ -97,7 +97,7 @@ class Battle::Battler
   alias dx_pbReducePP pbReducePP
   def pbReducePP(move)
     return true if @pokemon.immunities.include?(:PPLOSS)
-    if move.powerMove?
+    if move.powerMove? && @powerMoveIndex >= 0
       i = @powerMoveIndex
       pbSetPP(@baseMoves[i], @baseMoves[i].pp - 1)
     end
@@ -165,7 +165,7 @@ class Battle::Battler
       @battle.pbDisplay(_INTL("{1} is completely immune to infatuation!", pbThis)) if showMessages
       return false
     end
-    return dx_pbCanConfuse?(user, showMessages)
+    return dx_pbCanAttract?(user, showMessages)
   end
   
   #-----------------------------------------------------------------------------

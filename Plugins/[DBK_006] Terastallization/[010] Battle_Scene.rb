@@ -56,9 +56,13 @@ class Battle::Scene::FightMenu < Battle::Scene::MenuBase
   end
   
   alias tera_addSpecialActionButtons addSpecialActionButtons
-  def addSpecialActionButtons
-    tera_addSpecialActionButtons
-    @actionButtonBitmap[:tera] = AnimatedBitmap.new(_INTL(Settings::TERASTAL_GRAPHICS_PATH + "cursor_tera"))
+  def addSpecialActionButtons(path)
+    tera_addSpecialActionButtons(path)
+    if pbResolveBitmap(path + "cursor_tera")
+      @actionButtonBitmap[:tera] = AnimatedBitmap.new(_INTL(path + "cursor_tera"))
+    else
+      @actionButtonBitmap[:tera] = AnimatedBitmap.new(_INTL(Settings::TERASTAL_GRAPHICS_PATH + "cursor_tera"))
+    end
   end
   
   alias tera_getButtonSettings getButtonSettings

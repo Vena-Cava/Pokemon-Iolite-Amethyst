@@ -351,7 +351,7 @@ FormName = Galarian
 Types = POISON,PSYCHIC
 BaseStats = 95,100,95,30,100,70
 Abilities = QUICKDRAW,OWNTEMPO
-Moves = 0,SHELLSIDEARM,1,WITHDRAW,1,TACKLE,1,CURSE,1,GROWL,1,ACID,9,YAWN,12,CONFUSION,15,DISABLE,18,WATERPULSE,21,HEADBUTT,24,ZENHEADBUTT,27,AMNESIA,30,SURF,33,SLACKOFF,36,PSYCHIC,39,PSYCHUP,42,RAINDANCE,45,HEALPULSE
+Moves = 1,SHELLSIDEARM,1,WITHDRAW,1,TACKLE,1,CURSE,1,GROWL,1,ACID,9,YAWN,12,CONFUSION,15,DISABLE,18,WATERPULSE,21,HEADBUTT,24,ZENHEADBUTT,27,AMNESIA,30,SURF,33,SLACKOFF,36,PSYCHIC,39,PSYCHUP,42,RAINDANCE,45,HEALPULSE
 TutorMoves = ACIDSPRAY,AMNESIA,AVALANCHE,BLIZZARD,BODYPRESS,BODYSLAM,BRICKBREAK,BULLDOZE,CALMMIND,CHILLINGWATER,DIG,DRAINPUNCH,EARTHQUAKE,ENDURE,FACADE,FIREBLAST,FLAMETHROWER,FLING,FOCUSBLAST,FOULPLAY,GIGAIMPACT,GRASSKNOT,GUNKSHOT,HELPINGHAND,HYDROPUMP,HYPERBEAM,ICEBEAM,ICEFANG,ICEPUNCH,ICYWIND,IMPRISON,IRONDEFENSE,LIGHTSCREEN,LIQUIDATION,METRONOME,MUDSHOT,NASTYPLOT,POISONJAB,POWERGEM,PROTECT,PSYBEAM,PSYCHIC,PSYCHICTERRAIN,PSYSHOCK,RAINDANCE,REST,ROCKBLAST,SANDSTORM,SCARYFACE,SHADOWBALL,SKILLSWAP,SLEEPTALK,SLUDGEBOMB,SNOWSCAPE,STOREDPOWER,SUBSTITUTE,SUNNYDAY,SURF,SWIFT,TAKEDOWN,THUNDERWAVE,TRICK,TRICKROOM,VENOSHOCK,WATERFALL,WATERPULSE,ZENHEADBUTT,TERABLAST
 Weight = 70.5
 Pokedex = If this Pokémon squeezes the tongue of the Shellder biting it, the Shellder will launch a toxic liquid from the tip of its shell.
@@ -1044,6 +1044,7 @@ Abilities = PRIMORDIALSEA
 Height = 9.8
 Weight = 430.0
 Generation = 6
+Flags = Legendary,CannotDynamax
 #-------------------------------
 [GROUDON,1]
 FormName = Primal Groudon
@@ -1054,6 +1055,7 @@ Abilities = DESOLATELAND
 Height = 5.0
 Weight = 999.7
 Generation = 6
+Flags = Legendary,CannotDynamax
 #-------------------------------
 [RAYQUAZA,1]
 FormName = Mega Rayquaza
@@ -2028,6 +2030,7 @@ Abilities = NEUROFORCE
 Height = 7.5
 Color = Yellow
 Pokedex = The light pouring out from all over its body affects living things and nature, impacting them in various ways.
+Flags = Legendary,CannotDynamax
 #-------------------------------
 [NECROZMA,4]
 PokedexForm = 3
@@ -2038,6 +2041,7 @@ EVs = ATTACK,1,SPECIAL_ATTACK,1,SPEED,1
 Abilities = NEUROFORCE
 Height = 7.5
 Color = Yellow
+Flags = Legendary,CannotDynamax
 #-------------------------------
 [MAGEARNA,1]
 FormName = Original Color
@@ -2324,31 +2328,4 @@ Color = Black
 Shape = Quadruped
 Category = High King
 Pokedex = Legend says that by using its power to see all events from past to future, this Pokémon saved the creatures of a forest from a meteorite strike.
-#-------------------------------
-[DRUDDIGON,1]
-FormName = Nordric
-Types = DRAGON,ROCK
-Abilities = ROUGHSKIN,SHEERFORCE
-HiddenAbilities = PERMAFROST
-#-------------------------------
-[SYLVSTAG,1]
-FormName = Mega Sylvstag
-MegaStone = SYLVSITE
-BaseStats = 110,103,114,75,121,108
-BaseExp = 350
-Abilities = GRASSPELT
-HiddenAbilities = GRASSPELT
-Height = 2.2
-Weight = 155.5
-#-------------------------------
-[OGLACE,1]
-FormName = Mega Oglace
-MegaStone = OGLITE
-BaseStats = 115,120,165,45,110,145
-BaseExp = 350
-Abilities = BRITTLEIRON
-HiddenAbilities = BRITTLEIRON
-Height = 2.2
-Weight = 155.5
-Pokedex = Text
 #-------------------------------

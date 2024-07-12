@@ -449,8 +449,10 @@ class Battle::AI::AIMove
   #-----------------------------------------------------------------------------
   def calc_user_attack(user, target, is_critical, max_stage, stage_mul, stage_div)
     if ["CategoryDependsOnHigherDamagePoisonTarget",
-        "CategoryDependsOnHigherDamageIgnoreTargetAbility"].include?(function_code)
-      @move.pbOnStartUse(user.battler, [target.battler])   # Calculate category
+        "CategoryDependsOnHigherDamageIgnoreTargetAbility",
+		"CategoryDependsOnHigherDamageTera",
+		"TerapagosCategoryDependsOnHigherDamage"].include?(function_code)
+      @move.pbOnStartUse(user.battler, [target.battler])
     end
     atk, atk_stage = @move.pbGetAttackStats(user.battler, target.battler)
     if !target.has_active_ability?(:UNAWARE) || @ai.battle.moldBreaker
@@ -503,7 +505,7 @@ class Battle::AI::AIMove
     if user.ability_active?
       case user.ability_id
       when :AERILATE, :GALVANIZE, :PIXILATE, :REFRIGERATE
-        multipliers[:power_multiplier] *= 1.2 if type == :NORMAL   # NOTE: Not calc_type.
+        multipliers[:power_multiplier] *= 1.2 if type == :NORMAL
       when :ANALYTIC
         if rough_priority(user) <= 0
           user_faster = false
@@ -584,7 +586,7 @@ class Battle::AI::AIMove
         Battle::ItemEffects.triggerDamageCalcFromUser(
           user.item, user.battler, target.battler, @move, multipliers, base_dmg, calc_type
         )
-        user.effects[PBEffects::GemConsumed] = nil   # Untrigger consuming of Gems
+        user.effects[PBEffects::GemConsumed] = nil
       end
     end
     if target.item_active? && target.item && !target.item.is_berry?
@@ -598,9 +600,6 @@ class Battle::AI::AIMove
   # Calculates damage multipliers from other sources.
   #-----------------------------------------------------------------------------
   def calc_other_mults(user, target, calc_type, multipliers)
-    # Me First - n/a because can't predict the move Me First will use
-    # Helping Hand - n/a
-    # Charge
     if @ai.trainer.medium_skill? &&
        user.effects[PBEffects::Charge] > 0 && calc_type == :ELECTRIC
       multipliers[:power_multiplier] *= 2
@@ -688,7 +687,7 @@ class Battle::AI::AIMove
         end
       when :Sandstorm
         if target.has_type?(:ROCK) && specialMove?(calc_type) &&
-           function_code != "UseTargetDefenseInsteadOfTargetSpDef"   # Psyshock
+           function_code != "UseTargetDefenseInsteadOfTargetSpDef"
           multipliers[:defense_multiplier] *= 1.5
         end
       when :Hail

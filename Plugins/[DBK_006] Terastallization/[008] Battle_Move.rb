@@ -42,7 +42,7 @@ class Battle::Move
       if user.tera?
         teraBonus = 1
         adaptability = false if user.tera_type == :STELLAR
-        if user.types.include?(type)
+        if user.pbPreTeraTypes.include?(type)
           if user.typeTeraBoosted?(type)
             teraBonus = (adaptability) ? 2.25 : 2
           else
@@ -119,7 +119,7 @@ class Battle::AI::AIMove
       if user.battler.tera?
         teraBonus = 1
         adaptability = false if user.battler.tera_type == :STELLAR
-        if user.types.include?(calc_type)
+        if user.battler.pbPreTeraTypes.include?(calc_type)
           if user.battler.typeTeraBoosted?(calc_type)
             teraBonus = (adaptability) ? 2.25 : 2
           else
@@ -139,6 +139,13 @@ class Battle::AI::AIMove
     multipliers[:final_damage_multiplier] *= typemod
   end
 end
+
+
+################################################################################
+#
+# Move functions.
+#
+################################################################################
 
 #===============================================================================
 # Hidden Power
@@ -175,6 +182,26 @@ def pbHiddenPower(pkmn)
     power = powerMin + ((powerMax - powerMin) * power / 63)
   end
   return [type, power]
+end
+
+#===============================================================================
+# Tar Shot
+#===============================================================================
+# Does not apply Tar Shot effect on a Terastallized target.
+#-------------------------------------------------------------------------------
+class Battle::Move::LowerTargetSpeed1MakeTargetWeakerToFire < Battle::Move::TargetStatDownMove
+  def pbFailsAgainstTarget?(user, target, show_message)
+    return super if target.effects[PBEffects::TarShot] || target.tera?
+    return false
+  end
+
+  def pbEffectAgainstTarget(user, target)
+    super
+    if !target.effects[PBEffects::TarShot] && !target.tera?
+      target.effects[PBEffects::TarShot] = true
+      @battle.pbDisplay(_INTL("{1} became weaker to fire!", target.pbThis))
+    end
+  end
 end
 
 #===============================================================================

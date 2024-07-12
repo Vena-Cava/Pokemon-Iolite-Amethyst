@@ -75,27 +75,32 @@ class Battle::AI
   #-----------------------------------------------------------------------------
   def wants_to_terastallize?
     score = @user.get_total_tera_score
+    return true if score == 0 && @battle.pbAbleCount(@user.index) == 1
     highest_score = 0
-    party = @battle.pbParty(@user.index)
     if @trainer.medium_skill?
+      party = @battle.pbParty(@user.index)
       party.each_with_index do |pkmn, i|
         next if !@battle.pbIsOwner?(@user.index, i)
         next if @battle.pbFindBattler(i, @user.index)
         next if pkmn.fainted? || pkmn.tera? || !pkmn.terastal_able?
         next if pkmn.item&.is_mega_stone? && pkmn.hasMegaForm?
         next if defined?(is_zcrystal?) && pkmn.item&.is_zcrystal?
-        party_score = get_pokemon_tera_score(pkmn)
+        party_score = get_party_tera_score(pkmn)
+        PBDebug.log_ai("#{@user.name} is comparing Terastal score with party member #{pkmn.name} (score: #{party_score})...")
         highest_score = party_score if party_score > highest_score
       end  
     end
-    return true if score == 0 && @battle.pbAbleCount(@user.index) == 1
-    return score > highest_score
+    if score <= highest_score
+      PBDebug.log_ai("#{@user.name} will not Terastallize")
+      return false
+    end
+    return true
   end
   
   #-----------------------------------------------------------------------------
   # Determines the value of Terastallization for other party members.
   #-----------------------------------------------------------------------------
-  def get_pokemon_tera_score(pkmn)
+  def get_party_tera_score(pkmn)
     score = 0
     type = GameData::Type.get(pkmn.tera_type)
     side = @battle.sides[@user.side]
@@ -214,7 +219,7 @@ class Battle::AI
             score -= 20
           end
           if @battle.pbCanTerastallize?(b.index)
-            effectiveness = b.effectiveness_of_type_against_single_battler_type(type.id, b.pokemon.tera_type, @user)
+            effectiveness = b.effectiveness_of_type_against_single_battler_type(type.id, b.battler.tera_type, @user)
             if Effectiveness.super_effective?(effectiveness)
               score += 5
             elsif Effectiveness.not_very_effective?(effectiveness)
@@ -267,8 +272,10 @@ class Battle::AI::AIBattler
   #-----------------------------------------------------------------------------
   def get_total_tera_score
     score = 0
-    tera_type = self.pokemon.tera_type
+    tera_type = @battler.tera_type
     lost_types = pbTypes(true).select { |t| t != tera_type }
+    type_name = GameData::Type.get(tera_type).name
+    PBDebug.log_ai("#{self.name} is considering Terastallizing into the #{type_name}-type...")
     if can_attack? &&
        (has_damaging_move_of_type?(tera_type) || 
        has_move_with_function?("CategoryDependsOnHigherDamageTera",
@@ -285,6 +292,8 @@ class Battle::AI::AIBattler
         score += tera_score if tera_score > old_score
       end
     end
+    offensive_score = score
+    PBDebug.log_score_change(offensive_score, "offensive advantage")
     if @ai.trainer.high_skill?
       contact = @battler.affectedByContactEffect? && check_for_move { |m| m.contactMove? }
       if lost_types.empty?
@@ -299,6 +308,7 @@ class Battle::AI::AIBattler
         score += tera_score if tera_score > old_score
       end
     end
+    PBDebug.log_score_change(score - offensive_score, "defensive advantage")
     return score
   end
   
@@ -381,7 +391,7 @@ class Battle::AI::AIBattler
           score += 5
         end
         if @ai.battle.pbCanTerastallize?(b.index)
-          effectiveness = b.effectiveness_of_type_against_single_battler_type(type, b.pokemon.tera_type, self)
+          effectiveness = b.effectiveness_of_type_against_single_battler_type(type, b.battler.tera_type, self)
           if Effectiveness.super_effective?(effectiveness)
             score += 5
           elsif Effectiveness.not_very_effective?(effectiveness)
@@ -465,7 +475,7 @@ class Battle::AI::AIBattler
         if @ai.battle.pbCanTerastallize?(b.index)
           if ["CategoryDependsOnHigherDamageTera",
 		      "TerapagosCategoryDependsOnHigherDamage"].include?(move.function_code)
-            move_type = b.pokemon.tera_type
+            move_type = b.battler.tera_type
           end			  
         end
         next if @ai.pokemon_can_absorb_move?(self, move, move_type)
@@ -492,3 +502,28 @@ class Battle::AI::AIBattler
     return score
   end
 end
+
+#===============================================================================
+# Tar Shot
+#===============================================================================
+# Considers whether the target is Terastallized.
+#-------------------------------------------------------------------------------
+Battle::AI::Handlers::MoveFailureAgainstTargetCheck.add("LowerTargetSpeed1MakeTargetWeakerToFire",
+  proc { |move, user, target, ai, battle|
+    next false if !target.effects[PBEffects::TarShot] && !target.battler.tera?
+    next move.statusMove? &&
+         !target.battler.pbCanLowerStatStage?(move.move.statDown[0], user.battler, move.move)
+  }
+)
+Battle::AI::Handlers::MoveEffectAgainstTargetScore.add("LowerTargetSpeed1MakeTargetWeakerToFire",
+  proc { |score, move, user, target, ai, battle|
+    score = ai.get_score_for_target_stat_drop(score, target, move.move.statDown)
+    if !target.effects[PBEffects::TarShot] && !target.battler.tera?
+      eff = target.effectiveness_of_type_against_battler(:FIRE)
+      if !Effectiveness.ineffective?(eff)
+        score += 10 * eff if user.has_damaging_move_of_type?(:FIRE)
+      end
+    end
+    next score
+  }
+)

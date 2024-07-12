@@ -1,6 +1,6 @@
 Name       = [DBK] Terastallization
-Version    = 1.0.2
+Version    = 1.0.5
 Essentials = 21.1
-Requires   = Deluxe Battle Kit,1.0.4
+Requires   = Deluxe Battle Kit,1.0.7
 Website    = https://reliccastle.com/resources/1476/
 Credits    = Lucidious89

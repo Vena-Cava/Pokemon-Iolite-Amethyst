@@ -67,22 +67,10 @@ def additionalRules
   return rules
 end
 
-module BattleCreationHelperMethods
-  module_function
-  
-  BattleCreationHelperMethods.singleton_class.alias_method :zpower_prepare_battle, :prepare_battle
-  def prepare_battle(battle)
-    BattleCreationHelperMethods.zpower_prepare_battle(battle)
-    if battle.wildBattle? && battle.wildBattleMode == :zmove
-      battle.midbattleScript = :wild_zpower_battle
-    end
-  end
-end
-
 #-------------------------------------------------------------------------------
 # Used for wild Z-Powered battles.
 #-------------------------------------------------------------------------------
-MidbattleHandlers.add(:midbattle_scripts, :wild_zpower_battle,
+MidbattleHandlers.add(:midbattle_global, :wild_zpower_battle,
   proc { |battle, idxBattler, idxTarget, trigger|
     next if !battle.wildBattle?
     next if battle.wildBattleMode != :zmove
@@ -433,9 +421,13 @@ end
 
 class Battle::Scene::FightMenu < Battle::Scene::MenuBase
   alias zmove_addSpecialActionButtons addSpecialActionButtons
-  def addSpecialActionButtons
-    zmove_addSpecialActionButtons
-    @actionButtonBitmap[:zmove] = AnimatedBitmap.new(_INTL(Settings::ZMOVE_GRAPHICS_PATH + "cursor_zmove"))
+  def addSpecialActionButtons(path)
+    zmove_addSpecialActionButtons(path)
+    if pbResolveBitmap(path + "cursor_zmove")
+      @actionButtonBitmap[:zmove] = AnimatedBitmap.new(_INTL(path + "cursor_zmove"))
+    else
+      @actionButtonBitmap[:zmove] = AnimatedBitmap.new(_INTL(Settings::ZMOVE_GRAPHICS_PATH + "cursor_zmove"))
+    end
   end
 end
 

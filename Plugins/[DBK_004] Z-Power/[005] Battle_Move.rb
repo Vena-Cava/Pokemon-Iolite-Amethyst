@@ -51,8 +51,9 @@ class Battle::Move
   # Returns true if this move is a Z-Move or a Z-Powered status move.
   #-----------------------------------------------------------------------------
   def zMove?
-    return false if @id == :STRUGGLE
-    return GameData::Move.get(@id).zMove? || @status_zmove
+	move = GameData::Move.try_get(@id)
+	return false if !move
+    return move.zMove? || @status_zmove
   end
   
   #-----------------------------------------------------------------------------
@@ -78,7 +79,7 @@ class Battle::Move
   #-----------------------------------------------------------------------------
   alias zmove_pbCalcDamageMultipliers pbCalcDamageMultipliers
   def pbCalcDamageMultipliers(user, target, numTargets, type, baseDmg, multipliers)
-    args = [user, target, numTargets, type, baseDmg]
+    zmove_pbCalcDamageMultipliers(user, target, numTargets, type, baseDmg, multipliers)
     multipliers[:final_damage_multiplier] /= 4 if zMove? && target.isProtected?(user, self)
   end
 
@@ -92,7 +93,9 @@ class Battle::Move
       trigger = (@status_zmove) ? "BeforeZStatus" : "BeforeZMove"
       @battle.pbDeluxeTriggers(user, nil, trigger, user.species, @type, @id)
       @battle.pbDisplayBrief(_INTL("{1} surrounded itself with its Z-Power!", user.pbThis))
-      if Settings::SHOW_ZMOVE_ANIM && $PokemonSystem.battlescene == 0
+      if @battle.scene.pbCommonAnimationExists?("ZMove")
+        pbCommonAnimation("ZMove", user)
+      elsif Settings::SHOW_ZMOVE_ANIM && $PokemonSystem.battlescene == 0
         pbWait(0.5)
         @battle.scene.pbShowZMove(user.index, @id)
       end
@@ -107,7 +110,7 @@ class Battle::Move
     end
     zmove_pbDisplayUseMessage(user)
   end
-  
+
   
   ##############################################################################
   #

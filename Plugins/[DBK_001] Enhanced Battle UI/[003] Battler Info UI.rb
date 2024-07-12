@@ -251,7 +251,7 @@ class Battle::Scene
     # Gets display types (considers Illusion)
     illusion = battler.effects[PBEffects::Illusion] && !battler.pbOwnedByPlayer?
     if battler.tera?
-      displayTypes = (illusion) ? poke.types : battler.types
+      displayTypes = (illusion) ? poke.types.clone : battler.pbPreTeraTypes
     elsif illusion
       displayTypes = poke.types.clone
       displayTypes.push(battler.effects[PBEffects::ExtraType]) if battler.effects[PBEffects::ExtraType]
@@ -261,6 +261,7 @@ class Battle::Scene
     #---------------------------------------------------------------------------
     # Displays the "???" type on newly encountered species, or battlers with no typing.
     unknown_species = !(
+	  !@battle.internalBattle ||
       battler.pbOwnedByPlayer? ||
       $player.pokedex.owned?(poke.species) ||
       $player.pokedex.battled_count(poke.species) > 0
@@ -280,7 +281,7 @@ class Battle::Scene
     end
     #---------------------------------------------------------------------------
     # Draws Tera type.
-    if !unknown_species && defined?(poke.tera_type)
+    if battler.tera? || defined?(battler.tera_type) && (battler.pbOwnedByPlayer? || !@battle.internalBattle)
       pkmn = (illusion) ? poke : battler
       pbDrawImagePositions(@infoUIOverlay, [[@path + "info_extra", xpos + 182, ypos + 95]])
       pbDisplayTeraType(pkmn, @infoUIOverlay, xpos + 186, ypos + 97, true)
@@ -363,7 +364,11 @@ class Battle::Scene
     #---------------------------------------------------------------------------
     # Special states.
     if battler.dynamax?
-      tick = (battler.isRaidBoss?) ? "--" : sprintf("%d/%d", battler.effects[PBEffects::Dynamax], Settings::DYNAMAX_TURNS)
+	  if battler.effects[PBEffects::Dynamax] > 0 && !battler.isRaidBoss?
+	    tick = sprintf("%d/%d", battler.effects[PBEffects::Dynamax], Settings::DYNAMAX_TURNS)
+	  else
+	    tick = "--"
+	  end
       desc = _INTL("The Pokémon is in the Dynamax state.")
       display_effects.push([_INTL("Dynamax"), tick, desc])
     elsif battler.tera?
@@ -422,7 +427,7 @@ class Battle::Scene
     # Battler effects that affect other Pokemon.
     if @battle.allBattlers.any? { |b| b.effects[PBEffects::Imprison] }
       name = GameData::Move.get(:IMPRISON).name
-      desc = _INTL("Pokémon can't use moves known by the {1} user.", name)
+      desc = _INTL("Pokémon can't use moves known by an opposing {1} user.", name)
       display_effects.push([name, "--", desc])
     end
     if @battle.allBattlers.any? { |b| b.effects[PBEffects::Uproar] > 0 }

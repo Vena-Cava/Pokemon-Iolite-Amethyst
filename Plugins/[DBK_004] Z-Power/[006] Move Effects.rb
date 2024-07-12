@@ -105,6 +105,16 @@ class Battle::ZMove::FixedDamageThreeQuartersTargetHP < Battle::Move::FixedDamag
   def pbFixedDamage(user,target)
     return (target.real_hp * 0.75).round
   end
+  
+  def pbShowAnimation(id, user, targets, hitNum = 0, showAnimation = true)
+    case user.species
+    when :TAPUKOKO then hitNum = 0
+    when :TAPULELE then hitNum = 1
+    when :TAPUBULU then hitNum = 2
+    when :TAPUFINI then hitNum = 3
+    end
+    super
+  end
 end
 
 #===============================================================================

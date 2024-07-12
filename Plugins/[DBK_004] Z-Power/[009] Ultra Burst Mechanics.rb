@@ -57,22 +57,10 @@ def additionalRules
   return rules
 end
 
-module BattleCreationHelperMethods
-  module_function
-  
-  BattleCreationHelperMethods.singleton_class.alias_method :ultra_prepare_battle, :prepare_battle
-  def prepare_battle(battle)
-    BattleCreationHelperMethods.ultra_prepare_battle(battle)
-    if battle.wildBattle? && battle.wildBattleMode == :ultra
-      battle.midbattleScript = :wild_ultra_battle
-    end
-  end
-end
-
 #-------------------------------------------------------------------------------
 # Used for wild Ultra battles.
 #-------------------------------------------------------------------------------
-MidbattleHandlers.add(:midbattle_scripts, :wild_ultra_battle,
+MidbattleHandlers.add(:midbattle_global, :wild_ultra_battle,
   proc { |battle, idxBattler, idxTarget, trigger|
     next if !battle.wildBattle?
     next if battle.wildBattleMode != :ultra
@@ -449,9 +437,13 @@ end
 
 class Battle::Scene::FightMenu < Battle::Scene::MenuBase
   alias ultraburst_addSpecialActionButtons addSpecialActionButtons
-  def addSpecialActionButtons
-    ultraburst_addSpecialActionButtons
-    @actionButtonBitmap[:ultra] = AnimatedBitmap.new(_INTL(Settings::ZMOVE_GRAPHICS_PATH + "cursor_ultra"))
+  def addSpecialActionButtons(path)
+    ultraburst_addSpecialActionButtons(path)
+    if pbResolveBitmap(path + "cursor_ultra")
+      @actionButtonBitmap[:ultra] = AnimatedBitmap.new(_INTL(path + "cursor_ultra"))
+    else
+      @actionButtonBitmap[:ultra] = AnimatedBitmap.new(_INTL(Settings::ZMOVE_GRAPHICS_PATH + "cursor_ultra"))
+    end
   end
 end
 

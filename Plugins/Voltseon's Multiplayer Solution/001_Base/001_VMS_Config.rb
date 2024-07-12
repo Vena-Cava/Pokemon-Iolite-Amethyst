@@ -11,7 +11,7 @@ module VMS
   # Server
   # ===========
   # The hostname of the server. This is the IP address or domain name that the server is hosted on.
-  HOST = "10.150.0.3"
+  HOST = "35.196.24.187"
   # The port that the server is hosted on. This is the port that the server is listening on.
   PORT = 25565
   # Whether or not to use TCP instead of UDP. TCP is more reliable, but UDP is faster.

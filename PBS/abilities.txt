@@ -1166,3 +1166,7 @@ Description = Boosts the Pokémon's Defense if it uses a Steel-Type move, boosts
 [FERMENTATION]
 Name = Fermentation
 Description = The Pokémon's fermented internal liquid confuses attackers that use HP-draining moves.
+#-------------------------------
+[BIOLUMINESENCE]
+Name = Bioluminesence
+Description = The Pokémon's Speed is doubled in the dark, but halved in harsh sunlight.

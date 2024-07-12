@@ -221,4 +221,3 @@ Battle::AbilityEffects::MoveBlocking.add(:EMPTYSOUNDSCAPE,
     next move.soundMove?
   }
 )
-

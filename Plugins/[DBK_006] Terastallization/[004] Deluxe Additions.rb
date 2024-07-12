@@ -142,22 +142,10 @@ def additionalRules
   return rules
 end
 
-module BattleCreationHelperMethods
-  module_function
-  
-  BattleCreationHelperMethods.singleton_class.alias_method :tera_prepare_battle, :prepare_battle
-  def prepare_battle(battle)
-    BattleCreationHelperMethods.tera_prepare_battle(battle)
-    if battle.wildBattle? && battle.wildBattleMode == :tera
-      battle.midbattleScript = :wild_tera_battle
-    end
-  end
-end
-
 #-------------------------------------------------------------------------------
 # Used for wild Tera battles.
 #-------------------------------------------------------------------------------
-MidbattleHandlers.add(:midbattle_scripts, :wild_tera_battle,
+MidbattleHandlers.add(:midbattle_global, :wild_tera_battle,
   proc { |battle, idxBattler, idxTarget, trigger|
     next if !battle.wildBattle?
     next if battle.wildBattleMode != :tera

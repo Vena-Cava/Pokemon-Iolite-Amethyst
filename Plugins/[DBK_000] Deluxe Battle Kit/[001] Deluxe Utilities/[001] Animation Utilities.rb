@@ -448,7 +448,7 @@ class Battle::Scene::Animation
       outline.setVisible(delay, false)
       sprite = @pictureEx.length - 1
       @pictureSprites[sprite].mirror = mirror
-      @pictureSprites[sprite].x = battle_pos[0] + i[0] - 214
+      @pictureSprites[sprite].x = battle_pos[0] + i[0] - 128
       @pictureSprites[sprite].y = battle_pos[1] + i[1] + 80
       @pictureSprites[sprite].y += 20 if offset
       @pictureSprites[sprite].ox = @pictureSprites[sprite].bitmap.width / 2
@@ -460,7 +460,7 @@ class Battle::Scene::Animation
       when Array
         set = (poke[8]) ? 2 : poke[7] ? 1 : 0
         metrics_data = GameData::SpeciesMetrics.get_species_form(poke[0], poke[2])
-        metrics_data.apply_metrics_to_sprite(@pictureSprites[sprite], 1) #, false, set)
+        metrics_data.apply_metrics_to_sprite(@pictureSprites[sprite], 1)
       end
       outline.setXY(delay, @pictureSprites[sprite].x, @pictureSprites[sprite].y)
       outline.setZ(delay, @pictureSprites[sprite].z)

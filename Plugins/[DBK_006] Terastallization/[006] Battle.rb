@@ -32,7 +32,7 @@ class Battle
   alias tera_pbCanUseAnyBattleMechanic? pbCanUseAnyBattleMechanic?
   def pbCanUseAnyBattleMechanic?(idxBattler)
     return true if pbCanTerastallize?(idxBattler)
-    return tera_pbCanUseBattleMechanic?(idxBattler)
+    return tera_pbCanUseAnyBattleMechanic?(idxBattler)
   end
   
   alias tera_pbCanUseBattleMechanic? pbCanUseBattleMechanic?
@@ -156,10 +156,6 @@ class Battle
     return if !battler.hasTera? || battler.tera?
     $stats.terastallize_count += 1 if battler.pbOwnedByPlayer?
     pbDeluxeTriggers(idxBattler, nil, "BeforeTerastallize", battler.species, battler.tera_type)
-    battler.effects[PBEffects::ExtraType]   = nil
-    battler.effects[PBEffects::Roost]       = false
-    battler.effects[PBEffects::BurnUp]      = false
-    battler.effects[PBEffects::DoubleShock] = false if defined?(PBEffects::DoubleShock)
     old_ability = battler.ability_id
     if battler.hasActiveAbility?(:ILLUSION)
       illusion = battler.effects[PBEffects::Illusion]
@@ -180,6 +176,7 @@ class Battle
     if battler.tera_type == :STELLAR
       GameData::Type.each do |t| 
         next if t.pseudo_type
+        next if @boosted_tera_types[side][owner].include?(t.id)
         @boosted_tera_types[side][owner].push(t.id)
       end
     end

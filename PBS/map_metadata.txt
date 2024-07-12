@@ -51,7 +51,7 @@ Name = Cedolan City
 MapPosition = 0,13,10
 BattleBack = indoor3
 Environment = Rock
-Flags = DisableBoxLink
+Flags = DisableBoxLink,PowerSpot
 #-------------------------------
 [011]   # Pokémon Institute
 Name = Cedolan City
@@ -98,7 +98,7 @@ Name = Route 2
 Outdoor = true
 ShowArea = true
 Weather = Rain,100
-MapPosition = 0,14,8
+MapPosition = 1,14,8
 BattleBack = field
 MapSize = 1,11
 #-------------------------------
@@ -107,7 +107,7 @@ Name = Pinella Town
 Outdoor = true
 ShowArea = true
 HealingSpot = 22,32,28
-MapPosition = 0,7,11
+MapPosition = 1,7,11
 MapSize = 1,
 Environment = Grass
 #-------------------------------
@@ -161,6 +161,12 @@ MapPosition = 0,14,6
 BattleBack = field
 MapSize = 2,1101
 #-------------------------------
+[032]   # Old Couple's house
+MapPosition = 1,7,11
+#-------------------------------
+[033]   # Rival's house
+MapPosition = 1,7,11
+#-------------------------------
 [034]   # Ice Cave
 Name = Route 3
 Bicycle = true
@@ -184,7 +190,7 @@ MapPosition = 0,13,6
 Name = Ingido Plateau
 MapPosition = 0,13,6
 BattleBack = elite1
-Flags = DisableBoxLink
+Flags = DisableBoxLink,PowerSpot
 #-------------------------------
 [038]   # Hall of Fame
 Name = Ingido Plateau
@@ -214,9 +220,14 @@ BicycleAlways = true
 MapPosition = 0,11,7
 MapSize = 1,111
 #-------------------------------
+[042]   # \PN's house
+Name = Vena's house
+MapPosition = 1,7,11
+#-------------------------------
 [043]   # Tulpha Grove
 Name = Tulpha Grove
-MapPosition = 0,8,10
+MapPosition = 1,8,10
+SnapEdges = true
 #-------------------------------
 [044]   # Route 6
 Name = Route 6
@@ -252,7 +263,7 @@ Environment = Rock
 Name = Pinella Fields
 Outdoor = true
 ShowArea = true
-MapPosition = 0,8,11
+MapPosition = 1,8,11
 #-------------------------------
 [049]   # Rock Cave 1F
 Name = Route 7
@@ -304,7 +315,7 @@ MapPosition = 0,17,10
 Name = Battle Frontier
 MapPosition = 0,17,10
 BattleBack = indoor1
-Flags = DisableBoxLink
+Flags = DisableBoxLink,PowerSpot
 #-------------------------------
 [057]   # Stadium Cup lobby
 Name = Battle Frontier
@@ -318,7 +329,7 @@ MapPosition = 0,17,10
 Name = Battle Frontier
 MapPosition = 0,17,10
 BattleBack = indoor1
-Flags = DisableBoxLink
+Flags = DisableBoxLink,PowerSpot
 #-------------------------------
 [060]   # Battle Arena
 Name = Battle Frontier
@@ -328,7 +339,7 @@ MapPosition = 0,17,10
 Name = Battle Frontier
 MapPosition = 0,17,10
 BattleBack = indoor1
-Flags = DisableBoxLink
+Flags = DisableBoxLink,PowerSpot
 #-------------------------------
 [062]   # Battle Factory
 Name = Battle Frontier
@@ -343,7 +354,7 @@ Flags = DisableBoxLink
 Name = Battle Frontier
 MapPosition = 0,17,10
 BattleBack = indoor1
-Flags = DisableBoxLink
+Flags = DisableBoxLink,PowerSpot
 #-------------------------------
 [065]   # Battle Factory corridor
 Name = Battle Frontier
@@ -418,24 +429,49 @@ BattleBack = city
 #-------------------------------
 [076]   # Tulpha Grove
 Name = Tulpha Grove
-MapPosition = 0,8,10
+MapPosition = 1,8,10
 SnapEdges = true
 #-------------------------------
 [077]   # Hidden Grotto
 Name = Hidden Grotto
 Outdoor = true
-MapPosition = 0,8,10
+MapPosition = 1,8,10
 SnapEdges = true
 #-------------------------------
 [078]   # Tulphoise City
 Name = Tulphoise City
 Outdoor = true
 ShowArea = true
-MapPosition = 0,9,11
+MapPosition = 1,9,11
+#-------------------------------
+[079]   # Tulphoise Café
+MapPosition = 1,9,11
+#-------------------------------
+[080]   # Tulphoise Town Mart
+MapPosition = 1,9,11
+#-------------------------------
+[081]   # Tulphoise City Poké Center
+HealingSpot = 78,26,17
+MapPosition = 1,9,11
+#-------------------------------
+[082]   # LowerLeftHouseSmall
+MapPosition = 1,9,11
+#-------------------------------
+[083]   # LowerRightHouseSmall
+MapPosition = 1,9,11
+#-------------------------------
+[084]   # CentralHouse
+MapPosition = 1,9,11
 #-------------------------------
 [087]   # Fenne Ruins
 Name = Fenne Ruins
 Outdoor = true
 ShowArea = true
-MapPosition = 0,11,11
+MapPosition = 1,11,11
 Environment = Grass
+#-------------------------------
+[089]   # Daiseye Town
+MapPosition = 0,17,18
+#-------------------------------
+[090]   # \PN's house
+MapPosition = 0,17,18

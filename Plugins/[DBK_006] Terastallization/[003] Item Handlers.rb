@@ -119,6 +119,106 @@ end
 
 
 #-------------------------------------------------------------------------------
+# Compatibility with the Bag Screen w/int. Party plugin.
+#-------------------------------------------------------------------------------
+if PluginManager.installed?("Bag Screen w/int. Party")
+  class PokemonBag_Scene
+    alias tera_pbUpdateAnnotation pbUpdateAnnotation
+    def pbUpdateAnnotation
+      item = @sprites["itemlist"].item
+      item_data = GameData::Item.try_get(item)
+      if item_data && item_data.is_tera_shard? && @bag.last_viewed_pocket == 1
+        $player.party.each_with_index do |pkmn, i|
+          elig = pkmn.tera_type != item_data.tera_shard_type
+          annotation = (elig) ? _INTL("ABLE") : _INTL("UNABLE")
+          @sprites["pokemon#{i}"].text = annotation
+        end
+      else
+        tera_pbUpdateAnnotation
+      end
+    end
+  end
+  
+  def pbBagUseItem(bag, item, scene, screen, chosen, bagscene=nil)
+    itm     = GameData::Item.get(item)
+    useType = itm.field_use
+    found   = false
+    pkmn    = $player.party[chosen]
+    if itm.is_machine?    # TM, HM or TR
+      if $player.pokemon_count == 0
+        pbMessage(_INTL("There is no Pokémon.")) { screen.pbUpdate }
+        return 0
+      end
+      machine = itm.move
+      return 0 if !machine
+      movename = GameData::Move.get(machine).name
+      move     = GameData::Move.get(machine).id
+      movelist = nil; bymachine = false; oneusemachine = false
+      if movelist != nil && movelist.is_a?(Array)
+        for i in 0...movelist.length
+          movelist[i] = GameData::Move.get(movelist[i]).id
+        end
+      end
+      if pkmn.egg?
+        pbMessage(_INTL("Eggs can't be taught any moves.")) { screen.pbUpdate }
+      elsif pkmn.shadowPokemon?
+        pbMessage(_INTL("Shadow Pokémon can't be taught any moves.")) { screen.pbUpdate }
+      elsif movelist && !movelist.any? { |j| j == pkmn.species }
+        pbMessage(_INTL("{1} can't learn {2}.", pkmn.name, movename)) { screen.pbUpdate }
+      elsif !pkmn.compatible_with_move?(move)
+        pbMessage(_INTL("{1} can't learn {2}.", pkmn.name, movename)) { screen.pbUpdate }
+      else
+        if pbLearnMove(pkmn, move, false, bymachine) { screen.pbUpdate }
+          pkmn.add_first_move(move) if oneusemachine
+          bag.remove(itm) if itm.consumed_after_use?
+        end
+      end
+      screen.pbRefresh; screen.pbUpdate
+      return 1
+    elsif useType == 1
+      if $player.pokemon_count == 0
+        pbMessage(_INTL("There is no Pokémon.")) { screen.pbUpdate }
+        return 0
+      end
+      qty = 1
+      ret = false
+      screen.pbRefresh
+      if itm.is_tera_shard?
+        tera = itm.tera_shard_type
+        qty = [1, Settings::TERA_SHARDS_REQUIRED].max
+        qty = 1 if !GameData::Type.exists?(tera)
+        if !$bag.has?(item, qty)
+          pbMessage(_INTL("You don't have enough {1}..." +
+                          "\nYou need {2} Tera Shards to change a Pokémon's Tera Type.", itm.portion_name_plural, qty))
+          return 0
+        end
+      end
+      if pbCheckUseOnPokemon(item, pkmn, screen)
+        ret = ItemHandlers.triggerUseOnPokemon(item, qty, pkmn, screen)
+        if ret && useType == 1
+          $bag.remove(item, qty)  if itm.consumed_after_use? { screen.pbRefresh }
+        end
+        if !$bag.has?(item)
+          if itm.is_tera_shard? && qty > 1
+            screen.pbDisplay(_INTL("Not enough {1} remaining...", itm.portion_name_plural)) { screen.pbUpdate }
+          else
+            screen.pbDisplay(_INTL("You used your last {1}.", itm.portion_name_plural)) { screen.pbUpdate }
+          end
+          screen.pbChangeCursor(2)
+        end
+        screen.pbRefresh
+      end
+      bagscene.pbRefresh if bagscene
+      return 1
+    else
+      pbMessage(_INTL("Can't use that here.")) { screen.pbUpdate }
+      return 0
+    end
+  end
+end
+
+
+#-------------------------------------------------------------------------------
 # Tera Shards - Changes a Pokemon's Tera Type.
 #-------------------------------------------------------------------------------
 ItemHandlers::UseOnPokemon.addIf(:tera_shards,
@@ -134,8 +234,8 @@ ItemHandlers::UseOnPokemon.addIf(:tera_shards,
         scene.pbDisplay(_INTL("Select a new Tera type for {1}.", pkmn.name))
         default = GameData::Type.get(pkmn.tera_type).icon_position
         newType = pbChooseTypeList(default < 10 ? default + 1 : default)
-        pseudoType = GameData::Type.get(newType).pseudo_type
-        if newType != pkmn.tera_type && !pseudoType && ![:QMARKS, :SHADOW].include?(newType)
+        next false if !newType.is_a?(Symbol)
+        if newType != pkmn.tera_type && ![:QMARKS, :SHADOW].include?(newType)
           pkmn.tera_type = newType
         end
       else
@@ -170,15 +270,13 @@ ItemHandlers::CanUseInBattle.add(:RADIANTTERAJEWEL, proc { |item, pokemon, battl
   owner = battle.pbGetOwnerIndexFromBattlerIndex(battler.index)
   orb   = battle.pbGetTeraOrbName(battler.index)      
   if !battle.pbHasTeraOrb?(battler.index)
-    scene.pbDisplay(_INTL("You don't have a {1} to charge!", orb))
+    scene.pbDisplay(_INTL("You don't have a {1} to charge!", orb)) if showMessages
     next false
   elsif !firstAction
-    scene.pbDisplay(_INTL("You can't use this item while issuing orders at the same time!"))
+    scene.pbDisplay(_INTL("You can't use this item while issuing orders at the same time!")) if showMessages
     next false
   elsif battle.terastallize[side][owner] == -1 && $player.tera_charged?
-    if showMessages
-      scene.pbDisplay(_INTL("You don't need to recharge your {1} yet!", orb))
-    end
+    scene.pbDisplay(_INTL("You don't need to recharge your {1} yet!", orb)) if showMessages
     next false
   end
   next true

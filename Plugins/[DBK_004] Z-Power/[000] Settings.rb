@@ -35,4 +35,15 @@ module Settings
   # When true, plays the Ultra Burst animation whenever triggered.
   #-----------------------------------------------------------------------------
   SHOW_ULTRA_ANIM = true
+  
+  #-----------------------------------------------------------------------------
+  # Sets the name to be displayed for the Z-Crystal bag pocket.
+  #-----------------------------------------------------------------------------
+  ZCRYSTAL_BAG_POCKET_NAME = _INTL("Z-Crystals")
+  
+  #-----------------------------------------------------------------------------
+  # Sets the bag pocket used for Z-Crystals. This adds a new bag slot by default.
+  # YOU WILL NEED TO RECOMPILE AND CLEAR YOUR BAG WHENEVER YOU CHANGE THIS SETTING.
+  #-----------------------------------------------------------------------------
+  ZCRYSTAL_BAG_POCKET = 9
 end

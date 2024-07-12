@@ -1,0 +1,8 @@
+Name = More Pokedex Page : Size Comparison
+Version = 2.0.1
+Website = https://www.reliccastle.com/resources/966/
+Credits = Caruban
+Essentials = 21.1
+Requires = v21.1 Hotfixes
+Optional = Generation 8 Pack Scripts
+Optional = Modular UI Scenes,2.0.3

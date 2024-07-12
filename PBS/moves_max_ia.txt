@@ -1,0 +1,50 @@
+﻿# See the documentation on the wiki to learn how to edit this file.
+#-------------------------------
+[MAXTERARIZE]
+Name = Max Tera-rize
+Type = STELLAR
+Category = Special
+Power = 1
+Accuracy = 0
+TotalPP = 1
+Target = NearFoe
+FunctionCode = CategoryDependsOnHigherDamage
+Flags = DynamaxMove_STELLAR,CannotMetronome
+Description = A Stellar-type attack Dynamax Pokémon use.
+#-------------------------------
+[GMAXMAMMOLANCHE]
+Name = G-Max Mammolanche
+Type = ROCK
+Category = Physical
+Power = 1
+Accuracy = 0
+TotalPP = 1
+Target = NearFoe
+FunctionCode = StartMammolancheOnFoeSide
+Flags = GmaxMove,CannotMetronome
+Description = A G-Max Move used by G-Max Maxomoss. It steals some HP from the target every turn.
+#-------------------------------
+[GMAXSEARINGSKIES]
+Name = G-Max Searing Skies
+Type = FLYING
+Category = Special
+Power = 1
+Accuracy = 0
+TotalPP = 1
+Target = NearFoe
+FunctionCode = BurnFoeSideIgnoreImmunity
+Flags = GmaxMove,CannotMetronome
+Description = A G-Max Move used by G-Max Quetzinfernl. This burns the target, even Fire-Type Pokémon.
+#-------------------------------
+[GMAXKRAKENSCALL]
+Name = G-Max Kraken's Call
+Type = DARK
+Category = Physical
+Power = 1
+Accuracy = 0
+TotalPP = 1
+Target = NearFoe
+FunctionCode = StartKrakensCallOnFoeSide
+Flags = GmaxMove,CannotMetronome
+Description = A G-Max Move used by G-Max Krakaptopus. Traps and deals additional damage to opponents for four turns.
+#-------------------------------

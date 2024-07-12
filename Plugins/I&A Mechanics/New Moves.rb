@@ -310,3 +310,14 @@ class Battle::Move::CantSelectConsecutiveTurns < Battle::Move
     user.effects[PBEffects::SuccessiveMove] = @id
   end
 end
+
+#===============================================================================
+# Effectiveness against Poison- and Steel-Type is 2x. (Nature's Reclamation)
+#===============================================================================
+class Battle::Move::SuperEffectiveAgainstPoisonSteel < Battle::Move
+  def pbCalcTypeModSingle(moveType, defType, user, target)
+    return Effectiveness::SUPER_EFFECTIVE_ONE if defType == :POISON
+	return Effectiveness::SUPER_EFFECTIVE_ONE if defType == :STEEL
+    return super
+  end
+end

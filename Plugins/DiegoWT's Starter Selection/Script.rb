@@ -117,7 +117,7 @@ class DiegoWTsStarterSelection
     @sprites["textwnd"].opacity = 0
     @sprites["textbox"] = pbCreateMessageWindow
     @sprites["textbox"].setSkin("Graphics/Windowskins/nil skin")
-    if StarterSelSettings::INSTYLE == 2 # Checks for interface style
+    if StarterSelSettings::INSTYLE == 1 # Checks for interface style
       @sprites["textbox"].baseColor = Color.new(255,255,255)
       @sprites["textbox"].shadowColor = Color.new(165,165,173)
     else

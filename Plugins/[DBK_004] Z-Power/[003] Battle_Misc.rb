@@ -42,28 +42,7 @@ class Battle
     end
     return zmove_pbCanShowFightMenu?(idxBattler)
   end
-  
-  #-----------------------------------------------------------------------------
-  # Aliased to allow for selection of other moves during Encore if using a Z-Move.
-  #-----------------------------------------------------------------------------
-  alias zmove_pbCanChooseMove? pbCanChooseMove?
-  def pbCanChooseMove?(idxBattler, idxMove, showMessages, sleepTalk = false)
-    battler = @battlers[idxBattler]
-    move = (idxMove.is_a?(Integer)) ? @battlers[idxBattler].moves[idxMove] : idxMove
-    return false unless move
-    if move.pp > 0 && !sleepTalk 
-      if battler.effects[PBEffects::Encore] > 0 && !move.zMove?
-        if move.id != battler.effects[PBEffects::EncoreMove]
-          encoreMove = GameData::Move.get(battler.effects[PBEffects::EncoreMove]).name
-          pbDisplayPaused(_INTL("{1} can only use {2} due to the Encore!", battler.name, encoreMove)) if showMessages
-          return false 
-        end
-      end
-      return battler.pbCanChooseMove?(move, true, showMessages, sleepTalk)
-    end
-    return zmove_pbCanChooseMove?(idxBattler, idxMove, showMessages, sleepTalk)
-  end
-  
+
   #-----------------------------------------------------------------------------
   # Aliased for the switch-in effect of Z-Memento/Z-Parting Shot.
   #-----------------------------------------------------------------------------
@@ -146,7 +125,7 @@ class Battle::Battler
   end
   
   #-----------------------------------------------------------------------------
-  # Aliased so Z-Moves ignore effects that would prevent move selection.
+  # Aliased so Z-Moves ignore most effects that would prevent move selection.
   #-----------------------------------------------------------------------------
   alias zmove_pbCanChooseMove? pbCanChooseMove?
   def pbCanChooseMove?(move, commandPhase, showMessages = true, specialUsage = false)
@@ -202,6 +181,9 @@ class Battle::Battler
       choice[2] = choice[2].convert_zmove(self, @battle, specialUsage)
     end
     zmove_pbUseMove(choice, specialUsage)
+    if @lastMoveUsed && !@lastMoveUsedIsZMove
+      @powerMoveIndex = -1
+    end
   end
   
   #-----------------------------------------------------------------------------

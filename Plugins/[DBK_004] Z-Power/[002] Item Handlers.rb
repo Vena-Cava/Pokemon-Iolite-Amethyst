@@ -15,11 +15,9 @@ module GameData
     alias zcrystal_initialize initialize
     def initialize(hash)
       zcrystal_initialize(hash)
+      @pocket = Settings.get_zcrystal_pocket if is_zcrystal?
       @real_held_description = hash[:real_held_description]
       @zcombo                = hash[:zcombo] || []
-      if is_zcrystal?
-        @pocket = Settings::BAG_MAX_POCKET_SIZE.length
-      end
     end
     
     def is_zcrystal?; return has_flag?("ZCrystal");  end
@@ -147,9 +145,9 @@ module Compiler
 	  end
       next if item.zcombo.empty?
       params = item.zcombo
-	  if params.length < 2
-	    raise _INTL("{1} is a Z-Crystal, but the 'ZCombo' field is missing a move or a species.\n{2}", item.id, FileLineData.linereport)
-	  end
+      if params.length < 2
+        raise _INTL("{1} is a Z-Crystal, but the 'ZCombo' field is missing a move or a species.\n{2}", item.id, FileLineData.linereport)
+      end
       params.each_with_index do |param, i|
         enum = (i == 0) ? :Move : :Species
         params[i] = cast_csv_value(param, "e", enum)
@@ -165,13 +163,23 @@ end
 module Settings
   Settings.singleton_class.alias_method :zcrystal_bag_pocket_names, :bag_pocket_names
   def self.bag_pocket_names
+    zpocket = ZCRYSTAL_BAG_POCKET - 1
     names = self.zcrystal_bag_pocket_names
-    names.push(_INTL("Z-Crystals"))
+    zpocket = names.length if zpocket >= names.length
+    names[zpocket] = ZCRYSTAL_BAG_POCKET_NAME
     return names
   end
+  
+  def self.get_zcrystal_pocket
+    self.bag_pocket_names.each_with_index do |p, i|
+      next if p != ZCRYSTAL_BAG_POCKET_NAME
+      return i + 1
+    end
+    return ZCRYSTAL_BAG_POCKET
+  end
    
-  BAG_MAX_POCKET_SIZE.push(-1)
-  BAG_POCKET_AUTO_SORT.push(true)
+  BAG_MAX_POCKET_SIZE.push(-1)    if ZCRYSTAL_BAG_POCKET > BAG_MAX_POCKET_SIZE.length
+  BAG_POCKET_AUTO_SORT.push(true) if ZCRYSTAL_BAG_POCKET > BAG_MAX_POCKET_SIZE.length
 end
 
 
@@ -189,6 +197,74 @@ class PokemonBag
   def add(item, qty = 1)
     qty = 0 if has?(item, 1) && GameData::Item.get(item).is_zcrystal?
     zcrystal_add(item, qty)
+  end
+end
+
+
+#-------------------------------------------------------------------------------
+# Compatibility with the Bag Screen w/int. Party plugin.
+#-------------------------------------------------------------------------------
+if PluginManager.installed?("Bag Screen w/int. Party")
+  class PokemonBag_Scene
+    def pbRefresh
+      pocketX  = []; incrementX = 0
+      @bag.pockets.length.times do |i|
+        break if pocketX.length == @bag.pockets.length
+        pocketX.push(incrementX)
+        incrementX += 2 if i.odd?
+      end
+      if Settings::ZCRYSTAL_BAG_POCKET == 9
+        path = "Graphics/UI/Bag Screen with Party/icon_pocket_zcrystal"
+        @pocketbitmap = AnimatedBitmap.new(path)
+        @sprites["pocketicon"].bitmap.clear
+        @sprites["pocketicon"] = BitmapSprite.new(148, 52, @viewport)
+        @sprites["pocketicon"].x = 362
+        @sprites["pocketicon"].y = 0
+        @sprites["currentpocket"].setBitmap(path)
+        @sprites["currentpocket"].x = 362
+        @sprites["currentpocket"].src_rect = Rect.new(0, 0, 28, 28)
+      end
+      pocketAcc = @sprites["itemlist"].pocket - 1
+      @sprites["pocketicon"].bitmap.clear
+      (1...@bag.pockets.length).each do |i|
+        pocketValue = i - 1
+        @sprites["pocketicon"].bitmap.blt(
+          (i - 1) * 14 + pocketX[pocketValue], (i % 2) * 26, @pocketbitmap.bitmap,
+          Rect.new((i - 1) * 28, 0, 28, 28)) if pocketValue != pocketAcc
+      end
+      if @choosing && @filterlist
+        (1...@bag.pockets.length).each do |i|
+          next if @filterlist[i].length > 0
+          pocketValue = i - 1
+          @sprites["pocketicon"].bitmap.blt(
+            (i - 1) * 14 + pocketX[pocketValue], (i % 2) * 26, @pocketbitmap.bitmap,
+            Rect.new((i - 1) * 28, 56, 28, 28))
+        end
+      end
+      @sprites["currentpocket"].x = @sprites["pocketicon"].x + ((pocketAcc) * 14) + pocketX[pocketAcc]
+      @sprites["currentpocket"].y = 26 - (((pocketAcc) % 2) * 26)
+      @sprites["currentpocket"].src_rect = Rect.new((pocketAcc) * 28, 28, 28, 28)
+      @sprites["itemlist"].refresh
+      pbRefreshIndexChanged
+      pbRefreshParty
+      pbPocketColor if BagScreenWiInParty::BGSTYLE == 2
+    end
+    
+    alias zcrystal_pbUpdateAnnotation pbUpdateAnnotation
+    def pbUpdateAnnotation
+      item = @sprites["itemlist"].item
+      item_data = GameData::Item.try_get(item)
+      if item_data && item_data.is_zcrystal? && 
+         @bag.last_viewed_pocket == Settings::ZCRYSTAL_BAG_POCKET
+        $player.party.each_with_index do |pkmn, i|
+          elig = pkmn.has_zmove?(item)
+          annotation = (elig) ? _INTL("ABLE") : _INTL("UNABLE")
+          @sprites["pokemon#{i}"].text = annotation
+        end
+      else
+        zcrystal_pbUpdateAnnotation
+      end
+    end
   end
 end
 
@@ -254,15 +330,13 @@ ItemHandlers::CanUseInBattle.add(:ZBOOSTER, proc { |item, pokemon, battler, move
   owner = battle.pbGetOwnerIndexFromBattlerIndex(battler.index)
   ring  = battle.pbGetZRingName(battler.index)      
   if !battle.pbHasZRing?(battler.index)
-    scene.pbDisplay(_INTL("You don't have a {1} to charge!", ring))
+    scene.pbDisplay(_INTL("You don't have a {1} to charge!", ring)) if showMessages
     next false
   elsif !firstAction
-    scene.pbDisplay(_INTL("You can't use this item while issuing orders at the same time!"))
+    scene.pbDisplay(_INTL("You can't use this item while issuing orders at the same time!")) if showMessages
     next false
   elsif battle.zMove[side][owner] == -1
-    if showMessages
-      scene.pbDisplay(_INTL("You don't need to recharge your {1} yet!", ring))
-    end
+    scene.pbDisplay(_INTL("You don't need to recharge your {1} yet!", ring)) if showMessages
     next false
   end
   next true

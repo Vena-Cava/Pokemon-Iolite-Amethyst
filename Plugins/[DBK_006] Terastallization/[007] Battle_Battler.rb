@@ -2,30 +2,11 @@
 # Additions to the Battle:Battler class.
 #===============================================================================
 class Battle::Battler
-  attr_reader :tera_type
-  
   #-----------------------------------------------------------------------------
-  # Initializing Tera attributes.
+  # Tera attributes.
   #-----------------------------------------------------------------------------
-  alias tera_pbInitBlank pbInitBlank
-  def pbInitBlank
-    tera_pbInitBlank
-    @tera_type = nil
-  end
-  
-  alias tera_pbInitDummyPokemon pbInitDummyPokemon
-  def pbInitDummyPokemon(pkmn, idxParty)
-    tera_pbInitDummyPokemon(pkmn, idxParty)
-    @tera_type = pkmn.tera_type
-  end
-  
-  alias tera_pbInitPokemon pbInitPokemon
-  def pbInitPokemon(pkmn, idxParty)
-    tera_pbInitPokemon(pkmn, idxParty)
-    @tera_type = pkmn.tera_type
-  end
-  
   def tera?;             return @pokemon&.tera?;             end
+  def tera_type;         return @pokemon&.tera_type;         end
   def tera_form?;        return @pokemon&.tera_form?;        end
   def display_tera_type; return @pokemon&.display_tera_type; end
   
@@ -39,7 +20,10 @@ class Battle::Battler
     return false if @effects[PBEffects::TransformPokemon]&.hasTerastalForm?
     return false if !getActiveState.nil?
     return false if hasEligibleAction?(:mega, :primal, :zmove, :ultra, :dynamax, :style, :zodiac)
-    return !@pokemon&.tera_type.nil?
+    side  = self.idxOwnSide
+    owner = @battle.pbGetOwnerIndexFromBattlerIndex(@index)
+    return false if @battle.terastallize[side][owner] == -2
+    return !tera_type.nil?
   end
   
   #-----------------------------------------------------------------------------
@@ -50,7 +34,6 @@ class Battle::Battler
     @pokemon.terastallized = false
     self.form_update
     @battle.scene.pbRevertTera(@index, teraBreak)
-    @battle.wildBattleMode = nil if wild?
   end
   
   #-----------------------------------------------------------------------------
@@ -68,10 +51,16 @@ class Battle::Battler
   alias tera_pbTypes pbTypes
   def pbTypes(withExtraType = false)
     if tera?
-      return @types if @tera_type == :STELLAR
-      return [@tera_type]
+      return @types if tera_type == :STELLAR
+      return [tera_type]
     end
     return tera_pbTypes(withExtraType)
+  end
+  
+  alias tera_pbHasOtherType? pbHasOtherType?
+  def pbHasOtherType?(type)
+    return false if tera?
+    return tera_pbHasOtherType?(type)
   end
   
   alias tera_canChangeType? canChangeType?
@@ -80,10 +69,50 @@ class Battle::Battler
     return tera_canChangeType?
   end
   
-  alias tera_pbHasOtherType? pbHasOtherType?
-  def pbHasOtherType?(type)
-    return false if tera?
-    return tera_pbHasOtherType?(type)
+  alias tera_pbChangeTypes pbChangeTypes
+  def pbChangeTypes(newType)
+    if newType.is_a?(Battle::Battler) && newType.tera?
+      newTypes = newType.pbPreTeraTypes
+      newExtraType = newType.effects[PBEffects::ExtraType]
+      newTypes.delete(newExtraType)
+      newTypes.push(:NORMAL) if newTypes.length == 0
+      @types = newTypes.clone
+      @effects[PBEffects::ExtraType] = newExtraType
+    else
+      tera_pbChangeTypes(newType)
+    end
+  end
+  
+  #-----------------------------------------------------------------------------
+  # Returns the battler's original typing prior to Terastallization.
+  #-----------------------------------------------------------------------------
+  def pbPreTeraTypes
+    ret = @types
+    ret.delete(:FIRE) if @effects[PBEffects::BurnUp]
+    if @effects[PBEffects::Roost]
+      ret.delete(:FLYING)
+      ret.push(:NORMAL) if ret.length == 0
+    end
+    extra = @effects[PBEffects::ExtraType]
+    ret.push(extra) if extra && !@types.include?(extra)
+    ret.uniq!
+    return ret
+  end
+  
+  #-----------------------------------------------------------------------------
+  # Checks if Terastallization can boost the damage of a given type.
+  #-----------------------------------------------------------------------------
+  def typeTeraBoosted?(type, override = false)
+    return false if !tera? && !override
+    case tera_type
+    when :STELLAR
+      return true if !tera? && override
+      side  = self.idxOwnSide
+      owner = @battle.pbGetOwnerIndexFromBattlerIndex(@index)
+      return @battle.boosted_tera_types[side][owner].include?(type)
+    else
+      return type == tera_type
+    end
   end
   
   #-----------------------------------------------------------------------------
@@ -93,29 +122,13 @@ class Battle::Battler
   def pbEndTurn(_choice)
     tera_pbEndTurn(_choice)
     return if !@lastMoveUsedType
-    return if !tera? || @tera_type != :STELLAR
+    return if !tera? || tera_type != :STELLAR
     return if @battle.pbRaidBattle? || isSpecies?(:TERAPAGOS)
     return if GameData::Move.get(@lastMoveUsed).category >= 2
     side  = self.idxOwnSide
     owner = @battle.pbGetOwnerIndexFromBattlerIndex(@index)
     if @battle.boosted_tera_types[side][owner].include?(@lastMoveUsedType)
       @battle.boosted_tera_types[side][owner].delete(@lastMoveUsedType)
-    end
-  end
-  
-  #-----------------------------------------------------------------------------
-  # Checks if Terastallization can boost the damage of a given type.
-  #-----------------------------------------------------------------------------
-  def typeTeraBoosted?(type, override = false)
-    return false if !tera? && !override
-    case @tera_type
-    when :STELLAR
-      return true if !tera? && override
-      side  = self.idxOwnSide
-      owner = @battle.pbGetOwnerIndexFromBattlerIndex(@index)
-      return @battle.boosted_tera_types[side][owner].include?(type)
-    else
-      return type == @tera_type
     end
   end
   

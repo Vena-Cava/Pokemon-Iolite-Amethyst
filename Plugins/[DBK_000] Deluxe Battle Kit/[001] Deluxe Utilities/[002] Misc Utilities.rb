@@ -78,6 +78,14 @@ class Battle::Battler
   end
   
   #-----------------------------------------------------------------------------
+  # Utility for checking if the battler is at low HP.
+  #-----------------------------------------------------------------------------
+  def hasLowHP?
+    return false if fainted?
+    return @hp <= (@totalhp / 4).floor
+  end
+  
+  #-----------------------------------------------------------------------------
   # Utility for resetting a battler's moves back to its original moveset.
   #-----------------------------------------------------------------------------
   def display_base_moves
@@ -129,7 +137,6 @@ class Battle::Battler
   def form_update(fullupdate = false)
     if self.form != @pokemon.form
       self.form = @pokemon.form
-      fullupdate = true
     end
     pbUpdate(fullupdate)
     pkmn = @effects[PBEffects::TransformPokemon] || displayPokemon

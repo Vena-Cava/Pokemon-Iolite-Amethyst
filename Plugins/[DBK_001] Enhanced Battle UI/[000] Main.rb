@@ -110,6 +110,7 @@ class Battle::Scene
   end
   
   def pbHideInfoIcons
+    return if pbInSafari?
     @battle.allBattlers.each do |b|
       @sprites["info_icon#{b.index}"].visible = false
     end

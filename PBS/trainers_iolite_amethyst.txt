@@ -1,5 +1,35 @@
 ﻿# See the documentation on the wiki to learn how to edit this file.
 #-------------------------------
+[POKEMONTRAINER_Micah,Micah]
+Pokemon = ELEEFENT,5
+    Moves = TACKLE,TAILWHIP,ABSORB
+#-------------------------------
+[POKEMONTRAINER_Micah,Micah,1]
+Pokemon = QUETZI,5
+#-------------------------------
+[POKEMONTRAINER_Micah,Micah,2]
+Pokemon = CYCLOPTO,5
+#-------------------------------
+[POKEMONTRAINER_Amber,Amber]
+Pokemon = ELEEFENT,5
+    Moves = TACKLE,TAILWHIP,ABSORB
+#-------------------------------
+[POKEMONTRAINER_Amber,Amber,1]
+Pokemon = QUETZI,5
+#-------------------------------
+[POKEMONTRAINER_Amber,Amber,2]
+Pokemon = CYCLOPTO,5
+#-------------------------------
+[POKEMONTRAINER_Alex,Alex]
+Pokemon = ELEEFENT,5
+    Moves = TACKLE,TAILWHIP,ABSORB
+#-------------------------------
+[POKEMONTRAINER_Alex,Alex,1]
+Pokemon = QUETZI,5
+#-------------------------------
+[POKEMONTRAINER_Alex,Alex,2]
+Pokemon = CYCLOPTO,5
+#-------------------------------
 [BUGCATCHER,Alex]
 LoseText = What's wrong with my bugs?
 Pokemon = ROLLVA,3

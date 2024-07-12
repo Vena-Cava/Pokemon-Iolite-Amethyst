@@ -1,0 +1,51 @@
+﻿# See the documentation on the wiki to learn how to edit this file.
+#-------------------------------
+[PETILIL,2]
+FormName = Niphosian
+Types = GRASS,PSYCHIC
+Abilities = BIOLUMINESENCE,OWNTEMPO
+HiddenAbilities = LEAFGUARD
+BaseStats = 45,35,40,10,100,50
+#-------------------------------
+[LILLIGANT,2]
+FormName = Niphosian
+Types = GRASS,PSYCHIC
+Abilities = BIOLUMINESENCE,OWNTEMPO
+HiddenAbilities = LEAFGUARD
+BaseStats = 70,60,55,55,165,75
+#-------------------------------
+[DRUDDIGON,1]
+FormName = Nordric
+Types = DRAGON,ROCK
+Abilities = ROUGHSKIN,SHEERFORCE
+HiddenAbilities = PERMAFROST
+#-------------------------------
+[PUFFONO,1]
+FormName = Inflated Form
+Abilities = IRONBARBS
+EVs = DEFENSE,3
+BaseStats = 45,140,140,25,120,130
+Height = 2.9
+Pokedex = Increased defenses means Puffono sacrifices mobility, so it cannot outrun predators, instead it has to hope it gets bored and leaves.
+#-------------------------------
+[SYLVSTAG,1]
+FormName = Mega Sylvstag
+MegaStone = SYLVSITE
+BaseStats = 110,103,114,75,121,108
+BaseExp = 350
+Abilities = GRASSPELT
+HiddenAbilities = GRASSPELT
+Height = 2.2
+Weight = 155.5
+#-------------------------------
+[OGLACE,1]
+FormName = Mega Oglace
+MegaStone = OGLITE
+BaseStats = 115,120,165,45,110,145
+BaseExp = 350
+Abilities = BRITTLEIRON
+HiddenAbilities = BRITTLEIRON
+Height = 2.2
+Weight = 155.5
+Pokedex = Text
+#-------------------------------

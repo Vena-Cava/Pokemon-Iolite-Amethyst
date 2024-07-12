@@ -24,6 +24,8 @@
 21,East,0,23,West,1
 # Route 2 (21) - Route 7 (47)
 21,East,77,47,West,0
+# Pinella Town (22) - Pinella Fields (48)
+22,East,5,48,West,0
 # Route 3 (31) - Lerucean Town (23)
 31,South,32,23,North,0
 # Route 3 (31) - Ingido Plateau outside (35)
@@ -36,11 +38,9 @@
 41,South,6,45,North,0
 # Route 7 (47) - Battle Frontier (52)
 47,East,8,52,West,0
+# Pinella Fields (48) - Tulphoise City (78)
+48,East,0,78,West,4
 # Route 8 (69) - Safari Zone outside (66)
 69,North,0,66,South,10
-# Pinella Fields (48) - Pinella Town (22)
-48,West,0,22,East,5
-# Tulphoise City (78) - Pinella Fields (48)
-78,West,4,48,East,0
-# Fenne Ruins (87) - Tulphoise City (78)
-87,West,0,78,East,1
+# Tulphoise City (78) - Fenne Ruins (87)
+78,East,0,87,West,1
