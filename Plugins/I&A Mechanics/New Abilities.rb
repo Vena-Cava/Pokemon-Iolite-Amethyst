@@ -221,3 +221,38 @@ Battle::AbilityEffects::MoveBlocking.add(:EMPTYSOUNDSCAPE,
     next move.soundMove?
   }
 )
+
+#===============================================================================
+# Absolute Zero
+# Summons Hail when the Pokémon enters battle. Multiplies the damage of the 
+# higher of its Attack or Special Attack by 4/3 when Hail is active.
+#===============================================================================
+
+Battle::AbilityEffects::OnSwitchIn.add(:ABSOLUTEZERO,
+  proc { |ability, battler, battle, switch_in|
+    # Summon Hail when the Pokémon enters battle
+    if [:Hail, :Snow].include?(battle.field.weather)
+      battle.pbShowAbilitySplash(battler)
+      battle.pbDisplay(_INTL("{1} thrives in the hailstorm, plunging its temperatures to zero!", battler.pbThis))
+      battle.pbHideAbilitySplash(battler)
+	else
+      battle.pbStartWeatherAbility(:Hail, battler)
+      battle.pbDisplay(_INTL("{1} summoned a hailstorm, plunging its temperatures to zero!", battler.pbThis))
+    
+    end
+  }
+)
+
+Battle::AbilityEffects::DamageCalcFromUser.add(:ABSOLUTEZERO,
+  proc { |ability, user, target, move, mults, baseDmg, type|
+    # Check if Hail is active
+    if user.battle.field.weather == :Hail
+      # Boost the damage if the move matches the user's higher offensive stat
+      if user.attack >= user.spatk && move.physicalMove?
+        mults[:attack_multiplier] *= 4 / 3.0
+      elsif user.spatk > user.attack && move.specialMove?
+        mults[:attack_multiplier] *= 4 / 3.0
+      end
+    end
+  }
+)
