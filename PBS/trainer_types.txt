@@ -909,79 +909,79 @@ BaseMoney = 16
 #-------------------------------
 [BACKERS_F]
 Name = Backers
-Gender = Unknown
+Gender = nonbinary
 BaseMoney = 128
 #-------------------------------
 [BACKERS_M]
 Name = Backers
-Gender = Unknown
+Gender = nonbinary
 BaseMoney = 128
 #-------------------------------
 [BELLEANDPA]
 Name = Belle & Pa
-Gender = Unknown
+Gender = nonbinary
 BaseMoney = 64
 #-------------------------------
 [COOLCOUPLE]
 Name = Cool Couple
-Gender = Unknown
+Gender = nonbinary
 BaseMoney = 72
 SkillLevel = 48
 #-------------------------------
 [CRUSHKIN]
 Name = Crush Kin
-Gender = Unknown
+Gender = nonbinary
 BaseMoney = 48
 #-------------------------------
 [DOUBLETEAM2]
 Name = Double Team
-Gender = Unknown
+Gender = nonbinary
 BaseMoney = 128
 #-------------------------------
 [DOUBLETEAM]
 Name = Double Team
-Gender = Unknown
+Gender = nonbinary
 BaseMoney = 128
 #-------------------------------
 [HOOLIGANS]
 Name = Hooligans
-Gender = Unknown
+Gender = nonbinary
 BaseMoney = 128
 #-------------------------------
 [INTERVIEWERS]
 Name = Interviewers
-Gender = Unknown
+Gender = nonbinary
 BaseMoney = 128
 #-------------------------------
 [SISANDBRO]
 Name = Sis and Bro
-Gender = Unknown
+Gender = nonbinary
 BaseMoney = 16
 SkillLevel = 48
 #-------------------------------
 [TWINS2]
 Name = Twins
-Gender = Unknown
+Gender = nonbinary
 BaseMoney = 32
 #-------------------------------
 [TWINS3]
 Name = Twins
-Gender = Unknown
+Gender = nonbinary
 BaseMoney = 32
 #-------------------------------
 [TWINS]
 Name = Twins
-Gender = Unknown
+Gender = nonbinary
 BaseMoney = 24
 #-------------------------------
 [YOUNGCOUPLE2]
 Name = Young Couple
-Gender = Unknown
+Gender = nonbinary
 BaseMoney = 128
 #-------------------------------
 [YOUNGCOUPLE]
 Name = Young Couple
-Gender = Unknown
+Gender = nonbinary
 BaseMoney = 60
 SkillLevel = 32
 #-------------------------------

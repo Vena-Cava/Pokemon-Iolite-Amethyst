@@ -165,6 +165,52 @@ Habitat = WatersEdge
 Category = River Bear
 Pokedex = Living near streams, Brakkub practice catching Palmon. Their claws aren't sharp yet, so they often lose their catch.
 #-------------------------------
+[URSLAS]
+Name = Urslas
+Types = WATER,FIGHTING
+BaseStats = 84,78,76,58,58,66
+GenderRatio = FemaleOneEighth
+GrowthRate = Parabolic
+BaseExp = 147
+EVs = ATTACK,2
+CatchRate = 45
+Happiness = 70
+Abilities = TORRENT
+HiddenAbilities = MOLDBREAKER
+Moves = 1,TACKLE,1,BUBBLE,4,GROWL,6,AQUAJET,8,ROCKSMASH,11,JETPUNCH,15,ROLLINGKICK,18,RAINDANCE,20,AQUACUTTER,24,AURASPHERE,28,LIQUIDATION,32,CRUNCH,36,BULKUP,40,BODYPRESS,44,HYDROPUMP,47,CROSSCHOP,50,XSCISSOR,53,WAVECRASH,55,CLOSECOMBAT
+EggGroups = Field,Water1
+HatchSteps = 5120
+Height = 0.8
+Weight = 57.4
+Color = Blue
+Shape = BipedalTail
+Habitat = WatersEdge
+Category = Coastal Bear
+Pokedex = Having grown, Urslas prefer coastal waters, where they can hack at harder-scaled Pokémon. Their claws are honed to a razor edge.
+#-------------------------------
+[BARBEARIEN]
+Name = Barbearien	
+Types = WATER,FIGHTING
+BaseStats = 105,100,90,75,75,85
+GenderRatio = FemaleOneEighth
+GrowthRate = Parabolic
+BaseExp = 265
+EVs = ATTACK,3
+CatchRate = 45
+Happiness = 70
+Abilities = TORRENT
+HiddenAbilities = MOLDBREAKER
+Moves = 1,TACKLE,1,BUBBLE,4,GROWL,6,AQUAJET,8,ROCKSMASH,11,JETPUNCH,15,ROLLINGKICK,18,RAINDANCE,20,AQUACUTTER,24,AURASPHERE,28,LIQUIDATION,32,CRUNCH,36,BULKUP,40,BODYPRESS,44,HYDROPUMP,47,CROSSCHOP,50,XSCISSOR,53,WAVECRASH,55,CLOSECOMBAT
+EggGroups = Field,Water1
+HatchSteps = 5120
+Height = 0.4
+Weight = 24.3
+Color = Blue
+Shape = BipedalTail
+Habitat = WatersEdge
+Category = Sea Bear
+Pokedex = Keeping their claws concealed, they choose to wield axes instead. They use them to guard Brakkub whilst teaching them how to fish.
+#-------------------------------
 [STACKEM]
 Name = Stackem
 Types = FAIRY
@@ -245,7 +291,8 @@ BaseExp = 115
 EVs = SPEED,2
 CatchRate = 190
 Happiness = 70
-Abilities = STATIC,FLAMEBODY,LIGHTNINGROD
+Abilities = STATIC,FLAMEBODY
+HiddenAbilities = LIGHTNINGROD
 Moves = 1,NUZZLE,1,EMBER,1,TACKLE,5,TAILWHIP,8,QUICKATTACK,10,CHARGE,12,FLAMEWHEEL,15,THUNDERSHOCK,17,FLAMECHARGE,20,AGILITY,25,SPARK,28,FLAMEBURST,30,VOLTSWITCH,32,BOUNCE,33,INCINERATE,45,DISCHARGE,48,FIRELASH,50,THUNDERBOLT,52,FLAMETHROWER,55,PLASMABALL,60,THUNDER,60,FIREBLAST
 EggGroups = Field,Fairy
 HatchSteps = 5120

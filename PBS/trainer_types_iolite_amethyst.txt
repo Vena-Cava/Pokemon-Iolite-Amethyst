@@ -12,6 +12,5 @@ BaseMoney = 60
 #-------------------------------
 [POKEMONTRAINER_Alex]
 Name = Pokémon Trainer
-Gender = Unknown
+Gender = nonbinary
 BaseMoney = 60
-#-------------------------------

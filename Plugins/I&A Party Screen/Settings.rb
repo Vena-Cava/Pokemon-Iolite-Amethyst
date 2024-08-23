@@ -3,7 +3,7 @@
 #===============================================================================
 module IASummary
 # If you want your Bag Screen to have a scrolling panorama (true or false):
-  PANORAMA = true
+  PANORAMA = false
 # If you want your Bag Screen to have a scrolling panorama (true or false):
   IAVERSION = 1
 

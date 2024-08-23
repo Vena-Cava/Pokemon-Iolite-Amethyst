@@ -3,7 +3,7 @@
 [0]
 StartMoney = 3000
 StartItemStorage = POTION
-Home = 3,7,5,8
+Home = 42,8,11,8
 StorageCreator = Bill
 WildBattleBGM = Battle Wild
 TrainerBattleBGM = Battle trainer
@@ -14,8 +14,8 @@ BicycleBGM = Bicycle
 #-------------------------------
 [1]
 TrainerType = POKEMONTRAINER_Red
-WalkCharset = Amethyst Protagonists/trProtag_BoyWalk
-RunCharset = Amethyst Protagonists/trProtag_BoyRun
+WalkCharset = IA Characters/trAProtag_BoyWalk
+RunCharset = IA Characters/trAProtag_BoyRun
 CycleCharset = B2W2 Protagonists/trProtag_BoyBike
 SurfCharset = B2W2 Protagonists/trProtag_BoySurf
 DiveCharset = B2W2 Protagonists/trProtag_BoySurf
@@ -24,7 +24,7 @@ SurfFishCharset = B2W2 Protagonists/trProtag_BoyFish
 #-------------------------------
 [2]
 TrainerType = POKEMONTRAINER_Leaf
-WalkCharset = Amethyst Protagonists/trProtag_GirlWalk
+WalkCharset = IA Characters/trAProtag_GirlWalk
 RunCharset = B2W2 Protagonists/trProtag_GirlRun
 CycleCharset = B2W2 Protagonists/trProtag_GirlBike
 SurfCharset = B2W2 Protagonists/trProtag_GirlSurf
@@ -34,7 +34,7 @@ SurfFishCharset = B2W2 Protagonists/trProtag_GirlFish
 #-------------------------------
 [3]
 TrainerType = POKEMONTRAINER_Alex
-WalkCharset = Amethyst Protagonists/trProtag_NBWalk
+WalkCharset = IA Characters/trAProtag_NBWalk
 RunCharset = B2W2 Protagonists/trProtag_GirlRun
 CycleCharset = B2W2 Protagonists/trProtag_GirlBike
 SurfCharset = B2W2 Protagonists/trProtag_GirlSurf

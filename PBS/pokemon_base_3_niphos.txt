@@ -629,6 +629,27 @@ Habitat = Sea
 Category = Shy Fish
 Pokedex = Puffono are very shy and are rarely seen in the wild by Humans. The slightest of disturbances and it will puff up into a giant spiked ball.
 #-------------------------------
+[ZEKITREX]
+Name = Zekitrex
+Types = ELECTRIC,FIGHTING
+BaseStats = 58,52,46,112,77,85
+GenderRatio = Female50Percent
+GrowthRate = Parabolic
+BaseExp = 115
+EVs = SPEED,2
+CatchRate = 190
+Happiness = 70
+Abilities = STATIC,RUNAWAY
+HiddenAbilities = MOTORDRIVE
+Moves = 1,NUZZLE
+EggGroups = Field
+HatchSteps = 5120
+Height = 0.4
+Weight = 4.5
+Habitat = RoughTerrain
+Category = mPh
+Pokedex = zip zap
+#-------------------------------
 [BAOBAO]
 Name = Bao-Bao
 Types = FIRE

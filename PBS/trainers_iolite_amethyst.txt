@@ -1,40 +1,85 @@
 ﻿# See the documentation on the wiki to learn how to edit this file.
 #-------------------------------
 [POKEMONTRAINER_Micah,Micah]
+LoseText = ...
 Pokemon = ELEEFENT,5
     Moves = TACKLE,TAILWHIP,ABSORB
 #-------------------------------
 [POKEMONTRAINER_Micah,Micah,1]
+LoseText = ...
 Pokemon = QUETZI,5
 #-------------------------------
 [POKEMONTRAINER_Micah,Micah,2]
+LoseText = ...
 Pokemon = CYCLOPTO,5
 #-------------------------------
 [POKEMONTRAINER_Amber,Amber]
+LoseText = ...
 Pokemon = ELEEFENT,5
     Moves = TACKLE,TAILWHIP,ABSORB
 #-------------------------------
 [POKEMONTRAINER_Amber,Amber,1]
+LoseText = ...
 Pokemon = QUETZI,5
 #-------------------------------
 [POKEMONTRAINER_Amber,Amber,2]
+LoseText = ...
 Pokemon = CYCLOPTO,5
 #-------------------------------
 [POKEMONTRAINER_Alex,Alex]
+LoseText = ...
 Pokemon = ELEEFENT,5
     Moves = TACKLE,TAILWHIP,ABSORB
 #-------------------------------
 [POKEMONTRAINER_Alex,Alex,1]
+LoseText = ...
 Pokemon = QUETZI,5
 #-------------------------------
 [POKEMONTRAINER_Alex,Alex,2]
+LoseText = ...
 Pokemon = CYCLOPTO,5
 #-------------------------------
-[BUGCATCHER,Alex]
+[POKEMONTRAINER_Micah,Micah,3]
+LoseText = ...
+Pokemon = ELEEFENT,10
+#-------------------------------
+[POKEMONTRAINER_Micah,Micah,4]
+LoseText = ...
+Pokemon = QUETZI,10
+#-------------------------------
+[POKEMONTRAINER_Micah,Micah,5]
+LoseText = ...
+Pokemon = CYCLOPTO,10
+#-------------------------------
+[POKEMONTRAINER_Amber,Amber,3]
+LoseText = ...
+Pokemon = ELEEFENT,10
+#-------------------------------
+[POKEMONTRAINER_Amber,Amber,4]
+LoseText = ...
+Pokemon = QUETZI,10
+#-------------------------------
+[POKEMONTRAINER_Amber,Amber,5]
+LoseText = ...
+Pokemon = CYCLOPTO,10
+#-------------------------------
+[POKEMONTRAINER_Alex,Alex,3]
+LoseText = ...
+Pokemon = ELEEFENT,10
+#-------------------------------
+[POKEMONTRAINER_Alex,Alex,4]
+LoseText = ...
+Pokemon = QUETZI,10
+#-------------------------------
+[POKEMONTRAINER_Alex,Alex,5]
+LoseText = ...
+Pokemon = CYCLOPTO,10
+#-------------------------------
+[BUGCATCHER,Anthony]
 LoseText = What's wrong with my bugs?
 Pokemon = ROLLVA,3
 #-------------------------------
-[YOUNGSTER3,Arthur]
+[YOUNGSTER3,Declan]
 LoseText = Shorts won't make you better at battling, it seems.
 Pokemon = CRIVOLE,4
 Pokemon = QUILTOX,4
@@ -115,3 +160,31 @@ Pokemon = SLOWBRO,100
     IV = 31,0,31,31,31,31
     EV = 248,0,216,0,0,44
     Ball = NETBALL
+#-------------------------------
+[BEAUTY2,Zara,1]
+LoseText = ...
+Pokemon = HOGRIME,50
+    Moves = WAVECRASH,HEADLONGRUSH,MEGAHORN,SHOREUP
+    Ability = SAPSIPPER
+    Item = LEFTOVERS
+    Nature = ADAMANT
+    IV = 31,31,31,31,31,31
+    EV = 252,0,110,0,0,148
+    Ball = LUXURYBALL
+Pokemon = TSAREENA,50
+    Moves = TROPKICK,KNOCKOFF,RAPIDSPIN,TRIPLEAXEL
+    Ability = LETHALLEGS
+    Item = LIFEORB
+    Nature = JOLLY
+    IV = 31,31,31,31,31,31
+    EV = 0,252,4,252,0,0
+    Ball = LUXURYBALL
+Pokemon = URSALUNA,50
+    Form = 1
+    Moves = BLOODMOON,CALMMIND,EARTHPOWER,VACUUMWAVE
+    Ability = MINDSEYE
+    Item = LEFTOVERS
+    Nature = MODEST
+    IV = 31,0,31,31,31,31
+    EV = 252,0,0,0,252,4
+    Ball = LUXURYBALL
