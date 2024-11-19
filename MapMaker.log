@@ -421,3 +421,27 @@ Backtrace:
 'SDK::Scene_Base' line 49 in `main'
 'Main' line 12
 
+===============================================================================
+Tue Nov 19 09:00:18 GMT Standard Time 2024
+-------------------------------------------------------------------------------
+Script 'Game_Event' line 197: NoMethodError occured.
+
+undefined method `x' for nil:NilClass
+
+Backtrace:
+'Game_Event' line 197 in `check_event_trigger_auto'
+'Game_Event' line 174 in `refresh'
+'Game_Event' line 31 in `initialize'
+'Game_Map' line 76 in `new'
+'Game_Map' line 76 in `setup'
+'Game_Map' line 75 in `each'
+'Game_Map' line 75 in `setup'
+'Scene_Main' line 205 in `generate'
+'Scene_Main' line 127 in `update_top'
+'Scene_Main' line 95 in `update'
+'SDK::Scene_Base' line 104 in `main_loop'
+'SDK::Scene_Base' line 47 in `main'
+'SDK::Scene_Base' line 46 in `loop'
+'SDK::Scene_Base' line 49 in `main'
+'Main' line 12
+
