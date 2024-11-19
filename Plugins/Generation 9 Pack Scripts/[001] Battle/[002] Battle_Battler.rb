@@ -287,9 +287,11 @@ class Battle::Battler
   end
   
   #-----------------------------------------------------------------------------
-  # Aliased for new continuous ability checks.
+  # - Edited to trigger Commander ability
+  # - Edited to reset protean trigger
+  # - Edited to reset Judgement type
+  # - Edited to trigger skip Trace ability an Pokémon that has Ability Shield
   #-----------------------------------------------------------------------------
-  alias paldea_pbContinualAbilityChecks pbContinualAbilityChecks
   def pbContinualAbilityChecks(onSwitchIn = false)
     @battle.pbEndPrimordialWeather
     if hasActiveAbility?(:COMMANDER)
@@ -298,12 +300,28 @@ class Battle::Battler
     @proteanTrigger = false
     plateType = pbGetJudgmentType(@legendPlateType)
     @legendPlateType = plateType
-    if hasActiveAbility?(:TRACE) && hasActiveItem?(:ABILITYSHIELD)
-      @battle.pbShowAbilitySplash(self)
-      @battle.pbDisplay(_INTL("{1}'s Ability is protected by the effects of its Ability Shield!", pbThis))
-      @battle.pbHideAbilitySplash(self)
-    else
-      paldea_pbContinualAbilityChecks(onSwitchIn)
+    if hasActiveAbility?(:TRACE)
+      if hasActiveItem?(:ABILITYSHIELD) # Trace failed by its own Ability Shield
+        if onSwitchIn
+          @battle.pbShowAbilitySplash(self)
+          @battle.pbDisplay(_INTL("{1}'s Ability is protected by the effects of its Ability Shield!", pbThis))
+          @battle.pbHideAbilitySplash(self)
+        end
+      else
+        choices = @battle.allOtherSideBattlers(@index).select do |b|
+          next !b.hasActiveItem?(:ABILITYSHIELD) && (b.ability_id == :WONDERGUARD || !b.uncopyableAbility?)
+        end
+        if choices.length > 0
+          choice = choices[@battle.pbRandom(choices.length)]
+          @battle.pbShowAbilitySplash(self)
+          self.ability = choice.ability
+          @battle.pbDisplay(_INTL("{1} traced {2}'s {3}!", pbThis, choice.pbThis(true), choice.abilityName))
+          @battle.pbHideAbilitySplash(self)
+          if !onSwitchIn && (unstoppableAbility? || abilityActive?)
+            Battle::AbilityEffects.triggerOnSwitchIn(self.ability, self, @battle)
+          end
+        end
+      end
     end
     pbMirrorStatUpsOpposing
   end
@@ -346,7 +364,7 @@ class Battle::Battler
   def isCommanderHost?
     commander = @effects[PBEffects::Commander]
     return commander && commander.length == 2
-  end
+  end  
   
   #-----------------------------------------------------------------------------
   # Aliased to prevent Pokemon under the effects of Commander from switching.
@@ -366,17 +384,20 @@ class Battle::Battler
     commanderMsg = nil
     if @effects[PBEffects::Commander]
       pairedBattler = @battle.battlers[@effects[PBEffects::Commander][0]]
-      batSprite = @battle.scene.sprites["pokemon_#{pairedBattler.index}"]
-      if isCommander?
-        order = [pbThis, pairedBattler.pbThis(true)]
-      else
-        order = [pairedBattler.pbThis, pbThis(true)]
-        pairedBattler.effects[PBEffects::Commander] = nil
+      if pairedBattler&.effects[PBEffects::Commander]
+        if isCommander?
+          order = [pbThis, pairedBattler.pbThis(true)]
+        else
+          order = [pairedBattler.pbThis, pbThis(true)]
+          pairedBattler.effects[PBEffects::Commander] = nil
+        end
+        commanderMsg = _INTL("{1} comes out of {2}'s mouth!", *order)
+        batSprite = @battle.scene.sprites["pokemon_#{pairedBattler.index}"]
       end
-      commanderMsg = _INTL("{1} comes out of {2}'s mouth!", *order)
     end
-    paldea_pbFaint(showMessage) 
-    @battle.pbAddFaintedAlly(self)
+    isFainted = @fainted
+    paldea_pbFaint(showMessage)
+    @battle.pbAddFaintedAlly(self) if !isFainted && @fainted
     if commanderMsg
       @battle.pbDisplay(commanderMsg)
       batSprite.visible = true
@@ -406,7 +427,23 @@ class Battle::Battler
     return targets
   end
   
+  ##############################################################################
+  # Related to battler item usage.
+  ##############################################################################
   
+  #-----------------------------------------------------------------------------
+  # -Aliased so flung berry can triggered Cud Chew Ability.
+  #-----------------------------------------------------------------------------
+  alias paldea_pbHeldItemTriggered pbHeldItemTriggered
+  def pbHeldItemTriggered(item_to_use, own_item = true, fling = false)
+    paldea_pbHeldItemTriggered(item_to_use, own_item, fling)
+    # Cud Chew
+    if hasActiveAbility?(:CUDCHEW) && GameData::Item.get(item_to_use).is_berry? && 
+       fling && !own_item
+      setRecycleItem(item_to_use)
+    end
+  end
+
   ##############################################################################
   # Related to battler move usage.
   ##############################################################################

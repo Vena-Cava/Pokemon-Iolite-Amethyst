@@ -174,10 +174,11 @@ class Battle::Move::SwitchOutTargetStatusMove < Battle::Move
   end
 
   def pbSwitchOutTargetEffect(user, targets, numHits, switched_battlers)
-    return if @battle.wildBattle? || !switched_battlers.empty?
+    return if !switched_battlers.empty?
     return if user.fainted? || numHits == 0
     targets.each do |b|
       next if b.fainted? || b.damageState.unaffected
+      next if b.wild?
       next if b.effects[PBEffects::Ingrain]
       next if b.hasActiveAbility?([:SUCTIONCUPS, :GUARDDOG]) && !@battle.moldBreaker
       next if b.isCommander?
@@ -228,7 +229,7 @@ class Battle::Move::StartUserSideDoubleSpeed < Battle::Move
   def pbEffectGeneral(user)
     user.pbOwnSide.effects[PBEffects::Tailwind] = 4
     @battle.pbDisplay(_INTL("The Tailwind blew from behind {1}!", user.pbTeam(true)))
-    @battle.allSameSideBattlers.each do |b| 
+    @battle.allSameSideBattlers(user).each do |b|
       next if !b || b.fainted?
       if b.hasActiveAbility?(:WINDRIDER) && b.pbCanRaiseStatStage?(:ATTACK, b, self)
         b.pbRaiseStatStageByAbility(:ATTACK, 1, b)
@@ -253,8 +254,7 @@ class Battle::Move::UserSwapsPositionsWithAlly < Battle::Move
     super
     user.effects[PBEffects::ProtectRate] = oldVal
   end
-  
-  alias paldea_pbMoveFailed? pbMoveFailed?
+
   def pbMoveFailed?(user, targets)
     if Settings::MECHANICS_GENERATION >= 9
       if user.effects[PBEffects::AllySwitch]
@@ -269,7 +269,23 @@ class Battle::Move::UserSwapsPositionsWithAlly < Battle::Move
         return true
       end
     end
-    return paldea_pbMoveFailed?(user, targets)
+    numTargets = 0
+    if !user.effects[PBEffects::Commander]
+      @idxAlly = -1
+      idxUserOwner = @battle.pbGetOwnerIndexFromBattlerIndex(user.index)
+      user.allAllies.each do |b|
+        next if @battle.pbGetOwnerIndexFromBattlerIndex(b.index) != idxUserOwner
+        next if !b.near?(user)
+        next if b.effects[PBEffects::Commander]
+        numTargets += 1
+        @idxAlly = b.index
+      end
+    end
+    if numTargets != 1
+      @battle.pbDisplay(_INTL("But it failed!"))
+      return true
+    end
+    return false
   end
   
   alias paldea_pbEffectGeneral pbEffectGeneral

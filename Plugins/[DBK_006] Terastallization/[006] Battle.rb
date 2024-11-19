@@ -125,8 +125,7 @@ class Battle
     ret = tera_pbLastInTeam(idxBattler)
     if ret > 0
       pkmn = pbParty(idxBattler)[ret]
-      ret = -1 if pkmn.tera_form? || 
-                 (pkmn.isSpecies?(:TERAPAGOS) && pkmn.form > 0)
+      ret = -1 if pkmn.tera_form? || (pkmn.isSpecies?(:TERAPAGOS) && pkmn.form > 0)
     end
     return ret
   end
@@ -156,6 +155,7 @@ class Battle
     return if !battler.hasTera? || battler.tera?
     $stats.terastallize_count += 1 if battler.pbOwnedByPlayer?
     pbDeluxeTriggers(idxBattler, nil, "BeforeTerastallize", battler.species, battler.tera_type)
+    @scene.pbAnimateSubstitute(idxBattler, :hide)
     old_ability = battler.ability_id
     if battler.hasActiveAbility?(:ILLUSION)
       illusion = battler.effects[PBEffects::Illusion]
@@ -188,6 +188,7 @@ class Battle
       $player.tera_charged = false
     end
     pbDeluxeTriggers(idxBattler, nil, "AfterTerastallize", battler.species, battler.tera_type)
+    @scene.pbAnimateSubstitute(idxBattler, :show)
   end
   
   #-----------------------------------------------------------------------------
@@ -217,6 +218,7 @@ class Battle
         @scene.pbRevertTera(battler.index)
       end
     end
+    battler.ability_id = battler.pokemon.ability_id
   end
   
   #-----------------------------------------------------------------------------
@@ -258,16 +260,5 @@ class Battle
     side  = @battlers[idxBattler].idxOwnSide
     owner = pbGetOwnerIndexFromBattlerIndex(idxBattler)
     return @terastallize[side][owner] == idxBattler
-  end
-end
-
-#-------------------------------------------------------------------------------
-# Reverting Terastallization. (Capture)
-#-------------------------------------------------------------------------------
-module Battle::CatchAndStoreMixin
-  alias tera_pbStorePokemon pbStorePokemon
-  def pbStorePokemon(pkmn)
-    pkmn.terastallized = false
-    tera_pbStorePokemon(pkmn)
   end
 end

@@ -203,12 +203,14 @@ class PokemonPokedexInfo_Scene
         sp.egg_groups.each do |group|
           case group
           when :Ditto
-            next if eggSpecies.egg_groups.include?(:Undiscovered)
             next if eggSpecies.egg_groups.include?(:Ditto)
+            next if eggSpecies.egg_groups.include?(:Undiscovered)
             @data_hash[:egg] << sp.id
           else
             next if eggSpecies.egg_groups.include?(:Undiscovered)
             if eggSpecies.egg_groups.include?(:Ditto)
+              next if sp.egg_groups.include?(:Ditto)
+              next if sp.egg_groups.include?(:Undiscovered)
               @data_hash[:egg] << sp.id
             elsif eggSpecies.egg_groups.include?(group)
               next if eggSpecies.gender_ratio == :Genderless

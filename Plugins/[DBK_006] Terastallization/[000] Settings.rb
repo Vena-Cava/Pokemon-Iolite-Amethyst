@@ -33,6 +33,19 @@ module Settings
   SHOW_TERA_OVERLAY = true
   
   #-----------------------------------------------------------------------------
+  # Sets how the overlay pattern on Terastallized Pokemon animates.
+  # The first entry in the array corresponds to X-axis movement.
+  # The second entry in the array corresponds to Y-axis movement.
+  #-----------------------------------------------------------------------------
+  # X-Axis    Y-Axis
+  # :none     :none 
+  # :left     :up
+  # :right    :down
+  # :erratic  :erratic
+  #-----------------------------------------------------------------------------
+  TERASTAL_PATTERN_MOVEMENT = [:right, :erratic]
+  
+  #-----------------------------------------------------------------------------
   # When true, displays Tera type in the Summary.
   #-----------------------------------------------------------------------------
   SUMMARY_TERA_TYPES = true

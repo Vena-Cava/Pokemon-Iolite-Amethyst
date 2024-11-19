@@ -21,8 +21,11 @@ class Battle::Move
       next if !@battle.pbCheckGlobalAbility(ability)
       category = (i < 2) ? physicalMove? : specialMove?
       category = !category if i.odd? && @battle.field.effects[PBEffects::WonderRoom] > 0
-      mult = (i.even?) ? multipliers[:attack_multiplier] : multipliers[:defense_multiplier]
-      mult *= 0.75 if !user.hasActiveAbility?(ability) && category
+      if i.even? && !user.hasActiveAbility?(ability)
+        multipliers[:attack_multiplier] *= 0.75 if category
+      elsif i.odd? && !target.hasActiveAbility?(ability)
+        multipliers[:defense_multiplier] *= 0.75 if category
+      end
     end
   end
   
@@ -122,7 +125,7 @@ class Battle::Move
     when :Electric
       if type == :ELECTRIC
         multipliers[:power_multiplier] *= terrain_multiplier if user.affectedByTerrain?
-      elsif @function_code == "IncreasePowerWhileElectricTerrain"
+      elsif @function_code == "IncreasePowerInElectricTerrain"
         multipliers[:power_multiplier] *= 1.5 if user.affectedByTerrain?
       end
     when :Grassy
@@ -354,19 +357,18 @@ class Battle::Move
     if damage > 1
       target.stopBoostedHPScaling = true
       return if target.damageState.substitute
-      return if target.damageThreshold == 0
-      thresh = (target.totalhp / target.damageThreshold).round
-      thresh = target.totalhp + thresh if thresh < 0
-      thresh = 1 if thresh <= 0
-      target.hpThreshold = thresh
-      if (target.hp > thresh) && (damage > target.hp - thresh)
-        new_damage = target.hp - thresh
-        new_damage = 0 if new_damage < 0
-      elsif target.hp <= thresh
+      return if !target.damageThreshold
+      thresh = (target.totalhp * (target.damageThreshold / 100.0)).round
+      thresh = 1 if thresh < 1
+      if target.hp > thresh
+        if damage > target.hp - thresh
+          new_damage = target.hp - thresh
+        end
+      else 
         new_damage = 0
       end
       return if !new_damage
-      if damage != new_damage && new_damage >= 0
+      if damage > new_damage && new_damage >= 0
         target.damageState.hpLost       = new_damage
         target.damageState.totalHPLost -= damage
         target.damageState.totalHPLost += new_damage
@@ -393,7 +395,7 @@ class Battle::Move
     bonus = 0
     bonus += critical_hit_bonus
     bonus += user.effects[PBEffects::FocusEnergy]
-    bonus += 1 if @id == :SPACIALREND && user.isSpecies?(:PALKIA) && form == 1
+    bonus += 1 if @id == :SPACIALREND && user.isSpecies?(:PALKIA) && user.form == 1
     bonus += 1 if user.inHyperMode? && @type == :SHADOW
     return bonus
   end
@@ -450,8 +452,8 @@ class Battle::AI::AIMove
   def calc_user_attack(user, target, is_critical, max_stage, stage_mul, stage_div)
     if ["CategoryDependsOnHigherDamagePoisonTarget",
         "CategoryDependsOnHigherDamageIgnoreTargetAbility",
-		"CategoryDependsOnHigherDamageTera",
-		"TerapagosCategoryDependsOnHigherDamage"].include?(function_code)
+        "CategoryDependsOnHigherDamageTera",
+        "TerapagosCategoryDependsOnHigherDamage"].include?(function_code)
       @move.pbOnStartUse(user.battler, [target.battler])
     end
     atk, atk_stage = @move.pbGetAttackStats(user.battler, target.battler)
@@ -477,7 +479,7 @@ class Battle::AI::AIMove
   #-----------------------------------------------------------------------------
   # Calculates damage multipliers from global abilities.
   #-----------------------------------------------------------------------------
-  def calc_global_ability_mults(calc_type, multipliers)
+  def calc_global_ability_mults(user, target, base_dmg, calc_type, is_critical, multipliers)
     if @ai.trainer.medium_skill? &&
        ((@ai.battle.pbCheckGlobalAbility(:DARKAURA) && calc_type == :DARK) ||
         (@ai.battle.pbCheckGlobalAbility(:FAIRYAURA) && calc_type == :FAIRY))
@@ -599,7 +601,7 @@ class Battle::AI::AIMove
   #-----------------------------------------------------------------------------
   # Calculates damage multipliers from other sources.
   #-----------------------------------------------------------------------------
-  def calc_other_mults(user, target, calc_type, multipliers)
+  def calc_other_mults(user, target, base_dmg, calc_type, is_critical, multipliers)
     if @ai.trainer.medium_skill? &&
        user.effects[PBEffects::Charge] > 0 && calc_type == :ELECTRIC
       multipliers[:power_multiplier] *= 2
@@ -609,7 +611,7 @@ class Battle::AI::AIMove
   #-----------------------------------------------------------------------------
   # Calculates damage multipliers from field effects and terrain.
   #-----------------------------------------------------------------------------
-  def calc_field_mults(user, target, calc_type, multipliers)
+  def calc_field_mults(user, target, base_dmg, calc_type, is_critical, multipliers)
     if @ai.trainer.medium_skill?
       case calc_type
       when :ELECTRIC
@@ -635,7 +637,7 @@ class Battle::AI::AIMove
       when :Electric
         if calc_type == :ELECTRIC
           multipliers[:power_multiplier] *= terrain_multiplier if user.battler.affectedByTerrain?
-        elsif function_code == "IncreasePowerWhileElectricTerrain"
+        elsif function_code == "IncreasePowerInElectricTerrain"
           multipliers[:power_multiplier] *= 1.5 if user_battler.affectedByTerrain?
         end
       when :Grassy
@@ -651,7 +653,7 @@ class Battle::AI::AIMove
   #-----------------------------------------------------------------------------
   # Calculates damage multipliers from badges.
   #-----------------------------------------------------------------------------
-  def calc_badge_mults(target, calc_type, multipliers)
+  def calc_badge_mults(user, target, base_dmg, calc_type, is_critical, multipliers)
     if @ai.trainer.high_skill? && @ai.battle.internalBattle && target.battler.pbOwnedByPlayer?
       if physicalMove?(calc_type) && @ai.battle.pbPlayer.badge_count >= Settings::NUM_BADGES_BOOST_DEFENSE
         multipliers[:defense_multiplier] *= 1.1
@@ -664,7 +666,7 @@ class Battle::AI::AIMove
   #-----------------------------------------------------------------------------
   # Calculates damage multipliers from weather.
   #-----------------------------------------------------------------------------
-  def calc_weather_mults(user, target, calc_type, multipliers)
+  def calc_weather_mults(user, target, base_dmg, calc_type, is_critical, multipliers)
     if @ai.trainer.medium_skill?
       case user.battler.effectiveWeather
       when :Sun, :HarshSun
@@ -703,7 +705,7 @@ class Battle::AI::AIMove
   #-----------------------------------------------------------------------------
   # Calculates damage multipliers from random effects.
   #-----------------------------------------------------------------------------
-  def calc_random_mults(is_critical, multipliers)
+  def calc_random_mults(user, target, base_dmg, calc_type, is_critical, multipliers)
     # Critical hits
     if is_critical
       if Settings::NEW_CRITICAL_HIT_RATE_MECHANICS
@@ -718,7 +720,7 @@ class Battle::AI::AIMove
   #-----------------------------------------------------------------------------
   # Calculates damage multipliers based on typing.
   #-----------------------------------------------------------------------------
-  def calc_type_mults(user, target, calc_type, multipliers)
+  def calc_type_mults(user, target, base_dmg, calc_type, is_critical, multipliers)
     if calc_type && user.has_type?(calc_type)
       if user.has_active_ability?(:ADAPTABILITY)
         multipliers[:final_damage_multiplier] *= 2
@@ -734,7 +736,7 @@ class Battle::AI::AIMove
   #-----------------------------------------------------------------------------
   # Calculates damage multipliers from status conditions.
   #-----------------------------------------------------------------------------
-  def calc_status_condition_mults(user, target, calc_type, multipliers)
+  def calc_status_condition_mults(user, target, base_dmg, calc_type, is_critical, multipliers)
     if @ai.trainer.high_skill? 
       case user.status
       when :BURN
@@ -756,7 +758,7 @@ class Battle::AI::AIMove
   #-----------------------------------------------------------------------------
   # Calculates damage multipliers from Reflect/Light Screen/etc.
   #-----------------------------------------------------------------------------
-  def calc_screen_mults(user, target, calc_type, is_critical, multipliers)
+  def calc_screen_mults(user, target, base_dmg, calc_type, is_critical, multipliers)
     if @ai.trainer.medium_skill? && !@move.ignoresReflect? && !is_critical &&
        !user.has_active_ability?(:INFILTRATOR)
       if target.pbOwnSide.effects[PBEffects::AuroraVeil] > 0
@@ -796,10 +798,12 @@ class Battle::AI::AIMove
     crit_stage = rough_critical_hit_stage
     is_critical = crit_stage >= Battle::Move::CRITICAL_HIT_RATIOS.length ||
                   Battle::Move::CRITICAL_HIT_RATIOS[crit_stage] <= 2
+    args = [user, target, is_critical, max_stage, stage_mul, stage_div]
     ##### Calculate attack and defense stats #####
-    atk = calc_user_attack(user, target, is_critical, max_stage, stage_mul, stage_div)
-    defense = calc_target_defense(user, target, is_critical, max_stage, stage_mul, stage_div)
+    atk = calc_user_attack(*args)
+    defense = calc_target_defense(*args)
     ##### Calculate all multiplier effects #####
+    args = [user, target, base_dmg, calc_type, is_critical]
     multipliers = {
       :power_multiplier        => 1.0,
       :attack_multiplier       => 1.0,
@@ -807,26 +811,26 @@ class Battle::AI::AIMove
       :final_damage_multiplier => 1.0
     }
     ##### Abilities and Items #####
-    calc_global_ability_mults(calc_type, multipliers)
-    calc_ability_mults(user, target, base_dmg, calc_type, is_critical, multipliers)
-    calc_item_mults(user, target, base_dmg, calc_type, is_critical, multipliers)
+    calc_global_ability_mults(*args, multipliers)
+    calc_ability_mults(*args, multipliers)
+    calc_item_mults(*args, multipliers)
     if user.has_active_ability?(:PARENTALBOND)
       multipliers[:power_multiplier] *= (Settings::MECHANICS_GENERATION >= 7) ? 1.25 : 1.5
     end
     ##### Field effects, Terrain, Badge boosts and miscellaneous effects #####
-    calc_other_mults(user, target, calc_type, multipliers)
-    calc_field_mults(user, target, calc_type, multipliers)
-    calc_badge_mults(target, calc_type, multipliers)
+    calc_other_mults(*args, multipliers)
+    calc_field_mults(*args, multipliers)
+    calc_badge_mults(*args, multipliers)
     if @ai.trainer.high_skill? && targets_multiple_battlers?
       multipliers[:final_damage_multiplier] *= 0.75
     end
     ##### Weather, critical hits, STAB, type effectiveness, and statuses #####
-    calc_weather_mults(user, target, calc_type, multipliers)
-    calc_random_mults(is_critical, multipliers)
-    calc_type_mults(user, target, calc_type, multipliers)
-    calc_status_condition_mults(user, target, calc_type, multipliers)
+    calc_weather_mults(*args, multipliers)
+    calc_random_mults(*args, multipliers)
+    calc_type_mults(*args, multipliers)
+    calc_status_condition_mults(*args, multipliers)
     ##### Reflect/Light Screen/Aurora Veil, Minimize, and Glaive Rush #####
-    calc_screen_mults(user, target, calc_type, is_critical, multipliers)
+    calc_screen_mults(*args, multipliers)
     if @ai.trainer.medium_skill?
       if target.effects[PBEffects::Minimize] && @move.tramplesMinimize?
         multipliers[:final_damage_multiplier] *= 2

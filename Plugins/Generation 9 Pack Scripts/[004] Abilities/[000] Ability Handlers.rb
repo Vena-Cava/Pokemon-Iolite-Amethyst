@@ -276,6 +276,7 @@ Battle::AbilityEffects::OnStatusInflicted.add(:SYNCHRONIZE,
 #-------------------------------------------------------------------------------
 Battle::AbilityEffects::OnDealingHit.add(:POISONTOUCH,
   proc { |ability, user, target, move, battle|
+    next if target.fainted?
     next if !move.contactMove?
     next if battle.pbRandom(100) >= 30
     next if target.hasActiveItem?(:COVERTCLOAK)
@@ -328,7 +329,7 @@ Battle::AbilityEffects::OnBeingHit.add(:MUMMY,
     next if !move.pbContactMove?(user)
     next if user.fainted?
     next if user.unstoppableAbility?
-    next if [:MUMMY, :LINGERINGAROMA].include?(user.ability)
+    next if [:MUMMY, :LINGERINGAROMA].include?(user.ability_id)
     next if user.hasActiveItem?(:ABILITYSHIELD)
     oldAbil = nil
     battle.pbShowAbilitySplash(target) if user.opposes?(target)
@@ -411,8 +412,8 @@ Battle::AbilityEffects::OnSwitchIn.add(:NEUTRALIZINGGAS,
     battle.pbDisplay(_INTL("Neutralizing gas filled the area!"))
     battle.allBattlers.each do |b|
       if b.hasActiveItem?(:ABILITYSHIELD)
-        itemname = GameData::Item.get(target.item).name
-        @battle.pbDisplay(_INTL("{1}'s Ability is protected by the effects of its {2}!",b.pbThis,itemname))
+        itemname = GameData::Item.get(b.item).name
+        battle.pbDisplay(_INTL("{1}'s Ability is protected by the effects of its {2}!",b.pbThis,itemname))
         next
       end
       b.effects[PBEffects::SlowStart] = 0

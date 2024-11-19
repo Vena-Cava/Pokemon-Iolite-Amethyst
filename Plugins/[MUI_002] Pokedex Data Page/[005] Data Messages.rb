@@ -321,17 +321,29 @@ class PokemonPokedexInfo_Scene
       #-------------------------------------------------------------------------
       if prevo == species.species
         text = t[0] + "Evolution Paths\n"
-        family = species.get_family_evolutions
-        if family.empty?              # Species doesn't evolve.
+        family_ids = []
+        evos = species.get_evolutions
+        evos.each do |evo|
+          next if family_ids.include?(evo[0]) || evo[1] == :None
+          family_ids.push(evo[0])
+          species.branch_evolution_forms.each do |form|
+            try_species = GameData::Species.get_species_form(evo[0], form)
+            try_evos = try_species.get_evolutions
+            next if try_evos.empty?
+            try_evos.each do |try_evo|
+              next if family_ids.include?(try_evo[0]) || try_evo[1] == :None
+              family_ids.push(try_evo[0])
+            end
+          end
+        end
+        if family_ids.empty?          # Species doesn't evolve.
           text << "Does not evolve."
         else                          # Species does evolve.
-          ids = []
-          family.each { |f| ids.push(f[1]) if !ids.include?(f[1]) }
-          ids.each_with_index do |fam, i|  
+          family_ids.each_with_index do |fam, i|  
             name = ($player.seen?(fam)) ? GameData::Species.get(fam).name : "????"
             text << t[1] + name
-            if i < ids.length - 1
-              if fam == GameData::Species.get(ids[i + 1]).get_previous_species
+            if i < family_ids.length - 1
+              if fam == GameData::Species.get(family_ids[i + 1]).get_previous_species
                 text << t[0] + "=> "  # Shows evolution pathway.
               else
                 text << t[0] + ", "   # Shows a new pathway.
@@ -343,17 +355,16 @@ class PokemonPokedexInfo_Scene
       # When the species is an evolved species.
       #-------------------------------------------------------------------------
       else
-        form = (species.default_form >= 0) ? species.default_form : species.form
-        prevo_data = GameData::Species.get_species_form(prevo, form)
         #-----------------------------------------------------------------------
         # Compiles the actual description for this species' evolution method.
         # Some species require special treatment due to unique evolution traits.
         #-----------------------------------------------------------------------
+        form = (species.default_form >= 0) ? species.default_form : species.form
+        prevo_data = GameData::Species.get_species_form(prevo, form)
         if species.species == :ALCREMIE
           name = t[1] + "#{prevo_data.name}" + t[0]
-          text = t[0] + "Use various " + t[2] + "Sweets" + t[0] + " on #{name}."
+          text << "Use various " + t[2] + "Sweets" + t[0] + " on #{name}."
         else
-          text = ""
           index = 0
           prevo_data.get_evolutions(true).each do |evo|
             next if evo[0] != species.species
@@ -379,25 +390,18 @@ class PokemonPokedexInfo_Scene
             text << " Form depends on " + t[2] + "Nature" + t[0] + "."
           end
         end
-        #-----------------------------------------------------------------------
-        # Determines what should be displayed as the "heading" in the message box.
-        #-----------------------------------------------------------------------
-        heading = ""
+        heading = t[0] + "Evolution Method"
         if species.form_name
           Settings::REGIONAL_NAMES.each do |region|
             next if !species.form_name.include?(region)
-            heading = t[0] + "#{region} Evolution\n"
+            heading = t[0] + "#{region} Evolution"
           end
         end
-        if nil_or_empty?(heading)
-          evos = species.evolutions
-          if inMenu && evos[-1][0] == prevo && evos.any? { |evo| evo[0] != prevo && evo[1] == :None }
-            heading = t[0] + "Evolution Method (Final stage)\n"
-          else
-            heading = t[0] + "Evolution Method\n"
-          end
+        evos = species.evolutions
+        if inMenu && evos[-1][0] == prevo && !evos.any? { |evo| evo[0] != prevo && evo[1] != :None }
+          heading << " (Final stage)"
         end
-        text = heading + text
+        text = heading + "\n" + text
       end
       if !inMenu && $player.owned?(@species) && !@data_hash[:family].empty?
         pbDrawTextPositions(overlay, [

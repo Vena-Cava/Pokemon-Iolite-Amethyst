@@ -13,7 +13,7 @@ Battle::AbilityEffects::OnSwitchIn.add(:SUPERSWEETSYRUP,
   proc { |ability, battler, battle, switch_in|
     next if battler.ability_triggered?
     battle.pbShowAbilitySplash(battler)
-    battle.pbDisplay(_INTL("A supersweet aroma is wafting from the syrup covering {1}!", battler.pbThis))
+    battle.pbDisplay(_INTL("A supersweet aroma is wafting from the syrup covering {1}!", battler.pbThis(true)))
     battle.allOtherSideBattlers(battler.index).each do |b|
       next if !b.near?(battler) || b.fainted?
       if b.itemActive? && !b.hasActiveAbility?(:CONTRARY) && b.effects[PBEffects::Substitute] == 0
@@ -31,11 +31,11 @@ Battle::AbilityEffects::OnSwitchIn.add(:SUPERSWEETSYRUP,
 #===============================================================================
 Battle::AbilityEffects::OnSwitchIn.add(:HOSPITALITY,
   proc { |ability, battler, battle, switch_in|
-    next if battler.allAllies.none? { |b| b.hp < b.totalhp }
+    next if battler.allAllies.none? { |b| b.canHeal? }
     battle.pbShowAbilitySplash(battler)
     battler.allAllies.each do |b|
-      next if b.hp == b.totalhp
-	    amt = (b.totalhp / 4).floor
+      next if !b.canHeal?
+      amt = (b.totalhp / 4).floor
       b.pbRecoverHP(amt)
       battle.pbDisplay(_INTL("{1} drank down all the matcha that {2} made!", b.pbThis, battler.pbThis(true)))
     end
@@ -48,6 +48,7 @@ Battle::AbilityEffects::OnSwitchIn.add(:HOSPITALITY,
 #===============================================================================
 Battle::AbilityEffects::OnDealingHit.add(:TOXICCHAIN,
   proc { |ability, user, target, move, battle|
+    next if target.fainted?
     next if battle.pbRandom(100) >= 30
     next if target.hasActiveItem?(:COVERTCLOAK)
     battle.pbShowAbilitySplash(user)

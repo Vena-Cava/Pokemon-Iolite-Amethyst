@@ -296,6 +296,12 @@ class DynamaxSpritePositioner < SpritePositioner
   end
 end
 
+class DynamaxSpritePositionerScreen < SpritePositionerScreen
+  def pbStart
+    super
+  end
+end
+
 #-------------------------------------------------------------------------------
 # Auto-positions all Dynamax sprites.
 #-------------------------------------------------------------------------------

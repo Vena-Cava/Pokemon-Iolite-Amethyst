@@ -52,7 +52,7 @@ class Battle::Move
           stab = (user.tera_type == :STELLAR) ? 1.2 : 1.5
           teraBonus = (adaptability) ? 2 : stab
         end
-        multipliers[:final_damage_multiplier] * teraBonus
+        multipliers[:final_damage_multiplier] *= teraBonus
       #-------------------------------------------------------------------------
       # Normal STAB calcs
       elsif user.pbHasType?(type)
@@ -113,7 +113,7 @@ class Battle::AI::AIMove
   #-----------------------------------------------------------------------------
   # Calculates AI damage multipliers based on typing.
   #-----------------------------------------------------------------------------
-  def calc_type_mults(user, target, calc_type, multipliers)
+  def calc_type_mults(user, target, base_dmg, calc_type, is_critical, multipliers)
     if calc_type
       adaptability = user.has_active_ability?(:ADAPTABILITY)
       if user.battler.tera?
@@ -129,7 +129,7 @@ class Battle::AI::AIMove
           stab = (user.battler.tera_type == :STELLAR) ? 1.2 : 1.5
           teraBonus = (adaptability) ? 2 : stab
         end
-        multipliers[:final_damage_multiplier] * teraBonus
+        multipliers[:final_damage_multiplier] *= teraBonus
       elsif user.has_type?(calc_type)
         stab = (adaptability) ? 2 : 1.5
         multipliers[:final_damage_multiplier] *= stab

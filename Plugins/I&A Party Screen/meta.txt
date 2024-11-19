@@ -1,6 +1,0 @@
-Name = I&A Party
-Version = 1.0
-Website = https://www.reliccastle.com/threads/5817/
-Credits = Vena Cava
-Essentials = 21.1
-Requires = I&A Mechanics

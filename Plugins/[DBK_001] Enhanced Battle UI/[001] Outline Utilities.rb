@@ -157,32 +157,35 @@ end
 #-------------------------------------------------------------------------------
 # Updates outlines for Pokemon sprites.
 #-------------------------------------------------------------------------------
-def pbUpdateOutline(sprite, pokemon)
+def pbUpdateOutline(sprite, object)
   return if !@sprites || !@sprites.has_key?(sprite)
   for i in 0..7
     key = sprite + "_outline#{i}"
     next if !@sprites[key]
-    next if !(@sprites[key].is_a?(PokemonSprite) || @sprites[key].is_a?(PokemonIconSprite))
-    if pokemon.is_a?(Pokemon)
-      case @sprites[key]
-      when PokemonSprite
-        @sprites[key].setPokemonBitmap(pokemon)
-        pokemon.species_data.apply_metrics_to_sprite(@sprites[key], 1)
-        if pokemon.dynamax?
-          @sprites[key].set_dynamax_pattern(pokemon)
-        elsif pokemon.tera?
-          @sprites[key].set_tera_pattern(pokemon)
+    if @sprites[key].is_a?(PokemonSprite) || @sprites[key].is_a?(PokemonIconSprite)
+      if object.is_a?(Pokemon)
+        case @sprites[key]
+        when PokemonSprite
+          @sprites[key].setPokemonBitmap(object)
+          object.species_data.apply_metrics_to_sprite(@sprites[key], 1)
+          if object.dynamax?
+            @sprites[key].set_dynamax_pattern(object)
+          elsif object.tera?
+            @sprites[key].set_tera_pattern(object)
+          end
+        when PokemonIconSprite
+          @sprites[key].pokemon = object
+          if object.dynamax?
+            @sprites[key].set_dynamax_icon_pattern
+          elsif object.tera?
+            @sprites[key].set_tera_icon_pattern
+          end
         end
-      when PokemonIconSprite
-        @sprites[key].pokemon = pokemon
-        if pokemon.dynamax?
-          @sprites[key].set_dynamax_icon_pattern
-        elsif pokemon.tera?
-          @sprites[key].set_tera_icon_pattern
-        end
+      else
+        @sprites[key].setSpeciesBitmap(*object)
       end
-    else
-      @sprites[key].setSpeciesBitmap(*pokemon)
+    elsif @sprites[key].is_a?(ItemIconSprite)
+      @sprites[key].item = object
     end
   end
 end

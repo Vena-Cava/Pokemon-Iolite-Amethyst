@@ -27,9 +27,8 @@ module MidbattleHandlers
 
   def self.trigger(midbattle, id, battle, idxBattler, idxTarget, params)
     return nil if !@@scripts.has_key?(midbattle)
-    script_hash = @@scripts[midbattle][id]
-    return nil if !script_hash
-    return script_hash.call(battle, idxBattler, idxTarget, params)
+    return nil if !self.exists?(midbattle, id)
+    return @@scripts[midbattle][id].call(battle, idxBattler, idxTarget, params)
   end
   
   def self.trigger_each(midbattle, battle, idxBattler, idxTarget, trigger)
@@ -58,24 +57,37 @@ MidbattleHandlers.add(:midbattle_triggers, "setBattler",
     default_target  = battle.battlers[idxTarget]
     default_target  = default_battler.pbDirectOpposing if default_target.index == default_battler.index
     case params
-    when Integer        then next battle.battlers[params] || default_battler
-    when :Self          then next default_battler
-    when :Ally          then next default_battler.allAllies.first || default_battler
-    when :Ally2         then next default_battler.allAllies.last  || default_battler
-    when :Opposing      then next default_target
-    when :OpposingAlly  then next default_target.allAllies.first  || default_target
-    when :OpposingAlly2 then next default_target.allAllies.last   || default_target
+    when Integer        then targ = battle.battlers[params] || default_battler
+    when :Self          then targ = default_battler
+    when :Ally          then targ = default_battler.allAllies.first || default_battler
+    when :Ally2         then targ = default_battler.allAllies.last  || default_battler
+    when :Opposing      then targ = default_target
+    when :OpposingAlly  then targ = default_target.allAllies.first  || default_target
+    when :OpposingAlly2 then targ = default_target.allAllies.last   || default_target
     end
-    next default_battler
+    targ = default_battler if !targ
+    PBDebug.log("     'setBattler': finding battler #{targ.name} (#{targ.index})...")
+    next targ
   }
 )
 
 #-------------------------------------------------------------------------------
-# Pauses any further script commands for a certain duration.
+# Freezes the entire battle scene in place for a certain duration.
 #-------------------------------------------------------------------------------
 MidbattleHandlers.add(:midbattle_triggers, "wait",
   proc { |battle, idxBattler, idxTarget, params|
+    PBDebug.log("     'wait': freezing the battle scene in place for #{params} seconds")
     pbWait(params)
+  }
+)
+
+#-------------------------------------------------------------------------------
+# Pauses any further processing in the battle scene for a certain duration.
+#-------------------------------------------------------------------------------
+MidbattleHandlers.add(:midbattle_triggers, "pause",
+  proc { |battle, idxBattler, idxTarget, params|
+    PBDebug.log("     'pause': pausing processing for #{params} seconds")
+    battle.scene.pbPauseScene(params)
   }
 )
 
@@ -87,7 +99,11 @@ MidbattleHandlers.add(:midbattle_triggers, "ignoreUntil",
     ignore = true
     triggers = battle.activated_triggers
     params = [params] if !params.is_a?(Array)
-    params.each { |t| ignore = false if triggers.include?(t) }
+    params.each do |t|
+      next if !triggers.include?(t)
+      PBDebug.log("     'ignoreUntil': doesn't exit midbattle commands because #{t} trigger has activated")
+      ignore = false
+    end
     next ignore
   }
 )
@@ -101,6 +117,11 @@ MidbattleHandlers.add(:midbattle_triggers, "ignoreAfter",
     triggers = battle.activated_triggers
     params = [params] if !params.is_a?(Array)
     params.each { |t| ignore = true if triggers.include?(t) }
+    params.each do |t|
+      next if !triggers.include?(t)
+      PBDebug.log("     'ignoreAfter': will exit midbattle commands because #{t} trigger has activated")
+      ignore = true
+    end
     next ignore
   }
 )
@@ -112,6 +133,8 @@ MidbattleHandlers.add(:midbattle_triggers, "toggleSwitch",
   proc { |battle, idxBattler, idxTarget, params|
     if params.is_a?(Integer) && params >= 0
       $game_switches[params] = !$game_switches[params]
+      value = ($game_switches[params]) ? "ON" : "OFF"
+      PBDebug.log("     'toggleSwitch': game switch #{params} has been turned #{value}")
     end
   }
 )
@@ -127,6 +150,7 @@ MidbattleHandlers.add(:midbattle_triggers, "setVariable",
       battle.midbattleVariable = params
     end
     battle.midbattleVariable = 0 if battle.midbattleVariable < 0
+    PBDebug.log("     'setVariable': midbattle variable set to #{battle.midbattleVariable}")
   }
 )
 
@@ -135,12 +159,14 @@ MidbattleHandlers.add(:midbattle_triggers, "setVariable",
 #-------------------------------------------------------------------------------
 MidbattleHandlers.add(:midbattle_triggers, "addVariable",
   proc { |battle, idxBattler, idxTarget, params|
+    oldvar = battle.midbattleVariable
     if params.is_a?(Array)
       battle.midbattleVariable += params.sample
     else
       battle.midbattleVariable += params
     end
     battle.midbattleVariable = 0 if battle.midbattleVariable < 0
+    PBDebug.log("     'addVariable': midbattle variable changed (#{oldvar} => #{battle.midbattleVariable})")
   }
 )
 
@@ -149,9 +175,11 @@ MidbattleHandlers.add(:midbattle_triggers, "addVariable",
 #-------------------------------------------------------------------------------
 MidbattleHandlers.add(:midbattle_triggers, "multVariable",
   proc { |battle, idxBattler, idxTarget, params|
+    oldvar = battle.midbattleVariable
     battle.midbattleVariable *= params
     battle.midbattleVariable.round
     battle.midbattleVariable = 0 if battle.midbattleVariable < 0
+    PBDebug.log("     'multVariable': midbattle variable changed (#{oldvar} => #{battle.midbattleVariable})")
   }
 )
 
@@ -169,6 +197,7 @@ MidbattleHandlers.add(:midbattle_triggers, "text",
   proc { |battle, idxBattler, idxTarget, params|
     battle.scene.pbForceEndSpeech
     params = [params] if !params.is_a?(Array)
+    PBDebug.log("     'text': displaying battle text")
     battle.scene.pbProcessText(idxBattler, idxTarget, false, params.clone)
   }
 )
@@ -179,6 +208,7 @@ MidbattleHandlers.add(:midbattle_triggers, "text",
 MidbattleHandlers.add(:midbattle_triggers, "speech",
   proc { |battle, idxBattler, idxTarget, params|
     params = [params] if !params.is_a?(Array)
+    PBDebug.log("     'speech': displaying midbattle speech")
     battle.scene.pbProcessText(idxBattler, idxTarget, true, params.clone)
   }
 )
@@ -189,6 +219,7 @@ MidbattleHandlers.add(:midbattle_triggers, "speech",
 MidbattleHandlers.add(:midbattle_triggers, "setChoices",
   proc { |battle, idxBattler, idxTarget, params|
     battle.midbattleChoices = params.clone
+    PBDebug.log("     'setChoices': preparing midbattle text choices")
   }
 )
 	
@@ -202,11 +233,16 @@ MidbattleHandlers.add(:midbattle_triggers, "setSpeaker",
       battle.scene.pbToggleBlackBars(true)
     end
     battle.scene.pbHideSpeaker
-    next if params == :Hide
-    params = battle.battlers[idxBattler] if params == :Battler
-    battle.scene.pbShowSpeaker(idxBattler, idxTarget, params)
-    speaker = battle.scene.pbGetSpeaker
-    battle.scene.pbShowSpeakerWindows(speaker)
+    if params == :Hide
+      PBDebug.log("     'setSpeaker': hiding speaker sprite")
+      next
+    else
+      params = battle.battlers[idxBattler] if params == :Battler
+      battle.scene.pbShowSpeaker(idxBattler, idxTarget, params)
+      speaker = battle.scene.pbGetSpeaker
+      battle.scene.pbShowSpeakerWindows(speaker)
+      PBDebug.log("     'setSpeaker': showing new speaker (#{speaker.name})")
+    end
   }
 )
 
@@ -223,6 +259,7 @@ MidbattleHandlers.add(:midbattle_triggers, "editSpeaker",
     end
     if params == :Hide
       battle.scene.pbHideSpeaker
+      PBDebug.log("     'editSpeaker': hiding speaker sprite")
     else
       battle.scene.pbUpdateSpeakerSprite(*speaker)
       speaker = battle.scene.pbGetSpeaker
@@ -231,6 +268,7 @@ MidbattleHandlers.add(:midbattle_triggers, "editSpeaker",
       else
         battle.scene.pbUpdateSpeakerWindows(*window)
       end
+      PBDebug.log("     'editSpeaker': replacing speaker sprite (#{speaker.name})")
     end
   }
 )
@@ -244,11 +282,14 @@ MidbattleHandlers.add(:midbattle_triggers, "editWindow",
     case params
     when :Hide
       battle.scene.pbHideSpeakerWindows(true)
+      PBDebug.log("     'editWindow': hiding speaker window")
     when :Show
       speaker = battle.scene.pbGetSpeaker
       battle.scene.pbShowSpeakerWindows(speaker)
+      PBDebug.log("     'editWindow': displaying speaker window")
     else
       battle.scene.pbShowSpeakerWindows(*params)
+      PBDebug.log("     'editWindow': speaker window changed")
     end
   }
 )
@@ -259,6 +300,7 @@ MidbattleHandlers.add(:midbattle_triggers, "editWindow",
 MidbattleHandlers.add(:midbattle_triggers, "endSpeech",
   proc { |battle, idxBattler, idxTarget, params|
     battle.scene.pbForceEndSpeech
+    PBDebug.log("     'endSpeech': exiting midbattle speech")
   }
 )
 
@@ -274,6 +316,7 @@ MidbattleHandlers.add(:midbattle_triggers, "endSpeech",
 MidbattleHandlers.add(:midbattle_triggers, "playSE",
   proc { |battle, idxBattler, idxTarget, params|
     pbSEPlay(params)
+	PBDebug.log("     'playSE': playing SE (#{params})")
   }
 )
 
@@ -286,8 +329,10 @@ MidbattleHandlers.add(:midbattle_triggers, "playCry",
     if idx.is_a?(Integer)
       next if !battle.battlers[idx]
       battle.battlers[idx].displayPokemon.play_cry
+      PBDebug.log("     'playCry': playing #{battle.battlers[idx].name}'s cry")
     else
       GameData::Species.play_cry(params)
+      PBDebug.log("     'playCry': playing cry for species #{GameData::Species.get(params).name}")
     end
   }
 )
@@ -305,6 +350,21 @@ MidbattleHandlers.add(:midbattle_triggers, "changeBGM",
     pbBGMFade(fade)
     pbWait(fade)
     pbBGMPlay(bgm, vol, pitch)
+    battle.default_bgm = bgm
+    battle.playing_bgm = bgm
+    battle.bgm_paused = false
+    PBDebug.log("     'changeBGM': playing new BGM (#{bgm})")
+  }
+)
+
+#-------------------------------------------------------------------------------
+# Fades out and ends the current BGM.
+#-------------------------------------------------------------------------------
+MidbattleHandlers.add(:midbattle_triggers, "endBGM",
+  proc { |battle, idxBattler, idxTarget, params|
+    pbBGMFade(params)
+    battle.bgm_paused = true
+    PBDebug.log("     'endBGM': ending current BGM")
   }
 )
 
@@ -314,6 +374,7 @@ MidbattleHandlers.add(:midbattle_triggers, "changeBGM",
 MidbattleHandlers.add(:midbattle_triggers, "pauseAndPlayBGM",
   proc { |battle, idxBattler, idxTarget, params|
     battle.pbPauseAndPlayBGM(params)
+    PBDebug.log("     'pauseAndPlayBGM': pausing old BGM and playing new one (#{params})")
   }
 )
 
@@ -323,6 +384,7 @@ MidbattleHandlers.add(:midbattle_triggers, "pauseAndPlayBGM",
 MidbattleHandlers.add(:midbattle_triggers, "resumeBGM",
   proc { |battle, idxBattler, idxTarget, params|
     battle.pbResumeBattleBGM
+    PBDebug.log("     'resumeBGM': playing previously paused BGM")
   }
 )
 
@@ -352,9 +414,15 @@ MidbattleHandlers.add(:midbattle_triggers, "playAnim",
     user = battle.battlers[user]
     target = battle.battlers[target]
     case anim
-    when "Recall" then battle.scene.pbRecall(target.index || user.index)
-    when Symbol   then battle.pbAnimation(anim, user, target)
-    when String   then battle.pbCommonAnimation(anim, user, target)
+    when "Recall"
+      battle.scene.pbRecall(target.index || user.index)
+      PBDebug.log("     'playAnim': playing recall animation")
+    when Symbol
+      battle.pbAnimation(anim, user, target)
+      PBDebug.log("     'playAnim': playing move animation (#{GameData::Move.get(anim).name})")
+    when String 
+      battle.pbCommonAnimation(anim, user, target)
+      PBDebug.log("     'playAnim': playing common animation (#{anim})")
     end
   }
 )
@@ -394,6 +462,7 @@ MidbattleHandlers.add(:midbattle_triggers, "useItem",
     next if !ItemHandlers.triggerCanUseInBattle(
       item, battler.pokemon, battler, ch[1], true, battle, battle.scene, false)
     battle.scene.pbForceEndSpeech
+    PBDebug.log("     'useItem': #{battler.name} (#{battler.index}) set to use item #{GameData::Item.get(item).name}")
     if !GameData::Item.get(item).is_poke_ball?
       trainerName = (battler.wild?) ? battler.name : battle.pbGetOwnerName(battler.index) 
       battle.pbUseItemMessage(item, trainerName)
@@ -437,7 +506,9 @@ MidbattleHandlers.add(:midbattle_triggers, "useMove",
     else
       id, target = params, -1
     end
+    targFlag = nil
     target = battle.battlers[target]
+    has_target = target && !target.fainted? && target.near?(battler)
     case id
     when Integer
       idxMove = id
@@ -453,13 +524,14 @@ MidbattleHandlers.add(:midbattle_triggers, "useMove",
         when "Status" then next if !m.statusMove? || m.healingMove?
         when "Heal"   then next if !m.healingMove?
         end
-        if target && m.damagingMove?
+        if has_target && m.damagingMove?
           effect = Effectiveness.calculate(m.pbCalcType(battler), *target.pbTypes(true))
           next if Effectiveness.ineffective?(effect)
           next if Effectiveness.not_very_effective?(effect)
         end
         targ = GameData::Target.get(GameData::Move.get(m.id).target)
-        case st[1]
+        targFlag = st[1]
+        case targFlag
         when "self"
           next if ![:User, :UserOrNearAlly, :UserAndAllies].include?(targ.id)
         when "ally"
@@ -477,24 +549,28 @@ MidbattleHandlers.add(:midbattle_triggers, "useMove",
     next if !battle.pbCanChooseMove?(battler.index, idxMove, false)
     battle.scene.pbForceEndSpeech
     targ = GameData::Target.get(battler.moves[idxMove].target)
-    if targ.num_targets != 0
-      has_target = target && !target.fainted? && target.near?(battler)
-      if targ.targets_foe
-        if !has_target || target.idxOwnSide == battler.idxOwnSide
-          target = battler.pbDirectOpposing(true)
-        end
-      elsif targ == :NearAlly
-        if !has_target || target.idxOwnSide != battler.idxOwnSide
+    if !has_target
+      if targFlag.nil? && targ.num_targets != 0
+        targFlag = (targ == :NearAlly) ? "ally" : "foe"
+      end
+      case targFlag
+      when "ally"
+        if !target || target.idxOwnSide != battler.idxOwnSide
           battler.allAllies.each { |b| target = b if battler.near?(b) }
         end
+      when "foe"
+        if !target || target.idxOwnSide == battler.idxOwnSide
+          target = battler.pbDirectOpposing(true)
+        end
+      else
+        target = battler
       end
-    else
-      target = battler
     end
     ch[1] = idxMove
     ch[2] = battler.moves[idxMove]
     ch[3] = target.index
     battle.pbCalculatePriority(false, [idxBattler]) if ch[2].priority != 0
+    PBDebug.log("     'useMove': #{battler.name} (#{battler.index}) set to use move #{ch[2].name}")
   }
 )
 
@@ -513,9 +589,10 @@ MidbattleHandlers.add(:midbattle_triggers, "switchOut",
     end
     newPkmn = nil
     canSwitch = false
-    battle.eachInTeamFromBattlerIndex(battler.index) do |pkmn, i|
+    battle.eachInTeamFromBattlerIndex(idxBattler) do |pkmn, i|
       next if !battle.pbCanSwitchIn?(idxBattler, i)
       case switch
+      when :Choose, :Random, :Forced
       when Integer
         next if switch != i
         newPkmn = i
@@ -539,6 +616,7 @@ MidbattleHandlers.add(:midbattle_triggers, "switchOut",
       end
       if newPkmn && newPkmn >= 0
         trainerName = battle.pbGetOwnerName(battler.index)
+        PBDebug.log("     'switchOut': #{trainerName} set to switch out #{battler.name} (#{battler.index})")
         if msg
           lowercase = (msg && msg[0] == "{" && msg[1] == "1") ? false : true
           msg = _INTL("#{msg}", battler.pbThis(lowercase), trainerName)
@@ -572,6 +650,7 @@ MidbattleHandlers.add(:midbattle_triggers, "megaEvolve",
     oldMode = battle.wildBattleMode
     battle.wildBattleMode = :mega if battler.wild? && oldMode != :mega
     if battle.pbCanMegaEvolve?(battler.index)
+      PBDebug.log("     'megaEvolve': #{battler.name} (#{battler.index}) set to Mega Evolve")
       battle.scene.pbForceEndSpeech
       battle.pbDisplay(params.gsub(/\\PN/i, battle.pbPlayer.name)) if params.is_a?(String)
       battle.pbMegaEvolve(battler.index)
@@ -590,6 +669,9 @@ MidbattleHandlers.add(:midbattle_triggers, "disableMegas",
     side = (battler.opposes?) ? 1 : 0
     owner = battle.pbGetOwnerIndexFromBattlerIndex(idxBattler)
     battle.megaEvolution[side][owner] = (params) ? -2 : -1
+    value = (params) ? "disabled" : "enabled"
+    trainerName = battle.pbGetOwnerName(idxBattler)
+    PBDebug.log("     'disableMegas': Mega Evolution #{value} for #{trainerName}")
   }
 )
 
@@ -599,6 +681,19 @@ MidbattleHandlers.add(:midbattle_triggers, "disableMegas",
 MidbattleHandlers.add(:midbattle_triggers, "disableBalls",
   proc { |battle, idxBattler, idxTarget, params|
     battle.disablePokeBalls = params
+    value = (params) ? "disabled" : "enabled"
+    PBDebug.log("     'disableBalls': usage of Poke Balls has been #{value}")
+  }
+)
+
+#-------------------------------------------------------------------------------
+# Toggles all trainer's ability to use items from their inventory.
+#-------------------------------------------------------------------------------
+MidbattleHandlers.add(:midbattle_triggers, "disableItems",
+  proc { |battle, idxBattler, idxTarget, params|
+    battle.noBag = params
+    value = (params) ? "disabled" : "enabled"
+    PBDebug.log("     'disableItems': all trainers usage of items from the inventory has been #{value}")
   }
 )
 
@@ -608,6 +703,8 @@ MidbattleHandlers.add(:midbattle_triggers, "disableBalls",
 MidbattleHandlers.add(:midbattle_triggers, "disableControl",
   proc { |battle, idxBattler, idxTarget, params|
     battle.controlPlayer = params
+    value = (params) ? "disabled" : "enabled"
+    PBDebug.log("     'disableControl': player controls have been #{value}")
   }
 )
 
@@ -618,6 +715,7 @@ MidbattleHandlers.add(:midbattle_triggers, "endBattle",
   proc { |battle, idxBattler, idxTarget, params|
     next if battle.decision > 0
     params = 1 if params == 4
+    PBDebug.log("     'endBattle': forcing the battle to end prematurely")
     battle.scene.pbForceEndSpeech
     battle.decision = params
   }
@@ -630,6 +728,7 @@ MidbattleHandlers.add(:midbattle_triggers, "wildFlee",
   proc { |battle, idxBattler, idxTarget, params|
     battler = battle.battlers[idxBattler]
     next if battle.decision > 0 || !battler || !battler.wild?
+    PBDebug.log("     'wildFlee': forcing the wild #{battler.name} (#{battler.index}) to flee")
     battle.scene.pbForceEndSpeech
     battler.wild_flee(params) 
   }
@@ -650,6 +749,7 @@ MidbattleHandlers.add(:midbattle_triggers, "battlerName",
     battler = battle.battlers[idxBattler]
     next if !battler || battler.fainted? || battle.decision > 0
     if !nil_or_empty?(params)
+      PBDebug.log("     'battlerName': changing #{battler.name} (#{battler.index})'s name to #{params}")
       battler.pokemon.name = params
       battler.name = params
       battle.scene.pbRefresh
@@ -670,19 +770,23 @@ MidbattleHandlers.add(:midbattle_triggers, "battlerHP",
     else
       amt, msg = params, nil
     end
+    amt = (battler.totalhp * (amt / 100.0)).round
     lowercase = (msg && msg[0] == "{" && msg[1] == "1") ? false : true
     trainerName = (battler.wild?) ? "" : battle.pbGetOwnerName(battler.index)
     msg = _INTL("#{msg}", battler.pbThis(lowercase), trainerName) if msg
     old_hp = battler.hp
     if amt > 0
-	  battler.stopBoostedHPScaling = true
-      battler.pbRecoverHP(battler.totalhp / amt)
+      PBDebug.log("     'battlerHP': restoring #{battler.name} (#{battler.index})'s HP by #{amt}%")
+      battler.stopBoostedHPScaling = true
+      battler.pbRecoverHP(amt)
     elsif amt <= 0
       if amt == 0
-        battler.hp = 0
+        battler.hp = 1
       else
-        battler.hp -= ((battler.totalhp / amt.abs).round).clamp(1, battler.hp - 1)
+        battler.hp += amt
+        battler.hp = 0 if battler.hp < 0
       end
+      PBDebug.log("     'battlerHP': reducing #{battler.name} (#{battler.index})'s HP (#{old_hp} => #{battler.hp})")
       battle.scene.pbHitAndHPLossAnimation([[battler, old_hp, 0]])
     end
     if battler.hp != old_hp
@@ -700,6 +804,7 @@ MidbattleHandlers.add(:midbattle_triggers, "battlerHPCap",
     battler = battle.battlers[idxBattler]
     next if !battler || battler.fainted? || battle.decision > 0
     battler.damageThreshold = params
+    PBDebug.log("     'battlerHPCap': setting maximum damage threshold for #{battler.name} (#{battler.index})")
   }
 )
 
@@ -723,20 +828,31 @@ MidbattleHandlers.add(:midbattle_triggers, "battlerStatus",
       GameData::Status.each { |s| statuses.push(s.id) if s.id != :NONE }
       statuses.shuffle.each do |s|
         next if !battler.pbCanInflictStatus?(s, battler)
+        statusName = GameData::Status.get(s).name
+        PBDebug.log("     'battlerStatus': #{battler.name} (#{battler.index}) to be inflicted with #{statusName} status")
         count = ([:SLEEP, :DROWSY].include?(s)) ? battler.pbSleepDuration : 0
         battler.pbInflictStatus(status, count)
         break
       end
     when :NONE
+      PBDebug.log("     'battlerStatus': #{battler.name} (#{battler.index}) to be cured of any status conditions")
       battler.pbCureAttract
       battler.pbCureConfusion
       battler.pbCureStatus(msg)
     when :CONFUSE, :CONFUSED, :CONFUSION
-      battler.pbConfuse(msg) if battler.pbCanConfuse?(battler, msg)
+      if battler.pbCanConfuse?(battler, msg)
+        PBDebug.log("     'battlerStatus': #{battler.name} (#{battler.index}) to be inflicted with confusion")
+        battler.pbConfuse(msg)
+      end
     when :BAD_POISON, :TOXIC, :TOXIC_POISON
-      battler.pbPoison(nil, msg, true) if battler.pbCanPoison?(battler, msg)
+      if battler.pbCanPoison?(battler, msg)
+        PBDebug.log("     'battlerStatus': #{battler.name} (#{battler.index}) to be inflicted with badly poisoned status")
+        battler.pbPoison(nil, msg, true)
+      end
     else
       if GameData::Status.exists?(status) && battler.pbCanInflictStatus?(status, battler, msg)
+        statusName = GameData::Status.get(status).name
+        PBDebug.log("     'battlerStatus': #{battler.name} (#{battler.index}) to be inflicted with #{statusName} status")
         count = ([:SLEEP, :DROWSY].include?(status)) ? battler.pbSleepDuration : 0
         battler.pbInflictStatus(status, count)
       end
@@ -751,7 +867,8 @@ MidbattleHandlers.add(:midbattle_triggers, "battlerStatus",
 MidbattleHandlers.add(:midbattle_triggers, "battlerForm",
   proc { |battle, idxBattler, idxTarget, params|
     battler = battle.battlers[idxBattler]
-    next if !battler || battler.fainted? || battle.decision > 0
+    next if !battler || battler.fainted? || battle.decision > 0 || !battler.getActiveState.nil?
+    next if battler.effects[PBEffects::SkyDrop] >= 0 || battler.semiInvulnerable?
     if params.is_a?(Array)
       form, msg = params[0], params[1]
     else
@@ -783,8 +900,84 @@ MidbattleHandlers.add(:midbattle_triggers, "battlerForm",
       form = species.form
     end
     next if battler.form == form
+    PBDebug.log("     'battlerForm': #{battler.name} (#{battler.index}) to change into form #{form}")
     battle.scene.pbForceEndSpeech
     battler.pbSimpleFormChange(form, msg)
+  }
+)
+
+#-------------------------------------------------------------------------------
+# Changes a battler's species.
+#-------------------------------------------------------------------------------
+MidbattleHandlers.add(:midbattle_triggers, "battlerSpecies",
+  proc { |battle, idxBattler, idxTarget, params|
+    battler = battle.battlers[idxBattler]
+    next if !battler || battler.fainted? || battle.decision > 0 || !battler.getActiveState.nil?
+    next if battler.effects[PBEffects::SkyDrop] >= 0 || battler.semiInvulnerable?
+    if params.is_a?(Array)
+      species, msg = params[0], params[1]
+    else
+      species, msg = params, nil
+    end
+	try_species = GameData::Species.try_get(species)
+    next if !try_species
+    battle.scene.pbForceEndSpeech
+    speciesName = GameData::Species.get(species).name
+    PBDebug.log("     'battlerSpecies': #{battler.name} (#{battler.index}) to change into species #{speciesName}")
+    if msg.is_a?(String)
+      lowercase = (msg[0] == "{" && msg[1] == "1") ? false : true
+      trainerName = (battler.wild?) ? "" : battle.pbGetOwnerName(battler.index)
+      msg = _INTL("#{msg}", battler.pbThis(lowercase), speciesName, trainerName)
+    end
+    battle.scene.pbAnimateSubstitute(idxBattler, :hide)
+    old_ability = battler.ability_id
+    if battler.hasActiveAbility?(:ILLUSION)
+      Battle::AbilityEffects.triggerOnBeingHit(battler.ability, nil, battler, nil, battle)
+    end
+    battler.pokemon.species = try_species.species
+	battler.pokemon.form_simple = try_species.form
+    battler.species = try_species.species
+	battler.form = try_species.form
+    battler.pbUpdate(true)
+    battler.name = speciesName if !battler.pokemon.nicknamed?
+    battle.scene.pbRefreshOne(idxBattler)
+    battler.mosaicChange = true if defined?(battler.mosaicChange)
+    battle.scene.pbChangePokemon(battler, battler.pokemon)
+    battle.pbDisplay(msg.gsub(/\\PN/i, battle.pbPlayer.name)) if msg.is_a?(String)
+    battler.pbOnLosingAbility(old_ability)
+    battler.pbTriggerAbilityOnGainingIt
+    battle.pbCalculatePriority(false, [idxBattler]) if !battler.movedThisRound?
+    battle.scene.pbAnimateSubstitute(idxBattler, :show)
+  }
+)
+
+#-------------------------------------------------------------------------------
+# Forces a battler to evolve during battle.
+#-------------------------------------------------------------------------------
+MidbattleHandlers.add(:midbattle_triggers, "battlerEvolve",
+  proc { |battle, idxBattler, idxTarget, params|
+    battler = battle.battlers[idxBattler]
+    next if !battler || battler.fainted? || battle.decision > 0
+    if params.is_a?(Array)
+      species, form = params[0], params[1]
+    else
+      species, form = params, nil
+    end
+    next if battler.pokemon.species == species
+    if !GameData::Species.exists?(species)
+      evolutions = []
+      GameData::Species.get(battler.pokemon.species).get_evolutions.each do |evo|
+        next if evolutions.include?(evo[0]) || evo[0] == battler.pokemon.species
+        evolutions.push(evo[0])
+      end
+      next if evolutions.empty?
+      species = (params == :Random) ? evolutions.shuffle.first : evolutions.first
+    end
+    battle.scene.pbForceEndSpeech
+    oldName = battler.name
+    if battler.pbEvolveBattler(species, form)
+      PBDebug.log("     'battlerEvolve': #{oldName} (#{battler.index}) to evolved into species #{battler.pokemon.speciesName}")
+    end
   }
 )
 
@@ -806,8 +999,16 @@ MidbattleHandlers.add(:midbattle_triggers, "battlerAbility",
     next if battler.ability_id == abil
     next if battler.ungainableAbility?(abil)
     next if battler.unstoppableAbility?
+    abilName = GameData::Ability.get(abil).name
+    PBDebug.log("     'battlerAbility': #{battler.name} (#{battler.index}) to acquire the #{abilName} ability")
     battle.pbShowAbilitySplash(battler, true, false) if msg
     oldAbil = battler.ability
+    break_illusion = false
+    if battler.hasActiveAbility?(:ILLUSION)
+      battle.scene.pbAnimateSubstitute(idxBattler, :hide)
+      Battle::AbilityEffects.triggerOnBeingHit(battler.ability, nil, battler, nil, battle)
+      break_illusion = true
+    end
     battler.ability = abil
     battle.scene.pbForceEndSpeech
     if msg
@@ -824,6 +1025,7 @@ MidbattleHandlers.add(:midbattle_triggers, "battlerAbility",
     end
     battler.pbOnLosingAbility(oldAbil)
     battler.pbTriggerAbilityOnGainingIt
+    battle.scene.pbAnimateSubstitute(idxBattler, :show) if break_illusion
   }
 )
 
@@ -853,6 +1055,7 @@ MidbattleHandlers.add(:midbattle_triggers, "battlerItem",
     case item
     when :Remove
       next if !battler.item
+      PBDebug.log("     'battlerItem': #{battler.name} (#{battler.index})'s held item #{battler.itemName} to be removed")
       battler.item = nil
       if msg && !msg.is_a?(String)
         itemName = GameData::Item.get(olditem).portion_name
@@ -860,6 +1063,7 @@ MidbattleHandlers.add(:midbattle_triggers, "battlerItem",
       end
     else
       battler.item = item
+      PBDebug.log("     'battlerItem': #{battler.name} (#{battler.index}) given the item #{battler.itemName} to hold")
       if msg && !msg.is_a?(String)
         itemName = GameData::Item.get(battler.item).portion_name
         prefix = (itemName.starts_with_vowel?) ? "an" : "a"
@@ -884,10 +1088,15 @@ MidbattleHandlers.add(:midbattle_triggers, "battlerMoves",
     when Array
       Pokemon::MAX_MOVES.times do |i|
         new_move = params[i]
-        battler.moves[i] = new_move if new_move.nil?
-        next if !GameData::Move.exists?(new_move)
-        move = Pokemon::Move.new(new_move)
-        battler.moves[i] = Battle::Move.from_pokemon_move(battle, move)
+        if new_move.nil?
+          PBDebug.log("     'battlerMoves': #{battler.name} (#{battler.index}) forgot the move #{battler.moves[i].name}")
+          battler.moves[i] = nil
+        elsif GameData::Move.exists?(new_move)
+          oldMove = battler.moves[i].name
+          move = Pokemon::Move.new(new_move)
+          battler.moves[i] = Battle::Move.from_pokemon_move(battle, move)
+          PBDebug.log("     'battlerMoves': #{battler.name} (#{battler.index}) replaced the move #{oldMove} with #{battler.moves[i].name}")
+        end
       end
       battler.moves.compact!
       battler.moves.uniq!
@@ -897,12 +1106,14 @@ MidbattleHandlers.add(:midbattle_triggers, "battlerMoves",
         move = battler.pokemon.moves[i]
         battler.moves[i] = Battle::Move.from_pokemon_move(battle, move)
       end
+      PBDebug.log("     'battlerMoves': #{battler.name} (#{battler.index})'s moveset reset to its original moves")
     else
       move_data = GameData::Move.try_get(params)
       next if !move_data || battler.pbHasMove?(params)
       move = Pokemon::Move.new(params)
       battler.moves.push(Battle::Move.from_pokemon_move(battle, move))
-      battler.moves.shift if @battler.moves.length > Pokemon::MAX_MOVES
+      battler.moves.shift if battler.moves.length > Pokemon::MAX_MOVES
+      PBDebug.log("     'battlerMoves': #{battler.name} (#{battler.index}) learned the move #{move.name}")
     end
     battler.pbCheckFormOnMovesetChange
   }
@@ -920,6 +1131,7 @@ MidbattleHandlers.add(:midbattle_triggers, "battlerStats",
     when :Reset
       if battler.hasAlteredStatStages?
         battler.pbResetStatStages
+        PBDebug.log("     'battlerStats': #{battler.name} (#{battler.index})'s stat changes returning to normal")
         battle.pbDisplay(_INTL("{1}'s stat changes returned to normal!", battler.pbThis))
       end
     when :ResetRaised
@@ -927,12 +1139,14 @@ MidbattleHandlers.add(:midbattle_triggers, "battlerStats",
         battler.statsDropped = true
         battler.statsLoweredThisRound = true
         GameData::Stat.each_battle { |s| battler.stages[s.id] = 0 if battler.stages[s.id] > 0 }
+        PBDebug.log("     'battlerStats': #{battler.name} (#{battler.index})'s raised stat stages returning to normal")
         battle.pbDisplay(_INTL("{1}'s raised stats returned to normal!", battler.pbThis))
       end
     when :ResetLowered
       if battler.hasLoweredStatStages?
         battler.statsRaisedThisRound = true
         GameData::Stat.each_battle { |s| battler.stages[s.id] = 0 if battler.stages[s.id] < 0 }
+        PBDebug.log("     'battlerStats': #{battler.name} (#{battler.index})'s raised stat stages returning to normal")
         battle.pbDisplay(_INTL("{1}'s lowered stats returned to normal!", battler.pbThis))
       end
     when Array
@@ -956,10 +1170,13 @@ MidbattleHandlers.add(:midbattle_triggers, "battlerStats",
             break
           end
         end
-        next if !stat.is_a?(Symbol) || !GameData::Stat.exists?(stat)
+        next if !stat.is_a?(Symbol)
+        try_stat = GameData::Stat.try_get(stat)
+        next if !try_stat
         if stage > 0
           next if !battler.pbCanRaiseStatStage?(stat, battler)
           showAnim = true if !showAnim && last_change < 0
+          PBDebug.log("     'battlerStats': #{battler.name} (#{battler.index})'s #{try_stat.name} to be raised")
           if battler.pbRaiseStatStage(stat, stage, battler, showAnim)
             last_change = stage
             showAnim = false
@@ -967,6 +1184,7 @@ MidbattleHandlers.add(:midbattle_triggers, "battlerStats",
         else
           next if !battler.pbCanLowerStatStage?(stat, battler)
           showAnim = true if !showAnim && last_change > 0
+          PBDebug.log("     'battlerStats': #{battler.name} (#{battler.index})'s #{try_stat.name} to be lowered")
           if battler.pbLowerStatStage(stat, stage.abs, battler, showAnim)
             last_change = stage
             showAnim = false
@@ -990,6 +1208,7 @@ MidbattleHandlers.add(:midbattle_triggers, "battlerEffects",
     effects.each do |array|
       id, value, msg = *array
       effect = PBEffects.const_get(id)
+      subeffect = nil
       next if !effect
       lowercase = (msg && msg[0] == "{" && msg[1] == "1") ? false : true
       battler_name = battler.pbThis(lowercase)
@@ -1004,6 +1223,7 @@ MidbattleHandlers.add(:midbattle_triggers, "battlerEffects",
           next if !value.nil? && (!GameData::Type.exists?(value) || battler.pbHasType?(value))
         end
         battler.effects[effect] = value
+        PBDebug.log("     'battlerEffects': #{battler.name} (#{battler.index})'s #{id} effect set to #{value}")
         battle.pbDisplay(_INTL(msg, battler_name)) if msg
       elsif $DELUXE_PBEFFECTS[:battler][:counter].include?(id)
         next if battler.effects[effect] == 0 && value == 0
@@ -1021,7 +1241,12 @@ MidbattleHandlers.add(:midbattle_triggers, "battlerEffects",
           next if battle.field.effects[PBEffects::Gravity] > 0
           next if id == :Telekinesis && battler.mega? && battler.isSpecies?(:GENGAR)
         when :Substitute, :WeightChange, :FocusEnergy
+          oldVal = battler.effects[effect]
           battler.effects[effect] += value
+          if id == :Substitute && oldVal == 0 && value > 0
+            battle.scene.pbAnimateSubstitute(battler, :create)
+          end
+          PBDebug.log("     'battlerEffects': #{battler.name} (#{battler.index})'s #{id} effect increased by #{value}")
           battle.pbDisplay(_INTL(msg, battler_name)) if msg
           next
         when :Stockpile
@@ -1029,6 +1254,7 @@ MidbattleHandlers.add(:midbattle_triggers, "battlerEffects",
           battler.effects[effect] += (value).clamp(1, 3 - battler.effects[effect])
           battler.effects[PBEffects::StockpileDef] = battler.effects[effect]
           battler.effects[PBEffects::StockpileSpDef] = battler.effects[effect]
+          PBDebug.log("     'battlerEffects': #{battler.name} (#{battler.index})'s #{id} effect increased by #{value}")
           battle.pbDisplay(_INTL(msg, battler_name)) if msg
           next
         end
@@ -1052,12 +1278,19 @@ MidbattleHandlers.add(:midbattle_triggers, "battlerEffects",
           battler.effects[subeffect] = battler.lastMoveUsed
         end
         battler.effects[effect] = value
+        if subeffect
+          sub = battler.effects[subeffect]
+          PBDebug.log("     'battlerEffects': #{battler.name} (#{battler.index})'s #{id} effect set to #{value} (#{sub})")
+        else
+          PBDebug.log("     'battlerEffects': #{battler.name} (#{battler.index})'s #{id} effect set to #{value}")
+        end
         battle.pbDisplay(_INTL(msg, battler_name)) if msg
       elsif $DELUXE_PBEFFECTS[:battler][:index].include?(id)
         next if battler.effects[effect] == -1 && value == -1
         next if value >= 0 && !battle.battlers[value]
         next if id == :SkyDrop
         battler.effects[effect] = value
+        PBDebug.log("     'battlerEffects': #{battler.name} (#{battler.index})'s #{id} effect set to #{value}")
         battle.pbDisplay(_INTL(msg, battler_name)) if msg
       end
     end
@@ -1100,6 +1333,7 @@ MidbattleHandlers.add(:midbattle_triggers, "teamEffects",
       if $DELUXE_PBEFFECTS[:team][:boolean].include?(id)
         next if side.effects[effect] == value
         side.effects[effect] = value
+        PBDebug.log("     'teamEffects': #{id} effect set to #{value} on #{team_name}")
         battle.pbDisplay(_INTL(msg, team_name)) if msg
       elsif $DELUXE_PBEFFECTS[:team][:counter].include?(id)
         case id
@@ -1107,15 +1341,19 @@ MidbattleHandlers.add(:midbattle_triggers, "teamEffects",
           max = (id == :Spikes) ? 3 : 2
           if value > 0
             next if side.effects[effect] >= max
+            oldVal = side.effects[effect]
             side.effects[effect] += (value).clamp(1, max - side.effects[effect])
+            PBDebug.log("     'teamEffects': #{id} effect increased (#{oldVal} => #{side.effects[effect]}) on #{team_name}")
           else
             next if side.effects[effect] == 0
             side.effects[effect] = 0
+            PBDebug.log("     'teamEffects': #{id} effect set to 0 on #{team_name}")
           end
         else
           next if side.effects[effect] > 0 && value > 0
           next if side.effects[effect] == 0 && value == 0
           side.effects[effect] = value
+          PBDebug.log("     'teamEffects': #{id} effect set to #{value} on #{team_name}")
         end
         battle.pbDisplay(_INTL(msg, team_name)) if msg
       end
@@ -1141,16 +1379,20 @@ MidbattleHandlers.add(:midbattle_triggers, "fieldEffects",
       if $DELUXE_PBEFFECTS[:field][:boolean].include?(id)
         next if battle.field.effects[effect] == value
         battle.field.effects[effect] = value
+        PBDebug.log("     'fieldEffects': #{id} effect set to #{value}")
         battle.pbDisplay(_INTL(msg, battler_name)) if msg
       elsif $DELUXE_PBEFFECTS[:field][:counter].include?(id)
         next if battle.field.effects[effect] > 0 && value > 0
         next if battle.field.effects[effect] == 0 && value == 0
         case id
         when :PayDay
+          oldVal = battle.field.effects[effect]
           battle.field.effects[effect] += value
+          PBDebug.log("     'fieldEffects': #{id} effect increased (#{oldVal} => #{battle.field.effects[effect]})")
           battle.pbDisplay(_INTL(msg, battler_name)) if msg
         when :TrickRoom
           battle.field.effects[effect] = value
+          PBDebug.log("     'fieldEffects': #{id} effect set to #{value}")
           battle.pbDisplay(_INTL(msg, battler_name)) if msg
           if battle.field.effects[effect] > 0
             battle.allBattlers.each do |b|
@@ -1163,6 +1405,7 @@ MidbattleHandlers.add(:midbattle_triggers, "fieldEffects",
           end
         when :Gravity
           battle.field.effects[effect] = value
+          PBDebug.log("     'fieldEffects': #{id} effect set to #{value}")
           battle.pbDisplay(_INTL(msg, battler_name)) if msg
           if battle.field.effects[effect] > 0
             battle.allBattlers.each do |b|
@@ -1187,6 +1430,7 @@ MidbattleHandlers.add(:midbattle_triggers, "fieldEffects",
           end
         else
           battle.field.effects[effect] = value
+          PBDebug.log("     'fieldEffects': #{id} effect set to #{value}")
           battle.pbDisplay(_INTL(msg, battler_name)) if msg
         end
       end
@@ -1211,8 +1455,10 @@ MidbattleHandlers.add(:midbattle_triggers, "changeWeather",
         array.push(key)
       end
       weather = array.sample
+      PBDebug.log("     'changeWeather': starting random weather")
       battle.pbStartWeather(battler, weather, true)
     when :None
+      PBDebug.log("     'changeWeather': ending current weather")
       case battle.field.weather
       when :Sun       then battle.pbDisplay(_INTL("The sunlight faded."))
       when :Rain      then battle.pbDisplay(_INTL("The rain stopped."))
@@ -1234,8 +1480,10 @@ MidbattleHandlers.add(:midbattle_triggers, "changeWeather",
       battle.pbStartWeather(battler, :None, true)
     else
       params = :Hail if params == :Snow
-      if GameData::BattleWeather.exists?(params) && battle.field.weather != params
-        battle.pbStartWeather(battler, params, true)
+      try_weather = GameData::BattleWeather.try_get(params)
+      if try_weather && battle.field.weather != try_weather.id
+        PBDebug.log("     'changeWeather': starting #{try_weather.name} weather")
+        battle.pbStartWeather(battler, try_weather.id, true)
       end
     end
   }
@@ -1256,9 +1504,11 @@ MidbattleHandlers.add(:midbattle_triggers, "changeTerrain",
         next if [:None, battle.field.terrain].include?(key)
         array.push(key)
       end
-      weather = array.sample
+      terrain = array.sample
+      PBDebug.log("     'changeTerrain': starting random terrain")
       battle.pbStartTerrain(battler, terrain)
     when :None
+      PBDebug.log("     'changeTerrain': ending current terrain")
       case battle.field.terrain
       when :Electric  then battle.pbDisplay(_INTL("The electricity disappeared from the battlefield."))
       when :Grassy    then battle.pbDisplay(_INTL("The grass disappeared from the battlefield."))
@@ -1268,8 +1518,10 @@ MidbattleHandlers.add(:midbattle_triggers, "changeTerrain",
       end
       battle.pbStartTerrain(battler, :None)
     else
-      if GameData::BattleTerrain.exists?(params) && battle.field.terrain != params
-        battle.pbStartTerrain(battler, params)
+      try_terrain = GameData::BattleTerrain.try_get(params)
+      if try_terrain && battle.field.terrain != try_terrain.id
+        PBDebug.log("     'changeTerrain': starting #{try_terrain.name} Terrain")
+        battle.pbStartTerrain(battler, try_terrain.id)
       end
     end
   }
@@ -1289,10 +1541,14 @@ MidbattleHandlers.add(:midbattle_triggers, "changeEnvironment",
         next if [:None, battle.environment].include?(key)
         array.push(key)
       end
-      battle.environment = array.sample
+      env = GameData::Environment.get(array.sample)
+      PBDebug.log("     'changeEnvironment': set random battle environment (#{env.name})")
+      battle.environment = env.id
     else
-      if GameData::Environment.exists?(params) && battle.environment != params
-        battle.environment = params
+      try_env = GameData::Environment.try_get(params)
+      if try_env && battle.environment != try_env.id
+        PBDebug.log("     'changeEnvironment': setting battle environment to #{try_env.name}")
+        battle.environment = try_env.id
       end
     end
   }
@@ -1309,9 +1565,12 @@ MidbattleHandlers.add(:midbattle_triggers, "changeBackdrop",
     else
       backdrop = base = params
     end
+    PBDebug.log("     'changeBackdrop': setting new battle background (#{backdrop})")
     battle.backdrop = backdrop if pbResolveBitmap("Graphics/Battlebacks/#{backdrop}_bg")
     if base && pbResolveBitmap("Graphics/Battlebacks/#{base}_base0")
-      battle.backdropBase = base 
+      PBDebug.log("     'changeBackdrop': setting new battle bases (#{base})")
+      oldEnv = battle.environment
+      battle.backdropBase = base
       if base.include?("city")          then battle.environment = :None
       elsif base.include?("grass")      then battle.environment = :Grass
       elsif base.include?("water")      then battle.environment = :MovingWater
@@ -1327,6 +1586,10 @@ MidbattleHandlers.add(:midbattle_triggers, "changeBackdrop",
       elsif base.include?("distortion") then battle.environment = :Graveyard
       elsif base.include?("sky")        then battle.environment = :Sky
       elsif base.include?("space")      then battle.environment = :Space
+      end
+      if battle.environment != oldEnv
+        envName = GameData::Environment.get(battle.environment).name
+        PBDebug.log("     'changeBackdrop': battle environment set to #{envName} to match new bases")
       end
     end
     battle.scene.pbFlashRefresh

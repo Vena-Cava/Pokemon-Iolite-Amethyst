@@ -71,6 +71,10 @@ ItemHandlers::UseOnPokemon.add(:MAXSOUP, proc { |item, qty, pkmn, scene|
 # already been given to a Pokemon. This item also can't be used if you still
 # currently have a Dynamaxed Pokemon on the field.
 #-------------------------------------------------------------------------------
+
+#-------------------------------------------------------------------------------
+# Usability handler
+#-------------------------------------------------------------------------------
 ItemHandlers::CanUseInBattle.add(:WISHINGSTAR, proc { |item, pokemon, battler, move, firstAction, battle, scene, showMessages|
   side  = battler.idxOwnSide
   owner = battle.pbGetOwnerIndexFromBattlerIndex(battler.index)
@@ -90,6 +94,9 @@ ItemHandlers::CanUseInBattle.add(:WISHINGSTAR, proc { |item, pokemon, battler, m
   next true
 })
 
+#-------------------------------------------------------------------------------
+# Effect handler
+#-------------------------------------------------------------------------------
 ItemHandlers::UseInBattle.add(:WISHINGSTAR, proc { |item, battler, battle|
   side    = battler.idxOwnSide
   owner   = battle.pbGetOwnerIndexFromBattlerIndex(battler.index)

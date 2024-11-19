@@ -147,23 +147,27 @@ end
 #-------------------------------------------------------------------------------
 MidbattleHandlers.add(:midbattle_global, :wild_tera_battle,
   proc { |battle, idxBattler, idxTarget, trigger|
-    next if !battle.wildBattle?
+    next if !battle.wildBattle? || pbInSafari?
     next if battle.wildBattleMode != :tera
     foe = battle.battlers[1]
     next if !foe.wild?
+    logname = _INTL("{1} ({2})", foe.pbThis, foe.index)
     case trigger
     when "RoundStartCommand_1_foe"
       if battle.pbCanTerastallize?(foe.index)
+        PBDebug.log("[Midbattle Global] #{logname} will Terastallize.")
         battle.pbTerastallize(foe.index)
         battle.disablePokeBalls = true
         battle.sosBattle = false if defined?(battle.sosBattle)
         battle.totemBattle = nil if defined?(battle.totemBattle)
-        foe.damageThreshold = 6
+        foe.damageThreshold = 20
       else
         battle.wildBattleMode = nil
       end
     when "BattlerReachedHPCap_foe"
+      PBDebug.log("[Midbattle Global] #{logname} damage cap reached.")
       foe.unTera(true)
+      battle.noBag = false
       battle.disablePokeBalls = false
       battle.pbDisplayPaused(_INTL("{1}'s Tera Jewel shattered!\nIt may now be captured!", foe.pbThis))
     when "BattleEndWin"
@@ -187,6 +191,7 @@ MidbattleHandlers.add(:midbattle_triggers, "terastallize",
     battle.wildBattleMode = :tera if battler.wild? && oldMode != :tera
     $player.tera_charged = true if battler.pbOwnedByPlayer?
     if battle.pbCanTerastallize?(battler.index)
+      PBDebug.log("     'terastallize': #{battler.name} (#{battler.index}) set to Terastallize")
       battle.scene.pbForceEndSpeech
       battle.pbDisplay(params.gsub(/\\PN/i, battle.pbPlayer.name)) if params.is_a?(String)
       battle.pbTerastallize(battler.index)
@@ -206,5 +211,8 @@ MidbattleHandlers.add(:midbattle_triggers, "disableTera",
     owner = battle.pbGetOwnerIndexFromBattlerIndex(idxBattler)
     battle.terastallize[side][owner] = (params) ? -2 : -1
     $player.tera_charged = !params if battler.pbOwnedByPlayer?
+    value = (params) ? "disabled" : "enabled"
+    trainerName = battle.pbGetOwnerName(idxBattler)
+    PBDebug.log("     'disableTera': Terastallization #{value} for #{trainerName}")
   }
 )

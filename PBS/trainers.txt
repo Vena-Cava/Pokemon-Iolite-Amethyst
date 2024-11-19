@@ -181,3 +181,14 @@ Pokemon = HAXORUS,100
     EV = 0,252,0,252,0,4
     Happiness = 255
     Ball = DUSKBALL
+#-------------------------------
+[AROMALADY,Test]
+Items = TERAORB
+LoseText = ...
+Pokemon = VENUSAUR,5
+    Item = FLAMEORB
+    Shiny = true
+    TeraType = QMARKS
+    DynamaxLv = 10
+    Gigantamax = true
+

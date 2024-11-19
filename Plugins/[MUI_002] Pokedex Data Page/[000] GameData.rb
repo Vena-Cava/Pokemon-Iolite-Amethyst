@@ -353,6 +353,17 @@ module GameData
       return 0
     end
 	
+	#---------------------------------------------------------------------------
+    # Checks a species for all forms that branch off into different evolutions.
+    #---------------------------------------------------------------------------
+	def branch_evolution_forms
+      forms = [@form]
+      @flags.each do |flag|
+        forms.push($~[1].to_i) if flag[/^EvoBranchForm_(\d+)$/i]
+      end
+      return forms
+    end
+	
     #---------------------------------------------------------------------------
     # Determines if the species is a regional form.
     #---------------------------------------------------------------------------

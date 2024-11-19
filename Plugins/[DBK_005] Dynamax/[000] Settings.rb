@@ -38,14 +38,27 @@ module Settings
   SHOW_DYNAMAX_ANIM = true
   
   #-----------------------------------------------------------------------------
+  # When true, Dynamaxed Pokemon will have enlarged sprites and icons.
+  #-----------------------------------------------------------------------------
+  SHOW_DYNAMAX_SIZE = true
+  
+  #-----------------------------------------------------------------------------
   # When true, Dynamaxed Pokemon sprites and icons will have a red overlay.
   #-----------------------------------------------------------------------------
   SHOW_DYNAMAX_OVERLAY = true
   
   #-----------------------------------------------------------------------------
-  # When true, Dynamaxed Pokemon will have enlarged sprites and icons.
+  # Sets how the overlay pattern on Dynamax Pokemon animates.
+  # The first entry in the array corresponds to X-axis movement.
+  # The second entry in the array corresponds to Y-axis movement.
   #-----------------------------------------------------------------------------
-  SHOW_DYNAMAX_SIZE = true
+  # X-Axis    Y-Axis
+  # :none     :none 
+  # :left     :up
+  # :right    :down
+  # :erratic  :erratic
+  #-----------------------------------------------------------------------------
+  DYNAMAX_PATTERN_MOVEMENT = [:left, :none]
   
   #-----------------------------------------------------------------------------
   # When true, displays G-Max Factor icon in the PC Storage.

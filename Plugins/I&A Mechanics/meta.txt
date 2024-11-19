@@ -3,4 +3,6 @@ Version = 1.0
 Website = https://www.reliccastle.com/threads/5817/
 Credits = Vena Cava
 Essentials = 21.1
-Requires = v21.1 Hotfixes, Generation 9 Pack
+Requires = v21.1 Hotfixes
+Requires = Generation 9 Pack
+Requires = Deluxe Battle Kit

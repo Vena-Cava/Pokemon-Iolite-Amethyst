@@ -10,7 +10,7 @@ class Battle::AI
     moves_to_score = zmove_pbGetMovesToScore
     if @battle.pbCanZMove?(@user.index)
       item_data = GameData::Item.get(@user.battler.item)
-      pkmn = @user.battler.effects[PBEffects::TransformPokemon] || @user.battler.pokemon
+      pkmn = @user.battler.visiblePokemon
       @user.battler.eachMoveWithIndex do |move, i|
         newID = move.get_compatible_zmove(item_data, pkmn)
         if newID
@@ -61,8 +61,8 @@ end
 #-------------------------------------------------------------------------------
 Battle::AI::Handlers::MoveFailureCheck.add("UseLastMoveUsed",
   proc { |move, user, ai, battle|
-    next true if GameData::Move.get(battle.lastMoveUsed).zMove?
     next true if !battle.lastMoveUsed || !GameData::Move.exists?(battle.lastMoveUsed)
+    next true if GameData::Move.get(battle.lastMoveUsed).zMove?
     next move.move.moveBlacklist.include?(GameData::Move.get(battle.lastMoveUsed).function_code)
   }
 )

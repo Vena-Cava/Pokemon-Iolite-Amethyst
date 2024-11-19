@@ -108,6 +108,11 @@ class Battle::AI
   # Registers a special action for an AI battler based on its selected move.
   #-----------------------------------------------------------------------------
   def pbRegisterEnemySpecialActionFromMove(user, move_sel); end
+  
+  #-----------------------------------------------------------------------------
+  # Determines if the AI should use a special command that isn't Switch/Item/Fight.
+  #-----------------------------------------------------------------------------
+  def pbChooseToUseSpecialCommand; return false; end
 end
 
 
@@ -140,7 +145,7 @@ class Battle::Scene
   # Runs code upon pressing the "ACTION" key while a special action is available.
   #-----------------------------------------------------------------------------
   def pbFightMenu_Action(battler, specialAction, cw)
-	(cw.mode == 1) ? pbPlayActionSE : pbPlayCancelSE
+    (cw.mode == 1) ? pbPlayActionSE : pbPlayCancelSE
     return false if specialAction == :mega
   end
   
@@ -205,6 +210,7 @@ class Pokemon
   def tera?;           return false; end
   def tera_form?;      return false; end
   def celestial?;      return false; end
+  def super_shiny_hue; return 0;     end
 end
 
 class Battle::Battler
@@ -221,7 +227,7 @@ class Battle::Battler
   def hasStyle?;       return false; end
   def hasTera?;        return false; end
   def hasZodiacPower?; return false; end
-  def isRivalSpecies?(battler); return false; end
+  def isRivalSpecies?(arg); return false; end
 end
 
 class Battle::FakeBattler
@@ -230,15 +236,26 @@ class Battle::FakeBattler
   def style?;          return false; end
   def tera?;           return false; end
   def celestial?;      return false; end
+  def visiblePokemon;  return @pokemon; end
+end
+
+class Battle
+  def launcherBattle?; return false; end
+  def pbReduceLauncherPoints(*args); end
 end
 
 class SafariBattle
   def wildBattleMode;  return nil;   end
   def pbDeluxeTriggers(*args);       end
+  def launcherBattle?; return false; end
 end
 
 class Battle::Move
   def pbBaseDamageTera(baseDmg, user, type)
     return baseDmg
   end
+end
+
+class Battle::Scene
+  def pbAnimateSubstitute(*args); end
 end

@@ -1,5 +1,17 @@
 ﻿# See the documentation on the wiki to learn how to edit this file.
 #-------------------------------
+[ABRA,1]
+FormName = Nordric
+Types = GHOST
+Abilities = STENCH
+HiddenAbilities = OBLIVIOUS
+BaseStats = 25,105,55,90,20,15
+EVs = ATTACK,1
+Moves = 1,GRUDGE
+Color = Green
+Category = Necro
+Pokedex = Abra had gone extinct in Nordra long ago, but one day, they began to mysteriously reanimate. This process has left them with little-to-no brainpower however, rendering them unable to float.
+#-------------------------------
 [PETILIL,2]
 FormName = Niphosian
 Types = GRASS,PSYCHIC

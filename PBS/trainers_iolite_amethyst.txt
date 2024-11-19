@@ -103,11 +103,33 @@ LoseText = ...
 Pokemon = TENTACOOL,10
     Moves = CHILLINGWATER,ACID,WATERGUN,WRAP
     Ability = LIQUIDOOZE
+    Gender = male
     Ball = NETBALL
+    NoTera = true
+    NoDynamax = true
 Pokemon = PUFFONO,12
     Moves = CHILLINGWATER,IRONDEFENSE,GYROBALL,AQUARING
     Ability = PUFFEDOUT
+    Gender = male
     Ball = NETBALL
+    NoTera = true
+    NoDynamax = true
+#-------------------------------
+[TEACHER,Carrie]
+Items = POTION
+LoseText = ...
+Pokemon = ABRA,10
+    Form = 1
+    Moves = SHADOWCLAW,BITE,TELEPORT,HEX
+    Ability = STENCH
+    Gender = male
+    NoTera = true
+    NoDynamax = true
+Pokemon = SOULBOTE,12
+    Moves = HARDEN,AGILITY,CHILLINGWATER,HEX
+    Ability = WEAKARMOR
+    NoTera = true
+    NoDynamax = true
 #-------------------------------
 [FISHERMAN,Sedric,1]
 Items = MEGARING

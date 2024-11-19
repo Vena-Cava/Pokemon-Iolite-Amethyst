@@ -231,24 +231,29 @@ end
 #===============================================================================
 class Battle::Scene
   #-----------------------------------------------------------------------------
-  # Aliased to apply Dynamax pattern to battler sprites.
+  # Aliased to get the correct sprite when Dynamax is concerned.
   #-----------------------------------------------------------------------------
   alias dynamax_pbChangePokemon pbChangePokemon
   def pbChangePokemon(idxBattler, pkmn)
+    pkmn = pbGetDynamaxPokemon(idxBattler, pkmn)
+    dynamax_pbChangePokemon(idxBattler, pkmn)
+  end
+  
+  def pbGetDynamaxPokemon(idxBattler, pkmn)
     battler = (idxBattler.respond_to?("index")) ? idxBattler : @battle.battlers[idxBattler]
     if !pbInSafari? && battler.pokemon.personalID != pkmn.personalID
       newPkmn             = Pokemon.new(pkmn.species, pkmn.level)
       newPkmn.gender      = pkmn.gender
+      newPkmn.form_simple = pkmn.form if !pkmn.emax? && !pkmn.gmax?
       newPkmn.shiny       = pkmn.shiny?
       newPkmn.super_shiny = pkmn.super_shiny?
       newPkmn.gmax_factor = battler.gmax_factor?
       newPkmn.dynamax     = battler.dynamax?
       newPkmn.makeShadow if pkmn.shadowPokemon?
-      pkmn = newPkmn
+      newPkmn.spot_hash   = pkmn.spot_hash if defined?(pkmn.spot_hash)
+      return newPkmn
     end
-    dynamax_pbChangePokemon(idxBattler, pkmn)
-    pkmnSprite = @sprites["pokemon_#{battler.index}"]
-    pkmnSprite.set_dynamax_pattern(battler)
+    return pkmn
   end
   
   #-----------------------------------------------------------------------------

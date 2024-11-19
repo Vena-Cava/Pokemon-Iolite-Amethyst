@@ -15,9 +15,11 @@ class Sprite
     filename = (pbResolveBitmap(species_path)) ? species_path : path + "dynamax"
     self.pattern = Bitmap.new(filename)
     self.pattern_opacity = 150
+    self.pattern_type = :dynamax
   end
 
   def set_dynamax_pattern(pokemon, override = false)
+    return if !pokemon.is_a?(Symbol) && pokemon&.shadowPokemon?
     return if !pokemon.is_a?(Symbol) && pokemon&.tera?
     if override || pokemon&.dynamax?
       if Settings::SHOW_DYNAMAX_SIZE
@@ -25,7 +27,7 @@ class Sprite
       end
       if Settings::SHOW_DYNAMAX_OVERLAY
         if pokemon.is_a?(Battle::Battler)
-          pokemon = pokemon.effects[PBEffects::TransformPokemon] || pokemon.displayPokemon
+          pokemon = pokemon.visiblePokemon
         end
         if pokemon.is_a?(Pokemon)
           species = pokemon.species
@@ -40,8 +42,10 @@ class Sprite
   end
   
   def set_dynamax_icon_pattern
-    return if self.pokemon&.tera?
-    if self.pokemon&.dynamax?
+    return if !self.pokemon
+    return if self.pokemon.shadowPokemon?
+    return if self.pokemon.tera?
+    if self.pokemon.dynamax?
       if Settings::SHOW_DYNAMAX_SIZE && self.bitmap.height <= 64
         self.zoom_x = self.zoom_y = 1.5
       else
@@ -58,34 +62,44 @@ class Sprite
     self.zoom_x = 1 if self.zoom_x > 1
     self.zoom_y = 1 if self.zoom_y > 1
     self.pattern = nil
+    self.pattern_type = nil
   end
-end
-
-#-------------------------------------------------------------------------------
-# Pokemon sprites (Defined Pokemon)
-#-------------------------------------------------------------------------------
-class PokemonSprite < Sprite
-  alias dynamax_setPokemonBitmap setPokemonBitmap
-  def setPokemonBitmap(pokemon, back = false)
-    dynamax_setPokemonBitmap(pokemon, back)
-    self.set_dynamax_pattern(pokemon)
+  
+  def update_dynamax_pattern
+    return if self.pattern_type != :dynamax
+    if (System.uptime / 0.05).to_i % 2 == 0
+      case Settings::DYNAMAX_PATTERN_MOVEMENT[0]
+      when :left    then self.pattern_scroll_x -= 1 
+      when :right   then self.pattern_scroll_x += 1
+      when :erratic then self.pattern_scroll_x += rand(-5..5) 
+      end
+      case Settings::DYNAMAX_PATTERN_MOVEMENT[1]
+      when :up      then self.pattern_scroll_y -= 1 
+      when :down    then self.pattern_scroll_y += 1
+      when :erratic then self.pattern_scroll_y += rand(-5..5)
+      end
+    end
   end
-
-  alias dynamax_setPokemonBitmapSpecies setPokemonBitmapSpecies
-  def setPokemonBitmapSpecies(pokemon, species, back = false)
-    dynamax_setPokemonBitmapSpecies(pokemon, species, back)
-    self.set_dynamax_pattern(pokemon)
+  
+  #-----------------------------------------------------------------------------
+  # Compatibility with other plugins that add sprite patterns.
+  #-----------------------------------------------------------------------------
+  alias dynamax_set_plugin_pattern set_plugin_pattern
+  def set_plugin_pattern(pokemon, override = false)
+    dynamax_set_plugin_pattern(pokemon, override)
+    set_dynamax_pattern(pokemon, override)
   end
-end
-
-#-------------------------------------------------------------------------------
-# Icon sprites (Defined Pokemon)
-#-------------------------------------------------------------------------------
-class PokemonIconSprite < Sprite
-  alias :dynamax_pokemon= :pokemon=
-  def pokemon=(value)
-    self.dynamax_pokemon=(value)
-    self.set_dynamax_icon_pattern
+  
+  alias dynamax_set_plugin_icon_pattern set_plugin_icon_pattern
+  def set_plugin_icon_pattern
+    dynamax_set_plugin_icon_pattern
+	set_dynamax_icon_pattern
+  end
+  
+  alias dynamax_update_plugin_pattern update_plugin_pattern
+  def update_plugin_pattern
+    dynamax_update_plugin_pattern
+	update_dynamax_pattern
   end
 end
 
@@ -147,8 +161,10 @@ class PokemonSummary_Scene
       @sprites["dynamax_overlay"].bitmap.clear
     end
     dynamax_drawPage(page)
-    @sprites["pokemon"].clear_dynamax_pattern
-    @sprites["pokeicon"].clear_dynamax_pattern
+    if @pokemon.dynamax?
+      @sprites["pokemon"].clear_dynamax_pattern
+      @sprites["pokeicon"].clear_dynamax_pattern
+    end
     overlay = @sprites["overlay"].bitmap
     coords = (PluginManager.installed?("BW Summary Screen")) ? [454, 82] : [88, 95]
     pbDisplayGmaxFactor(@pokemon, overlay, coords[0], coords[1])

@@ -7,10 +7,10 @@ class Battle::Scene
   #-----------------------------------------------------------------------------
   def pbToggleBattleInfo
     return if pbInSafari?
-    pbHideMoveInfo
-    @infoUIToggle = !@infoUIToggle
-    (@infoUIToggle) ? pbSEPlay("GUI party switch") : pbPlayCloseMenuSE
-    @sprites["battleinfo"].visible = @infoUIToggle
+    pbHideInfoUI if @enhancedUIToggle != :battler
+    @enhancedUIToggle = (@enhancedUIToggle.nil?) ? :battler : nil
+    (@enhancedUIToggle) ? pbSEPlay("GUI party switch") : pbPlayCloseMenuSE
+    @sprites["enhancedUI"].visible = !@enhancedUIToggle.nil?
     index = (@battle.pbSideBattlerCount(0) == 3) ? 1 : 0
     pbUpdateBattlerSelection(0, index, true)
   end
@@ -24,9 +24,11 @@ class Battle::Scene
       poke = (b.opposes?) ? b.displayPokemon : b.pokemon
       if !b.fainted?
         @sprites["info_icon#{b.index}"].pokemon = poke
-        @sprites["info_icon#{b.index}"].visible = @infoUIToggle
+        @sprites["info_icon#{b.index}"].visible = @enhancedUIToggle == :battler
         @sprites["info_icon#{b.index}"].setOffset(PictureOrigin::CENTER)
-        if b.dynamax?
+        if b.shadowPokemon?
+          @sprites["info_icon#{b.index}"].set_shadow_icon_pattern
+        elsif b.dynamax?
           @sprites["info_icon#{b.index}"].set_dynamax_icon_pattern
           color = (b.isSpecies?(:CALYREX)) ? Color.new(36, 243, 243) : Color.new(250, 57, 96)
         elsif b.tera?
@@ -49,8 +51,8 @@ class Battle::Scene
   # Draws the selection menu.
   #-----------------------------------------------------------------------------
   def pbUpdateBattlerSelection(idxSide, idxPoke, select = false)
-    @infoUIOverlay.clear
-    return if !@infoUIToggle
+    @enhancedUIOverlay.clear
+    return if @enhancedUIToggle != :battler
     ypos = 68
     textPos = []
     imagePos = [[@path + "select_bg", 0, ypos]]
@@ -83,12 +85,12 @@ class Battle::Scene
           @sprites["info_icon#{b.index}"].x = iconX
           @sprites["info_icon#{b.index}"].y = iconY
           pbSetWithOutline("info_icon#{b.index}", [iconX, iconY, 300])
-          imagePos.push([@path + "info_owner", bgX + 36, iconY + 11],
-                        [@path + "info_gender", bgX + 146, iconY - 37, b.gender * 22, 0, 22, 20])
+          imagePos.push([@path + "info_owner", bgX + 36, iconY + 12, 0, 0, 128, 20],
+                        [@path + "info_gender", bgX + 148, iconY - 34, b.gender * 22, 0, 22, 22])
           textPos.push([_INTL("{1}", b.pokemon.name), nameX, iconY - 16, :center, base, shadow],
-                       [@battle.pbGetOwnerFromBattlerIndex(b.index).name, nameX - 10, iconY + 13, 2, BASE_LIGHT, SHADOW_LIGHT])
+                       [@battle.pbGetOwnerFromBattlerIndex(b.index).name, nameX - 10, iconY + 14, 2, BASE_LIGHT, SHADOW_LIGHT])
         end
-        @battle.player.each { |p| trainers.push(p) if p.able_pokemon_count > 0 }
+        @battle.player.each_with_index { |t, i| trainers.push([t, i]) if t.able_pokemon_count > 0 }
         ballY = ypos + 154
         ballXFirst = 35
         ballXLast = Graphics.width - (16 * NUM_BALLS) - 35
@@ -120,13 +122,13 @@ class Battle::Scene
           pbSetWithOutline("info_icon#{b.index}", [iconX, iconY, 400])
           textPos.push([_INTL("{1}", b.displayPokemon.name), nameX, iconY - 16, :center, base, shadow])
           if @battle.trainerBattle?
-            imagePos.push([@path + "info_owner", bgX + 36, iconY + 11])
-            textPos.push([@battle.pbGetOwnerFromBattlerIndex(b.index).name, nameX - 10, iconY + 13, :center, BASE_LIGHT, SHADOW_LIGHT])
+            imagePos.push([@path + "info_owner", bgX + 36, iconY + 12, 0, 0, 128, 20])
+            textPos.push([@battle.pbGetOwnerFromBattlerIndex(b.index).name, nameX - 10, iconY + 14, :center, BASE_LIGHT, SHADOW_LIGHT])
           end
-          imagePos.push([@path + "info_gender", bgX + 146, iconY - 37, b.displayPokemon.gender * 22, 0, 22, 20])
+          imagePos.push([@path + "info_gender", bgX + 148, iconY - 36, b.displayPokemon.gender * 22, 0, 22, 22])
         end
         if @battle.opponent
-          @battle.opponent.each { |p| trainers.push(p) if p.able_pokemon_count > 0 } 
+          @battle.opponent.each_with_index { |t, i| trainers.push([t, i]) if t.able_pokemon_count > 0 } 
           ballY = ypos - 17
           ballXFirst = Graphics.width - (16 * NUM_BALLS) - 35
           ballXLast = 35
@@ -139,15 +141,16 @@ class Battle::Scene
       if !trainers.empty?
         ballXMiddle = (Graphics.width / 2) - 48
         ballX = ballXMiddle
-        trainers.each do |trainer|
+        trainers.each do |array|
+          trainer, idxTrainer = *array
           if trainers.length > 1
             case trainer
-            when trainers.first then ballX = ballXFirst
-            when trainers.last  then ballX = ballXLast
-            else                     ballX = ballXMiddle
+            when trainers.first[0] then ballX = ballXFirst
+            when trainers.last[0]  then ballX = ballXLast
+            else                        ballX = ballXMiddle
             end
           end
-          imagePos.push([@path + "info_owner", ballX - 16, ballY - ballOffset])
+          imagePos.push([@path + "info_owner", ballX - 16, ballY - ballOffset, 0, 0, 128, 20])
           NUM_BALLS.times do |slot|
             idx = 0
             if !trainer.party[slot]                   then idx = 3 # Empty
@@ -156,12 +159,24 @@ class Battle::Scene
             end
             imagePos.push([@path + "info_party", ballX + (slot * 16), ballY, idx * 15, 0, 15, 15])
           end
+          # Draws each trainer's Wonder Launcher points.
+          if @battle.launcherBattle?
+            path = Settings::WONDER_LAUNCHER_PATH
+            maxPoints = Settings::WONDER_LAUNCHER_MAX_POINTS
+            points = @battle.launcherPoints[side][idxTrainer]
+            x = ballX - 16 + ((128 - (10 * maxPoints + 2)) / 2).floor
+            y = (side == 0) ? ballY + 18 : ballY - 17
+            maxPoints.times do |i|
+              imagePos.push([path + "points", x + 10 * i, y, 0, 0, 12, 14])
+              imagePos.push([path + "points", x + 10 * i, y, 12, 0, 12, 14]) if points >= i + 1
+            end
+          end
         end
       end
     end
     pbUpdateBattlerIcons
-    pbDrawImagePositions(@infoUIOverlay, imagePos)
-    pbDrawTextPositions(@infoUIOverlay, textPos)
+    pbDrawImagePositions(@enhancedUIOverlay, imagePos)
+    pbDrawTextPositions(@enhancedUIOverlay, textPos)
     pbSelectBattlerInfo if select
   end
   
@@ -169,19 +184,21 @@ class Battle::Scene
   # Handles the controls for the selection menu.
   #-----------------------------------------------------------------------------
   def pbSelectBattlerInfo
-    return if !@infoUIToggle
+    return if @enhancedUIToggle != :battler
+    pbHideUIPrompt
     idxSide = 0
     idxPoke = (@battle.pbSideBattlerCount(0) < 3) ? 0 : 1
     battlers = [[], []]
     @battle.allSameSideBattlers.each { |b| battlers[0].push(b) }
     @battle.allOtherSideBattlers.reverse.each { |b| battlers[1].push(b) }
     battler = battlers[idxSide][idxPoke]
+    idxBattler = @sprites["enhancedUIPrompts"].battler
     pbShowOutline("info_icon#{battler.index}")
     cw = @sprites["fightWindow"]
     switchUI = 0
     loop do
       pbUpdate(cw)
-      pbUpdateSpriteHash(@sprites)
+      pbUpdateInfoSprites
       oldSide = idxSide
       oldPoke = idxPoke
       break if Input.trigger?(Input::BACK) || Input.trigger?(Input::JUMPUP)
@@ -215,9 +232,14 @@ class Battle::Scene
           end
         end
         pbPlayCursorSE
-      elsif cw.visible && Input.trigger?(Input::JUMPDOWN)
-        switchUI = 1
-        break
+      elsif Input.trigger?(Input::JUMPDOWN)
+        if cw.visible
+          switchUI = 1
+          break
+        elsif @battle.pbCanUsePokeBall?(idxBattler)
+          switchUI = 2
+          break
+        end
       end
       if oldSide != idxSide || oldPoke != idxPoke
         pbUpdateBattlerSelection(idxSide, idxPoke)
@@ -228,11 +250,12 @@ class Battle::Scene
         end
       end
     end
-    pbHideBattleInfo
+    pbHideInfoUI
     pbUpdateBattlerIcons
     case switchUI
-    when 0 then pbPlayCloseMenuSE
+    when 0 then pbPlayCloseMenuSE; pbRefreshUIPrompt
     when 1 then pbToggleMoveInfo(cw.battler, :none, cw)
+    when 2 then pbToggleBallInfo(idxBattler)
     end
   end
   
@@ -240,15 +263,20 @@ class Battle::Scene
   # Edited to allow the selection menu to be opened outside of the fight menu.
   #-----------------------------------------------------------------------------
   def pbCommandMenuEx(idxBattler, texts, mode = 0)
+    pbRefreshUIPrompt(idxBattler, COMMAND_BOX)
     pbShowWindow(COMMAND_BOX)
     cw = @sprites["commandWindow"]
     cw.setTexts(texts)
     cw.setIndexAndMode(@lastCmd[idxBattler], mode)
     pbSelectBattler(idxBattler)
     ret = -1
+    promptTimer = System.uptime
     loop do
       oldIndex = cw.index
       pbUpdate(cw)
+      if Settings::UI_PROMPT_DISPLAY == 2 && pbShowingPrompt?
+        pbToggleUIPrompt if System.uptime - promptTimer > 2
+      end
       if Input.trigger?(Input::LEFT)
         cw.index -= 1 if (cw.index & 1) == 1
       elsif Input.trigger?(Input::RIGHT)
@@ -272,8 +300,15 @@ class Battle::Scene
         pbHideInfoUI
         ret = -2
         break
-      elsif Input.trigger?(Input::JUMPUP)
+      elsif Input.trigger?(Input::JUMPUP) && !pbInSafari?
         pbToggleBattleInfo
+        promptTimer = System.uptime
+      elsif Input.trigger?(Input::JUMPDOWN) && !pbInSafari?
+        if pbToggleBallInfo(idxBattler)
+          ret = 1
+          break
+        end
+        promptTimer = System.uptime
       end
     end
     return ret

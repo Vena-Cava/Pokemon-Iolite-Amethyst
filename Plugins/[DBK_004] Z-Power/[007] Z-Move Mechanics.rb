@@ -72,17 +72,19 @@ end
 #-------------------------------------------------------------------------------
 MidbattleHandlers.add(:midbattle_global, :wild_zpower_battle,
   proc { |battle, idxBattler, idxTarget, trigger|
-    next if !battle.wildBattle?
+    next if !battle.wildBattle? || pbInSafari?
     next if battle.wildBattleMode != :zmove
     foe = battle.battlers[1]
     next if !foe.wild?
+    logname = _INTL("{1} ({2})", foe.pbThis, foe.index)
     case trigger
     when "RoundStartCommand_1_foe"
       if battle.pbCanZMove?(foe.index)
+        PBDebug.log("[Midbattle Global] #{logname} gains a Z-Powered aura")
         battle.disablePokeBalls = true
         battle.sosBattle = false if defined?(battle.sosBattle)
         battle.totemBattle = nil if defined?(battle.totemBattle)
-        foe.damageThreshold = 6
+        foe.damageThreshold = 20
         battle.pbAnimation(:DRAGONDANCE, foe, foe)
         battle.pbDisplay(_INTL("{1}'s aura flared to life!", foe.pbThis))
         showAnim = true
@@ -96,11 +98,13 @@ MidbattleHandlers.add(:midbattle_global, :wild_zpower_battle,
     when "RoundStartCommand_foe"
       next if battle.pbTriggerActivated?("BattlerReachedHPCap_foe")
       if foe.turnCount % 2 == 0 && battle.zMove[1][0] == -2
+        PBDebug.log("[Midbattle Global] #{logname} able to use Z-Moves again")
         battle.zMove[1][0] = -1
         battle.pbAnimation(:DRAGONDANCE, foe, foe)
         battle.pbDisplay(_INTL("{1}'s Z-Power was replenished by its aura!", foe.pbThis))
       end	
     when "BattlerReachedHPCap_foe"
+      PBDebug.log("[Midbattle Global] #{logname} damage cap reached")
       if foe.hasRaisedStatStages?
         foe.statsLoweredThisRound = true
         battle.pbCommonAnimation("StatDown", foe)
@@ -109,6 +113,7 @@ MidbattleHandlers.add(:midbattle_global, :wild_zpower_battle,
         end
       end
       battle.zMove[1][0] == -2
+      battle.noBag = false
       battle.disablePokeBalls = false
       battle.pbDisplayPaused(_INTL("{1}'s aura faded!\nIt may now be captured!", foe.pbThis))
     when "BattleEndWin"
@@ -132,6 +137,7 @@ MidbattleHandlers.add(:midbattle_triggers, "useZMove",
     oldMode = battle.wildBattleMode
     battle.wildBattleMode = :zmove if battler.wild? && oldMode != :zmove
     if battle.pbCanZMove?(battler.index) && battler.hasCompatibleZMove?(ch[2])
+      PBDebug.log("     'useZMove': #{battler.name} (#{battler.index}) set to use a Z-Move")
       battle.scene.pbForceEndSpeech
       battler.display_zmoves
       ch[2] = battler.moves[ch[1]]
@@ -151,6 +157,9 @@ MidbattleHandlers.add(:midbattle_triggers, "disableZMoves",
     side = (battler.opposes?) ? 1 : 0
     owner = battle.pbGetOwnerIndexFromBattlerIndex(idxBattler)
     battle.zMove[side][owner] = (params) ? -2 : -1
+    value = (params) ? "disabled" : "enabled"
+    trainerName = battle.pbGetOwnerName(idxBattler)
+    PBDebug.log("     'disableZMoves': Z-Moves #{value} for #{trainerName}")
   }
 )
 
@@ -329,6 +338,7 @@ class Battle::Battler
   def hasZMove?
     return false if shadowPokemon?
     return false if wild? && @battle.wildBattleMode != :zmove
+    return false if @battle.raidBattle? && @battle.raidRules[:style] != :Ultra
     return false if ![nil, :ultra].include?(self.getActiveState)
     return false if hasEligibleAction?(:primal, :ultra, :zodiac)
     return hasCompatibleZMove?
@@ -353,6 +363,14 @@ class Battle::Battler
     else
       return moves.any? { |m| m.type == item.zmove_type }
     end
+  end
+  
+  #-----------------------------------------------------------------------------
+  # Utility for checking if a Z-Crystal is held.
+  #-----------------------------------------------------------------------------
+  def hasZCrystal?
+    return false if !@item_id
+    return GameData::Item.get(@item_id).is_zcrystal?
   end
   
   #-----------------------------------------------------------------------------
@@ -455,6 +473,14 @@ class Pokemon
     else
       return @moves.any? { |m| m.type == item.zmove_type }
     end
+  end
+  
+  #-----------------------------------------------------------------------------
+  # Utility for checking if a Z-Crystal is held.
+  #-----------------------------------------------------------------------------
+  def hasZCrystal?
+    return false if !@item_id
+    return GameData::Item.get(@item_id).is_zcrystal?
   end
   
   #-----------------------------------------------------------------------------

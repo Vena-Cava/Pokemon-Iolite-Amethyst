@@ -202,7 +202,7 @@ if PluginManager.installed?("Bag Screen w/int. Party")
           if itm.is_tera_shard? && qty > 1
             screen.pbDisplay(_INTL("Not enough {1} remaining...", itm.portion_name_plural)) { screen.pbUpdate }
           else
-            screen.pbDisplay(_INTL("You used your last {1}.", itm.portion_name_plural)) { screen.pbUpdate }
+            screen.pbDisplay(_INTL("You used your last {1}.", itm.portion_name)) { screen.pbUpdate }
           end
           screen.pbChangeCursor(2)
         end
@@ -265,6 +265,10 @@ ItemHandlers::UseOnPokemon.addIf(:tera_shards,
 # Using this item will take up your entire turn, and cannot be used if orders have
 # already been given to a Pokemon.
 #-------------------------------------------------------------------------------
+
+#-------------------------------------------------------------------------------
+# Usability handler
+#-------------------------------------------------------------------------------
 ItemHandlers::CanUseInBattle.add(:RADIANTTERAJEWEL, proc { |item, pokemon, battler, move, firstAction, battle, scene, showMessages|
   side  = battler.idxOwnSide
   owner = battle.pbGetOwnerIndexFromBattlerIndex(battler.index)
@@ -275,18 +279,21 @@ ItemHandlers::CanUseInBattle.add(:RADIANTTERAJEWEL, proc { |item, pokemon, battl
   elsif !firstAction
     scene.pbDisplay(_INTL("You can't use this item while issuing orders at the same time!")) if showMessages
     next false
-  elsif battle.terastallize[side][owner] == -1 && $player.tera_charged?
+  elsif battle.terastallize[side][owner] == -1 || (side == 0 && owner == 0 && $player.tera_charged?)
     scene.pbDisplay(_INTL("You don't need to recharge your {1} yet!", orb)) if showMessages
     next false
   end
   next true
 })
 
+#-------------------------------------------------------------------------------
+# Effect handler
+#-------------------------------------------------------------------------------
 ItemHandlers::UseInBattle.add(:RADIANTTERAJEWEL, proc { |item, battler, battle|
   side    = battler.idxOwnSide
   owner   = battle.pbGetOwnerIndexFromBattlerIndex(battler.index)
   battle.terastallize[side][owner] = -1
-  $player.tera_charged = true
+  $player.tera_charged = true if side == 0 && owner == 0
   orb     = battle.pbGetTeraOrbName(battler.index)
   trainer = battle.pbGetOwnerName(battler.index)
   item    = GameData::Item.get(item).portion_name

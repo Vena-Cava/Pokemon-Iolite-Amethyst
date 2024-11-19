@@ -18,6 +18,16 @@ module GameData
       return ret
     end
 	
+    alias dynamax_get_property_for_PBS get_property_for_PBS
+    def get_property_for_PBS(key, writing_form = false)
+      ret = dynamax_get_property_for_PBS(key, writing_form)
+      case key
+      when "UngmaxForm"
+        ret = nil if !@gmax_move || ret == 0
+      end
+      return ret
+    end
+	
     #---------------------------------------------------------------------------
     # Aliased to initialize G-Max properties.
     #---------------------------------------------------------------------------
@@ -91,8 +101,8 @@ module GameData
         @dmax_front_sprite = hash[:dmax_front_sprite] || backup.dmax_front_sprite
         @dmax_shadow_x     = hash[:dmax_shadow_x]     || backup.dmax_shadow_x
       else
-        @dmax_back_sprite  = hash[:dmax_back_sprite]  || [0, 0]
-        @dmax_front_sprite = hash[:dmax_front_sprite] || [0, 0]
+        @dmax_back_sprite  = hash[:dmax_back_sprite]  || @back_sprite.clone
+        @dmax_front_sprite = hash[:dmax_front_sprite] || @front_sprite.clone
         @dmax_shadow_x     = hash[:dmax_shadow_x]     || 0
       end
     end
@@ -107,6 +117,20 @@ module GameData
         sprite.x += @dmax_front_sprite[0] * 2
         sprite.y += @dmax_front_sprite[1] * 2
       end
+    end
+	
+    alias dynamax_get_property_for_PBS get_property_for_PBS
+    def get_property_for_PBS(key)
+      ret = dynamax_get_property_for_PBS(key)
+      case key
+      when "DmaxBackSprite"
+        ret = nil if ret == @back_sprite
+      when "DmaxFrontSprite"
+        ret = nil if ret == @front_sprite
+      when "DmaxShadowX"
+        ret = nil if ret == 0
+      end
+      return ret
     end
   end
 end

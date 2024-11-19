@@ -15,58 +15,68 @@ class Sprite
     filename = (pbResolveBitmap(type_path)) ? type_path : path
     self.pattern = Bitmap.new(filename)
     self.pattern_opacity = 150
-    rand1 = rand(5) - 2
-    rand2 = rand(5) - 2
-    self.pattern_scroll_x += rand1 * 5
-    self.pattern_scroll_y += rand2 * 5
+    self.pattern_type = :tera
   end
 
   def set_tera_pattern(pokemon, override = false)
+    return if !pokemon.is_a?(Symbol) && pokemon&.shadowPokemon?
     return if !pokemon.is_a?(Symbol) && pokemon&.dynamax?
     return if !Settings::SHOW_TERA_OVERLAY
     if override || pokemon&.tera?
       apply_tera_pattern(pokemon.tera_type)
     else
       self.pattern = nil
+      self.pattern_type = nil
     end
   end
   
   def set_tera_icon_pattern
+    return if self.pokemon&.shadowPokemon?
     return if self.pokemon&.dynamax?
     return if !Settings::SHOW_TERA_OVERLAY
     if self.pokemon&.tera?
       apply_tera_pattern(self.pokemon.tera_type)
     else
       self.pattern = nil
+      self.pattern_type = nil
     end
   end
-end
-
-#-------------------------------------------------------------------------------
-# Pokemon sprites (Defined Pokemon)
-#-------------------------------------------------------------------------------
-class PokemonSprite < Sprite
-  alias tera_setPokemonBitmap setPokemonBitmap
-  def setPokemonBitmap(pokemon, back = false)
-    tera_setPokemonBitmap(pokemon, back)
-    self.set_tera_pattern(pokemon)
+  
+  def update_tera_pattern
+    return if self.pattern_type != :tera
+    if (System.uptime / 0.05).to_i % 2 == 0
+      case Settings::TERASTAL_PATTERN_MOVEMENT[0]
+      when :left    then self.pattern_scroll_x -= 1 
+      when :right   then self.pattern_scroll_x += 1
+      when :erratic then self.pattern_scroll_x += rand(-5..5) 
+      end
+      case Settings::TERASTAL_PATTERN_MOVEMENT[1]
+      when :up      then self.pattern_scroll_y -= 1 
+      when :down    then self.pattern_scroll_y += 1
+      when :erratic then self.pattern_scroll_y += rand(-5..5)
+      end
+    end
   end
-
-  alias tera_setPokemonBitmapSpecies setPokemonBitmapSpecies
-  def setPokemonBitmapSpecies(pokemon, species, back = false)
-    tera_setPokemonBitmapSpecies(pokemon, species, back)
-    self.set_tera_pattern(pokemon)
+  
+  #-----------------------------------------------------------------------------
+  # Compatibility with other plugins that add sprite patterns.
+  #-----------------------------------------------------------------------------
+  alias tera_set_plugin_pattern set_plugin_pattern
+  def set_plugin_pattern(pokemon, override = false)
+    tera_set_plugin_pattern(pokemon, override)
+    set_tera_pattern(pokemon, override)
   end
-end
-
-#-------------------------------------------------------------------------------
-# Icon sprites (Defined Pokemon)
-#-------------------------------------------------------------------------------
-class PokemonIconSprite < Sprite
-  alias :tera_pokemon= :pokemon=
-  def pokemon=(value)
-    self.tera_pokemon=(value)
-    self.set_tera_icon_pattern
+  
+  alias tera_set_plugin_icon_pattern set_plugin_icon_pattern
+  def set_plugin_icon_pattern
+    tera_set_plugin_icon_pattern
+    set_tera_icon_pattern
+  end
+  
+  alias tera_update_plugin_pattern update_plugin_pattern
+  def update_plugin_pattern
+    tera_update_plugin_pattern
+    update_tera_pattern
   end
 end
 
@@ -107,7 +117,7 @@ class PokemonSummary_Scene
     tera_drawPageOne
     return if !Settings::SUMMARY_TERA_TYPES
     overlay = @sprites["overlay"].bitmap
-    coords = (PluginManager.installed?("BW Summary Screen")) ? [122, 129] : [495, 143]
+    coords = (PluginManager.installed?("BW Summary Screen")) ? [122, 129] : [330, 143]
     pbDisplayTeraType(@pokemon, overlay, coords[0], coords[1])
   end
 end

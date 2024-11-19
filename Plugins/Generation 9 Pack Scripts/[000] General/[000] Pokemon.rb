@@ -41,12 +41,19 @@ end
 
 class Pokemon
   alias paldea_initialize initialize
-  def initialize(*args)
-    paldea_initialize(*args)
+  def initialize(species, level, owner = $player, withMoves = true, recheck_form = true)
+    paldea_initialize(species, level, owner, withMoves, recheck_form)
     @evo_move_count   = {}
     @evo_crest_count  = {}
     @evo_recoil_count = 0
     @evo_step_count   = 0
+    if @species == :BASCULEGION && recheck_form
+      f = MultipleForms.call("getFormOnCreation", self)
+      if f
+        self.form = f
+        reset_moves if withMoves
+      end
+    end
   end
   
   #-----------------------------------------------------------------------------
@@ -101,7 +108,7 @@ class Pokemon
   end
   
   def set_evo_crest_count(item, value)
-    init_crest_count(item)
+    init_evo_crest_count(item)
     @evo_crest_count[item] = value
   end
   
@@ -265,7 +272,7 @@ GameData::Evolution.register({
 # Tracks steps taken to trigger walking evolutions for the lead Pokemon.
 #-------------------------------------------------------------------------------
 EventHandlers.add(:on_player_step_taken, :evolution_steps, proc {
-  $player.first_able_pokemon.walking_evolution if $player.party_count > 0
+  $player.first_able_pokemon.walking_evolution if $player.party.length > 0 && $player.first_able_pokemon
 })
 
 #-------------------------------------------------------------------------------
@@ -455,6 +462,15 @@ MultipleForms.register(:PALAFIN, {
 })
 
 #-------------------------------------------------------------------------------
+# Tatsugiri - Multiple Forms.
+#-------------------------------------------------------------------------------
+MultipleForms.register(:TATSUGIRI, {
+  "getFormOnCreation" => proc { |pkmn|
+    next rand(3)
+  }
+})
+
+#-------------------------------------------------------------------------------
 # Poltchageist/Sinistcha - Unremarkable/Masterpiece forms.
 #-------------------------------------------------------------------------------
 MultipleForms.copy(:SINISTEA, :POLTEAGEIST, :POLTCHAGEIST, :SINISTCHA)
@@ -469,8 +485,11 @@ MultipleForms.register(:OGERPON, {
     next 3 if pkmn.hasItem?(:CORNERSTONEMASK)
     next 0
   },
-  "getFormOnEnteringBattle" => proc { |pkmn, wild|
-    next pkmn.form + 4 if pkmn.form <= 3
+  "getFormOnStartingBattle" => proc { |pkmn, wild|
+    next 5 if pkmn.hasItem?(:WELLSPRINGMASK)
+    next 6 if pkmn.hasItem?(:HEARTHFLAMEMASK)
+    next 7 if pkmn.hasItem?(:CORNERSTONEMASK)
+    next 4
   },
   "getFormOnLeavingBattle" => proc { |pkmn, battle, usedInBattle, endBattle|
     next pkmn.form - 4 if pkmn.form > 3 && endBattle

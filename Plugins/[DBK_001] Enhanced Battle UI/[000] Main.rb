@@ -8,6 +8,19 @@ module Settings
   BATTLE_UI_GRAPHICS_PATH = "Graphics/Plugins/Enhanced Battle UI/"
   
   #-----------------------------------------------------------------------------
+  # The display style for button prompts used to open UI menus that appear when selecting commands.
+  # 0 => No prompts shown
+  # 1 => Always show prompt
+  # 2 => Show prompt, but hide after 2 seconds.
+  #-----------------------------------------------------------------------------
+  UI_PROMPT_DISPLAY = 2
+  
+  #-----------------------------------------------------------------------------
+  # When true, Move UI background will reflect the color of the move type.
+  #-----------------------------------------------------------------------------
+  USE_MOVE_TYPE_BACKGROUNDS = true
+  
+  #-----------------------------------------------------------------------------
   # When false, type effectiveness display of moves will not be shown vs new 
   # species you are encountering for the first time. When true, type effectiveness 
   # will always be displayed, even for new species.
@@ -23,8 +36,8 @@ class Battle::Scene
   #-----------------------------------------------------------------------------
   # White text.
   #-----------------------------------------------------------------------------
-  BASE_LIGHT     = Color.new(232, 232, 232)
-  SHADOW_LIGHT   = Color.new(72, 72, 72)
+  BASE_LIGHT     = Color.new(248, 248, 248)
+  SHADOW_LIGHT   = Color.new(32, 32, 32)
   #-----------------------------------------------------------------------------
   # Black text.
   #-----------------------------------------------------------------------------
@@ -49,24 +62,13 @@ class Battle::Scene
     enhanced_pbInitSprites
     if !pbInSafari?
       @path = Settings::BATTLE_UI_GRAPHICS_PATH
-      #-------------------------------------------------------------------------
-      # Move info UI.
-      #-------------------------------------------------------------------------
-      @moveUIToggle = false
-      @sprites["moveinfo"] = BitmapSprite.new(Graphics.width, Graphics.height, @viewport)
-      @sprites["moveinfo"].z = 300
-      @sprites["moveinfo"].visible = @moveUIToggle
-      pbSetSmallFont(@sprites["moveinfo"].bitmap)
-      @moveUIOverlay = @sprites["moveinfo"].bitmap
-      #-------------------------------------------------------------------------
-      # Battle info UI.
-      #-------------------------------------------------------------------------
-      @infoUIToggle = false
-      @sprites["battleinfo"] = BitmapSprite.new(Graphics.width, Graphics.height, @viewport)
-      @sprites["battleinfo"].z = 300
-      @sprites["battleinfo"].visible = @infoUIToggle
-      pbSetSmallFont(@sprites["battleinfo"].bitmap)
-      @infoUIOverlay = @sprites["battleinfo"].bitmap
+      @enhancedUIToggle = nil
+      @sprites["enhancedUIPrompts"] = EnhancedUIPrompt.new(nil, @battle, COMMAND_BOX, @viewport)
+      @sprites["enhancedUI"] = BitmapSprite.new(Graphics.width, Graphics.height, @viewport)
+      @sprites["enhancedUI"].z = 300
+      @sprites["enhancedUI"].visible = false
+      pbSetSmallFont(@sprites["enhancedUI"].bitmap)
+      @enhancedUIOverlay = @sprites["enhancedUI"].bitmap
       @sprites["leftarrow"] = AnimatedSprite.new("Graphics/UI/left_arrow", 8, 40, 28, 2, @viewport)
       @sprites["leftarrow"].x = -2
       @sprites["leftarrow"].y = 71
@@ -79,9 +81,6 @@ class Battle::Scene
       @sprites["rightarrow"].z = 300
       @sprites["rightarrow"].play
       @sprites["rightarrow"].visible = false
-      #-------------------------------------------------------------------------
-      # Battler sprites.
-      #-------------------------------------------------------------------------
       @battle.allBattlers.each do |b|
         @sprites["info_icon#{b.index}"] = PokemonIconSprite.new(b.pokemon, @viewport)
         @sprites["info_icon#{b.index}"].setOffset(PictureOrigin::CENTER)
@@ -89,37 +88,112 @@ class Battle::Scene
         @sprites["info_icon#{b.index}"].z = 300
         pbAddSpriteOutline(["info_icon#{b.index}", @viewport, b.pokemon, PictureOrigin::CENTER])
       end
+      ballY = @sprites["messageBox"].y - 56
+      5.times do |i|
+        case i
+        when 0 then ballX = 64
+        when 1 then ballX = 146
+        when 2 then ballX = 256
+        when 3 then ballX = 366
+        when 4 then ballX = 448
+        end
+        @sprites["ball_icon#{i}"] = ItemIconSprite.new(ballX, ballY, nil, @viewport)
+        @sprites["ball_icon#{i}"].visible = false
+        @sprites["ball_icon#{i}"].z = 300
+        pbAddSpriteOutline(["ball_icon#{i}", @viewport, nil, PictureOrigin::CENTER])
+      end
     end
   end
   
   #-----------------------------------------------------------------------------
-  # Utilities for hiding UI elements.
+  # Utility for updating UI elements.
   #-----------------------------------------------------------------------------
-  def pbHideMoveInfo
-    return if pbInSafari?
-    @moveUIToggle = false
-    @sprites["moveinfo"].visible = false
-    @moveUIOverlay.clear
+  def pbUpdateInfoSprites
+    @sprites["leftarrow"].update
+    @sprites["rightarrow"].update
+    @sprites.each_key do |key|
+      next if !key.include?("info_icon")
+      next if @sprites[key].disposed?
+      @sprites[key].update
+    end
   end
   
-  def pbHideBattleInfo
+  #-----------------------------------------------------------------------------
+  # Utilities for displaying UI elements.
+  #-----------------------------------------------------------------------------
+  def pbHideInfoUI
     return if pbInSafari?
-    @infoUIToggle = false
-    @sprites["battleinfo"].visible = false
-    @infoUIOverlay.clear
-  end
-  
-  def pbHideInfoIcons
-    return if pbInSafari?
+    @enhancedUIToggle = nil
+    @sprites["enhancedUI"].visible = false
+    @enhancedUIOverlay.clear
     @battle.allBattlers.each do |b|
       @sprites["info_icon#{b.index}"].visible = false
     end
+    5.times { |i| pbUpdateBallIcon(i, nil, true) }
   end
   
-  def pbHideInfoUI
-    pbHideMoveInfo
-    pbHideBattleInfo
-    pbHideInfoIcons
+  def pbRefreshUIPrompt(idxBattler = nil, window = nil)
+    return if Settings::UI_PROMPT_DISPLAY == 0
+    return if !@sprites["enhancedUIPrompts"]
+    return if idxBattler && !@battle.pbOwnedByPlayer?(idxBattler)
+    @sprites["enhancedUIPrompts"].window = window if window
+    @sprites["enhancedUIPrompts"].battler = idxBattler if idxBattler
+    if @sprites["enhancedUIPrompts"].round >= @battle.turnCount
+      @sprites["enhancedUIPrompts"].x = 0
+      @sprites["enhancedUIPrompts"].visible = true
+    else
+      @sprites["enhancedUIPrompts"].round = @battle.turnCount
+      promptAnim = Animation::EnhancedUIPromptAppear.new(@sprites, @viewport)
+      loop do
+        promptAnim.update
+        pbUpdate
+        break if promptAnim.animDone?
+      end
+      promptAnim.dispose
+    end
+  end
+  
+  def pbToggleUIPrompt(toggle = false)
+    return if pbInSafari?
+    if toggle
+      return if !@sprites["commandWindow"].visible
+      pbRefreshUIPrompt
+    else
+      return if !@sprites["enhancedUIPrompts"].visible
+      promptAnim = Animation::EnhancedUIPromptDisappear.new(@sprites, @viewport)
+      loop do
+        promptAnim.update
+        pbUpdate
+        break if promptAnim.animDone?
+      end
+      promptAnim.dispose
+    end
+  end
+  
+  def pbShowingPrompt?
+    return false if pbInSafari?
+    return @sprites["enhancedUIPrompts"] && @sprites["enhancedUIPrompts"].visible
+  end
+  
+  def pbHideUIPrompt
+    return if !@sprites["enhancedUIPrompts"] || !@sprites["enhancedUIPrompts"].visible
+    @sprites["enhancedUIPrompts"].visible = false
+    @sprites["enhancedUIPrompts"].x = -164
+  end
+  
+  #-----------------------------------------------------------------------------
+  # Aliased for displaying UI prompts.
+  #-----------------------------------------------------------------------------
+  alias enhanced_pbShowWindow pbShowWindow
+  def pbShowWindow(windowType)
+    enhanced_pbShowWindow(windowType)
+    case windowType
+    when MESSAGE_BOX, TARGET_BOX
+      pbHideUIPrompt
+    when FIGHT_BOX, COMMAND_BOX
+      return if @sprites["fightWindow"].visible && @sprites["enhancedUI"].visible
+      pbRefreshUIPrompt(nil, windowType)
+    end
   end
   
   #-----------------------------------------------------------------------------
@@ -167,6 +241,152 @@ class Battle::Scene
   alias enhanced_pbFightMenu_End pbFightMenu_End
   def pbFightMenu_End(*args)
     pbHideInfoUI
+  end
+end
+
+#===============================================================================
+# Animations for sliding the UI prompts on screen.
+#===============================================================================
+class Battle::Scene::Animation::EnhancedUIPromptAppear < Battle::Scene::Animation
+  def createProcesses
+    return if !@sprites["enhancedUIPrompts"] || @sprites["enhancedUIPrompts"].visible
+    prompt = addSprite(@sprites["enhancedUIPrompts"])
+    prompt.setVisible(0, true)
+    prompt.moveDelta(0, 6, 164, 0)
+  end
+end
+
+class Battle::Scene::Animation::EnhancedUIPromptDisappear < Battle::Scene::Animation
+  def createProcesses
+    return if !@sprites["enhancedUIPrompts"] || !@sprites["enhancedUIPrompts"].visible
+    prompt = addSprite(@sprites["enhancedUIPrompts"])
+    prompt.moveDelta(0, 6, -164, 0)
+    prompt.setVisible(6, false)
+  end
+end
+
+#===============================================================================
+# UI prompt object.
+#===============================================================================
+class Battle::Scene::EnhancedUIPrompt < Sprite
+  attr_reader :round, :window, :battler
+  
+  TEXT_BASE_COLOR   = Color.new(248, 248, 248)
+  TEXT_SHADOW_COLOR = Color.new(0, 0, 0)
+  
+  def initialize(battler, battle, window, viewport = nil)
+    super(viewport) 
+    offset    = 0
+    @round    = -1
+    @window   = window
+    @battle   = battle
+    @battler  = battler
+    @bgBitmap = AnimatedBitmap.new(Settings::BATTLE_UI_GRAPHICS_PATH + "menu_prompts")
+    @bgSprite = Sprite.new(viewport)
+    @bgSprite.bitmap = @bgBitmap.bitmap
+    case @window
+    when Battle::Scene::FIGHT_BOX
+      @bgSprite.src_rect.y = @bgBitmap.height / 2
+      @bgSprite.src_rect.height = @bgBitmap.height / 2
+      offset = -46 if @battler && @battle.pbCanShift?(@battler)
+    else
+      @bgSprite.src_rect.y = 0
+      if @battle.pbCanUsePokeBall?(@battler)
+        @bgSprite.src_rect.height = @bgBitmap.height / 2
+      else
+        @bgSprite.src_rect.height = 28
+        offset = 24
+      end
+    end
+    @contents = Bitmap.new(@bgBitmap.width, @bgBitmap.height / 2)
+    self.bitmap = @contents
+    pbSetSmallFont(self.bitmap)
+    self.x       = -164
+    self.y       = 236 + offset
+    self.z       = 120
+    self.visible = false
+  end
+
+  def dispose
+    @bgSprite.dispose
+    @bgBitmap.dispose
+    super
+  end
+
+  def x=(value)
+    super
+    @bgSprite.x = value
+  end
+
+  def y=(value)
+    super
+    @bgSprite.y = value
+  end
+
+  def z=(value)
+    super
+    @bgSprite.z = value - 1
+  end
+
+  def opacity=(value)
+    super
+    @bgSprite.opacity = value
+  end
+
+  def visible=(value)
+    super
+    @bgSprite.visible = value
+  end
+
+  def color=(value)
+    super
+    @bgSprite.color = value
+  end
+  
+  def round=(value)
+    @round = value
+  end
+
+  def window=(value)
+    @window = value
+    refresh
+  end
+  
+  def battler=(value)
+    @battler = value
+    refresh
+  end
+
+  def refresh
+    return if !@battler
+    offset = 0
+    textPos = [
+      [_INTL(": A"), 68, 7,  :left, TEXT_BASE_COLOR, TEXT_SHADOW_COLOR, :outline],
+      [_INTL(": S"), 68, 31, :left, TEXT_BASE_COLOR, TEXT_SHADOW_COLOR, :outline]
+    ]
+    case @window
+    when Battle::Scene::FIGHT_BOX
+      @bgSprite.src_rect.y = @bgBitmap.height / 2
+      @bgSprite.src_rect.height = @bgBitmap.height / 2
+      offset = -46 if @battle.pbCanShift?(@battler)
+    else
+      @bgSprite.src_rect.y = 0
+      if @battle.pbCanUsePokeBall?(@battler)
+        @bgSprite.src_rect.height = @bgBitmap.height / 2
+      else
+        @bgSprite.src_rect.height = 28
+        textPos.delete_at(1)
+        offset = 24
+      end
+    end
+    self.y = 236 + offset
+    self.bitmap.clear
+    pbDrawTextPositions(self.bitmap, textPos)
+  end
+
+  def update
+    super
+    @bgSprite.update
   end
 end
 

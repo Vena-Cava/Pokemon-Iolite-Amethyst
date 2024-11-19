@@ -189,7 +189,7 @@ Category = Coastal Bear
 Pokedex = Having grown, Urslas prefer coastal waters, where they can hack at harder-scaled Pokémon. Their claws are honed to a razor edge.
 #-------------------------------
 [BARBEARIEN]
-Name = Barbearien	
+Name = Barbearien,
 Types = WATER,FIGHTING
 BaseStats = 105,100,90,75,75,85
 GenderRatio = FemaleOneEighth
@@ -354,6 +354,29 @@ Habitat = Sea
 Category = Boiler Home
 Pokedex = It possesses legs of enormous strength, enabling it to carry heavy slabs for many days, even when crossing arid land.
 WildItemUncommon = METALCOAT
+#-------------------------------
+[SOULBOTE]
+Name = Soulbote
+Types = WATER,GHOST
+BaseStats = 55,20,85,45,65,60
+GenderRatio = Genderless
+GrowthRate = Parabolic
+BaseExp = 62
+EVs = DEFENSE,1
+CatchRate = 120
+Happiness = 70
+Abilities = DRIZZLE,WEAKARMOR
+HiddenAbilities = CURSEDBODY
+Moves = 1,TACKLE,1,ABSORB,1,WATERGUN,8,NIGHTSHADE,12,WATERPULSE,16,RAINDANCE,20,HEX,24,BRINE,28,RECOVER,32,SHADOWBALL,34,THIEF,36,WHIRLPOOL,40,GIGADRAIN,44,HYDROPUMP,46,WAVECRASH,48,DESTINYBOND,50,WOODHAMMER,52,WATERSPOUT,56,POLTERGEIST
+EggGroups = Amorphous,Mineral
+HatchSteps = 5120
+Height = 4.3
+Weight = 40.0
+Color = Green
+Shape = Head
+Habitat = Sea
+Category = Sailboat
+Pokedex = Soulbote were once Sailors who became attached to their Vessel after they perished at sea, now they roam the oceans, searching for a crew.
 #-------------------------------
 [FROSSPRITE]
 Name = Frossprite

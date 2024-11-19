@@ -90,7 +90,8 @@ class Battle::Battler
       choice[2] = choice[2].convert_dynamax_move(self, @battle)
     end
     dynamax_pbUseMove(choice, specialUsage)
-    if @lastMoveUsed && GameData::Move.get(@lastMoveUsed).dynamaxMove?
+    move = GameData::Move.try_get(@lastMoveUsed)
+    if @lastMoveUsed && move && move.dynamaxMove?
       @powerMoveIndex = -1
     end
   end

@@ -7,8 +7,8 @@ class Pokemon
   #-----------------------------------------------------------------------------
   # HP utilities.
   #-----------------------------------------------------------------------------
-  def real_hp;      return @hp / hp_boost;      end
-  def real_totalhp; return @totalhp / hp_boost; end
+  def real_hp;      return (@hp / hp_boost).floor;      end
+  def real_totalhp; return (@totalhp / hp_boost).floor; end
   
   #-----------------------------------------------------------------------------
   # Immunities.
@@ -30,6 +30,7 @@ class Pokemon
   
   def calcHP(base, level, iv, ev)
     return 1 if base == 1
+    iv = ev = 0 if Settings::DISABLE_IVS_AND_EVS
     return ((((base * 2 + iv + (ev / 4)) * level / 100).floor + level + 10) * hp_boost).ceil
   end
 end
@@ -88,6 +89,9 @@ class Battle::Battler
   # Defines whether the battler is considered a raid boss.
   #-----------------------------------------------------------------------------
   def isRaidBoss?
+    return false if self.idxOwnSide == 0
+    return false if @battle.pbSideBattlerCount(@index) > 1
+    return false if fainted? || @battle.decision > 0
     return @pokemon.immunities.include?(:RAIDBOSS)
   end
   
@@ -209,7 +213,7 @@ class Battle::Battler
   def takesIndirectDamage?(showMsg = false)
     return false if fainted?
     if @pokemon.immunities.include?(:INDIRECT)
-      @battle.pbDisplay("{1} is completely immune to indirect damage!", pbThis) if showMsg
+      @battle.pbDisplay(_INTL("{1} is completely immune to indirect damage!", pbThis)) if showMsg
       return false
     end
     return dx_takesIndirectDamage?(showMsg)
@@ -270,7 +274,7 @@ class Battle
   #-----------------------------------------------------------------------------
   # Returns true if this battle is a raid battle.
   #-----------------------------------------------------------------------------
-  def pbRaidBattle?
+  def raidBattle?
     allOtherSideBattlers.each { |b| return true if b.isRaidBoss? }
     return false
   end

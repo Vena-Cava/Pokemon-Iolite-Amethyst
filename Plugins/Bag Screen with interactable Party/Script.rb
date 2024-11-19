@@ -595,12 +595,21 @@ class PokemonBag_Scene
     @pocketbitmap = AnimatedBitmap.new(_INTL("Graphics/UI/Bag Screen with Party/icon_pocket"))
     
     @sprites = {}
-    @sprites["background"] = IconSprite.new(0, 0, @viewport)
-    @sprites["background"].setBitmap("Graphics/UI/Bag Screen with Party/bg")
-    @sprites["gradient"] = IconSprite.new(0, 0, @viewport)
-    @sprites["gradient"].setBitmap("Graphics/UI/Bag Screen with Party/grad")
-    @sprites["panorama"] = IconSprite.new(0, 0, @viewport)
-    @sprites["panorama"].setBitmap("Graphics/UI/Bag Screen with Party/panorama")
+	if IASummary::IAVERSION == 1 # Is Pokémon Amethyst
+      @sprites["background"] = IconSprite.new(0, 0, @viewport)
+      @sprites["background"].setBitmap("Graphics/UI/Bag Screen with Party/bg_am")
+      @sprites["gradient"] = IconSprite.new(0, 0, @viewport)
+      @sprites["gradient"].setBitmap("Graphics/UI/Bag Screen with Party/grad_am")
+      @sprites["panorama"] = IconSprite.new(0, 0, @viewport)
+      @sprites["panorama"].setBitmap("Graphics/UI/Bag Screen with Party/panorama_am")
+	elsif IASummary::IAVERSION == 2 # Is Pokémon Iolite
+      @sprites["background"] = IconSprite.new(0, 0, @viewport)
+      @sprites["background"].setBitmap("Graphics/UI/Bag Screen with Party/bg_io")
+      @sprites["gradient"] = IconSprite.new(0, 0, @viewport)
+      @sprites["gradient"].setBitmap("Graphics/UI/Bag Screen with Party/grad_io")
+      @sprites["panorama"] = IconSprite.new(0, 0, @viewport)
+      @sprites["panorama"].setBitmap("Graphics/UI/Bag Screen with Party/panorama_io")
+	end
     
     if BagScreenWiInParty::BGSTYLE == 1 # BW Style
       if $player.female?

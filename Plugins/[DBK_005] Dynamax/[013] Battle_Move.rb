@@ -84,7 +84,7 @@ class Battle::Move
         pkmn = battler.pokemon
         gmax_form = pkmn.form
       else
-        pkmn = battler.effects[PBEffects::TransformPokemon] || battler.pokemon
+        pkmn = battler.visiblePokemon
         gmax_form = pkmn.getGmaxForm
       end
       gmax_move = GameData::Species.get_species_form(pkmn.species, gmax_form).gmax_move
@@ -107,14 +107,14 @@ class Battle::Move
       end
       if newtype != @type && GameData::Type.exists?(newtype)
         if battler.gmax_factor?
-          pkmn = battler.effects[PBEffects::TransformPokemon] || battler.pokemon
+          pkmn = battler.visiblePokemon
           dynamove = pkmn.species_data.gmax_move
           try_move = GameData::Move.try_get(dynamove)
           dynamove = try_move.id if try_move && newtype == try_move.type
         end
         if !dynamove
           dynahash = GameData::Move.get_generic_dynamax_moves
-          dynamove = maxhash[newtype]
+          dynamove = dynahash[newtype]
         end
         idxMove = battler.powerMoveIndex
         return self.make_dynamax_move(dynamove, battle, idxMove)

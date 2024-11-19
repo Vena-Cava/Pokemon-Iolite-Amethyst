@@ -15,7 +15,7 @@ class Battle::AI
     return false if !@battle.pbCanDynamax?(@user.index)
     return true if @user.wild?
     if @trainer.has_skill_flag?("ReserveLastPokemon")
-      if @battle.pbAbleCount(@user.index) == 1
+      if @battle.pbTeamAbleNonActiveCount(@user.index) == 0
         PBDebug.log_ai("#{@user.name} will Dynamax")
         return true
       end

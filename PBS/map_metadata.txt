@@ -271,7 +271,7 @@ Name = Pinella Fields
 Outdoor = true
 ShowArea = true
 MapPosition = 1,8,11
-BattleBack = field
+BattleBack = wheat
 #-------------------------------
 [049]   # Rock Cave 1F
 Name = Route 7
@@ -509,3 +509,8 @@ MapPosition = 1,8,10
 SnapEdges = true
 BattleBack = forest
 Environment = ForestGrass
+#-------------------------------
+[092]   # Lassula City
+Name = Lassula City
+Outdoor = true
+ShowArea = true
