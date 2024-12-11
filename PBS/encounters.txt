@@ -52,8 +52,8 @@ LandNight,21
 Land,21
     50,RATTATA,12,15
     30,POOCHYENA,11,15
-    10,SHINX,10,12
     10,SHINX,10,11
+    10,SHINX,10,12
 Water,2
     60,MAGIKARP,7,10
     30,GOLDEEN,11,14
@@ -82,20 +82,13 @@ HeadbuttHigh
 PokeRadar,10
     100,STANTLER,14
 #-------------------------------
-[022] # Pinella Town
-Land,21
-    33,ESPURR,2,4
-    33,LILLIPUP,2,4
-    33,TANDEMAUS,3,5
-    1,QUAXLY,5
-#-------------------------------
 [028] # Natural Park
 Land,21
     20,CATERPIE,10
     20,SUNKERN,12
     20,WEEDLE,10
-    15,PIDGEY,10,14
     15,PIDGEY,12,14
+    15,PIDGEY,10,14
     5,KAKUNA,10
     5,METAPOD,10
 LandNight,21
@@ -199,35 +192,21 @@ RockSmash,50
     90,NOSEPASS,13,14
     10,GEODUDE,12,15
 #-------------------------------
-[048] # Pinella Fields
-LandDay,21
-    25,CHICKATOO,2,3
-    25,CRIVOLE,2,3
-    15,CHICKATOO,3,4
-    15,CRIVOLE,3,4
-    20,ROLLVA,2,3
-LandNight,21
-    25,CHICKATOO,2,3
-    25,QUILTOX,2,3
-    15,CHICKATOO,3,4
-    15,QUILTOX,3,4
-    20,ROLLVA,2,3
-#-------------------------------
 [049] # Rock Cave 1F
 Cave,5
-    20,MAGNETON,14,16
     20,MAGNETON,14,17
-    20,NOSEPASS,14,15
+    20,MAGNETON,14,16
     20,NOSEPASS,13,14
+    20,NOSEPASS,14,15
     10,GEODUDE,13,15
     10,MAWILE,14,16
 #-------------------------------
 [050] # Rock Cave B1F
 Cave,5
-    20,MAGNETON,14,16
     20,MAGNETON,14,17
-    20,NOSEPASS,14,15
+    20,MAGNETON,14,16
     20,NOSEPASS,13,14
+    20,NOSEPASS,14,15
     10,BURMY,14,16
     10,GEODUDE,13,15
 #-------------------------------
@@ -255,8 +234,8 @@ Land,21
     20,RHYHORN,16,18
     10,AIPOM,14,17
     10,GIRAFARIG,16,17
-    10,VENONAT,15,17
     10,VENONAT,15,18
+    10,VENONAT,15,17
     5,HERACROSS,15,17
     5,TAUROS,15,16
     4,PINSIR,16
@@ -287,13 +266,13 @@ Land,21
     20,MAREEP,16,18
     20,ODDISH,15,17
     13,BONSLY,14,16
-    10,DITTO,15,17
     10,DITTO,16,18
+    10,DITTO,15,17
     10,LOTAD,15,18
     10,LOTAD,15,17
     5,BONSLY,14,17
-    1,BONSLY,15,16
     1,BONSLY,15
+    1,BONSLY,15,16
 Water,2
     60,TENTACOOL,14,19
     30,MANTYKE,15,16
@@ -330,36 +309,3 @@ Land,21
     10,PIKACHU,11,14
     10,SANDSHREW_1,11,14
     10,VULPIX_1,11,14
-#-------------------------------
-[076] # Tulpha Grove
-Land,21
-    25,CATERPIE,2,3
-    25,WEEDLE,2,3
-    15,FLETCHLING,4
-    10,KAKUNA,3,4
-    10,PIKACHU,4,5
-    5,PANPOUR,4,5
-    5,PANSAGE,4,5
-    5,PANSEAR,4,5
-#-------------------------------
-[043] # Tulpha Grove
-Land,21
-    25,CATERPIE,2,3
-    25,WEEDLE,2,3
-    15,FLETCHLING,4
-    10,KAKUNA,3,4
-    10,PIKACHU,4,5
-    5,PANPOUR,4,5
-    5,PANSAGE,4,5
-    5,PANSEAR,4,5
-#-------------------------------
-[078] # Tulphoise City
-Land,21
-    75,SMOLIV,3,4
-    25,NACLI,4,5
-#-------------------------------
-[087] # Fenne Ruins
-Land,21
-    20,ARACANVAS,5,6
-    20,BUNCHKIN,5,6
-    5,FENNEKIN,6,7

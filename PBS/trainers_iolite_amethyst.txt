@@ -41,39 +41,39 @@ Pokemon = CYCLOPTO,5
 #-------------------------------
 [POKEMONTRAINER_Micah,Micah,3]
 LoseText = ...
-Pokemon = ELEEFENT,10
+Pokemon = ELEEFENT,7
 #-------------------------------
 [POKEMONTRAINER_Micah,Micah,4]
 LoseText = ...
-Pokemon = QUETZI,10
+Pokemon = QUETZI,7
 #-------------------------------
 [POKEMONTRAINER_Micah,Micah,5]
 LoseText = ...
-Pokemon = CYCLOPTO,10
+Pokemon = CYCLOPTO,7
 #-------------------------------
 [POKEMONTRAINER_Amber,Amber,3]
 LoseText = ...
-Pokemon = ELEEFENT,10
+Pokemon = ELEEFENT,7
 #-------------------------------
 [POKEMONTRAINER_Amber,Amber,4]
 LoseText = ...
-Pokemon = QUETZI,10
+Pokemon = QUETZI,7
 #-------------------------------
 [POKEMONTRAINER_Amber,Amber,5]
 LoseText = ...
-Pokemon = CYCLOPTO,10
+Pokemon = CYCLOPTO,7
 #-------------------------------
 [POKEMONTRAINER_Alex,Alex,3]
 LoseText = ...
-Pokemon = ELEEFENT,10
+Pokemon = ELEEFENT,7
 #-------------------------------
 [POKEMONTRAINER_Alex,Alex,4]
 LoseText = ...
-Pokemon = QUETZI,10
+Pokemon = QUETZI,7
 #-------------------------------
 [POKEMONTRAINER_Alex,Alex,5]
 LoseText = ...
-Pokemon = CYCLOPTO,10
+Pokemon = CYCLOPTO,7
 #-------------------------------
 [BUGCATCHER,Anthony]
 LoseText = What's wrong with my bugs?
@@ -96,6 +96,27 @@ Pokemon = FENNEKIN,7
 LoseText = ...
 Pokemon = NACLI,7
 Pokemon = DUSPUPA,8
+#-------------------------------
+[ROUGHNECK2,Tony]
+LoseText = My brutha's gonna take you down!
+Pokemon = DIVOGGLE,12
+#-------------------------------
+[ROUGHNECK2,Toney]
+LoseText = 'Big' Sis' gonna show you what's what!
+Pokemon = PORCUPOX,12
+#-------------------------------
+[ROUGHNECK2,Tony,1]
+LoseText = Not even with my brutha's help...
+Pokemon = DIVOGGLE,12
+#-------------------------------
+[ROUGHNECK2,Toney,1]
+LoseText = Sorry Sis, we couldn't do it...
+Pokemon = PORCUPOX,12
+#-------------------------------
+[SCHOOLKID_F2,Toni]
+LoseText = Aw Raticates! Fiiiiine, I guess you beat my gym...
+Pokemon = VINAPSE,13
+Pokemon = CHROMARACNA,15
 #-------------------------------
 [FISHERMAN,Sedric]
 Items = POTION

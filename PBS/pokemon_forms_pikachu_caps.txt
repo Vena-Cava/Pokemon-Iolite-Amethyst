@@ -2,7 +2,8 @@
 [PIKACHU,8]
 FormName = Original Cap
 EggGroups = Undiscovered
-Pokedex = The cap this Pikachu wears is filled with memories of this Pokémon and its partner traveling across lots of different regions together.
+IoPokedex = The cap this Pikachu wears is filled with memories of this Pokémon and its partner traveling across lots of different regions together.
+AmPokedex = This Pikachu wears its partner's cap—proof of the strong bond Pikachu and its partner formed during adventures across many different regions.
 Generation = 7
 Flags = SOSForm_0,CannotDynamax,CannotTerastallize
 Evolutions = RAICHU,None
@@ -10,7 +11,8 @@ Evolutions = RAICHU,None
 [PIKACHU,9]
 FormName = Hoenn Cap
 EggGroups = Undiscovered
-Pokedex = The cap this Pikachu wears is filled with memories of this Pokémon and its partner traveling across the Hoenn region together.
+IoPokedex = The cap this Pikachu wears is filled with memories of this Pokémon and its partner traveling across the Hoenn region together.
+AmPokedex = This Pikachu wears its partner's cap—proof of the strong bond Pikachu and its partner formed during adventures across the Hoenn region.
 Generation = 7
 Flags = SOSForm_0,CannotDynamax,CannotTerastallize
 Evolutions = RAICHU,None
@@ -18,7 +20,8 @@ Evolutions = RAICHU,None
 [PIKACHU,10]
 FormName = Sinnoh Cap
 EggGroups = Undiscovered
-Pokedex = The cap this Pikachu wears is filled with memories of this Pokémon and its partner traveling across the Sinnoh region together.
+IoPokedex = The cap this Pikachu wears is filled with memories of this Pokémon and its partner traveling across the Sinnoh region together.
+AmPokedex = This Pikachu wears its partner's cap—proof of the strong bond Pikachu and its partner formed during adventures across the Sinnoh region.
 Generation = 7
 Flags = SOSForm_0,CannotDynamax,CannotTerastallize
 Evolutions = RAICHU,None
@@ -26,7 +29,8 @@ Evolutions = RAICHU,None
 [PIKACHU,11]
 FormName = Unova Cap
 EggGroups = Undiscovered
-Pokedex = The cap this Pikachu wears is filled with memories of this Pokémon and its partner traveling across the Unova region together.
+IoPokedex = The cap this Pikachu wears is filled with memories of this Pokémon and its partner traveling across the Unova region together.
+AmPokedex = This Pikachu wears its partner's cap—proof of the strong bond Pikachu and its partner formed during adventures across the Unova region.
 Generation = 7
 Flags = SOSForm_0,CannotDynamax,CannotTerastallize
 Evolutions = RAICHU,None
@@ -34,7 +38,8 @@ Evolutions = RAICHU,None
 [PIKACHU,12]
 FormName = Kalos Cap
 EggGroups = Undiscovered
-Pokedex = The cap this Pikachu wears is filled with memories of this Pokémon and its partner traveling across the Kalos region together.
+IoPokedex = The cap this Pikachu wears is filled with memories of this Pokémon and its partner traveling across the Kalos region together.
+AmPokedex = This Pikachu wears its partner's cap—proof of the strong bond Pikachu and its partner formed during adventures across the Kalos region.
 Generation = 7
 Flags = SOSForm_0,CannotDynamax,CannotTerastallize
 Evolutions = RAICHU,None
@@ -42,7 +47,8 @@ Evolutions = RAICHU,None
 [PIKACHU,13]
 FormName = Alola Cap
 EggGroups = Undiscovered
-Pokedex = The cap this Pikachu wears is filled with memories of this Pokémon and its partner traveling across the Alola region together.
+IoPokedex = The cap this Pikachu wears is filled with memories of this Pokémon and its partner traveling across the Alola region together.
+AmPokedex = This Pikachu wears its partner's cap—proof of the strong bond Pikachu and its partner formed during adventures across the Alola region.
 Generation = 7
 Flags = SOSForm_0,CannotDynamax,CannotTerastallize
 Evolutions = RAICHU,None
@@ -50,7 +56,8 @@ Evolutions = RAICHU,None
 [PIKACHU,14]
 FormName = Partner Cap
 EggGroups = Undiscovered
-Pokedex = The cap this Pikachu wears is filled with memories of this Pokémon traveling together with its partner, whom it met in a fateful encounter.
+IoPokedex = The cap this Pikachu wears is filled with memories of this Pokémon traveling together with its partner, whom it met in a fateful encounter.
+AmPokedex = This Pikachu wears its partner's cap—proof of the strong bond Pikachu and its partner formed as the two overcame many hardships together.
 Generation = 8
 Flags = SOSForm_0,CannotDynamax,CannotTerastallize
 Evolutions = RAICHU,None
@@ -58,7 +65,8 @@ Evolutions = RAICHU,None
 [PIKACHU,15]
 FormName = World Cap
 EggGroups = Undiscovered
-Pokedex = The cap this Pikachu wears is filled with memories of this Pokémon and its partner traveling across the world together.
+IoPokedex = The cap this Pikachu wears is filled with memories of this Pokémon and its partner traveling across the world together.
+AmPokedex = This Pikachu wears its partner's cap—proof of the strong bond Pikachu and its partner formed during adventures across the world.
 Generation = 8
 Flags = SOSForm_0,CannotDynamax,CannotTerastallize
 Evolutions = RAICHU,None

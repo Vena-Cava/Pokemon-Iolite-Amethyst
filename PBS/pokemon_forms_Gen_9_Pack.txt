@@ -356,6 +356,8 @@ Category = Hero
 [MAUSHOLD,1]
 FormName = Family of Three
 Weight = 2.3
+IoPokedex = They build huge nests with many rooms that are used for different purposes, such as eating and sleeping.
+AmPokedex = The little one just appeared one day. They all live together like a family, but the relationship between the three is still unclear.
 #-------------------------------
 [REVAVROOM,1]
 Types = FIRE

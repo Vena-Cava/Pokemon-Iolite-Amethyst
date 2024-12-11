@@ -21,7 +21,8 @@ Color = Green
 Shape = Quadruped
 Habitat = Grassland
 Category = Forest Fawn
-Pokedex = Oh deerie me
+IoPokedex = A spritely young fawn that collects and trades flowers. It likes to communicate with plants by gently rubbing its nose to them.
+AmPokedex = Florawn have a natural desire to bond with other creatures, and if they love another Pokémon or trainer enough, they may gift a flower.
 Evolutions = FLAURISH,Level,16
 #-------------------------------
 [FLAURISH]
@@ -45,7 +46,8 @@ Color = Green
 Shape = Quadruped
 Habitat = Grassland
 Category = Forest Deer
-Pokedex = elmer moment
+IoPokedex = Flaurish like to guard their home forests. Since their antlers are still developing to their full size, they prefer to channel magical energy through them.
+AmPokedex = Flaurish and its elder counterpart grow their antlers inside-out instead of outside-in, so they devolved the need to shed velvet.
 Evolutions = SYLVSTAG,Level,36
 #-------------------------------
 [SYLVSTAG]
@@ -69,7 +71,8 @@ Color = Green
 Shape = Quadruped
 Habitat = Grassland
 Category = Forest Stag
-Pokedex = elmer moment
+IoPokedex = With fully grown antlers, Sylvstag are premier defenders of the woods. Their velvet has a dense matted moss that has prime conditions for flowers to thrive.	
+AmPokedex = It's a surprise that Sylvstag retain their antlers year-round. It's said that drinking vessels made from such contain a little bit of forest magic.
 #-------------------------------
 [SMOKIDD]
 Name = Smokidd
@@ -92,7 +95,8 @@ Color = Red
 Shape = Quadruped
 Habitat = Grassland
 Category = Smokey Goat
-Pokedex = A kid with a metallic coating of fluff. Like a sweater, it builds up nightmarish amounts of static.
+IoPokedex = A kid with a metallic coating of fluff. Like a sweater, it builds up nightmarish amounts of static.
+AmPokedex = The ignition of its tail is caused by the static finding the easiest point to leave the body. Fortunately, they're immune to their own flames.
 Evolutions = SMOULDOE,Level,16
 #-------------------------------
 [SMOULDOE]
@@ -116,7 +120,8 @@ Color = Red
 Shape = Quadruped
 Habitat = Grassland
 Category = Smokey Goat
-Pokedex = The static within its coat is causing the wool to form jagged points. The electricity is picking iron out of the dirt, causing it to grow more wool.
+IoPokedex = The static within its coat is causing the wool to form jagged points. The electricity is picking iron out of the dirt, causing it to grow more wool.
+AmPokedex = Smouldoe have a frequent issue of being magnetised to barbed wire, so their enclosures are generally made of stone.
 Evolutions = FERRVORAM,Level,36
 #-------------------------------
 [FERRVORAM]
@@ -140,7 +145,8 @@ Color = Red
 Shape = Quadruped
 Habitat = Grassland
 Category = Smokey Goat
-Pokedex = Its body is actively sparking with the sheer amount of static within its coat. It can short out electronics.
+IoPokedex = Its body is actively sparking with the sheer amount of static within its coat. It can short out electronics.
+AmPokedex = Once rid of its static, Ferrvoram wool is commonly sold for cleaning dishes or polishing.
 #-------------------------------
 [BRAKKUB]
 Name = Brakkub
@@ -163,7 +169,8 @@ Color = Blue
 Shape = BipedalTail
 Habitat = WatersEdge
 Category = River Bear
-Pokedex = Living near streams, Brakkub practice catching Palmon. Their claws aren't sharp yet, so they often lose their catch.
+IoPokedex = Living near streams, Brakkub practice catching Palmon. Their claws aren't sharp yet, so they often lose their catch.
+AmPokedex = Due to being in the river frequently, their limbs develop a soft, muddy coating. They use this as a mild layer of protection.
 #-------------------------------
 [URSLAS]
 Name = Urslas
@@ -186,7 +193,8 @@ Color = Blue
 Shape = BipedalTail
 Habitat = WatersEdge
 Category = Coastal Bear
-Pokedex = Having grown, Urslas prefer coastal waters, where they can hack at harder-scaled Pokémon. Their claws are honed to a razor edge.
+IoPokedex = Having grown, Urslas prefer coastal waters, where they can hack at harder-scaled Pokémon. Their claws are honed to a razor edge.
+AmPokedex = They started wearing helmets after humans began pillaging one another. They use their newfound armour to roughhouse with each other even harder.
 #-------------------------------
 [BARBEARIEN]
 Name = Barbearien,
@@ -209,7 +217,8 @@ Color = Blue
 Shape = BipedalTail
 Habitat = WatersEdge
 Category = Sea Bear
-Pokedex = Keeping their claws concealed, they choose to wield axes instead. They use them to guard Brakkub whilst teaching them how to fish.
+IoPokedex = Keeping their claws concealed, they choose to wield axes instead. They use them to guard Brakkub whilst teaching them how to fish.
+AmPokedex = Masters of shock tactics, Barbearien are not afraid to charge recklessly and roar loudly. Once their foes have scattered, they search for food.
 #-------------------------------
 [STACKEM]
 Name = Stackem
@@ -231,7 +240,8 @@ Color = Red
 Shape = Head
 Habitat = Urban
 Category = Toy Bricks
-Pokedex = ow my feetsies
+IoPokedex = ow my feetsies
+AmPokedex = ow my feetsies
 Evolutions = STACKEMUP,Level,25
 #-------------------------------
 [STACKEMUP]
@@ -255,7 +265,8 @@ Color = Red
 Shape = Head
 Habitat = Urban
 Category = Toy Bricks
-Pokedex = ow my feetsies
+IoPokedex = ow my feetsies
+AmPokedex = ow my feetsies
 Evolutions = STACKEMTOL,Level,45
 #-------------------------------
 [STACKEMTOL]
@@ -279,7 +290,8 @@ Color = Red
 Shape = Head
 Habitat = Urban
 Category = Toy Bricks
-Pokedex = ow my feetsies
+IoPokedex = ow my feetsies
+AmPokedex = ow my feetsies
 #-------------------------------
 [RUSAGIRU]
 Name = Rusagiru
@@ -302,7 +314,8 @@ Color = White
 Shape = Bipedal
 Habitat = Grassland
 Category = Plasma Bunny
-Pokedex = Rusagiru store both electricity and heat in the sacs in its cheeks, it converts the energy into pure plasma, which is expells in the form of a tail.
+IoPokedex = Thick fur and a blazing plasma tail mean that Rusagiru is comfortable in all corners or Nordra. All the energy they hold within comes out in playful and mischievous tendencies. They live in tightly knit groups that work together to keep their dens warm.
+AmPokedex = Rusagiru store both electricity and heat in the sacs in its cheeks, it converts the energy into pure plasma, which is expels in the form of a tail.
 #-------------------------------
 [DWETTLE]
 Name = Dwettle
@@ -326,7 +339,8 @@ Color = Blue
 Shape = Multiped
 Habitat = WatersEdge
 Category = Kettle Inn
-Pokedex = It makes a hole in a suitable rock. If that rock breaks, the Pokémon remains agitated until it locates a replacement.
+IoPokedex = Dwettle make their homes out of metal containers lost in shipwrecks. Long ago, they used to compete with Goomy.
+AmPokedex = Though it looks like Dwebble, Dwettle is an entirely different species. Its metal home often rusts, requiring a replacement.
 WildItemUncommon = METALCOAT
 Evolutions = RUSTLE,Level,34
 #-------------------------------
@@ -352,7 +366,8 @@ Color = Red
 Shape = Multiped
 Habitat = Sea
 Category = Boiler Home
-Pokedex = It possesses legs of enormous strength, enabling it to carry heavy slabs for many days, even when crossing arid land.
+IoPokedex = It possesses legs of enormous strength, enabling it to carry heavy slabs for many days, even when crossing arid land.
+AmPokedex = A variety of cephalopod Pokémon, Rustle was once considered to be a regional form of Crustle.
 WildItemUncommon = METALCOAT
 #-------------------------------
 [SOULBOTE]
@@ -376,7 +391,8 @@ Color = Green
 Shape = Head
 Habitat = Sea
 Category = Sailboat
-Pokedex = Soulbote were once Sailors who became attached to their Vessel after they perished at sea, now they roam the oceans, searching for a crew.
+IoPokedex = Soulbote were once Sailors who became attached to their Vessel after they perished at sea, now they roam the oceans, searching for a crew.
+AmPokedex = ???
 #-------------------------------
 [FROSSPRITE]
 Name = Frossprite
@@ -398,7 +414,8 @@ Color = White
 Shape = Bipedal
 Habitat = Mountain
 Category = Snow Fairy
-Pokedex = Heehee
+IoPokedex = Frossprite are mischievous and playful, often freezing the food of hibernating Pokémon. Their magic prevents the food from thawing.
+AmPokedex = ???
 Evolutions = GOBLICE,Level,35
 #-------------------------------
 [GOBLICE]
@@ -421,7 +438,8 @@ Color = White
 Shape = Bipedal
 Habitat = Mountain
 Category = Snow Goblin
-Pokedex = Heehee
+IoPokedex = Goblice live in groups, often hunting for food together. The largest among them are given the position of leader.
+AmPokedex = They like to play pranks on eachother. These pranks may seem harmful from a Human's point of view, but Goblice always find them funny in the end.
 Evolutions = OGLACE,Level,54
 #-------------------------------
 [OGLACE]
@@ -444,7 +462,8 @@ Color = White
 Shape = Bipedal
 Habitat = Mountain
 Category = Glacier Ogre
-Pokedex = Heehee
+IoPokedex = Oglace are rarely seen without their Goblice entourage. They often lead the group into towns to ransack them of food.
+AmPokedex = These bests were feared in the dark ages, as any sword would shatter upon contact with their ice cold skin. If they meet another Oglace, only one of them will be walking away.
 #-------------------------------
 [JOTUNFLAMME]
 Name = Jotunflamme
@@ -466,7 +485,8 @@ Color = Red
 Shape = Bipedal
 Habitat = Mountain
 Category = Fire Giant
-Pokedex = Jotun of Flames
+IoPokedex = Jotunflamme's flames have been burning for millennia, fueling its never-ending rage. The people of Nordra believe its fiery wrath is the cause of the region's volcanic activity.
+AmPokedex = Legends speak of Jotunflamme, a giant of flame and fury. Researchers are baffled by how it has maintained its intense heat for so long without ever extinguishing.
 #-------------------------------
 [JOTUNGLASS]
 Name = Jotunglass
@@ -488,7 +508,8 @@ Color = Blue
 Shape = Bipedal
 Habitat = Mountain
 Category = Ice Giant
-Pokedex = Jotun of Frost
+IoPokedex = Jotunglass is said to be the embodiment of the harsh winters of Nordra. Its icy presence is believed to bring about blizzards that blanket the region in snow and ice.
+AmPokedex = Jotunglass' body is as cold as the glaciers of Nordra. Scientists from warmer regions have observed that its icy aura can freeze anything within moments, making it one of the most feared Pokémon in the north.
 #-------------------------------
 [JOTUNSTEIN]
 Name = Jotunstein
@@ -510,7 +531,8 @@ Color = Brown
 Shape = Bipedal
 Habitat = Mountain
 Category = Rock Giant
-Pokedex = Jotun of Earth
+IoPokedex = Jotunstein's presence is as steadfast as the mountains of Nordra. The locals believe it to be the protector of the land, guarding the region's sacred sites from any who would do them harm.
+AmPokedex = Jotunstein's massive form and rock-solid resolve have left many outside of Nordra in awe. Its ability to blend seamlessly into the mountains makes it nearly impossible to find unless it wants to be seen.
 #-------------------------------
 [RASERIOL]
 Name = Raseriol
@@ -532,5 +554,6 @@ Color = Green
 Shape = Quadruped
 Habitat = Forest
 Category = Evergreen
-Pokedex = ???
+IoPokedex = Some believe that Raseriol is the reason that all the plants in Nordra have not yet succumbed to the cold. It has a deep-seeded hatred for Humanity.
+AmPokedex = This Pokémon is solely responsible for the plantlife in the Nordra Region. Forests can sprout via its command.
 #-------------------------------

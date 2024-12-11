@@ -17,8 +17,8 @@ TrainerType = POKEMONTRAINER_Red
 WalkCharset = IA Characters/trAProtag_BoyWalk
 RunCharset = IA Characters/trAProtag_BoyRun
 CycleCharset = B2W2 Protagonists/trProtag_BoyBike
-SurfCharset = B2W2 Protagonists/trProtag_BoySurf
-DiveCharset = B2W2 Protagonists/trProtag_BoySurf
+SurfCharset = IA Characters/trAProtag_BoySurf
+DiveCharset = IA Characters/trAProtag_BoySurf
 FishCharset = B2W2 Protagonists/trProtag_BoyFish
 SurfFishCharset = B2W2 Protagonists/trProtag_BoyFish
 #-------------------------------

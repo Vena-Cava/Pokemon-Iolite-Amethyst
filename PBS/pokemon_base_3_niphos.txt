@@ -21,7 +21,8 @@ Color = Green
 Shape = Quadruped
 Habitat = Grassland
 Category = Mossy
-Pokedex = It likes to grip its mother's tail, which gradually transfers more moss to its body. They take mud baths, which rejuvenate their coating.
+IoPokedex = Eleefent are very vulnerable, so if they're threatened, they pretend to be rocks in order to stay safe.
+AmPokedex = It likes to grip its mother's tail, which gradually transfers more moss to its body. They take mud baths, which rejuvenate their coating.
 Evolutions = LOXOMOSS,Level,16
 #-------------------------------
 [LOXOMOSS]
@@ -46,7 +47,8 @@ Color = Green
 Shape = Quadruped
 Habitat = Grassland
 Category = Mossy Rock
-Pokedex = It concretes stones to its body as it rolls about in mud. This hard coating helps them stave off predators while their tusks grow.
+IoPokedex = Males tend to leave their family at this stage in their life, never to return. Their disposition gets more aggressive overall.
+AmPokedex = It concretes stones to its body as it rolls about in mud. This hard coating helps them stave off predators while their tusks grow.
 Evolutions = MAXOMOSS,Level,36
 #-------------------------------
 [MAXOMOSS]
@@ -71,7 +73,8 @@ Color = Green
 Shape = Quadruped
 Habitat = Grassland
 Category = Mossy Boulder
-Pokedex = Its back is covered in boulders. If the fact they look inedible doesn't deter predators, they simply stand up and feint a charge.
+IoPokedex = While normally gentle, a mother Maxomoss gets unruly if she believes her children are threatened. They can easily flatten cars.
+AmPokedex = Its back is covered in boulders. If the fact they look inedible doesn't deter predators, they simply stand up and feint a charge.
 #-------------------------------
 [QUETZI]
 Name = Quetzi
@@ -94,7 +97,8 @@ Color = Green
 Shape = Serpentine
 Habitat = Forest
 Category = Feathered Snake
-Pokedex = Brought over as a novelty pet, Quetzi established themselves from strays in only a few generations. They roost on rooftops, where their parents bring them stolen treats.
+IoPokedex = Commonly known for accidentally starting fires. When a Quetzi sneezes, it creates a brief spark, which isn't the most compatible with straw or fur-laden environments.
+AmPokedex = Brought over as a novelty pet, Quetzi established themselves from strays in only a few generations. They roost on rooftops, where their parents bring them stolen treats.
 Evolutions = INFERNZAL,Level,16
 #-------------------------------
 [INFERNZAL]
@@ -119,7 +123,8 @@ Color = Green
 Shape = Winged
 Habitat = Forest
 Category = Winged Snake
-Pokedex = Ssssss
+IoPokedex = Infernzal are the most likely to find love, as their territory markings are also a tell-tale sign for potential mates. When they do, they return to civilisation.
+AmPokedex = Infernzal tend to become more solitary. In their quest of self discovery, they like to mark their territory by singeing glyphs on trees and rocks.
 Evolutions = QUETZINFERNL,Level,36
 #-------------------------------
 [QUETZINFERNL]
@@ -144,7 +149,8 @@ Color = Green
 Shape = MultiWinged
 Habitat = Forest
 Category = Serpent King
-Pokedex = Ssssss
+IoPokedex = Quetzinfernl have plenty of open air to spread their wings, which they wouldn't be able to do in their native region.
+AmPokedex = While many settle on rooftops, others prefer the cool floors of temples. They mate for life, so it's likely wherever they nest, there's two.
 #-------------------------------
 [CYCLOPTO]
 Name = Cyclopto
@@ -167,7 +173,8 @@ Color = Blue
 Shape = Multiped
 Habitat = Sea
 Category = Collector
-Pokedex = Cyclopto like to collect shiny objects and odd knickknacks, not all the objects are obtained morally however.
+IoPokedex = Cyclopto like to visit beaches when they're especially crowded. People like them because of how cute they are, before realising their valuables have mysteriously vanished.
+AmPokedex = Cyclopto like to collect shiny objects and odd knickknacks, not all the objects are obtained morally however.
 Evolutions = CROOKTOPUS,Level,16
 #-------------------------------
 [CROOKTOPUS]
@@ -192,7 +199,8 @@ Color = Blue
 Shape = Multiped
 Habitat = Sea
 Category = Thief
-Pokedex = Having moved on from simple pickpocketing, Crooktopus now snatch items from people directly.
+IoPokedex = Crooktopus like to make small dens in underwater caves or shipwrecks. They stash their stolen items in these dens.
+AmPokedex = Having moved on from simple pickpocketing, Crooktopus now snatch items from people directly.
 Evolutions = KRAKAPTOPUS,Level,36
 #-------------------------------
 [KRAKAPTOPUS]
@@ -217,9 +225,9 @@ Color = Blue
 Shape = Multiped
 Habitat = Sea
 Category = Captain
-Pokedex = Krakaptopus no longer need to steal things on their own, instead leading groups of Pokémon that steal for them.
+IoPokedex = Having fashioned sharp blades out of materials they've stolen, Krakaptopus now has a means to an end.
+AmPokedex = Krakaptopus no longer need to steal things on their own, instead leading groups of Pokémon that steal for them.
 #-------------------------------
-
 [CRIVOLE]
 Name = Crivole
 Types = NORMAL
@@ -289,7 +297,7 @@ Color = Brown
 Shape = Insectoid
 Habitat = RoughTerrain
 Category = Dust Larva
-Pokedex = Rollva love rolling around in the dirt and sand, covering themselves in earth to protect their soft bodies from the elements.
+AmPokedex = Rollva love rolling around in the dirt and sand, covering themselves in earth to protect their soft bodies from the elements.
 Evolutions = DUSPUPA,Level,12
 #-------------------------------
 [DUSPUPA]
@@ -314,7 +322,7 @@ Color = Brown
 Shape = Insectoid
 Habitat = RoughTerrain
 Category = Dirt Cocoon
-Pokedex = Duspupa has formed a solid shell of dirt and sand, giving it enough security to mature into its final stage.
+AmPokedex = Duspupa has formed a solid shell of dirt and sand, giving it enough security to mature into its final stage.
 Evolutions = SKARADIMENT,HasMove,IRONDEFENSE
 #-------------------------------
 [SKARADIMENT]
@@ -339,7 +347,7 @@ Color = Black
 Shape = Bipedal
 Habitat = RoughTerrain
 Category = Big Beetle
-Pokedex = The ball of dirt that Skaradiment carry between their horns can be used for various purposes, such as projectiles, or for protecting their offspring.
+AmPokedex = The ball of dirt that Skaradiment carry between their horns can be used for various purposes, such as projectiles, or for protecting their offspring.
 #-------------------------------
 [QUILTOX]
 Name = Quiltox
@@ -361,7 +369,7 @@ Color = Purple
 Shape = Quadruped
 Habitat = Grassland
 Category = Tiny Quill
-Pokedex = Quiltox sleep during the day, and thus have developed pointy quills to ward off diurnal predators.
+AmPokedex = Quiltox sleep during the day, and thus have developed pointy quills to ward off diurnal predators.
 Evolutions = PORCUPOX,LevelNight,25
 #-------------------------------
 [PORCUPOX]
@@ -385,7 +393,7 @@ Color = Purple
 Shape = Quadruped
 Habitat = Grassland
 Category = Toxic Quill
-Pokedex = Porcupox has developed a venom that it can eject from its long quills, this is used as a defensive measure.
+AmPokedex = Porcupox has developed a venom that it can eject from its long quills, this is used as a defensive measure.
 #-------------------------------
 [CHICKATOO]
 Name = Chickatoo
@@ -408,7 +416,7 @@ Color = Black
 Shape = Winged
 Habitat = Forest
 Category = Tiny Bird
-Pokedex = Birdie
+AmPokedex = Birdie
 Evolutions = SHOCKATOO,Level,15
 #-------------------------------
 [SHOCKATOO]
@@ -433,7 +441,7 @@ Color = Black
 Shape = Winged
 Habitat = Forest
 Category = Discharge
-Pokedex = Birdie
+AmPokedex = Birdie
 Evolutions = THUNDAROC,Level,35
 #-------------------------------
 [THUNDAROC]
@@ -458,7 +466,7 @@ Color = Black
 Shape = Winged
 Habitat = Forest
 Category = Thunderbird
-Pokedex = Birdie
+AmPokedex = Birdie
 #-------------------------------
 [ARACANVAS]
 Name = Aracanvas
@@ -482,7 +490,8 @@ Color = Red
 Shape = Insectoid
 Habitat = Forest
 Category = Paintbrush Spider
-Pokedex = From a diet of special berries and snails, Aracanvas makes a layer of sticky goop predators find repugnant.
+IoPokedex = Aracanvas are typically harvested for their paint-like goop, but it's rather crude.
+AmPokedex = From a diet of special berries and snails, Aracanvas makes a layer of sticky goop predators find repugnant.
 Evolutions = MELARACNA,LevelMale,25,CHROMARACNA,LevelFemale,25
 #-------------------------------
 [MELARACNA]
@@ -507,7 +516,8 @@ Color = Red
 Shape = Insectoid
 Habitat = Forest
 Category = Ink Spider
-Pokedex = Typically travelling to find a mate, Melaracna protect themselves from predators by painting themselves black.
+IoPokedex = Melaracna are far more hardy than their female counterparts, an evolution to withstand their bullying.
+AmPokedex = Typically travelling to find a mate, Melaracna protect themselves from predators by painting themselves black.
 #-------------------------------
 [CHROMARACNA]
 Name = Chromaracna
@@ -531,7 +541,8 @@ Color = Red
 Shape = Insectoid
 Habitat = Forest
 Category = Paint Spider
-Pokedex = Chromaracna typically build colored webs, using their colored legs to dye their masterpieces.
+IoPokedex = Although sporting a light frame, Chromaracna bully their stockier male counterpart.
+AmPokedex = Chromaracna typically build colored webs, using their colored legs to dye their masterpieces.
 #-------------------------------
 [BUNCHKIN]
 Name = Bunchkin
@@ -555,7 +566,8 @@ Color = Purple
 Shape = HeadLegs
 Habitat = Grassland
 Category = Grape
-Pokedex = Bunchkin are typically grouped together, sharing a vine with the rest of their family.
+IoPokedex = A Pokémon imported from the south. They like to travel in bunches to increase survival odds.
+AmPokedex = Bunchkin are typically grouped together, sharing a vine with the rest of their family.
 Evolutions = VINAPSE,Level,18
 #-------------------------------
 [VINAPSE]
@@ -580,7 +592,8 @@ Color = Green
 Shape = Bipedal
 Habitat = Grassland
 Category = Grape
-Pokedex = Hiding in dark areas, the juice within has begun to ferment. Its delayed reactions are steadily opening its mind.
+IoPokedex = These Pokémon are reclusive, their leaves wilting in the dark. They seem to be internally spoiling for some greater goal.
+AmPokedex = Hiding in dark areas, the juice within has begun to ferment. Its delayed reactions are steadily opening its mind.
 Evolutions = FERMENTAL,Level,35
 #-------------------------------
 [FERMENTAL]
@@ -605,7 +618,8 @@ Color = Green
 Shape = Bipedal
 Habitat = Grassland
 Category = Grape
-Pokedex = After delicately fermenting, the insides of a Fermental are completely full of wine. Their delayed mental state has enabled them access to true inner thought.
+IoPokedex = Having completely spoiled inside, these pokémon act as though they know everything. It may have triggered latent psychic capabilities.
+AmPokedex = After delicately fermenting, the insides of a Fermental are completely full of wine. Their delayed mental state has enabled them access to true inner thought.
 #-------------------------------
 [PUFFONO]
 Name = Puffono
@@ -627,7 +641,8 @@ Color = Gray
 Shape = Finned
 Habitat = Sea
 Category = Shy Fish
-Pokedex = Puffono are very shy and are rarely seen in the wild by Humans. The slightest of disturbances and it will puff up into a giant spiked ball.
+IoPokedex = Puffono's rarity makes it a delicacy in high-end restaurants, it has an organ that generates metallic compounds that are toxic to humans however, so preparing it takes mastery of the culinary arts.
+AmPokedex = Puffono are very shy and are rarely seen in the wild by Humans. The slightest of disturbances and it will puff up into a giant spiked ball.
 #-------------------------------
 [ZEKITREX]
 Name = Zekitrex
@@ -671,7 +686,7 @@ Color = Red
 Shape = Serpentine
 Habitat = Urban
 Category = Firecracker
-Pokedex = Pow Pow!
+IoPokedex = When a Bao-Bao feels threatened, it may burst one of its pods that make up its body. Not all Bao-Bao make it to evolution.
 Evolutions = BAOXI,LevelUseMoveCount,EXPLOSION
 #-------------------------------
 [BAOXI]
@@ -695,7 +710,7 @@ Color = Purple
 Shape = Serpentine
 Habitat = Urban
 Category = Firework
-Pokedex = Pow Pow!
+IoPokedex = Bao-Xi have a deafening cry. Once used for intimidation, it now uses its cry to announce its presence, much to the chagrin of their trainers' neighbours.
 #-------------------------------
 [TANGPYRE]
 Name = Tangpyre
@@ -720,7 +735,7 @@ Color = Purple
 Shape = Bipedal
 Habitat = Forest
 Category = Dead Vine
-Pokedex = It ensnares prey by extending arms made of vines. Losing arms to predators does not trouble it.
+IoPokedex = 
 #-------------------------------
 [FANTOON]
 Name = Fantoon
@@ -744,7 +759,8 @@ Color = Black
 Shape = Bipedal
 Habitat = Urban
 Category = Toon
-Pokedex = Fantoon were once lonely spirits, but then took the form of popular Cartoon Characters from when they were alive.
+IoPokedex = Fantoon love entertaining those around them, creating illusions in order to set a scene or play a visual gag.
+AmPokedex = Fantoon were once lonely spirits, but then took the form of popular Cartoon Characters from when they were alive.
 Evolutions = FANTAZMAGOR,Level,28
 #-------------------------------
 [FANTAZMAGOR]
@@ -770,7 +786,8 @@ Color = Black
 Shape = Bipedal
 Habitat = Urban
 Category = Toon
-Pokedex = Fantazmagor love putting on shows for others. Part of these shows are the Fantazmagor getting hurt in unusual and humorous ways.
+IoPokedex = Fantazmagor are capable of creating complex illusions, these are used in its shows to completely change the environment as well as create characters.
+AmPokedex = Fantazmagor love putting on shows for others. Part of these shows are the Fantazmagor getting hurt in unusual and humorous ways.
 #-------------------------------
 [MINITOR]
 Name = Minitor
@@ -793,7 +810,8 @@ Color = White
 Shape = Bipedal
 Habitat = Grassland
 Category = Small Bull
-Pokedex = Minitor are eager to fight, they challenge anyone they comes across, even if the opponent is larger than they are.
+IoPokedex = Minitor are said to be distant relatives of Miltank and Tauros. They seem to have taken a more active route, fighting off predators with their fists rather than their horns.
+AmPokedex = Minitor are eager to fight, they challenge anyone they comes across, even if the opponent is larger than they are.
 Evolutions = MONOTAUR,AtkGreaterSpAtk,40,MANATAUR,SpAtkGreaterAtk,40,MAXITAUR,AtkSpAtkEqual,40
 #-------------------------------
 [MONOTAUR]
@@ -936,7 +954,8 @@ Color = Black
 Shape = Finned
 Habitat = WatersEdge
 Category = Fish
-Pokedex = Uglish have no idea what happens around them. Trainers have tried to use them in battle, but they just splash about, unable to attack.
+IoPokedex = Uglish has terrible memory, the only thing they seem to remember is their family or trainer. Scientists believe this is why Uglish can't learn many moves.
+AmPokedex = Uglish have no idea what happens around them. Trainers have tried to use them in battle, but they just splash about, unable to attack.
 Evolutions = SYRENE,Level,20
 #-------------------------------
 [SYRENE]
@@ -984,6 +1003,7 @@ Color = White
 Shape = Serpentine
 Habitat = Mountain
 Category = Snow Pile
+IoPokedex = Though it looks like Sandygast, Snowygast is an entirely different species.
 Pokedex = It likes the shovel on its head, so Snowygast will get serious and fight any children who come to take it back.
 WildItemUncommon = SPELLTAG
 Evolutions = PALOSSNOW,Level,42
@@ -1010,7 +1030,7 @@ Color = White
 Shape = Serpentine
 Habitat = Mountain
 Category = Snow Fort
-Pokedex = Buried beneath the fort are masses of frozen bones from those whose vitality it has drained.
+AmPokedex = Buried beneath the fort are masses of frozen bones from those whose vitality it has drained.
 WildItemUncommon = SPELLTAG
 #-------------------------------
 [CHIKALISK]
@@ -1101,7 +1121,8 @@ Color = Brown
 Shape = Bipedal
 Habitat = Cave
 Category = Clockwork
-Pokedex = ???
+IoPokedex = Layers of dirt and rust have caked its body preventing it from fighting at top form. Despite this, its immense strength still make it a formidable Guardian.
+AmPokedex = Mechanylos was built by Ancient Niphosian people as a Guardian to the Region. After it suffered a great loss and was deemed unfit for its purpose, it was sealed below ground.
 #-------------------------------
 [COZMIX]
 Name = Cozmix

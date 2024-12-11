@@ -22,7 +22,7 @@ Color = Gray
 Shape = Quadruped
 Habitat = Grassland
 Category = Big Horn
-Pokedex = The black orbs shine with an uncanny light when the Pokémon is erecting invisible barriers. The fur shed from its beard retains heat well and is a highly useful material for winter clothing
+IoPokedex = The black orbs shine with an uncanny light when the Pokémon is erecting invisible barriers. The fur shed from its beard retains heat well and is a highly useful material for winter clothing
 Generation = 8
 #-------------------------------
 [KLEAVOR]
@@ -47,7 +47,7 @@ Color = Brown
 Shape = MultiWinged
 Habitat = Grassland
 Category = Axe
-Pokedex = A violent creature that fells towering trees with its crude axes and shields itself with hard stone. If one should chance upon this Pokémon in the wilds, one's only recourse is to flee.
+IoPokedex = A violent creature that fells towering trees with its crude axes and shields itself with hard stone. If one should chance upon this Pokémon in the wilds, one's only recourse is to flee.
 Generation = 8
 #-------------------------------
 [URSALUNA]
@@ -72,7 +72,7 @@ Color = Brown
 Shape = Quadruped
 Habitat = Mountain
 Category = Peat
-Pokedex = It is believed that the swampy terrain of its ancient home region that gave Ursaluna its burly physique and newfound capacity to manipulate peat at will.
+IoPokedex = It is believed that the swampy terrain of its ancient home region that gave Ursaluna its burly physique and newfound capacity to manipulate peat at will.
 Generation = 8
 #-------------------------------
 [BASCULEGION]
@@ -98,7 +98,7 @@ Color = Green
 Shape = Finned
 Habitat = Sea
 Category = Big Fish
-Pokedex = Clads itself in the souls of comrades that perished before fulfilling their goals of journeying upstream. No other species throughout other aquatic environments is Basculegion’s equal.
+IoPokedex = Clads itself in the souls of comrades that perished before fulfilling their goals of journeying upstream. No other species throughout other aquatic environments is Basculegion’s equal.
 Generation = 8
 Flags = DefaultForm_2,InheritFormWithEverStone
 WildItemUncommon = DEEPSEATOOTH
@@ -125,7 +125,7 @@ Color = Blue
 Shape = BipedalTail
 Habitat = Mountain
 Category = Free Climb
-Pokedex = Because of Sneasler’s virulent poison and daunting physical prowess, no other species could hope to best it on frozen highlands. Preferring solitude, this species does not form packs.
+IoPokedex = Because of Sneasler’s virulent poison and daunting physical prowess, no other species could hope to best it on frozen highlands. Preferring solitude, this species does not form packs.
 Generation = 8
 Flags = DefaultForm_1,InheritFormWithEverStone
 #-------------------------------
@@ -151,7 +151,7 @@ Color = Black
 Shape = Finned
 Habitat = Sea
 Category = Pin Cluster
-Pokedex = Its lancelike spikes and savage temperament have earned it the nickname "sea fiend." It slurps up poison to nourish itself.
+IoPokedex = Its lancelike spikes and savage temperament have earned it the nickname "sea fiend." It slurps up poison to nourish itself.
 Generation = 8
 Flags = DefaultForm_1,InheritFormWithEverStone
 #-------------------------------
@@ -178,7 +178,7 @@ Color = Pink
 Shape = HeadArms
 Habitat = Rare
 Category = Love-Hate
-Pokedex = When it flies to this land from across the sea, the bitter winter comes to an end. According to legend, this Pokémon's love gives rise to the budding of fresh life across Hisui.
+IoPokedex = When it flies to this land from across the sea, the bitter winter comes to an end. According to legend, this Pokémon's love gives rise to the budding of fresh life across Hisui.
 Generation = 8
 Flags = Legendary,ForcesOfNature
 #-------------------------------
@@ -205,7 +205,7 @@ Color = Green
 Shape = Quadruped
 Habitat = Grassland
 Category = Grass Cat
-Pokedex = The sweet scent its body gives off mesmerizes those around it. The scent grows stronger when this Pokémon is in the sun.
+IoPokedex = The sweet scent its body gives off mesmerizes those around it. The scent grows stronger when this Pokémon is in the sun.
 Generation = 9
 Evolutions = FLORAGATO,Level,16
 #-------------------------------
@@ -231,7 +231,7 @@ Color = Green
 Shape = BipedalTail
 Habitat = Grassland
 Category = Grass Cat
-Pokedex = Floragato deftly wields the vine hidden beneath its long fur, slamming the hard flower bud against its opponents.
+IoPokedex = Floragato deftly wields the vine hidden beneath its long fur, slamming the hard flower bud against its opponents.
 Generation = 9
 Evolutions = MEOWSCARADA,Level,36
 #-------------------------------
@@ -257,7 +257,7 @@ Color = Green
 Shape = BipedalTail
 Habitat = Grassland
 Category = Magician
-Pokedex = This Pokémon uses the reflective fur lining its cape to camouflage the stem of its flower, creating the illusion that the flower is floating.
+IoPokedex = This Pokémon uses the reflective fur lining its cape to camouflage the stem of its flower, creating the illusion that the flower is floating.
 Generation = 9
 #-------------------------------
 [FUECOCO]
@@ -283,7 +283,7 @@ Color = Red
 Shape = BipedalTail
 Habitat = RoughTerrain
 Category = Fire Croc
-Pokedex = It lies on warm rocks and uses the heat absorbed by its square-shaped scales to create fire energy.
+IoPokedex = It lies on warm rocks and uses the heat absorbed by its square-shaped scales to create fire energy.
 Generation = 9
 Evolutions = CROCALOR,Level,16
 #-------------------------------
@@ -309,7 +309,7 @@ Color = Red
 Shape = BipedalTail
 Habitat = RoughTerrain
 Category = Fire Croc
-Pokedex = The combination of Crocalor’s fire energy and overflowing vitality has caused an egg-shaped fireball to appear on the Pokémon’s head.
+IoPokedex = The combination of Crocalor’s fire energy and overflowing vitality has caused an egg-shaped fireball to appear on the Pokémon’s head.
 Generation = 9
 Evolutions = SKELEDIRGE,Level,36
 #-------------------------------
@@ -335,7 +335,7 @@ Color = Red
 Shape = BipedalTail
 Habitat = RoughTerrain
 Category = Singer
-Pokedex = The fiery bird changes shape when Skeledirge sings. Rumor has it that the bird was born when the fireball on Skeledirge’s head gained a soul.
+IoPokedex = The fiery bird changes shape when Skeledirge sings. Rumor has it that the bird was born when the fireball on Skeledirge’s head gained a soul.
 Generation = 9
 #-------------------------------
 [QUAXLY]
@@ -361,7 +361,8 @@ Color = Blue
 Shape = Winged
 Habitat = WatersEdge
 Category = Duckling
-Pokedex = This Pokémon migrated to Paldea from distant lands long ago. The gel secreted by its feathers repels water and grime.
+IoPokedex = This Pokémon migrated to Paldea from distant lands long ago. The gel secreted by its feathers repels water and grime.
+AmPokedex = Its strong legs let it easily swim around in even fast-flowing rivers. It likes to keep things tidy and is prone to overthinking things.
 Generation = 9
 Evolutions = QUAXWELL,Level,16
 #-------------------------------
@@ -387,7 +388,8 @@ Color = Blue
 Shape = Winged
 Habitat = WatersEdge
 Category = Practicing
-Pokedex = These Pokémon constantly run through shallow waters to train their legs, then compete with each other to see which of them kicks most gracefully.
+IoPokedex = These Pokémon constantly run through shallow waters to train their legs, then compete with each other to see which of them kicks most gracefully.
+AmPokedex = The hardworking Quaxwell observes people and Pokémon from various regions and incorporates their movements into its own dance routines.
 Generation = 9
 Evolutions = QUAQUAVAL,Level,36
 #-------------------------------
@@ -413,7 +415,8 @@ Color = Blue
 Shape = Winged
 Habitat = WatersEdge
 Category = Dancer
-Pokedex = A single kick from a Quaquaval can send a truck rolling. This Pokémon uses its powerful legs to perform striking dances from far-off lands.
+IoPokedex = A single kick from a Quaquaval can send a truck rolling. This Pokémon uses its powerful legs to perform striking dances from far-off lands.
+AmPokedex = Dancing in ways that evoke far-away places, this Pokémon mesmerizes all that see it. Flourishes of its decorative water feathers slice into its foes.
 Generation = 9
 #-------------------------------
 [LECHONK]
@@ -439,7 +442,7 @@ Color = Gray
 Shape = Quadruped
 Habitat = Grassland
 Category = Hog
-Pokedex = It searches for food all day. It possesses a keen sense of smell but doesn’t use it for anything other than foraging.
+IoPokedex = It searches for food all day. It possesses a keen sense of smell but doesn’t use it for anything other than foraging.
 Generation = 9
 Evolutions = OINKOLOGNE,Level,18
 #-------------------------------
@@ -466,7 +469,7 @@ Color = Gray
 Shape = Quadruped
 Habitat = Grassland
 Category = Hog
-Pokedex = It entrances female Pokémon with the sweet, alluring scent that wafts from all over its body.
+IoPokedex = It entrances female Pokémon with the sweet, alluring scent that wafts from all over its body.
 Generation = 9
 #-------------------------------
 [TAROUNTULA]
@@ -492,7 +495,7 @@ Color = White
 Shape = Insectoid
 Habitat = Forest
 Category = String Ball
-Pokedex = The ball of threads wrapped around its body is elastic enough to deflect the scythes of Scyther, this Pokémon’s natural enemy.
+IoPokedex = The ball of threads wrapped around its body is elastic enough to deflect the scythes of Scyther, this Pokémon’s natural enemy.
 Generation = 9
 Evolutions = SPIDOPS,Level,15
 #-------------------------------
@@ -518,7 +521,7 @@ Color = Green
 Shape = Insectoid
 Habitat = Forest
 Category = Trap
-Pokedex = It clings to branches and ceilings using its threads and moves without a sound. It takes out its prey before the prey even notices it.
+IoPokedex = It clings to branches and ceilings using its threads and moves without a sound. It takes out its prey before the prey even notices it.
 Generation = 9
 #-------------------------------
 [NYMBLE]
@@ -544,7 +547,7 @@ Color = Gray
 Shape = Insectoid
 Habitat = Grassland
 Category = Grasshopper
-Pokedex = It has its third set of legs folded up. When it’s in a tough spot, this Pokémon jumps over 30 feet using the strength of its legs.
+IoPokedex = It has its third set of legs folded up. When it’s in a tough spot, this Pokémon jumps over 30 feet using the strength of its legs.
 Generation = 9
 Evolutions = LOKIX,Level,24
 #-------------------------------
@@ -570,7 +573,7 @@ Color = Gray
 Shape = Insectoid
 Habitat = Grassland
 Category = Grasshopper
-Pokedex = When it decides to fight all out, it stands on its previously folded legs to enter Showdown Mode. It neutralizes its enemies in short order.
+IoPokedex = When it decides to fight all out, it stands on its previously folded legs to enter Showdown Mode. It neutralizes its enemies in short order.
 Generation = 9
 #-------------------------------
 [PAWMI]
@@ -596,7 +599,7 @@ Color = Yellow
 Shape = BipedalTail
 Habitat = Grassland
 Category = Mouse
-Pokedex = It has underdeveloped electric sacs on its cheeks. These sacs can produce electricity only if Pawmi rubs them furiously with the pads on its forepaws.
+IoPokedex = It has underdeveloped electric sacs on its cheeks. These sacs can produce electricity only if Pawmi rubs them furiously with the pads on its forepaws.
 Generation = 9
 Evolutions = PAWMO,Level,18
 #-------------------------------
@@ -622,7 +625,7 @@ Color = Yellow
 Shape = BipedalTail
 Habitat = Grassland
 Category = Mouse
-Pokedex = When its group is attacked, Pawmo is the first to leap into battle, defeating enemies with a fighting technique that utilizes electric shocks.
+IoPokedex = When its group is attacked, Pawmo is the first to leap into battle, defeating enemies with a fighting technique that utilizes electric shocks.
 Generation = 9
 Evolutions = PAWMOT,LevelWalk,1000
 #-------------------------------
@@ -648,7 +651,7 @@ Color = Yellow
 Shape = BipedalTail
 Habitat = Grassland
 Category = Hands-On
-Pokedex = This Pokémon normally is slow to react, but once it enters battle, it will strike down its enemies with lightning-fast movements.
+IoPokedex = This Pokémon normally is slow to react, but once it enters battle, it will strike down its enemies with lightning-fast movements.
 Generation = 9
 #-------------------------------
 [TANDEMAUS]
@@ -674,7 +677,8 @@ Color = White
 Shape = MultiBody
 Habitat = Urban
 Category = Couple
-Pokedex = Exhibiting great teamwork, they use their incisors to cut pieces out of any material that might be useful for a nest, then make off with them.
+IoPokedex = Exhibiting great teamwork, they use their incisors to cut pieces out of any material that might be useful for a nest, then make off with them.
+AmPokedex = The pair sticks together no matter what. They split any food they find exactly in half and then eat it together.
 Generation = 9
 Evolutions = MAUSHOLD,Level,25
 #-------------------------------
@@ -701,7 +705,8 @@ Color = White
 Shape = MultiBody
 Habitat = Urban
 Category = Family
-Pokedex = They build huge nests with many rooms that are used for different purposes, such as eating and sleeping.
+IoPokedex = The two little ones just appeared one day. The group might be a family of related Pokémon, but nobody knows for sure.
+AmPokedex = The larger pair protects the little ones during battles. When facing strong opponents, the whole group will join the fight.
 Generation = 9
 #-------------------------------
 [FIDOUGH]
@@ -727,7 +732,7 @@ Color = Yellow
 Shape = Quadruped
 Habitat = Urban
 Category = Puppy
-Pokedex = This Pokémon is smooth and moist to the touch. Yeast in Fidough’s breath induces fermentation in the Pokémon’s vicinity.
+IoPokedex = This Pokémon is smooth and moist to the touch. Yeast in Fidough’s breath induces fermentation in the Pokémon’s vicinity.
 Generation = 9
 Evolutions = DACHSBUN,Level,26
 #-------------------------------
@@ -753,7 +758,7 @@ Color = Brown
 Shape = Quadruped
 Habitat = Urban
 Category = Dog
-Pokedex = The pleasant aroma that emanates from this Pokémon’s body helps wheat grow, so Dachsbun has been treasured by farming villages.
+IoPokedex = The pleasant aroma that emanates from this Pokémon’s body helps wheat grow, so Dachsbun has been treasured by farming villages.
 Generation = 9
 #-------------------------------
 [SMOLIV]
@@ -779,7 +784,8 @@ Color = Green
 Shape = HeadBase
 Habitat = Grassland
 Category = Olive
-Pokedex = It protects itself from enemies by emitting oil from the fruit on its head. This oil is bitter and astringent enough to make someone flinch.
+IoPokedex = It protects itself from enemies by emitting oil from the fruit on its head. This oil is bitter and astringent enough to make someone flinch.
+AmPokedex = This Pokémon converts nutrients into oil, which it stores in the fruit on its head. It can easily go a whole week without eating or drinking.
 Generation = 9
 Evolutions = DOLLIV,Level,25
 #-------------------------------
@@ -805,7 +811,8 @@ Color = Green
 Shape = HeadBase
 Habitat = Grassland
 Category = Olive
-Pokedex = Dolliv shares its tasty, fresh-scented oil with others. This species has coexisted with humans since times long gone.
+IoPokedex = Dolliv shares its tasty, fresh-scented oil with others. This species has coexisted with humans since times long gone.
+AmPokedex = It basks in the sun to its heart's content until the fruits on its head ripen. After that, Dolliv departs from human settlements and goes on a journey.
 Generation = 9
 Evolutions = ARBOLIVA,Level,35
 #-------------------------------
@@ -831,7 +838,8 @@ Color = Green
 Shape = HeadBase
 Habitat = Grassland
 Category = Olive
-Pokedex = This calm Pokémon is very compassionate. It will share its delicious, nutrient-rich oil with weakened Pokémon.
+IoPokedex = This calm Pokémon is very compassionate. It will share its delicious, nutrient-rich oil with weakened Pokémon.
+AmPokedex = This Pokémon drives back enemies by launching its rich, aromatic oil at them with enough force to smash a boulder.
 Generation = 9
 #-------------------------------
 [SQUAWKABILLY]
@@ -858,7 +866,7 @@ Color = Green
 Shape = Winged
 Habitat = Urban
 Category = Parrot
-Pokedex = These Pokémon prefer to live in cities. They form flocks based on the color of their feathers, and they fight over territory.
+IoPokedex = These Pokémon prefer to live in cities. They form flocks based on the color of their feathers, and they fight over territory.
 Generation = 9
 #-------------------------------
 [NACLI]
@@ -884,7 +892,8 @@ Color = Brown
 Shape = Head
 Habitat = Cave
 Category = Rock Salt
-Pokedex = It was born in a layer of rock salt deep under the earth. This species was particularly treasured in the old days, as they would share precious salt.
+IoPokedex = It was born in a layer of rock salt deep under the earth. This species was particularly treasured in the old days, as they would share precious salt.
+AmPokedex = The ground scrapes its body as it travels, causing it to leave salt behind. Salt is constantly being created and replenished inside Nacli's body.
 Generation = 9
 Evolutions = NACLSTACK,Level,24
 #-------------------------------
@@ -910,7 +919,8 @@ Color = Brown
 Shape = Quadruped
 Habitat = Cave
 Category = Rock Salt
-Pokedex = This Pokémon dry cures its prey by spraying salt over them. The curing process steals away the water in the prey’s body.
+IoPokedex = This Pokémon dry cures its prey by spraying salt over them. The curing process steals away the water in the prey’s body.
+AmPokedex = It compresses rock salt inside its body and shoots out hardened salt pellets with enough force to perforate an iron sheet.
 Generation = 9
 Evolutions = GARGANACL,Level,38
 #-------------------------------
@@ -936,7 +946,8 @@ Color = Brown
 Shape = Bipedal
 Habitat = Cave
 Category = Rock Salt
-Pokedex = Garganacl will rub its fingertips together and sprinkle injured Pokémon with salt. Even severe wounds will promptly heal afterward.
+IoPokedex = Garganacl will rub its fingertips together and sprinkle injured Pokémon with salt. Even severe wounds will promptly heal afterward.
+AmPokedex = Many Pokémon gather around Garganacl, hoping to lick at its mineral-rich salt.
 Generation = 9
 #-------------------------------
 [CHARCADET]
@@ -962,7 +973,7 @@ Color = Red
 Shape = Bipedal
 Habitat = RoughTerrain
 Category = Fire Child
-Pokedex = Burnt charcoal came to life and became a Pokémon. Possessing a fiery fighting spirit, Charcadet will battle even tough opponents.
+IoPokedex = Burnt charcoal came to life and became a Pokémon. Possessing a fiery fighting spirit, Charcadet will battle even tough opponents.
 Generation = 9
 Evolutions = ARMAROUGE,Item,AUSPICIOUSARMOR,CERULEDGE,Item,MALICIOUSARMOR
 #-------------------------------
@@ -988,7 +999,7 @@ Color = Red
 Shape = Bipedal
 Habitat = RoughTerrain
 Category = Fire Warrior
-Pokedex = Armarouge evolved through the use of a set of armor that belonged to a distinguished warrior. This Pokémon is incredibly loyal.
+IoPokedex = Armarouge evolved through the use of a set of armor that belonged to a distinguished warrior. This Pokémon is incredibly loyal.
 Generation = 9
 #-------------------------------
 [CERULEDGE]
@@ -1013,7 +1024,7 @@ Color = Blue
 Shape = Bipedal
 Habitat = RoughTerrain
 Category = Fire Blades
-Pokedex = The fiery blades on its arms burn fiercely with the lingering resentment of a sword wielder who fell before accomplishing their goal.
+IoPokedex = The fiery blades on its arms burn fiercely with the lingering resentment of a sword wielder who fell before accomplishing their goal.
 Generation = 9
 #-------------------------------
 [TADBULB]
@@ -1039,7 +1050,7 @@ Color = Yellow
 Shape = Finned
 Habitat = WatersEdge
 Category = EleTadpole
-Pokedex = Tadbulb shakes its tail to generate electricity. If it senses danger, it will make its head blink on and off to alert its allies.
+IoPokedex = Tadbulb shakes its tail to generate electricity. If it senses danger, it will make its head blink on and off to alert its allies.
 Generation = 9
 Evolutions = BELLIBOLT,Item,THUNDERSTONE
 #-------------------------------
@@ -1065,7 +1076,7 @@ Color = Green
 Shape = HeadArms
 Habitat = WatersEdge
 Category = EleFrog
-Pokedex = When this Pokémon expands and contracts its wobbly body, the belly-button dynamo in its stomach produces a huge amount of electricity.
+IoPokedex = When this Pokémon expands and contracts its wobbly body, the belly-button dynamo in its stomach produces a huge amount of electricity.
 Generation = 9
 #-------------------------------
 [WATTREL]
@@ -1091,7 +1102,7 @@ Color = Black
 Shape = Winged
 Habitat = WatersEdge
 Category = Storm Petrel
-Pokedex = When its wings catch the wind, the bones within produce electricity. This Pokémon dives into the ocean, catching prey by electrocuting them.
+IoPokedex = When its wings catch the wind, the bones within produce electricity. This Pokémon dives into the ocean, catching prey by electrocuting them.
 Generation = 9
 Evolutions = KILOWATTREL,Level,25
 #-------------------------------
@@ -1117,7 +1128,7 @@ Color = Yellow
 Shape = Winged
 Habitat = WatersEdge
 Category = Frigatebird
-Pokedex = Kilowattrel inflates its throat sac to amplify its electricity. By riding the wind, this Pokémon can fly over 430 miles in a day.
+IoPokedex = Kilowattrel inflates its throat sac to amplify its electricity. By riding the wind, this Pokémon can fly over 430 miles in a day.
 Generation = 9
 #-------------------------------
 [MASCHIFF]
@@ -1143,7 +1154,7 @@ Color = Brown
 Shape = Quadruped
 Habitat = Urban
 Category = Rascal
-Pokedex = It always scowls in an attempt to make opponents take it seriously, but even crying children will burst into laughter when they see Maschiff’s face.
+IoPokedex = It always scowls in an attempt to make opponents take it seriously, but even crying children will burst into laughter when they see Maschiff’s face.
 Generation = 9
 Evolutions = MABOSSTIFF,Level,30
 #-------------------------------
@@ -1169,7 +1180,7 @@ Color = Gray
 Shape = Quadruped
 Habitat = Urban
 Category = Boss
-Pokedex = This Pokémon can store energy in its large dewlap. Mabosstiff unleashes this energy all at once to blow away enemies.
+IoPokedex = This Pokémon can store energy in its large dewlap. Mabosstiff unleashes this energy all at once to blow away enemies.
 Generation = 9
 #-------------------------------
 [SHROODLE]
@@ -1195,7 +1206,7 @@ Color = Gray
 Shape = Quadruped
 Habitat = Forest
 Category = Toxic Mouse
-Pokedex = Though usually a mellow Pokémon, it will sink its sharp, poison-soaked front teeth into any that anger it, causing paralysis in the object of its ire.
+IoPokedex = Though usually a mellow Pokémon, it will sink its sharp, poison-soaked front teeth into any that anger it, causing paralysis in the object of its ire.
 Generation = 9
 Evolutions = GRAFAIAI,Level,28
 #-------------------------------
@@ -1221,7 +1232,7 @@ Color = Gray
 Shape = BipedalTail
 Habitat = Forest
 Category = Toxic Monkey
-Pokedex = The color of the poisonous saliva depends on what the Pokémon eats. Grafaiai covers its fingers in its saliva and draws patterns on trees in forests.
+IoPokedex = The color of the poisonous saliva depends on what the Pokémon eats. Grafaiai covers its fingers in its saliva and draws patterns on trees in forests.
 Generation = 9
 #-------------------------------
 [BRAMBLIN]
@@ -1247,7 +1258,7 @@ Color = Brown
 Shape = Head
 Habitat = RoughTerrain
 Category = Tumbleweed
-Pokedex = A soul unable to move on to the afterlife was blown around by the wind until it got tangled up with dried grass and became a Pokémon.
+IoPokedex = A soul unable to move on to the afterlife was blown around by the wind until it got tangled up with dried grass and became a Pokémon.
 Generation = 9
 Evolutions = BRAMBLEGHAST,LevelWalk,1000
 #-------------------------------
@@ -1273,7 +1284,7 @@ Color = Brown
 Shape = Head
 Habitat = RoughTerrain
 Category = Tumbleweed
-Pokedex = It will open the branches of its head to envelop its prey. Once it absorbs all the life energy it needs, it expels the prey and discards it.
+IoPokedex = It will open the branches of its head to envelop its prey. Once it absorbs all the life energy it needs, it expels the prey and discards it.
 Generation = 9
 #-------------------------------
 [TOEDSCOOL]
@@ -1298,7 +1309,7 @@ Color = Yellow
 Shape = Multiped
 Habitat = Forest
 Category = Woodear
-Pokedex = Toedscool lives in muggy forests. The flaps that fall from its body are chewy and very delicious.
+IoPokedex = Toedscool lives in muggy forests. The flaps that fall from its body are chewy and very delicious.
 Generation = 9
 WildItemUncommon = TINYMUSHROOM
 Evolutions = TOEDSCRUEL,Level,30
@@ -1324,7 +1335,7 @@ Color = Black
 Shape = Multiped
 Habitat = Forest
 Category = Woodear
-Pokedex = These Pokémon gather into groups and form colonies deep within forests. They absolutely hate it when strangers approach.
+IoPokedex = These Pokémon gather into groups and form colonies deep within forests. They absolutely hate it when strangers approach.
 Generation = 9
 WildItemCommon = TINYMUSHROOM
 #-------------------------------
@@ -1351,7 +1362,7 @@ Color = Red
 Shape = Insectoid
 Habitat = RoughTerrain
 Category = Ambush
-Pokedex = Klawf hangs upside-down from cliffs, waiting for prey. But Klawf can’t remain in this position for long because its blood rushes to its head.
+IoPokedex = Klawf hangs upside-down from cliffs, waiting for prey. But Klawf can’t remain in this position for long because its blood rushes to its head.
 Generation = 9
 #-------------------------------
 [CAPSAKID]
@@ -1377,7 +1388,7 @@ Color = Green
 Shape = BipedalTail
 Habitat = Grassland
 Category = Spicy Pepper
-Pokedex = The more sunlight this Pokémon bathes in, the more spicy chemicals are produced by its body, and thus the spicier its moves become.
+IoPokedex = The more sunlight this Pokémon bathes in, the more spicy chemicals are produced by its body, and thus the spicier its moves become.
 Generation = 9
 Evolutions = SCOVILLAIN,Item,FIRESTONE
 #-------------------------------
@@ -1403,7 +1414,7 @@ Color = Green
 Shape = BipedalTail
 Habitat = Grassland
 Category = Spicy Pepper
-Pokedex = The red head converts spicy chemicals into fire energy and blasts the surrounding area with a super spicy stream of flame.
+IoPokedex = The red head converts spicy chemicals into fire energy and blasts the surrounding area with a super spicy stream of flame.
 Generation = 9
 #-------------------------------
 [RELLOR]
@@ -1429,7 +1440,7 @@ Color = Brown
 Shape = Insectoid
 Habitat = RoughTerrain
 Category = Rolling
-Pokedex = This Pokémon creates a mud ball by mixing sand and dirt with psychic energy. It treasures its mud ball more than its own life.
+IoPokedex = This Pokémon creates a mud ball by mixing sand and dirt with psychic energy. It treasures its mud ball more than its own life.
 Generation = 9
 Evolutions = RABSCA,LevelWalk,1000
 #-------------------------------
@@ -1455,7 +1466,7 @@ Color = Green
 Shape = Insectoid
 Habitat = RoughTerrain
 Category = Rolling
-Pokedex = The body that supports the ball barely moves. Therefore, it is thought that the true body of this Pokémon is actually inside the ball.
+IoPokedex = The body that supports the ball barely moves. Therefore, it is thought that the true body of this Pokémon is actually inside the ball.
 Generation = 9
 #-------------------------------
 [FLITTLE]
@@ -1481,7 +1492,7 @@ Color = Yellow
 Shape = HeadLegs
 Habitat = Grassland
 Category = Frill
-Pokedex = Flittle’s toes levitate about half an inch above the ground because of the psychic power emitted from the frills on the Pokémon’s belly.
+IoPokedex = Flittle’s toes levitate about half an inch above the ground because of the psychic power emitted from the frills on the Pokémon’s belly.
 Generation = 9
 Evolutions = ESPATHRA,Level,35
 #-------------------------------
@@ -1507,7 +1518,7 @@ Color = Yellow
 Shape = HeadLegs
 Habitat = Grassland
 Category = Ostrich
-Pokedex = It immobilizes opponents by bathing them in psychic power from its large eyes. Despite its appearance, it has a vicious temperament.
+IoPokedex = It immobilizes opponents by bathing them in psychic power from its large eyes. Despite its appearance, it has a vicious temperament.
 Generation = 9
 #-------------------------------
 [TINKATINK]
@@ -1533,7 +1544,7 @@ Color = Pink
 Shape = Bipedal
 Habitat = RoughTerrain
 Category = Metalsmith
-Pokedex = It swings its handmade hammer around to protect itself, but the hammer is often stolen by Pokémon that eat metal.
+IoPokedex = It swings its handmade hammer around to protect itself, but the hammer is often stolen by Pokémon that eat metal.
 Generation = 9
 Evolutions = TINKATUFF,Level,24
 #-------------------------------
@@ -1559,7 +1570,7 @@ Color = Pink
 Shape = Bipedal
 Habitat = RoughTerrain
 Category = Hammer
-Pokedex = This Pokémon will attack groups of Pawniard and Bisharp, gathering metal from them in order to create a large and sturdy hammer.
+IoPokedex = This Pokémon will attack groups of Pawniard and Bisharp, gathering metal from them in order to create a large and sturdy hammer.
 Generation = 9
 Evolutions = TINKATON,Level,38
 #-------------------------------
@@ -1585,7 +1596,7 @@ Color = Pink
 Shape = Bipedal
 Habitat = RoughTerrain
 Category = Hammer
-Pokedex = This intelligent Pokémon has a very daring disposition. It knocks rocks into the sky with its hammer, aiming for flying Corviknight.
+IoPokedex = This intelligent Pokémon has a very daring disposition. It knocks rocks into the sky with its hammer, aiming for flying Corviknight.
 Generation = 9
 #-------------------------------
 [WIGLETT]
@@ -1611,7 +1622,7 @@ Color = White
 Shape = HeadBase
 Habitat = Sea
 Category = Garden Eel
-Pokedex = This Pokémon can pick up the scent of a Veluza just over 65 feet away and will hide itself in the sand.
+IoPokedex = This Pokémon can pick up the scent of a Veluza just over 65 feet away and will hide itself in the sand.
 Generation = 9
 Evolutions = WUGTRIO,Level,26
 #-------------------------------
@@ -1637,7 +1648,7 @@ Color = Red
 Shape = HeadBase
 Habitat = Sea
 Category = Garden Eel
-Pokedex = It has a vicious temperament, contrary to what its appearance may suggest. It wraps its long bodies around prey, then drags the prey into its den.
+IoPokedex = It has a vicious temperament, contrary to what its appearance may suggest. It wraps its long bodies around prey, then drags the prey into its den.
 Generation = 9
 #-------------------------------
 [BOMBIRDIER]
@@ -1663,7 +1674,7 @@ Color = White
 Shape = Winged
 Habitat = Mountain
 Category = Item Drop
-Pokedex = It gathers things up in an apron made from shed feathers added to the Pokémon’s chest feathers, then drops those things from high places for fun.
+IoPokedex = It gathers things up in an apron made from shed feathers added to the Pokémon’s chest feathers, then drops those things from high places for fun.
 Generation = 9
 #-------------------------------
 [FINIZEN]
@@ -1688,7 +1699,7 @@ Color = Blue
 Shape = Finned
 Habitat = Sea
 Category = Dolphin
-Pokedex = It likes playing with others of its kind using the water ring on its tail. It uses ultrasonic waves to sense the emotions of other living creatures.
+IoPokedex = It likes playing with others of its kind using the water ring on its tail. It uses ultrasonic waves to sense the emotions of other living creatures.
 Generation = 9
 Evolutions = PALAFIN,LevelWithPartner,38
 #-------------------------------
@@ -1714,7 +1725,7 @@ Color = Blue
 Shape = Finned
 Habitat = Sea
 Category = Dolphin
-Pokedex = This Pokémon changes its appearance if it hears its allies calling for help. Palafin will never show anybody its moment of transformation.
+IoPokedex = This Pokémon changes its appearance if it hears its allies calling for help. Palafin will never show anybody its moment of transformation.
 Generation = 9
 #-------------------------------
 [VAROOM]
@@ -1740,7 +1751,7 @@ Color = Gray
 Shape = Head
 Habitat = RoughTerrain
 Category = Single-Cyl
-Pokedex = It is said that this Pokémon was born when an unknown poison Pokémon entered and inspirited an engine left at a scrap-processing factory.
+IoPokedex = It is said that this Pokémon was born when an unknown poison Pokémon entered and inspirited an engine left at a scrap-processing factory.
 Generation = 9
 Evolutions = REVAVROOM,Level,40
 #-------------------------------
@@ -1766,7 +1777,7 @@ Color = Gray
 Shape = Head
 Habitat = RoughTerrain
 Category = Multi-Cyl
-Pokedex = It creates a gas out of poison and minerals from rocks. It then detonates the gas in its cylinders— now numbering eight—to generate energy.
+IoPokedex = It creates a gas out of poison and minerals from rocks. It then detonates the gas in its cylinders— now numbering eight—to generate energy.
 Generation = 9
 #-------------------------------
 [CYCLIZAR]
@@ -1792,7 +1803,7 @@ Color = Green
 Shape = BipedalTail
 Habitat = Grassland
 Category = Mount
-Pokedex = Apparently Cyclizar has been allowing people to ride on its back since ancient times. Depictions of this have been found in 10,000-year-old murals.
+IoPokedex = Apparently Cyclizar has been allowing people to ride on its back since ancient times. Depictions of this have been found in 10,000-year-old murals.
 Generation = 9
 #-------------------------------
 [ORTHWORM]
@@ -1818,7 +1829,7 @@ Color = Pink
 Shape = Serpentine
 Habitat = RoughTerrain
 Category = Earthworm
-Pokedex = When attacked, this Pokémon will wield the tendrils on its body like fists and pelt the opponent with a storm of punches.
+IoPokedex = When attacked, this Pokémon will wield the tendrils on its body like fists and pelt the opponent with a storm of punches.
 Generation = 9
 #-------------------------------
 [GLIMMET]
@@ -1844,7 +1855,7 @@ Color = Blue
 Shape = Head
 Habitat = Cave
 Category = Ore
-Pokedex = It absorbs nutrients from cave walls. The petals it wears are made of crystallized poison.
+IoPokedex = It absorbs nutrients from cave walls. The petals it wears are made of crystallized poison.
 Generation = 9
 Evolutions = GLIMMORA,Level,35
 #-------------------------------
@@ -1870,7 +1881,7 @@ Color = Blue
 Shape = Head
 Habitat = Cave
 Category = Ore
-Pokedex = When this Pokémon detects danger, it will open up its crystalline petals and fire beams from its conical body.
+IoPokedex = When this Pokémon detects danger, it will open up its crystalline petals and fire beams from its conical body.
 Generation = 9
 #-------------------------------
 [GREAVARD]
@@ -1896,7 +1907,7 @@ Color = White
 Shape = Quadruped
 Habitat = Mountain
 Category = Ghost Dog
-Pokedex = It is said that a dog Pokémon that died in the wild without ever interacting with a human was reborn as this Pokémon.
+IoPokedex = It is said that a dog Pokémon that died in the wild without ever interacting with a human was reborn as this Pokémon.
 Generation = 9
 Evolutions = HOUNDSTONE,LevelNight,30
 #-------------------------------
@@ -1922,7 +1933,7 @@ Color = White
 Shape = Quadruped
 Habitat = Mountain
 Category = Ghost Dog
-Pokedex = Houndstone spends most of its time sleeping in graveyards. Among all the dog Pokémon, this one is most loyal to its master.
+IoPokedex = Houndstone spends most of its time sleeping in graveyards. Among all the dog Pokémon, this one is most loyal to its master.
 Generation = 9
 #-------------------------------
 [FLAMIGO]
@@ -1948,7 +1959,7 @@ Color = Pink
 Shape = Winged
 Habitat = WatersEdge
 Category = Synchronize
-Pokedex = This Pokémon apparently ties the base of its neck into a knot so that energy stored in its belly does not escape from its beak.
+IoPokedex = This Pokémon apparently ties the base of its neck into a knot so that energy stored in its belly does not escape from its beak.
 Generation = 9
 #-------------------------------
 [CETODDLE]
@@ -1974,7 +1985,7 @@ Color = White
 Shape = BipedalTail
 Habitat = Mountain
 Category = Terra Whale
-Pokedex = This species left the ocean and began living on land a very long time ago. It seems to be closely related to Wailmer.
+IoPokedex = This species left the ocean and began living on land a very long time ago. It seems to be closely related to Wailmer.
 Generation = 9
 Evolutions = CETITAN,Item,ICESTONE
 #-------------------------------
@@ -2000,7 +2011,7 @@ Color = White
 Shape = BipedalTail
 Habitat = Mountain
 Category = Terra Whale
-Pokedex = This Pokémon wanders around snowy, icy areas. It protects its body with powerful muscles and a thick layer of fat under its skin.
+IoPokedex = This Pokémon wanders around snowy, icy areas. It protects its body with powerful muscles and a thick layer of fat under its skin.
 Generation = 9
 #-------------------------------
 [VELUZA]
@@ -2026,7 +2037,7 @@ Color = Gray
 Shape = Finned
 Habitat = Sea
 Category = Jettison
-Pokedex = When Veluza discards unnecessary flesh, its mind becomes honed and its psychic power increases. The spare flesh has a mild but delicious flavor.
+IoPokedex = When Veluza discards unnecessary flesh, its mind becomes honed and its psychic power increases. The spare flesh has a mild but delicious flavor.
 Generation = 9
 #-------------------------------
 [DONDOZO]
@@ -2052,7 +2063,7 @@ Color = Blue
 Shape = Finned
 Habitat = Sea
 Category = Big Catfish
-Pokedex = This Pokémon is a glutton, but it’s bad at getting food. It teams up with a Tatsugiri to catch prey.
+IoPokedex = This Pokémon is a glutton, but it’s bad at getting food. It teams up with a Tatsugiri to catch prey.
 Generation = 9
 #-------------------------------
 [TATSUGIRI]
@@ -2079,7 +2090,7 @@ Color = Pink
 Shape = Serpentine
 Habitat = Sea
 Category = Mimicry
-Pokedex = This is a small dragon Pokémon. It lives inside the mouth of Dondozo to protect itself from enemies on the outside.
+IoPokedex = This is a small dragon Pokémon. It lives inside the mouth of Dondozo to protect itself from enemies on the outside.
 Generation = 9
 #-------------------------------
 [ANNIHILAPE]
@@ -2104,7 +2115,7 @@ Color = Gray
 Shape = BipedalTail
 Habitat = Mountain
 Category = Rage Monkey
-Pokedex = When its anger rose beyond a critical point, this Pokémon gained power that is unfettered by the limits of its physical body.
+IoPokedex = When its anger rose beyond a critical point, this Pokémon gained power that is unfettered by the limits of its physical body.
 Generation = 9
 #-------------------------------
 [CLODSIRE]
@@ -2129,7 +2140,7 @@ Color = Brown
 Shape = Quadruped
 Habitat = WatersEdge
 Category = Spiny Fish
-Pokedex = When attacked, this Pokémon will retaliate by sticking thick spines out from its body. It’s a risky move that puts everything on the line.
+IoPokedex = When attacked, this Pokémon will retaliate by sticking thick spines out from its body. It’s a risky move that puts everything on the line.
 Generation = 9
 Flags = DefaultForm_1,InheritFormWithEverStone
 #-------------------------------
@@ -2155,7 +2166,7 @@ Color = Brown
 Shape = Quadruped
 Habitat = Grassland
 Category = Long Neck
-Pokedex = Now that the brain waves from the head and tail are synced up, the psychic power of this Pokémon is 10 times stronger than Girafarig’s.
+IoPokedex = Now that the brain waves from the head and tail are synced up, the psychic power of this Pokémon is 10 times stronger than Girafarig’s.
 Generation = 9
 #-------------------------------
 [DUDUNSPARCE]
@@ -2181,7 +2192,7 @@ Color = Yellow
 Shape = Serpentine
 Habitat = Cave
 Category = Land Snake
-Pokedex = This Pokémon uses its hard tail to make its nest by boring holes into bedrock deep underground. The nest can reach lengths of over six miles.
+IoPokedex = This Pokémon uses its hard tail to make its nest by boring holes into bedrock deep underground. The nest can reach lengths of over six miles.
 Generation = 9
 #-------------------------------
 [KINGAMBIT]
@@ -2206,7 +2217,7 @@ Color = Black
 Shape = Bipedal
 Habitat = RoughTerrain
 Category = Big Blade
-Pokedex = Only a Bisharp that stands above all others in its vast army can evolve into Kingambit.
+IoPokedex = Only a Bisharp that stands above all others in its vast army can evolve into Kingambit.
 Generation = 9
 #-------------------------------
 [GREATTUSK]
@@ -2230,7 +2241,7 @@ Color = Purple
 Shape = Quadruped
 Habitat = Rare
 Category = Paradox
-Pokedex = Sightings of this Pokémon have occurred in recent years. The name Great Tusk was taken from a creature listed in a certain book.
+IoPokedex = Sightings of this Pokémon have occurred in recent years. The name Great Tusk was taken from a creature listed in a certain book.
 Generation = 9
 Flags = Paradox
 WildItemUncommon = BOOSTERENERGY
@@ -2256,7 +2267,7 @@ Color = Pink
 Shape = Bipedal
 Habitat = Rare
 Category = Paradox
-Pokedex = There has been only one reported sighting of this Pokémon. It resembles a mysterious creature depicted in an old expedition journal.
+IoPokedex = There has been only one reported sighting of this Pokémon. It resembles a mysterious creature depicted in an old expedition journal.
 Generation = 9
 Flags = Paradox
 WildItemUncommon = BOOSTERENERGY
@@ -2282,7 +2293,7 @@ Color = Gray
 Shape = HeadArms
 Habitat = Rare
 Category = Paradox
-Pokedex = It is possible that the creature listed as Brute Bonnet in a certain book could actually be this Pokémon.
+IoPokedex = It is possible that the creature listed as Brute Bonnet in a certain book could actually be this Pokémon.
 Generation = 9
 Flags = Paradox
 WildItemUncommon = BOOSTERENERGY
@@ -2308,7 +2319,7 @@ Color = Gray
 Shape = Head
 Habitat = Rare
 Category = Paradox
-Pokedex = This Pokémon has characteristics similar to those of Flutter Mane, a creature mentioned in a certain book.
+IoPokedex = This Pokémon has characteristics similar to those of Flutter Mane, a creature mentioned in a certain book.
 Generation = 9
 Flags = Paradox
 WildItemUncommon = BOOSTERENERGY
@@ -2334,7 +2345,7 @@ Color = Red
 Shape = MultiWinged
 Habitat = Rare
 Category = Paradox
-Pokedex = This mysterious Pokémon has some similarities to a creature that an old book introduced as Slither Wing.
+IoPokedex = This mysterious Pokémon has some similarities to a creature that an old book introduced as Slither Wing.
 Generation = 9
 Flags = Paradox
 WildItemUncommon = BOOSTERENERGY
@@ -2360,7 +2371,7 @@ Color = Gray
 Shape = MultiBody
 Habitat = Rare
 Category = Paradox
-Pokedex = No records exist of this Pokémon being caught. Data is lacking, but the Pokémon’s traits match up with a creature shown in an expedition journal.
+IoPokedex = No records exist of this Pokémon being caught. Data is lacking, but the Pokémon’s traits match up with a creature shown in an expedition journal.
 Generation = 9
 Flags = Paradox
 WildItemUncommon = BOOSTERENERGY
@@ -2386,7 +2397,7 @@ Color = Gray
 Shape = Quadruped
 Habitat = Rare
 Category = Paradox
-Pokedex = This Pokémon closely resembles a scientific weapon that a paranormal magazine claimed was sent to this planet by aliens.
+IoPokedex = This Pokémon closely resembles a scientific weapon that a paranormal magazine claimed was sent to this planet by aliens.
 Generation = 9
 Flags = Paradox
 WildItemUncommon = BOOSTERENERGY
@@ -2412,7 +2423,7 @@ Color = Red
 Shape = Winged
 Habitat = Rare
 Category = Paradox
-Pokedex = Its shape is similar to a robot featured in a paranormal magazine article. The robot was said to have been created by an ancient civilization.
+IoPokedex = Its shape is similar to a robot featured in a paranormal magazine article. The robot was said to have been created by an ancient civilization.
 Generation = 9
 Flags = Paradox
 WildItemUncommon = BOOSTERENERGY
@@ -2438,7 +2449,7 @@ Color = Gray
 Shape = Bipedal
 Habitat = Rare
 Category = Paradox
-Pokedex = It is very similar to a cyborg covered exclusively by a paranormal magazine. The cyborg was said to be the modified form of a certain athlete.
+IoPokedex = It is very similar to a cyborg covered exclusively by a paranormal magazine. The cyborg was said to be the modified form of a certain athlete.
 Generation = 9
 Flags = Paradox
 WildItemUncommon = BOOSTERENERGY
@@ -2464,7 +2475,7 @@ Color = Blue
 Shape = BipedalTail
 Habitat = Rare
 Category = Paradox
-Pokedex = It resembles a certain Pokémon introduced in a paranormal magazine, described as the offspring of a Hydreigon that fell in love with a robot.
+IoPokedex = It resembles a certain Pokémon introduced in a paranormal magazine, described as the offspring of a Hydreigon that fell in love with a robot.
 Generation = 9
 Flags = Paradox
 WildItemUncommon = BOOSTERENERGY
@@ -2490,7 +2501,7 @@ Color = Yellow
 Shape = MultiWinged
 Habitat = Rare
 Category = Paradox
-Pokedex = This Pokémon resembles an unknown object described in a paranormal magazine as a UFO sent to observe humanity.
+IoPokedex = This Pokémon resembles an unknown object described in a paranormal magazine as a UFO sent to observe humanity.
 Generation = 9
 Flags = Paradox
 WildItemUncommon = BOOSTERENERGY
@@ -2516,7 +2527,7 @@ Color = Green
 Shape = BipedalTail
 Habitat = Rare
 Category = Paradox
-Pokedex = It has some similarities to a Pokémon introduced in a dubious magazine as a Tyranitar from one billion years into the future.
+IoPokedex = It has some similarities to a Pokémon introduced in a dubious magazine as a Tyranitar from one billion years into the future.
 Generation = 9
 Flags = Paradox
 WildItemUncommon = BOOSTERENERGY
@@ -2544,7 +2555,7 @@ Color = Gray
 Shape = BipedalTail
 Habitat = Mountain
 Category = Ice Fin
-Pokedex = Frigibax absorbs heat through its dorsal fin and converts the heat into ice energy. The higher the temperature, the more energy Frigibax stores.
+IoPokedex = Frigibax absorbs heat through its dorsal fin and converts the heat into ice energy. The higher the temperature, the more energy Frigibax stores.
 Generation = 9
 Evolutions = ARCTIBAX,Level,35
 #-------------------------------
@@ -2570,7 +2581,7 @@ Color = Gray
 Shape = BipedalTail
 Habitat = Mountain
 Category = Ice Fin
-Pokedex = Arctibax freezes the air around it, protecting its face with an ice mask and turning its dorsal fin into a blade of ice.
+IoPokedex = Arctibax freezes the air around it, protecting its face with an ice mask and turning its dorsal fin into a blade of ice.
 Generation = 9
 Evolutions = BAXCALIBUR,Level,54
 #-------------------------------
@@ -2596,7 +2607,7 @@ Color = Gray
 Shape = BipedalTail
 Habitat = Mountain
 Category = Ice Dragon
-Pokedex = This Pokémon blasts cryogenic air out from its mouth. This air can instantly freeze even liquid-hot lava.
+IoPokedex = This Pokémon blasts cryogenic air out from its mouth. This air can instantly freeze even liquid-hot lava.
 Generation = 9
 #-------------------------------
 [GIMMIGHOUL]
@@ -2621,7 +2632,7 @@ Color = Brown
 Shape = Head
 Habitat = Urban
 Category = Coin Chest
-Pokedex = This Pokémon was born inside a treasure chest about 1,500 years ago. It sucks the life-force out of scoundrels who try to steal the treasure.
+IoPokedex = This Pokémon was born inside a treasure chest about 1,500 years ago. It sucks the life-force out of scoundrels who try to steal the treasure.
 Generation = 9
 Evolutions = GHOLDENGO,CollectItems,GIMMIGHOULCOIN
 #-------------------------------
@@ -2646,7 +2657,7 @@ Color = Yellow
 Shape = Bipedal
 Habitat = Urban
 Category = Coin Entity
-Pokedex = Its body seems to be made up of 1,000 coins. This Pokémon gets along well with others and is quick to make friends with anybody.
+IoPokedex = Its body seems to be made up of 1,000 coins. This Pokémon gets along well with others and is quick to make friends with anybody.
 Generation = 9
 #-------------------------------
 [WOCHIEN]
@@ -2670,7 +2681,7 @@ Color = Brown
 Shape = Serpentine
 Habitat = Rare
 Category = Ruinous
-Pokedex = The grudge of a person punished for writing the king’s evil deeds upon wooden tablets has clad itself in dead leaves to become a Pokémon.
+IoPokedex = The grudge of a person punished for writing the king’s evil deeds upon wooden tablets has clad itself in dead leaves to become a Pokémon.
 Generation = 9
 Flags = Legendary
 #-------------------------------
@@ -2695,7 +2706,7 @@ Color = White
 Shape = Quadruped
 Habitat = Rare
 Category = Ruinous
-Pokedex = This Pokémon can control 100 tons of fallen snow. It plays around innocently by leaping in and out of avalanches it has caused.
+IoPokedex = This Pokémon can control 100 tons of fallen snow. It plays around innocently by leaping in and out of avalanches it has caused.
 Generation = 9
 Flags = Legendary
 #-------------------------------
@@ -2720,7 +2731,7 @@ Color = Brown
 Shape = Quadruped
 Habitat = Rare
 Category = Ruinous
-Pokedex = The fear poured into an ancient ritual vessel has clad itself in rocks and dirt to become a Pokémon.
+IoPokedex = The fear poured into an ancient ritual vessel has clad itself in rocks and dirt to become a Pokémon.
 Generation = 9
 Flags = Legendary
 #-------------------------------
@@ -2745,7 +2756,7 @@ Color = Red
 Shape = Finned
 Habitat = Rare
 Category = Ruinous
-Pokedex = It controls flames burning at over 5,400 degrees Fahrenheit. It casually swims through the sea of lava it creates by melting rock and sand.
+IoPokedex = It controls flames burning at over 5,400 degrees Fahrenheit. It casually swims through the sea of lava it creates by melting rock and sand.
 Generation = 9
 Flags = Legendary
 #-------------------------------
@@ -2770,7 +2781,7 @@ Color = Blue
 Shape = Quadruped
 Habitat = Rare
 Category = Paradox
-Pokedex = It is possible that this is the creature listed as Roaring Moon in an expedition journal that still holds many mysteries.
+IoPokedex = It is possible that this is the creature listed as Roaring Moon in an expedition journal that still holds many mysteries.
 Generation = 9
 Flags = Paradox
 WildItemUncommon = BOOSTERENERGY
@@ -2796,7 +2807,7 @@ Color = White
 Shape = Bipedal
 Habitat = Rare
 Category = Paradox
-Pokedex = It has some similarities to a mad scientist’s invention covered in a paranormal magazine.
+IoPokedex = It has some similarities to a mad scientist’s invention covered in a paranormal magazine.
 Generation = 9
 Flags = Paradox
 WildItemUncommon = BOOSTERENERGY
@@ -2822,7 +2833,7 @@ Color = Red
 Shape = Quadruped
 Habitat = Rare
 Category = Paradox
-Pokedex = This seems to be the Winged King mentioned in an old expedition journal. It was said to have split the land with its bare fists.
+IoPokedex = This seems to be the Winged King mentioned in an old expedition journal. It was said to have split the land with its bare fists.
 Generation = 9
 Flags = Paradox,Legendary
 #-------------------------------
@@ -2847,7 +2858,7 @@ Color = Blue
 Shape = Quadruped
 Habitat = Rare
 Category = Paradox
-Pokedex = Much remains unknown about this creature. It resembles Cyclizar, but it is far more ruthless and powerful.
+IoPokedex = Much remains unknown about this creature. It resembles Cyclizar, but it is far more ruthless and powerful.
 Generation = 9
 Flags = Paradox,Legendary
 #-------------------------------
@@ -2872,7 +2883,7 @@ Color = Blue
 Shape = BipedalTail
 Habitat = Rare
 Category = Paradox
-Pokedex = This ferocious creature is shrouded in mystery. It's named after an aquatic monster mentioned in an old expedition journal.
+IoPokedex = This ferocious creature is shrouded in mystery. It's named after an aquatic monster mentioned in an old expedition journal.
 Generation = 9
 Flags = Paradox
 #-------------------------------
@@ -2897,7 +2908,7 @@ Color = Green
 Shape = Quadruped
 Habitat = Rare
 Category = Paradox
-Pokedex = According to the few eyewitness accounts that exist, it used its shining blades to julienne large trees and boulders.
+IoPokedex = According to the few eyewitness accounts that exist, it used its shining blades to julienne large trees and boulders.
 Generation = 9
 Flags = Paradox
 #-------------------------------
@@ -2923,7 +2934,7 @@ Color = Green
 Shape = Head
 Habitat = Forest
 Category = Candy Apple
-Pokedex = The head sticking out belongs to the fore-wyrm, while the tail belongs to the core-wyrm. The two share one apple and help each other out.
+IoPokedex = The head sticking out belongs to the fore-wyrm, while the tail belongs to the core-wyrm. The two share one apple and help each other out.
 Generation = 9
 Evolutions = HYDRAPPLE,HasMove,DRAGONCHEER
 #-------------------------------
@@ -2950,7 +2961,7 @@ Color = Green
 Shape = Head
 Habitat = Urban
 Category = Matcha
-Pokedex = Supposedly, the regrets of a tea ceremony master who died before perfecting his craft lingered in some matcha and became a Pokémon.
+IoPokedex = Supposedly, the regrets of a tea ceremony master who died before perfecting his craft lingered in some matcha and became a Pokémon.
 Generation = 9
 Evolutions = SINISTCHA,Item,UNREMARKABLETEACUP
 #-------------------------------
@@ -2977,7 +2988,7 @@ Color = Green
 Shape = Head
 Habitat = Urban
 Category = Matcha
-Pokedex = It pretends to be tea, trying to fool people into drinking it so it can drain their life-force. Its ruse is generally unsuccessful.
+IoPokedex = It pretends to be tea, trying to fool people into drinking it so it can drain their life-force. Its ruse is generally unsuccessful.
 Generation = 9
 #-------------------------------
 [OKIDOGI]
@@ -3002,7 +3013,7 @@ Color = Black
 Shape = BipedalTail
 Habitat = Rare
 Category = Retainer
-Pokedex = After all its muscles were stimulated by the toxic chain around its neck, Okidogi transformed and gained a powerful physique.
+IoPokedex = After all its muscles were stimulated by the toxic chain around its neck, Okidogi transformed and gained a powerful physique.
 Generation = 9
 Flags = Legendary
 #-------------------------------
@@ -3028,7 +3039,7 @@ Color = Black
 Shape = Bipedal
 Habitat = Rare
 Category = Retainer
-Pokedex = The chain is made from toxins that enhance capabilities. It stimulated Munkidori's brain and caused the Pokémon's psychic powers to bloom.
+IoPokedex = The chain is made from toxins that enhance capabilities. It stimulated Munkidori's brain and caused the Pokémon's psychic powers to bloom.
 Generation = 9
 Flags = Legendary
 #-------------------------------
@@ -3054,7 +3065,7 @@ Color = Black
 Shape = Winged
 Habitat = Rare
 Category = Retainer
-Pokedex = Fezandipiti owes its beautiful looks and lovely voice to the toxic stimulants emanating from the chain wrapped around its body.
+IoPokedex = Fezandipiti owes its beautiful looks and lovely voice to the toxic stimulants emanating from the chain wrapped around its body.
 Generation = 9
 Flags = Legendary
 #-------------------------------
@@ -3080,7 +3091,7 @@ Color = Green
 Shape = Bipedal
 Habitat = Rare
 Category = Mask
-Pokedex = This Pokémon's type changes based on which mask it's wearing. It confounds its enemies with nimble movements and kicks.
+IoPokedex = This Pokémon's type changes based on which mask it's wearing. It confounds its enemies with nimble movements and kicks.
 Generation = 9
 Flags = Legendary,TeraType_GRASS
 #-------------------------------
@@ -3106,7 +3117,7 @@ Color = White
 Shape = BipedalTail
 Habitat = Mountain
 Category = Alloy
-Pokedex = It digs holes on mountains, searching for food. It’s so durable that being caught in a cave-in won’t faze it.
+IoPokedex = It digs holes on mountains, searching for food. It’s so durable that being caught in a cave-in won’t faze it.
 Generation = 9
 #-------------------------------
 [HYDRAPPLE]
@@ -3131,7 +3142,7 @@ Color = Green
 Shape = MultiBody
 Habitat = Forest
 Category = Apple Hydra
-Pokedex = Seven syrpents live inside an apple made of syrup. The syrpent in the center is the commander.
+IoPokedex = Seven syrpents live inside an apple made of syrup. The syrpent in the center is the commander.
 Generation = 9
 #-------------------------------
 [GOUGINGFIRE]
@@ -3155,7 +3166,7 @@ Color = Brown
 Shape = Quadruped
 Habitat = Rare
 Category = Paradox
-Pokedex = There are scant few reports of this creature being sighted. One short video shows it rampaging and spouting pillars of flame.
+IoPokedex = There are scant few reports of this creature being sighted. One short video shows it rampaging and spouting pillars of flame.
 Generation = 9
 Flags = Paradox
 #-------------------------------
@@ -3180,7 +3191,7 @@ Color = Yellow
 Shape = Quadruped
 Habitat = Rare
 Category = Paradox
-Pokedex = It's said to incinerate everything around it with lightning launched from its fur. Very little is known about this creature.
+IoPokedex = It's said to incinerate everything around it with lightning launched from its fur. Very little is known about this creature.
 Generation = 9
 Flags = Paradox
 #-------------------------------
@@ -3205,7 +3216,7 @@ Color = Gray
 Shape = Quadruped
 Habitat = Rare
 Category = Paradox
-Pokedex = It was named after a mysterious object recorded in an old book. Its body seems to be metallic.
+IoPokedex = It was named after a mysterious object recorded in an old book. Its body seems to be metallic.
 Generation = 9
 Flags = Paradox
 #-------------------------------
@@ -3230,7 +3241,7 @@ Color = Blue
 Shape = Quadruped
 Habitat = Rare
 Category = Paradox
-Pokedex = There was supposedly an incident in which it launched shining blades to cut everything around it to pieces. Little else is known about it.
+IoPokedex = There was supposedly an incident in which it launched shining blades to cut everything around it to pieces. Little else is known about it.
 Generation = 9
 Flags = Paradox
 #-------------------------------
@@ -3256,7 +3267,7 @@ Color = Blue
 Shape = Quadruped
 Habitat = Rare
 Category = Tera
-Pokedex = Terapagos protects itself using its power to transform energy into hard crystals. This Pokémon is the source of the Terastal phenomenon.
+IoPokedex = Terapagos protects itself using its power to transform energy into hard crystals. This Pokémon is the source of the Terastal phenomenon.
 Generation = 9
 Flags = Legendary,TeraType_STELLAR
 #-------------------------------
@@ -3281,6 +3292,6 @@ Color = Purple
 Shape = HeadArms
 Habitat = Rare
 Category = Subjugation
-Pokedex = It feeds others toxic mochi that draw out desires and capabilities. Those who eat the mochi fall under Pecharunt's control, chained to its will.
+IoPokedex = It feeds others toxic mochi that draw out desires and capabilities. Those who eat the mochi fall under Pecharunt's control, chained to its will.
 Generation = 9
 Flags = Mythical

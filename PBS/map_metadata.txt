@@ -456,14 +456,16 @@ Environment = ForestGrass
 Name = Tulphoise City
 Outdoor = true
 ShowArea = true
+HealingSpot = 78,26,17
 MapPosition = 1,9,11
 BattleBack = city
+MapSize = 2,11
 #-------------------------------
 [079]   # Tulphoise Café
 Name = Tulphoise Café
 MapPosition = 1,9,11
 #-------------------------------
-[080]   # Tulphoise Town Mart
+[080]   # Tulphoise City Mart
 Name = Tulphoise Town Mart
 MapPosition = 1,9,11
 #-------------------------------
@@ -488,8 +490,9 @@ MapPosition = 1,9,11
 Name = Fenne Ruins
 Outdoor = true
 ShowArea = true
-MapPosition = 1,11,11
+MapPosition = 1,11,10
 BattleBack = field
+MapSize = 2,1011
 Environment = Grass
 #-------------------------------
 [089]   # Daiseye Town
@@ -514,3 +517,21 @@ Environment = ForestGrass
 Name = Lassula City
 Outdoor = true
 ShowArea = true
+HealingSpot = 92,15,26
+MapPosition = 1,11,9
+#-------------------------------
+[093]   # Lassula City Poké Center
+Name = Lassula City Poké Center
+MapPosition = 1,11,9
+#-------------------------------
+[094]   # Lassula City Mart
+Name = Lassula City Mart
+MapPosition = 1,11,9
+#-------------------------------
+[095]   # Lassula City Gym
+Name = Lassula City Gym
+MapPosition = 1,11,9
+#-------------------------------
+[097]   # Lassula Café
+Name = Lassula Café
+MapPosition = 1,11,9

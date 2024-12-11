@@ -1,0 +1,161 @@
+﻿# See the documentation on the wiki to learn how to edit this file.
+#-------------------------------
+[022] # Pinella Town
+Land,21
+    33,ESPURR,2,4
+    33,LILLIPUP,2,4
+    33,TANDEMAUS,3,5
+    1,QUAXLY,5
+OldRod
+    80,MAGIKARP,5,10
+    20,LOTAD,5,10
+GoodRod
+    80,MAGIKARP,10,30
+    20,LOTAD,10,30
+SuperRod
+    80,MAGIKARP,30,45
+    20,LOTAD,30,45
+#-------------------------------
+[022,1] # Pinella Town
+Land,21
+    33,ESPURR,70
+    33,LILLIPUP,70
+    33,TANDEMAUS,70
+    1,QUAXLY,70
+OldRod
+    80,MAGIKARP,5,10
+    20,LOTAD,5,10
+GoodRod
+    80,MAGIKARP,10,30
+    20,LOTAD,10,30
+SuperRod
+    80,MAGIKARP,30,45
+    20,LOTAD,30,45
+#-------------------------------
+[043] # Tulpha Grove
+Land,21
+    25,CATERPIE,2,3
+    25,WEEDLE,2,3
+    15,FLETCHLING,4
+    10,KAKUNA,3,4
+    10,PIKACHU,4,5
+    5,PANPOUR,4,5
+    5,PANSAGE,4,5
+    5,PANSEAR,4,5
+#-------------------------------
+[043,1] # Tulpha Grove
+Land,21
+    25,CATERPIE,70
+    25,WEEDLE,70
+    15,FLETCHLING,70
+    10,KAKUNA,70
+    10,PIKACHU,70
+    5,PANPOUR,70
+    5,PANSAGE,70
+    5,PANSEAR,70
+#-------------------------------
+[048] # Pinella Fields
+LandDay,21
+    25,CHICKATOO,2,3
+    25,CRIVOLE,2,3
+    20,ROLLVA,2,3
+    15,CHICKATOO,3,4
+    15,CRIVOLE,3,4
+LandNight,21
+    25,CHICKATOO,2,3
+    25,QUILTOX,2,3
+    20,ROLLVA,2,3
+    15,CHICKATOO,3,4
+    15,QUILTOX,3,4
+#-------------------------------
+[048,1] # Pinella Fields
+LandDay,21
+    40,CHICKATOO,70
+    40,CRIVOLE,70
+    20,ROLLVA,70
+LandNight,21
+    40,CHICKATOO,70
+    40,QUILTOX,70
+    20,ROLLVA,70
+#-------------------------------
+[076] # Tulpha Grove
+Land,21
+    25,CATERPIE,2,3
+    25,WEEDLE,2,3
+    15,FLETCHLING,4
+    10,KAKUNA,3,4
+    10,PIKACHU,4,5
+    5,PANPOUR,4,5
+    5,PANSAGE,4,5
+    5,PANSEAR,4,5
+#-------------------------------
+[076,1] # Tulpha Grove
+Land,21
+    25,CATERPIE,70
+    25,WEEDLE,70
+    15,FLETCHLING,70
+    10,KAKUNA,70
+    10,PIKACHU,70
+    5,PANPOUR,70
+    5,PANSAGE,70
+    5,PANSEAR,70
+#-------------------------------
+[078] # Tulphoise City
+Land,21
+    75,SMOLIV,3,4
+    25,NACLI,4,5
+#-------------------------------
+[078,1] # Tulphoise City
+Land,21
+    75,SMOLIV,70
+    25,NACLI,70
+#-------------------------------
+[087] # Fenne Ruins
+Land,21
+    20,ARACANVAS,5,6
+    20,BUNCHKIN,5,6
+    5,FENNEKIN,6,7
+OldRod
+    60,CHEWTLE,5,10
+    39,ARROKUDA,5,10
+    1,FEEBAS,5,10
+GoodRod
+    60,CHEWTLE,10,30
+    39,ARROKUDA,10,30
+    1,FEEBAS,10,30
+SuperRod
+    60,CHEWTLE,30,45
+    39,ARROKUDA,30,45
+    1,FEEBAS,30,45
+#-------------------------------
+[087,1] # Fenne Ruins
+Land,21
+    20,ARACANVAS,70
+    20,BUNCHKIN,70
+    5,FENNEKIN,70
+OldRod
+    60,CHEWTLE,5,10
+    39,ARROKUDA,5,10
+    1,FEEBAS,5,10
+GoodRod
+    60,CHEWTLE,10,30
+    39,ARROKUDA,10,30
+    1,FEEBAS,10,30
+SuperRod
+    60,CHEWTLE,30,45
+    39,ARROKUDA,30,45
+    1,FEEBAS,30,45
+#-------------------------------
+[092] # Lassula City
+OldRod
+    60,TENTACOOL,5,10
+    30,UGLISH,5,10
+    10,PUFFONO,5,10
+GoodRod
+    60,TENTACOOL,10,30
+    30,UGLISH,10,30
+    10,PUFFONO,10,30
+SuperRod
+    60,TENTACOOL,30,45
+    30,UGLISH,30,45
+    10,PUFFONO,30,45

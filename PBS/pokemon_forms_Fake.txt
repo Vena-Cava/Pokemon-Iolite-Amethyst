@@ -10,7 +10,8 @@ EVs = ATTACK,1
 Moves = 1,GRUDGE
 Color = Green
 Category = Necro
-Pokedex = Abra had gone extinct in Nordra long ago, but one day, they began to mysteriously reanimate. This process has left them with little-to-no brainpower however, rendering them unable to float.
+IoPokedex = Abra had gone extinct in Nordra long ago, but one day, they began to mysteriously reanimate. This process has left them with little-to-no brainpower however, rendering them unable to float.
+AmPokedex = Without the brainpower it once had, it's unable to float, or use much of its psychic power. Rigor mortis has left it stiff and strong, it now attacks with its body instead of its mind.
 #-------------------------------
 [PETILIL,2]
 FormName = Niphosian
@@ -38,7 +39,8 @@ Abilities = IRONBARBS
 EVs = DEFENSE,3
 BaseStats = 45,140,140,25,120,130
 Height = 2.9
-Pokedex = Increased defenses means Puffono sacrifices mobility, so it cannot outrun predators, instead it has to hope it gets bored and leaves.
+IoPokedex = Increased defenses means Puffono sacrifices mobility, so it cannot outrun predators, instead it has to hope it gets bored and leaves.
+AmPokedex = Puffono's scales and spikes have become so tough that they can pierce the hull of steel ships. They've earned the nickname "The Living Mine" amongst sailors.
 #-------------------------------
 [SYLVSTAG,1]
 FormName = Mega Sylvstag
@@ -49,6 +51,8 @@ Abilities = GRASSPELT
 HiddenAbilities = GRASSPELT
 Height = 2.2
 Weight = 155.5
+IoPokedex = The magic of the woods now infests Sylvstag, granting it immense power. That power however, comes at the cost of pure, unwieldy rage.
+AmPokedex = Its amplified body has caused the plants on its body to grow quickly. Wooloo and Mareep tend to get stuck in its thorns, serving as fuel for it.
 #-------------------------------
 [OGLACE,1]
 FormName = Mega Oglace
@@ -59,5 +63,6 @@ Abilities = BRITTLEIRON
 HiddenAbilities = BRITTLEIRON
 Height = 2.2
 Weight = 155.5
-Pokedex = Text
+IoPokedex = Mega Evolution has caused Oglace's Icicle to become fused to its hand and has changed shape to resemble a giant spiked hammer.
+AmPokedex = Ice has overtaken Oglace's entire backside, making it extremely painful to walk effectively. They rely on Goblice or other Oglace to help.
 #-------------------------------
