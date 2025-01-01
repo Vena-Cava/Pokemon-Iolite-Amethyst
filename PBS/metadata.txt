@@ -13,7 +13,7 @@ SurfBGM = Surfing
 BicycleBGM = Bicycle
 #-------------------------------
 [1]
-TrainerType = POKEMONTRAINER_Red
+TrainerType = POKEMONTRAINER_Micah
 WalkCharset = IA Characters/trAProtag_BoyWalk
 RunCharset = IA Characters/trAProtag_BoyRun
 CycleCharset = B2W2 Protagonists/trProtag_BoyBike
@@ -23,7 +23,7 @@ FishCharset = B2W2 Protagonists/trProtag_BoyFish
 SurfFishCharset = B2W2 Protagonists/trProtag_BoyFish
 #-------------------------------
 [2]
-TrainerType = POKEMONTRAINER_Leaf
+TrainerType = POKEMONTRAINER_Amber
 WalkCharset = IA Characters/trAProtag_GirlWalk
 RunCharset = B2W2 Protagonists/trProtag_GirlRun
 CycleCharset = B2W2 Protagonists/trProtag_GirlBike

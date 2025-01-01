@@ -2817,7 +2817,7 @@ CatchRate = 45
 Happiness = 50
 Abilities = LETHALLEGS,RECKLESS
 HiddenAbilities = UNBURDEN
-Moves = 0,BRICKBREAK,1,FEINT,1,LOWSWEEP,1,TACKLE,1,HELPINGHAND,1,FAKEOUT,1,FOCUSENERGY,4,DOUBLEKICK,8,LOWKICK,12,ENDURE,16,REVENGE,21,WIDEGUARD,24,BLAZEKICK,28,MINDREADER,32,MEGAKICK,36,CLOSECOMBAT,40,REVERSAL,44,HIGHJUMPKICK
+Moves = 0,BRICKBREAK,1,LOWSWEEP,1,TACKLE,1,HELPINGHAND,1,FAKEOUT,1,FOCUSENERGY,4,DOUBLEKICK,8,LOWKICK,12,ENDURE,16,SUCKERPUNCH,21,WIDEGUARD,24,BLAZEKICK,28,FEINT,32,MEGAKICK,36,CLOSECOMBAT,40,REVERSAL,44,HIGHJUMPKICK,50,AXEKICK
 TutorMoves = ATTRACT,BRICKBREAK,BULKUP,BULLDOZE,DOUBLETEAM,EARTHQUAKE,ENDURE,FACADE,FLING,FOCUSBLAST,FOCUSPUNCH,LOWSWEEP,POISONJAB,PROTECT,RAINDANCE,REST,ROCKCLIMB,ROCKSLIDE,ROCKSMASH,ROCKTOMB,SLEEPTALK,STONEEDGE,STRENGTH,SUBSTITUTE,SUNNYDAY,SWAGGER,THIEF,WORKUP,COACHING
 EggGroups = Humanlike
 HatchSteps = 6400
@@ -2827,7 +2827,8 @@ Color = Brown
 Shape = Bipedal
 Habitat = Urban
 Category = Kicking
-IoPokedex = Its legs freely stretch and contract. Using these springlike limbs, it bowls over foes with devastating kicks. After battle, it rubs down its tired legs.
+IoPokedex = Hitmonlee's legs freely contract and stretch. Using these springlike legs, it bowls over foes with devastating kicks. After battle, it rubs down its legs and loosens the muscles to overcome fatigue.
+AmPokedex = 
 Generation = 1
 #-------------------------------
 [HITMONCHAN]
