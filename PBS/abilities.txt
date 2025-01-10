@@ -1170,3 +1170,7 @@ Description = The Pokémon's fermented internal liquid confuses attackers that u
 [BIOLUMINESENCE]
 Name = Bioluminesence
 Description = The Pokémon's Speed is doubled in the dark, but halved in harsh sunlight.
+#-------------------------------
+[RINGTOSS]
+Name = Ring Toss
+Description = Boosts the power of Fling by 50%. May also retrieve the flung item at the beginning of the next turn.

@@ -363,3 +363,85 @@ FunctionCode = None
 Flags = Contact,CanProtect,CanMirrorMove,Punching
 Description = The user releases pressurised pistons for a quick and powerful burst of an attack. It's sure to go first.
 #-------------------------------
+[ALARMCLOCK]
+Name = Alarm Clock
+Type = STEEL
+Category = Special
+Power = 20
+Accuracy = 100
+TotalPP = 10
+Target = AllNearOthers
+FunctionCode = DoublePowerIfTargetAsleepCureTarget
+Flags = CanProtect,CanMirrorMove,Sound
+Description = The user creates a terrible ringing noise, it will wake up any Pokémon that are hit.
+#-------------------------------
+[SPINKICK]
+Name = Spin Kick
+Type = FIGHTING
+Category = Physical
+Power = 80
+Accuracy = 100
+TotalPP = 10
+Target = NearOther
+FunctionCode = FlinchTarget
+Flags = Contact,CanProtect,CanMirrorMove,Kicking
+EffectChance = 30
+Description = The user swings their leg at the target at full force. It may also cause the target to flinch.
+#-------------------------------
+[SWARMSTORM]
+Name = Swarm Storm
+Type = BUG
+Category = Special
+Power = 100
+Accuracy = 100
+TotalPP = 10
+Target = AllNearOthers
+FunctionCode = None
+Flags = CanProtect,CanMirrorMove
+Description = The user summons a swarm of insects that bite and sting every Pokémon around it.
+#-------------------------------
+[QUICKTHINKING]
+Name = Quick Thinking
+Type = DARK
+Category = Status
+Accuracy = 0
+TotalPP = 10
+Target = User
+FunctionCode = RaiseUserSpAtkSpd1
+Flags = CanMirrorMove,ZPower_ResetStats
+Description = The user comes up with a devious plan and prepares to carry it out, raising their Special Attack and Speed by one stage.
+#-------------------------------
+[MAGLEVSWITCH]
+Name = Maglev Switch
+Type = ELECTRIC
+Category = Status
+Accuracy = 0
+TotalPP = 10
+Target = User
+FunctionCode = SwitchOutUserAirborne
+Flags = CantMaster,ZPower_HealUser
+Description = The user switches out, the Pokémon coming in will then be floating for the next 5 turns.
+#-------------------------------
+[POLLUTION]
+Name = Pollution
+Type = POISON
+Category = Special
+Power = 70
+Accuracy = 100
+TotalPP = 20
+Target = NearOther
+FunctionCode = SuperEffectiveAgainstWaterGround
+Flags = CanProtect,CanMirrorMove
+Description = A toxic liquid seeps out of the user that pollutes the environment. This move is super-effective against Water- and Ground-Type Pokémon.
+#-------------------------------
+[REFORGERY]
+Name = Reforgery
+Type = STEEL
+Category = Status
+Accuracy = 0
+TotalPP = 10
+Target = User
+FunctionCode = RaiseUserDefSpDef2BurnUser
+Flags = CanMirrorMove,ZPower_ResetStats
+Description = The Pokémon superheats and reforges their metal, sharply raising Defense and Special Defense but inflicting Burn on itself.
+#-------------------------------

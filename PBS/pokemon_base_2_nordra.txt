@@ -71,7 +71,7 @@ Color = Green
 Shape = Quadruped
 Habitat = Grassland
 Category = Forest Stag
-IoPokedex = With fully grown antlers, Sylvstag are premier defenders of the woods. Their velvet has a dense matted moss that has prime conditions for flowers to thrive.	
+IoPokedex = With fully grown antlers, Sylvstag are premier defenders of the woods. Their velvet has a dense matted moss that has prime conditions for flowers to thrive.,
 AmPokedex = It's a surprise that Sylvstag retain their antlers year-round. It's said that drinking vessels made from such contain a little bit of forest magic.
 #-------------------------------
 [SMOKIDD]
@@ -219,6 +219,56 @@ Habitat = WatersEdge
 Category = Sea Bear
 IoPokedex = Keeping their claws concealed, they choose to wield axes instead. They use them to guard Brakkub whilst teaching them how to fish.
 AmPokedex = Masters of shock tactics, Barbearien are not afraid to charge recklessly and roar loudly. Once their foes have scattered, they search for food.
+#-------------------------------
+[RATTOSSK]
+Name = Rattossk
+Types = DARK
+BaseStats = 45,54,40,45,30,40
+GenderRatio = Female50Percent
+GrowthRate = Medium
+BaseExp = 51
+EVs = ATTACK,1
+CatchRate = 255
+Happiness = 70
+Abilities = RINGTOSS,PICKUP
+HiddenAbilities = UNBURDEN
+Moves = 1,SCRATCH,1,TAILWHIP,5,BITE,8,STUFFCHEEKS,12,MUDSHOT,14,STOCKPILE,15,COVET,16,SWALLOW,16,SPITUP,18,DIG,23,FLING,26,MUDSHOT,27,STOMPINGTANTRUM,34,KNOCKOFF,38,SNATCH,42,NIGHTSLASH,48,EARTHQUAKE,54,BELCH
+EggGroups = Field
+HatchSteps = 3840
+Height = 0.3
+Weight = 2.5
+Color = Red
+Shape = BipedalTail
+Habitat = Forest
+Category = Tosser
+IoPokedex = It's not uncommon to find a Rattossk inciting arguments and infighting between other Pokémon, spreading deceit within the forests it calls home.
+AmPokedex = Rattossk collects things to throw at others from high up in the trees. While it keeps their territory defended, many larger Pokémon and most people see it as a nuisance.
+Evolutions = SCATTATOSSKR,LevelDay,25
+#-------------------------------
+[SCATTATOSSKR]
+Name = Scattatosskr
+Types = DARK,GROUND
+BaseStats = 76,106,64,96,76,71
+GenderRatio = Female50Percent
+GrowthRate = Medium
+BaseExp = 171
+EVs = ATTACK,2
+CatchRate = 127
+Happiness = 70
+Abilities = RINGTOSS,PICKUP
+HiddenAbilities = UNBURDEN
+Moves = 1,SCRATCH,1,TAILWHIP,5,BITE,8,STUFFCHEEKS,12,MUDSHOT,14,STOCKPILE,15,COVET,16,SWALLOW,16,SPITUP,18,DIG,23,FLING,26,MUDSHOT,27,STOMPINGTANTRUM,34,KNOCKOFF,38,SNATCH,42,NIGHTSLASH,48,EARTHQUAKE,54,BELCH
+EggGroups = Water1,Field
+HatchSteps = 3840
+Offspring = CRIVOLE
+Height = 1.1
+Weight = 46.3
+Color = Red
+Shape = BipedalTail
+Habitat = Forest
+Category = Mud Tosser
+IoPokedex = In historic texts, it was once believed that Scattatosskr brought mud and soil from other realms to increase crop yields. This has since been disproven.
+AmPokedex = Scattatosskr coats its tail in mud all morning long, it then climbs into trees and throws balls of mud at unsuspecting People and Pokémon below.
 #-------------------------------
 [STACKEM]
 Name = Stackem

@@ -766,9 +766,9 @@ NamePlural = TM077s
 Pocket = 4
 Price = 8000
 FieldUse = TR
-Move = WATERFALL
+Move = HIDDENPOWER
 Flags = Fling_80
-Description = The user charges at the target and may make it flinch. It can also be used to climb a waterfall.
+Description = A unique attack that varies in type depending on the Pokémon using it.
 #-------------------------------
 [TM078]
 Name = TM078
@@ -966,9 +966,9 @@ NamePlural = TM097s
 Pocket = 4
 Price = 5000
 FieldUse = TR
-Move = FLY
+Move = NATUREPOWER
 Flags = Fling_90
-Description = The user soars, then strikes on the second turn. It can also be used for flying to any familiar town.
+Description = This attack makes use of nature's power. Its effects vary depending on the user's environment.
 #-------------------------------
 [TM098]
 Name = TM098
@@ -1214,11 +1214,11 @@ Description = The user compels the target to keep using only the move it last us
 Name = TM123
 NamePlural = TM123s
 Pocket = 4
-Price = 10000
+Price = 3000
 FieldUse = TR
-Move = SURF
+Move = AROMATHERAPY
 Flags = Fling_90
-Description = It swamps the area around the user with a giant wave. It can also be used for crossing water.
+Description = The user releases a soothing scent that heals all status conditions affecting the user's party.
 #-------------------------------
 [TM124]
 Name = TM124
@@ -1689,6 +1689,16 @@ FieldUse = TR
 Move = STEELBEAM
 Flags = Fling_140
 Description = The user fires a beam of steel that it collected from its entire body. This also damages the user.
+#-------------------------------
+[TM171]
+Name = TM171
+NamePlural = TM171s
+Pocket = 4
+Price = 8,000
+FieldUse = TR
+Move = TERABLAST
+Flags = Fling_10
+Description = If the user has Terastallized, it unleashes energy of its Tera Type. This move inflicts damage using the Attack or Sp. Atk stat—whichever is higher for the user.
 #-------------------------------
 [TM172]
 Name = TM172
@@ -2269,3 +2279,133 @@ FieldUse = TR
 Move = UPPERHAND
 Flags = Fling_65
 Description = An attack that hits first and makes the target flinch. Fails if the target isn't using a high priority move.
+#-------------------------------
+[TM230]
+Name = TM230
+NamePlural = TM230s
+Pocket = 4
+Price = 1500
+FieldUse = TR
+Move = TERRAFIRMA
+Flags = Fling_65
+Description = The user opens a crevasse below the target that is too steep to escape, trapping them in battle.
+#-------------------------------
+[TM231]
+Name = TM231
+NamePlural = TM231s
+Pocket = 4
+Price = 1500
+FieldUse = TR
+Move = CHIBLOCK
+Flags = Fling_65
+Description = The user blocks the opponents Chi, protecting them and their allies from Special Moves.
+#-------------------------------
+[TM232]
+Name = TM232
+NamePlural = TM232s
+Pocket = 4
+Price = 1500
+FieldUse = TR
+Move = PREHENSILETONGUE
+Flags = Fling_65
+Description = The user controls their long, wet tongue to attack the target. This move is super-effective against Bug-Type Pokémon.
+#-------------------------------
+[TM233]
+Name = TM233
+NamePlural = TM233s
+Pocket = 4
+Price = 1500
+FieldUse = TR
+Move = ALARMCLOCK
+Flags = Fling_65
+Description = The user creates a terrible ringing noise, it will wake up any Pokémon that are hit.
+#-------------------------------
+[TM234]
+Name = TM234
+NamePlural = TM234s
+Pocket = 4
+Price = 1500
+FieldUse = TR
+Move = FLAMEKICK
+Flags = Fling_65
+Description = The target is kicked with a flaming leg. It may leave the target with a burn.
+#-------------------------------
+[TM235]
+Name = TM235
+NamePlural = TM235s
+Pocket = 4
+Price = 1500
+FieldUse = TR
+Move = ELECTROKICK
+Flags = Fling_65
+Description = The target is kicked with an electrified leg. It may also leave the target with paralysis.
+#-------------------------------
+[TM236]
+Name = TM236
+NamePlural = TM236s
+Pocket = 4
+Price = 1500
+FieldUse = TR
+Move = ICEKICK
+Flags = Fling_65
+Description = The target is kicked with an icy leg. It may also leave the target frozen.
+#-------------------------------
+[TM237]
+Name = TM237
+NamePlural = TM237s
+Pocket = 4
+Price = 1500
+FieldUse = TR
+Move = SPINKICK
+Flags = Fling_65
+Description = The user swings their leg at the target at full force. It may also cause the target to flinch.
+#-------------------------------
+[TM238]
+Name = TM238
+NamePlural = TM238s
+Pocket = 4
+Price = 1500
+FieldUse = TR
+Move = SWARMSTORM
+Flags = Fling_65
+Description = The user summons a swarm of insects that bite and sting every Pokémon around it.
+#-------------------------------
+[TM239]
+Name = TM239
+NamePlural = TM239s
+Pocket = 4
+Price = 1500
+FieldUse = TR
+Move = QUICKTHINKING
+Flags = Fling_65
+Description = The user comes up with a devious plan and prepares to carry it out, raising their Special Attack and Speed by one stage.
+#-------------------------------
+[TM240]
+Name = TM240
+NamePlural = TM240s
+Pocket = 4
+Price = 1500
+FieldUse = TR
+Move = MAGLEVSWITCH
+Flags = Fling_65
+Description = The user switches out, the Pokémon coming in will then be floating for the next 5 turns.
+#-------------------------------
+[TM241]
+Name = TM241
+NamePlural = TM241s
+Pocket = 4
+Price = 1500
+FieldUse = TR
+Move = POLLUTION
+Flags = Fling_65
+Description = A toxic liquid seeps out of the user that pollutes the environment. This move is super-effective against Water- and Ground-Type Pokémon.
+#-------------------------------
+[TM242]
+Name = TM242
+NamePlural = TM242s
+Pocket = 4
+Price = 1500
+FieldUse = TR
+Move = REFORGERY
+Flags = Fling_65
+Description = The Pokémon superheats and reforges their metal, sharply raising Defense and Special Defense but inflicting Burn on itself.

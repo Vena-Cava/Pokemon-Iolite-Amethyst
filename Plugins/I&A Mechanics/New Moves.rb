@@ -321,3 +321,97 @@ class Battle::Move::SuperEffectiveAgainstPoisonSteel < Battle::Move
     return super
   end
 end
+
+#===============================================================================
+# Effectiveness against Water- and Ground-Type is 2x. (Pollution)
+#===============================================================================
+class Battle::Move::SuperEffectiveAgainstWaterSteel < Battle::Move
+  def pbCalcTypeModSingle(moveType, defType, user, target)
+    return Effectiveness::SUPER_EFFECTIVE_ONE if defType == :WATER
+	return Effectiveness::SUPER_EFFECTIVE_ONE if defType == :GROUND
+    return super
+  end
+end
+
+#===============================================================================
+# Increases the user's Sp. Attack and Speed by 1 stage each. (Quick Thinking)
+#===============================================================================
+class Battle::Move::RaiseUserSpAtkSpd1 < Battle::Move::MultiStatUpMove
+  def initialize(battle, move)
+    super
+    @statUp = [:SPECIAL_ATTACK, 1, :SPEED, 1]
+  end
+end
+
+#===============================================================================
+# Increases the user's Defense and Special Defense by 2 stages each. Burns the user. (Reforgery)
+#===============================================================================
+class Battle::Move::RaiseUserDefSpDef2BurnUser < Battle::Move
+  def initialize(battle, move)
+    super
+    @statUp = [:DEFENSE, 2, :SPECIAL_DEFENSE, 2]
+  end
+
+  def pbMoveFailed?(user, targets)
+    if user.status != :NONE
+      @battle.pbDisplay(_INTL("But it failed!"))
+      return true
+    end
+    return false
+  end
+
+  def pbEffectGeneral(user)
+    # Raise Defense and Special Defense
+    if user.pbCanRaiseStatStage?(:DEFENSE, user)
+      user.pbRaiseStatStage(:DEFENSE, 2, user)
+    end
+    if user.pbCanRaiseStatStage?(:SPECIAL_DEFENSE, user)
+      user.pbRaiseStatStage(:SPECIAL_DEFENSE, 2, user)
+    end
+
+    # Burn the user
+    user.pbBurn(user, _INTL("{1} was burned by the strain of reforging!", user.pbThis))
+  end
+end
+
+#===============================================================================
+# User switches out and the replacement becomes airborne for 5 turns. (Maglev Switch)
+#===============================================================================
+class Battle::Move::SwitchOutUserAirborne < Battle::Move
+  def unusableInGravity?; return true; end
+  
+  def pbMoveFailed?(user, targets)
+    if !@battle.pbCanChooseNonActive?(user.index)
+      @battle.pbDisplay(_INTL("But it failed!"))
+      return true
+    end
+    if user.effects[PBEffects::Ingrain] ||
+       user.effects[PBEffects::SmackDown]
+      @battle.pbDisplay(_INTL("But it failed!"))
+      return true
+    end
+    return false
+  end
+
+  def pbEffectGeneral(user)
+    # Set Magnet Rise effect for 5 turns on the replacement Pokémon
+    @battle.pbDisplay(_INTL("{1} prepares to switch out while levitating with electromagnetism!", user.pbThis))
+    
+    # User switches out
+    if @battle.pbCanChooseNonActive?(user.index)
+      @battle.pbPursuit(user.index)
+      return if user.fainted?
+      newPkmn = @battle.pbGetReplacementPokemonIndex(user.index)   # Owner chooses
+      return if newPkmn < 0
+      @battle.pbRecallAndReplace(user.index, newPkmn, false, true)
+      @battle.pbClearChoice(user.index)   # Replacement Pokémon does nothing this round
+      @battle.moldBreaker = false
+      @battle.pbOnBattlerEnteringBattle(user.index)
+      
+      # Apply Maglev Switch effect to the new Pokémon
+      replacement = @battle.battlers[user.index]
+      replacement.effects[PBEffects::MaglevSwitch] = 5
+      @battle.pbDisplay(_INTL("{1} is now levitating with electromagnetism!", replacement.pbThis))
+    end
+  end
+end

@@ -77,7 +77,7 @@ Color = Green
 Shape = Quadruped
 Habitat = Grassland
 Category = Seed
-IoPokedex = The flame that burns at the tip of its tail is an indication of its emotions. The flame wavers when Charmander is enjoying itself. If the Pokémon becomes enraged, the flame burns fiercely.
+IoPokedex = There is a large flower on Venusaur's back. The flower is said to take on vivid colors if it gets plenty of nutrition and sunlight. The flower's aroma soothes the emotions of people.
 AmPokedex = While it basks in the sun, it can convert the light into energy. As a result, it is more powerful in the summertime.
 Generation = 1
 #-------------------------------
