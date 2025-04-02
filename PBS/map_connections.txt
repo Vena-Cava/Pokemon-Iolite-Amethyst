@@ -54,5 +54,9 @@
 96,South,3,87,North,0
 # Lassula West Forest (96) - Lassula City (92)
 96,East,0,92,West,0
-# Daiseye Town (89) - Daiseye Bay (99)
-89,East,0,99,West,25
+# Daiseye Bay (99) - Daiseye Town (89)
+99,West,9,89,East,0
+# Daiseye Bay (100) - Daiseye Town (89)
+100,West,44,89,East,0
+# Daiseye Bay (100) - Daiseye Bay (99)
+100,South,0,99,North,0

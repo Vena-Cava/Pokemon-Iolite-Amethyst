@@ -1,0 +1,30 @@
+﻿# See the documentation on the wiki to learn how to edit this file.
+#-------------------------------
+[089] # Daiseye Town
+Land,21
+    33,PURRLOIN,2,4
+    33,GREAVARD,2,4
+    33,BUNEARY,3,5
+    1,SPRIGATITO,5
+#-------------------------------
+[089,1] # Daiseye Town
+Land,21
+    33,PURRLOIN,70
+    33,GREAVARD,70
+    33,BUNEARY,70
+    1,SPRIGATITO,70
+#-------------------------------
+[099] # Daiseye Bay
+LandDay,21
+    25,CHICKATOO,2,3
+    25,RATTOSSK,2,3
+    20,ROLLVA,2,3
+    15,CHICKATOO,3,4
+    15,RATTOSSK,3,4
+LandNight,21
+    25,CHICKATOO,2,3
+    25,QUILTOX,2,3
+    20,ROLLVA,2,3
+    15,CHICKATOO,3,4
+    15,QUILTOX,3,4
+#-------------------------------
