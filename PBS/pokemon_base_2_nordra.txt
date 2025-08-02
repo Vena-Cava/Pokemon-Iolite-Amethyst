@@ -16,7 +16,7 @@ Moves = 1,TACKLE,1,LEAFAGE,4,TAILWHIP,6,MAGICALLEAF,8,DISARMINGVOICE,11,LEECHSEE
 EggGroups = Field,Grass
 HatchSteps = 5120
 Height = 0.3
-Weight = 34.0
+Weight = 13.2
 Color = Green
 Shape = Quadruped
 Habitat = Grassland
@@ -66,7 +66,7 @@ Moves = 0,GLADEGASH,1,TACKLE,1,LEAFAGE,4,TAILWHIP,6,MAGICALLEAF,8,DISARMINGVOICE
 EggGroups = Field,Grass
 HatchSteps = 5120
 Height = 2.1
-Weight = 34.0
+Weight = 680.3
 Color = Green
 Shape = Quadruped
 Habitat = Grassland
@@ -233,6 +233,7 @@ Happiness = 70
 Abilities = RINGTOSS,PICKUP
 HiddenAbilities = UNBURDEN
 Moves = 1,SCRATCH,1,TAILWHIP,5,BITE,8,STUFFCHEEKS,12,MUDSHOT,14,STOCKPILE,15,COVET,16,SWALLOW,16,SPITUP,18,DIG,23,FLING,26,MUDSHOT,27,STOMPINGTANTRUM,34,KNOCKOFF,38,SNATCH,42,NIGHTSLASH,48,EARTHQUAKE,54,BELCH
+EggMoves = BELLYDRUM,DEFENSECURL,LASTRESORT,ROLLOUT
 EggGroups = Field
 HatchSteps = 3840
 Height = 0.3
@@ -269,6 +270,37 @@ Habitat = Forest
 Category = Mud Tosser
 IoPokedex = In historic texts, it was once believed that Scattatosskr brought mud and soil from other realms to increase crop yields. This has since been disproven.
 AmPokedex = Scattatosskr coats its tail in mud all morning long, it then climbs into trees and throws balls of mud at unsuspecting People and Pokémon below.
+#-------------------------------
+[MAGGLO]
+Name = Magglo
+Types = BUG
+BaseStats = 55,66,64,38,35,42
+GenderRatio = Female50Percent
+GrowthRate = Medium
+BaseExp = 60
+EVs = ATTACK,1
+CatchRate = 255
+Happiness = 70
+Abilities = ILLUMINATE
+Moves = 1,TACKLE,1,LEER,4,MUDSLAP,6,STRUGGLEBUG,8,BUGBITE,11,MUDSHOT,13,SANDATTACK,15,UTURN,30,LUNGE,35,FIRSTIMPRESSION
+EggMoves = BELLYDRUM,DEFENSECURL,LASTRESORT,ROLLOUT
+EggGroups = Bug
+HatchSteps = 3840
+Height = 0.2
+Weight = 12.4
+Color = Brown
+Shape = Insectoid
+Habitat = Forest
+Category = Glow Worm
+IoPokedex = It's not uncommon to find a Rattossk inciting arguments and infighting between other Pokémon, spreading deceit within the forests it calls home.
+AmPokedex = Rattossk collects things to throw at others from high up in the trees. While it keeps their territory defended, many larger Pokémon and most people see it as a nuisance.
+Evolutions = DUSPUPA,Level,12
+#-------------------------------
+
+#-------------------------------
+
+#-------------------------------
+
 #-------------------------------
 [STACKEM]
 Name = Stackem

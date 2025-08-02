@@ -256,3 +256,13 @@ Battle::AbilityEffects::DamageCalcFromUser.add(:ABSOLUTEZERO,
     end
   }
 )
+
+#===============================================================================
+# Muscle Stim
+#===============================================================================
+Battle::AbilityEffects::MoveImmunity.add(:MUSCLESTIM,
+  proc { |ability, user, target, move, type, battle, show_message|
+    next target.pbMoveImmunityStatRaisingAbility(user, move, type,
+       :ELECTRIC, :ATTACK, 1, show_message)
+  }
+)

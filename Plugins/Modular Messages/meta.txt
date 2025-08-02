@@ -1,0 +1,6 @@
+Name       = Modular Messages
+Version    = 2024.12.27
+Essentials = 21, 21.1
+Requires   = Swdfm Utilities,2024.12.27
+Credits    = Swdfm, Maruno, Mr.Gela, Golisopod User, mej71, battlelegendblue
+Website    = NONE YET
