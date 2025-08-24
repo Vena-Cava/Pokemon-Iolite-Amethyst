@@ -1,0 +1,101 @@
+﻿# See the documentation on the wiki to learn how to edit this file.
+#-------------------------------
+[ROCKBODY]
+Name = Rock Body
+Description = The Pokémon gradually regains HP in a sandstorm.
+#-------------------------------
+[PERMAFROST]
+Name = Permafrost
+Description = The Pokémon is always frozen and will never thaw. It can attack while in its frozen state.
+#-------------------------------
+[IGNITION]
+Name = Ignition
+Description = Gives priority to the Pokémon's Fire-type moves while its HP is full.
+#-------------------------------
+[MACHFIVE]
+Name = Mach 5
+Description = The Pokémon's supersonic engines allow it to raise its speed if it makes contact with another Pokémon.
+#-------------------------------
+[PUFFEDOUT]
+Name = Puffed Out
+Description = The Pokémon's cowardice causes it to inflate and become defensive for the rest of the battle if its HP drops below half or less without fainting.
+#-------------------------------
+[VAMPYRE]
+Name = Vampyre
+Description = Fire-type moves become Ghost-type moves. The power of those moves is boosted a little.
+#-------------------------------
+[CORRUPTION]
+Name = Corruption
+Description = Normal-type moves become Dark-type moves. The power of those moves is boosted a little.
+#-------------------------------
+[DRACONIFY]
+Name = Draconify
+Description = Normal-type moves become Dragon-type moves. The power of those moves is boosted a little.
+#-------------------------------
+[GROUNDED]
+Name = Grounded
+Description = The Pokémon's lack of flight allows it to be effected by Ground-Type Moves and Terrain, but Ground-Type Pokémon are now susceptible to its Electric-Type Moves.
+#-------------------------------
+[BOTANIST]
+Name = Botanist
+Description = Powers up Grass-type moves.
+#-------------------------------
+[RETELLER]
+Name = Reteller
+Description = Whenever a sound move is used in battle, the Pokémon will copy the user to immediately repeat what was said.
+#-------------------------------
+[TRUEWISDOM]
+Name = True Wisdom
+Description = The Pokémon's true wisdom allows it to double the damage done by any super-effective sound-based move.
+#-------------------------------
+[BOILINGPOINT]
+Name = Boiling Point
+Description = The boiling system within the Pokémon heats up their water-type attacks, causing them to have a extra 10% chance to burn.
+#-------------------------------
+[SMOOTHSTONE]
+Name = Smooth Stone
+Description = The Pokémon's smooth surface halves damage from all Water-Type Attacks.
+#-------------------------------
+[CHIPPEDSTONE]
+Name = Chipped Stone
+Description = Scatters spikes at the feet of the opposing team when the Pokémon takes damage from physical moves.
+#-------------------------------
+[EMPTYSOUNDSCAPE]
+Name = Empty Soundscape
+Description = The Pokémon creates an empty soundscape as long as it is in battle, nullifying all sound-based moves.
+#-------------------------------
+[TONOFBRICKS]
+Name = Ton of Bricks
+Description = The Pokémon's solid structure damages attackers that make direct contact with it.
+#-------------------------------
+[LETHALLEGS]
+Name = Lethal Legs
+Description = Powers up kicking moves.
+#-------------------------------
+[THERMALINSULATION]
+Name = Thermal Insulation
+Description = Boosts the Special Defense stat sharply when the Pokémon is hit by a Fire-type move. The Pokémon also cannot be burned.
+#-------------------------------
+[BRITTLEIRON]
+Name = Brittle Iron
+Description = The Pokémon's cold, hard body shatters metal that hit it, giving it immunity to Steel-Type Physical Attacks.
+#-------------------------------
+[FORCEOFNATURE]
+Name = Force of Nature
+Description = Boosts the Pokémon's Attack if it uses a Dragon-Type move, boosts its Special Attack if it uses a Grass-Type Move.
+#-------------------------------
+[ENGINEOFINDUSTRY]
+Name = Engine of Industry
+Description = Boosts the Pokémon's Defense if it uses a Steel-Type move, boosts its Special Defense if it uses a Ground-Type Move.
+#-------------------------------
+[FERMENTATION]
+Name = Fermentation
+Description = The Pokémon's fermented internal liquid confuses attackers that use HP-draining moves.
+#-------------------------------
+[BIOLUMINESENCE]
+Name = Bioluminesence
+Description = The Pokémon's Speed is doubled in the dark, but halved in harsh sunlight.
+#-------------------------------
+[RINGTOSS]
+Name = Ring Toss
+Description = Boosts the power of Fling by 50%. May also retrieve the flung item at the beginning of the next turn.

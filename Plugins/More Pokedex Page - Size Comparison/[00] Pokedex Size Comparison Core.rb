@@ -23,12 +23,15 @@ module PokedexHWCConfig
   # Data for comparison
   ComparisonData = {
     # ID => [name, height (m), weight (kg), trainer type (set nil if same as ID), custom sprite file, custom charset file (in /Characters)]
+	:POKEMONTRAINER_Micah   => ["Micah", 1.70, 59],
+    :POKEMONTRAINER_Amber   => ["Amber", 1.60, 51],
+    :POKEMONTRAINER_Alex    => ["Alex", 1.65, 55],
     :POKEMONTRAINER_Red     => ["Red", 1.55, 46],
     :POKEMONTRAINER_Leaf    => ["Leaf", 1.40, 38],
     :POKEMONTRAINER_Brendan => ["Brendan", 1.44, 45],
     :POKEMONTRAINER_May     => ["May", 1.39, 37],
     :RIVAL1                 => ["Blue", 1.56, 45],
-    :LEADER_Brock           => ["Brock", 1.55, 54],
+    :LEADER_Sedric          => ["Sedric", 1.88, 87],
     :LEADER_Misty           => ["Misty", 1.45, 42],
     :LEADER_Surge           => ["Surge", 1.75, 60],
     :LEADER_Erika           => ["Erika", 1.43, 38],

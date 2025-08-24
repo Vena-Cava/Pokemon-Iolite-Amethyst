@@ -445,3 +445,15 @@ FunctionCode = RaiseUserDefSpDef2BurnUser
 Flags = CanMirrorMove,ZPower_ResetStats
 Description = The Pokémon superheats and reforges their metal, sharply raising Defense and Special Defense but inflicting Burn on itself.
 #-------------------------------
+[EVILNOMORE]
+Name = Evil No More
+Type = PSYCHIC
+Category = Special
+Power = 100
+Accuracy = 0
+TotalPP = 10
+Target = NearOther
+FunctionCode = AlwaysDamageIfTargetIsDark
+Flags = CanMirrorMove
+Description = The user strikes the target with their full might, if the target is Dark-Type, this move will always damage the target.
+#-------------------------------

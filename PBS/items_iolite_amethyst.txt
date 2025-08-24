@@ -91,8 +91,8 @@ BPPrice = 50
 Flags = MegaStone,Fling_80
 Description = One of a variety of mysterious Mega Stones. Have Ferrvoram hold it, and it will be able to Mega Evolve.
 #-------------------------------
-[BARBEARIENITEX]
-Name = Barbearienite X
+[BARBEARITEX]
+Name = Barbearite X
 NamePlural = Barbearienite Xs
 Pocket = 1
 Price = 0
@@ -100,8 +100,8 @@ BPPrice = 50
 Flags = MegaStone,Fling_80
 Description = One of a variety of mysterious Mega Stones. Have Barbearien hold it, and it will be able to Mega Evolve.
 #-------------------------------
-[BARBEARIENITEY]
-Name = Barbearienite Y
+[BARBEARITEY]
+Name = Barbearite Y
 NamePlural = Barbearienite Ys
 Pocket = 1
 Price = 0
@@ -137,8 +137,8 @@ Flags = MegaStone,Fling_80
 Description = One of a variety of mysterious Mega Stones. Have Maxitaur hold it, and it will be able to Mega Evolve.
 #-------------------------------
 [ABRACADAVRITE]
-Name = Abracadavrite
-NamePlural = Abracadavrites
+Name = Abracadite
+NamePlural = Abracadites
 Pocket = 1
 Price = 0
 BPPrice = 50
