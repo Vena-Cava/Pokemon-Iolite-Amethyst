@@ -171,7 +171,7 @@ class VPM_DateAndTimeHud < Component
 
   def start_component(viewport, menu)
     super(viewport, menu)
-    @sprites["overlay"]    = BitmapSprite.new(Graphics.width / 2, 96, viewport)
+    @sprites["overlay"]    = BitmapSprite.new(Graphics.width / 2, 128, viewport)
     @sprites["overlay"].ox = @sprites["overlay"].bitmap.width
     @sprites["overlay"].x  = Graphics.width
     @base_color = $PokemonSystem.from_current_menu_theme(MENU_TEXTCOLOR, Color.new(248, 248, 248))
@@ -189,8 +189,24 @@ class VPM_DateAndTimeHud < Component
     time  = pbGetTimeNow 
     text  = _INTL("{1} {2} {3}", time.day.to_i, pbGetAbbrevMonthName(time.month.to_i), time.year.to_i)
     text2 = _INTL("{1}", time.strftime("%I:%M %p"))
-    @sprites["overlay"].bitmap.clear
+    overlay = @sprites["overlay"].bitmap
+    overlay.clear
+    imagepos = []
+	# Sun & Moon overlay
+	if PBDayNight.isMorning?
+	  timeimage = sprintf("Graphics/Pictures/VPM/Time/Sun-Rise")
+	elsif PBDayNight.isAfternoon?
+	  timeimage = sprintf("Graphics/Pictures/VPM/Time/Sun-Day")
+	elsif PBDayNight.isEvening?
+	  timeimage = sprintf("Graphics/Pictures/VPM/Time/Sun-Set")
+	elsif PBDayNight.isNight?
+	  timeimage = sprintf("Graphics/Pictures/VPM/Time/Moon-%s", moonphase)
+	end
+    imagepos.push([timeimage, 214, 60])
     pbSetSmallFont(@sprites["overlay"].bitmap)
+    # Draw all images
+    pbDrawImagePositions(overlay, imagepos)
+    # Draw all text
     pbDrawTextPositions(@sprites["overlay"].bitmap,[[text, (Graphics.width / 2) - 8, 12, 1,
       @base_color, @shdw_color], [text2, (Graphics.width / 2) - 8, 34, 1, @base_color, @shdw_color]])
     @last_time = time.min
@@ -198,7 +214,7 @@ class VPM_DateAndTimeHud < Component
 end
 
 #-------------------------------------------------------------------------------
-# New Quesst Message Hud component
+# New Quest Message Hud component
 #-------------------------------------------------------------------------------
 class VPM_NewQuestHud < Component
   def initialize

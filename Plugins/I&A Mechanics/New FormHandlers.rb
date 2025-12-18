@@ -10,10 +10,10 @@ MultipleForms.register(:PUFFONO, {
 #===============================================================================
 # Ursaluna
 #===============================================================================
-MultipleForms.register(:URSALUNA, {
-  "getFormOnCreation" => proc { |pkmn|
-    next 0 if PBDayNight.isNight? && moonphase == 4		# Hisui
-    next 1 if PBDayNight.isNight? && moonphase == 0		# Bloodmoon
+MultipleForms.register(:URSARING, {
+  "getForm" => proc { |pkmn|
+    next 1 if moonphase == 0		# Bloodmoon
+    next 0                          # Hisui
   }
 })
 
