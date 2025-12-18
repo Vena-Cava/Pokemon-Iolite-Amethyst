@@ -31,6 +31,7 @@ Point = 27,9,Frigid Flats
 Point = 18,18,Daiseye Bay
 Point = 18,17,Daiseye Bay
 Point = 18,16,Daiseye Bay
+Point = 20,15,Lilicorn Bridge,Lilicorn Underpass,,,,
 Point = 27,8,Landslide Monument
 Point = 5,9,Polarcap Monument
 Point = 2,3,Hellfire Monument

@@ -267,18 +267,8 @@ class PokemonPokedexInfo_Scene
           end
         end
       end
-	  # Draw the Pokédex entry text
-      if System.user_language[3..4] == "US"   # If the user is in the United States
-        drawTextEx(overlay, 40, 246, Graphics.width - 80, 4,   # overlay, x, y, width, num lines
-                 species_data.ampokedexus_entry, base, shadow) if IASummary::IAVERSION == 1
-        drawTextEx(overlay, 40, 246, Graphics.width - 80, 4,   # overlay, x, y, width, num lines
-                 species_data.iopokedexus_entry, base, shadow) if IASummary::IAVERSION == 2
-      else
-        drawTextEx(overlay, 40, 246, Graphics.width - 80, 4,   # overlay, x, y, width, num lines
-                 species_data.ampokedex_entry, base, shadow) if IASummary::IAVERSION == 1
-        drawTextEx(overlay, 40, 246, Graphics.width - 80, 4,   # overlay, x, y, width, num lines
-                 species_data.iopokedex_entry, base, shadow) if IASummary::IAVERSION == 2
-      end
+      drawTextEx(overlay, 40, 246, Graphics.width - 80, 4,
+                 species_data.pokedex_entry, base, shadow)
       pbDisplayFootprint(overlay)
       imagepos.push(["Graphics/UI/Pokedex/icon_own", 212, 44])
       species_data.types.each_with_index do |type, i|

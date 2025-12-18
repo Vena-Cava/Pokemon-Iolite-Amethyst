@@ -43,7 +43,7 @@ Pokemon = EKANS,11
 [CAMPER,Jeff]
 LoseText = A very good battle, indeed!
 Pokemon = SPEAROW,16
-Pokemon = SENTRET,16
+Pokemon = SENTRET,16	
 #-------------------------------
 [CAMPER,Jeff,1]
 LoseText = You beat me again!
@@ -116,72 +116,6 @@ Pokemon = CHARIZARD,63
     Item = SITRUSBERRY
 Pokemon = BLASTOISE,63
     Item = SITRUSBERRY
-#-------------------------------
-[CLOWN,Vena]
-LoseText = ...
-Pokemon = SAMUROTT,100
-    Form = 0
-    Moves = SWORDSDANCE,LIQUIDATION,MEGAHORN,AQUAJET
-    Ability = SHELLARMOR
-    AbilityIndex = 1
-    Item = LIFEORB
-    Gender = male
-    Nature = ADAMANT
-    IV = 31,31,31,31,31,31
-    EV = 80,252,0,176,0,0
-    Happiness = 255
-Pokemon = TOXTRICITY,100
-    Form = 0
-    Moves = SHIFTGEAR,BOOMBURST,OVERDRIVE,SLUDGEBOMB
-    Ability = PUNKROCK
-    Item = THROATSPRAY
-    Gender = male
-    Nature = MODEST
-    IV = 31,0,31,31,31,31
-    EV = 0,0,0,252,252,4
-    Happiness = 255
-Pokemon = PALOSSAND,100
-    Name = Dune
-    Moves = SHADOWBALL,SCORCHINGSANDS,SANDSTORM,SHOREUP
-    Ability = WATERCOMPACTION
-    Item = LEFTOVERS
-    Gender = female
-    Nature = BOLD
-    IV = 31,0,31,31,31,31
-    EV = 252,0,252,0,0,4
-    Happiness = 255
-    Shiny = true
-    Ball = HISUIANPOKEBALL
-Pokemon = MANATAUR,100
-    Moves = MOONBLAST,FOCUSBLAST,CALMMIND,MEGAHORN
-    Ability = COMPETITIVE
-    Item = MIRRORHERB
-    Gender = male
-    Nature = QUIET
-    IV = 31,31,31,31,31,31
-    EV = 0,92,0,252,164,0
-    Happiness = 255
-    Ball = LOVEBALL
-Pokemon = TANGPYRE,100
-    Moves = POWERWHIP,BONERUSH,SHADOWSNEAK,LEECHSEED
-    Ability = INTIMIDATE
-    Item = BIGROOT
-    Nature = ADAMANT
-    IV = 31,31,31,31,31,31
-    EV = 252,252,0,0,0,4
-    Happiness = 255
-    Ball = DUSKBALL
-Pokemon = HAXORUS,100
-    Moves = DUALCLEAVE,SWORDSDANCE,SCALESHOT,IRONHEAD
-    Ability = SHARPNESS
-    Item = LOADEDDICE
-    Gender = female
-    Nature = ADAMANT
-    IV = 31,31,31,31,31,31
-    EV = 0,252,0,252,0,4
-    Happiness = 255
-    Ball = DUSKBALL
-#-------------------------------
 [AROMALADY,Test]
 Items = TERAORB
 LoseText = ...
@@ -191,4 +125,3 @@ Pokemon = VENUSAUR,5
     TeraType = QMARKS
     DynamaxLv = 10
     Gigantamax = true
-

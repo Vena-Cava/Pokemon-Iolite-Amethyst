@@ -243,7 +243,7 @@ NamePlural = Ability Shields
 Pocket = 1
 Price = 20000
 Flags = Fling_30
-Description = An item to be held by a Pokémon. This  shield protects the holder from having its Ability changed by others.
+Description = An item to be held by a Pokémon. This shield protects the holder from having its Ability changed by others.
 #-------------------------------
 [CLEARAMULET]
 Name = Clear Amulet
@@ -523,18 +523,3 @@ Pocket = 8
 Price = 0
 Flags = KeyItem
 Description = A proof copy of the exploration notes, along with Briar's thoughts covering the Area Zero Underdepths.
-#-------------------------------
-[BOTTLECAP]
-Name = Bottle Cap
-NamePlural = Bottle Caps
-Pocket = 1
-Price = 5000
-Description = A lovely silver bottle cap. Certain people are delighted to be given one of these.
-#-------------------------------
-[GOLDBOTTLECAP]
-Name = Gold Bottle Cap
-NamePlural = Gold Bottle Caps
-Pocket = 1
-Price = 15000
-Description = A lovely gold bottle cap, which is even rarer than a silver bottle cap. Certain people are delighted to be given one of these.
-#-------------------------------

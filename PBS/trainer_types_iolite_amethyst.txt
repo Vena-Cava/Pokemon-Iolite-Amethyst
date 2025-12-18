@@ -14,3 +14,11 @@ BaseMoney = 60
 Name = Pokémon Trainer
 Gender = nonbinary
 BaseMoney = 60
+#-------------------------------
+[LEADER_Sedric]
+Name = Gym Leader
+Gender = Male
+BaseMoney = 100
+BattleBGM = Pokemon Iolite and Amethyst - Battle! Vs Gym Leader
+VictoryBGM = Battle victory leader
+#-------------------------------

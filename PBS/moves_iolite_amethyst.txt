@@ -264,7 +264,7 @@ Flags = CanProtect,CanMirrorMove
 Description = The user forms a glacier beneath the opponent and then performs an overhead smash attack on the opponent. The pulverised glacier summons a hailstorm.
 #-------------------------------
 [STORMSURGE]
-Name = Draconic Stormsurge
+Name = Stormsurge
 Type = ELECTRIC
 Category = Special
 Power = 100

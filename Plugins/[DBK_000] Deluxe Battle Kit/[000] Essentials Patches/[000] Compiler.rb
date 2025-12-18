@@ -129,7 +129,7 @@ module Compiler
           can_skip_rewrites = false
           File.open(path, "rb") do |f|
             f.each_line do |line|
-			  if line == "### Apply changes by holding SHIFT while compiling. ###\r\n"
+              if line == "### Apply changes by holding SHIFT while compiling. ###\r\n"
                 can_skip_rewrites = true
               end
               break
@@ -251,18 +251,19 @@ module PluginManager
   #-----------------------------------------------------------------------------
   # Used to ensure all plugins that rely on Deluxe Battle Kit are up to date.
   #-----------------------------------------------------------------------------
-  def self.plugin_check_DBK(version = "1.2.1")
+  def self.plugin_check_DBK(version = "1.2.9")
     if self.installed?("Deluxe Battle Kit", version, true)
-      {"[DBK] Enhanced Battle UI"      => "2.0.5",
-       "[DBK] SOS Battles"             => "1.0.8",
+      {"[DBK] Enhanced Battle UI"      => "2.0.9",
+       "[DBK] SOS Battles"             => "1.1.1",
        "[DBK] Raid Battles"            => "1.0",
-       "[DBK] Z-Power"                 => "1.0.8",
-       "[DBK] Dynamax"                 => "1.1",
-       "[DBK] Terastallization"        => "1.1.3",
-       "[DBK] Improved Item AI"        => "1.0",
-       "[DBK] Wonder Launcher"         => "1.0.3",
-       "[DBK] Animated Pokémon System" => "1.0.7",
-       "[MUI] Improved Mementos"       => "1.0.3"
+       "[DBK] Z-Power"                 => "1.1.1",
+       "[DBK] Dynamax"                 => "1.1.3",
+       "[DBK] Terastallization"        => "1.1.5",
+       "[DBK] Improved Item AI"        => "1.0.2",
+       "[DBK] Wonder Launcher"         => "1.0.6",
+       "[DBK] Animated Pokémon System" => "1.1.1",
+	   "[DBK] Animated Trainer Intros" => "1.0.1",
+       "[MUI] Improved Mementos"       => "1.0.4"
       }.each do |p_name, v_num|
         next if !self.installed?(p_name)
         p_ver = self.version(p_name)

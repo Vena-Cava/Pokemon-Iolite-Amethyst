@@ -1,0 +1,31 @@
+﻿# See the documentation on the wiki to learn how to edit this file.
+#-------------------------------
+[YOUNGSTER3,Felix]
+LoseText = Shorts won't make you better at battling, it seems.
+Pokemon = RATTOSSK,4
+Pokemon = QUILTOX,4
+#-------------------------------
+[BUGCATCHER,Anton]
+LoseText = What's wrong with my bugs?
+Pokemon = MAGGLO,3
+#-------------------------------
+[LASS3,Lucy]
+LoseText = My cute little birdie!
+Pokemon = CHICKATOO,6
+#-------------------------------
+[TEACHER,Carrie]
+Items = POTION
+LoseText = ...
+Pokemon = ABRA,10
+    Form = 1
+    Moves = SHADOWCLAW,BITE,TELEPORT,HEX
+    Ability = STENCH
+    Gender = male
+    NoTera = true
+    NoDynamax = true
+Pokemon = SOULBOTE,12
+    Moves = HARDEN,AGILITY,CHILLINGWATER,HEX
+    Ability = WEAKARMOR
+    NoTera = true
+    NoDynamax = true
+#-------------------------------

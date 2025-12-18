@@ -1,0 +1,17 @@
+﻿# See the documentation on the wiki to learn how to edit this file.
+#-------------------------------
+[ABRA,1]
+RaidRanks = 1,2
+#-------------------------------
+[PETILIL,2]
+RaidRanks = 1,2
+#-------------------------------
+[LILLIGANT,2]
+RaidRanks = 3,4
+#-------------------------------
+[DRUDDIGON,1]
+RaidRanks = 4,5
+#-------------------------------
+[PUFFONO,1]
+RaidRanks = 1,2,3,4,5
+#-------------------------------

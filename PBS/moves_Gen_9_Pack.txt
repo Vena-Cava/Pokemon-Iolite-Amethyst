@@ -9,7 +9,7 @@ Accuracy = 100
 TotalPP = 15
 Target = NearOther
 FunctionCode = PoisonParalyzeOrSleepTarget
-Flags = Contact,CanProtect,CanMirrorMove,HighCriticalHitRate
+Flags = Contact,CanProtect,CanMirrorMove
 EffectChance = 50
 Description = The user may critically hit with its ruinous claws. May also leave the target poisoned, paralyzed, or asleep.
 #-------------------------------
@@ -124,7 +124,7 @@ TotalPP = 10
 Target = NearOther
 FunctionCode = LowerTargetAttack1
 Flags = CanProtect,CanMirrorMove
-EffectChance = 30
+EffectChance = 100
 Description = The user attacks the target with spine-chilling resentment. This also lowers the target’s Attack stat.
 #-------------------------------
 [TRIPLEARROWS]
@@ -148,7 +148,7 @@ Power = 100
 Accuracy = 80
 TotalPP = 10
 Target = AllNearFoes
-FunctionCode = LowerTargetSpeed1
+FunctionCode = LowerTargetSpeed1AlwaysHitsInRain
 Flags = CanProtect,CanMirrorMove,Wind
 EffectChance = 30
 Description = The user attacks with cold winds that cause opposing Pokémon to tremble. This may lower their Speed stats.
@@ -161,7 +161,7 @@ Power = 100
 Accuracy = 80
 TotalPP = 10
 Target = AllNearFoes
-FunctionCode = ParalyzeTarget
+FunctionCode = ParalyzeTargetAlwaysHitsInRain
 Flags = CanProtect,CanMirrorMove,Wind
 EffectChance = 20
 Description = The user attacks opposing Pokémon with a thunderous tempest. This may also leave them paralyzed.
@@ -174,7 +174,7 @@ Power = 100
 Accuracy = 80
 TotalPP = 10
 Target = AllNearFoes
-FunctionCode = BurnTarget
+FunctionCode = BurnTargetAlwaysHitsInRain
 Flags = CanProtect,CanMirrorMove,Wind
 EffectChance = 20
 Description = The user wraps fierce winds and hot sand around opponents. This may leave them with a burn.
@@ -188,7 +188,6 @@ TotalPP = 5
 Target = UserAndAllies
 FunctionCode = HealUserAndAlliesQuarterOfTotalHPCureStatus
 Description = The user is blessed by the moon, restoring HP and curing status conditions of itself and allies.
-Flags = ZPower_ResetStats
 #-------------------------------
 [PSYSHIELDBASH]
 Name = Psyshield Bash
@@ -248,7 +247,7 @@ Accuracy = 0
 TotalPP = 10
 Target = User
 FunctionCode = RaiseUserAtkDefSpd1
-Flags = Dance,ZPower_ResetStats
+Flags = Dance
 Description = The user performs an intense dance to usher in victory, raising its Attack, Defense, and Speed.
 #-------------------------------
 [SHELTER]
@@ -260,7 +259,6 @@ TotalPP = 10
 Target = User
 FunctionCode = RaiseUserDefense2
 Description = The user makes its skin as hard as an iron shield, sharply boosting its Defense stat.
-Flags = ZPower_ResetStats
 #-------------------------------
 [INFERNALPARADE]
 Name = Infernal Parade
@@ -297,7 +295,6 @@ TotalPP = 10
 Target = User
 FunctionCode = RaiseUserSpAtkSpDef1CureStatus
 Description = The user lifts its spirits, curing its own status conditions and boosting its Sp. Atk and Sp. Def stats.
-Flags = ZPower_ResetStats
 #-------------------------------
 [AQUACUTTER]
 Name = Aqua Cutter
@@ -333,7 +330,7 @@ Accuracy = 100
 TotalPP = 5
 Target = NearOther
 FunctionCode = LowerUserDefSpDef1
-Flags = CanProtect,CanMirrorMove,CannotMetronome
+Flags = CanProtect,CanMirrorMove,CannotMetronome,Pulse
 EffectChance = 100
 Description = The user shoots its own armor out as blazing projectiles. This lowers the user’s Defense and Sp. Def.
 #-------------------------------
@@ -395,8 +392,8 @@ Category = Status
 Accuracy = 0
 TotalPP = 10
 Target = BothSides
-FunctionCode = StartHailWeatherSwitchOutUser
-Flags = CannotMetronome,ZPower_HealSwitch
+FunctionCode = SwitchOutUserStartHailWeather
+Flags = CannotMetronome
 Description = The user tells a chillingly bad joke and switches out. This summons a snowstorm lasting five turns.
 #-------------------------------
 [COLLISIONCOURSE]
@@ -444,7 +441,7 @@ Accuracy = 100
 TotalPP = 10
 Target = NearFoe
 FunctionCode = SetUserAlliesAbilityToTargetAbility
-Flags = CannotMetronome,ZPower_SPEED_1
+Flags = CannotMetronome
 Description = The user captures a quick sketch, changing the Abilities of the user and its allies to the target's.
 #-------------------------------
 [DOUBLESHOCK]
@@ -478,8 +475,8 @@ Category = Status
 Accuracy = 0
 TotalPP = 10
 Target = NearOther
-FunctionCode = RaiseUserAtk2SpAtk2Speed2LoseHalfOfTotalHP
-Flags = CannotMetronome,ZPower_HealUser
+FunctionCode = RaiseUserAtkSpAtkSpeed2LoseHalfOfTotalHP
+Flags = CannotMetronome
 Description = The user sharply boosts its Attack, Sp. Atk, and Speed stats by using its own HP.
 #-------------------------------
 [FLOWERTRICK]
@@ -713,7 +710,7 @@ Accuracy = 0
 TotalPP = 1
 Target = User
 FunctionCode = RevivePokemonHalfHP
-Flags = CannotMetronome,ZPower_HealUser
+Flags = CannotMetronome
 Description = The user revives a party Pokémon that has fainted and restores half their max HP.
 #-------------------------------
 [RUINATION]
@@ -749,7 +746,7 @@ Accuracy = 0
 TotalPP = 10
 Target = User
 FunctionCode = UserMakeSubstituteSwitchOut
-Flags = CannotMetronome,ZPower_HealSwitch
+Flags = CannotMetronome
 Description = The user creates a substitute and switches places with a party Pokémon in waiting.
 #-------------------------------
 [SILKTRAP]
@@ -761,7 +758,7 @@ TotalPP = 10
 Target = User
 Priority = 4
 FunctionCode = ProtectUserFromDamagingMovesSilkTrap
-Flags = CannotMetronome,ZPower_SPEED_1
+Flags = CannotMetronome
 Description = User spins a silken trap to protect itself. Lowers the Speed of any that make direct contact.
 #-------------------------------
 [SNOWSCAPE]
@@ -772,7 +769,7 @@ Accuracy = 0
 TotalPP = 10
 Target = BothSides
 FunctionCode = StartHailWeather
-Flags = CannotMetronome,ZPower_SPECIAL_DEFENSE_1
+Flags = CannotMetronome
 Description = Summons a five-turn snowstorm that boosts the Defense of Ice-type Pokémon.
 #-------------------------------
 [SPICYEXTRACT]
@@ -783,7 +780,7 @@ Accuracy = 0
 TotalPP = 15
 Target = NearOther
 FunctionCode = RaiseTargetAtkLowerTargetDef2
-Flags = CanProtect,CanMirrorMove,CannotMetronome,ZPower_ATTACK_2
+Flags = CanProtect,CanMirrorMove,CannotMetronome
 Description = Emits a spicy extract which raises the target’s Attack and lowers Defense by two stages each.
 #-------------------------------
 [SPINOUT]
@@ -804,9 +801,9 @@ Type = NORMAL
 Category = Status
 Accuracy = 0
 TotalPP = 10
-Target = NearOther
+Target = User
 FunctionCode = RaiseUserAtkSpd1RemoveHazardsSubstitutes
-Flags = CannotMetronome,ZPower_ResetStats
+Flags = CannotMetronome
 EffectChance = 100
 Description = Clears hazards and substitutes from the field. This also boosts the user’s Attack and Speed.
 #-------------------------------
@@ -895,7 +892,6 @@ TotalPP = 15
 Target = NearOther
 FunctionCode = IncreasePowerInElectricTerrain
 Flags = Contact,CanProtect,CanMirrorMove,Slicing
-EffectChance = 10
 Description = The user rends the target with an ethereal blade whose power is boosted on Electric Terrain.
 #-------------------------------
 [BLOODMOON]
@@ -995,7 +991,6 @@ Target = User
 Priority = 4
 FunctionCode = ProtectUserBurningBulwark
 Description = Protects the user from attacks. Also burns any attacker that makes contact with the user.
-Flags = ZPower_DEFENSE_1
 #-------------------------------
 [THUNDERCLAP]
 Name = Thunderclap
@@ -1051,11 +1046,10 @@ Name = Dragon Cheer
 Type = DRAGON
 Category = Status
 Accuracy = 0
-TotalPP = 10
+TotalPP = 15
 Target = AllAllies
 FunctionCode = RaiseAlliesCriticalHitRate1DragonTypes2
 Description = The user raises its allies’ critical hit ratio with a draconic cry. This rouses Dragon types more.
-Flags = ZPower_CriticalHit
 #-------------------------------
 [ALLURINGVOICE]
 Name = Alluring Voice

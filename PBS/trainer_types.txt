@@ -1029,7 +1029,7 @@ BaseMoney = 100
 Name = Gym Leader
 Gender = Male
 BaseMoney = 100
-BattleBGM = Battle Gym Leader
+BattleBGM = Pokemon Iolite and Amethyst - Battle! Vs Gym Leader
 VictoryBGM = Battle victory leader
 #-------------------------------
 [LEADER_Brock]

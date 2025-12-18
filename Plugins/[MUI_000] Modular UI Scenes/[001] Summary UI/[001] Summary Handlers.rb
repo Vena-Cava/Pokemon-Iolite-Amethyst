@@ -54,21 +54,30 @@ UIHandlers.add(:summary, :page_skills, {
   "layout"    => proc { |pkmn, scene| scene.drawPageThree }
 })
 
+# Values page.
+UIHandlers.add(:summary, :page_values, {
+  "name"      => "VALUES",
+  "suffix"    => "values",
+  "order"     => 40,
+  "options"   => [:item, :nickname, :pokedex, :mark],
+  "layout"    => proc { |pkmn, scene| scene.drawPageBaseIVEV }
+})
+
 # Moves page.
 UIHandlers.add(:summary, :page_moves, {
   "name"      => "MOVES",
   "suffix"    => "moves",
-  "order"     => 40,
+  "order"     => 50,
   "options"   => [:moves, :remember, :forget, :tms],
-  "layout"    => proc { |pkmn, scene| scene.drawPageFour }
+  "layout"    => proc { |pkmn, scene| scene.drawPageMoves }
 })
 
 # Ribbons page.
 UIHandlers.add(:summary, :page_ribbons, {
   "name"      => "RIBBONS",
   "suffix"    => "ribbons",
-  "order"     => 50,
-  "layout"    => proc { |pkmn, scene| scene.drawPageFive }
+  "order"     => 60,
+  "layout"    => proc { |pkmn, scene| scene.drawPageMementos }
 })
 
 #-------------------------------------------------------------------------------

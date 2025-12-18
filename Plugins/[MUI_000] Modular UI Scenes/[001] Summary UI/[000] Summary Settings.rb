@@ -7,7 +7,7 @@ class PokemonSummary_Scene
   # Pages that exceed this maximum will shift over all previous icons when you
   # scroll to that page. (Default: 5)
   #-----------------------------------------------------------------------------
-  MAX_PAGE_ICONS = 5
+  MAX_PAGE_ICONS = 6
   
   #-----------------------------------------------------------------------------
   # Toggles whether arrows should appear beside the row of page icons to indicate

@@ -15,7 +15,8 @@ class Battle::Scene::CommandMenu < Battle::Scene::MenuBase
     [0, 2, 1, 9],   # 1 = Regular battle with "Cancel" instead of "Run"
     [0, 2, 1, 4],   # 2 = Regular battle with "Call" instead of "Run"
     [5, 7, 6, 3],   # 3 = Safari Zone
-    [0, 8, 1, 3]    # 4 = Bug-Catching Contest
+    [0, 8, 1, 3],   # 4 = Bug-Catching Contest
+	[0, 2, 1, 5]    # 5 = Raid battle
   ]
 
   def initialize(viewport, z)
@@ -89,7 +90,9 @@ class Battle::Scene::CommandMenu < Battle::Scene::MenuBase
 
   def refreshButtons
     return if !USE_GRAPHICS
+    return if MODES[@mode].nil? || @buttons.nil?
     @buttons.each_with_index do |button, i|
+      next if button.nil?
       button.src_rect.x = (i == @index) ? @buttonBitmap.width / 2 : 0
       button.src_rect.y = MODES[@mode][i] * BUTTON_HEIGHT
       button.z          = self.z + ((i == @index) ? 3 : 2)

@@ -228,6 +228,7 @@ class Battle::Battler
   def hasTera?;        return false; end
   def hasZodiacPower?; return false; end
   def isRivalSpecies?(arg); return false; end
+  def hasRaidShield?;  return false; end
 end
 
 class Battle::FakeBattler
@@ -248,6 +249,7 @@ class SafariBattle
   def wildBattleMode;  return nil;   end
   def pbDeluxeTriggers(*args);       end
   def launcherBattle?; return false; end
+  def databoxStyle;    return nil;   end
 end
 
 class Battle::Move

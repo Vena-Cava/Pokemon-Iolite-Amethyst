@@ -504,7 +504,7 @@ Description = Removes any additional effects from the Pokémon's moves, but incr
 #-------------------------------
 [CONTRARY]
 Name = Contrary
-Description = Reverses any stat changes affecting the Pokémon so that attempts to boost its stats instead lower them — and attempts to lower its stats will boost them.
+Description = Reverses any stat changes affecting the Pokémon so that attempts to boost its stats instead lower them - and attempts to lower its stats will boost them.
 #-------------------------------
 [UNNERVE]
 Name = Unnerve

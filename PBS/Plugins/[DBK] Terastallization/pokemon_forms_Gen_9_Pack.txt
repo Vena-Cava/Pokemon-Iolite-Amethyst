@@ -21,19 +21,19 @@ Flags = Legendary,TeraType_FIRE
 Flags = Legendary,TeraType_ROCK
 #-------------------------------
 [OGERPON,8]
-Flags = Legendary,TeraType_GRASS
+Flags = Legendary,CannotDynamax,TeraType_GRASS
 #-------------------------------
 [OGERPON,9]
-Flags = Legendary,TeraType_WATER
+Flags = Legendary,CannotDynamax,TeraType_WATER
 #-------------------------------
 [OGERPON,10]
-Flags = Legendary,TeraType_FIRE
+Flags = Legendary,CannotDynamax,TeraType_FIRE
 #-------------------------------
 [OGERPON,11]
-Flags = Legendary,TeraType_ROCK
+Flags = Legendary,CannotDynamax,TeraType_ROCK
 #-------------------------------
 [TERAPAGOS,1]
 Flags = Legendary,TeraType_STELLAR
 #-------------------------------
 [TERAPAGOS,2]
-Flags = Legendary,TeraType_STELLAR
+Flags = Legendary,CannotDynamax,TeraType_STELLAR

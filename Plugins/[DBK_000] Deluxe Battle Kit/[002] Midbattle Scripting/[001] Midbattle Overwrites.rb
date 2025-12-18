@@ -133,6 +133,8 @@ class Battle
         trigger_array.push(trigger + "_repeat_every")
       end
     end
+    trigger_array.push("VariableOver_")
+    trigger_array.push("VariableUnder_")
     return trigger_array
   end
   
@@ -645,6 +647,27 @@ class Battle::Battler
   end
   
   #-----------------------------------------------------------------------------
+  # Midbattle triggers upon a battler fainting.
+  #-----------------------------------------------------------------------------
+  alias dx_pbAbilitiesOnFainting pbAbilitiesOnFainting
+  def pbAbilitiesOnFainting
+    dx_pbAbilitiesOnFainting
+    triggers = ["BattlerFainted", @species, *@pokemon.types]
+    if @battle.pbAllFainted?(@index)
+      lastBattler = true
+      owner = @battle.pbGetOwnerFromBattlerIndex(@index)
+      @battle.battlers.each do |b|
+        next if !b || b.opposes?(@index) || !b.fainted? || b.fainted
+        thisOwner = @battle.pbGetOwnerFromBattlerIndex(b.index)
+        next if thisOwner != owner
+        lastBattler = false
+      end
+      triggers.push("LastBattlerFainted", @species, *@pokemon.types) if lastBattler
+    end
+    @battle.pbDeluxeTriggers(@index, nil, *triggers)
+  end
+  
+  #-----------------------------------------------------------------------------
   # Midbattle triggers upon a battler's stats being raised.
   #-----------------------------------------------------------------------------
   alias dx_pbRaiseStatStage pbRaiseStatStage
@@ -684,12 +707,14 @@ class Battle::Battler
   alias dx_pbBeginTurn pbBeginTurn
   def pbBeginTurn(_choice)
     dx_pbBeginTurn(_choice)
+	return if !@pokemon
     @battle.pbDeluxeTriggers(self, nil, "TurnStart", @turnCount, @species, *@pokemon.types)
   end
   
   alias dx_pbEndTurn pbEndTurn
   def pbEndTurn(_choice)
     dx_pbEndTurn(_choice)
+	return if !@pokemon
     @battle.pbDeluxeTriggers(self, nil, "TurnEnd", @turnCount, @species, *@pokemon.types)
   end
 end

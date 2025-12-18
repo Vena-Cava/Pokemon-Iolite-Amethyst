@@ -176,6 +176,7 @@ MidbattleHandlers.add(:midbattle_triggers, "disableDynamax",
 ################################################################################
 
 class Battle
+  attr_reader   :dynamax_bands
   attr_accessor :dynamax
   
   #-----------------------------------------------------------------------------
@@ -493,24 +494,21 @@ class Battle::Battler
   
   def unDynamax
     return if !@pokemon
-    if !isRaidBoss?
-      @battle.scene.pbRevertBattlerStart(@index)
-      self.display_base_moves
-      @effects[PBEffects::Dynamax] = 0
-      @pokemon.makeUndynamaxForm
-      self.form = @pokemon.form
-      @pokemon.makeUndynamax
-      pbUpdate(true)
-      pkmn = visiblePokemon
-      @battle.scene.pbChangePokemon(self, pkmn)
-      @battle.scene.pbRevertBattlerEnd
-      @battle.scene.pbHPChanged(self, @totalhp) if !fainted?
-      @battle.scene.pbRefreshOne(@index)
-      if hasActiveAbility?(:COMMANDER)
-        Battle::AbilityEffects.triggerOnSwitchIn(self.ability, self, @battle)
-      end
-    else
-      @pokemon.dynamax = false
+    return if isRaidBoss?
+    @battle.scene.pbRevertBattlerStart(@index)
+    self.display_base_moves
+    @effects[PBEffects::Dynamax] = 0
+    @pokemon.makeUndynamaxForm
+    self.form = @pokemon.form
+    @pokemon.makeUndynamax
+    pbUpdate(true)
+    pkmn = visiblePokemon
+    @battle.scene.pbChangePokemon(self, pkmn)
+    @battle.scene.pbRevertBattlerEnd
+    @battle.scene.pbHPChanged(self, @totalhp) if !fainted?
+    @battle.scene.pbRefreshOne(@index)
+    if hasActiveAbility?(:COMMANDER)
+      Battle::AbilityEffects.triggerOnSwitchIn(self.ability, self, @battle)
     end
   end
   

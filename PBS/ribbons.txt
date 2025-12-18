@@ -1203,3 +1203,11 @@ Description = A mark for a Pokémon that was a Titan.
 Title = the Former Titan
 IsMark = true
 Flags = BossMark
+#-------------------------------
+[PARTNER]
+Name = Partner Ribbon
+IconPosition = 166
+Description = A special Ribbon awarded to a Pokémon that was once partnered with another great Trainer.
+Flags = MemorialRibbon
+PrefixTitle = /Owner/'s
+Flags = MemorialRibbon

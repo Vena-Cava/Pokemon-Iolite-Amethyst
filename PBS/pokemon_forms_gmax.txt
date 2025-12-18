@@ -7,6 +7,8 @@ IoPokedex = In battle, this Pokémon swings around two thick vines. If these vin
 AmPokedex = Huge amounts of pollen burst from it with the force of a volcanic eruption. Breathing in too much of the pollen can cause fainting.
 Generation = 8
 GmaxMove = GMAXVINELASH
+RaidRanks = 4,5
+RaidStyle = Max
 #-------------------------------
 [CHARIZARD,3]
 FormName = Gigantamax
@@ -15,6 +17,8 @@ IoPokedex = This colossal, flame-winged figure of a Charizard was brought about 
 AmPokedex = The flame inside its body burns hotter than 3,600 degrees Fahrenheit. When Charizard roars, that temperature climbs even higher.
 Generation = 8
 GmaxMove = GMAXWILDFIRE
+RaidRanks = 4,5
+RaidStyle = Max
 #-------------------------------
 [BLASTOISE,2]
 FormName = Gigantamax
@@ -23,6 +27,8 @@ IoPokedex = It's not very good at precision shooting. When attacking, it just fi
 AmPokedex = It has jet nozzles on its shell. This impressive Pokémon uses these jets to charge toward foes with all the force of a rocket.
 Generation = 8
 GmaxMove = GMAXCANNONADE
+RaidRanks = 4,5
+RaidStyle = Max
 #-------------------------------
 [BUTTERFREE,1]
 FormName = Gigantamax
@@ -31,6 +37,8 @@ IoPokedex = Crystallized Gigantamax energy makes up this Pokémon's blindingly b
 AmPokedex = Once it has opponents trapped in a tornado that could blow away a 10-ton truck, it finishes them off with its poisonous scales.
 Generation = 8
 GmaxMove = GMAXBEFUDDLE
+RaidRanks = 4,5
+RaidStyle = Max
 #-------------------------------
 [PIKACHU,17]
 FormName = Gigantamax
@@ -39,6 +47,8 @@ IoPokedex = Its Gigantamax power expanded, forming its supersized body and tower
 AmPokedex = When it smashes its opponents with its bolt-shaped tail, it delivers a surge of electricity equivalent to a lightning strike.
 Generation = 8
 GmaxMove = GMAXVOLTCRASH
+RaidRanks = 3
+RaidStyle = Max
 #-------------------------------
 [MEOWTH,3]
 FormName = Gigantamax
@@ -46,6 +56,8 @@ Height = 33.0
 IoPokedex = Its body has grown incredibly long and the coin on its forehead has grown incredibly large all thanks to Gigantamax power.
 Generation = 8
 GmaxMove = GMAXGOLDRUSH
+RaidRanks = 3
+RaidStyle = Max
 #-------------------------------
 [MACHAMP,1]
 FormName = Gigantamax
@@ -53,6 +65,8 @@ Height = 25.0
 IoPokedex = The Gigantamax energy coursing through its arms makes its punches hit as hard as bomb blasts.
 Generation = 8
 GmaxMove = GMAXCHISTRIKE
+RaidRanks = 4,5
+RaidStyle = Max
 #-------------------------------
 [GENGAR,2]
 FormName = Gigantamax
@@ -60,6 +74,8 @@ Height = 20.0
 IoPokedex = It lays traps, hoping to steal the lives of those it catches. If you stand in front of its mouth, you'll hear your loved ones' voices calling out to you.
 Generation = 8
 GmaxMove = GMAXTERROR
+RaidRanks = 4,5
+RaidStyle = Max
 #-------------------------------
 [KINGLER,1]
 FormName = Gigantamax
@@ -67,6 +83,8 @@ Height = 19.0
 IoPokedex = The flow of Gigantamax energy has spurred this Pokémon's left pincer to grow to an enormous size. That claw can pulverize anything.
 Generation = 8
 GmaxMove = GMAXFOAMBURST
+RaidRanks = 4,5
+RaidStyle = Max
 #-------------------------------
 [LAPRAS,1]
 FormName = Gigantamax
@@ -74,6 +92,8 @@ Height = 24.0
 IoPokedex = Over 5,000 people can ride on its shell at once. And it's a very comfortable ride, without the slightest shaking or swaying.
 Generation = 8
 GmaxMove = GMAXRESONANCE
+RaidRanks = 4,5
+RaidStyle = Max
 #-------------------------------
 [EEVEE,2]
 FormName = Gigantamax
@@ -81,6 +101,8 @@ Height = 18.0
 IoPokedex = Gigantamax energy upped the fluffiness of the fur around Eevee's neck. The fur will envelop a foe, capturing its body and captivating its mind.
 Generation = 8
 GmaxMove = GMAXCUDDLE
+RaidRanks = 3
+RaidStyle = Max
 #-------------------------------
 [SNORLAX,1]
 FormName = Gigantamax
@@ -88,6 +110,8 @@ Height = 35.0
 IoPokedex = Gigantamax energy has affected stray seeds and even pebbles that got stuck to Snorlax, making them grow to a huge size.
 Generation = 8
 GmaxMove = GMAXREPLENISH
+RaidRanks = 4,5
+RaidStyle = Max
 #-------------------------------
 [GARBODOR,1]
 FormName = Gigantamax
@@ -95,6 +119,8 @@ Height = 21.0
 IoPokedex = Due to Gigantamax energy, this Pokémon's toxic gas has become much thicker, congealing into masses shaped like discarded toys.
 Generation = 8
 GmaxMove = GMAXMALODOR
+RaidRanks = 4,5
+RaidStyle = Max
 #-------------------------------
 [MELMETAL,1]
 FormName = Gigantamax
@@ -102,36 +128,48 @@ Height = 25.0
 IoPokedex = In a distant land, there are legends about a cyclopean giant. In fact, the giant was a Melmetal that was flooded with Gigantamax energy.
 Generation = 8
 GmaxMove = GMAXMELTDOWN
+RaidRanks = 6
+RaidStyle = Max
 #-------------------------------
 [RILLABOOM,1]
 FormName = Gigantamax
 Height = 28.0
 IoPokedex = Gigantamax energy has caused Rillaboom's stump to grow into a drum set that resembles a forest.
 GmaxMove = GMAXDRUMSOLO
+RaidRanks = 4,5
+RaidStyle = Max
 #-------------------------------
 [CINDERACE,1]
 FormName = Gigantamax
 Height = 27.0
 IoPokedex = Gigantamax energy can sometimes cause the diameter of this Pokémon's fireball to exceed 300 feet.
 GmaxMove = GMAXFIREBALL
+RaidRanks = 4,5
+RaidStyle = Max
 #-------------------------------
 [INTELEON,1]
 FormName = Gigantamax
 Height = 40.0
 IoPokedex = Gigantamax Inteleon's Water Gun move fires at Mach 7. As the Pokémon takes aim, it uses the crest on its head to gauge wind and temperature.
 GmaxMove = GMAXHYDROSNIPE
+RaidRanks = 4,5
+RaidStyle = Max
 #-------------------------------
 [CORVIKNIGHT,1]
 FormName = Gigantamax
 Height = 14.0
 IoPokedex = Imbued with Gigantamax energy, its wings can whip up winds more forceful than any a hurricane could muster. The gusts blow everything away.
 GmaxMove = GMAXWINDRAGE
+RaidRanks = 4,5
+RaidStyle = Max
 #-------------------------------
 [ORBEETLE,1]
 FormName = Gigantamax
 Height = 14.0
 IoPokedex = Its brain has grown to a gargantuan size, as has the rest of its body. This Pokémon's intellect and psychic abilities are overpowering.
 GmaxMove = GMAXGRAVITAS
+RaidRanks = 4,5
+RaidStyle = Max
 #-------------------------------
 [DREDNAW,1]
 FormName = Gigantamax
@@ -139,36 +177,48 @@ Height = 24.0
 IoPokedex = It responded to Gigantamax energy by becoming bipedal. First it comes crashing down on foes, and then it finishes them off with its massive jaws.
 AmPokedex = In a far-off region, there's a tale about this Pokémon chewing up a mountain and using the rubble to stop a flood.
 GmaxMove = GMAXSTONESURGE
+RaidRanks = 4,5
+RaidStyle = Max
 #-------------------------------
 [COALOSSAL,1]
 FormName = Gigantamax
 Height = 42.0
 IoPokedex = Its body is a colossal stove. With Gigantamax energy stoking the fire, this Pokémon's flame burns hotter than 3,600 degrees Fahrenheit.
 GmaxMove = GMAXVOLCALITH
+RaidRanks = 4,5
+RaidStyle = Max
 #-------------------------------
 [FLAPPLE,1]
 FormName = Gigantamax
 Height = 24.0
 IoPokedex = Under the influence of Gigantamax energy, it produces much more sweet nectar, and its shape has changed to resemble a giant apple.
 GmaxMove = GMAXTARTNESS
+RaidRanks = 4,5
+RaidStyle = Max
 #-------------------------------
 [APPLETUN,1]
 FormName = Gigantamax
 Height = 24.0
 IoPokedex = Due to Gigantamax energy, this Pokémon's nectar has thickened. The increased viscosity lets the nectar absorb more damage than before.
 GmaxMove = GMAXSWEETNESS
+RaidRanks = 4,5
+RaidStyle = Max
 #-------------------------------
 [SANDACONDA,1]
 FormName = Gigantamax
 Height = 22.0
 IoPokedex = Sand swirls around its body with such speed and power that it could pulverize a skyscraper.
 GmaxMove = GMAXSANDBLAST
+RaidRanks = 4,5
+RaidStyle = Max
 #-------------------------------
 [TOXTRICITY,2]
 FormName = Gigantamax
 Height = 24.0
 IoPokedex = Out of control after its own poison penetrated its brain, it tears across the land in a rampage, contaminating the earth with toxic sweat.
 GmaxMove = GMAXSTUNSHOCK
+RaidRanks = 4,5
+RaidStyle = Max
 #-------------------------------
 [TOXTRICITY,3]
 PokedexForm = 2
@@ -182,36 +232,48 @@ FormName = Gigantamax
 Height = 75.0
 IoPokedex = The heat that comes off a Gigantamax Centiskorch may destabilize air currents. Sometimes it can even cause storms.
 GmaxMove = GMAXCENTIFERNO
+RaidRanks = 4,5
+RaidStyle = Max
 #-------------------------------
 [HATTERENE,1]
 FormName = Gigantamax
 Height = 26.0
 IoPokedex = Beams like lightning shoot down from its tentacles. It's known to some as the Raging Goddess.
 GmaxMove = GMAXSMITE
+RaidRanks = 4,5
+RaidStyle = Max
 #-------------------------------
 [GRIMMSNARL,1]
 FormName = Gigantamax
 Height = 32.0
 IoPokedex = Gigantamax energy has caused more hair to sprout all over its body. With the added strength, it can jump over the world's tallest building.
 GmaxMove = GMAXSNOOZE
+RaidRanks = 4,5
+RaidStyle = Max
 #-------------------------------
 [ALCREMIE,63]
 FormName = Gigantamax
 Height = 30.0
 IoPokedex = It launches swarms of missiles, each made of cream and loaded with 100,000 kilocalories. Get hit by one of these, and your head will swim.
 GmaxMove = GMAXFINALE
+RaidRanks = 4,5
+RaidStyle = Max
 #-------------------------------
 [COPPERAJAH,1]
 FormName = Gigantamax
 Height = 23.0
 IoPokedex = After this Pokémon has Gigantamaxed, its massive nose can utterly demolish large structures with a single smashing blow.
 GmaxMove = GMAXSTEELSURGE
+RaidRanks = 4,5
+RaidStyle = Max
 #-------------------------------
 [DURALUDON,1]
 FormName = Gigantamax
 Height = 43.0
 IoPokedex = It's grown to resemble a skyscraper. Parts of its towering body glow due to a profusion of energy.
 GmaxMove = GMAXDEPLETION
+RaidRanks = 4,5
+RaidStyle = Max
 #-------------------------------
 [ETERNATUS,1]
 FormName = Eternamax
@@ -225,6 +287,8 @@ FormName = Gigantamax Single Strike Style
 Height = 29.0
 IoPokedex = The energy released by this Pokémon's fists forms shock waves that can blow away Dynamax Pokémon in just one hit.
 GmaxMove = GMAXONEBLOW
+RaidRanks = 6
+RaidStyle = Max
 #-------------------------------
 [URSHIFU,3]
 FormName = Gigantamax Rapid Strike Style
@@ -234,6 +298,8 @@ Height = 26.0
 IoPokedex = As it waits for the right moment to unleash its Gigantamax power, this Pokémon maintains a perfect one-legged stance. It won't even twitch.
 GmaxMove = GMAXRAPIDFLOW
 UngmaxForm = 1
+RaidRanks = 6
+RaidStyle = Max
 #-------------------------------
 [MAXOMOSS,1]
 FormName = Gigantamax

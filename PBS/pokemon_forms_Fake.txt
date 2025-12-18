@@ -12,6 +12,7 @@ Color = Green
 Category = Necro
 IoPokedex = Abra had gone extinct in Nordra long ago, but one day, they began to mysteriously reanimate. This process has left them with little-to-no brainpower however, rendering them unable to float.
 AmPokedex = Without the brainpower it once had, it's unable to float, or use much of its psychic power. Rigor mortis has left it stiff and strong, it now attacks with its body instead of its mind.
+RaidRanks = 1,2
 #-------------------------------
 [PETILIL,2]
 FormName = Niphosian
@@ -19,6 +20,7 @@ Types = GRASS,PSYCHIC
 Abilities = BIOLUMINESENCE,OWNTEMPO
 HiddenAbilities = LEAFGUARD
 BaseStats = 45,35,40,10,100,50
+RaidRanks = 1,2
 #-------------------------------
 [LILLIGANT,2]
 FormName = Niphosian
@@ -26,12 +28,38 @@ Types = GRASS,PSYCHIC
 Abilities = BIOLUMINESENCE,OWNTEMPO
 HiddenAbilities = LEAFGUARD
 BaseStats = 70,60,55,55,165,75
+RaidRanks = 3,4
 #-------------------------------
 [DRUDDIGON,1]
 FormName = Nordric
 Types = DRAGON,ROCK
 Abilities = ROUGHSKIN,SHEERFORCE
 HiddenAbilities = PERMAFROST
+RaidRanks = 4,5
+#-------------------------------
+[DEINO,1]
+FormName = Niphosian
+Types = WATER,DRAGON
+Abilities = HYDRATION
+BaseStats = 80,25,55,30,60,30
+Evolutions = ZWEILOUS,Level,50
+RaidRanks = 1,2
+#-------------------------------
+[ZWEILOUS,1]
+FormName = Niphosian
+Types = WATER,DRAGON
+Abilities = HYDRATION
+BaseStats = 115,40,60,55,80,70
+Evolutions = HYDREIGON,Level,64
+RaidRanks = 3,4
+#-------------------------------
+[HYDREIGON,1]
+FormName = Niphosian
+Types = WATER,DRAGON
+Abilities = POISONHEAL
+HiddenAbilities = REGENERATOR
+BaseStats = 145,55,110,70,130,90
+RaidRanks = 5
 #-------------------------------
 [PUFFONO,1]
 FormName = Inflated Form
@@ -41,6 +69,7 @@ BaseStats = 45,140,140,25,120,130
 Height = 2.9
 IoPokedex = Increased defenses means Puffono sacrifices mobility, so it cannot outrun predators, instead it has to hope it gets bored and leaves.
 AmPokedex = Puffono's scales and spikes have become so tough that they can pierce the hull of steel ships. They've earned the nickname "The Living Mine" amongst sailors.
+RaidRanks = 1,2,3,4,5
 #-------------------------------
 [SYLVSTAG,1]
 FormName = Mega Sylvstag
@@ -49,8 +78,8 @@ BaseStats = 110,103,114,75,121,108
 BaseExp = 350
 Abilities = GRASSPELT
 HiddenAbilities = GRASSPELT
-Height = 2.2
-Weight = 155.5
+Height = 2.4
+Weight = 734.6
 IoPokedex = The magic of the woods now infests Sylvstag, granting it immense power. That power however, comes at the cost of pure, unwieldy rage.
 AmPokedex = Its amplified body has caused the plants on its body to grow quickly. Wooloo and Mareep tend to get stuck in its thorns, serving as fuel for it.
 #-------------------------------

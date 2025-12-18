@@ -99,3 +99,11 @@ Description = The Pokémon's Speed is doubled in the dark, but halved in harsh s
 [RINGTOSS]
 Name = Ring Toss
 Description = Boosts the power of Fling by 50%. May also retrieve the flung item at the beginning of the next turn.
+#-------------------------------
+[GFORCE]
+Name = G-Force
+Description = Intensifies gravity when the Pokémon enters a battle.
+#-------------------------------
+[MUSCLESTIM]
+Name = Muscle Stim
+Description = The Pokémon draws in all Electric-type moves. Instead of taking damage from them, its Attack stat is boosted.

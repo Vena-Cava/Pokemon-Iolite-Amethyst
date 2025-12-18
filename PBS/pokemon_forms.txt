@@ -88,10 +88,12 @@ Weight = 3.8
 Color = Black
 IoPokedex = With its incisors, it gnaws through doors and infiltrates people's homes. Then, with a twitch of its whiskers, it steals whatever food it finds.
 AmPokedex = When the sun goes down, it becomes active. It runs around town on a chase for good food for the boss of its nest—Raticate.
+
 Generation = 7
 Flags = InheritFormWithEverStone
 WildItemUncommon = PECHABERRY
 Evolutions = RATICATE,LevelNight,20
+RaidRanks = 1,2
 #-------------------------------
 [RATICATE,1]
 FormName = Alolan
@@ -104,9 +106,11 @@ Weight = 25.5
 Color = Black
 IoPokedex = It has an incredibly greedy personality. Its nest is filled with so much food gathered by Rattata at its direction, it can't possibly eat it all.
 AmPokedex = This gourmet Pokémon is particular about the taste and freshness of its food. Restaurants where Raticate live have a good reputation.
+
 Generation = 7
 Flags = InheritFormWithEverStone
 WildItemUncommon = PECHABERRY
+RaidRanks = 3,4
 #-------------------------------
 [RAICHU,1]
 FormName = Alolan
@@ -122,7 +126,9 @@ Color = Brown
 Habitat = WatersEdge
 IoPokedex = It uses psychokinesis to control electricity. It hops aboard its own tail, using psychic power to lift the tail and move about while riding it.
 AmPokedex = 
+
 Generation = 7
+RaidRanks = 3,4,5
 #-------------------------------
 [SANDSHREW,1]
 FormName = Alolan
@@ -139,9 +145,11 @@ Color = White
 Habitat = Mountain
 IoPokedex = The skin on its back is as hard as steel. Predators go after its soft belly, so it clings to the ground desperately.
 AmPokedex = 
+
 Generation = 7
 Flags = InheritFormWithEverStone
 Evolutions = SANDSLASH,Item,ICESTONE
+RaidRanks = 1,2
 #-------------------------------
 [SANDSLASH,1]
 FormName = Alolan
@@ -157,8 +165,10 @@ Color = Blue
 Habitat = Mountain
 IoPokedex = It runs across snow-covered plains at high speeds. It developed thick, sharp claws to plow through the snow.
 AmPokedex = 
+
 Generation = 7
 Flags = InheritFormWithEverStone
+RaidRanks = 3,4
 #-------------------------------
 [VULPIX,1]
 FormName = Alolan
@@ -171,10 +181,12 @@ EggMoves = BABYDOLLEYES,FLAIL,FREEZEDRY,HOWL,HYPNOSIS,MOONBLAST,ROAR
 Color = White
 IoPokedex = In hot weather, this Pokémon makes ice shards with its six tails and sprays them around to cool itself off.
 AmPokedex = 
+
 Generation = 7
 Flags = InheritFormWithEverStone
 WildItemUncommon = SNOWBALL
 Evolutions = NINETALES,Item,ICESTONE
+RaidRanks = 1,2
 #-------------------------------
 [NINETALES,1]
 FormName = Alolan
@@ -188,9 +200,11 @@ TutorMoves = AGILITY,ATTRACT,AVALANCHE,BLIZZARD,BODYSLAM,CALMMIND,CHARM,DARKPULS
 Color = Blue
 IoPokedex = It lives on mountains perpetually covered in snow and is revered as a deity incarnate. It appears draped in a blizzard.
 AmPokedex = 
+
 Generation = 7
 Flags = InheritFormWithEverStone
 WildItemUncommon = SNOWBALL
+RaidRanks = 3,4
 #-------------------------------
 [DIGLETT,1]
 FormName = Alolan
@@ -203,8 +217,10 @@ EggMoves = ANCIENTPOWER,FINALGAMBIT,HEADBUTT,HONECLAWS,MEMENTO,METALSOUND,THRASH
 Weight = 1.0
 IoPokedex = Its head sports an altered form of whiskers made of metal. When in communication with its comrades, its whiskers wobble to and fro.
 AmPokedex = 
+
 Generation = 7
 Flags = InheritFormWithEverStone
+RaidRanks = 1,2
 #-------------------------------
 [DUGTRIO,1]
 FormName = Alolan
@@ -217,8 +233,10 @@ TutorMoves = AGILITY,BODYSLAM,BULLDOZE,CHARM,DIG,EARTHPOWER,EARTHQUAKE,ENDURE,FA
 Weight = 66.6
 IoPokedex = Its shining gold hair provides it with protection. It's reputed that keeping any of its fallen hairs will bring bad luck.
 AmPokedex = 
+
 Generation = 7
 Flags = InheritFormWithEverStone
+RaidRanks = 3,4
 #-------------------------------
 [MEOWTH,1]
 FormName = Alolan
@@ -231,9 +249,11 @@ EggMoves = COVET,FLAIL,FLATTER,HYPNOSIS,PARTINGSHOT,SPITE
 Color = Blue
 IoPokedex = It's impulsive, selfish, and fickle. It's very popular with some Trainers who like giving it the attention it needs.
 AmPokedex = 
+
 Generation = 7
 Flags = InheritFormWithEverStone
 Evolutions = PERSIAN,Happiness,
+RaidRanks = 1,2
 #-------------------------------
 [MEOWTH,2]
 FormName = Galarian
@@ -248,9 +268,11 @@ Color = Brown
 Shape = BipedalTail
 IoPokedex = Living with a savage, seafaring people has toughened this Pokémon's body so much that parts of it have turned to iron.
 AmPokedex = 
+
 Generation = 8
 Flags = InheritFormWithEverStone
 Evolutions = PERRSERKER,Level,28
+RaidRanks = 1,2
 #-------------------------------
 [PERSIAN,1]
 FormName = Alolan
@@ -265,8 +287,10 @@ Weight = 33.0
 Color = Blue
 IoPokedex = Its round face is a symbol of wealth. Persian that have bigger, plumper faces are considered more beautiful.
 AmPokedex = 
+
 Generation = 7
 Flags = InheritFormWithEverStone
+RaidRanks = 3,4
 #-------------------------------
 [ALAKAZAM,1]
 FormName = Mega Alakazam
@@ -278,6 +302,7 @@ HiddenAbilities = TRACE
 Height = 1.2
 IoPokedex = Having traded away its muscles, Alakazam's true power has been unleashed. With its psychic powers, it can foresee all things.
 AmPokedex = 
+
 Generation = 6
 #-------------------------------
 [GEODUDE,1]
@@ -292,9 +317,11 @@ Weight = 20.3
 Color = Gray
 IoPokedex = Geodude compete against each other with headbutts. The iron sand on their heads will stick to whichever one has stronger magnetism.
 AmPokedex = 
+
 Generation = 7
 Flags = InheritFormWithEverStone
 WildItemUncommon = CELLBATTERY
+RaidRanks = 1,2
 #-------------------------------
 [GRAVELER,1]
 FormName = Alolan
@@ -307,9 +334,11 @@ Weight = 110.0
 Color = Gray
 IoPokedex = They eat rocks and often get into a scrap over them. The shock of Graveler smashing together causes a flash of light and a booming noise.
 AmPokedex = 
+
 Generation = 7
 Flags = InheritFormWithEverStone
 WildItemUncommon = CELLBATTERY
+RaidRanks = 2,3
 #-------------------------------
 [GOLEM,1]
 FormName = Alolan
@@ -323,9 +352,11 @@ Weight = 316.0
 Color = Gray
 IoPokedex = It fires rocks charged with electricity. Even if the rock isn't fired that accurately, just grazing an opponent will cause numbness and fainting.
 AmPokedex = 
+
 Generation = 7
 Flags = InheritFormWithEverStone
 WildItemCommon = CELLBATTERY
+RaidRanks = 3,4,5
 #-------------------------------
 [PONYTA,1]
 FormName = Galarian
@@ -341,8 +372,10 @@ Habitat = Forest
 Category = Unique Horn
 IoPokedex = Its small horn hides a healing power. With a few rubs from this Pokémon's horn, any slight wound you have will be healed.
 AmPokedex = 
+
 Generation = 8
 Flags = InheritFormWithEverStone
+RaidRanks = 1,2,3
 #-------------------------------
 [RAPIDASH,1]
 FormName = Galarian
@@ -357,8 +390,10 @@ Habitat = Forest
 Category = Unique Horn
 IoPokedex = Little can stand up to its psycho cut. Unleashed from this Pokémon's horn, the move will punch a hole right through a thick metal sheet.
 AmPokedex = 
+
 Generation = 8
 Flags = InheritFormWithEverStone
+RaidRanks = 3,4,5
 #-------------------------------
 [SLOWPOKE,1]
 FormName = Galarian
@@ -367,9 +402,11 @@ Abilities = GLUTTONY,OWNTEMPO
 Moves = 1,TACKLE,1,CURSE,3,GROWL,6,ACID,9,YAWN,12,CONFUSION,15,DISABLE,18,WATERPULSE,21,HEADBUTT,24,ZENHEADBUTT,27,AMNESIA,30,SURF,33,SLACKOFF,36,PSYCHIC,39,PSYCHUP,42,RAINDANCE,45,HEALPULSE
 IoPokedex = Although this Pokémon is normally zoned out, its expression abruptly sharpens on occasion. The cause for this seems to lie in Slowpoke's diet.
 AmPokedex = 
+
 Generation = 8
 Flags = InheritFormWithEverStone
 Evolutions = SLOWBRO,Item,GALARICACUFF,SLOWKING,Item,GALARICAWREATH
+RaidRanks = 1,2,3
 #-------------------------------
 [SLOWBRO,1]
 FormName = Galarian
@@ -381,8 +418,10 @@ TutorMoves = ACIDSPRAY,AMNESIA,AVALANCHE,BLIZZARD,BODYPRESS,BODYSLAM,BRICKBREAK,
 Weight = 70.5
 IoPokedex = If this Pokémon squeezes the tongue of the Shellder biting it, the Shellder will launch a toxic liquid from the tip of its shell.
 AmPokedex = 
+
 Generation = 8
 Flags = InheritFormWithEverStone
+RaidRanks = 3,4,5
 #-------------------------------
 [SLOWBRO,2]
 FormName = Mega Slowbro
@@ -396,6 +435,7 @@ Weight = 120.0
 Shape = HeadArms
 IoPokedex = Having been swallowed whole by Shellder, Slowbro now has an iron defense. It's pretty comfortable in there, too.
 AmPokedex = 
+
 Generation = 6
 #-------------------------------
 [FARFETCHD,1]
@@ -410,10 +450,12 @@ EggMoves = COUNTER,COVET,CURSE,DOUBLEEDGE,FEINT,FLAIL,NIGHTSLASH,QUICKATTACK,QUI
 Weight = 42.0
 IoPokedex = The stalks of leeks are thicker and longer in the Galar region. Farfetch'd that adapted to these stalks took on a unique form.
 AmPokedex = 
+
 Generation = 8
 Flags = InheritFormWithEverStone
 WildItemCommon = LEEK
 Evolutions = SIRFETCHD,BattleDealCriticalHit,3
+RaidRanks = 2,3
 #-------------------------------
 [GRIMER,1]
 FormName = Alolan
@@ -427,8 +469,10 @@ Weight = 42.0
 Color = Green
 IoPokedex = A Grimer, which had been brought in to solve a problem with garbage, developed over time into this form.
 AmPokedex = 
+
 Generation = 7
 Flags = InheritFormWithEverStone
+RaidRanks = 1,2
 #-------------------------------
 [MUK,1]
 FormName = Alolan
@@ -442,8 +486,10 @@ Weight = 52.0
 Color = Green
 IoPokedex = The garbage it eats causes continuous chemical changes in its body, which produce its exceedingly vivid coloration.
 AmPokedex = 
+
 Generation = 7
 Flags = InheritFormWithEverStone
+RaidRanks = 3,4,5
 #-------------------------------
 [GENGAR,1]
 FormName = Mega Gengar
@@ -455,6 +501,7 @@ HiddenAbilities = SHADOWTAG
 Height = 1.4
 IoPokedex = The energy of Mega Evolution awakened it. It sinks into another dimension, where it keeps a patient watch for its chance to attack.
 AmPokedex = 
+
 Generation = 6
 #-------------------------------
 [EXEGGUTOR,1]
@@ -468,10 +515,13 @@ Height = 10.9
 Weight = 415.6
 IoPokedex = As it grew taller and taller, it outgrew its reliance on psychic powers, while within it awakened the power of the sleeping dragon.
 AmPokedex = 
+
 Generation = 7
+RaidRanks = 3,4,5
 #-------------------------------
 [CUBONE,1]
 AmPokedex = 
+
 Generation = 7
 Evolutions = MAROWAK,LevelNight,28
 #-------------------------------
@@ -486,7 +536,9 @@ Weight = 34.0
 Color = Purple
 IoPokedex = Its custom is to mourn its lost companions. Mounds of dirt by the side of the road mark the graves of the Marowak.
 AmPokedex = 
+
 Generation = 7
+RaidRanks = 3,4
 #-------------------------------
 [WEEZING,1]
 FormName = Galarian
@@ -499,8 +551,10 @@ Weight = 16.0
 Color = Gray
 IoPokedex = This Pokémon consumes particles that contaminate the air. Instead of leaving droppings, it expels clean air.
 AmPokedex = 
+
 Generation = 8
 WildItemUncommon = MISTYSEED
+RaidRanks = 3,4,5
 #-------------------------------
 [KANGASKHAN,1]
 FormName = Mega Kangaskhan
@@ -512,6 +566,7 @@ HiddenAbilities = PARENTALBOND
 Weight = 100.0
 IoPokedex = The explosive energy the child is bathed in causes temporary growth. The mother is beside herself with worry about it.
 AmPokedex = 
+
 Generation = 6
 #-------------------------------
 [MRMIME,1]
@@ -530,9 +585,11 @@ Habitat = Mountain
 Category = Dancing
 IoPokedex = Its talent is tap-dancing. It can also manipulate temperatures to create a floor of ice, which this Pokémon can kick up to use as a barrier.
 AmPokedex = 
+
 Generation = 8
 Flags = InheritFormWithEverStone
 Evolutions = MRRIME,Level,42
+RaidRanks = 3,4
 #-------------------------------
 [PINSIR,1]
 FormName = Mega Pinsir
@@ -547,6 +604,7 @@ Weight = 59.0
 Shape = MultiWinged
 IoPokedex = It zips around at blistering speeds, looking for an opening to skewer its opponent on its giant pincers.
 AmPokedex = 
+
 Generation = 6
 #-------------------------------
 [GYARADOS,1]
@@ -560,6 +618,7 @@ HiddenAbilities = MOLDBREAKER
 Weight = 305.0
 IoPokedex = Mega Evolution also affects its brain, leaving no other function except its destructive instinct to burn everything to cinders.
 AmPokedex = Although it obeys its instinctive drive to destroy everything within its reach, it will respond to orders from a Trainer it truly trusts.
+
 Generation = 6
 #-------------------------------
 [AERODACTYL,1]
@@ -573,6 +632,7 @@ Height = 2.1
 Weight = 79.0
 IoPokedex = When it Mega Evolves, it becomes more vicious than ever before. Some say that's because its excess of power is causing it pain.
 AmPokedex = 
+
 Generation = 6
 #-------------------------------
 [ARTICUNO,1]
@@ -589,7 +649,9 @@ Color = Purple
 Category = Cruel
 IoPokedex = Its feather-like blades are composed of psychic energy and can shear through thick iron sheets as if they were paper.
 AmPokedex = 
+
 Generation = 8
+RaidRanks = 6
 #-------------------------------
 [ZAPDOS,1]
 FormName = Galarian
@@ -604,7 +666,9 @@ Weight = 58.2
 Category = Strong Legs
 IoPokedex = When its feathers rub together, they produce a crackling sound like the zapping of electricity. That's why this Pokémon is called Zapdos.
 AmPokedex = 
+
 Generation = 8
+RaidRanks = 6
 #-------------------------------
 [MOLTRES,1]
 FormName = Galarian
@@ -620,7 +684,9 @@ Color = Red
 Category = Malevolent
 IoPokedex = This Pokémon's sinister, flame-like aura will consume the spirit of any creature it hits. Victims become burned-out shadows of themselves.
 AmPokedex = 
+
 Generation = 8
+RaidRanks = 6
 #-------------------------------
 [MEWTWO,1]
 FormName = Mega Mewtwo X
@@ -634,6 +700,7 @@ Height = 2.3
 Weight = 127.0
 IoPokedex = Psychic power has augmented its muscles. It has a grip strength of one ton and can sprint a hundred meters in two seconds flat!
 AmPokedex = 
+
 Generation = 6
 #-------------------------------
 [MEWTWO,2]
@@ -647,11 +714,13 @@ Height = 1.5
 Weight = 33.0
 IoPokedex = Despite its diminished size, its mental power has grown phenomenally. With a mere thought, it can smash a skyscraper to smithereens.
 AmPokedex = 
+
 Generation = 6
 #-------------------------------
 [PICHU,2]
 FormName = Spiky-Eared
 AmPokedex = 
+
 Generation = 4
 Evolutions = PIKACHU,None,
 #-------------------------------
@@ -665,6 +734,7 @@ Abilities = MOLDBREAKER
 HiddenAbilities = MOLDBREAKER
 IoPokedex = Massive amounts of energy intensely stimulated Ampharos's cells, apparently awakening its long-sleeping dragon's blood.
 AmPokedex = 
+
 Generation = 6
 #-------------------------------
 [SLOWKING,1]
@@ -678,8 +748,10 @@ Height = 1.8
 Category = Hexpert
 IoPokedex = While chanting strange spells, this Pokémon combines its internal toxins with what it's eaten, creating strange potions.
 AmPokedex = 
+
 Generation = 8
 Flags = InheritFormWithEverStone
+RaidRanks = 3,4,5
 #-------------------------------
 [UNOWN,1]
 FormName = B
@@ -758,10 +830,12 @@ FormName = Z
 #-------------------------------
 [UNOWN,26]
 FormName = ?
+
 Generation = 3
 #-------------------------------
 [UNOWN,27]
 FormName = !
+
 Generation = 3
 #-------------------------------
 [STEELIX,1]
@@ -774,6 +848,7 @@ HiddenAbilities = SANDFORCE
 Height = 10.5
 Weight = 740.0
 AmPokedex = 
+
 Generation = 6
 #-------------------------------
 [SCIZOR,1]
@@ -787,6 +862,7 @@ Height = 2.0
 Weight = 125.0
 IoPokedex = It's better at beating things than grasping them. When it battles for a long time, the weight of its pincers becomes too much to bear.
 AmPokedex = 
+
 Generation = 6
 #-------------------------------
 [HERACROSS,1]
@@ -800,6 +876,7 @@ Height = 1.7
 Weight = 62.5
 IoPokedex = A tremendous influx of energy builds it up, but when Mega Evolution ends, Heracross is bothered by terrible soreness in its muscles.
 AmPokedex = 
+
 Generation = 6
 #-------------------------------
 [CORSOLA,1]
@@ -815,9 +892,11 @@ Weight = 0.5
 Color = White
 IoPokedex = Sudden climate change wiped out this ancient kind of Corsola. This Pokémon absorbs others' life-force through its branches.
 AmPokedex = 
+
 Generation = 8
 Flags = InheritFormWithEverStone
 Evolutions = CURSOLA,Level,38
+RaidRanks = 2,3
 #-------------------------------
 [HOUNDOOM,1]
 FormName = Mega Houndoom
@@ -830,6 +909,7 @@ Height = 1.9
 Weight = 49.5
 IoPokedex = Its red claws and the tips of its tail are melting from high internal temperatures that are painful to Houndoom itself.
 AmPokedex = 
+
 Generation = 6
 #-------------------------------
 [TYRANITAR,1]
@@ -842,6 +922,7 @@ Height = 2.5
 Weight = 255.0
 IoPokedex = Due to the colossal power poured into it, this Pokémon's back split right open. Its destructive instincts are the only thing keeping it moving.
 AmPokedex = 
+
 Generation = 6
 #-------------------------------
 [SCEPTILE,1]
@@ -855,6 +936,7 @@ HiddenAbilities = LIGHTNINGROD
 Height = 1.9
 Weight = 55.2
 AmPokedex = 
+
 Generation = 6
 #-------------------------------
 [BLAZIKEN,1]
@@ -864,6 +946,7 @@ BaseStats = 80,160,80,100,130,80
 BaseExp = 315
 Abilities = SPEEDBOOST
 AmPokedex = 
+
 Generation = 6
 #-------------------------------
 [SWAMPERT,1]
@@ -876,6 +959,7 @@ HiddenAbilities = SWIFTSWIM
 Height = 1.9
 Weight = 102.0
 AmPokedex = 
+
 Generation = 6
 #-------------------------------
 [ZIGZAGOON,1]
@@ -887,8 +971,10 @@ EggMoves = KNOCKOFF,PARTINGSHOT,QUICKGUARD
 Color = White
 IoPokedex = Its restlessness has it constantly running around. If it sees another Pokémon, it will purposely run into them in order to start a fight.
 AmPokedex = 
+
 Generation = 8
 Flags = InheritFormWithEverStone
+RaidRanks = 1,2
 #-------------------------------
 [LINOONE,1]
 FormName = Galarian
@@ -897,9 +983,11 @@ Moves = 0,NIGHTSLASH,1,SWITCHEROO,1,PINMISSILE,1,BABYDOLLEYES,1,TACKLE,1,LEER,1,
 TutorMoves = ASSURANCE,ATTRACT,BLIZZARD,BODYPRESS,BODYSLAM,DIG,ENDURE,FACADE,FAKETEARS,FLING,GIGAIMPACT,GRASSKNOT,GUNKSHOT,HELPINGHAND,HYPERBEAM,HYPERVOICE,ICEBEAM,ICYWIND,IRONTAIL,MUDSHOT,PAYBACK,PINMISSILE,PROTECT,RAINDANCE,REST,RETALIATE,ROUND,SCARYFACE,SCREECH,SEEDBOMB,SHADOWBALL,SHADOWCLAW,SLEEPTALK,SNARL,SNORE,STOMPINGTANTRUM,SUBSTITUTE,SUNNYDAY,SURF,SWIFT,TAUNT,THIEF,THROATCHOP,THUNDER,THUNDERBOLT,THUNDERWAVE,TRICK,WHIRLPOOL,WORKUP,LASHOUT
 IoPokedex = It uses its long tongue to taunt opponents. Once the opposition is enraged, this Pokémon hurls itself at the opponent, tackling them forcefully.
 AmPokedex = 
+
 Generation = 8
 Flags = InheritFormWithEverStone
 Evolutions = OBSTAGOON,LevelNight,35
+RaidRanks = 2,3
 #-------------------------------
 [GARDEVOIR,1]
 FormName = Mega Gardevoir
@@ -909,6 +997,7 @@ BaseExp = 309
 Abilities = PIXILATE
 HiddenAbilities = PIXILATE
 AmPokedex = 
+
 Generation = 6
 #-------------------------------
 [SABLEYE,1]
@@ -921,6 +1010,7 @@ HiddenAbilities = MAGICBOUNCE
 Weight = 161.0
 IoPokedex = Supporting a giant heavy jewel, it can't change direction very nimbly and is vulnerable to attack from behind.
 AmPokedex = 
+
 Generation = 6
 #-------------------------------
 [MAWILE,1]
@@ -934,6 +1024,7 @@ Height = 1.0
 Weight = 23.5
 IoPokedex = Its two sets of jaws thrash about violently as if they each had a will of their own. One gnash from them can turn a boulder to dust.
 AmPokedex = 
+
 Generation = 6
 #-------------------------------
 [AGGRON,1]
@@ -946,6 +1037,7 @@ HiddenAbilities = FILTER
 Height = 2.2
 Weight = 395.0
 AmPokedex = 
+
 Generation = 6
 #-------------------------------
 [MEDICHAM,1]
@@ -955,6 +1047,7 @@ BaseStats = 60,100,85,100,80,85
 BaseExp = 179
 HiddenAbilities = PUREPOWER
 AmPokedex = 
+
 Generation = 6
 #-------------------------------
 [MANECTRIC,1]
@@ -968,6 +1061,7 @@ Height = 1.8
 Weight = 44.0
 IoPokedex = Too much electricity has built up in its body, irritating Manectric. Its explosive speed is equal to that of a lightning bolt.
 AmPokedex = 
+
 Generation = 6
 #-------------------------------
 [SHARPEDO,1]
@@ -981,6 +1075,7 @@ Height = 2.5
 Weight = 130.3
 IoPokedex = The yellow patterns it bears are old scars. The energy from Mega Evolution runs through them, causing it sharp pain and suffering.
 AmPokedex = 
+
 Generation = 6
 #-------------------------------
 [CAMERUPT,1]
@@ -993,6 +1088,7 @@ HiddenAbilities = SHEERFORCE
 Height = 2.5
 Weight = 320.5
 AmPokedex = 
+
 Generation = 6
 #-------------------------------
 [ALTARIA,1]
@@ -1005,6 +1101,7 @@ Abilities = PIXILATE
 HiddenAbilities = PIXILATE
 Height = 1.5
 AmPokedex = 
+
 Generation = 6
 #-------------------------------
 [CASTFORM,1]
@@ -1036,6 +1133,7 @@ Height = 1.2
 Weight = 13.0
 IoPokedex = Extraordinary energy amplifies its cursing power to such an extent that it can't help but curse its own Trainer.
 AmPokedex = 
+
 Generation = 6
 #-------------------------------
 [ABSOL,1]
@@ -1048,6 +1146,7 @@ HiddenAbilities = MAGICBOUNCE
 Weight = 49.0
 IoPokedex = When this Pokémon whips the winglike fur on its back as though beating its wings, it sends an intimidating aura flying at its opponents.
 AmPokedex = 
+
 Generation = 6
 #-------------------------------
 [GLALIE,1]
@@ -1061,6 +1160,7 @@ Height = 2.1
 Weight = 350.2
 IoPokedex = It envelops prey in its mouth, freezing them instantly. But its jaw is dislocated, so it's unable to eat them.
 AmPokedex = 
+
 Generation = 6
 #-------------------------------
 [SALAMENCE,1]
@@ -1074,6 +1174,7 @@ Height = 1.8
 Weight = 112.6
 IoPokedex = It puts its forelegs inside its shell to streamline itself for flight. Salamence flies at high speeds over all kinds of topographical features.
 AmPokedex = 
+
 Generation = 6
 #-------------------------------
 [METAGROSS,1]
@@ -1087,6 +1188,7 @@ Height = 2.5
 Weight = 942.9
 IoPokedex = Its intellect surpasses its previous level, resulting in battles so cruel, they'll make you want to cover your eyes.
 AmPokedex = 
+
 Generation = 6
 #-------------------------------
 [LATIAS,1]
@@ -1098,6 +1200,7 @@ Height = 1.8
 Weight = 52.0
 Color = Purple
 AmPokedex = 
+
 Generation = 6
 #-------------------------------
 [LATIOS,1]
@@ -1109,6 +1212,7 @@ Height = 2.3
 Weight = 70.0
 Color = Purple
 AmPokedex = 
+
 Generation = 6
 #-------------------------------
 [KYOGRE,1]
@@ -1119,6 +1223,7 @@ Abilities = PRIMORDIALSEA
 Height = 9.8
 Weight = 430.0
 AmPokedex = 
+
 Generation = 6
 Flags = Legendary,CannotDynamax
 #-------------------------------
@@ -1131,6 +1236,7 @@ Abilities = DESOLATELAND
 Height = 5.0
 Weight = 999.7
 AmPokedex = 
+
 Generation = 6
 Flags = Legendary,CannotDynamax
 #-------------------------------
@@ -1145,6 +1251,7 @@ HiddenAbilities = DELTASTREAM
 Height = 10.8
 Weight = 392.0
 AmPokedex = 
+
 Generation = 6
 #-------------------------------
 [DEOXYS,1]
@@ -1153,6 +1260,7 @@ BaseStats = 50,180,20,150,180,20
 EVs = ATTACK,2,SPECIAL_ATTACK,1
 Moves = 1,LEER,1,WRAP,7,NIGHTSHADE,13,TELEPORT,19,TAUNT,25,TOXICSPIKES,31,PSYCHIC,37,SUPERPOWER,43,PSYCHOSHIFT,49,ZENHEADBUTT,55,COSMICPOWER,61,ZAPCANNON,67,PSYCHOBOOST,73,HYPERBEAM
 TutorMoves = AERIALACE,ALLYSWITCH,AVALANCHE,BIND,BRICKBREAK,BRUTALSWING,CALMMIND,CHARGEBEAM,CONFIDE,CUT,DARKPULSE,DOUBLETEAM,DRAINPUNCH,DREAMEATER,ENDURE,ENERGYBALL,FACADE,FLASH,FLASHCANNON,FLING,FOCUSBLAST,FOCUSPUNCH,FRUSTRATION,GIGAIMPACT,GRASSKNOT,GRAVITY,HIDDENPOWER,HYPERBEAM,ICEBEAM,LASERFOCUS,LIGHTSCREEN,LOWKICK,LOWSWEEP,MAGICCOAT,NASTYPLOT,POISONJAB,POWERUPPUNCH,PROTECT,PSYCHIC,PSYCHUP,PSYSHOCK,RAINDANCE,RECYCLE,REFLECT,REST,RETURN,ROCKSLIDE,ROCKSMASH,ROCKTOMB,ROLEPLAY,ROUND,SAFEGUARD,SHADOWBALL,SHOCKWAVE,SIGNALBEAM,SKILLSWAP,SLEEPTALK,SNATCH,SNORE,SOLARBEAM,STEALTHROCK,STOMPINGTANTRUM,STRENGTH,SUBSTITUTE,SUNNYDAY,SUPERPOWER,SWAGGER,TAUNT,TELEKINESIS,THROATCHOP,THUNDER,THUNDERBOLT,THUNDERWAVE,TORMENT,TRICK,TRICKROOM,WATERPULSE,WONDERROOM,ZENHEADBUTT,TERABLAST
+RaidRanks = 6
 #-------------------------------
 [DEOXYS,2]
 FormName = Defense Forme
@@ -1160,6 +1268,7 @@ BaseStats = 50,70,160,90,70,160
 EVs = DEFENSE,2,SPECIAL_DEFENSE,1
 Moves = 1,LEER,1,WRAP,7,NIGHTSHADE,13,TELEPORT,19,KNOCKOFF,25,SPIKES,31,PSYCHIC,37,SWITCHEROO,43,PSYCHOSHIFT,49,ZENHEADBUTT,55,IRONDEFENSE,55,AMNESIA,61,RECOVER,67,PSYCHOBOOST,73,COUNTER,73,MIRRORCOAT
 TutorMoves = AERIALACE,ALLYSWITCH,AVALANCHE,BIND,BRICKBREAK,BRUTALSWING,CALMMIND,CHARGEBEAM,CONFIDE,CUT,DARKPULSE,DOUBLETEAM,DRAINPUNCH,DREAMEATER,ENDURE,ENERGYBALL,FACADE,FLASH,FLASHCANNON,FLING,FOCUSBLAST,FOCUSPUNCH,FRUSTRATION,GIGAIMPACT,GRASSKNOT,GRAVITY,HIDDENPOWER,HYPERBEAM,ICEBEAM,IRONDEFENSE,KNOCKOFF,LASERFOCUS,LIGHTSCREEN,LOWKICK,LOWSWEEP,MAGICCOAT,NASTYPLOT,POISONJAB,POWERUPPUNCH,PROTECT,PSYCHIC,PSYCHUP,PSYSHOCK,RAINDANCE,RECYCLE,REFLECT,REST,RETURN,ROCKSLIDE,ROCKSMASH,ROCKTOMB,ROLEPLAY,ROUND,SAFEGUARD,SHADOWBALL,SHOCKWAVE,SIGNALBEAM,SKILLSWAP,SLEEPTALK,SNATCH,SNORE,SOLARBEAM,STEALTHROCK,STOMPINGTANTRUM,STRENGTH,SUBSTITUTE,SUNNYDAY,SWAGGER,TAUNT,TELEKINESIS,THROATCHOP,THUNDER,THUNDERBOLT,THUNDERWAVE,TORMENT,TRICK,TRICKROOM,WATERPULSE,WONDERROOM,ZENHEADBUTT,TERABLAST
+RaidRanks = 6
 #-------------------------------
 [DEOXYS,3]
 FormName = Speed Forme
@@ -1167,6 +1276,7 @@ BaseStats = 50,95,90,180,95,90
 EVs = SPEED,3
 Moves = 1,LEER,1,WRAP,7,NIGHTSHADE,13,DOUBLETEAM,19,KNOCKOFF,25,TOXICSPIKES,31,PSYCHIC,37,SWIFT,43,PSYCHOSHIFT,49,ZENHEADBUTT,55,AGILITY,61,RECOVER,67,PSYCHOBOOST,73,EXTREMESPEED
 TutorMoves = AERIALACE,ALLYSWITCH,AVALANCHE,BIND,BRICKBREAK,BRUTALSWING,CALMMIND,CHARGEBEAM,CONFIDE,CUT,DARKPULSE,DOUBLETEAM,DRAINPUNCH,DREAMEATER,ENDURE,ENERGYBALL,FACADE,FIREPUNCH,FLASH,FLASHCANNON,FLING,FOCUSBLAST,FOCUSPUNCH,FRUSTRATION,GIGAIMPACT,GRASSKNOT,GRAVITY,HIDDENPOWER,HYPERBEAM,ICEBEAM,ICEPUNCH,KNOCKOFF,LASERFOCUS,LIGHTSCREEN,LOWKICK,LOWSWEEP,MAGICCOAT,NASTYPLOT,POISONJAB,POWERUPPUNCH,PROTECT,PSYCHIC,PSYCHUP,PSYSHOCK,RAINDANCE,RECYCLE,REFLECT,REST,RETURN,ROCKSLIDE,ROCKSMASH,ROCKTOMB,ROLEPLAY,ROUND,SAFEGUARD,SHADOWBALL,SHOCKWAVE,SIGNALBEAM,SKILLSWAP,SLEEPTALK,SNATCH,SNORE,SOLARBEAM,STEALTHROCK,STOMPINGTANTRUM,STRENGTH,SUBSTITUTE,SUNNYDAY,SWAGGER,TAUNT,TELEKINESIS,THROATCHOP,THUNDER,THUNDERBOLT,THUNDERPUNCH,THUNDERWAVE,TORMENT,TRICK,TRICKROOM,WATERPULSE,WONDERROOM,ZENHEADBUTT,TERABLAST
+RaidRanks = 6
 #-------------------------------
 [BURMY,1]
 FormName = Sandy Cloak
@@ -1184,6 +1294,7 @@ EVs = DEFENSE,2
 Moves = 0,QUIVERDANCE,1,SUCKERPUNCH,1,TACKLE,1,PROTECT,1,BUGBITE,10,PROTECT,15,BUGBITE,20,STRINGSHOT,23,CONFUSION,26,ROCKBLAST,29,HARDEN,32,PSYBEAM,35,INFESTATION,38,FLAIL,41,ATTRACT,44,PSYCHIC,47,FISSURE,50,BUGBUZZ
 TutorMoves = ATTRACT,BUGBUZZ,BULLDOZE,DIG,DOUBLETEAM,DREAMEATER,EARTHQUAKE,ENDURE,FACADE,FLASH,GIGADRAIN,GIGAIMPACT,HYPERBEAM,PROTECT,PSYCHIC,PSYCHUP,RAINDANCE,REST,ROCKTOMB,SAFEGUARD,SANDSTORM,SHADOWBALL,SKILLSWAP,SLEEPTALK,SOLARBEAM,STEALTHROCK,SUBSTITUTE,SUNNYDAY,SWAGGER,THIEF
 Color = Brown
+RaidRanks = 2,3
 #-------------------------------
 [WORMADAM,2]
 FormName = Trash Cloak
@@ -1193,6 +1304,7 @@ EVs = DEFENSE,1,SPECIAL_DEFENSE,1
 Moves = 0,QUIVERDANCE,1,METALBURST,1,SUCKERPUNCH,1,TACKLE,1,PROTECT,1,BUGBITE,10,PROTECT,15,BUGBITE,20,STRINGSHOT,23,CONFUSION,26,METALBURST,29,METALSOUND,32,PSYBEAM,35,INFESTATION,38,FLAIL,41,ATTRACT,44,PSYCHIC,47,IRONHEAD,50,BUGBUZZ
 TutorMoves = ATTRACT,BUGBUZZ,DIG,DOUBLETEAM,DREAMEATER,ENDURE,FACADE,FLASH,FLASHCANNON,GIGADRAIN,GIGAIMPACT,GYROBALL,HYPERBEAM,PROTECT,PSYCHIC,PSYCHUP,RAINDANCE,REST,SAFEGUARD,SHADOWBALL,SKILLSWAP,SLEEPTALK,SOLARBEAM,STEALTHROCK,SUBSTITUTE,SUNNYDAY,SWAGGER,THIEF
 Color = Red
+RaidRanks = 2,3
 #-------------------------------
 [CHERRIM,1]
 FormName = Sunshine Form
@@ -1203,11 +1315,13 @@ IoPokedex = After absorbing plenty of sunlight, Cherrim takes this form. It's fu
 FormName = East Sea
 Color = Blue
 IoPokedex = Its appearance changes depending on the environment. One theory suggests that living in cold seas causes Shellos to take on this form.
+RaidRanks = 1,2
 #-------------------------------
 [GASTRODON,1]
 FormName = East Sea
 Color = Blue
 IoPokedex = Its body is covered in a sticky slime. It's very susceptible to dehydration, so it can't spend too much time on land.
+RaidRanks = 3,4,5
 #-------------------------------
 [LOPUNNY,1]
 FormName = Mega Lopunny
@@ -1221,6 +1335,7 @@ Height = 1.3
 Weight = 28.3
 IoPokedex = It swings its ears like whips and strikes its enemies with them. It has an intensely combative disposition.
 AmPokedex = 
+
 Generation = 6
 #-------------------------------
 [GARCHOMP,1]
@@ -1232,6 +1347,7 @@ Abilities = SANDFORCE
 HiddenAbilities = SANDFORCE
 IoPokedex = Its vaunted wings become scythes, sending it mad with rage. It swings its scythes wildly and slices the ground to pieces.
 AmPokedex = 
+
 Generation = 6
 #-------------------------------
 [LUCARIO,1]
@@ -1245,6 +1361,7 @@ Height = 1.3
 Weight = 57.5
 IoPokedex = It readies itself to face its enemies by focusing its mental energies. Its fighting style can be summed up in a single word: heartless.
 AmPokedex = 
+
 Generation = 6
 #-------------------------------
 [ABOMASNOW,1]
@@ -1256,6 +1373,7 @@ HiddenAbilities = SNOWWARNING
 Height = 2.7
 Weight = 185.0
 AmPokedex = 
+
 Generation = 6
 #-------------------------------
 [GALLADE,1]
@@ -1267,6 +1385,7 @@ Abilities = INNERFOCUS
 HiddenAbilities = INNERFOCUS
 Weight = 56.4
 AmPokedex = 
+
 Generation = 6
 #-------------------------------
 [ROTOM,1]
@@ -1275,6 +1394,7 @@ Types = ELECTRIC,FIRE
 BaseStats = 50,65,107,86,105,107
 BaseExp = 182
 IoPokedex = This Rotom has possessed a convection microwave oven that uses a special motor. It also has a flair for manipulating flames.
+RaidRanks = 3,4,5
 #-------------------------------
 [ROTOM,2]
 FormName = Wash Rotom
@@ -1282,6 +1402,7 @@ Types = ELECTRIC,WATER
 BaseStats = 50,65,107,86,105,107
 BaseExp = 182
 IoPokedex = This form of Rotom enjoys coming up with water-based pranks. Be careful with it if you don't want your room flooded.
+RaidRanks = 3,4,5
 #-------------------------------
 [ROTOM,3]
 FormName = Frost Rotom
@@ -1289,6 +1410,7 @@ Types = ELECTRIC,ICE
 BaseStats = 50,65,107,86,105,107
 BaseExp = 182
 IoPokedex = Rotom assumes this form when it takes over a refrigerator powered by a special motor. It battles by spewing cold air.
+RaidRanks = 3,4,5
 #-------------------------------
 [ROTOM,4]
 FormName = Fan Rotom
@@ -1296,6 +1418,7 @@ Types = ELECTRIC,FLYING
 BaseStats = 50,65,107,86,105,107
 BaseExp = 182
 IoPokedex = In this form, Rotom applies its new power over wind to its love of pranks. It will happily blow away any important documents it can find.
+RaidRanks = 3,4,5
 #-------------------------------
 [ROTOM,5]
 FormName = Mow Rotom
@@ -1303,6 +1426,7 @@ Types = ELECTRIC,GRASS
 BaseStats = 50,65,107,86,105,107
 BaseExp = 182
 IoPokedex = This is Rotom after it's seized control of a lawn mower that has a special motor. As it mows down grass, it scatters the clippings everywhere.
+RaidRanks = 3,4,5
 #-------------------------------
 [GIRATINA,1]
 FormName = Origin Forme
@@ -1324,6 +1448,7 @@ Moves = 1,GROWTH,10,MAGICALLEAF,19,LEECHSEED,28,QUICKATTACK,37,SWEETSCENT,46,HEA
 TutorMoves = BULLETSEED,CONFIDE,COVET,DAZZLINGGLEAM,DOUBLETEAM,ENDURE,ENERGYBALL,FACADE,FLASH,FRUSTRATION,GIGADRAIN,GIGAIMPACT,GRASSKNOT,HIDDENPOWER,HYPERBEAM,LASERFOCUS,LASTRESORT,NATUREPOWER,PROTECT,PSYCHIC,PSYCHUP,REST,RETURN,ROUND,SAFEGUARD,SEEDBOMB,SLEEPTALK,SNORE,SOLARBEAM,SUBSTITUTE,SUNNYDAY,SWAGGER,SWORDSDANCE,SYNTHESIS,TAILWIND,WORRYSEED,ZENHEADBUTT,TERABLAST
 Height = 0.4
 Weight = 5.2
+RaidRanks = 6
 #-------------------------------
 [ARCEUS,1]
 FormName = Fighting Type
@@ -1397,6 +1522,7 @@ Types = DARK
 FormName = Fairy Type
 Types = FAIRY
 AmPokedex = 
+
 Generation = 6
 #-------------------------------
 [AUDINO,1]
@@ -1411,6 +1537,7 @@ Height = 1.5
 Weight = 32.0
 Color = White
 AmPokedex = 
+
 Generation = 6
 #-------------------------------
 [BASCULIN,1]
@@ -1418,6 +1545,7 @@ FormName = Blue-Striped
 Abilities = ROCKHEAD,ADAPTABILITY
 IoPokedex = Even Basculin, which devours everything it can with its huge jaws, is nothing more than food to organisms stronger than itself.
 WildItemUncommon = DEEPSEASCALE
+RaidRanks = 2,3
 #-------------------------------
 [DARUMAKA,2]
 FormName = Galarian
@@ -1431,9 +1559,11 @@ Color = White
 Habitat = Mountain
 IoPokedex = The colder they get, the more energetic they are. They freeze their breath to make snowballs, using them as ammo for playful snowball fights.
 AmPokedex = 
+
 Generation = 8
 Flags = InheritFormWithEverStone
 Evolutions = DARMANITAN,Item,ICESTONE
+RaidRanks = 1,2
 #-------------------------------
 [DARMANITAN,1]
 FormName = Zen Mode
@@ -1458,8 +1588,10 @@ Habitat = Mountain
 Category = Zen Charm
 IoPokedex = On days when blizzards blow through, it comes down to where people live. It stashes food in the snowball on its head, taking it home for later.
 AmPokedex = 
+
 Generation = 8
 Flags = InheritFormWithEverStone
+RaidRanks = 3,4,5
 #-------------------------------
 [DARMANITAN,3]
 FormName = Galarian Zen Mode
@@ -1475,6 +1607,7 @@ Weight = 120.0
 Color = White
 IoPokedex = Anger has reignited its atrophied flame sac. This Pokémon spews fire everywhere as it rampages indiscriminately.
 AmPokedex = 
+
 Generation = 8
 Flags = DefaultForm_2
 #-------------------------------
@@ -1487,9 +1620,11 @@ Moves = 1,ASTONISH,1,PROTECT,4,HAZE,8,NIGHTSHADE,12,DISABLE,16,BRUTALSWING,20,CR
 TutorMoves = ALLYSWITCH,ATTRACT,BRUTALSWING,CALMMIND,DARKPULSE,EARTHPOWER,EARTHQUAKE,ENDURE,ENERGYBALL,FACADE,FAKETEARS,HEX,IMPRISON,IRONDEFENSE,NASTYPLOT,PAYBACK,PROTECT,PSYCHIC,RAINDANCE,REST,ROCKSLIDE,ROCKTOMB,ROUND,SAFEGUARD,SANDSTORM,SHADOWBALL,SKILLSWAP,SLEEPTALK,SNORE,SUBSTITUTE,THIEF,TOXICSPIKES,TRICK,TRICKROOM,WILLOWISP,WONDERROOM,ZENHEADBUTT,POLTERGEIST
 IoPokedex = A clay slab with cursed engravings took possession of a Yamask. The slab is said to be absorbing the Yamask's dark power.
 AmPokedex = 
+
 Generation = 8
 Flags = InheritFormWithEverStone
 Evolutions = RUNERIGUS,EventAfterDamageTaken,2
+RaidRanks = 1,2
 #-------------------------------
 [DEERLING,1]
 FormName = Summer Form
@@ -1526,8 +1661,10 @@ Color = Green
 Habitat = Cave
 IoPokedex = Its conspicuous lips lure prey in as it lies in wait in the mud. When prey gets close, Stunfisk clamps its jagged steel fins down on them.
 AmPokedex = 
+
 Generation = 8
 Flags = InheritFormWithEverStone
+RaidRanks = 3,4
 #-------------------------------
 [TORNADUS,1]
 FormName = Therian Forme
@@ -1537,6 +1674,7 @@ Abilities = REGENERATOR
 HiddenAbilities = REGENERATOR
 Height = 1.4
 Shape = Winged
+RaidRanks = 6
 #-------------------------------
 [THUNDURUS,1]
 FormName = Therian Forme
@@ -1546,6 +1684,7 @@ Abilities = VOLTABSORB
 HiddenAbilities = VOLTABSORB
 Height = 3.0
 Shape = BipedalTail
+RaidRanks = 6
 #-------------------------------
 [LANDORUS,1]
 FormName = Therian Forme
@@ -1555,6 +1694,7 @@ Abilities = INTIMIDATE
 HiddenAbilities = INTIMIDATE
 Height = 1.3
 Shape = Quadruped
+RaidRanks = 6
 #-------------------------------
 [KYUREM,1]
 FormName = White Kyurem
@@ -1628,6 +1768,7 @@ BaseExp = 320
 Abilities = BATTLEBOND
 HiddenAbilities = BATTLEBOND
 AmPokedex = 
+
 Generation = 7
 #-------------------------------
 [VIVILLON,1]
@@ -1838,6 +1979,7 @@ Color = Black
 Shape = Quadruped
 IoPokedex = This is Zygarde when about 10% of its pieces have been assembled. It leaps at its opponent's chest and sinks its sharp fangs into them.
 AmPokedex = 
+
 Generation = 7
 #-------------------------------
 [ZYGARDE,2]
@@ -1852,6 +1994,7 @@ Color = Black
 Shape = BipedalTail
 IoPokedex = This is Zygarde's perfected form. From the orifice on its chest, it radiates high-powered energy that eliminates everything.
 AmPokedex = 
+
 Generation = 7
 #-------------------------------
 [ZYGARDE,3]
@@ -1891,6 +2034,7 @@ Types = ELECTRIC,FLYING
 Color = Yellow
 IoPokedex = It creates an electric charge by rubbing its feathers together. It dances over to its enemies and delivers shocking electrical punches.
 WildItemUncommon = YELLOWNECTAR
+RaidRanks = 3,4
 #-------------------------------
 [ORICORIO,2]
 FormName = Pa'u Style
@@ -1898,6 +2042,7 @@ Types = PSYCHIC,FLYING
 Color = Pink
 IoPokedex = This Oricorio relaxes by swaying gently. This increases its psychic energy, which it then fires at its enemies.
 WildItemUncommon = PINKNECTAR
+RaidRanks = 3,4
 #-------------------------------
 [ORICORIO,3]
 FormName = Sensu Style
@@ -1905,6 +2050,7 @@ Types = GHOST,FLYING
 Color = Purple
 IoPokedex = It summons the dead with its dreamy dancing. From their malice, it draws power with which to curse its enemies.
 WildItemUncommon = PURPLENECTAR
+RaidRanks = 3,4
 #-------------------------------
 [ROCKRUFF,2]
 Abilities = OWNTEMPO
@@ -1924,6 +2070,7 @@ Height = 1.1
 Color = Red
 Shape = BipedalTail
 IoPokedex = It goads its enemies into attacking, withstands the hits, and in return, delivers a headbutt, crushing their bones with its rocky mane.
+RaidRanks = 3,4,5
 #-------------------------------
 [LYCANROC,2]
 FormName = Dusk Form
@@ -1935,6 +2082,7 @@ Moves = 0,CRUSHCLAW,1,ACCELEROCK,1,COUNTER,1,TACKLE,1,LEER,1,SANDATTACK,1,SUCKER
 TutorMoves = BRICKBREAK,BULKUP,BULLDOZE,CHARM,CLOSECOMBAT,CRUNCH,DIG,DRILLRUN,EARTHPOWER,ENDURE,FACADE,FIREFANG,GIGAIMPACT,HELPINGHAND,HYPERVOICE,IRONDEFENSE,IRONHEAD,OUTRAGE,PLAYROUGH,PROTECT,PSYCHICFANGS,REST,REVERSAL,ROCKBLAST,ROCKSLIDE,ROCKTOMB,SANDSTORM,SCARYFACE,SLEEPTALK,SNARL,STEALTHROCK,STOMPINGTANTRUM,STONEEDGE,SUBSTITUTE,SWORDSDANCE,TAKEDOWN,TAUNT,THUNDERFANG,TRAILBLAZE,ZENHEADBUTT,TERABLAST
 IoPokedex = Bathed in the setting sun of evening, Lycanroc has undergone a special kind of evolution. An intense fighting spirit underlies its calmness.
 Flags = InheritFormFromMother
+RaidRanks = 3,4,5
 #-------------------------------
 [WISHIWASHI,1]
 FormName = School Form
@@ -1944,6 +2092,7 @@ Height = 8.2
 Weight = 78.6
 Shape = MultiBody
 IoPokedex = Weak Wishiwashi school together to concentrate their power. Their united force makes them the demon of the sea, feared near and far.
+RaidRanks = 5
 #-------------------------------
 [SILVALLY,1]
 FormName = Type: Fighting
@@ -2390,6 +2539,7 @@ Types = FIGHTING,WATER
 Moves = 0,SURGINGSTRIKES,1,AQUAJET,1,ROCKSMASH,1,LEER,1,ENDURE,1,FOCUSENERGY,12,AERIALACE,16,SCARYFACE,20,HEADBUTT,24,BRICKBREAK,28,DETECT,32,BULKUP,36,IRONHEAD,40,DYNAMICPUNCH,44,COUNTER,48,CLOSECOMBAT,52,FOCUSPUNCH
 TutorMoves = ACROBATICS,AERIALACE,AURASPHERE,BODYPRESS,BODYSLAM,BRICKBREAK,BULKUP,CHILLINGWATER,CLOSECOMBAT,DIG,DRAINPUNCH,ENDURE,FACADE,FALSESWIPE,FIREPUNCH,FLING,FOCUSBLAST,GIGAIMPACT,HELPINGHAND,ICEPUNCH,ICESPINNER,IRONDEFENSE,IRONHEAD,LIQUIDATION,LOWKICK,LOWSWEEP,POISONJAB,PROTECT,RAINDANCE,REST,REVERSAL,ROCKSLIDE,ROCKTOMB,SCARYFACE,SLEEPTALK,STONEEDGE,SUBSTITUTE,SWIFT,SWORDSDANCE,TAKEDOWN,TAUNT,THUNDERPUNCH,TRAILBLAZE,UTURN,WATERFALL,ZENHEADBUTT,TERABLAST
 IoPokedex = It's believed that this Pokémon modeled its fighting style on the flow of a river—sometimes rapid, sometimes calm.
+RaidRanks = 6
 #-------------------------------
 [CALYREX,1]
 FormName = Ice Rider

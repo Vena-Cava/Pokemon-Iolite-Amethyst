@@ -1,0 +1,190 @@
+﻿# See the documentation on the wiki to learn how to edit this file.
+#-------------------------------
+[POKEMONTRAINER_Micah,Micah]
+LoseText = ...
+Pokemon = ELEEFENT,5
+    Moves = TACKLE,TAILWHIP,ABSORB
+#-------------------------------
+[POKEMONTRAINER_Micah,Micah,1]
+LoseText = ...
+Pokemon = QUETZI,5
+#-------------------------------
+[POKEMONTRAINER_Micah,Micah,2]
+LoseText = ...
+Pokemon = CYCLOPTO,5
+#-------------------------------
+[POKEMONTRAINER_Amber,Amber]
+LoseText = ...
+Pokemon = ELEEFENT,5
+    Moves = TACKLE,TAILWHIP,ABSORB
+#-------------------------------
+[POKEMONTRAINER_Amber,Amber,1]
+LoseText = ...
+Pokemon = QUETZI,5
+#-------------------------------
+[POKEMONTRAINER_Amber,Amber,2]
+LoseText = ...
+Pokemon = CYCLOPTO,5
+#-------------------------------
+[POKEMONTRAINER_Alex,Alex]
+LoseText = ...
+Pokemon = ELEEFENT,5
+    Moves = TACKLE,TAILWHIP,ABSORB
+#-------------------------------
+[POKEMONTRAINER_Alex,Alex,1]
+LoseText = ...
+Pokemon = QUETZI,5
+#-------------------------------
+[POKEMONTRAINER_Alex,Alex,2]
+LoseText = ...
+Pokemon = CYCLOPTO,5
+#-------------------------------
+[POKEMONTRAINER_Micah,Micah,3]
+LoseText = ...
+Pokemon = ELEEFENT,7
+#-------------------------------
+[POKEMONTRAINER_Micah,Micah,4]
+LoseText = ...
+Pokemon = QUETZI,7
+#-------------------------------
+[POKEMONTRAINER_Micah,Micah,5]
+LoseText = ...
+Pokemon = CYCLOPTO,7
+#-------------------------------
+[POKEMONTRAINER_Amber,Amber,3]
+LoseText = ...
+Pokemon = ELEEFENT,7
+#-------------------------------
+[POKEMONTRAINER_Amber,Amber,4]
+LoseText = ...
+Pokemon = QUETZI,7
+#-------------------------------
+[POKEMONTRAINER_Amber,Amber,5]
+LoseText = ...
+Pokemon = CYCLOPTO,7
+#-------------------------------
+[POKEMONTRAINER_Alex,Alex,3]
+LoseText = ...
+Pokemon = ELEEFENT,7
+#-------------------------------
+[POKEMONTRAINER_Alex,Alex,4]
+LoseText = ...
+Pokemon = QUETZI,7
+#-------------------------------
+[POKEMONTRAINER_Alex,Alex,5]
+LoseText = ...
+Pokemon = CYCLOPTO,7
+#-------------------------------
+[BUGCATCHER,Anthony]
+LoseText = What's wrong with my bugs?
+Pokemon = ROLLVA,3
+#-------------------------------
+[YOUNGSTER3,Declan]
+LoseText = Shorts won't make you better at battling, it seems.
+Pokemon = CRIVOLE,4
+Pokemon = QUILTOX,4
+#-------------------------------
+[LASS3,Lucy]
+LoseText = My cute little birdie!
+Pokemon = CHICKATOO,6
+#-------------------------------
+[SCIENTIST_F,Ethyl]
+LoseText = ...
+Pokemon = FENNEKIN,7
+#-------------------------------
+[RUINMANIAC,Winston]
+LoseText = ...
+Pokemon = NACLI,7
+Pokemon = DUSPUPA,8
+#-------------------------------
+[ROUGHNECK2,Tony]
+LoseText = My brutha's gonna take you down!
+Pokemon = DIVOGGLE,12
+#-------------------------------
+[ROUGHNECK2,Toney]
+LoseText = 'Big' Sis' gonna show you what's what!
+Pokemon = PORCUPOX,12
+#-------------------------------
+[ROUGHNECK2,Tony,1]
+LoseText = Not even with my brutha's help...
+Pokemon = DIVOGGLE,12
+#-------------------------------
+[ROUGHNECK2,Toney,1]
+LoseText = Sorry Sis, we couldn't do it...
+Pokemon = PORCUPOX,12
+#-------------------------------
+[SCHOOLKID_F2,Toni]
+LoseText = Aw Raticates! Fiiiiine, I guess you beat my gym...
+Pokemon = VINAPSE,13
+Pokemon = CHROMARACNA,15
+#-------------------------------
+[LEADER_Sedric,Sedric]
+Items = POTION
+LoseText = ...
+Pokemon = TENTACOOL,10
+    Moves = CHILLINGWATER,ACID,WATERGUN,WRAP
+    Ability = LIQUIDOOZE
+    Gender = male
+    Ball = NETBALL
+    NoTera = true
+    NoDynamax = true
+Pokemon = PUFFONO,12
+    Moves = CHILLINGWATER,IRONDEFENSE,GYROBALL,AQUARING
+    Ability = PUFFEDOUT
+    Gender = male
+    Ball = NETBALL
+    NoTera = true
+    NoDynamax = true
+#-------------------------------
+[LEADER_Sedric,Sedric,1]
+Items = MEGARING
+LoseText = ...
+Pokemon = TENTACRUEL,100
+    Moves = RAPIDSPIN,SLUDGEBOMB,KNOCKOFF,SCALD
+    Ability = CLEARBODY
+    Item = BLACKSLUDGE
+    Nature = TIMID
+    IV = 31,31,31,31,31,31
+    EV = 140,0,0,144,148,76
+    Ball = NETBALL
+Pokemon = JELLICENT,100
+    Moves = RECOVER,SCALD,ICEBEAM,HEX
+    Ability = CURSEDBODY
+    Item = HEAVYDUTYBOOTS
+    Nature = CALM
+    IV = 31,0,31,31,31,31
+    EV = 252,0,220,0,0,36
+    Ball = NETBALL
+Pokemon = SYRENE,100
+    Moves = MUDDYWATER,MOONBLAST,HEARTSTAMP,IRONTAIL
+    Ability = SERENEGRACE
+    Item = CHOICESCARF
+    Nature = HASTY
+    IV = 31,31,31,31,31,31
+    EV = 0,4,0,252,252,0
+    Ball = NETBALL
+Pokemon = DONDOZO,100
+    Moves = CURSE,WATERFALL,REST,SLEEPTALK
+    Ability = UNAWARE
+    Item = LEFTOVERS
+    Nature = CAREFUL
+    IV = 31,31,31,31,31,31
+    EV = 252,0,4,0,0,252
+    Ball = NETBALL
+Pokemon = PUFFONO,100
+    Moves = SHELLSMASH,RECOVER,GYROBALL,SCALD
+    Ability = PUFFEDOUT
+    Item = FOCUSSASH
+    Nature = RELAXED
+    IV = 31,31,31,0,31,31
+    EV = 252,0,128,0,0,128
+    Ball = NETBALL
+Pokemon = SLOWBRO,100
+    Moves = SCALD,ICEBEAM,SLACKOFF,FLAMETHROWER
+    Ability = OBLIVIOUS
+    Item = SLOWBRONITE
+    Nature = BOLD
+    IV = 31,0,31,31,31,31
+    EV = 248,0,216,0,0,44
+    Ball = NETBALL
+#-------------------------------

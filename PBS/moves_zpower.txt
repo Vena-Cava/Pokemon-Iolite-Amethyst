@@ -407,7 +407,7 @@ TotalPP = 1
 Target = NearOther
 FunctionCode = StartPsychicTerrain
 Flags = ZMove,Contact,CannotMetronome
-Description = Cozmix uses the power generated from the Solar System aligning, this move creates Psychic Terrain and grounds all Pokémon.
+Description = Cozmix uses the power generated from the Solar System aligning, this move creates Psychic Terrain and will always hit.
 #-------------------------------
 [FURIOUSFISTOFNORDRASHEART]
 Name = Furious Fist of Nordra's Heart

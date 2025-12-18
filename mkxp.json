@@ -13,11 +13,11 @@
     // Note that the "Game Title" defined in RPG Maker XP should not have
     // accented characters in it, which is why this property is useful.
     //
-    "windowTitle": "Pokémon Essentials v21.1",
+    "windowTitle": "Pokémon Iolite & Amethyst",
 
     // The game window's width and height, in pixels.
     //
-    "defScreenW": 512,
+    "defScreenW": 684,
     "defScreenH": 384,
 
     // The path to the game window's icon. For Linux only. (Default: none)
@@ -99,7 +99,7 @@
 
     // Whether the game window is freely resizable.
     //
-    // "winResizable": true,
+    // "winResizable": false,
 
     // Whether the game screen's aspect ratio is preserved when resizing the
     // window. If false, the game screen will stretch and distort to fill the

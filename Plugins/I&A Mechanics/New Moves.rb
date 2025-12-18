@@ -276,7 +276,7 @@ end
 
 #===============================================================================
 # Power is doubled if the target is using Bounce, Fly or Sky Drop. Hits some
-# semi-invulnerable targets. May paralyze the target. (Draconic Stormsurge)
+# semi-invulnerable targets. May paralyze the target. (Stormsurge)
 #===============================================================================
 class Battle::Move::ParaTargetDoublePowerIfTargetInSky < Battle::Move::ParalyzeTarget
   def hitsFlyingTargets?; return true; end

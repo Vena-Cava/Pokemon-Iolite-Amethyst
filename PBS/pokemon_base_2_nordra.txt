@@ -14,7 +14,7 @@ Abilities = OVERGROW
 HiddenAbilities = GRASSYSURGE
 Moves = 1,TACKLE,1,LEAFAGE,4,TAILWHIP,6,MAGICALLEAF,8,DISARMINGVOICE,11,LEECHSEED,15,DRAININGKISS,18,MISTYTERRAIN,20,GIGADRAIN,24,DAZZLINGGLEAM,28,ENERGYBALL,32,ZENHEADBUTT,36,FLORALHEALING,40,PLAYROUGH,44,SOLARBEAM,47,MOONBLAST,50,MEGAHORN,53,LEAFSTORM,55,FLEURCANNON
 EggGroups = Field,Grass
-HatchSteps = 5120
+HatchCycles = 20
 Height = 0.3
 Weight = 13.2
 Color = Green
@@ -24,6 +24,7 @@ Category = Forest Fawn
 IoPokedex = A spritely young fawn that collects and trades flowers. It likes to communicate with plants by gently rubbing its nose to them.
 AmPokedex = Florawn have a natural desire to bond with other creatures, and if they love another Pokémon or trainer enough, they may gift a flower.
 Evolutions = FLAURISH,Level,16
+RaidRanks = 1,2
 #-------------------------------
 [FLAURISH]
 Name = Flaurish
@@ -39,7 +40,7 @@ Abilities = OVERGROW
 HiddenAbilities = GRASSYSURGE
 Moves = 1,TACKLE,1,LEAFAGE,4,TAILWHIP,6,MAGICALLEAF,8,DISARMINGVOICE,11,LEECHSEED,15,DRAININGKISS,18,MISTYTERRAIN,20,GIGADRAIN,24,DAZZLINGGLEAM,28,ENERGYBALL,32,ZENHEADBUTT,36,FLORALHEALING,40,PLAYROUGH,44,SOLARBEAM,47,MOONBLAST,50,MEGAHORN,53,LEAFSTORM,55,FLEURCANNON
 EggGroups = Field,Grass
-HatchSteps = 5120
+HatchCycles = 20
 Height = 1.1
 Weight = 34.0
 Color = Green
@@ -49,6 +50,7 @@ Category = Forest Deer
 IoPokedex = Flaurish like to guard their home forests. Since their antlers are still developing to their full size, they prefer to channel magical energy through them.
 AmPokedex = Flaurish and its elder counterpart grow their antlers inside-out instead of outside-in, so they devolved the need to shed velvet.
 Evolutions = SYLVSTAG,Level,36
+RaidRanks = 2,3
 #-------------------------------
 [SYLVSTAG]
 Name = Sylvstag
@@ -64,7 +66,7 @@ Abilities = OVERGROW
 HiddenAbilities = GRASSYSURGE
 Moves = 0,GLADEGASH,1,TACKLE,1,LEAFAGE,4,TAILWHIP,6,MAGICALLEAF,8,DISARMINGVOICE,11,LEECHSEED,15,DRAININGKISS,18,MISTYTERRAIN,20,GIGADRAIN,24,DAZZLINGGLEAM,28,ENERGYBALL,32,ZENHEADBUTT,36,FLORALHEALING,40,PLAYROUGH,44,SOLARBEAM,47,MOONBLAST,50,MEGAHORN,53,LEAFSTORM,55,FLEURCANNON
 EggGroups = Field,Grass
-HatchSteps = 5120
+HatchCycles = 20
 Height = 2.1
 Weight = 680.3
 Color = Green
@@ -73,6 +75,7 @@ Habitat = Grassland
 Category = Forest Stag
 IoPokedex = With fully grown antlers, Sylvstag are premier defenders of the woods. Their velvet has a dense matted moss that has prime conditions for flowers to thrive.,
 AmPokedex = It's a surprise that Sylvstag retain their antlers year-round. It's said that drinking vessels made from such contain a little bit of forest magic.
+RaidRanks = 3,4,5
 #-------------------------------
 [SMOKIDD]
 Name = Smokidd
@@ -85,10 +88,10 @@ EVs = ATTACK,1
 CatchRate = 45
 Happiness = 70
 Abilities = BLAZE
-HiddenAbilities = LIGHTNINGROD
+HiddenAbilities = MUSCLESTIM
 Moves = 1,TACKLE,1,EMBER,4,LEER,6,FLAMECHARGE,8,GYROBALL,11,FLAMEWHEEL,15,MAGNETBOMB,18,ELECTRICTERRAIN,20,FIREFANG,24,FLASHCANNON,28,FLAMEKICK,32,THUNDERBOLT,36,AUTOTOMIZE,40,IRONHEAD,44,FIRELASH,47,IRONTAIL,50,MEGAHORN,53,FLAREBLITZ,55,STEELROLLER
 EggGroups = Field,Mineral
-HatchSteps = 5120
+HatchCycles = 20
 Height = 0.3
 Weight = 13.2
 Color = Red
@@ -98,6 +101,7 @@ Category = Smokey Goat
 IoPokedex = A kid with a metallic coating of fluff. Like a sweater, it builds up nightmarish amounts of static.
 AmPokedex = The ignition of its tail is caused by the static finding the easiest point to leave the body. Fortunately, they're immune to their own flames.
 Evolutions = SMOULDOE,Level,16
+RaidRanks = 1,2
 #-------------------------------
 [SMOULDOE]
 Name = Smouldoe
@@ -110,10 +114,10 @@ EVs = ATTACK,2
 CatchRate = 45
 Happiness = 70
 Abilities = BLAZE
-HiddenAbilities = LIGHTNINGROD
+HiddenAbilities = MUSCLESTIM
 Moves = 1,TACKLE,1,EMBER,4,LEER,6,FLAMECHARGE,8,GYROBALL,11,FLAMEWHEEL,15,MAGNETBOMB,18,ELECTRICTERRAIN,20,FIREFANG,24,FLASHCANNON,28,FLAMEKICK,32,THUNDERBOLT,36,AUTOTOMIZE,40,IRONHEAD,44,FIRELASH,47,IRONTAIL,50,MEGAHORN,53,FLAREBLITZ,55,STEELROLLER
 EggGroups = Field
-HatchSteps = 5120
+HatchCycles = 20
 Height = 0.8
 Weight = 45.6
 Color = Red
@@ -123,6 +127,7 @@ Category = Smokey Goat
 IoPokedex = The static within its coat is causing the wool to form jagged points. The electricity is picking iron out of the dirt, causing it to grow more wool.
 AmPokedex = Smouldoe have a frequent issue of being magnetised to barbed wire, so their enclosures are generally made of stone.
 Evolutions = FERRVORAM,Level,36
+RaidRanks = 2,3
 #-------------------------------
 [FERRVORAM]
 Name = Ferrvoram
@@ -135,10 +140,10 @@ EVs = ATTACK,3
 CatchRate = 45
 Happiness = 70
 Abilities = BLAZE
-HiddenAbilities = LIGHTNINGROD
+HiddenAbilities = MUSCLESTIM
 Moves = 0,SPARKSTAMPEDE,1,TACKLE,1,EMBER,4,LEER,6,FLAMECHARGE,8,GYROBALL,11,FLAMEWHEEL,15,MAGNETBOMB,18,ELECTRICTERRAIN,20,FIREFANG,24,FLASHCANNON,28,FLAMEKICK,32,THUNDERBOLT,36,AUTOTOMIZE,40,IRONHEAD,44,FIRELASH,47,IRONTAIL,50,MEGAHORN,53,FLAREBLITZ,55,STEELROLLER
 EggGroups = Field
-HatchSteps = 5120
+HatchCycles = 20
 Height = 1.4
 Weight = 34.0
 Color = Red
@@ -147,6 +152,7 @@ Habitat = Grassland
 Category = Smokey Goat
 IoPokedex = Its body is actively sparking with the sheer amount of static within its coat. It can short out electronics.
 AmPokedex = Once rid of its static, Ferrvoram wool is commonly sold for cleaning dishes or polishing.
+RaidRanks = 3,4,5
 #-------------------------------
 [BRAKKUB]
 Name = Brakkub
@@ -162,7 +168,7 @@ Abilities = TORRENT
 HiddenAbilities = MOLDBREAKER
 Moves = 1,TACKLE,1,BUBBLE,4,GROWL,6,AQUAJET,8,ROCKSMASH,11,JETPUNCH,15,ROLLINGKICK,18,RAINDANCE,20,AQUACUTTER,24,AURASPHERE,28,LIQUIDATION,32,CRUNCH,36,BULKUP,40,BODYPRESS,44,HYDROPUMP,47,CROSSCHOP,50,XSCISSOR,53,WAVECRASH,55,CLOSECOMBAT
 EggGroups = Field,Water1
-HatchSteps = 5120
+HatchCycles = 20
 Height = 0.4
 Weight = 24.3
 Color = Blue
@@ -171,6 +177,7 @@ Habitat = WatersEdge
 Category = River Bear
 IoPokedex = Living near streams, Brakkub practice catching Palmon. Their claws aren't sharp yet, so they often lose their catch.
 AmPokedex = Due to being in the river frequently, their limbs develop a soft, muddy coating. They use this as a mild layer of protection.
+RaidRanks = 1,2
 #-------------------------------
 [URSLAS]
 Name = Urslas
@@ -186,7 +193,7 @@ Abilities = TORRENT
 HiddenAbilities = MOLDBREAKER
 Moves = 1,TACKLE,1,BUBBLE,4,GROWL,6,AQUAJET,8,ROCKSMASH,11,JETPUNCH,15,ROLLINGKICK,18,RAINDANCE,20,AQUACUTTER,24,AURASPHERE,28,LIQUIDATION,32,CRUNCH,36,BULKUP,40,BODYPRESS,44,HYDROPUMP,47,CROSSCHOP,50,XSCISSOR,53,WAVECRASH,55,CLOSECOMBAT
 EggGroups = Field,Water1
-HatchSteps = 5120
+HatchCycles = 20
 Height = 0.8
 Weight = 57.4
 Color = Blue
@@ -195,6 +202,7 @@ Habitat = WatersEdge
 Category = Coastal Bear
 IoPokedex = Having grown, Urslas prefer coastal waters, where they can hack at harder-scaled Pokémon. Their claws are honed to a razor edge.
 AmPokedex = They started wearing helmets after humans began pillaging one another. They use their newfound armour to roughhouse with each other even harder.
+RaidRanks = 2,3
 #-------------------------------
 [BARBEARIEN]
 Name = Barbearien,
@@ -210,7 +218,7 @@ Abilities = TORRENT
 HiddenAbilities = MOLDBREAKER
 Moves = 1,TACKLE,1,BUBBLE,4,GROWL,6,AQUAJET,8,ROCKSMASH,11,JETPUNCH,15,ROLLINGKICK,18,RAINDANCE,20,AQUACUTTER,24,AURASPHERE,28,LIQUIDATION,32,CRUNCH,36,BULKUP,40,BODYPRESS,44,HYDROPUMP,47,CROSSCHOP,50,XSCISSOR,53,WAVECRASH,55,CLOSECOMBAT
 EggGroups = Field,Water1
-HatchSteps = 5120
+HatchCycles = 20
 Height = 0.4
 Weight = 24.3
 Color = Blue
@@ -219,6 +227,7 @@ Habitat = WatersEdge
 Category = Sea Bear
 IoPokedex = Keeping their claws concealed, they choose to wield axes instead. They use them to guard Brakkub whilst teaching them how to fish.
 AmPokedex = Masters of shock tactics, Barbearien are not afraid to charge recklessly and roar loudly. Once their foes have scattered, they search for food.
+RaidRanks = 3,4,5
 #-------------------------------
 [RATTOSSK]
 Name = Rattossk
@@ -235,7 +244,7 @@ HiddenAbilities = UNBURDEN
 Moves = 1,SCRATCH,1,TAILWHIP,5,BITE,8,STUFFCHEEKS,12,MUDSHOT,14,STOCKPILE,15,COVET,16,SWALLOW,16,SPITUP,18,DIG,23,FLING,26,MUDSHOT,27,STOMPINGTANTRUM,34,KNOCKOFF,38,SNATCH,42,NIGHTSLASH,48,EARTHQUAKE,54,BELCH
 EggMoves = BELLYDRUM,DEFENSECURL,LASTRESORT,ROLLOUT
 EggGroups = Field
-HatchSteps = 3840
+HatchCycles = 15
 Height = 0.3
 Weight = 2.5
 Color = Red
@@ -245,6 +254,7 @@ Category = Tosser
 IoPokedex = It's not uncommon to find a Rattossk inciting arguments and infighting between other Pokémon, spreading deceit within the forests it calls home.
 AmPokedex = Rattossk collects things to throw at others from high up in the trees. While it keeps their territory defended, many larger Pokémon and most people see it as a nuisance.
 Evolutions = SCATTATOSSKR,LevelDay,25
+RaidRanks = 1,2
 #-------------------------------
 [SCATTATOSSKR]
 Name = Scattatosskr
@@ -260,7 +270,7 @@ Abilities = RINGTOSS,PICKUP
 HiddenAbilities = UNBURDEN
 Moves = 1,SCRATCH,1,TAILWHIP,5,BITE,8,STUFFCHEEKS,12,MUDSHOT,14,STOCKPILE,15,COVET,16,SWALLOW,16,SPITUP,18,DIG,23,FLING,26,MUDSHOT,27,STOMPINGTANTRUM,34,KNOCKOFF,38,SNATCH,42,NIGHTSLASH,48,EARTHQUAKE,54,BELCH
 EggGroups = Water1,Field
-HatchSteps = 3840
+HatchCycles = 15
 Offspring = CRIVOLE
 Height = 1.1
 Weight = 46.3
@@ -270,22 +280,23 @@ Habitat = Forest
 Category = Mud Tosser
 IoPokedex = In historic texts, it was once believed that Scattatosskr brought mud and soil from other realms to increase crop yields. This has since been disproven.
 AmPokedex = Scattatosskr coats its tail in mud all morning long, it then climbs into trees and throws balls of mud at unsuspecting People and Pokémon below.
+RaidRanks = 3,4
 #-------------------------------
 [MAGGLO]
 Name = Magglo
 Types = BUG
-BaseStats = 55,66,64,38,35,42
+BaseStats = 55,35,42,38,66,64
 GenderRatio = Female50Percent
 GrowthRate = Medium
 BaseExp = 60
-EVs = ATTACK,1
+EVs = SPECIAL_ATTACK,1
 CatchRate = 255
 Happiness = 70
 Abilities = ILLUMINATE
 Moves = 1,TACKLE,1,LEER,4,MUDSLAP,6,STRUGGLEBUG,8,BUGBITE,11,MUDSHOT,13,SANDATTACK,15,UTURN,30,LUNGE,35,FIRSTIMPRESSION
 EggMoves = BELLYDRUM,DEFENSECURL,LASTRESORT,ROLLOUT
 EggGroups = Bug
-HatchSteps = 3840
+HatchCycles = 15
 Height = 0.2
 Weight = 12.4
 Color = Brown
@@ -294,13 +305,163 @@ Habitat = Forest
 Category = Glow Worm
 IoPokedex = It's not uncommon to find a Rattossk inciting arguments and infighting between other Pokémon, spreading deceit within the forests it calls home.
 AmPokedex = Rattossk collects things to throw at others from high up in the trees. While it keeps their territory defended, many larger Pokémon and most people see it as a nuisance.
-Evolutions = DUSPUPA,Level,12
+Evolutions = CHRYSILAMP,Level,12
+RaidRanks = 1,2
 #-------------------------------
-
+[CHRYSILAMP]
+Name = Chrysilamp
+Types = BUG
+BaseStats = 76,43,86,33,42,120
+GenderRatio = Female50Percent
+GrowthRate = Medium
+BaseExp = 60
+EVs = SPECIAL_DEFENSE,2
+CatchRate = 255
+Happiness = 70
+Abilities = ILLUMINATE
+Moves = 1,TACKLE,1,LEER,4,MUDSLAP,6,STRUGGLEBUG,8,BUGBITE,11,MUDSHOT,13,SANDATTACK,15,UTURN,30,LUNGE,35,FIRSTIMPRESSION
+EggMoves = BELLYDRUM,DEFENSECURL,LASTRESORT,ROLLOUT
+EggGroups = Bug
+HatchCycles = 15
+Height = 0.2
+Weight = 12.4
+Color = Brown
+Shape = Insectoid
+Habitat = Forest
+Category = Glow Worm
+IoPokedex = Chrysilamp hang from trees, illuminating the forest floor below. This helps lost people and Pokémon find their way in the dark.
+AmPokedex = ???
+Evolutions = LAMPYRO,Item,FIRESTONE,LAMPERE,Item,THUNDERSTONE
+RaidRanks = 2,3
 #-------------------------------
-
+[LAMPYRO]
+Name = Lampyro
+Types = BUG,FIRE
+BaseStats = 76,64,57,115,112,76
+GenderRatio = Female50Percent
+GrowthRate = Medium
+BaseExp = 253
+EVs = SPECIAL_ATTACK,3
+CatchRate = 45
+Happiness = 70
+Abilities = LEVITATE
+Moves = 0,FLAMETHROWER
+EggGroups = Bug
+HatchCycles = 15
+Offspring = MAGGLO
+Height = 3.3
+Weight = 276.3
+Color = Brown
+Shape = Insectoid
+Habitat = Forest
+Category = Firefly
+IoPokedex = ???
+AmPokedex = ???
+RaidRanks = 3,4,5
 #-------------------------------
-
+[LAMPERE]
+Name = Lampere
+Types = BUG,ELECTRIC
+BaseStats = 76,64,57,115,112,76
+GenderRatio = Female50Percent
+GrowthRate = Medium
+BaseExp = 253
+EVs = SPECIAL_ATTACK,3
+CatchRate = 45
+Happiness = 70
+Abilities = LEVITATE
+Moves = 0,THUNDERBOLT
+EggGroups = Bug
+HatchCycles = 15
+Offspring = MAGGLO
+Height = 3.3
+Weight = 276.3
+Color = Brown
+Shape = Insectoid
+Habitat = Forest
+Category = Lightning Bug
+IoPokedex = ???
+AmPokedex = ???
+RaidRanks = 3,4,5
+#-------------------------------
+[SNOWL]
+Name = Snowl
+Types = NORMAL,FLYING
+BaseStats = 40,40,30,70,45,45
+GenderRatio = Female50Percent
+GrowthRate = Parabolic
+BaseExp = 55
+EVs = SPEED,1
+CatchRate = 255
+Happiness = 70
+Abilities = COMATOSE
+HiddenAbilities = ICESCALES
+Moves = 1,TACKLE,1,GROWL,6,QUICKATTACK,10,PECK,13,AGILITY,16,FLAIL,21,ROOST,25,RAZORWIND,29,AURORAVEIL,34,ICEBEAM,39,ACROBATICS,41,MEFIRST,40,TAILWIND,45,BLIZZARD,50,BRAVEBIRD
+EggGroups = Flying
+HatchCycles = 15
+Height = 0.2
+Weight = 1.8
+Color = White
+Shape = Winged
+Habitat = Forest
+Category = Tiny Bird
+IoPokedex = Birdie
+AmPokedex = Birdie
+Evolutions = CIVOWL,Level,15
+RaidRanks = 1,2
+#-------------------------------
+[CIVOWL]
+Name = Civowl
+Types = ICE,FLYING
+BaseStats = 60,50,50,90,70,65
+GenderRatio = Female50Percent
+GrowthRate = Parabolic
+BaseExp = 134
+EVs = SPEED,2
+CatchRate = 120
+Happiness = 70
+Abilities = COMATOSE
+HiddenAbilities = ICESCALES
+Moves = 1,TACKLE,1,GROWL,6,QUICKATTACK,10,PECK,13,AGILITY,16,FLAIL,18,ICYWIND,21,ROOST,23,AURORABEAM,25,RAZORWIND,29,AURORAVEIL,34,ICEBEAM,39,ACROBATICS,41,MEFIRST,40,TAILWIND,45,BLIZZARD,50,BRAVEBIRD,55,HURRICANE
+EggGroups = Flying
+HatchCycles = 15
+Offspring = SNOWL
+Height = 0.5
+Weight = 14.6
+Color = White
+Shape = Winged
+Habitat = Forest
+Category = Chilling
+IoPokedex = Birdie
+AmPokedex = Birdie
+Evolutions = MAJESTOWL,Level,35
+RaidRanks = 2,3
+#-------------------------------
+[MAJESTOWL]
+Name = Majestowl
+Types = ICE,FLYING
+BaseStats = 85,65,75,95,105,95
+GenderRatio = Female50Percent
+GrowthRate = Parabolic
+BaseExp = 75
+EVs = SPEED,3
+CatchRate = 45
+Happiness = 70
+Abilities = INSOMNIA
+HiddenAbilities = ICESCALES
+Moves = 0,SHEERCOLD,1,TACKLE,1,GROWL,6,QUICKATTACK,10,PECK,13,AGILITY,16,FLAIL,18,ICYWIND,21,ROOST,23,AURORABEAM,25,RAZORWIND,29,AURORAVEIL,34,ICEBEAM,39,ACROBATICS,41,MEFIRST,40,TAILWIND,45,BLIZZARD,50,BRAVEBIRD,55,HURRICANE
+EggGroups = Flying
+HatchCycles = 15
+Offspring = SNOWL
+Height = 4.1
+Weight = 165.7
+Color = White
+Shape = Winged
+Habitat = Forest
+Category = Awakened
+IoPokedex = Birdie
+AmPokedex = Birdie
+RaidRanks = 3,4,5
 #-------------------------------
 [STACKEM]
 Name = Stackem
@@ -315,7 +476,7 @@ Happiness = 70
 Abilities = REGENERATOR,TONOFBRICKS
 Moves = 1,SCATTEREDTOYS,1,PLAYROUGH,3,BABYDOLLEYES
 EggGroups = Mineral
-HatchSteps = 5120
+HatchCycles = 20
 Height = 0.5
 Weight = 3.0
 Color = Red
@@ -325,6 +486,7 @@ Category = Toy Bricks
 IoPokedex = ow my feetsies
 AmPokedex = ow my feetsies
 Evolutions = STACKEMUP,Level,25
+RaidRanks = 1,2
 #-------------------------------
 [STACKEMUP]
 Name = Stackemup
@@ -339,7 +501,7 @@ Happiness = 70
 Abilities = REGENERATOR,TONOFBRICKS
 Moves = 1,SCATTEREDTOYS,1,PLAYROUGH,3,BABYDOLLEYES
 EggGroups = Mineral
-HatchSteps = 5120
+HatchCycles = 20
 Offspring = STACKEM
 Height = 0.8
 Weight = 7.0
@@ -350,6 +512,7 @@ Category = Toy Bricks
 IoPokedex = ow my feetsies
 AmPokedex = ow my feetsies
 Evolutions = STACKEMTOL,Level,45
+RaidRanks = 2,3
 #-------------------------------
 [STACKEMTOL]
 Name = Stackemtol
@@ -364,7 +527,7 @@ Happiness = 70
 Abilities = REGENERATOR,TONOFBRICKS
 Moves = 1,SCATTEREDTOYS,1,PLAYROUGH,3,BABYDOLLEYES
 EggGroups = Mineral
-HatchSteps = 5120
+HatchCycles = 20
 Offspring = STACKEM
 Height = 0.8
 Weight = 7.0
@@ -374,6 +537,7 @@ Habitat = Urban
 Category = Toy Bricks
 IoPokedex = ow my feetsies
 AmPokedex = ow my feetsies
+RaidRanks = 3,4,5
 #-------------------------------
 [RUSAGIRU]
 Name = Rusagiru
@@ -389,7 +553,7 @@ Abilities = STATIC,FLAMEBODY
 HiddenAbilities = LIGHTNINGROD
 Moves = 1,NUZZLE,1,EMBER,1,TACKLE,5,TAILWHIP,8,QUICKATTACK,10,CHARGE,12,FLAMEWHEEL,15,THUNDERSHOCK,17,FLAMECHARGE,20,AGILITY,25,SPARK,28,FLAMEBURST,30,VOLTSWITCH,32,BOUNCE,33,INCINERATE,45,DISCHARGE,48,FIRELASH,50,THUNDERBOLT,52,FLAMETHROWER,55,PLASMABALL,60,THUNDER,60,FIREBLAST
 EggGroups = Field,Fairy
-HatchSteps = 5120
+HatchCycles = 20
 Height = 0.4
 Weight = 4.5
 Color = White
@@ -398,6 +562,7 @@ Habitat = Grassland
 Category = Plasma Bunny
 IoPokedex = Thick fur and a blazing plasma tail mean that Rusagiru is comfortable in all corners or Nordra. All the energy they hold within comes out in playful and mischievous tendencies. They live in tightly knit groups that work together to keep their dens warm.
 AmPokedex = Rusagiru store both electricity and heat in the sacs in its cheeks, it converts the energy into pure plasma, which is expels in the form of a tail.
+RaidRanks = 2,3
 #-------------------------------
 [DWETTLE]
 Name = Dwettle
@@ -414,7 +579,7 @@ HiddenAbilities = WEAKARMOR
 Moves = 1,BUBBLE,1,MUDSPORT,4,WITHDRAW,8,MIRRORSHOT,12,OCTAZOOKA,16,FLAIL,20,SLASH,24,ROCKSLIDE,28,STEALTHROCK,32,ROCKBLAST,36,XSCISSOR,40,ROCKPOLISH,44,SHELLSMASH,48,ROCKWRECKER
 TutorMoves = ATTRACT,BULLDOZE,DIG,EARTHQUAKE,ENDURE,FACADE,HIDDENPOWER,IRONDEFENSE,POISONJAB,PROTECT,REST,ROCKBLAST,ROCKSLIDE,ROCKTOMB,ROUND,SANDSTORM,SANDTOMB,SHADOWCLAW,SKITTERSMACK,SLEEPTALK,SNORE,SOLARBEAM,SPIKES,STEALTHROCK,STONEEDGE,SUBSTITUTE,SWORDSDANCE,XSCISSOR
 EggGroups = Water1,Mineral
-HatchSteps = 5120
+HatchCycles = 20
 Height = 0.3
 Weight = 14.5
 Color = Blue
@@ -425,6 +590,7 @@ IoPokedex = Dwettle make their homes out of metal containers lost in shipwrecks.
 AmPokedex = Though it looks like Dwebble, Dwettle is an entirely different species. Its metal home often rusts, requiring a replacement.
 WildItemUncommon = METALCOAT
 Evolutions = RUSTLE,Level,34
+RaidRanks = 1,2
 #-------------------------------
 [RUSTLE]
 Name = Rustle
@@ -441,7 +607,7 @@ HiddenAbilities = WEAKARMOR
 Moves = 1,BUBBLE,1,MUDSPORT,1,WITHDRAW,1,SMACKDOWN,12,OCTAZOOKA,16,FLAIL,20,WRAP,24,ROCKSLIDE,28,STEALTHROCK,32,ROCKBLAST,38,XSCISSOR,44,ROCKPOLISH,50,SHELLSMASH,56,ROCKWRECKER
 TutorMoves = ATTRACT,BODYPRESS,BULLDOZE,DIG,EARTHQUAKE,ENDURE,FACADE,GIGAIMPACT,HEAVYSLAM,HIDDENPOWER,HYPERBEAM,IRONDEFENSE,METEORBEAM,POISONJAB,PROTECT,REST,ROCKBLAST,ROCKSLIDE,ROCKTOMB,ROUND,SANDSTORM,SANDTOMB,SHADOWCLAW,SKITTERSMACK,SLEEPTALK,SNORE,SOLARBEAM,SOLARBLADE,SPIKES,STEALTHROCK,STOMPINGTANTRUM,STONEEDGE,SUBSTITUTE,SWORDSDANCE,XSCISSOR
 EggGroups = Water1,Mineral
-HatchSteps = 5120
+HatchCycles = 20
 Height = 1.4
 Weight = 200.0
 Color = Red
@@ -451,6 +617,7 @@ Category = Boiler Home
 IoPokedex = It possesses legs of enormous strength, enabling it to carry heavy slabs for many days, even when crossing arid land.
 AmPokedex = A variety of cephalopod Pokémon, Rustle was once considered to be a regional form of Crustle.
 WildItemUncommon = METALCOAT
+RaidRanks = 3,4,5
 #-------------------------------
 [SOULBOTE]
 Name = Soulbote
@@ -466,7 +633,7 @@ Abilities = DRIZZLE,WEAKARMOR
 HiddenAbilities = CURSEDBODY
 Moves = 1,TACKLE,1,ABSORB,1,WATERGUN,8,NIGHTSHADE,12,WATERPULSE,16,RAINDANCE,20,HEX,24,BRINE,28,RECOVER,32,SHADOWBALL,34,THIEF,36,WHIRLPOOL,40,GIGADRAIN,44,HYDROPUMP,46,WAVECRASH,48,DESTINYBOND,50,WOODHAMMER,52,WATERSPOUT,56,POLTERGEIST
 EggGroups = Amorphous,Mineral
-HatchSteps = 5120
+HatchCycles = 20
 Height = 4.3
 Weight = 40.0
 Color = Green
@@ -475,6 +642,7 @@ Habitat = Sea
 Category = Sailboat
 IoPokedex = Soulbote were once Sailors who became attached to their Vessel after they perished at sea, now they roam the oceans, searching for a crew.
 AmPokedex = Local species of Dhelmise cling to Soulbote’s hull giving it greater access to Grass-Type moves in return of nutrition and protection. This symbiotic relationship is very tight-knit and is seen with almost any Soulbote.
+RaidRanks = 1,2
 #-------------------------------
 [FROSSPRITE]
 Name = Frossprite
@@ -488,8 +656,8 @@ CatchRate = 45
 Happiness = 35
 Abilities = BRITTLEIRON
 Moves = 1,FAKEOUT,1,FOCUSENERGY,4,ICYWIND,8,FAIRYWIND,12,BABYDOLLEYES,16,ICEFANG,20,HEADBUTT,24,SWORDSDANCE,28,SLAM,32,PLAYROUGH,36,SCARYFACE,40,ICICLECRASH,44,BODYSLAM,48,HEAVYSLAM,52,FREEZEDRY,56,IRONDEFENSE,60,ICEHAMMER
-EggGroups = Monster,Humanlike
-HatchSteps = 10240
+EggGroups = Fairy,Monster
+HatchCycles = 40
 Height = 0.3
 Weight = 6.6
 Color = White
@@ -499,6 +667,7 @@ Category = Snow Fairy
 IoPokedex = Frossprite are mischievous and playful, often freezing the food of hibernating Pokémon. Their magic prevents the food from thawing.
 AmPokedex = ???
 Evolutions = GOBLICE,Level,35
+RaidRanks = 1,2
 #-------------------------------
 [GOBLICE]
 Name = Goblice
@@ -512,8 +681,8 @@ CatchRate = 45
 Happiness = 35
 Abilities = BRITTLEIRON
 Moves = 1,FAKEOUT,1,FOCUSENERGY,1,ICYWIND,1,FAIRYWIND,12,BABYDOLLEYES,16,ICEFANG,20,HEADBUTT,24,SWORDSDANCE,28,SLAM,32,PLAYROUGH,36,SCARYFACE,40,ICICLECRASH,44,BODYSLAM,48,HEAVYSLAM,52,FREEZEDRY,56,IRONDEFENSE,60,ICEHAMMER
-EggGroups = Monster,Humanlike
-HatchSteps = 10240
+EggGroups = Fairy,Monster
+HatchCycles = 40
 Height = 0.8
 Weight = 12.5
 Color = White
@@ -523,6 +692,7 @@ Category = Snow Goblin
 IoPokedex = Goblice live in groups, often hunting for food together. The largest among them are given the position of leader.
 AmPokedex = They like to play pranks on eachother. These pranks may seem harmful from a Human's point of view, but Goblice always find them funny in the end.
 Evolutions = OGLACE,Level,54
+RaidRanks = 3,4
 #-------------------------------
 [OGLACE]
 Name = Oglace
@@ -536,8 +706,8 @@ CatchRate = 45
 Happiness = 35
 Abilities = BRITTLEIRON
 Moves = 0,GLACIALSMASH,1,FAKEOUT,1,FOCUSENERGY,1,ICYWIND,1,FAIRYWIND,1,BABYDOLLEYES,1,ICEFANG,20,HEADBUTT,24,SWORDSDANCE,28,SLAM,32,PLAYROUGH,36,SCARYFACE,40,ICICLECRASH,44,BODYSLAM,48,HEAVYSLAM,50,MOONBLAST,52,FREEZEDRY,55,GLACIALSMASH,56,IRONDEFENSE,58,NASTYPLOT,60,ICEHAMMER,65,BLIZZARD
-EggGroups = Monster,Humanlike
-HatchSteps = 10240
+EggGroups = Fairy,Monster
+HatchCycles = 40
 Height = 2.2
 Weight = 135.5
 Color = White
@@ -546,6 +716,81 @@ Habitat = Mountain
 Category = Glacier Ogre
 IoPokedex = Oglace are rarely seen without their Goblice entourage. They often lead the group into towns to ransack them of food.
 AmPokedex = These bests were feared in the dark ages, as any sword would shatter upon contact with their ice cold skin. If they meet another Oglace, only one of them will be walking away.
+RaidRanks = 5
+#-------------------------------
+[JOLTLING]
+Name = Joltling
+Types = ELECTRIC,DRAGON
+BaseStats = 35,45,55,65,40,60
+GenderRatio = Female50Percent
+GrowthRate = Slow
+BaseExp = 60
+EVs = SPEED,1
+CatchRate = 45
+Happiness = 35
+Abilities = LIGHTNINGROD
+Moves = 1,FAKEOUT,1,FOCUSENERGY,4,ICYWIND,8,FAIRYWIND,12,BABYDOLLEYES,16,ICEFANG,20,HEADBUTT,24,SWORDSDANCE,28,SLAM,32,PLAYROUGH,36,SCARYFACE,40,ICICLECRASH,44,BODYSLAM,48,HEAVYSLAM,52,FREEZEDRY,56,IRONDEFENSE,60,ICEHAMMER
+EggGroups = Dragon
+HatchCycles = 40
+Height = 0.3
+Weight = 6.6
+Color = White
+Shape = Bipedal
+Habitat = Mountain
+Category = Snow Fairy
+IoPokedex = ???
+AmPokedex = ???
+Evolutions = WELPAWATT,Level,35
+RaidRanks = 1,2
+#-------------------------------
+[WELPAWATT]
+Name = Welpawatt
+Types = ELECTRIC,DRAGON
+BaseStats = 55,70,75,90,60,85
+GenderRatio = Female50Percent
+GrowthRate = Slow
+BaseExp = 147
+EVs = SPECIAL_DEFENSE,2
+CatchRate = 45
+Happiness = 35
+Abilities = LIGHTNINGROD
+Moves = 1,FAKEOUT,1,FOCUSENERGY,1,ICYWIND,1,FAIRYWIND,12,BABYDOLLEYES,16,ICEFANG,20,HEADBUTT,24,SWORDSDANCE,28,SLAM,32,PLAYROUGH,36,SCARYFACE,40,ICICLECRASH,44,BODYSLAM,48,HEAVYSLAM,52,FREEZEDRY,56,IRONDEFENSE,60,ICEHAMMER
+EggGroups = Dragon
+HatchCycles = 40
+Height = 0.8
+Weight = 12.5
+Color = White
+Shape = Bipedal
+Habitat = Mountain
+Category = Snow Goblin
+IoPokedex = ???
+AmPokedex = ???
+Evolutions = MIYILNAGON,Level,54
+RaidRanks = 3,4
+#-------------------------------
+[MIYILNAGON]
+Name = Miyilnagon
+Types = ELECTRIC,DRAGON
+BaseStats = 75,100,105,125,85,110
+GenderRatio = Female50Percent
+GrowthRate = Slow
+BaseExp = 300
+EVs = DEFENSE,3
+CatchRate = 45
+Happiness = 35
+Abilities = LIGHTNINGROD
+Moves = 0,STORMSURGE,1,FAKEOUT,1,FOCUSENERGY,1,ICYWIND,1,FAIRYWIND,1,BABYDOLLEYES,1,ICEFANG,20,HEADBUTT,24,SWORDSDANCE,28,SLAM,32,PLAYROUGH,36,SCARYFACE,40,ICICLECRASH,44,BODYSLAM,48,HEAVYSLAM,50,MOONBLAST,52,FREEZEDRY,55,GLACIALSMASH,56,IRONDEFENSE,58,NASTYPLOT,60,ICEHAMMER,65,BLIZZARD
+EggGroups = Dragon
+HatchCycles = 40
+Height = 2.2
+Weight = 135.5
+Color = White
+Shape = Bipedal
+Habitat = Mountain
+Category = Glacier Ogre
+IoPokedex = ???
+AmPokedex = ???
+RaidRanks = 5
 #-------------------------------
 [JOTUNFLAMME]
 Name = Jotunflamme
@@ -560,7 +805,7 @@ Happiness = 0
 Abilities = FLAMEBODY,MAGMAARMOR
 Moves = 1,BODYSLAM,1,BULKUP,4,STOMP,5,FIREPUNCH,7,SUNNYDAY,10,INCINERATE,15,DRAINPUNCH,20,FLAMEBURST,23,SPIKES,25,THUNDERPUNCH,30,LAVAPLUME,35,HEATCRASH,38,CHARGEBEAM,40,CLOSECOMBAT,40,FOCUSBLAST,43,HORNLEECH,45,GIANTSWRATH,48,HEAVYSLAM,50,MEGAHORN,55,MAGMASTORM,60,EARTHQUAKE,65,FOCUSPUNCH,70,FLAREBLITZ,75,RECOVER,80,ERUPTION
 EggGroups = Undiscovered
-HatchSteps = 10240
+HatchCycles = 80
 Height = 22.0
 Weight = 999.9
 Color = Red
@@ -569,6 +814,7 @@ Habitat = Mountain
 Category = Fire Giant
 IoPokedex = Jotunflamme's flames have been burning for millennia, fueling its never-ending rage. The people of Nordra believe its fiery wrath is the cause of the region's volcanic activity.
 AmPokedex = Legends speak of Jotunflamme, a giant of flame and fury. Researchers are baffled by how it has maintained its intense heat for so long without ever extinguishing.
+RaidRanks = 6
 #-------------------------------
 [JOTUNGLASS]
 Name = Jotunglass
@@ -583,7 +829,7 @@ Happiness = 0
 Abilities = ICEBODY,THICKFAT
 Moves = 1,BODYSLAM,1,BULKUP,4,STOMP,5,ICEPUNCH,7,HAIL,10,FREEZEDRY,15,DRAINPUNCH,20,ICESPINNER,23,SPIKES,25,JETPUNCH,30,ICICLECRASH,35,ICEBEAM,38,PSYSHOCK,40,CLOSECOMBAT,40,FOCUSBLAST,43,HORNLEECH,45,GIANTSWRATH,48,HEAVYSLAM,50,MEGAHORN,55,MOUNTAINGALE,60,EARTHQUAKE,65,FOCUSPUNCH,70,SHEERCOLD,75,RECOVER,80,BLIZZARD
 EggGroups = Undiscovered
-HatchSteps = 10240
+HatchCycles = 80
 Height = 22.0
 Weight = 999.9
 Color = Blue
@@ -592,6 +838,7 @@ Habitat = Mountain
 Category = Ice Giant
 IoPokedex = Jotunglass is said to be the embodiment of the harsh winters of Nordra. Its icy presence is believed to bring about blizzards that blanket the region in snow and ice.
 AmPokedex = Jotunglass' body is as cold as the glaciers of Nordra. Scientists from warmer regions have observed that its icy aura can freeze anything within moments, making it one of the most feared Pokémon in the north.
+RaidRanks = 6
 #-------------------------------
 [JOTUNSTEIN]
 Name = Jotunstein
@@ -606,7 +853,7 @@ Happiness = 0
 Abilities = ROCKBODY,ROCKHEAD
 Moves = 1,BODYSLAM,1,BULKUP,4,STOMP,5,ROCKSLIDE,7,SANDSTORM,10,SMACKDOWN,15,DRAINPUNCH,20,ROCKTOMB,23,SPIKES,25,BULLETPUNCH,30,POWERGEM,35,STONEEDGE,38,WOODHAMMER,40,CLOSECOMBAT,40,FOCUSBLAST,43,HORNLEECH,45,GIANTSWRATH,48,HEAVYSLAM,50,MEGAHORN,55,STONEAXE,60,EARTHQUAKE,65,FOCUSPUNCH,70,HEADSMASH,75,RECOVER,80,ROCKWRECKER
 EggGroups = Undiscovered
-HatchSteps = 10240
+HatchCycles = 80
 Height = 22.0
 Weight = 999.9
 Color = Brown
@@ -615,6 +862,7 @@ Habitat = Mountain
 Category = Rock Giant
 IoPokedex = Jotunstein's presence is as steadfast as the mountains of Nordra. The locals believe it to be the protector of the land, guarding the region's sacred sites from any who would do them harm.
 AmPokedex = Jotunstein's massive form and rock-solid resolve have left many outside of Nordra in awe. Its ability to blend seamlessly into the mountains makes it nearly impossible to find unless it wants to be seen.
+RaidRanks = 6
 #-------------------------------
 [RASERIOL]
 Name = Raseriol
@@ -629,7 +877,7 @@ Happiness = 0
 Abilities = FORCEOFNATURE
 Moves = 1,GRASSYTERRAIN,1,BREAKINGSWIPE,7,RAZORLEAF,14,ICYWIND,21,HORNLEECH,28,GIGADRAIN,31,DRAGONDANCE,35,CALMMIND,42,DRAGONCLAW,49,POWERGEM,56,NATURESRECLAMATION,63,SCREECH,67,FAKETEARS,70,DRACOMETEOR,77,OUTRAGE,84,POWERWHIP,91,METEORBEAM,95,WOODHAMMER,98,GIGAIMPACT,99,HYPERBEAM
 EggGroups = Undiscovered
-HatchSteps = 10240
+HatchCycles = 120
 Height = 5.5
 Weight = 318.0
 Color = Green
@@ -638,4 +886,5 @@ Habitat = Forest
 Category = Evergreen
 IoPokedex = Some believe that Raseriol is the reason that all the plants in Nordra have not yet succumbed to the cold. It has a deep-seeded hatred for Humanity.
 AmPokedex = This Pokémon is solely responsible for the plantlife in the Nordra Region. Forests can sprout via its command.
+RaidRanks = 6
 #-------------------------------
