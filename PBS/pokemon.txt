@@ -28,6 +28,9 @@ AmPokedex = For some time after its birth, it uses the nutrients that are packed
 Generation = 1
 Evolutions = IVYSAUR,Level,16
 RaidRanks = 1,2
+WildDropCommon = BULBASAURPETAL,1,2
+WildDropUncommon = BULBASAURPETAL,1,2
+WildDropRare = BULBASAURPETAL,1,2
 #-------------------------------
 [IVYSAUR]
 Name = Ivysaur
@@ -56,6 +59,9 @@ AmPokedex = The more sunlight Ivysaur bathes in, the more strength wells up with
 Generation = 1
 Evolutions = VENUSAUR,Level,32
 RaidRanks = 2,3
+WildDropCommon = BULBASAURPETAL,2,3
+WildDropUncommon = BULBASAURPETAL,2,3
+WildDropRare = BULBASAURPETAL,2,3
 #-------------------------------
 [VENUSAUR]
 Name = Venusaur
@@ -83,6 +89,9 @@ IoPokedex = There is a large flower on Venusaur's back. The flower is said to ta
 AmPokedex = While it basks in the sun, it can convert the light into energy. As a result, it is more powerful in the summertime.
 Generation = 1
 RaidRanks = 3,4,5
+WildDropCommon = BULBASAURPETAL,3,5
+WildDropUncommon = BULBASAURPETAL,3,5
+WildDropRare = BULBASAURPETAL,3,5
 #-------------------------------
 [CHARMANDER]
 Name = Charmander
@@ -112,6 +121,9 @@ AmPokedex = If Charmander is healthy, the flame on the tip of its tail will burn
 Generation = 1
 Evolutions = CHARMELEON,Level,16
 RaidRanks = 1,2
+WildDropCommon = CHARMANDERSCALES,1,2
+WildDropUncommon = CHARMANDERSCALES,1,2
+WildDropRare = CHARMANDERSCALES,1,2
 #-------------------------------
 [CHARMELEON]
 Name = Charmeleon
@@ -140,6 +152,9 @@ AmPokedex = It is very hotheaded by nature, so it constantly seeks opponents to 
 Generation = 1
 Evolutions = CHARIZARD,Level,36
 RaidRanks = 2,3
+WildDropCommon = CHARMANDERSCALES,2,3
+WildDropUncommon = CHARMANDERSCALES,2,3
+WildDropRare = CHARMANDERSCALES,2,3
 #-------------------------------
 [CHARIZARD]
 Name = Charizard
@@ -167,6 +182,9 @@ IoPokedex = Charizard flies around the sky in search of powerful opponents. It b
 AmPokedex = It uses its wings to fly sky-high. The more experience it gains in battle, the greater the temperature at which its flames burn.
 Generation = 1
 RaidRanks = 3,4,5
+WildDropCommon = CHARMANDERSCALES,3,5
+WildDropUncommon = CHARMANDERSCALES,3,5
+WildDropRare = CHARMANDERSCALES,3,5
 #-------------------------------
 [SQUIRTLE]
 Name = Squirtle
@@ -196,6 +214,9 @@ AmPokedex = Its shell is soft immediately after it is born. In no time at all, t
 Generation = 1
 Evolutions = WARTORTLE,Level,16
 RaidRanks = 1,2
+WildDropCommon = SQUIRTLESCUTE,1,2
+WildDropUncommon = SQUIRTLESCUTE,1,2
+WildDropRare = SQUIRTLESCUTE,1,2
 #-------------------------------
 [WARTORTLE]
 Name = Wartortle
@@ -224,6 +245,9 @@ AmPokedex = It often hides in water to stalk unwary prey. While swimming quickly
 Generation = 1
 Evolutions = BLASTOISE,Level,36
 RaidRanks = 2,3
+WildDropCommon = SQUIRTLESCUTE,2,3
+WildDropUncommon = SQUIRTLESCUTE,2,3
+WildDropRare = SQUIRTLESCUTE,2,3
 #-------------------------------
 [BLASTOISE]
 Name = Blastoise
@@ -252,6 +276,9 @@ IoPokedexUS = Blastoise has water spouts that protrude from its shell. The water
 AmPokedex = It has jet nozzles on its shell. This impressive Pokémon uses these jets to charge toward foes with all the force of a rocket.
 Generation = 1
 RaidRanks = 3,4,5
+WildDropCommon = SQUIRTLESCUTE,3,5
+WildDropUncommon = SQUIRTLESCUTE,3,5
+WildDropRare = SQUIRTLESCUTE,3,5
 #-------------------------------
 [CATERPIE]
 Name = Caterpie
@@ -279,6 +306,9 @@ AmPokedex = It's easy to catch, and it grows quickly, making it one of the top r
 Generation = 1
 Evolutions = METAPOD,Level,7
 RaidRanks = 1,2
+WildDropCommon = CATERPIEPOWDER,1,2
+WildDropUncommon = CATERPIEPOWDER,1,2
+WildDropRare = CATERPIEPOWDER,1,2
 #-------------------------------
 [METAPOD]
 Name = Metapod
@@ -305,6 +335,9 @@ AmPokedex = Its shell is filled with its soft innards. It doesn't move much beca
 Generation = 1
 Evolutions = BUTTERFREE,Level,10
 RaidRanks = 1,2
+WildDropCommon = CATERPIEPOWDER,2,3
+WildDropUncommon = CATERPIEPOWDER,2,3
+WildDropRare = CATERPIEPOWDER,2,3
 #-------------------------------
 [BUTTERFREE]
 Name = Butterfree
@@ -333,6 +366,9 @@ AmPokedex = Its wings are covered in toxic scales. If it finds bird Pokémon goi
 Generation = 1
 WildItemUncommon = SILVERPOWDER
 RaidRanks = 3,4
+WildDropCommon = CATERPIEPOWDER,3,5
+WildDropUncommon = CATERPIEPOWDER,3,5
+WildDropRare = CATERPIEPOWDER,3,5
 #-------------------------------
 [WEEDLE]
 Name = Weedle
@@ -360,6 +396,9 @@ AmPokedex = Often found in forests and grasslands. It has a sharp, toxic barb of
 Generation = 1
 Evolutions = KAKUNA,Level,7
 RaidRanks = 1,2
+WildDropCommon = WEEDLEHORN,1,2
+WildDropUncommon = WEEDLEHORN,1,2
+WildDropRare = WEEDLEHORN,1,2
 #-------------------------------
 [KAKUNA]
 Name = Kakuna
@@ -386,6 +425,9 @@ AmPokedex = This Pokémon is in a temporary stage while making its body. It is a
 Generation = 1
 Evolutions = BEEDRILL,Level,10
 RaidRanks = 1,2
+WildDropCommon = WEEDLEHORN,2,3
+WildDropUncommon = WEEDLEHORN,2,3
+WildDropRare = WEEDLEHORN,2,3
 #-------------------------------
 [BEEDRILL]
 Name = Beedrill
@@ -414,6 +456,9 @@ AmPokedex = It has three poisonous stingers on its forelegs and its tail. They a
 Generation = 1
 WildItemUncommon = POISONBARB
 RaidRanks = 3,4
+WildDropCommon = WEEDLEHORN,3,5
+WildDropUncommon = WEEDLEHORN,3,5
+WildDropRare = WEEDLEHORN,3,5
 #-------------------------------
 [PIDGEY]
 Name = Pidgey
@@ -443,6 +488,9 @@ AmPokedex = A common sight in forests and woods. It flaps its wings at ground le
 Generation = 1
 Evolutions = PIDGEOTTO,Level,18
 RaidRanks = 1,2
+WildDropCommon = PIDGEYFEATHER,1,2
+WildDropUncommon = PIDGEYFEATHER,1,2
+WildDropRare = PIDGEYFEATHER,1,2
 #-------------------------------
 [PIDGEOTTO]
 Name = Pidgeotto
@@ -471,6 +519,9 @@ AmPokedex = The claws on its feet are well developed. It can carry prey such as 
 Generation = 1
 Evolutions = PIDGEOT,Level,36
 RaidRanks = 2,3
+WildDropCommon = PIDGEYFEATHER,2,3
+WildDropUncommon = PIDGEYFEATHER,2,3
+WildDropRare = PIDGEYFEATHER,2,3
 #-------------------------------
 [PIDGEOT]
 Name = Pidgeot
@@ -498,6 +549,9 @@ IoPokedex = This Pokémon has a dazzling plumage of beautifully glossy feathers.
 AmPokedex = When hunting, it skims the surface of water at high speed to pick off unwary prey such as Magikarp.
 Generation = 1
 RaidRanks = 3,4,5
+WildDropCommon = PIDGEYFEATHER,3,5
+WildDropUncommon = PIDGEYFEATHER,3,5
+WildDropRare = PIDGEYFEATHER,3,5
 #-------------------------------
 [RATTATA]
 Name = Rattata
@@ -528,6 +582,9 @@ Generation = 1
 WildItemUncommon = CHILANBERRY
 Evolutions = RATICATE,Level,20
 RaidRanks = 1,2
+WildDropCommon = RATTATAFUR,1,3
+WildDropUncommon = RATTATAFUR,1,3
+WildDropRare = RATTATAFUR,1,3
 #-------------------------------
 [RATICATE]
 Name = Raticate
@@ -556,6 +613,9 @@ AmPokedex = Its disposition is far more violent than its looks would suggest. Do
 Generation = 1
 WildItemUncommon = CHILANBERRY
 RaidRanks = 3,4
+WildDropCommon = RATTATAFUR,2,4
+WildDropUncommon = RATTATAFUR,2,4
+WildDropRare = RATTATAFUR,2,4
 #-------------------------------
 [SPEAROW]
 Name = Spearow
@@ -586,6 +646,9 @@ Generation = 1
 WildItemUncommon = SHARPBEAK
 Evolutions = FEAROW,Level,20
 RaidRanks = 1,2
+WildDropCommon = SPEAROWFEATHER,1,3
+WildDropUncommon = SPEAROWFEATHER,1,3
+WildDropRare = SPEAROWFEATHER,1,3
 #-------------------------------
 [FEAROW]
 Name = Fearow
@@ -614,6 +677,9 @@ AmPokedex = It's tough and has excellent stamina. It has no problem flying conti
 Generation = 1
 WildItemUncommon = SHARPBEAK
 RaidRanks = 3,4
+WildDropCommon = SPEAROWFEATHER,2,4
+WildDropUncommon = SPEAROWFEATHER,2,4
+WildDropRare = SPEAROWFEATHER,2,4
 #-------------------------------
 [EKANS]
 Name = Ekans
@@ -642,6 +708,9 @@ IoPokedex = An Ekans curls itself up in a spiral while it rests. This position a
 Generation = 1
 Evolutions = ARBOK,Level,22
 RaidRanks = 1,2
+WildDropCommon = EKANSFANG,1,3
+WildDropUncommon = EKANSFANG,1,3
+WildDropRare = EKANSFANG,1,3
 #-------------------------------
 [ARBOK]
 Name = Arbok
@@ -668,6 +737,9 @@ Category = Cobra
 IoPokedex = This Pokémon has a terrifically strong constricting power. It can even flatten steel oil drums. Once it wraps its body around its foe, escaping is impossible.
 Generation = 1
 RaidRanks = 3,4
+WildDropCommon = EKANSFANG,2,4
+WildDropUncommon = EKANSFANG,2,4
+WildDropRare = EKANSFANG,2,4
 #-------------------------------
 [PIKACHU]
 Name = Pikachu
@@ -697,6 +769,9 @@ Generation = 1
 WildItemUncommon = LIGHTBALL
 Evolutions = RAICHU,Item,THUNDERSTONE
 RaidRanks = 2,3
+WildDropCommon = PICHUFUR,2,3
+WildDropUncommon = PICHUFUR,2,3
+WildDropRare = PICHUFUR,2,3
 #-------------------------------
 [RAICHU]
 Name = Raichu
@@ -724,6 +799,9 @@ IoPokedex = As electricity builds up inside its body, it becomes more aggressive
 AmPokedex = Because so many Trainers like the way Pikachu looks, you don't see this Pokémon very often.
 Generation = 1
 RaidRanks = 3,4,5
+WildDropCommon = PICHUFUR,3,5
+WildDropUncommon = PICHUFUR,3,5
+WildDropRare = PICHUFUR,3,5
 #-------------------------------
 [SANDSHREW]
 Name = Sandshrew
@@ -753,6 +831,9 @@ Generation = 1
 WildItemUncommon = GRIPCLAW
 Evolutions = SANDSLASH,Level,22
 RaidRanks = 1,2
+WildDropCommon = SANDSHREWCLAW,1,3
+WildDropUncommon = SANDSHREWCLAW,1,3
+WildDropRare = SANDSHREWCLAW,1,3
 #-------------------------------
 [SANDSLASH]
 Name = Sandslash
@@ -780,6 +861,9 @@ IoPokedex = It curls up in a ball to protect itself from enemy attacks. It also 
 Generation = 1
 WildItemUncommon = GRIPCLAW
 RaidRanks = 3,4
+WildDropCommon = SANDSHREWCLAW,2,4
+WildDropUncommon = SANDSHREWCLAW,2,4
+WildDropRare = SANDSHREWCLAW,2,4
 #-------------------------------
 [NIDORANfE]
 Name = Nidoran♀
@@ -809,6 +893,9 @@ IoPokedex = Its highly toxic barbs are thought to have developed as protection f
 Generation = 1
 Evolutions = NIDORINA,Level,16
 RaidRanks = 1,2
+WildDropCommon = NIDORANHORN,1,2
+WildDropUncommon = NIDORANHORN,1,2
+WildDropRare = NIDORANHORN,1,2
 #-------------------------------
 [NIDORINA]
 Name = Nidorina
@@ -836,6 +923,9 @@ IoPokedex = When it is with its friends or family, its barbs are tucked away to 
 Generation = 1
 Evolutions = NIDOQUEEN,Item,MOONSTONE
 RaidRanks = 2,3
+WildDropCommon = NIDORANHORN,2,3
+WildDropUncommon = NIDORANHORN,2,3
+WildDropRare = NIDORANHORN,2,3
 #-------------------------------
 [NIDOQUEEN]
 Name = Nidoqueen
@@ -862,6 +952,9 @@ Category = Drill
 IoPokedex = It is adept at sending foes flying with harsh tackles using its tough, scaly body. This Pokémon is at its strongest when it is defending its young.
 Generation = 1
 RaidRanks = 3,4,5
+WildDropCommon = NIDORANHORN,3,5
+WildDropUncommon = NIDORANHORN,3,5
+WildDropRare = NIDORANHORN,3,5
 #-------------------------------
 [NIDORANmA]
 Name = Nidoran♂
@@ -891,6 +984,9 @@ IoPokedex = The male Nidoran has developed muscles that freely move its ears in 
 Generation = 1
 Evolutions = NIDORINO,Level,16
 RaidRanks = 1,2
+WildDropCommon = NIDORANHORN,1,2
+WildDropUncommon = NIDORANHORN,1,2
+WildDropRare = NIDORANHORN,1,2
 #-------------------------------
 [NIDORINO]
 Name = Nidorino
@@ -918,6 +1014,9 @@ IoPokedex = Its horn is harder than a diamond. If it senses a hostile presence, 
 Generation = 1
 Evolutions = NIDOKING,Item,MOONSTONE
 RaidRanks = 2,3
+WildDropCommon = NIDORANHORN,2,3
+WildDropUncommon = NIDORANHORN,2,3
+WildDropRare = NIDORANHORN,2,3
 #-------------------------------
 [NIDOKING]
 Name = Nidoking
@@ -944,6 +1043,9 @@ Category = Drill
 IoPokedex = A Nidoking's thick tail packs enormously destructive power capable of toppling a metal transmission tower. Once it goes on a rampage, there is no stopping it.
 Generation = 1
 RaidRanks = 3,4,5
+WildDropCommon = NIDORANHORN,3,5
+WildDropUncommon = NIDORANHORN,3,5
+WildDropRare = NIDORANHORN,3,5
 #-------------------------------
 [CLEFAIRY]
 Name = Clefairy
@@ -3574,6 +3676,9 @@ AmPokedex = Magikarp is virtually useless in battle as it can only splash around
 Generation = 1
 Evolutions = GYARADOS,Level,20
 RaidRanks = 1,2
+WildDropCommon = MAGIKARPSCALES,1,2
+WildDropUncommon = MAGIKARPSCALES,1,2
+WildDropRare = MAGIKARPSCALES,1,2
 #-------------------------------
 [GYARADOS]
 Name = Gyarados
@@ -3601,6 +3706,9 @@ IoPokedex = When Magikarp evolves into Gyarados, its brain cells undergo a struc
 AmPokedex = Once Gyarados goes on a rampage, its ferociously violent blood doesn't calm until it has burned everything down. There are records of this Pokémon's rampages lasting a whole month.
 Generation = 1
 RaidRanks = 4,5
+WildDropCommon = MAGIKARPSCALES,3,5
+WildDropUncommon = MAGIKARPSCALES,3,5
+WildDropRare = MAGIKARPSCALES,3,5
 #-------------------------------
 [LAPRAS]
 Name = Lapras
@@ -7427,6 +7535,9 @@ Generation = 3
 WildItemUncommon = MENTALHERB
 Evolutions = LOMBRE,Level,14
 RaidRanks = 1,2
+WildDropCommon = LOTADLEAF,1,2
+WildDropUncommon = LOTADLEAF,1,2
+WildDropRare = LOTADLEAF,1,2
 #-------------------------------
 [LOMBRE]
 Name = Lombre
@@ -7456,6 +7567,9 @@ Generation = 3
 WildItemUncommon = MENTALHERB
 Evolutions = LUDICOLO,Item,WATERSTONE
 RaidRanks = 2,3
+WildDropCommon = LOTADLEAF,2,3
+WildDropUncommon = LOTADLEAF,2,3
+WildDropRare = LOTADLEAF,2,3
 #-------------------------------
 [LUDICOLO]
 Name = Ludicolo
@@ -7484,6 +7598,9 @@ AmPokedex = Upon hearing an upbeat and cheerful rhythm, the cells in Ludicolo's 
 Generation = 3
 WildItemUncommon = MENTALHERB
 RaidRanks = 3,4,5
+WildDropCommon = LOTADLEAF,3,5
+WildDropUncommon = LOTADLEAF,3,5
+WildDropRare = LOTADLEAF,3,5
 #-------------------------------
 [SEEDOT]
 Name = Seedot
@@ -13874,6 +13991,9 @@ AmPokedex = This Pokémon is popular with beginners because it's intelligent, ob
 Generation = 5
 Evolutions = HERDIER,Level,16
 RaidRanks = 1,2
+WildDropCommon = LILLIPUPFUR,1,2
+WildDropUncommon = LILLIPUPFUR,1,2
+WildDropRare = LILLIPUPFUR,1,2
 #-------------------------------
 [HERDIER]
 Name = Herdier
@@ -13903,6 +14023,9 @@ AmPokedex = It has been living with people for so long that portrayals of it can
 Generation = 5
 Evolutions = STOUTLAND,Level,32
 RaidRanks = 2,3
+WildDropCommon = LILLIPUPFUR,2,3
+WildDropUncommon = LILLIPUPFUR,2,3
+WildDropRare = LILLIPUPFUR,2,3
 #-------------------------------
 [STOUTLAND]
 Name = Stoutland
@@ -13931,6 +14054,9 @@ IoPokedex = These Pokémon seem to enjoy living with humans. Even a Stoutland ca
 AmPokedex = Stoutland is immensely proud of its impressive moustache. It's said that moustache length is what determines social standing among this species.
 Generation = 5
 RaidRanks = 3,4,5
+WildDropCommon = LILLIPUPFUR,3,5
+WildDropUncommon = LILLIPUPFUR,3,5
+WildDropRare = LILLIPUPFUR,3,5
 #-------------------------------
 [PURRLOIN]
 Name = Purrloin
@@ -14014,6 +14140,9 @@ AmPokedex = It's good at finding berries and gathers them from all over. It's ki
 Generation = 5
 Evolutions = SIMISAGE,Item,LEAFSTONE
 RaidRanks = 1,2
+WildDropCommon = PANSAGEFUR,1,3
+WildDropUncommon = PANSAGEFUR,1,3
+WildDropRare = PANSAGEFUR,1,3
 #-------------------------------
 [SIMISAGE]
 Name = Simisage
@@ -14041,6 +14170,9 @@ IoPokedex = It attacks enemies with strikes of its thorn-covered tail. This Pok�
 AmPokedex = Ill tempered, it fights by swinging its barbed tail around wildly. The leaf growing on its head is very bitter.
 Generation = 5
 RaidRanks = 3,4
+WildDropCommon = PANSAGEFUR,2,4
+WildDropUncommon = PANSAGEFUR,2,4
+WildDropRare = PANSAGEFUR,2,4
 #-------------------------------
 [PANSEAR]
 Name = Pansear
@@ -14071,6 +14203,9 @@ AmPokedexUS = This Pokémon lives in caves in volcanoes. The fire within the tuf
 Generation = 5
 Evolutions = SIMISEAR,Item,FIRESTONE
 RaidRanks = 1,2
+WildDropCommon = PANSEARFUR,1,3
+WildDropUncommon = PANSEARFUR,1,3
+WildDropRare = PANSEARFUR,1,3
 #-------------------------------
 [SIMISEAR]
 Name = Simisear
@@ -14098,6 +14233,9 @@ IoPokedex = A flame burns inside its body. It scatters embers from its head and 
 AmPokedex = When it gets excited, embers rise from its head and tail and it gets hot. For some reason, it loves sweets.
 Generation = 5
 RaidRanks = 3,4
+WildDropCommon = PANSEARFUR,2,4
+WildDropUncommon = PANSEARFUR,2,4
+WildDropRare = PANSEARFUR,2,4
 #-------------------------------
 [PANPOUR]
 Name = Panpour
@@ -14127,6 +14265,9 @@ AmPokedex = The water stored inside the tuft on its head is full of nutrients. P
 Generation = 5
 Evolutions = SIMIPOUR,Item,WATERSTONE
 RaidRanks = 1,2
+WildDropCommon = PANPOURFUR,1,3
+WildDropUncommon = PANPOURFUR,1,3
+WildDropRare = PANPOURFUR,1,3
 #-------------------------------
 [SIMIPOUR]
 Name = Simipour
@@ -14154,6 +14295,9 @@ IoPokedex = The high-pressure water expelled from its tail is so powerful, it ca
 AmPokedex = It prefers places with clean water. When its tuft runs low, it replenishes it by siphoning up water with its tail.
 Generation = 5
 RaidRanks = 3,4
+WildDropCommon = PANPOURFUR,2,4
+WildDropUncommon = PANPOURFUR,2,4
+WildDropRare = PANPOURFUR,2,4
 #-------------------------------
 [MUNNA]
 Name = Munna
@@ -17893,6 +18037,9 @@ AmPokedex = As it walks, it munches on a twig in place of a snack. It intimidate
 Generation = 6
 Evolutions = BRAIXEN,Level,16
 RaidRanks = 1,2
+WildDropCommon = FENNEKINFUR,1,2
+WildDropUncommon = FENNEKINFUR,1,2
+WildDropRare = FENNEKINFUR,1,2
 #-------------------------------
 [BRAIXEN]
 Name = Braixen
@@ -17921,6 +18068,9 @@ AmPokedex = Braixen’s branch ignites as it’s pulled from the Pokémon’s ta
 Generation = 6
 Evolutions = DELPHOX,Level,36
 RaidRanks = 2,3
+WildDropCommon = FENNEKINFUR,2,3
+WildDropUncommon = FENNEKINFUR,2,3
+WildDropRare = FENNEKINFUR,2,3
 #-------------------------------
 [DELPHOX]
 Name = Delphox
@@ -17949,6 +18099,9 @@ AmPokedex = It controls flames telekinetically, trapping its foes in a fiery vor
 AmPokedexUS = It controls flames telekinetically, trapping its foes in a fiery vortex surpassing 5,400 degrees Fahrenheit and burning them to a crisp.
 Generation = 6
 RaidRanks = 3,4,5
+WildDropCommon = FENNEKINFUR,3,5
+WildDropUncommon = FENNEKINFUR,3,5
+WildDropRare = FENNEKINFUR,3,5
 #-------------------------------
 [FROAKIE]
 Name = Froakie
@@ -18113,6 +18266,9 @@ AmPokedex = Fletchling can be found in both rural and urban areas. They once had
 Generation = 6
 Evolutions = FLETCHINDER,Level,17
 RaidRanks = 1,2
+WildDropCommon = FLETCHLINGFEATHER,1,2
+WildDropUncommon = FLETCHLINGFEATHER,1,2
+WildDropRare = FLETCHLINGFEATHER,1,2
 #-------------------------------
 [FLETCHINDER]
 Name = Fletchinder
@@ -18141,6 +18297,9 @@ AmPokedex = Fletchinder are exceedingly territorial and aggressive. These Pokém
 Generation = 6
 Evolutions = TALONFLAME,Level,35
 RaidRanks = 2,3
+WildDropCommon = FLETCHLINGFEATHER,2,3
+WildDropUncommon = FLETCHLINGFEATHER,2,3
+WildDropRare = FLETCHLINGFEATHER,2,3
 #-------------------------------
 [TALONFLAME]
 Name = Talonflame
@@ -18168,6 +18327,9 @@ IoPokedex = Talonflame mainly preys upon other bird Pokémon. To intimidate oppo
 AmPokedex = When it gets excited, it vents sparks from the gaps between its feathers. These unburnable feathers are used as a fireproof material.
 Generation = 6
 RaidRanks = 3,4,5
+WildDropCommon = FLETCHLINGFEATHER,3,5
+WildDropUncommon = FLETCHLINGFEATHER,3,5
+WildDropRare = FLETCHLINGFEATHER,3,5
 #-------------------------------
 [SCATTERBUG]
 Name = Scatterbug
@@ -18196,6 +18358,9 @@ IoPokedex = When under attack from bird Pokémon, it spews a poisonous black pow
 Generation = 6
 Evolutions = SPEWPA,Level,9
 RaidRanks = 1,2
+WildDropCommon = SCATTERBUGPOWDER,1,2
+WildDropUncommon = SCATTERBUGPOWDER,1,2
+WildDropRare = SCATTERBUGPOWDER,1,2
 #-------------------------------
 [SPEWPA]
 Name = Spewpa
@@ -18223,6 +18388,9 @@ IoPokedex = It lives hidden within thicket shadows. When predators attack, it qu
 Generation = 6
 Evolutions = VIVILLON,Level,12
 RaidRanks = 1,2
+WildDropCommon = SCATTERBUGPOWDER,2,3
+WildDropUncommon = SCATTERBUGPOWDER,2,3
+WildDropRare = SCATTERBUGPOWDER,2,3
 #-------------------------------
 [VIVILLON]
 Name = Vivillon
@@ -18250,6 +18418,9 @@ Category = Scale
 IoPokedex = Vivillon with many different patterns are found all over the world. These patterns are affected by the climate of their habitat.
 Generation = 6
 RaidRanks = 3,4
+WildDropCommon = SCATTERBUGPOWDER,3,5
+WildDropUncommon = SCATTERBUGPOWDER,3,5
+WildDropRare = SCATTERBUGPOWDER,3,5
 #-------------------------------
 [LITLEO]
 Name = Litleo
@@ -18557,6 +18728,9 @@ AmPokedex = It keeps its ears covered to prevent the intense psychic power in it
 Generation = 6
 Evolutions = MEOWSTIC,Level,25
 RaidRanks = 1,2
+WildDropCommon = ESPURRFUR,1,3
+WildDropUncommon = ESPURRFUR,1,3
+WildDropRare = ESPURRFUR,1,3
 #-------------------------------
 [MEOWSTIC]
 Name = Meowstic
@@ -18585,6 +18759,9 @@ IoPokedex = Revealing the eyelike patterns on the insides of its ears will unlea
 AmPokedex = The defensive instinct of the males is strong. It's when they're protecting themselves or their partners that they unleash their full power.
 Generation = 6
 RaidRanks = 3,4
+WildDropCommon = ESPURRFUR,2,4
+WildDropUncommon = ESPURRFUR,2,4
+WildDropRare = ESPURRFUR,2,4
 #-------------------------------
 [HONEDGE]
 Name = Honedge

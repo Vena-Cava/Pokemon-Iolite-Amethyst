@@ -195,10 +195,10 @@ class VPM_DateAndTimeHud < Component
 	# Sun & Moon overlay
 	if PBDayNight.isMorning?
 	  timeimage = sprintf("Graphics/Pictures/VPM/Time/Sun-Rise")
-	elsif PBDayNight.isAfternoon?
-	  timeimage = sprintf("Graphics/Pictures/VPM/Time/Sun-Day")
 	elsif PBDayNight.isEvening?
 	  timeimage = sprintf("Graphics/Pictures/VPM/Time/Sun-Set")
+	elsif PBDayNight.isDay?
+	  timeimage = sprintf("Graphics/Pictures/VPM/Time/Sun-Day")
 	elsif PBDayNight.isNight?
 	  timeimage = sprintf("Graphics/Pictures/VPM/Time/Moon-%s", moonphase)
 	end

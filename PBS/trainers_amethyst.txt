@@ -137,6 +137,43 @@ Pokemon = PUFFONO,12
     NoDynamax = true
 #-------------------------------
 [LEADER_Sedric,Sedric,1]
+Items = POTION
+LoseText = ...
+Pokemon = TENTACOOL,12
+    Moves = CHILLINGWATER,POISONSTING,KNOCKOFF,RAPIDSPIN
+    Ability = CLEARBODY
+    Gender = male
+    Item = BLACKSLUDGE
+    Nature = TIMID
+    IV = 20,20,20,20,20,20
+    EV = 140,0,0,144,148,76
+    Ball = NETBALL
+    NoTera = true
+    NoDynamax = true
+Pokemon = CARVANHA,13
+    Moves = CHILLINGWATER,TOXIC,BITE,AQUAJET
+    Ability = ROUGHSKIN
+    Gender = male
+    Item = MYSTICWATER
+    Nature = ADAMANT
+    IV = 20,20,20,20,20,20
+    EV = 0,252,0,252,0,4
+    Ball = NETBALL
+    NoTera = true
+    NoDynamax = true
+Pokemon = PUFFONO,14
+    Moves = CHILLINGWATER,IRONDEFENSE,GYROBALL,AQUARING
+    Ability = PUFFEDOUT
+    Item = FOCUSSASH
+    Nature = RELAXED
+    IV = 20,20,20,0,20,20
+    EV = 252,0,128,0,0,128
+    Gender = male
+    Ball = NETBALL
+    NoTera = true
+    NoDynamax = true
+#-------------------------------
+[LEADER_Sedric,Sedric,2]
 Items = MEGARING
 LoseText = ...
 Pokemon = TENTACRUEL,100

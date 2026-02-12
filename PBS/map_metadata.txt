@@ -497,6 +497,7 @@ Environment = Grass
 #-------------------------------
 [089]   # Daiseye Town
 Name = Daiseye Town
+Outdoor = true
 MapPosition = 0,17,18
 BattleBack = snow
 #-------------------------------
@@ -535,3 +536,14 @@ MapPosition = 1,11,9
 [097]   # Lassula Café
 Name = Lassula Café
 MapPosition = 1,11,9
+#-------------------------------
+[098]   # Lilycombe City
+Name = Lilycombe City
+#-------------------------------
+[099]   # Daiseye Bay
+Name = Daiseye Bay
+Outdoor = true
+#-------------------------------
+[100]   # Daiseye Bay
+Name = Daiseye Bay
+Outdoor = true

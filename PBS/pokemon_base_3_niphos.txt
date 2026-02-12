@@ -279,6 +279,9 @@ Category = Teary-Eyed
 Pokedex = Sad boi
 Evolutions = DIVOGGLE,LevelDay,25
 RaidRanks = 1,2
+WildDropCommon = CRIVOLETEARS,1,3
+WildDropUncommon = CRIVOLETEARS,1,3
+WildDropRare = CRIVOLETEARS,1,3
 #-------------------------------
 [DIVOGGLE]
 Name = Divoggle
@@ -304,6 +307,9 @@ Habitat = WatersEdge
 Category = Hardened
 Pokedex = Meanie
 RaidRanks = 3,4
+WildDropCommon = CRIVOLETEARS,2,4
+WildDropUncommon = CRIVOLETEARS,2,4
+WildDropRare = CRIVOLETEARS,2,4
 #-------------------------------
 [ROLLVA]
 Name = Rollva
@@ -329,6 +335,9 @@ Category = Dust Larva
 AmPokedex = Rollva love rolling around in the dirt and sand, covering themselves in earth to protect their soft bodies from the elements.
 Evolutions = DUSPUPA,Level,12
 RaidRanks = 1,2
+WildDropCommon = ROLLVADIRT,1,2
+WildDropUncommon = ROLLVADIRT,1,2
+WildDropRare = ROLLVADIRT,1,2
 #-------------------------------
 [DUSPUPA]
 Name = Duspupa
@@ -355,6 +364,9 @@ Category = Dirt Cocoon
 AmPokedex = Duspupa has formed a solid shell of dirt and sand, giving it enough security to mature into its final stage.
 Evolutions = SKARADIMENT,HasMove,IRONDEFENSE
 RaidRanks = 2,3
+WildDropCommon = ROLLVADIRT,2,3
+WildDropUncommon = ROLLVADIRT,2,3
+WildDropRare = ROLLVADIRT,2,3
 #-------------------------------
 [SKARADIMENT]
 Name = Skaradiment
@@ -380,6 +392,9 @@ Habitat = RoughTerrain
 Category = Big Beetle
 AmPokedex = The ball of dirt that Skaradiment carry between their horns can be used for various purposes, such as projectiles, or for protecting their offspring.
 RaidRanks = 3,4,5
+WildDropCommon = ROLLVADIRT,3,5
+WildDropUncommon = ROLLVADIRT,3,5
+WildDropRare = ROLLVADIRT,3,5
 #-------------------------------
 [QUILTOX]
 Name = Quiltox
@@ -404,6 +419,9 @@ Category = Tiny Quill
 AmPokedex = Quiltox sleep during the day, and thus have developed pointy quills to ward off diurnal predators.
 Evolutions = PORCUPOX,LevelNight,25
 RaidRanks = 1,2
+WildDropCommon = QUILTOXQUILL,1,3
+WildDropUncommon = QUILTOXQUILL,1,3
+WildDropRare = QUILTOXQUILL,1,3
 #-------------------------------
 [PORCUPOX]
 Name = Porcupox
@@ -428,6 +446,9 @@ Habitat = Grassland
 Category = Toxic Quill
 AmPokedex = Porcupox has developed a venom that it can eject from its long quills, this is used as a defensive measure.
 RaidRanks = 3,4
+WildDropCommon = QUILTOXQUILL,2,4
+WildDropUncommon = QUILTOXQUILL,2,4
+WildDropRare = QUILTOXQUILL,2,4
 #-------------------------------
 [CHICKATOO]
 Name = Chickatoo
@@ -453,6 +474,9 @@ Category = Tiny Bird
 AmPokedex = Birdie
 Evolutions = SHOCKATOO,Level,15
 RaidRanks = 1,2
+WildDropCommon = CHICKATOOFEATHER,1,2
+WildDropUncommon = CHICKATOOFEATHER,1,2
+WildDropRare = CHICKATOOFEATHER,1,2
 #-------------------------------
 [SHOCKATOO]
 Name = Shockatoo
@@ -479,6 +503,9 @@ Category = Discharge
 AmPokedex = Birdie
 Evolutions = THUNDAROC,Level,35
 RaidRanks = 2,3
+WildDropCommon = CHICKATOOFEATHER,2,3
+WildDropUncommon = CHICKATOOFEATHER,2,3
+WildDropRare = CHICKATOOFEATHER,2,3
 #-------------------------------
 [THUNDAROC]
 Name = Thundaroc
@@ -504,6 +531,9 @@ Habitat = Forest
 Category = Thunderbird
 AmPokedex = Birdie
 RaidRanks = 3,4,5
+WildDropCommon = CHICKATOOFEATHER,3,5
+WildDropUncommon = CHICKATOOFEATHER,3,5
+WildDropRare = CHICKATOOFEATHER,3,5
 #-------------------------------
 [ARACANVAS]
 Name = Aracanvas
@@ -531,6 +561,9 @@ IoPokedex = Aracanvas are typically harvested for their paint-like goop, but it'
 AmPokedex = From a diet of special berries and snails, Aracanvas makes a layer of sticky goop predators find repugnant.
 Evolutions = MELARACNA,LevelMale,25,CHROMARACNA,LevelFemale,25
 RaidRanks = 1,2
+WildDropCommon = ARACANVASGOOP,1,3
+WildDropUncommon = ARACANVASGOOP,1,3
+WildDropRare = ARACANVASGOOP,1,3
 #-------------------------------
 [MELARACNA]
 Name = Melaracna
@@ -557,6 +590,9 @@ Category = Ink Spider
 IoPokedex = Melaracna are far more hardy than their female counterparts, an evolution to withstand their bullying.
 AmPokedex = Typically travelling to find a mate, Melaracna protect themselves from predators by painting themselves black.
 RaidRanks = 2,3
+WildDropCommon = ARACANVASGOOP,2,4
+WildDropUncommon = ARACANVASGOOP,2,4
+WildDropRare = ARACANVASGOOP,2,4
 #-------------------------------
 [CHROMARACNA]
 Name = Chromaracna
@@ -583,6 +619,9 @@ Category = Paint Spider
 IoPokedex = Although sporting a light frame, Chromaracna bully their stockier male counterpart.
 AmPokedex = Chromaracna typically build colored webs, using their colored legs to dye their masterpieces.
 RaidRanks = 2,3
+WildDropCommon = ARACANVASGOOP,2,4
+WildDropUncommon = ARACANVASGOOP,2,4
+WildDropRare = ARACANVASGOOP,2,4
 #-------------------------------
 [BUNCHKIN]
 Name = Bunchkin
@@ -610,6 +649,9 @@ IoPokedex = A Pokémon imported from the south. They like to travel in bunches t
 AmPokedex = Bunchkin are typically grouped together, sharing a vine with the rest of their family.
 Evolutions = VINAPSE,Level,18
 RaidRanks = 1,2
+WildDropCommon = BUNCHKINJUICE,1,2
+WildDropUncommon = BUNCHKINJUICE,1,2
+WildDropRare = BUNCHKINJUICE,1,2
 #-------------------------------
 [VINAPSE]
 Name = Vinapse
@@ -637,6 +679,9 @@ IoPokedex = These Pokémon are reclusive, their leaves wilting in the dark. They
 AmPokedex = Hiding in dark areas, the juice within has begun to ferment. Its delayed reactions are steadily opening its mind.
 Evolutions = FERMENTAL,Level,35
 RaidRanks = 2,3
+WildDropCommon = BUNCHKINJUICE,2,3
+WildDropUncommon = BUNCHKINJUICE,2,3
+WildDropRare = BUNCHKINJUICE,2,3
 #-------------------------------
 [FERMENTAL]
 Name = Fermental
@@ -663,6 +708,9 @@ Category = Grape
 IoPokedex = Having completely spoiled inside, these pokémon act as though they know everything. It may have triggered latent psychic capabilities.
 AmPokedex = After delicately fermenting, the insides of a Fermental are completely full of wine. Their delayed mental state has enabled them access to true inner thought.
 RaidRanks = 3,4,5
+WildDropCommon = BUNCHKINJUICE,3,5
+WildDropUncommon = BUNCHKINJUICE,3,5
+WildDropRare = BUNCHKINJUICE,3,5
 #-------------------------------
 [PUFFONO]
 Name = Puffono
@@ -689,6 +737,9 @@ Category = Shy Fish
 IoPokedex = Puffono's rarity makes it a delicacy in high-end restaurants, it has an organ that generates metallic compounds that are toxic to humans however, so preparing it takes mastery of the culinary arts.
 AmPokedex = Puffono are very shy and are rarely seen in the wild by Humans. The slightest of disturbances and it will puff up into a giant spiked ball.
 RaidRanks = 1,2,3,4,5
+WildDropCommon = PUFFONOSCALES,2,3
+WildDropUncommon = PUFFONOSCALES,2,3
+WildDropRare = PUFFONOSCALES,2,3
 #-------------------------------
 [ZEKITREX]
 Name = Zekitrex

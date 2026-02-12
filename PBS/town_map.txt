@@ -40,6 +40,9 @@ Point = 1,8,Rhoeastead
 Point = 1,9,Rhoeastead
 Point = 21,8,Iristätt,Iristätt Gym
 Point = 21,9,Iristätt,Iristätt Gym
+Point = 19,16,Abercorn,,,,,
+Point = 20,16,Abercorn,,,,,
+
 #-------------------------------
 [1]
 Name = Niphos Region

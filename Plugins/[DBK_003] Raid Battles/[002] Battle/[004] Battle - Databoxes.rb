@@ -8,14 +8,14 @@ class Battle::Scene::PokemonDataBox
     when :Long
       @turnPosition  = [@spriteBaseX + 4, 66, :left]
       @koPosition    = [@spriteBaseX + 4, 88, :left]
-      @shieldXY      = [@spriteBaseX + 150, 46]
+      @shieldXY      = [@spriteBaseX + 150, 58]
       @shieldWH      = [192, 6]
       @shieldOffset  = [10, 2]
       @shieldHPWidth = 24
     else
       @turnPosition  = [@spriteBaseX + 4, 66, :left]
       @koPosition    = [@spriteBaseX + 4, 88, :left]
-      @shieldXY      = [@spriteBaseX + 66, 34]
+      @shieldXY      = [@spriteBaseX + 66, 46]
       @shieldWH      = [192, 6]
       @shieldOffset  = [4, 2]
       @shieldHPWidth = 24

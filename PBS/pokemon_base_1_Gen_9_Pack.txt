@@ -216,6 +216,9 @@ IoPokedex = The sweet scent its body gives off mesmerizes those around it. The s
 Generation = 9
 Evolutions = FLORAGATO,Level,16
 RaidRanks = 1,2
+WildDropCommon = SPRIGATITOFUR,1,2
+WildDropUncommon = SPRIGATITOFUR,1,2
+WildDropRare = SPRIGATITOFUR,1,2
 #-------------------------------
 [FLORAGATO]
 Name = Floragato
@@ -243,6 +246,9 @@ IoPokedex = Floragato deftly wields the vine hidden beneath its long fur, slammi
 Generation = 9
 Evolutions = MEOWSCARADA,Level,36
 RaidRanks = 2,3
+WildDropCommon = SPRIGATITOFUR,2,3
+WildDropUncommon = SPRIGATITOFUR,2,3
+WildDropRare = SPRIGATITOFUR,2,3
 #-------------------------------
 [MEOWSCARADA]
 Name = Meowscarada
@@ -269,6 +275,9 @@ Category = Magician
 IoPokedex = This Pokémon uses the reflective fur lining its cape to camouflage the stem of its flower, creating the illusion that the flower is floating.
 Generation = 9
 RaidRanks = 3,4,5
+WildDropCommon = SPRIGATITOFUR,3,5
+WildDropUncommon = SPRIGATITOFUR,3,5
+WildDropRare = SPRIGATITOFUR,3,5
 #-------------------------------
 [FUECOCO]
 Name = Fuecoco
@@ -297,6 +306,9 @@ IoPokedex = It lies on warm rocks and uses the heat absorbed by its square-shape
 Generation = 9
 Evolutions = CROCALOR,Level,16
 RaidRanks = 1,2
+WildDropCommon = FUECOCOFANG,1,2
+WildDropUncommon = FUECOCOFANG,1,2
+WildDropRare = FUECOCOFANG,1,2
 #-------------------------------
 [CROCALOR]
 Name = Crocalor
@@ -324,6 +336,9 @@ IoPokedex = The combination of Crocalor’s fire energy and overflowing vitality
 Generation = 9
 Evolutions = SKELEDIRGE,Level,36
 RaidRanks = 2,3
+WildDropCommon = FUECOCOFANG,2,3
+WildDropUncommon = FUECOCOFANG,2,3
+WildDropRare = FUECOCOFANG,2,3
 #-------------------------------
 [SKELEDIRGE]
 Name = Skeledirge
@@ -350,6 +365,9 @@ Category = Singer
 IoPokedex = The fiery bird changes shape when Skeledirge sings. Rumor has it that the bird was born when the fireball on Skeledirge’s head gained a soul.
 Generation = 9
 RaidRanks = 3,4,5
+WildDropCommon = FUECOCOFANG,3,5
+WildDropUncommon = FUECOCOFANG,3,5
+WildDropRare = FUECOCOFANG,3,5
 #-------------------------------
 [QUAXLY]
 Name = Quaxly
@@ -379,6 +397,9 @@ AmPokedex = Its strong legs let it easily swim around in even fast-flowing river
 Generation = 9
 Evolutions = QUAXWELL,Level,16
 RaidRanks = 1,2
+WildDropCommon = QUAXLYDOWN,1,2
+WildDropUncommon = QUAXLYDOWN,1,2
+WildDropRare = QUAXLYDOWN,1,2
 #-------------------------------
 [QUAXWELL]
 Name = Quaxwell
@@ -407,6 +428,9 @@ AmPokedex = The hardworking Quaxwell observes people and Pokémon from various r
 Generation = 9
 Evolutions = QUAQUAVAL,Level,36
 RaidRanks = 2,3
+WildDropCommon = QUAXLYDOWN,2,3
+WildDropUncommon = QUAXLYDOWN,2,3
+WildDropRare = QUAXLYDOWN,2,3
 #-------------------------------
 [QUAQUAVAL]
 Name = Quaquaval
@@ -434,6 +458,9 @@ IoPokedex = A single kick from a Quaquaval can send a truck rolling. This Pokém
 AmPokedex = Dancing in ways that evoke far-away places, this Pokémon mesmerizes all that see it. Flourishes of its decorative water feathers slice into its foes.
 Generation = 9
 RaidRanks = 3,4,5
+WildDropCommon = QUAXLYDOWN,3,5
+WildDropUncommon = QUAXLYDOWN,3,5
+WildDropRare = QUAXLYDOWN,3,5
 #-------------------------------
 [LECHONK]
 Name = Lechonk
@@ -707,6 +734,9 @@ AmPokedex = The pair sticks together no matter what. They split any food they fi
 Generation = 9
 Evolutions = MAUSHOLD,Level,25
 RaidRanks = 1,2
+WildDropCommon = TANDEMAUSFUR,1,3
+WildDropUncommon = TANDEMAUSFUR,1,3
+WildDropRare = TANDEMAUSFUR,1,3
 #-------------------------------
 [MAUSHOLD]
 Name = Maushold
@@ -735,6 +765,9 @@ IoPokedex = The two little ones just appeared one day. The group might be a fami
 AmPokedex = The larger pair protects the little ones during battles. When facing strong opponents, the whole group will join the fight.
 Generation = 9
 RaidRanks = 3,4,5
+WildDropCommon = TANDEMAUSFUR,2,4
+WildDropUncommon = TANDEMAUSFUR,2,4
+WildDropRare = TANDEMAUSFUR,2,4
 #-------------------------------
 [FIDOUGH]
 Name = Fidough
@@ -818,6 +851,9 @@ AmPokedex = This Pokémon converts nutrients into oil, which it stores in the fr
 Generation = 9
 Evolutions = DOLLIV,Level,25
 RaidRanks = 1,2
+WildDropCommon = SMOLIVOIL,1,2
+WildDropUncommon = SMOLIVOIL,1,2
+WildDropRare = SMOLIVOIL,1,2
 #-------------------------------
 [DOLLIV]
 Name = Dolliv
@@ -846,6 +882,9 @@ AmPokedex = It basks in the sun to its heart's content until the fruits on its h
 Generation = 9
 Evolutions = ARBOLIVA,Level,35
 RaidRanks = 2,3
+WildDropCommon = SMOLIVOIL,2,3
+WildDropUncommon = SMOLIVOIL,2,3
+WildDropRare = SMOLIVOIL,2,3
 #-------------------------------
 [ARBOLIVA]
 Name = Arboliva
@@ -873,6 +912,9 @@ IoPokedex = This calm Pokémon is very compassionate. It will share its deliciou
 AmPokedex = This Pokémon drives back enemies by launching its rich, aromatic oil at them with enough force to smash a boulder.
 Generation = 9
 RaidRanks = 3,4,5
+WildDropCommon = SMOLIVOIL,3,5
+WildDropUncommon = SMOLIVOIL,3,5
+WildDropRare = SMOLIVOIL,3,5
 #-------------------------------
 [SQUAWKABILLY]
 Name = Squawkabilly
@@ -930,6 +972,9 @@ AmPokedex = The ground scrapes its body as it travels, causing it to leave salt 
 Generation = 9
 Evolutions = NACLSTACK,Level,24
 RaidRanks = 1,2
+WildDropCommon = NACLISALT,1,2
+WildDropUncommon = NACLISALT,1,2
+WildDropRare = NACLISALT,1,2
 #-------------------------------
 [NACLSTACK]
 Name = Naclstack
@@ -958,6 +1003,9 @@ AmPokedex = It compresses rock salt inside its body and shoots out hardened salt
 Generation = 9
 Evolutions = GARGANACL,Level,38
 RaidRanks = 2,3
+WildDropCommon = NACLISALT,2,3
+WildDropUncommon = NACLISALT,2,3
+WildDropRare = NACLISALT,2,3
 #-------------------------------
 [GARGANACL]
 Name = Garganacl
@@ -985,6 +1033,9 @@ IoPokedex = Garganacl will rub its fingertips together and sprinkle injured Pok�
 AmPokedex = Many Pokémon gather around Garganacl, hoping to lick at its mineral-rich salt.
 Generation = 9
 RaidRanks = 4,5
+WildDropCommon = NACLISALT,3,5
+WildDropUncommon = NACLISALT,3,5
+WildDropRare = NACLISALT,3,5
 #-------------------------------
 [CHARCADET]
 Name = Charcadet

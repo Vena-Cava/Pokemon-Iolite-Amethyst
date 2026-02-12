@@ -33,26 +33,48 @@ SuperRod
     20,LOTAD,30,45
 #-------------------------------
 [043] # Tulpha Grove
-Land,21
-    25,CATERPIE,2,3
-    25,WEEDLE,2,3
-    15,FLETCHLING,4
-    10,KAKUNA,3,4
-    10,PIKACHU,4,5
-    5,PANPOUR,4,5
-    5,PANSAGE,4,5
-    5,PANSEAR,4,5
+LandDay,21
+    20,SCATTERBUG,2,3
+    20,CATERPIE,2,3
+    10,WEEDLE,2,3
+    10,FLETCHLING,4
+    10,PANPOUR,4
+    10,PANSAGE,4
+    10,PANSEAR,4
+    6,PIKACHU,3,4
+    4,METAPOD,4
+LandNight,21
+    20,SCATTERBUG,2,3
+    20,WEEDLE,2,3
+    10,CATERPIE,2,3
+    10,FLETCHLING,4
+    10,PANPOUR,4
+    10,PANSAGE,4
+    10,PANSEAR,4
+    6,PIKACHU,3,4
+    4,KAKUNA,4
 #-------------------------------
 [043,1] # Tulpha Grove
-Land,21
-    25,CATERPIE,70
-    25,WEEDLE,70
-    15,FLETCHLING,70
-    10,KAKUNA,70
-    10,PIKACHU,70
-    5,PANPOUR,70
-    5,PANSAGE,70
-    5,PANSEAR,70
+LandDay,21
+    20,SCATTERBUG,70
+    20,CATERPIE,70
+    10,WEEDLE,70
+    10,FLETCHLING,70
+    10,PANPOUR,70
+    10,PANSAGE,70
+    10,PANSEAR,70
+    6,PIKACHU,3,70
+    4,METAPOD,70
+LandNight,21
+    20,SCATTERBUG,70
+    20,WEEDLE,70
+    10,CATERPIE,70
+    10,FLETCHLING,70
+    10,PANPOUR,70
+    10,PANSAGE,70
+    10,PANSEAR,70
+    6,PIKACHU,70
+    4,KAKUNA,70
 #-------------------------------
 [048] # Pinella Fields
 LandDay,21
@@ -79,26 +101,48 @@ LandNight,21
     20,ROLLVA,70
 #-------------------------------
 [076] # Tulpha Grove
-Land,21
-    25,CATERPIE,2,3
-    25,WEEDLE,2,3
-    15,FLETCHLING,4
-    10,KAKUNA,3,4
-    10,PIKACHU,4,5
-    5,PANPOUR,4,5
-    5,PANSAGE,4,5
-    5,PANSEAR,4,5
+LandDay,21
+    20,SCATTERBUG,2,3
+    20,CATERPIE,2,3
+    10,WEEDLE,2,3
+    10,FLETCHLING,4
+    10,PANPOUR,4
+    10,PANSAGE,4
+    10,PANSEAR,4
+    6,PIKACHU,3,4
+    4,METAPOD,4
+LandNight,21
+    20,SCATTERBUG,2,3
+    20,WEEDLE,2,3
+    10,CATERPIE,2,3
+    10,FLETCHLING,4
+    10,PANPOUR,4
+    10,PANSAGE,4
+    10,PANSEAR,4
+    6,PIKACHU,3,4
+    4,KAKUNA,4
 #-------------------------------
 [076,1] # Tulpha Grove
-Land,21
-    25,CATERPIE,70
-    25,WEEDLE,70
-    15,FLETCHLING,70
-    10,KAKUNA,70
-    10,PIKACHU,70
-    5,PANPOUR,70
-    5,PANSAGE,70
-    5,PANSEAR,70
+LandDay,21
+    20,SCATTERBUG,70
+    20,CATERPIE,70
+    10,WEEDLE,70
+    10,FLETCHLING,70
+    10,PANPOUR,70
+    10,PANSAGE,70
+    10,PANSEAR,70
+    6,PIKACHU,3,70
+    4,METAPOD,70
+LandNight,21
+    20,SCATTERBUG,70
+    20,WEEDLE,70
+    10,CATERPIE,70
+    10,FLETCHLING,70
+    10,PANPOUR,70
+    10,PANSAGE,70
+    10,PANSEAR,70
+    6,PIKACHU,70
+    4,KAKUNA,70
 #-------------------------------
 [078] # Tulphoise City
 Land,21

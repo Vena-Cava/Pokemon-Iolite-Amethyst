@@ -1907,6 +1907,9 @@ Moves = 1,MAGICALLEAF,1,SCRATCH,1,LEER,1,FAKEOUT,1,DISARMINGVOICE,9,CONFUSION,12
 Color = White
 IoPokedex = Females are a bit more selfish and aggressive than males. If they don't get what they want, they will torment you with their psychic abilities.
 AmPokedex = If it doesn't hold back when it unleashes its psychic power, it can tear apart a tanker. Its unfriendliness is part of its charm.
+WildDropCommon = ESPURRFUR,2,4
+WildDropUncommon = ESPURRFUR,2,4
+WildDropRare = ESPURRFUR,2,4
 #-------------------------------
 [AEGISLASH,1]
 FormName = Blade Forme

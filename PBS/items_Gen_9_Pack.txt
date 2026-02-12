@@ -288,7 +288,7 @@ Description = An item to be held by a Pokémon. It ensures the holder's multistr
 [GIMMIGHOULCOIN]
 Name = Gimmighoul Coin
 NamePlural = Gimmighoul Coins
-Pocket = 1
+Pocket = 10
 Price = 0
 Flags = Fling_10
 Description = An item that accidentally dropped by a Pokémon. It seems that Gimmighoul treasure and hoard these.

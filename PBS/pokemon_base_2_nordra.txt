@@ -73,7 +73,7 @@ Color = Green
 Shape = Quadruped
 Habitat = Grassland
 Category = Forest Stag
-IoPokedex = With fully grown antlers, Sylvstag are premier defenders of the woods. Their velvet has a dense matted moss that has prime conditions for flowers to thrive.,
+IoPokedex = With fully grown antlers, Sylvstag are premier defenders of the woods. Their velvet has a dense matted moss that has prime conditions for flowers to thrive.
 AmPokedex = It's a surprise that Sylvstag retain their antlers year-round. It's said that drinking vessels made from such contain a little bit of forest magic.
 RaidRanks = 3,4,5
 #-------------------------------
@@ -219,8 +219,8 @@ HiddenAbilities = MOLDBREAKER
 Moves = 1,TACKLE,1,BUBBLE,4,GROWL,6,AQUAJET,8,ROCKSMASH,11,JETPUNCH,15,ROLLINGKICK,18,RAINDANCE,20,AQUACUTTER,24,AURASPHERE,28,LIQUIDATION,32,CRUNCH,36,BULKUP,40,BODYPRESS,44,HYDROPUMP,47,CROSSCHOP,50,XSCISSOR,53,WAVECRASH,55,CLOSECOMBAT
 EggGroups = Field,Water1
 HatchCycles = 20
-Height = 0.4
-Weight = 24.3
+Height = 2.0
+Weight = 246.0
 Color = Blue
 Shape = BipedalTail
 Habitat = WatersEdge
@@ -715,7 +715,7 @@ Shape = Bipedal
 Habitat = Mountain
 Category = Glacier Ogre
 IoPokedex = Oglace are rarely seen without their Goblice entourage. They often lead the group into towns to ransack them of food.
-AmPokedex = These bests were feared in the dark ages, as any sword would shatter upon contact with their ice cold skin. If they meet another Oglace, only one of them will be walking away.
+AmPokedex = These beasts were feared in the dark ages, as any sword would shatter upon contact with their ice cold skin. If they meet another Oglace, only one of them will be walking away.
 RaidRanks = 5
 #-------------------------------
 [JOLTLING]
@@ -795,7 +795,7 @@ RaidRanks = 5
 [JOTUNFLAMME]
 Name = Jotunflamme
 Types = FIRE,FIGHTING
-BaseStats = 115,105,95,65,105,95
+BaseStats = 115,120,95,35,120,95
 GenderRatio = Genderless
 GrowthRate = Slow
 BaseExp = 285
@@ -819,7 +819,7 @@ RaidRanks = 6
 [JOTUNGLASS]
 Name = Jotunglass
 Types = ICE,FIGHTING
-BaseStats = 115,85,110,65,125,80
+BaseStats = 115,65,120,35,145,100
 GenderRatio = Genderless
 GrowthRate = Slow
 BaseExp = 285
@@ -843,7 +843,7 @@ RaidRanks = 6
 [JOTUNSTEIN]
 Name = Jotunstein
 Types = ROCK,FIGHTING
-BaseStats = 115,125,80,65,85,110
+BaseStats = 115,145,100,35,65,120
 GenderRatio = Genderless
 GrowthRate = Slow
 BaseExp = 285
