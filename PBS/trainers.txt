@@ -43,7 +43,7 @@ Pokemon = EKANS,11
 [CAMPER,Jeff]
 LoseText = A very good battle, indeed!
 Pokemon = SPEAROW,16
-Pokemon = SENTRET,16	
+Pokemon = SENTRET,16
 #-------------------------------
 [CAMPER,Jeff,1]
 LoseText = You beat me again!
@@ -116,6 +116,7 @@ Pokemon = CHARIZARD,63
     Item = SITRUSBERRY
 Pokemon = BLASTOISE,63
     Item = SITRUSBERRY
+#-------------------------------
 [AROMALADY,Test]
 Items = TERAORB
 LoseText = ...
@@ -125,3 +126,18 @@ Pokemon = VENUSAUR,5
     TeraType = QMARKS
     DynamaxLv = 10
     Gigantamax = true
+#-------------------------------
+[AROMALADY,Avon]
+LoseText = ...
+Pokemon = REVAVROOM,50
+    Moves = PARTINGSHOT
+Pokemon = DRAGONITE,50
+    Moves = PARTINGSHOT
+Pokemon = KORAIDON,50
+    Moves = PARTINGSHOT
+Pokemon = HYDREIGON,50
+    Moves = PARTINGSHOT
+Pokemon = HAXORUS,50
+    Moves = PARTINGSHOT
+Pokemon = BLASTOISE,50
+    Moves = PARTINGSHOT

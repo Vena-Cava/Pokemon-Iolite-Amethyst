@@ -37,11 +37,63 @@ Abilities = ROUGHSKIN,SHEERFORCE
 HiddenAbilities = PERMAFROST
 RaidRanks = 4,5
 #-------------------------------
+[GIBLE,1]
+FormName = Niphosian
+Types = DRAGON,FIRE
+Abilities = IGNITION
+HiddenAbilities = MACHFIVE
+BaseStats = 58,70,45,42,40,45
+Color = Red
+Evolutions = ZWEILOUS,Level,50
+RaidRanks = 1,2
+#-------------------------------
+[GABITE,1]
+FormName = Niphosian
+Types = DRAGON,FIRE
+Abilities = IGNITION
+HiddenAbilities = MACHFIVE
+BaseStats = 68,90,65,82,50,55
+Color = Red
+Evolutions = HYDREIGON,Level,64
+RaidRanks = 3,4
+#-------------------------------
+[GARCHOMP,1]
+FormName = Niphosian
+Types = DRAGON,FIRE
+Abilities = IGNITION
+HiddenAbilities = MACHFIVE
+BaseStats = 108,130,95,102,80,85
+Color = Red
+RaidRanks = 5
+#-------------------------------
+[GARCHOMP,4]
+FormName = Mega Niphosian Garchomp
+MegaStone = GARCHOMPITE
+Types = DRAGON,FIRE
+Abilities = JETLAG
+HiddenAbilities = JETLAG
+BaseStats = 108,170,115,120,92,95
+Color = Red
+UnmegaForm = 1
+RaidRanks = 5
+#-------------------------------
+[GARCHOMP,5]
+FormName = Mega Niphosian Garchomp Z
+MegaStone = GARCHOMPITEZ
+Types = DRAGON,FIRE
+Abilities = SPEEDBOOST
+HiddenAbilities = SPEEDBOOST
+BaseStats = 108,130,85,151,141,85
+Color = Red
+UnmegaForm = 1
+RaidRanks = 5
+#-------------------------------
 [DEINO,1]
 FormName = Niphosian
 Types = WATER,DRAGON
 Abilities = HYDRATION
 BaseStats = 80,25,55,30,60,30
+Color = Green
 Evolutions = ZWEILOUS,Level,50
 RaidRanks = 1,2
 #-------------------------------
@@ -50,6 +102,7 @@ FormName = Niphosian
 Types = WATER,DRAGON
 Abilities = HYDRATION
 BaseStats = 115,40,60,55,80,70
+Color = Green
 Evolutions = HYDREIGON,Level,64
 RaidRanks = 3,4
 #-------------------------------
@@ -59,6 +112,7 @@ Types = WATER,DRAGON
 Abilities = POISONHEAL
 HiddenAbilities = REGENERATOR
 BaseStats = 145,55,110,70,130,90
+Color = Green
 RaidRanks = 5
 #-------------------------------
 [PUFFONO,1]
@@ -82,6 +136,87 @@ Height = 2.4
 Weight = 734.6
 IoPokedex = The magic of the woods now infests Sylvstag, granting it immense power. That power however, comes at the cost of pure, unwieldy rage.
 AmPokedex = Its amplified body has caused the plants on its body to grow quickly. Wooloo and Mareep tend to get stuck in its thorns, serving as fuel for it.
+#-------------------------------
+[FERRVORAM,1]
+FormName = Mega Ferrvoram
+MegaStone = FERRVORITE
+BaseStats = 70,145,112,116,79,108
+BaseExp = 350
+Abilities = STEELWORKER
+HiddenAbilities = STEELWORKER
+Height = 1.4
+Weight = 362.0
+IoPokedex = The overflowing electrical current within the wool has now spread through its body. With the newfound source of power, it has been known to rampage through villages for weeks.
+AmPokedex = Due to the high current, it's ill advised to touch a Mega Fervorram. Any thin wires within a 2 metre radius begin to fail, including nerve cells.
+#-------------------------------
+[BARBEARIEN,1]
+FormName = Mega Barbearien X
+MegaStone = BARBEARITEX
+Types = WATER,DARK
+BaseStats = 105,150,95,100,90,90
+BaseExp = 350
+Abilities = SHARPNESS
+HiddenAbilities = SHARPNESS
+Height = 2.0
+Weight = 542.3
+IoPokedex = The stresses of combat have caused Barbearien to develop white hair. Its killer instincts have been heightened, yet in its rage it cannot tell friend from foe.
+AmPokedex = Their body is practically for show, being tall and intimidating. Their rage has driven them into a more solitary lifestyle, so they use this form for protection.
+#-------------------------------
+[BARBEARIEN,2]
+FormName = Mega Barbearien Y
+MegaStone = BARBEARITEY
+BaseStats = 105,115,135,70,85,120
+BaseExp = 350
+Abilities = STAMINA
+HiddenAbilities = STAMINA
+Height = 2.0
+Weight = 542.3
+IoPokedex = Discarding their axes, Barbearien choose to bulk up and improve their strength. They can lift up to 20 times their own weight, and don't need their claws to fight.
+AmPokedex = Their signature razor claws have blunted, and are now strong bludgeoning tools. It's not uncommon to see titanic trees felled in single punches.
+#-------------------------------
+[FERMENTAL,1]
+FormName = Mega Fermental
+MegaStone = FERMENTITE
+BaseStats = 90,60,115,60,150,135
+BaseExp = 350
+Abilities = FERMENTATION
+HiddenAbilities = FERMENTATION
+IoPokedex = ???
+AmPokedex = ???
+#-------------------------------
+[RUSAGIRU,1]
+FormName = Mega Rusagiru
+MegaStone = RUSAGIRUNITE
+BaseStats = 70,75,70,130,115,70
+BaseExp = 350
+Abilities = ADAPTABILITY
+HiddenAbilities = ADAPTABILITY
+IoPokedex = When Rusagiru undergoes Mega Evolution, its plasma carries a strong current. This can overwhelm its usual limits, causing it to lose control and damage surroundings.
+AmPokedex = Being made of charged plasma, Mega Rusagiru's ears drift toward grounded targets. These ears are not safe to touch though, so caution should be taken.
+#-------------------------------
+[SAUCERER,1]
+FormName = Mega Saucerer X
+MegaStone = SAUCERITEX
+BaseStats = 76,40,101,141,151,101
+BaseExp = 350
+Abilities = PSYCHICSURGE
+HiddenAbilities = PSYCHICSURGE
+Height = 1.6
+Weight = 301.3
+IoPokedex = The holographic spellbook that Saucerer holds is written in a language incomprehensible to humans and even the smartest of terrestrial Pokémon.
+AmPokedex = The thruster on the end of Saucerer's broom is capable of propelling Saucerer at many times the speed of light.
+#-------------------------------
+[SAUCERER,2]
+FormName = Mega Saucerer Y
+MegaStone = SAUCERITEY
+BaseStats = 76,40,140,87,117,150
+BaseExp = 350
+Abilities = MAGICGUARD
+HiddenAbilities = MAGICGUARD
+Height = 1.6
+Weight = 301.3
+IoPokedex = ???
+AmPokedex = ???
 #-------------------------------
 [OGLACE,1]
 FormName = Mega Oglace

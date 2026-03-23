@@ -955,7 +955,7 @@ Accuracy = 100
 TotalPP = 5
 Target = NearOther
 FunctionCode = DoubleDamageOnDynamaxTargets
-Flags = CanProtect,CannotMetronome,CantMaster
+Flags = CanProtect,CannotMetronome,CantMaster,Pulse
 Description = The user unleashes a strong beam from its core.
 #-------------------------------
 [SPACIALREND]
@@ -1163,7 +1163,7 @@ Accuracy = 50
 TotalPP = 5
 Target = NearOther
 FunctionCode = ParalyzeTarget
-Flags = CanProtect,CanMirrorMove,Bomb
+Flags = CanProtect,CanMirrorMove,Bomb,Pulse
 EffectChance = 100
 Description = The user fires an electric blast like a cannon to inflict damage and cause paralysis.
 #-------------------------------
@@ -1566,7 +1566,7 @@ Accuracy = 90
 TotalPP = 5
 Target = NearOther
 FunctionCode = LowerUserSpAtk2
-Flags = CanProtect,CanMirrorMove,CannotMetronome
+Flags = CanProtect,CanMirrorMove,CannotMetronome,Pulse
 Description = The user unleashes a strong beam. The attack's recoil harshly lowers the user's Sp. Atk stat.
 #-------------------------------
 [MISTYEXPLOSION]
@@ -5440,7 +5440,7 @@ Accuracy = 100
 TotalPP = 15
 Target = NearOther
 FunctionCode = HitTwoToFiveTimes
-Flags = CanProtect,CanMirrorMove
+Flags = CanProtect,CanMirrorMove,Pulse
 Description = Sharp spikes are shot at the target in rapid succession. They hit two to five times in a row.
 #-------------------------------
 [COMETPUNCH]
@@ -8179,7 +8179,7 @@ Accuracy = 100
 TotalPP = 10
 Target = NearOther
 FunctionCode = LowerTargetSpDef1
-Flags = CanProtect,CanMirrorMove
+Flags = CanProtect,CanMirrorMove,Pulse
 EffectChance = 10
 Description = The user gathers all its light energy and releases it at once. It may also lower the target's Sp. Def stat.
 #-------------------------------
@@ -8409,7 +8409,7 @@ Accuracy = 90
 TotalPP = 5
 Target = NearOther
 FunctionCode = AttackAndSkipNextTurn
-Flags = CanProtect,CanMirrorMove
+Flags = CanProtect,CanMirrorMove,Pulse
 Description = The target is hit with a watery blast. The user must rest on the next turn, however.
 #-------------------------------
 [WATERSPOUT]

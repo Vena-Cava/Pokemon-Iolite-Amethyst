@@ -66,7 +66,7 @@ Category = Status
 Accuracy = 100
 TotalPP = 20
 Target = FoeSide
-FunctionCode = AddStealthRocksToFoeSide
+FunctionCode = AddScatteredToysToFoeSide
 Description = The user lays a trap of toys on the ground around the foe. The trap hurts foes that switch into battle.
 #-------------------------------
 [BUILDINGBLOCKS]
@@ -456,4 +456,17 @@ Target = NearOther
 FunctionCode = AlwaysDamageIfTargetIsDark
 Flags = CanMirrorMove
 Description = The user strikes the target with their full might, if the target is Dark-Type, this move will always damage the target.
+#-------------------------------
+[MALICIOUSMERCY]
+Name = Malicious Mercy
+Type = DARK
+Category = Physical
+Power = 40
+Accuracy = 0
+TotalPP = 40
+Target = NearOther
+FunctionCode = CannotMakeTargetFaintFlinch
+Flags = Contact,CanProtect,CanMirrorMove,CanMirrorMove
+EffectChance = 30
+Description = A vicious blow that stops just short of finishing the job. The target is left with at least 1 HP. It may also cause the target to flinch.
 #-------------------------------

@@ -53,7 +53,8 @@ RaidStyle = Max
 [MEOWTH,3]
 FormName = Gigantamax
 Height = 33.0
-IoPokedex = Its body has grown incredibly long and the coin on its forehead has grown incredibly large all thanks to Gigantamax power.
+IoPokedex = The pattern that has appeared on its giant coin is thought to be the key to unlocking the secrets of the Dynamax phenomenon.
+AmPokedex = Its body has grown incredibly long and the coin on its forehead has grown incredibly large—all thanks to Gigantamax power.
 Generation = 8
 GmaxMove = GMAXGOLDRUSH
 RaidRanks = 3
@@ -63,6 +64,7 @@ RaidStyle = Max
 FormName = Gigantamax
 Height = 25.0
 IoPokedex = The Gigantamax energy coursing through its arms makes its punches hit as hard as bomb blasts.
+AmPokedex = One of these Pokémon once used its immeasurable strength to lift a large ship that was in trouble. It then carried the ship to port.
 Generation = 8
 GmaxMove = GMAXCHISTRIKE
 RaidRanks = 4,5

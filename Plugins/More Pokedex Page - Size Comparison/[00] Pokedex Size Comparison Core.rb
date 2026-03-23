@@ -173,8 +173,8 @@ def drawPageSizes
     @sprites["trainer"].y = 177 - (@sprites["trainer"].bitmap.height)
     overlay = @sprites["overlay"].bitmap
     overlay2 = @sprites["overlay2"].bitmap
-    base   = Color.new(88,88,80)
-    shadow = Color.new(168,184,184)
+    base   = Color.new(248, 248, 248)
+    shadow = Color.new(104, 104, 104)
     species_data = GameData::Species.get_species_form(@species, @form)
     metrics_data = GameData::SpeciesMetrics.get_species_form(@species, @form)
     sp = pbGetPokemonHeight(@species, @form)
@@ -246,8 +246,8 @@ def drawPageSizes
     @sprites["background"].setBitmap(_INTL("Graphics/UI/Pokedex/bg_weight"))
     overlay = @sprites["overlay"].bitmap
     overlay2 = @sprites["overlay2"].bitmap
-    base   = Color.new(88,88,80)
-    shadow = Color.new(168,184,184)
+    base   = Color.new(248, 248, 248)
+    shadow = Color.new(104, 104, 104)
     species_data = GameData::Species.get_species_form(@species, @form)
     weight = species_data.weight || 1
     weightkg = weight/10.0 # in kg 

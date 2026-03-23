@@ -5,7 +5,7 @@ Flags=TMs
 #-------------------------------
 [CharmTM]
 Item=TM002
-Ingredients=CRIVOLETEARS,3,LILLIPUPFUR,3
+Ingredients=ESPURRFUR,3,LILLIPUPFUR,3
 Flags=TMs
 #-------------------------------
 [FakeTearsTM]

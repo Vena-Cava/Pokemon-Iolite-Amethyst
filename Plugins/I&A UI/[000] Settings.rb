@@ -6,7 +6,7 @@ module IASummary
   PANORAMA = true
   
 # Which Version the game is? (1 = Amethyst, 2  Iolite):
-  IAVERSION = 2
+  IAVERSION = 1
   
 # Directory for the Mementos Plugin Graphics:
   MEMENTOS_GRAPHICS_PATH = "Graphics/Plugins/Improved Mementos/"

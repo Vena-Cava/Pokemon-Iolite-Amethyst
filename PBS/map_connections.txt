@@ -54,9 +54,11 @@
 96,South,3,87,North,0
 # Lassula West Forest (96) - Lassula City (92)
 96,East,0,92,West,0
+# Daiseye Bay (100) - Abercorn (101)
+100,East,0,101,West,6
+# Daiseye Town (89) - Daiseye Bay (100)
+89,East,0,100,West,44
+# Daiseye Bay (99) - Daiseye Bay (100)
+99,North,0,100,South,0
 # Daiseye Bay (99) - Daiseye Town (89)
 99,West,9,89,East,0
-# Daiseye Bay (100) - Daiseye Town (89)
-100,West,44,89,East,0
-# Daiseye Bay (100) - Daiseye Bay (99)
-100,South,0,99,North,0

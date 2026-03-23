@@ -662,7 +662,7 @@ end
     ability = @pokemon.ability
 	abilityname = @pokemon.ability.name
 	special_key = getKeyName(Input::SPECIAL)
-	combined_abilitykey = "#{abilityname}:\nPress #{special_key} to view the Ability Page."
+	combined_abilitykey = "#{abilityname}:\nPress [Special] to view the Ability Page."
     if ability
       drawTextEx(overlay, 8, 92, 178, 8, combined_abilitykey, base, shadow)
     end

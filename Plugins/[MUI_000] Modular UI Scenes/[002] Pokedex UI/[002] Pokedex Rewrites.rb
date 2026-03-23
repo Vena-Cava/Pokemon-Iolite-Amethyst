@@ -63,16 +63,53 @@ class PokemonPokedexInfo_Scene
     overlay = @sprites["overlay"].bitmap
     overlay.clear
     drawPageIcons
+	white = Tone.new(255, 255, 255)
     @sprites["infosprite"].visible    = false
-    @sprites["areamap"].visible       = false if @sprites["areamap"]
-    @sprites["areahighlight"].visible = false if @sprites["areahighlight"]
-    @sprites["areaoverlay"].visible   = false if @sprites["areaoverlay"]
+    @sprites["pokemonglow1"].setOffset(PictureOrigin::CENTER)
+    @sprites["pokemonglow1"].x = 102
+    @sprites["pokemonglow1"].y = 136
+    @sprites["pokemonglow1"].tone = white
+	@sprites["pokemonglow1"].opacity = 120
+    @sprites["pokemonglow2"].setOffset(PictureOrigin::CENTER)
+    @sprites["pokemonglow2"].x = 106
+    @sprites["pokemonglow2"].y = 136
+    @sprites["pokemonglow2"].tone = white
+	@sprites["pokemonglow2"].opacity = 120
+    @sprites["pokemonglow3"].setOffset(PictureOrigin::CENTER)
+    @sprites["pokemonglow3"].x = 104
+    @sprites["pokemonglow3"].y = 134
+    @sprites["pokemonglow3"].tone = white
+	@sprites["pokemonglow3"].opacity = 120
+    @sprites["pokemonglow4"].setOffset(PictureOrigin::CENTER)
+    @sprites["pokemonglow4"].x = 104
+    @sprites["pokemonglow4"].y = 138
+    @sprites["pokemonglow4"].tone = white
+	@sprites["pokemonglow4"].opacity = 120
+    @sprites["pokemonglow1"].visible  = (@page_id == :page_info)
+    @sprites["pokemonglow2"].visible  = (@page_id == :page_info)
+    @sprites["pokemonglow3"].visible  = (@page_id == :page_info)
+    @sprites["pokemonglow4"].visible  = (@page_id == :page_info)
+	is_area = (@page_id == :page_area)
+	@sprites["areamap"].visible       = is_area if @sprites["areamap"]
+	@sprites["areahighlight"].visible = is_area if @sprites["areahighlight"]
+	@sprites["areaoverlay"].visible   = is_area if @sprites["areaoverlay"]
+	@sprites["areaText"].visible      = is_area if @sprites["areaText"]
     @sprites["formfront"].visible     = false if @sprites["formfront"]
     @sprites["formback"].visible      = false if @sprites["formback"]
     @sprites["formicon"].visible      = false if @sprites["formicon"]
     suffix = UIHandlers.get_info(:pokedex, @page_id, :suffix)
     @sprites["background"].setBitmap(_INTL("Graphics/UI/Pokedex/bg_#{suffix}"))
+    @sprites["pokeball"].setBitmap(_INTL("Graphics/UI/Pokedex/pokeball"))
+    b = @sprites["pokeball"].bitmap
+    @sprites["pokeball"].ox = b.width / 2
+    @sprites["pokeball"].oy = b.height / 2
+	@sprites["pokeball"].visible = (@page_id == :page_info) 
+	@sprites["tod_icon"].visible = (@page_id == :page_area) if @sprites["tod_icon"]
+	@sprites["weather_icon"].visible = (@page_id == :page_area) if @sprites["weather_icon"]
+	@sprites["method_icon"].visible = (@page_id == :page_area) if @sprites["method_icon"]
     UIHandlers.call(:pokedex, @page_id, "layout", @species, self)
+    # BUT: Arcky's map logic lives in drawPageArea, so force it when on area page
+    drawPageArea if @page_id == :page_area
   end
   
   #-----------------------------------------------------------------------------
@@ -81,6 +118,10 @@ class PokemonPokedexInfo_Scene
   alias modular_drawPageInfo drawPageInfo
   def drawPageInfo
     @sprites["infosprite"].visible    = true
+    @sprites["pokemonglow1"].visible  = true
+    @sprites["pokemonglow2"].visible  = true
+    @sprites["pokemonglow3"].visible  = true
+    @sprites["pokemonglow4"].visible  = true
     modular_drawPageInfo
   end
   
@@ -89,6 +130,9 @@ class PokemonPokedexInfo_Scene
     @sprites["areamap"].visible       = true
     @sprites["areahighlight"].visible = true
     @sprites["areaoverlay"].visible   = true
+	@sprites["tod_icon"].visible      = true if @sprites["tod_icon"]
+	@sprites["weather_icon"].visible  = true if @sprites["weather_icon"]
+	@sprites["method_icon"].visible   = true if @sprites["method_icon"]
     modular_drawPageArea
   end
 
@@ -126,6 +170,16 @@ class PokemonPokedexInfo_Scene
             pbPlayDecisionSE
             @show_battled_count = !@show_battled_count
             dorefresh = true
+		  when :page_area
+			if @area_encounters && @area_encounters.length > 1
+			  pbChooseAreaEncounter
+			  dorefresh = true
+			elsif @area_locations && @area_locations.length > 1
+		      pbChooseAreaLocation
+			  dorefresh = true
+			else
+			  pbPlayBuzzerSE
+			end
           when :page_forms
             if @available.length > 1
               pbPlayDecisionSE

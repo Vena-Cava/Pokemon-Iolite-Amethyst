@@ -2068,7 +2068,7 @@ Description = Material accidentally dropped by a Pokémon. It can be used to syn
 Name = Elgyem Digit
 NamePlural = Elgyem Digits
 Pocket = 10
-Price = 40
+Price = 60
 Flags = TMMaterial
 Description = Material accidentally dropped by a Pokémon. It can be used to synthesize TMs.
 #-------------------------------
@@ -3331,54 +3331,6 @@ Description = Material accidentally dropped by a Pokémon. It can be used to syn
 [POLTCHAGEISTPOWDER]
 Name = Poltchageist Powder
 NamePlural = Poltchageist Powder
-Pocket = 10
-Price = 60
-Flags = TMMaterial
-Description = Material accidentally dropped by a Pokémon. It can be used to synthesize TMs.
-#-------------------------------
-[ROLLVADIRT]
-Name = Rollva Dirt
-NamePlural = Rollva Dirt
-Pocket = 10
-Price = 30
-Flags = TMMaterial
-Description = Material accidentally dropped by a Pokémon. It can be used to synthesize TMs.
-#-------------------------------
-[QUILTOXQUILL]
-Name = Quiltox Quill
-NamePlural = Quiltox Quills
-Pocket = 10
-Price = 30
-Flags = TMMaterial
-Description = Material accidentally dropped by a Pokémon. It can be used to synthesize TMs.
-#-------------------------------
-[CHICKATOOFEATHER]
-Name = Chickatoo Feather
-NamePlural = Chickatoo Feathers
-Pocket = 10
-Price = 40
-Flags = TMMaterial
-Description = Material accidentally dropped by a Pokémon. It can be used to synthesize TMs.
-#-------------------------------
-[ARACANVASGOOP]
-Name = Aracanvas Goop
-NamePlural = Aracanvas Goop
-Pocket = 10
-Price = 30
-Flags = TMMaterial
-Description = Material accidentally dropped by a Pokémon. It can be used to synthesize TMs.
-#-------------------------------
-[BUNCHKINJUICE]
-Name = Bunchkin Juice
-NamePlural = Bunchkin Juice
-Pocket = 10
-Price = 40
-Flags = TMMaterial
-Description = Material accidentally dropped by a Pokémon. It can be used to synthesize TMs.
-#-------------------------------
-[PUFFONOSCALES]
-Name = Puffono Scales
-NamePlural = Puffono Scales
 Pocket = 10
 Price = 60
 Flags = TMMaterial

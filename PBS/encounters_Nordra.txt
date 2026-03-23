@@ -28,3 +28,39 @@ LandNight,21
     15,SNOWL,3,4
     15,QUILTOX,3,4
 #-------------------------------
+[104] # Windmill Forest
+Land,21
+    20,SEWADDLE,2,3
+    20,VENIPEDE,2,3
+    15,PIDOVE,4
+    15,COTTONEE,4
+    15,PETILIL,4
+    10,SLAKOTH,4
+    5,PIKACHU,3,4
+Water,2
+    30,MARILL,5,20
+    30,BASCULIN,5,20
+    30,BASCULIN_1,5,20
+    10,BASCULIN_2,5,20
+OldRod
+    60,GOLDEEN,5,10
+    18,BASCULIN,5,10
+    18,BASCULIN_1,5,10
+    2,BASCULIN_2,5,10
+GoodRod
+    60,GOLDEEN,5,30
+    18,BASCULIN,5,30
+    18,BASCULIN_1,5,30
+    2,BASCULIN_2,5,30
+SuperRod
+    60,GOLDEEN,30,45
+    18,BASCULIN,30,45
+    18,BASCULIN_1,30,45
+    2,BASCULIN_2,30,45
+#-------------------------------
+[101] # Abercorn
+LandNight,21
+    33,PURRLOIN,2,4
+    33,GREAVARD,2,4
+    33,BUNEARY,3,5
+    1,SPRIGATITO,5

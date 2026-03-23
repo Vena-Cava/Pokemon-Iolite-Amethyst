@@ -127,6 +127,15 @@ BPPrice = 50
 Flags = MegaStone,Fling_80
 Description = One of a variety of mysterious Mega Stones. Have Kaffiend hold it, and it will be able to Mega Evolve.
 #-------------------------------
+[RUSAGIRUNITE]
+Name = Rusagirunite
+NamePlural = Rusagirunites
+Pocket = 1
+Price = 0
+BPPrice = 50
+Flags = MegaStone,Fling_80
+Description = One of a variety of mysterious Mega Stones. Have Rusagiru hold it, and it will be able to Mega Evolve.
+#-------------------------------
 [MAXITAURITE]
 Name = Maxitaurite
 NamePlural = Maxitaurites
@@ -145,9 +154,18 @@ BPPrice = 50
 Flags = MegaStone,Fling_80
 Description = One of a variety of mysterious Mega Stones. Have Abracadavre hold it, and it will be able to Mega Evolve.
 #-------------------------------
-[SAUCERITE]
-Name = Saucerite
-NamePlural = Saucerites
+[SAUCERITEX]
+Name = Saucerite X
+NamePlural = Saucerite Xs
+Pocket = 1
+Price = 0
+BPPrice = 50
+Flags = MegaStone,Fling_80
+Description = One of a variety of mysterious Mega Stones. Have Saucerer hold it, and it will be able to Mega Evolve.
+#-------------------------------
+[SAUCERITEY]
+Name = Saucerite Y
+NamePlural = Saucerite Ys
 Pocket = 1
 Price = 0
 BPPrice = 50

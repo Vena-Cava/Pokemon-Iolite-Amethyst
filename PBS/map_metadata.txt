@@ -11,7 +11,7 @@ MapPosition = 0,13,12
 BattleBack = field
 #-------------------------------
 [003]   # \PN's house
-Name = \PN's house
+Name = Vena's house
 HealingSpot = 2,8,8
 MapPosition = 0,13,12
 #-------------------------------
@@ -109,7 +109,7 @@ ShowArea = true
 HealingSpot = 22,32,28
 MapPosition = 1,7,11
 BattleBack = field
-MapSize = 1,
+MapSize = 1,1
 Environment = Grass
 #-------------------------------
 [023]   # Lerucean Town
@@ -234,6 +234,7 @@ ShowArea = true
 MapPosition = 1,8,10
 SnapEdges = true
 BattleBack = forest
+MapSize = 1,1
 Environment = ForestGrass
 #-------------------------------
 [044]   # Route 6
@@ -272,6 +273,7 @@ Outdoor = true
 ShowArea = true
 MapPosition = 1,8,11
 BattleBack = wheat
+MapSize = 1,1
 #-------------------------------
 [049]   # Rock Cave 1F
 Name = Route 7
@@ -442,6 +444,7 @@ ShowArea = true
 MapPosition = 1,8,10
 SnapEdges = true
 BattleBack = forest
+MapSize = 1,1
 Environment = ForestGrass
 #-------------------------------
 [077]   # Hidden Grotto
@@ -450,6 +453,7 @@ Outdoor = true
 MapPosition = 1,8,10
 SnapEdges = true
 BattleBack = forest
+MapSize = 1,1
 Environment = ForestGrass
 #-------------------------------
 [078]   # Tulphoise City
@@ -498,11 +502,14 @@ Environment = Grass
 [089]   # Daiseye Town
 Name = Daiseye Town
 Outdoor = true
+ShowArea = true
+HealingSpot = 89,15,38
 MapPosition = 0,17,18
 BattleBack = snow
+MapSize = 1,1
 #-------------------------------
 [090]   # \PN's house
-Name = \PN's house
+Name = Vena's house
 MapPosition = 0,17,18
 #-------------------------------
 [091]   # Hidden Grotto
@@ -520,6 +527,7 @@ Outdoor = true
 ShowArea = true
 HealingSpot = 92,15,26
 MapPosition = 1,11,9
+MapSize = 1,1
 #-------------------------------
 [093]   # Lassula City Poké Center
 Name = Lassula City Poké Center
@@ -539,11 +547,33 @@ MapPosition = 1,11,9
 #-------------------------------
 [098]   # Lilycombe City
 Name = Lilycombe City
+Outdoor = true
+ShowArea = true
+HealingSpot = 98,23,35
 #-------------------------------
 [099]   # Daiseye Bay
 Name = Daiseye Bay
 Outdoor = true
+ShowArea = true
+MapPosition = 0,18,16
+MapSize = 1,111
 #-------------------------------
 [100]   # Daiseye Bay
 Name = Daiseye Bay
 Outdoor = true
+ShowArea = true
+MapPosition = 0,18,17
+#-------------------------------
+[101]   # Abercorn
+Name = Abercorn
+Outdoor = true
+ShowArea = true
+HealingSpot = 101,12,24
+MapPosition = 0,19,16
+MapSize = 2,11
+#-------------------------------
+[104]   # Windmill Forest
+Name = Windmill Forest
+Outdoor = true
+Bicycle = true
+MapPosition = 0,19,18

@@ -16,6 +16,10 @@ Description = Gives priority to the Pokémon's Fire-type moves while its HP is f
 Name = Mach 5
 Description = The Pokémon's supersonic engines allow it to raise its speed if it makes contact with another Pokémon.
 #-------------------------------
+[JETLAG]
+Name = Jet Lag
+Description = For its first turn on the field, all damaging moves go first.
+#-------------------------------
 [PUFFEDOUT]
 Name = Puffed Out
 Description = The Pokémon's cowardice causes it to inflate and become defensive for the rest of the battle if its HP drops below half or less without fainting.
@@ -66,7 +70,7 @@ Description = The Pokémon creates an empty soundscape as long as it is in battl
 #-------------------------------
 [TONOFBRICKS]
 Name = Ton of Bricks
-Description = The Pokémon's solid structure damages attackers that make direct contact with it.
+Description = Scatters plastic toys around the opposing team when the Pokémon takes damage from physical moves.
 #-------------------------------
 [LETHALLEGS]
 Name = Lethal Legs
@@ -107,3 +111,8 @@ Description = Intensifies gravity when the Pokémon enters a battle.
 [MUSCLESTIM]
 Name = Muscle Stim
 Description = The Pokémon draws in all Electric-type moves. Instead of taking damage from them, its Attack stat is boosted.
+#-------------------------------
+[CAFFEINERUSH]
+Name = Caffeine Rush
+Description = Prevents all Pokémon on the field from falling asleep.
+#-------------------------------

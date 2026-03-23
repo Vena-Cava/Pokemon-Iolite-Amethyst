@@ -169,6 +169,42 @@ Battle::AbilityEffects::OnBeingHit.add(:CHIPPEDSTONE,
   proc { |ability, user, target, move, battle|
     # next if !move.pbContactMove?(user)
     next if !move.physicalMove?
+    next if user.pbOwnSide.effects[PBEffects::StealthRock] >= 2
+    battle.pbShowAbilitySplash(target)
+
+    user.pbOwnSide.effects[PBEffects::StealthRock] += 1
+    # battle.pbAnimation("STEALTHROCK", target, user)
+    battle.pbDisplay(_INTL("Floating stones were scattered all around {1}!",
+                            target.pbOpposingTeam(true)))
+    battle.pbHideAbilitySplash(target)
+  }
+)
+
+#===============================================================================
+# Ton of Bricks
+#===============================================================================
+Battle::AbilityEffects::OnBeingHit.add(:TONOFBRICKS,
+  proc { |ability, user, target, move, battle|
+    # next if !move.pbContactMove?(user)
+    next if !move.physicalMove?
+    next if user.pbOwnSide.effects[PBEffects::ScatteredToys] >= 2
+    battle.pbShowAbilitySplash(target)
+
+    user.pbOwnSide.effects[PBEffects::ScatteredToys] += 1
+    # battle.pbAnimation("SCATTEREDTOYS", target, user)
+    battle.pbDisplay(_INTL("Plastic toys were scattered on the ground all around {1}!",
+                            target.pbOpposingTeam(true)))
+    battle.pbHideAbilitySplash(target)
+  }
+)
+
+#===============================================================================
+# Glass Splinters
+#===============================================================================
+Battle::AbilityEffects::OnBeingHit.add(:GLASSSPLINTERS,
+  proc { |ability, user, target, move, battle|
+    # next if !move.pbContactMove?(user)
+    next if !move.physicalMove?
     next if user.pbOwnSide.effects[PBEffects::Spikes] >= 2
     battle.pbShowAbilitySplash(target)
 

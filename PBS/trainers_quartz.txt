@@ -92,4 +92,3 @@ Pokemon = HAXORUS,100
     EV = 0,252,0,252,0,4
     Happiness = 255
     Ball = DUSKBALL
-#-------------------------------

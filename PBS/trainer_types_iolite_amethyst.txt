@@ -21,4 +21,3 @@ Gender = Male
 BaseMoney = 100
 BattleBGM = Pokemon Iolite and Amethyst - Battle! Vs Gym Leader
 VictoryBGM = Battle victory leader
-#-------------------------------

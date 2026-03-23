@@ -58,7 +58,7 @@ class PokemonPokedexInfo_Scene
   # Sets the text color options for notes drawn on the Data page.
   #-----------------------------------------------------------------------------
   DATA_TEXT_TAGS = [
-    shadowc3tag(Color.new(88, 88, 80),  Color.new(168, 184, 184)), # Black
+    shadowc3tag(Color.new(248,248,248), Color.new(104, 104, 104)), # White
     shadowc3tag(Color.new(232, 32, 16), Color.new(248, 168, 184)), # Red
     shadowc3tag(Color.new(0, 112, 248), Color.new(120, 184, 232)), # Blue
     shadowc3tag(Color.new(96, 176, 72), Color.new(174, 208, 144))  # Green

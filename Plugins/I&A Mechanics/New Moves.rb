@@ -415,3 +415,82 @@ class Battle::Move::SwitchOutUserAirborne < Battle::Move
     end
   end
 end
+
+#===============================================================================
+# If target would be KO'd by this attack, it survives with 1HP instead.
+# Causes the target to flinch. (Malicious Mercy)
+#===============================================================================
+class Battle::Move::CannotMakeTargetFaintFlinchTarget < Battle::Move::FlinchTarget
+  def nonLethal?(user, target); return true; end
+end
+
+#===============================================================================
+# Heals target by 1/2 of its max HP. (Heal Pulse)
+#===============================================================================
+class Battle::Move::HealTargetHalfOfTotalHP < Battle::Move
+  def healingMove?;  return true; end
+  def canMagicCoat?; return true; end
+
+  def pbFailsAgainstTarget?(user, target, show_message)
+    if target.hp == target.totalhp
+      @battle.pbDisplay(_INTL("{1}'s HP is full!", target.pbThis)) if show_message
+      return true
+    elsif !target.canHeal?
+      @battle.pbDisplay(_INTL("{1} is unaffected!", target.pbThis)) if show_message
+      return true
+    end
+    return false
+  end
+
+  def pbEffectAgainstTarget(user, target)
+    hpGain = (target.totalhp / 2.0).round
+    if pulseMove? && user.hasActiveAbility?(:MEGALAUNCHER)
+      hpGain = (target.totalhp * 3 / 4.0).round
+    end
+    target.pbRecoverHP(hpGain)
+    @battle.pbDisplay(_INTL("{1}'s HP was restored.", target.pbThis))
+  end
+end
+
+#===============================================================================
+# Decreases the target's Speed by 2 stages. (Cotton Spore, Scary Face, String Shot)
+#===============================================================================
+class Battle::Move::LowerTargetSpeed2 < Battle::Move::TargetStatDownMove
+  def initialize(battle, move)
+    super
+	if pulseMove? && user.hasActiveAbility?(:MEGALAUNCHER)
+      @statDown = [:SPEED, 3]
+	else
+	  @statDown = [:SPEED, 2]
+    end
+  end
+end
+
+#===============================================================================
+# Decreases the target's Speed by 1 stage. Doubles the effectiveness of damaging
+# Fire moves used against the target (this effect does not stack). Fails if
+# neither of these effects can be applied. (Tar Shot)
+#===============================================================================
+class Battle::Move::LowerTargetSpeed1MakeTargetWeakerToFire < Battle::Move::TargetStatDownMove
+  def initialize(battle, move)
+    super
+	if pulseMove? && user.hasActiveAbility?(:MEGALAUNCHER)
+      @statDown = [:SPEED, 2]
+	else
+	  @statDown = [:SPEED, 1]
+	end
+  end
+
+  def pbFailsAgainstTarget?(user, target, show_message)
+    return super if target.effects[PBEffects::TarShot]
+    return false
+  end
+
+  def pbEffectAgainstTarget(user, target)
+    super
+    if !target.effects[PBEffects::TarShot]
+      target.effects[PBEffects::TarShot] = true
+      @battle.pbDisplay(_INTL("{1} became weaker to fire!", target.pbThis))
+    end
+  end
+end

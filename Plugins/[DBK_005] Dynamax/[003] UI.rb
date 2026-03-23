@@ -220,10 +220,14 @@ end
 class PokemonPokedexInfo_Scene
   def drawPageInfo
     @sprites["infosprite"].visible = true
+    @sprites["pokemonglow1"].visible = true
+    @sprites["pokemonglow2"].visible = true
+    @sprites["pokemonglow3"].visible = true
+    @sprites["pokemonglow4"].visible = true
     @sprites["background"].setBitmap(_INTL("Graphics/UI/Pokedex/bg_info"))
     overlay = @sprites["overlay"].bitmap
-    base   = Color.new(88, 88, 80)
-    shadow = Color.new(168, 184, 184)
+    base   = Color.new(248, 248, 248)
+    shadow = Color.new(104, 104, 104)
     imagepos = []
     imagepos.push([_INTL("Graphics/UI/Pokedex/overlay_info"), 0, 0]) if @brief
     species_data = GameData::Species.get_species_form(@species, @form)

@@ -1,0 +1,82 @@
+﻿# See the documentation on the wiki to learn how to edit this file.
+#-------------------------------
+[ELEEFENTMOSS]
+Name = Eleefent Moss
+NamePlural = Eleefent Mosses
+Pocket = 10
+Price = 100
+Flags = TMMaterial
+Description = Material accidentally dropped by a Pokémon. It can be used to synthesize TMs.
+#-------------------------------
+[QUETZIFEATHER]
+Name = Quetzi Feather
+NamePlural = Quetzi Feathers
+Pocket = 10
+Price = 100
+Flags = TMMaterial
+Description = Material accidentally dropped by a Pokémon. It can be used to synthesize TMs.
+#-------------------------------
+[CYCLOPTO]
+Name = Cyclopto Ink
+NamePlural = Cyclopto Ink
+Pocket = 10
+Price = 100
+Flags = TMMaterial
+Description = Material accidentally dropped by a Pokémon. It can be used to synthesize TMs.
+#-------------------------------
+[CRIVOLETEARS]
+Name = Crivole Tears
+NamePlural = Crivole Tears
+Pocket = 10
+Price = 30
+Flags = TMMaterial
+Description = Material accidentally dropped by a Pokémon. It can be used to synthesize TMs.
+#-------------------------------
+[ROLLVADIRT]
+Name = Rollva Dirt
+NamePlural = Rollva Dirt
+Pocket = 10
+Price = 30
+Flags = TMMaterial
+Description = Material accidentally dropped by a Pokémon. It can be used to synthesize TMs.
+#-------------------------------
+[QUILTOXQUILL]
+Name = Quiltox Quill
+NamePlural = Quiltox Quills
+Pocket = 10
+Price = 30
+Flags = TMMaterial
+Description = Material accidentally dropped by a Pokémon. It can be used to synthesize TMs.
+#-------------------------------
+[CHICKATOOFEATHER]
+Name = Chickatoo Feather
+NamePlural = Chickatoo Feathers
+Pocket = 10
+Price = 40
+Flags = TMMaterial
+Description = Material accidentally dropped by a Pokémon. It can be used to synthesize TMs.
+#-------------------------------
+[ARACANVASGOOP]
+Name = Aracanvas Goop
+NamePlural = Aracanvas Goop
+Pocket = 10
+Price = 30
+Flags = TMMaterial
+Description = Material accidentally dropped by a Pokémon. It can be used to synthesize TMs.
+#-------------------------------
+[BUNCHKINJUICE]
+Name = Bunchkin Juice
+NamePlural = Bunchkin Juice
+Pocket = 10
+Price = 40
+Flags = TMMaterial
+Description = Material accidentally dropped by a Pokémon. It can be used to synthesize TMs.
+#-------------------------------
+[PUFFONOSCALES]
+Name = Puffono Scales
+NamePlural = Puffono Scales
+Pocket = 10
+Price = 60
+Flags = TMMaterial
+Description = Material accidentally dropped by a Pokémon. It can be used to synthesize TMs.
+#-------------------------------

@@ -84,10 +84,6 @@ LoseText = Shorts won't make you better at battling, it seems.
 Pokemon = CRIVOLE,4
 Pokemon = QUILTOX,4
 #-------------------------------
-[LASS3,Lucy]
-LoseText = My cute little birdie!
-Pokemon = CHICKATOO,6
-#-------------------------------
 [SCIENTIST_F,Ethyl]
 LoseText = ...
 Pokemon = FENNEKIN,7
@@ -142,8 +138,8 @@ LoseText = ...
 Pokemon = TENTACOOL,12
     Moves = CHILLINGWATER,POISONSTING,KNOCKOFF,RAPIDSPIN
     Ability = CLEARBODY
-    Gender = male
     Item = BLACKSLUDGE
+    Gender = male
     Nature = TIMID
     IV = 20,20,20,20,20,20
     EV = 140,0,0,144,148,76
@@ -153,8 +149,8 @@ Pokemon = TENTACOOL,12
 Pokemon = CARVANHA,13
     Moves = CHILLINGWATER,TOXIC,BITE,AQUAJET
     Ability = ROUGHSKIN
-    Gender = male
     Item = MYSTICWATER
+    Gender = male
     Nature = ADAMANT
     IV = 20,20,20,20,20,20
     EV = 0,252,0,252,0,4
@@ -165,10 +161,10 @@ Pokemon = PUFFONO,14
     Moves = CHILLINGWATER,IRONDEFENSE,GYROBALL,AQUARING
     Ability = PUFFEDOUT
     Item = FOCUSSASH
+    Gender = male
     Nature = RELAXED
     IV = 20,20,20,0,20,20
     EV = 252,0,128,0,0,128
-    Gender = male
     Ball = NETBALL
     NoTera = true
     NoDynamax = true
@@ -224,4 +220,3 @@ Pokemon = SLOWBRO,100
     IV = 31,0,31,31,31,31
     EV = 248,0,216,0,0,44
     Ball = NETBALL
-#-------------------------------
