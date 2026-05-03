@@ -424,3 +424,6 @@ Battle::AbilityEffects::OnSwitchOut.copy(:WATERVEIL, :DIRTBALL)
 Battle::AbilityEffects::StatusImmunity.copy(:WATERVEIL, :DIRTBALL)
 
 Battle::AbilityEffects::StatusCure.copy(:WATERVEIL, :DIRTBALL)
+
+
+
