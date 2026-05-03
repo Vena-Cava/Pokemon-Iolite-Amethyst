@@ -1003,7 +1003,7 @@ Accuracy = 100
 TotalPP = 15
 Target = NearOther
 FunctionCode = None
-Flags = Contact,CanProtect,CanMirrorMove
+Flags = Contact,CanProtect,CanMirrorMove,Slicing
 Description = The user slashes the target with huge, sharp claws.
 #-------------------------------
 [BREAKINGSWIPE]
@@ -1678,7 +1678,7 @@ Accuracy = 100
 TotalPP = 30
 Target = NearOther
 FunctionCode = None
-Flags = CanProtect,CanMirrorMove,Slicing,Wind
+Flags = CanProtect,CanMirrorMove,Wind
 Description = The user stirs up a fairy wind and strikes the target with it.
 #-------------------------------
 [NATURESMADNESS]
@@ -1861,7 +1861,7 @@ Accuracy = 90
 TotalPP = 10
 Target = NearOther
 FunctionCode = CrashDamageIfFailsUnusableInGravity
-Flags = Contact,CanProtect,CanMirrorMove
+Flags = Contact,CanProtect,CanMirrorMove,Kicking
 Description = The target is attacked with a knee kick from a jump. If it misses, the user is hurt instead.
 #-------------------------------
 [CLOSECOMBAT]
@@ -1959,7 +1959,7 @@ Accuracy = 95
 TotalPP = 10
 Target = NearOther
 FunctionCode = CrashDamageIfFailsUnusableInGravity
-Flags = Contact,CanProtect,CanMirrorMove
+Flags = Contact,CanProtect,CanMirrorMove,Kicking
 Description = The user jumps up high, then strikes with a kick. If the kick misses, the user hurts itself.
 #-------------------------------
 [SACREDSWORD]
@@ -1983,7 +1983,7 @@ Accuracy = 100
 TotalPP = 10
 Target = NearOther
 FunctionCode = LowerTargetDefense1
-Flags = Contact,CanProtect,CanMirrorMove,CannotMetronome
+Flags = Contact,CanProtect,CanMirrorMove,CannotMetronome,Kicking
 EffectChance = 100
 Description = Overwhelms the target with lightning-like movement, then kicks. Lowers the target's Defense stat.
 #-------------------------------
@@ -2246,7 +2246,7 @@ Accuracy = 100
 TotalPP = 30
 Target = NearOther
 FunctionCode = HitTwoTimes
-Flags = Contact,CanProtect,CanMirrorMove
+Flags = Contact,CanProtect,CanMirrorMove,Kicking
 Description = The target is quickly kicked twice in succession using both feet.
 #-------------------------------
 [ARMTHRUST]
@@ -2270,7 +2270,7 @@ Accuracy = 90
 TotalPP = 10
 Target = NearOther
 FunctionCode = HitThreeTimesPowersUpWithEachHit
-Flags = Contact,CanProtect,CanMirrorMove
+Flags = Contact,CanProtect,CanMirrorMove,Kicking
 Description = A consecutive three-kick attack that becomes more powerful with each successive hit.
 #-------------------------------
 [COUNTER]
@@ -2307,7 +2307,7 @@ Accuracy = 100
 TotalPP = 20
 Target = NearOther
 FunctionCode = PowerHigherWithTargetWeight
-Flags = Contact,CanProtect,CanMirrorMove
+Flags = Contact,CanProtect,CanMirrorMove,Kicking
 Description = A powerful low kick that makes the foe fall over. It inflicts greater damage on heavier foes.
 #-------------------------------
 [REVERSAL]
@@ -2648,7 +2648,7 @@ Accuracy = 90
 TotalPP = 10
 Target = NearOther
 FunctionCode = BurnTarget
-Flags = Contact,CanProtect,CanMirrorMove,HighCriticalHitRate
+Flags = Contact,CanProtect,CanMirrorMove,HighCriticalHitRate,Kicking
 EffectChance = 10
 Description = The user launches a kick with a high critical-hit ratio. It may also leave the target with a burn.
 #-------------------------------
@@ -3297,7 +3297,7 @@ Accuracy = 100
 TotalPP = 15
 Target = NearOther
 FunctionCode = None
-Flags = Contact,CanProtect,CanMirrorMove,HighCriticalHitRate
+Flags = Contact,CanProtect,CanMirrorMove,HighCriticalHitRate,Slicing
 Description = The user slashes with a sharp claw made from shadows. Critical hits land more easily.
 #-------------------------------
 [HEX]
@@ -3690,13 +3690,13 @@ Description = The user drains the foe's energy with its horns. The user's HP is 
 Name = Grassy Glide
 Type = GRASS
 Category = Physical
-Power = 60
+Power = 55
 Accuracy = 100
 TotalPP = 20
 Target = NearOther
 FunctionCode = HigherPriorityInGrassyTerrain
 Flags = Contact,CanProtect,CanMirrorMove
-Description = Gliding on the ground, the user attacks the target. This move always goes first on Grassy Terrain.
+Description = Gliding across the ground, the user attacks the target. This move always goes first on Grassy Terrain.
 #-------------------------------
 [TROPKICK]
 Name = Trop Kick
@@ -3707,7 +3707,7 @@ Accuracy = 100
 TotalPP = 15
 Target = NearOther
 FunctionCode = LowerTargetAttack1
-Flags = Contact,CanProtect,CanMirrorMove
+Flags = Contact,CanProtect,CanMirrorMove,Kicking
 EffectChance = 100
 Description = The user lands an intense tropical kick on the target. This also lowers the target's Attack stat.
 #-------------------------------
@@ -4152,7 +4152,7 @@ Accuracy = 100
 TotalPP = 10
 Target = NearOther
 FunctionCode = DoublePowerIfUserLastMoveFailed
-Flags = Contact,CanProtect,CanMirrorMove
+Flags = Contact,CanProtect,CanMirrorMove,Kicking
 Description = The user attacks driven by frustration. Power increases if the user's previous move failed.
 #-------------------------------
 [SCORCHINGSANDS]
@@ -4599,7 +4599,7 @@ Accuracy = 90
 TotalPP = 10
 Target = NearOther
 FunctionCode = HitThreeTimesPowersUpWithEachHit
-Flags = Contact,CanProtect,CanMirrorMove
+Flags = Contact,CanProtect,CanMirrorMove,Kicking
 Description = A consecutive three-kick attack that becomes more powerful with each successful hit.
 #-------------------------------
 [SHEERCOLD]
@@ -4775,7 +4775,7 @@ Accuracy = 75
 TotalPP = 5
 Target = NearOther
 FunctionCode = None
-Flags = Contact,CanProtect,CanMirrorMove
+Flags = Contact,CanProtect,CanMirrorMove,Kicking
 Description = The target is attacked by a kick launched with muscle-packed power.
 #-------------------------------
 [MULTIATTACK]
@@ -5145,7 +5145,7 @@ Accuracy = 100
 TotalPP = 20
 Target = NearOther
 FunctionCode = FlinchTarget
-Flags = Contact,CanProtect,CanMirrorMove,TramplesMinimize
+Flags = Contact,CanProtect,CanMirrorMove,TramplesMinimize,Kicking
 EffectChance = 30
 Description = The target is stomped with a big foot. It may also make the target flinch.
 #-------------------------------

@@ -288,18 +288,103 @@ class PokemonSummary_Scene
 	@sprites["panorama"].setBitmap("Graphics/UI/Summary/bg_pan_io") if IASummary::IAVERSION == 2
   end
   
-def getKeyName(button_symbol)
-  binding = Input::Config[button_symbol] rescue nil
-  return "?" if !binding || binding.empty?
+  def setSummarySpritePositions
+    @sprites["pokemonglow1"].x = 294 if @sprites["pokemonglow1"]
+    @sprites["pokemonglow1"].y = 186 if @sprites["pokemonglow1"]
 
-  # Use first mapped key
-  key = binding.first
+    @sprites["pokemonglow2"].x = 298 if @sprites["pokemonglow2"]
+    @sprites["pokemonglow2"].y = 186 if @sprites["pokemonglow2"]
 
-  # Convert key symbol (e.g., :Z, :Return, :ButtonA) to readable text
-  return key.to_s.gsub("Button", "Button ")
-end
+    @sprites["pokemonglow3"].x = 296 if @sprites["pokemonglow3"]
+    @sprites["pokemonglow3"].y = 184 if @sprites["pokemonglow3"]
 
+    @sprites["pokemonglow4"].x = 296 if @sprites["pokemonglow4"]
+    @sprites["pokemonglow4"].y = 188 if @sprites["pokemonglow4"]
 
+    @sprites["pokemon"].x = 296 if @sprites["pokemon"]
+    @sprites["pokemon"].y = 186 if @sprites["pokemon"]
+
+    @sprites["itemicon"].x = 242 if @sprites["itemicon"]
+    @sprites["itemicon"].y = 320 if @sprites["itemicon"]
+  end
+
+  def setAbilitySpritePositions
+    @sprites["pokemonglow1"].x = 110 if @sprites["pokemonglow1"]
+    @sprites["pokemonglow1"].y = 186 if @sprites["pokemonglow1"]
+
+    @sprites["pokemonglow2"].x = 114 if @sprites["pokemonglow2"]
+    @sprites["pokemonglow2"].y = 186 if @sprites["pokemonglow2"]
+
+    @sprites["pokemonglow3"].x = 112 if @sprites["pokemonglow3"]
+    @sprites["pokemonglow3"].y = 184 if @sprites["pokemonglow3"]
+
+    @sprites["pokemonglow4"].x = 112 if @sprites["pokemonglow4"]
+    @sprites["pokemonglow4"].y = 188 if @sprites["pokemonglow4"]
+
+    @sprites["pokemon"].x = 112 if @sprites["pokemon"]
+    @sprites["pokemon"].y = 186 if @sprites["pokemon"]
+
+    @sprites["itemicon"].x = 58 if @sprites["itemicon"]
+    @sprites["itemicon"].y = 320 if @sprites["itemicon"]
+  end
+  
+  def wrap_text_lines(bitmap, text, max_width)
+    return [""] if !text || text.empty?
+    lines = []
+
+    text.to_s.split(/\n/).each do |paragraph|
+      if paragraph.empty?
+        lines << ""
+        next
+      end
+
+      words = paragraph.split(/\s+/)
+      current_line = ""
+
+      words.each do |word|
+        test_line = current_line.empty? ? word : "#{current_line} #{word}"
+        if bitmap.text_size(test_line).width <= max_width
+          current_line = test_line
+        else
+          if current_line.empty?
+            # Force very long single word onto its own line
+            lines << word
+          else
+            lines << current_line
+            current_line = word
+          end
+        end
+      end
+
+      lines << current_line unless current_line.empty?
+    end
+
+    return lines
+  end
+
+  def shorten_line_with_ellipsis(bitmap, text, max_width)
+    return "..." if !text || text.empty?
+    new_text = text.dup
+    while new_text.length > 0 && bitmap.text_size(new_text + "...").width > max_width
+      new_text.chop!
+    end
+    return (new_text.empty?) ? "..." : new_text + "..."
+  end
+
+  def build_short_ability_text(bitmap, ability_name, short_desc, max_width, total_lines = 8)
+    name_lines = wrap_text_lines(bitmap, "#{ability_name}:", max_width)
+    desc_lines = wrap_text_lines(bitmap, short_desc, max_width)
+
+    combined_lines = name_lines + desc_lines
+
+    if combined_lines.length <= total_lines
+    return combined_lines.join("\n")
+    end
+
+    visible_lines = combined_lines[0...total_lines]
+    visible_lines[-1] = shorten_line_with_ellipsis(bitmap, visible_lines[-1], max_width)
+    return visible_lines.join("\n")
+  end
 
   def pbStartScene(party, partyindex, inbattle = false)
 	@viewport = Viewport.new(0, 0, Graphics.width, Graphics.height)
@@ -548,6 +633,7 @@ end
   end
 
   def drawPage(page)
+    setSummarySpritePositions
     if @pokemon.egg?
       drawPageOneEgg
       return
@@ -658,14 +744,23 @@ end
       [_INTL("OT"), 410, 182, 0, base, shadow],
       [_INTL("ID No."), 410, 214, 0, base, shadow]
     ]
-	# Draw ability name and description
-    ability = @pokemon.ability
-	abilityname = @pokemon.ability.name
-	special_key = getKeyName(Input::SPECIAL)
-	combined_abilitykey = "#{abilityname}:\nPress [Special] to view the Ability Page."
-    if ability
-      drawTextEx(overlay, 8, 92, 178, 8, combined_abilitykey, base, shadow)
-    end
+	# Draw ability name and short description
+	ability = @pokemon.ability
+	if ability
+	  abilityname = ability.name
+	  abilityshortdesc = ability.short_description
+	  short_text = build_short_ability_text(
+		overlay,
+		abilityname,
+		abilityshortdesc,
+		178,
+		8
+	  )
+	  drawTextEx(overlay, 8, 92, 178, 8, short_text, base, shadow)
+	  pbDrawTextPositions(overlay, [
+		["More: [Special]", 8, 348, 0, base, shadow]
+	  ])
+	end
     # Write the Regional/National Dex number
     dexnum = 0
     dexnumshift = false
@@ -1063,12 +1158,23 @@ end
     ]
 	# Draw ability name and description
     imagepos = []
-    ability = @pokemon.ability
-	abilityname = @pokemon.ability.name
-	combined_abilitykey = "#{abilityname}:\nPress [Special] to view the Ability Page."
-    if ability
-      drawTextEx(overlay, 8, 92, 178, 8, combined_abilitykey, base, shadow)
-    end
+	# Draw ability name and short description
+	ability = @pokemon.ability
+	if ability
+	  abilityname = ability.name
+	  abilityshortdesc = ability.short_description
+	  short_text = build_short_ability_text(
+		overlay,
+		abilityname,
+		abilityshortdesc,
+		178,
+		8
+	  )
+	  drawTextEx(overlay, 8, 92, 178, 8, short_text, base, shadow)
+	  pbDrawTextPositions(overlay, [
+		["More: [Special]", 8, 348, 0, base, shadow]
+	  ])
+	end
     # Draw all text
     pbDrawImagePositions(overlay, imagepos)
     pbDrawTextPositions(overlay, textpos)
@@ -1127,13 +1233,23 @@ end
       [sprintf("%d/%d", ev_total, Pokemon::EV_LIMIT), 630, 324, :center, Color.new(248, 248, 248), Color.new(104, 104, 104)],
       [_INTL("Hidden Power"), 404, 356, :left, base, shadow]
     ]
-	# Draw ability name and description
-    ability = @pokemon.ability
-	abilityname = @pokemon.ability.name
-	combined_abilitykey = "#{abilityname}:\nPress [Special] to view the Ability Page."
-    if ability
-      drawTextEx(overlay, 8, 92, 178, 8, combined_abilitykey, base, shadow)
-    end
+	# Draw ability name and short description
+	ability = @pokemon.ability
+	if ability
+	  abilityname = ability.name
+	  abilityshortdesc = ability.short_description
+	  short_text = build_short_ability_text(
+		overlay,
+		abilityname,
+		abilityshortdesc,
+		178,
+		8
+	  )
+	  drawTextEx(overlay, 8, 92, 178, 8, short_text, base, shadow)
+	  pbDrawTextPositions(overlay, [
+		["More: [Special]", 8, 348, 0, base, shadow]
+	  ])
+	end
     # Draw all text
     pbDrawTextPositions(overlay, textpos)
     typebitmap = AnimatedBitmap.new(_INTL("Graphics/UI/types"))
@@ -1194,12 +1310,22 @@ end
       end
       yPos += 68
     end
-	# Draw ability name and description
-    ability = @pokemon.ability
-	abilityname = @pokemon.ability.name
-	combined_abilitykey = "#{abilityname}:\nPress [Special] to view the Ability Page."
-    if ability
-      drawTextEx(overlay, 8, 92, 178, 8, combined_abilitykey, base, shadow)
+	# Draw ability name and short description
+	ability = @pokemon.ability
+	if ability
+	  abilityname = ability.name
+	  abilityshortdesc = ability.short_description
+	  short_text = build_short_ability_text(
+		overlay,
+		abilityname,
+		abilityshortdesc,
+		178,
+		8
+	  )
+	  drawTextEx(overlay, 8, 92, 178, 8, short_text, base, shadow)
+	  pbDrawTextPositions(overlay, [
+		["More: [Special]", 8, 348, 0, base, shadow]
+	  ])
     end
     # Draw all text and images
 	pbDrawImagePositions(overlay, imagepos)
@@ -2043,63 +2169,87 @@ end
     return (selmove == Pokemon::MAX_MOVES) ? -1 : selmove
   end
 
-  def pbshowAbilityDescription
+def pbshowAbilityDescription
+  loop do
     @sprites["hexagon_stats"].visible = false if @sprites["hexagon_stats"]
     @sprites["hexagon_base_stats"].visible = false if @sprites["hexagon_base_stats"]
-	pokemon = @pokemon
+
+    pokemon = @pokemon
     overlay = @sprites["overlay"].bitmap
     overlay.clear
+
     @sprites["background"].setBitmap("Graphics/UI/Summary/bg_ability")
+
     imagepos = []
     ballimage = sprintf("Graphics/UI/Summary/icon_ball_%s", @pokemon.poke_ball)
-    imagepos.push([ballimage, 186, 40])
+    imagepos.push([ballimage, 2, 40])
+
+    setAbilitySpritePositions
     pbDrawImagePositions(overlay, imagepos)
+
     base   = Color.new(248, 248, 248)
     shadow = Color.new(104, 104, 104)
+
     pbSetSystemFont(overlay)
+
     abilityname = pokemon.ability.name
-    abilitydesc = pokemon.ability.description
-	combined_abilitynamedesc = "#{abilityname}:\n\n#{abilitydesc}"
+    abilitydesc = pokemon.ability.real_description
+    combined_abilitynamedesc = "#{abilityname}:\n#{abilitydesc}"
+
     pokename = @pokemon.name
-    # texts
+
     textpos = [
-       [_INTL("ABILITY"), 26, 22, 0, base, shadow],
-       [pokename, 296, 48, 2, base, shadow],
-       [_INTL("Item"), 278, 324, 0, base, shadow]
-      ] 
-    # Write the held item's name
+      [_INTL("ABILITY"), 26, 14, 0, base, shadow],
+      [pokename, 112, 48, 2, base, shadow],
+      [_INTL("Item"), 94, 324, 0, base, shadow]
+    ]
+
     if @pokemon.hasItem?
-      textpos.push([@pokemon.item.name, 214, 358, 0, Color.new(248, 248, 248), Color.new(104, 104, 104)])
+      textpos.push([@pokemon.item.name, 30, 358, 0, base, shadow])
     else
-      textpos.push([_INTL("None"), 208, 358, 0, Color.new(248, 248, 248), Color.new(104, 104, 104)])
+      textpos.push([_INTL("None"), 24, 358, 0, base, shadow])
     end
-    # Write the gender symbol
+
     if @pokemon.male?
-      textpos.push([_INTL("♂"), 370, 48, 0, Color.new(103, 159, 224), Color.new(16, 79, 150)])
+      textpos.push([_INTL("♂"), 186, 48, 0, Color.new(103, 159, 224), Color.new(16, 79, 150)])
     elsif @pokemon.female?
-      textpos.push([_INTL("♀"), 370, 48, 0, Color.new(255, 124, 109), Color.new(168, 53, 40)])
+      textpos.push([_INTL("♀"), 186, 48, 0, Color.new(255, 124, 109), Color.new(168, 53, 40)])
     end
-    # Draw all text
+
     pbDrawTextPositions(overlay, textpos)
-    # Draw the Pokémon's markings
-    drawMarkings(overlay, 276, 292)
-	drawTextEx(overlay, 410, 54, 250, 10 , combined_abilitynamedesc, base, shadow)  
-    # drawTextEx(overlay, 410, 118, 250, 10 , abilitydesc, base, shadow)  
+    drawMarkings(overlay, 92, 292)
+    drawTextEx(overlay, 226, 54, 434, 10, combined_abilitynamedesc, base, shadow)
+
     loop do
       Graphics.update
       Input.update
       pbUpdate
+
       if Input.trigger?(Input::BACK) || Input.trigger?(Input::SPECIAL)
         Input.update
-        if PluginManager.installed?("Modular UI Scenes")
-          drawPage(1) 
-        else
-          drawPage(1)
+        setSummarySpritePositions
+        drawPage(@page)
+        return
+      elsif Input.trigger?(Input::UP) && @partyindex > 0
+        oldindex = @partyindex
+        pbGoToPrevious
+        if @partyindex != oldindex
+          pbChangePokemon
+          pbPlayCursorSE
+          break
         end
-        break
+      elsif Input.trigger?(Input::DOWN) && @partyindex < @party.length - 1
+        oldindex = @partyindex
+        pbGoToNext
+        if @partyindex != oldindex
+          pbChangePokemon
+          pbPlayCursorSE
+          break
+        end
       end
     end
   end
+end
 
   def pbScene
 	white = Tone.new(255, 255, 255)

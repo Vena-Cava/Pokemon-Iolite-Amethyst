@@ -394,7 +394,7 @@ Power = 195
 Accuracy = 0
 TotalPP = 1
 Target = NearOther
-Flags = ZMove,Contact,CannotMetronome
+Flags = ZMove,Contact,CannotMetronome,Kicking
 Description = Marshadow punches and kicks the target consecutively with full force.
 #-------------------------------
 [ASTHEPLANETSALIGN]

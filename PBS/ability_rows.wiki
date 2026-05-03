@@ -1,0 +1,2218 @@
+|-
+| rowspan="2" | 1
+| rowspan="2" | {{a|Stench}}
+| class="l" | The stench may cause the target to flinch.
+{{Gentable|III|rowspan=2}}
+|-
+| class="l" | By releasing a stench when attacking, there is a 10% chance that targets will flinch. If the Pokémon is in the first party slot, wild Pokémon appear half as often.
+|-
+| rowspan="2" | 2
+| rowspan="2" | {{a|Drizzle}}
+| class="l" | The Pokémon makes it rain when it enters a battle.
+{{Gentable|III|rowspan=2}}
+|-
+| class="l" | Summons rain for 5 turns when the Pokémon enters a battle.
+|-
+| rowspan="2" | 3
+| rowspan="2" | {{a|Speed Boost}}
+| class="l" | The Pokémon's Speed stat is boosted every turn.
+{{Gentable|III|rowspan=2}}
+|-
+| class="l" | Boosts the Pokémon's Speed stat by 1 stage at the end of every turn.
+|-
+| rowspan="2" | 4
+| rowspan="2" | {{a|Battle Armor}}
+| class="l" | Prevents the Pokémon from receiving critical hits.
+{{Gentable|III|rowspan=2}}
+|-
+| class="l" | Hard armor ensures that attacks landed on the Pokémon will never be critical hits.
+|-
+| rowspan="2" | 5
+| rowspan="2" | {{a|Sturdy}}
+| class="l" | It cannot be knocked out with one hit.
+{{Gentable|III|rowspan=2}}
+|-
+| class="l" | If the Pokémon has full HP and takes damage from a move that would knock it out in one hit, it will endure the hit with 1 HP. The Pokémon is also immune to one-hit KO moves.
+|-
+| rowspan="2" | 6
+| rowspan="2" | {{a|Damp}}
+| class="l" | Prevents the use of self-destructing moves.
+{{Gentable|III|rowspan=2}}
+|-
+| class="l" | All Pokémon become unable to use explosive moves. Explosive Abilities also fail to trigger.
+|-
+| rowspan="2" | 7
+| rowspan="2" | {{a|Limber}}
+| class="l" | The Pokémon cannot be paralyzed.
+{{Gentable|III|rowspan=2}}
+|-
+| class="l" | The Pokémon's limber body prevents it from being paralyzed.
+|-
+| rowspan="2" | 8
+| rowspan="2" | {{a|Sand Veil}}
+| class="l" | Boosts the Pokémon's evasiveness in a sandstorm.
+{{Gentable|III|rowspan=2}}
+|-
+| class="l" | Boosts the Pokémon's evasiveness by 25% in a sandstorm.
+|-
+| rowspan="2" | 9
+| rowspan="2" | {{a|Static}}
+| class="l" | Contact with the Pokémon may cause paralysis.
+{{Gentable|III|rowspan=2}}
+|-
+| class="l" | The Pokémon is charged with static electricity. When the Pokémon is hit by a contact move, the attacker has a 30% chance of being paralyzed.
+|-
+| rowspan="2" | 10
+| rowspan="2" | {{a|Volt Absorb}}
+| class="l" | Restores HP if hit by an Electric-type move.
+{{Gentable|III|rowspan=2}}
+|-
+| class="l" | Electric-type moves do not work on the Pokémon. Instead, they restore 1/4 of its max HP.
+|-
+| rowspan="2" | 11
+| rowspan="2" | {{a|Water Absorb}}
+| class="l" | Restores HP if hit by a Water-type move.
+{{Gentable|III|rowspan=2}}
+|-
+| class="l" | Water-type moves do not work on the Pokémon. Instead, they restore 1/4 of its max HP.
+|-
+| rowspan="2" | 12
+| rowspan="2" | {{a|Oblivious}}
+| class="l" | The Pokémon cannot be Infatuated, Taunted or Intimidated.
+{{Gentable|III|rowspan=2}}
+|-
+| class="l" | The Pokémon is oblivious, keeping it from being infatuated, falling for taunts, or being affected by Intimidate.
+|-
+| rowspan="2" | 13
+| rowspan="2" | {{a|Cloud Nine}}
+| class="l" | Eliminates the effects of weather.
+{{Gentable|III|rowspan=2}}
+|-
+| class="l" | While this Pokémon is active, weather conditions have no effect on Pokémon or moves.
+|-
+| rowspan="2" | 14
+| rowspan="2" | {{a|Compound Eyes}}
+| class="l" | The Pokémon's compound eyes boost its accuracy.
+{{Gentable|III|rowspan=2}}
+|-
+| class="l" | The Pokémon's compound eyes boost the accuracy of its moves by 30%.
+|-
+| rowspan="2" | 15
+| rowspan="2" | {{a|Insomnia}}
+| class="l" | Prevents the Pokémon from falling asleep.
+{{Gentable|III|rowspan=2}}
+|-
+| class="l" | The Pokémon is suffering from insomnia and cannot become drowsy or be put to sleep.
+|-
+| rowspan="2" | 16
+| rowspan="2" | {{a|Color Change}}
+| class="l" | Changes this Pokémon’s type to match a move that hits it.
+{{Gentable|III|rowspan=2}}
+|-
+| class="l" | When this Pokémon is hit by a move, its type changes to match that move’s type.
+|-
+| rowspan="2" | 17
+| rowspan="2" | {{a|Immunity}}
+| class="l" | The Pokémon cannot be poisoned.
+{{Gentable|III|rowspan=2}}
+|-
+| class="l" | The Pokémon's immune system prevents it from being poisoned or badly poisoned.
+|-
+| rowspan="2" | 18
+| rowspan="2" | {{a|Flash Fire}}
+| class="l" | Powers up the Pokémon's Fire-type moves if it's hit by one.
+{{Gentable|III|rowspan=2}}
+|-
+| class="l" | If hit by a Fire-type move, the Pokémon absorbs the flames, becoming immune to Fire-type moves and gaining a 50% boost to the power of its own Fire-type moves.
+|-
+| rowspan="2" | 19
+| rowspan="2" | {{a|Shield Dust}}
+| class="l" | Blocks additional effects of attacks.
+{{Gentable|III|rowspan=2}}
+|-
+| class="l" | Protective dust shields the Pokémon from the additional effects of attacks.
+|-
+| rowspan="2" | 20
+| rowspan="2" | {{a|Own Tempo}}
+| class="l" | Prevents the Pokémon from becoming confused.
+{{Gentable|III|rowspan=2}}
+|-
+| class="l" | The Pokémon sticks to its own tempo, preventing it from becoming confused or being affected by Intimidate.
+|-
+| rowspan="2" | 21
+| rowspan="2" | {{a|Suction Cups}}
+| class="l" | Negates all moves and items that force switching out.
+{{Gentable|III|rowspan=2}}
+|-
+| class="l" | The Pokémon is unaffected by the moves and held items of other Pokémon that would force it to switch out of battle.
+|-
+| rowspan="2" | 22
+| rowspan="2" | {{a|Intimidate}}
+| class="l" | Lowers the opposing Pokémon's Attack stat.
+{{Gentable|III|rowspan=2}}
+|-
+| class="l" | When the Pokémon enters a battle, it intimidates opposing Pokémon and makes them cower, lowering their Attack stats by 1 stage.
+|-
+| rowspan="2" | 23
+| rowspan="2" | {{a|Shadow Tag}}
+| class="l" | Opponents cannot escape.
+{{Gentable|III|rowspan=2}}
+|-
+| class="l" | The Pokémon steps on the opposing Pokémon's shadows to prevent them from fleeing or switching out of battle.
+|-
+| rowspan="2" | 24
+| rowspan="2" | {{a|Rough Skin}}
+| class="l" | The Pokémon's rough skin inflicts damage to the attacker on contact.
+{{Gentable|III|rowspan=2}}
+|-
+| class="l" | When the Pokémon is hit by a contact move, the attacker takes damage equal to 1/8 of its max HP.
+|-
+| rowspan="2" | 25
+| rowspan="2" | {{a|Wonder Guard}}
+| class="l" | Only supereffective moves will hit.
+{{Gentable|III|rowspan=2}}
+|-
+| class="l" | Its mysterious power only lets supereffective moves hit the Pokémon.
+|-
+| rowspan="2" | 26
+| rowspan="2" | {{a|Levitate}}
+| class="l" | Gives full immunity to all Ground-type moves.
+{{Gentable|III|rowspan=2}}
+|-
+| class="l" | The Pokémon floats off the ground, making it immune to Ground-type moves, as well as the Spikes, Toxic Spikes, Scattered Toys, and Sticky Web traps.
+|-
+| rowspan="2" | 27
+| rowspan="2" | {{a|Effect Spore}}
+| class="l" | Contact may poison or cause paralysis or sleep.
+{{Gentable|III|rowspan=2}}
+|-
+| class="l" | Contact with the Pokémon has a 30% chance to inflict poison, sleep, or paralysis on the attacker.
+|-
+| rowspan="2" | 28
+| rowspan="2" | {{a|Synchronize}}
+| class="l" | Passes poison, paralyze, or burn to the Pokémon that inflicted it.
+{{Gentable|III|rowspan=2}}
+|-
+| class="l" | If the Pokémon is burned, paralyzed, poisoned, or badly poisoned by another Pokémon's move or Ability, that Pokémon will also be inflicted with the same status condition.
+|-
+| rowspan="2" | 29
+| rowspan="2" | {{a|Clear Body}}
+| class="l" | Prevents other Pokémon from lowering its stats.
+{{Gentable|III|rowspan=2}}
+|-
+| class="l" | The Pokémon's stats cannot be lowered by other Pokémon's moves or Abilities.
+|-
+| rowspan="2" | 30
+| rowspan="2" | {{a|Natural Cure}}
+| class="l" | All status conditions heal when the Pokémon switches out.
+{{Gentable|III|rowspan=2}}
+|-
+| class="l" | The Pokémon's status conditions are cured when it switches out of battle.
+|-
+| rowspan="2" | 31
+| rowspan="2" | {{a|Lightning Rod}}
+| class="l" | Draws in all Electric-type moves to boost its Sp. Atk stat.
+{{Gentable|III|rowspan=2}}
+|-
+| class="l" | The Pokémon draws in all Electric-type moves. These moves do not work on the Pokémon. Instead, they boost its Sp. Atk stat by 1 stage.
+|-
+| rowspan="2" | 32
+| rowspan="2" | {{a|Serene Grace}}
+| class="l" | Boosts the likelihood of additional effects occurring.
+{{Gentable|III|rowspan=2}}
+|-
+| class="l" | Raises the likelihood of additional effects occurring when the Pokémon uses its moves.
+|-
+| rowspan="2" | 33
+| rowspan="2" | {{a|Swift Swim}}
+| class="l" | Boosts the Pokémon's Speed stat in rain.
+{{Gentable|III|rowspan=2}}
+|-
+| class="l" | Doubles the Pokémon's Speed stat in rain.
+|-
+| rowspan="2" | 34
+| rowspan="2" | {{a|Chlorophyll}}
+| class="l" | Boosts the Pokémon's Speed stat in harsh sunlight.
+{{Gentable|III|rowspan=2}}
+|-
+| class="l" | Doubles the Pokémon's Speed stat in harsh sunlight.
+|-
+| rowspan="2" | 35
+| rowspan="2" | {{a|Illuminate}}
+| class="l" | The Pokémon ignores changes to targets' evasiveness and its accuracy can't be lowered.
+{{Gentable|III|rowspan=2}}
+|-
+| class="l" | By illuminating its surroundings, the Pokémon ignores changes to targets' evasiveness and its accuracy cannot be lowered. If the Pokémon is in the first party slot, wild Pokémon appear twice as often.
+|-
+| rowspan="2" | 36
+| rowspan="2" | {{a|Trace}}
+| class="l" | The Pokémon copies an opposing Pokémon's Ability.
+{{Gentable|III|rowspan=2}}
+|-
+| class="l" | When the Pokémon enters a battle, it changes its Ability to match that of an opponent.
+|-
+| rowspan="2" | 37
+| rowspan="2" | {{a|Huge Power}}
+| class="l" | Doubles the Pokémon's Attack stat.
+{{Gentable|III|rowspan=2}}
+|-
+| class="l" | Doubles the power of the Pokémon's physical moves using its huge power.
+|-
+| rowspan="2" | 38
+| rowspan="2" | {{a|Poison Point}}
+| class="l" | Contact with the Pokémon may poison the attacker.
+{{Gentable|III|rowspan=2}}
+|-
+| class="l" | When the Pokémon is hit by a contact move, the attacker has a 30% chance of being poisoned.
+|-
+| rowspan="2" | 39
+| rowspan="2" | {{a|Inner Focus}}
+| class="l" | The Pokémon never flinches when attacked and is unaffected by Intimidate.
+{{Gentable|III|rowspan=2}}
+|-
+| class="l" | The Pokémon's intense focus prevents it from flinching or being affected by Intimidate.
+|-
+| rowspan="2" | 40
+| rowspan="2" | {{a|Magma Armor}}
+| class="l" | The Pokémon cannot be frozen.
+{{Gentable|III|rowspan=2}}
+|-
+| class="l" | The Pokémon is covered with hot magma, which prevents the Pokémon from becoming frozen. If the Pokémon is in the first party slot, Pokémon eggs hatch twice as fast.
+|-
+| rowspan="2" | 41
+| rowspan="2" | {{a|Water Veil}}
+| class="l" | Prevents the Pokémon from getting a burn.
+{{Gentable|III|rowspan=2}}
+|-
+| class="l" | The Pokémon's water veil prevents it from being burned. The Pokémon is covered with a water veil, which prevents the Pokémon from getting a burn.
+|-
+| rowspan="2" | 42
+| rowspan="2" | {{a|Magnet Pull}}
+| class="l" | Prevents Steel-type Pokémon from escaping.
+{{Gentable|III|rowspan=2}}
+|-
+| class="l" | Prevents Steel-type Pokémon from fleeing or switching out of battle by pulling them in with magnetism.
+|-
+| rowspan="2" | 43
+| rowspan="2" | {{a|Soundproof}}
+| class="l" | The Pokémon is immune to sound-based moves.
+{{Gentable|III|rowspan=2}}
+|-
+| class="l" | Soundproofing gives the Pokémon full immunity to all sound-based moves.
+|-
+| rowspan="2" | 44
+| rowspan="2" | {{a|Rain Dish}}
+| class="l" | The Pokémon gradually regains HP in rain.
+{{Gentable|III|rowspan=2}}
+|-
+| class="l" | The Pokémon has 1/16 of its max HP restored at the end of every turn in rain.
+|-
+| rowspan="2" | 45
+| rowspan="2" | {{a|Sand Stream}}
+| class="l" | Summons a sandstorm when the Pokémon enters a battle.
+{{Gentable|III|rowspan=2}}
+|-
+| class="l" | Summons a sandstorm for 5 turns when the Pokémon enters a battle.
+|-
+| rowspan="2" | 46
+| rowspan="2" | {{a|Pressure}}
+| class="l" | The Pokémon raises opposing Pokémon's PP usage.
+{{Gentable|III|rowspan=2}}
+|-
+| class="l" | Puts other Pokémon under pressure, causing them to expend 1 more PP when using moves against the Pokémon.
+|-
+| rowspan="2" | 47
+| rowspan="2" | {{a|Thick Fat}}
+| class="l" | Halves the damage the Pokémon takes from Fire- and Ice-type moves.
+{{Gentable|III|rowspan=2}}
+|-
+| class="l" | The Pokémon is protected by a layer of thick fat, which halves the damage taken from Fire- and Ice-type moves.
+|-
+| rowspan="2" | 48
+| rowspan="2" | {{a|Early Bird}}
+| class="l" | The Pokémon awakens quickly from sleep.
+{{Gentable|III|rowspan=2}}
+|-
+| class="l" | The Pokémon awakens from sleep twice as fast as other Pokémon.
+|-
+| rowspan="2" | 49
+| rowspan="2" | {{a|Flame Body}}
+| class="l" | Contact with the Pokémon may burn the attacker.
+{{Gentable|III|rowspan=2}}
+|-
+| class="l" | When the Pokémon is hit by a contact move, the attacker has a 30% chance of being burned. If the Pokémon is in the first party slot, Pokémon eggs hatch twice as fast.
+|-
+| rowspan="2" | 50
+| rowspan="2" | {{a|Run Away}}
+| class="l" | Enables a sure getaway from opposing Pokémon.
+{{Gentable|III|rowspan=2}}
+|-
+| class="l" | Enables a sure getaway from wild Pokémon. The Pokémon can switch out of battle unimpeded by other Pokémon's moves or abilities.
+|-
+| rowspan="2" | 51
+| rowspan="2" | {{a|Keen Eye}}
+| class="l" | The Pokémon's keen eyes prevent its accuracy from being lowered.
+{{Gentable|III|rowspan=2}}
+|-
+| class="l" | The Pokémon ignores changes to targets' evasiveness and its accuracy cannot be lowered.
+|-
+| rowspan="2" | 52
+| rowspan="2" | {{a|Hyper Cutter}}
+| class="l" | Prevents other Pokémon from lowering its Attack stat.
+{{Gentable|III|rowspan=2}}
+|-
+| class="l" | The Pokémon's prized, mighty pincers prevent other Pokémon's moves or Abilities from lowering its Attack stat. The Pokémon can also cut Tall Grass within a two-square radius instead of a one-square radius when using Cut outside of battle.
+|-
+| rowspan="2" | 53
+| rowspan="2" | {{a|Pickup}}
+| class="l" | The Pokémon may pick up items.
+{{Gentable|III|rowspan=2}}
+|-
+| class="l" | If the Pokémon is not already holding an item, at the end of the turn it will pick up an item that was consumed by another Pokémon. It has a 10% chance to pick up items outside of battle, too.
+|-
+| rowspan="2" | 54
+| rowspan="2" | {{a|Truant}}
+| class="l" | The Pokémon can't use moves on consecutive turns.
+{{Gentable|III|rowspan=2}}
+|-
+| class="l" | Each time the Pokémon uses a move, it spends the next turn loafing around.
+|-
+| rowspan="2" | 55
+| rowspan="2" | {{a|Hustle}}
+| class="l" | Boosts the Pokémon's Attack stat but lowers its accuracy.
+{{Gentable|III|rowspan=2}}
+|-
+| class="l" | When the Pokémon uses physical moves, its Attack stat is boosted by 50%, but its accuracy is lowered by 20%.
+|-
+| rowspan="2" | 56
+| rowspan="2" | {{a|Cute Charm}}
+| class="l" | The Pokémon may infatuate attackers that make direct contact with it.
+{{Gentable|III|rowspan=2}}
+|-
+| class="l" | When the Pokémon is hit by a contact move, the attacker has a 30% chance of becoming infatuated if the attacker and the Pokémon are of opposite genders.
+|-
+| rowspan="2" | 57
+| rowspan="2" | {{a|Plus}}
+| class="l" | Boosts the Sp. Atk stat of the Pokémon if an ally has Plus or Minus.
+{{Gentable|III|rowspan=2}}
+|-
+| class="l" | Boosts the Pokémon's Sp. Atk stat by 50% if an ally with the Plus or Minus Ability is also in battle.
+|-
+| rowspan="2" | 58
+| rowspan="2" | {{a|Minus}}
+| class="l" | Boosts the Sp. Atk stat of the Pokémon if an ally has Plus or Minus.
+{{Gentable|III|rowspan=2}}
+|-
+| class="l" | Boosts the Pokémon's Sp. Atk stat by 50% if an ally with the Plus or Minus Ability is also in battle.
+|-
+| rowspan="2" | 59
+| rowspan="2" | {{a|Forecast}}
+| class="l" | The Pokémon transforms with the weather to change its type.
+{{Gentable|III|rowspan=2}}
+|-
+| class="l" | The Pokémon transforms with the weather to change its type to Water, Fire, or Ice.
+|-
+| rowspan="2" | 60
+| rowspan="2" | {{a|Sticky Hold}}
+| class="l" | Protects the Pokémon from item theft.
+{{Gentable|III|rowspan=2}}
+|-
+| class="l" | The Pokémon's held items cling to its sticky body and cannot be stolen or removed by other Pokémon.
+|-
+| rowspan="2" | 61
+| rowspan="2" | {{a|Shed Skin}}
+| class="l" | The Pokémon may cure its own status conditions.
+{{Gentable|III|rowspan=2}}
+|-
+| class="l" | The Pokémon has a 30% chance of curing its own status conditions at the end of every turn by shedding its skin.
+|-
+| rowspan="2" | 62
+| rowspan="2" | {{a|Guts}}
+| class="l" | Boosts the Attack stat if the Pokémon has a status condition.
+{{Gentable|III|rowspan=2}}
+|-
+| class="l" | It's so gutsy that when the Pokémon has a status condition, its Attack stat is boosted by 50%. Being burned does not halve the damage dealt by the Pokémon's physical moves.
+|-
+| rowspan="2" | 63
+| rowspan="2" | {{a|Marvel Scale}}
+| class="l" | Boosts the Defense stat if the Pokémon has a status condition.
+{{Gentable|III|rowspan=2}}
+|-
+| class="l" | When the Pokémon has a status condition, its marvelous scales boost its Defense stat by 50%.
+|-
+| rowspan="2" | 64
+| rowspan="2" | {{a|Liquid Ooze}}
+| class="l" | Damages attackers that use draining moves instead of healing them.
+{{Gentable|III|rowspan=2}}
+|-
+| class="l" | The Pokémon’s oozing liquid damages attackers that use HP-draining moves, causing them to take damage equal to the HP they would have restored.
+|-
+| rowspan="2" | 65
+| rowspan="2" | {{a|Overgrow}}
+| class="l" | Powers up Grass-type moves when the Pokémon's HP is low.
+{{Gentable|III|rowspan=2}}
+|-
+| class="l" | Boosts the power of the Pokémon's Grass-type moves by 50% when its HP drops to 1/3 or less of its max.
+|-
+| rowspan="2" | 66
+| rowspan="2" | {{a|Blaze}}
+| class="l" | Powers up Fire-type moves when the Pokémon's HP is low.
+{{Gentable|III|rowspan=2}}
+|-
+| class="l" | Boosts the power of the Pokémon's Fire-type moves by 50% when its HP drops to 1/3 or less of its max.
+|-
+| rowspan="2" | 67
+| rowspan="2" | {{a|Torrent}}
+| class="l" | Powers up Water-type moves when the Pokémon's HP is low.
+{{Gentable|III|rowspan=2}}
+|-
+| class="l" | Boosts the power of the Pokémon's Water-type moves by 50% when its HP drops to 1/3 or less of its max.
+|-
+| rowspan="2" | 68
+| rowspan="2" | {{a|Swarm}}
+| class="l" | Powers up Bug-type moves when the Pokémon's HP is low.
+{{Gentable|III|rowspan=2}}
+|-
+| class="l" | Boosts the power of the Pokémon's Bug-type moves by 50% when its HP drops to 1/3 or less of its max.
+|-
+| rowspan="2" | 69
+| rowspan="2" | {{a|Rock Head}}
+| class="l" | Protects the Pokémon from recoil damage.
+{{Gentable|III|rowspan=2}}
+|-
+| class="l" | The Pokémon will not lose HP due to recoil damage from its moves.
+|-
+| rowspan="2" | 70
+| rowspan="2" | {{a|Drought}}
+| class="l" | Turns the sunlight harsh when the Pokémon enters a battle.
+{{Gentable|III|rowspan=2}}
+|-
+| class="l" | Summons harsh sunlight for 5 turns when the Pokémon enters a battle.
+|-
+| rowspan="2" | 71
+| rowspan="2" | {{a|Arena Trap}}
+| class="l" | Prevents opposing Pokémon from fleeing from battle.
+{{Gentable|III|rowspan=2}}
+|-
+| class="l" | Prevents opposing Pokémon from fleeing or switching out while this Pokémon is in battle. If the Pokémon is in the first party slot, wild Pokémon appear twice as often.
+|-
+| rowspan="2" | 72
+| rowspan="2" | {{a|Vital Spirit}}
+| class="l" | Prevents the Pokémon from falling asleep.
+{{Gentable|III|rowspan=2}}
+|-
+| class="l" | The Pokémon is full of vitality, and that prevents it from becoming drowsy or being put to sleep.
+|-
+| rowspan="2" | 73
+| rowspan="2" | {{a|White Smoke}}
+| class="l" | Prevents other Pokémon from lowering its stats.
+{{Gentable|III|rowspan=2}}
+|-
+| class="l" | The Pokémon's stats cannot be lowered by other Pokémon's moves or Abilities. If the Pokémon is in the first party slot, wild Pokémon appear half as often.
+|-
+| rowspan="2" | 74
+| rowspan="2" | {{a|Pure Power}}
+| class="l" | Doubles the Pokémon's Attack stat.
+{{Gentable|III|rowspan=2}}
+|-
+| class="l" | Using its pure power, the Pokémon doubles the power of the its physical moves.
+|-
+| rowspan="2" | 75
+| rowspan="2" | {{a|Shell Armor}}
+| class="l" | Prevents the Pokémon from receiving critical hits.
+{{Gentable|III|rowspan=2}}
+|-
+| class="l" | A hard shell ensures that attacks landed on the Pokémon will never be critical hits.
+|-
+| rowspan="2" | 76
+| rowspan="2" | {{a|Air Lock}}
+| class="l" | Eliminates the effects of weather.
+{{Gentable|III|rowspan=2}}
+|-
+| class="l" | While this Pokémon is active, weather conditions have no effect on Pokémon or moves.
+|-
+| rowspan="2" | 77
+| rowspan="2" | {{a|Tangled Feet}}
+| class="l" | Raises evasiveness if the Pokémon is confused.
+{{Gentable|IV|rowspan=2}}
+|-
+| class="l" | Doubles the Pokémon's evasiveness if it is confused.
+|-
+| rowspan="2" | 78
+| rowspan="2" | {{a|Motor Drive}}
+| class="l" | Raises Speed if hit by an Electric-type move.
+{{Gentable|IV|rowspan=2}}
+|-
+| class="l" | Electric-type moves do not work on the Pokémon. Instead, they boost its Speed stat by 1 stage.
+|-
+| rowspan="2" | 79
+| rowspan="2" | {{a|Rivalry}}
+| class="l" | Deals more damage to Pokémon of the same gender.
+{{Gentable|IV|rowspan=2}}
+|-
+| class="l" | Boosts the power of the Pokémon's moves by 25% against targets of the same gender, and lowers it by 25% against targets of the opposite gender. The power remains the same as usual if either Pokémon's gender is unknown.
+|-
+| rowspan="2" | 80
+| rowspan="2" | {{a|Steadfast}}
+| class="l" | Boosts the Speed stat each time the Pokémon flinches.
+{{Gentable|IV|rowspan=2}}
+|-
+| class="l" | When the Pokémon flinches, its determination boosts its Speed stat is boosted by 1 stage.
+|-
+| rowspan="2" | 81
+| rowspan="2" | {{a|Snow Cloak}}
+| class="l" | Boosts the Pokémon's evasiveness in snow.
+{{Gentable|IV|rowspan=2}}
+|-
+| class="l" | Boosts the Pokémon's evasiveness by 25% in snow.
+|-
+| rowspan="2" | 82
+| rowspan="2" | {{a|Gluttony}}
+| class="l" | Makes the Pokémon eat a held Berry when at half HP or less.
+{{Gentable|IV|rowspan=2}}
+|-
+| class="l" | If the Pokémon is holding a Berry to be eaten when its HP drops to 1/4 or less of its max, it will instead eat the Berry when its HP drops to 1/2 or less of its max.
+|-
+| rowspan="2" | 83
+| rowspan="2" | {{a|Anger Point}}
+| class="l" | Maxes the Attack stat after the Pokémon takes a critical hit.
+{{Gentable|IV|rowspan=2}}
+|-
+| class="l" | Boosts the Pokémon's Attack stat to its sixth stage when the Pokémon takes a critical hit.
+|-
+| rowspan="2" | 84
+| rowspan="2" | {{a|Unburden}}
+| class="l" | Boosts the Speed stat if its held item is used or lost.
+{{Gentable|IV|rowspan=2}}
+|-
+| class="l" | Doubles the Pokémon's Speed stat when its held item is consumed or lost.
+|-
+| rowspan="2" | 85
+| rowspan="2" | {{a|Heatproof}}
+| class="l" | Halves the damage from Fire-type moves that hit it.
+{{Gentable|IV|rowspan=2}}
+|-
+| class="l" | The Pokémon's heatproof body halves the damage it takes from Fire-type moves and from being burned.
+|-
+| rowspan="2" | 86
+| rowspan="2" | {{a|Simple}}
+| class="l" | Doubles the Pokémon's stat changes.
+{{Gentable|IV|rowspan=2}}
+|-
+| class="l" | Doubles the effects of the Pokémon's stat changes.
+|-
+| rowspan="2" | 87
+| rowspan="2" | {{a|Dry Skin}}
+| class="l" | Recovers HP in rain or from Water Moves and loses HP in sun, takes extra damage from Fire Moves.
+{{Gentable|IV|rowspan=2}}
+|-
+| class="l" | Water-type moves do not work on the Pokémon. Instead, they restore 1/4 of its max HP. However, the Pokémon takes 25% more damage from Fire-type moves. The Pokémon has 1/8 of its max HP restored at the end of every turn in rain, but it loses 1/8 of its max HP at the end of every turn in harsh sunlight.
+|-
+| rowspan="2" | 88
+| rowspan="2" | {{a|Download}}
+| class="l" | Raises Attack or Sp. Atk based on an opposing Pokémon’s defenses.
+{{Gentable|IV|rowspan=2}}
+|-
+| class="l" | The Pokémon compares an opposing Pokémon’s Defense and Sp. Def, then raises its own Attack or Sp. Atk by 1 stage, whichever will be more effective.
+|-
+| rowspan="2" | 89
+| rowspan="2" | {{a|Iron Fist}}
+| class="l" | Powers up punching moves.
+{{Gentable|IV|rowspan=2}}
+|-
+| class="l" | Boosts the power of the Pokémon's punching moves by 20%.
+|-
+| rowspan="2" | 90
+| rowspan="2" | {{a|Poison Heal}}
+| class="l" | Restores HP if the Pokémon is poisoned instead of losing HP.
+{{Gentable|IV|rowspan=2}}
+|-
+| class="l" | If poisoned or badly poisoned, the Pokémon has 1/8 of its max HP restored at the end of every turn instead of losing HP.
+|-
+| rowspan="2" | 91
+| rowspan="2" | {{a|Adaptability}}
+| class="l" | Powers up moves of the same type as the Pokémon.
+{{Gentable|IV|rowspan=2}}
+|-
+| class="l" | Boosts the power of moves of the same type as the Pokémon by 100% instead of 50%.
+|-
+| rowspan="2" | 92
+| rowspan="2" | {{a|Skill Link}}
+| class="l" | Maximizes the number of times multistrike moves hit.
+{{Gentable|IV|rowspan=2}}
+|-
+| class="l" | The Pokémon's multi-strike moves always hit the maximum number of times.
+|-
+| rowspan="2" | 93
+| rowspan="2" | {{a|Hydration}}
+| class="l" | Cures the Pokémon's status conditions in rain.
+{{Gentable|IV|rowspan=2}}
+|-
+| class="l" | Cures the Pokémon's status conditions at the end of every turn in rain.
+|-
+| rowspan="2" | 94
+| rowspan="2" | {{a|Solar Power}}
+| class="l" | Boosts the Sp. Atk stat in harsh sunlight, but HP decreases every turn.
+{{Gentable|IV|rowspan=2}}
+|-
+| class="l" | In harsh sunlight, the Pokémon's Sp. Atk stat is boosted by 50%, but it loses 1/8 of its max HP at the end of every turn.
+|-
+| rowspan="2" | 95
+| rowspan="2" | {{a|Quick Feet}}
+| class="l" | Boosts the Speed stat if the Pokémon has a status condition.
+{{Gentable|IV|rowspan=2}}
+|-
+| class="l" | When the Pokémon has a status condition, its Speed stat is boosted by 50%. Being paralyzed does not lower the Pokémon's Speed stat. If the Pokémon is in the first party slot, wild Pokémon appear half as often.
+|-
+| rowspan="2" | 96
+| rowspan="2" | {{a|Normalize}}
+| class="l" | All the Pokémon's moves become Normal type. The power of those moves is boosted a little.
+{{Gentable|IV|rowspan=2}}
+|-
+| class="l" | All of the Pokémon's moves become Normal-type moves and their power is boosted by 20%.
+|-
+| rowspan="2" | 97
+| rowspan="2" | {{a|Sniper}}
+| class="l" | If the Pokémon's attack lands a critical hit, the attack is powered up even further.
+{{Gentable|IV|rowspan=2}}
+|-
+| class="l" | Boosts the power of the Pokémon's critical hits by 125% instead of 50%.
+|-
+| rowspan="2" | 98
+| rowspan="2" | {{a|Magic Guard}}
+| class="l" | The Pokémon only takes damage from attacks.
+{{Gentable|IV|rowspan=2}}
+|-
+| class="l" | The Pokémon takes damage only from attacks, preventing all indirect damage such as from status conditions, weather, or other effects.
+|-
+| rowspan="2" | 99
+| rowspan="2" | {{a|No Guard}}
+| class="l" | Ensures that attacks by or against the Pokémon will land.
+{{Gentable|IV|rowspan=2}}
+|-
+| class="l" | The Pokémon employs no-guard tactics to ensure accuracy of moves used both by and against the Pokémon becomes 100%.
+|-
+| rowspan="2" | 100
+| rowspan="2" | {{a|Stall}}
+| class="l" | The Pokémon is always the last to use its moves.
+{{Gentable|IV|rowspan=2}}
+|-
+| class="l" | The Pokémon's moves go last among moves of the same priority.
+|-
+| rowspan="2" | 101
+| rowspan="2" | {{a|Technician}}
+| class="l" | Powers up the Pokémon's weaker moves.
+{{Gentable|IV|rowspan=2}}
+|-
+| class="l" | Boosts the power of the Pokémon's moves by 50% if their power is 60 or less.
+|-
+| rowspan="2" | 102
+| rowspan="2" | {{a|Leaf Guard}}
+| class="l" | Prevents status conditions in harsh sunlight.
+{{Gentable|IV|rowspan=2}}
+|-
+| class="l" | The Pokémon is immune to status conditions in harsh sunlight.
+|-
+| rowspan="2" | 103
+| rowspan="2" | {{a|Klutz}}
+| class="l" | The Pokémon can't use any held items.
+{{Gentable|IV|rowspan=2}}
+|-
+| class="l" | Items do not work when held by the Pokémon.
+|-
+| rowspan="2" | 104
+| rowspan="2" | {{a|Mold Breaker}}
+| class="l" | Moves can be used on the target regardless of its Abilities.
+{{Gentable|IV|rowspan=2}}
+|-
+| class="l" | The Pokémon's moves are unaffected by the Ability of the target (with certain exceptions).
+|-
+| rowspan="2" | 105
+| rowspan="2" | {{a|Super Luck}}
+| class="l" | Boosts the critical-hit ratios of moves.
+{{Gentable|IV|rowspan=2}}
+|-
+| class="l" | The Pokémon is so lucky that it has a 1-stage Critical-Hit Ratio Boost.
+|-
+| rowspan="2" | 106
+| rowspan="2" | {{a|Aftermath}}
+| class="l" | Damages the attacker if it contacts the Pokémon with a finishing hit.
+{{Gentable|IV|rowspan=2}}
+|-
+| class="l" | Attackers that knock out the Pokémon with a contact move take damage equal to 1/4 of their max HP.
+|-
+| rowspan="2" | 107
+| rowspan="2" | {{a|Anticipation}}
+| class="l" | The Pokémon can sense an opposing Pokémon's dangerous moves.
+{{Gentable|IV|rowspan=2}}
+|-
+| class="l" | When the Pokémon enters a battle, it senses whether the opponents know any one-hit KO moves or moves that are super effective against it.
+|-
+| rowspan="2" | 108
+| rowspan="2" | {{a|Forewarn}}
+| class="l" | Determines what moves an opposing Pokémon has.
+{{Gentable|IV|rowspan=2}}
+|-
+| class="l" | When it enters a battle, the Pokémon can tell one of the moves an opposing Pokémon has.
+|-
+| rowspan="2" | 109
+| rowspan="2" | {{a|Unaware}}
+| class="l" | When attacking, the Pokémon ignores the target's stat changes.
+{{Gentable|IV|rowspan=2}}
+|-
+| class="l" | The Pokémon ignores the target's stat changes when attacking, and ignores the attacker's stat changes when being attacked. It cannot ignore changes to the Speed stat, however.
+|-
+| rowspan="2" | 110
+| rowspan="2" | {{a|Tinted Lens}}
+| class="l" | Doubles the damage of not very effective moves.
+{{Gentable|IV|rowspan=2}}
+|-
+| class="l" | Doubles the damage of the Pokémon’s moves that are not very effective.
+|-
+| rowspan="2" | 111
+| rowspan="2" | {{a|Filter}}
+| class="l" | Reduces the power of supereffective attacks that hit the Pokémon.
+{{Gentable|IV|rowspan=2}}
+|-
+| class="l" | Reduces the damage the Pokémon takes from supereffective moves by 25%.
+|-
+| rowspan="2" | 112
+| rowspan="2" | {{a|Slow Start}}
+| class="l" | The Pokémon's Attack and Speed stats are halved until it gets going.
+{{Gentable|IV|rowspan=2}}
+|-
+| class="l" | For five turns, the Pokémon's Attack and Speed stats are halved.
+|-
+| rowspan="2" | 113
+| rowspan="2" | {{a|Scrappy}}
+| class="l" | The Pokémon ignores Ghost-types immunities when attacking. It is also unaffected by Intimidate.
+{{Gentable|IV|rowspan=2}}
+|-
+| class="l" | The Pokémon can hit Ghost-type Pokémon with Normal- and Fighting-type moves. It is also unaffected by Intimidate.
+|-
+| rowspan="2" | 114
+| rowspan="2" | {{a|Storm Drain}}
+| class="l" | Draws in all Electric-type moves to boost its Sp. Atk stat.
+{{Gentable|IV|rowspan=2}}
+|-
+| class="l" | The Pokémon draws in all Electric-type moves. These moves do not work on the Pokémon. Instead, they boost its Sp. Atk stat by 1 stage.
+|-
+| rowspan="2" | 115
+| rowspan="2" | {{a|Ice Body}}
+| class="l" | The Pokémon gradually regains HP in snow.
+{{Gentable|IV|rowspan=2}}
+|-
+| class="l" | The Pokémon has 1/16 of its max HP restored at the end of every turn in snow.
+|-
+| rowspan="2" | 116
+| rowspan="2" | {{a|Solid Rock}}
+| class="l" | Reduces the power of supereffective attacks that hit the Pokémon.
+{{Gentable|IV|rowspan=2}}
+|-
+| class="l" | Reduces the damage the Pokémon takes from supereffective moves by 25%.
+|-
+| rowspan="2" | 117
+| rowspan="2" | {{a|Snow Warning}}
+| class="l" | The Pokémon makes it snow when it enters a battle.
+{{Gentable|IV|rowspan=2}}
+|-
+| class="l" | Summons snow for 5 turns when the Pokémon enters a battle.
+|-
+| rowspan="2" | 118
+| rowspan="2" | {{a|Honey Gather}}
+| class="l" | Lowers opposing Pokémon's evasion on first entry. May collect Honey after battle.
+{{Gentable|IV|rowspan=2}}
+|-
+| class="l" | A sticky honey spreads across the field the first time the Pokémon enters a battle, opponents' evasiveness is lowered by 1 stage. This Ability is triggered only once per battle. It has a 5% chance per 10 levels to pick up Honey after every battle, too.
+|-
+| rowspan="2" | 119
+| rowspan="2" | {{a|Frisk}}
+| class="l" | The Pokémon can check a foe's held item.
+{{Gentable|IV|rowspan=2}}
+|-
+| class="l" | When the Pokémon enters a battle, it identifies opponents' held items.
+|-
+| rowspan="2" | 120
+| rowspan="2" | {{a|Reckless}}
+| class="l" | Powers up moves that have recoil damage.
+{{Gentable|IV|rowspan=2}}
+|-
+| class="l" | Boosts the power of the Pokémon's moves by 20% if they have recoil or crash damage.
+|-
+| rowspan="2" | 121
+| rowspan="2" | {{a|Multitype}}
+| class="l" | Changes the Pokémon's type to match the Plate it holds.
+{{Gentable|IV|rowspan=2}}
+|-
+| class="l" | Changes the Pokémon's type to match the Plate or Z-Crystal it holds.
+|-
+| rowspan="2" | 122
+| rowspan="2" | {{a|Flower Gift}}
+| class="l" | Boosts the Attack and Sp. Def stats of itself and allies in harsh sunlight.
+{{Gentable|IV|rowspan=2}}
+|-
+| class="l" | Boosts the Attack and Sp. Def stats of the Pokémon and its allies by 50% when in harsh sunlight.
+|-
+| rowspan="2" | 123
+| rowspan="2" | {{a|Bad Dreams}}
+| class="l" | Damages opposing Pokémon that are asleep.
+{{Gentable|IV|rowspan=2}}
+|-
+| class="l" | Damages opposing sleeping Pokémon for 1/8 of their max HP at the end of each turn.
+|-
+| rowspan="2" | 124
+| rowspan="2" | {{a|Pickpocket}}
+| class="l" | The Pokémon steals the held item from attackers that make direct contact with it.
+{{Gentable|V|rowspan=2}}
+|-
+| class="l" | When the Pokémon is hit by a contact move, it will steal the held item of the attacker if it is not already holding an item.
+|-
+| rowspan="2" | 125
+| rowspan="2" | {{a|Sheer Force}}
+| class="l" | Removes any additional effects from the Pokémon's moves, but increases the moves' power.
+{{Gentable|V|rowspan=2}}
+|-
+| class="l" | The Pokémon's moves lose their additional effects, but the power of those moves will be boosted by 30%.
+|-
+| rowspan="2" | 126
+| rowspan="2" | {{a|Contrary}}
+| class="l" | Makes the Pokémon's stat changes have an opposite effect.
+{{Gentable|V|rowspan=2}}
+|-
+| class="l" | Reverses any stat changes affecting the Pokémon so that attempts to boost its stats instead lower them—and attempts to lower its stats will boost them.
+|-
+| rowspan="2" | 127
+| rowspan="2" | {{a|Unnerve}}
+| class="l" | Makes opponents unable to eat Berries.
+{{Gentable|V|rowspan=2}}
+|-
+| class="l" | Unnerves opposing Pokémon and makes them unable to eat Berries.
+|-
+| rowspan="2" | 128
+| rowspan="2" | {{a|Defiant}}
+| class="l" | Boosts the Attack stat sharply when a stat is lowered.
+{{Gentable|V|rowspan=2}}
+|-
+| class="l" | When the Pokémon has any of its stats lowered by an opponent, its Attack stat is boosted by 2 stages.
+|-
+| rowspan="2" | 129
+| rowspan="2" | {{a|Defeatist}}
+| class="l" | Halves offensive stats when HP becomes half or less.
+{{Gentable|V|rowspan=2}}
+|-
+| class="l" | Halves the Pokémon's Attack and Sp. Atk stats when its HP drops to 1/2 or less of its max.
+|-
+| rowspan="2" | 130
+| rowspan="2" | {{a|Cursed Body}}
+| class="l" | May disable a move that has dealt damage to the Pokémon.
+{{Gentable|V|rowspan=2}}
+|-
+| class="l" | When the Pokémon takes damage from a move, the attacker has a 30% chance of preventing that move from being used for 4 turns.
+|-
+| rowspan="2" | 131
+| rowspan="2" | {{a|Healer}}
+| class="l" | Sometimes cures the status conditions of the Pokémon's allies.
+{{Gentable|V|rowspan=2}}
+|-
+| class="l" | The Pokémon has a 50% chance of curing the status conditions of its allies at the end of every turn.
+|-
+| rowspan="2" | 132
+| rowspan="2" | {{a|Friend Guard}}
+| class="l" | Reduces damage dealt to allies.
+{{Gentable|V|rowspan=2}}
+|-
+| class="l" | Reduces the damage allies take by 25%.
+|-
+| rowspan="2" | 133
+| rowspan="2" | {{a|Weak Armor}}
+| class="l" | Physical attacks to the Pokémon lower its Defense stat but sharply raise its Speed stat.
+{{Gentable|V|rowspan=2}}
+|-
+| class="l" | When the Pokémon takes damage from a physical move, its Defense stat is lowered by 1 stage, but its Speed stat is boosted by 2 stages.
+|-
+| 134
+| {{a|Heavy Metal}}
+| class="l" | Doubles the Pokémon's weight.
+{{Gentable|V}}
+|-
+| 135
+| {{a|Light Metal}}
+| class="l" | Halves the Pokémon's weight.
+{{Gentable|V}}
+|-
+| rowspan="2" | 136
+| rowspan="2" | {{a|Multiscale}}
+| class="l" | Reduces damage taken when HP is full.
+{{Gentable|V|rowspan=2}}
+|-
+| class="l" | Halves the damage the Pokémon takes while its HP is full.
+|-
+| rowspan="2" | 137
+| rowspan="2" | {{a|Toxic Boost}}
+| class="l" | Powers up physical moves when the Pokémon is poisoned.
+{{Gentable|V|rowspan=2}}
+|-
+| class="l" | When the Pokémon is poisoned or badly poisoned, its Attack stat is boosted by 50%.
+|-
+| rowspan="2" | 138
+| rowspan="2" | {{a|Flare Boost}}
+| class="l" | Powers up special moves when the Pokémon is burned.
+{{Gentable|V|rowspan=2}}
+|-
+| class="l" | When the Pokémon is burned, its SpAtk stat is boosted by 50%.
+|-
+| rowspan="2" | 139
+| rowspan="2" | {{a|Harvest}}
+| class="l" | May create another Berry after one is used.
+{{Gentable|V|rowspan=2}}
+|-
+| class="l" | If the Pokémon has used a Berry, it has a 50% chance of creating another one at the end of every turn. In harsh sunlight, the Pokémon will definitely create a Berry.
+|-
+| rowspan="2" | 140
+| rowspan="2" | {{a|Telepathy}}
+| class="l" | The Pokémon dodges attacks from its allies.
+{{Gentable|V|rowspan=2}}
+|-
+| class="l" | The Pokémon anticipates and dodges the attacks of its allies.
+|-
+| rowspan="2" | 141
+| rowspan="2" | {{a|Moody}}
+| class="l" | Raises one stat sharply and lowers another every turn.
+{{Gentable|V|rowspan=2}}
+|-
+| class="l" | At the end of every turn, one of the Pokémon's stats will be boosted by 2 stages, but another will be lowered by 1 stage.
+|-
+| rowspan="2" | 142
+| rowspan="2" | {{a|Overcoat}}
+| class="l" | Protects the Pokémon from things like sand and powder.
+{{Gentable|V|rowspan=2}}
+|-
+| class="l" | The Pokémon takes no damage from sandstorms and is immune to moves and Abilities involving powder.
+|-
+| rowspan="2" | 143
+| rowspan="2" | {{a|Poison Touch}}
+| class="l" | May poison a target when the Pokémon makes contact.
+{{Gentable|V|rowspan=2}}
+|-
+| class="l" | When the Pokémon hits a target with a contact move, the target has a 30% chance of being poisoned.
+|-
+| rowspan="2" | 144
+| rowspan="2" | {{a|Regenerator}}
+| class="l" | The Pokémon has a little of its HP restored when withdrawn from battle.
+{{Gentable|V|rowspan=2}}
+|-
+| class="l" | The Pokémon has 1/3 of its max HP restored when it switches out of battle.
+|-
+| rowspan="2" | 145
+| rowspan="2" | {{a|Big Pecks}}
+| class="l" | Prevents the Pokémon from having its Defense stat lowered.
+{{Gentable|V|rowspan=2}}
+|-
+| class="l" | The Pokémon's Defense stat cannot be lowered by other Pokémon's moves or Abilities.
+|-
+| rowspan="2" | 146
+| rowspan="2" | {{a|Sand Rush}}
+| class="l" | Boosts the Pokémon's Speed in a sandstorm.
+{{Gentable|V|rowspan=2}}
+|-
+| class="l" | Doubles the Pokémon's Speed stat in a sandstorm.
+|-
+| rowspan="2" | 147
+| rowspan="2" | {{a|Wonder Skin}}
+| class="l" | Makes status moves more likely to miss.
+{{Gentable|V|rowspan=2}}
+|-
+| class="l" | Lowers the accuracy of status moves used against this Pokémon to 50%.
+|-
+| rowspan="2" | 148
+| rowspan="2" | {{a|Analytic}}
+| class="l" | Boosts move power when the Pokémon moves last.
+{{Gentable|V|rowspan=2}}
+|-
+| class="l" | Boosts the power of the Pokémon's moves by 30% when the Pokémon is the last to move that turn.
+|-
+| rowspan="2" | 149
+| rowspan="2" | {{a|Illusion}}
+| class="l" | Enters battle disguised as the last Pokémon in the party.
+{{Gentable|V|rowspan=2}}
+|-
+| class="l" | The Pokémon fools opponents by entering battle disguised as the last Pokémon in its Trainer’s party. It reverts to its usual appearance when it takes damage from a move.
+|-
+| rowspan="2" | 150
+| rowspan="2" | {{a|Imposter}}
+| class="l" | The Pokémon transforms itself into the Pokémon it's facing.
+{{Gentable|V|rowspan=2}}
+|-
+| class="l" | The Pokémon transforms into the Pokémon in front of it. It also copies all of that Pokémon's stats apart from its HP.
+|-
+| rowspan="2" | 151
+| rowspan="2" | {{a|Infiltrator}}
+| class="l" | The Pokémon's moves are unaffected by the target's barriers, substitutes, and the like.
+{{Gentable|V|rowspan=2}}
+|-
+| class="l" | When using its moves, the Pokémon ignores the effects of targets' Light Screen, Reflect, Aurora Veil, Safeguard, and substitutes. If the Pokémon is in the first party slot, wild Pokémon appear half as often.
+|-
+| rowspan="2" | 152
+| rowspan="2" | {{a|Mummy}}
+| class="l" | Contact with the Pokémon changes the attacker's Ability to Mummy.
+{{Gentable|V|rowspan=2}}
+|-
+| class="l" | When the Pokémon is hit by a contact move, the attacker has its Ability changed to Mummy.
+|-
+| rowspan="2" | 153
+| rowspan="2" | {{a|Moxie}}
+| class="l" | Boosts the Attack stat after knocking out any Pokémon.
+{{Gentable|V|rowspan=2}}
+|-
+| class="l" | When the Pokémon knocks out a target with an attack, it shows moxie, which boosts its Attack stat by 1 stage.
+|-
+| rowspan="2" | 154
+| rowspan="2" | {{a|Justified}}
+| class="l" | When the Pokémon is hit by a Dark-type attack, its Attack stat is boosted.
+{{Gentable|V|rowspan=2}}
+|-
+| class="l" | When the Pokémon takes damage from a Dark-type move, its Attack stat is boosted by 1 stage, for justice.
+|-
+| rowspan="2" | 155
+| rowspan="2" | {{a|Rattled}}
+| class="l" | Raises Speed when hit by Bug-, Dark-, or Ghost-type moves or by Intimidate.
+{{Gentable|V|rowspan=2}}
+|-
+| class="l" | The Pokémon gets scared when hit by a Dark-, Ghost-, or Bug-type attack or if intimidated, which boosts its Speed stat by 1 stage.
+|-
+| rowspan="2" | 156
+| rowspan="2" | {{a|Magic Bounce}}
+| class="l" | Reflects status moves instead of getting hit by them.
+{{Gentable|V|rowspan=2}}
+|-
+| class="l" | Instead of being affected by other Pokémon's status moves, the Pokémon bounces them back at the user.
+|-
+| rowspan="2" | 157
+| rowspan="2" | {{a|Sap Sipper}}
+| class="l" | Boosts Attack when hit by a Grass-type move.
+{{Gentable|V|rowspan=2}}
+|-
+| class="l" | Grass-type moves do not work on the Pokémon. Instead, they boost its Attack stat by 1 stage.
+|-
+| rowspan="2" | 158
+| rowspan="2" | {{a|Prankster}}
+| class="l" | Gives priority to the Pokémon's status moves.
+{{Gentable|V|rowspan=2}}
+|-
+| class="l" | Increases the priority of the Pokémon's status moves by 1 stage.
+|-
+| rowspan="2" | 159
+| rowspan="2" | {{a|Sand Force}}
+| class="l" | Boosts the power of Rock-, Ground-, and Steel-type moves in a sandstorm.
+{{Gentable|V|rowspan=2}}
+|-
+| class="l" | Boosts the power of the Pokémon's Rock-, Ground-, and Steel-type moves by 30% in a sandstorm.
+|-
+| rowspan="2" | 160
+| rowspan="2" | {{a|Iron Barbs}}
+| class="l" | The Pokémon's iron barbs damage the attacker if it makes direct contact.
+{{Gentable|V|rowspan=2}}
+|-
+| class="l" | When the Pokémon is hit by a contact move, the attacker takes damage equal to 1/8 of its max HP.
+|-
+| rowspan="2" | 161
+| rowspan="2" | {{a|Zen Mode}}
+| class="l" | Changes the Pokémon's shape when HP is half or less.
+{{Gentable|V|rowspan=2}}
+|-
+| class="l" | Changes the Pokémon's shape when its HP drops to 1/2 of its max.
+|-
+| rowspan="2" | 162
+| rowspan="2" | {{a|Victory Star}}
+| class="l" | Boosts the accuracy of its allies and itself.
+{{Gentable|V|rowspan=2}}
+|-
+| class="l" | Boosts the accuracy of the Pokémon and its allies by 10%.
+|-
+| rowspan="2" | 163
+| rowspan="2" | {{a|Turboblaze}}
+| class="l" | The Pokémon's moves are unimpeded by the Ability of the target.
+{{Gentable|V|rowspan=2}}
+|-
+| class="l" | The Pokémon’s blazing power burns through all opposition, allowing its moves to ignore the target’s Ability (with certain exceptions).
+|-
+| rowspan="2" | 164
+| rowspan="2" | {{a|Teravolt}}
+| class="l" | The Pokémon's moves are unimpeded by the Ability of the target.
+{{Gentable|V|rowspan=2}}
+|-
+| class="l" | The Pokémon’s overwhelming electric force tears through all resistance, allowing its moves to ignore the target’s Ability (with certain exceptions).
+|-
+| rowspan="2" | 165
+| rowspan="2" | {{a|Aroma Veil}}
+| class="l" | Protects itself and its allies from attacks that limit their move choices.
+{{Gentable|VI|rowspan=2}}
+|-
+| class="l" | The Pokémon and its allies cannot gain the Infatuated, Taunted, Unable to Repeat, Move Disabled, Healing Prevented, or Encore statuses.
+|-
+| rowspan="2" | 166
+| rowspan="2" | {{a|Flower Veil}}
+| class="l" | Grass-type allies are protected from status conditions and stat drops.
+{{Gentable|VI|rowspan=2}}
+|-
+| class="l" | Grass-type allies are immune to status conditions and cannot have their stats lowered.
+|-
+| rowspan="2" | 167
+| rowspan="2" | {{a|Cheek Pouch}}
+| class="l" | Restores HP as well when the Pokémon eats a Berry.
+{{Gentable|VI|rowspan=2}}
+|-
+| class="l" | The Pokémon has 1/3 of its max HP restored when it eats a Berry, in addition to the Berry's usual effect.
+|-
+| rowspan="2" | 168
+| rowspan="2" | {{a|Protean}}
+| class="l" | Changes the Pokémon's type to the type of the move it's about to use.
+{{Gentable|VI|rowspan=2}}
+|-
+| class="l" | Changes the Pokémon's type to the type of the move it's about to use. This works only once per time the Pokémon enters battle.
+|-
+| rowspan="2" | 169
+| rowspan="2" | {{a|Fur Coat}}
+| class="l" | Halves the damage from physical moves.
+{{Gentable|VI|rowspan=2}}
+|-
+| class="l" | Halves the damage the Pokémon takes from physical moves.
+|-
+| rowspan="2" | 170
+| rowspan="2" | {{a|Magician}}
+| class="l" | The Pokémon steals the held item from a target it hits.
+{{Gentable|VI|rowspan=2}}
+|-
+| class="l" | If the Pokémon is not already holding an item, it will steal the held item from targets it deals damage to with its moves.
+|-
+| 171
+| {{a|Bulletproof}}
+| class="l" | The Pokémon is immune to ball and bomb moves.
+{{Gentable|VI}}
+|-
+| rowspan="2" | 172
+| rowspan="2" | {{a|Competitive}}
+| class="l" | Boosts the Sp. Atk stat sharply when a stat is lowered.
+{{Gentable|VI|rowspan=2}}
+|-
+| class="l" | When the Pokémon has any of its stats lowered by an opponent, its Sp. Atk stat is boosted by 2 stages.
+|-
+| rowspan="2" | 173
+| rowspan="2" | {{a|Strong Jaw}}
+| class="l" | Boosts the power of the Pokémon's biting moves.
+{{Gentable|VI|rowspan=2}}
+|-
+| class="l" | The Pokémon's strong jaw boosts the power of its biting moves by 50%.
+|-
+| rowspan="2" | 174
+| rowspan="2" | {{a|Refrigerate}}
+| class="l" | Normal-type moves become Ice-type moves. The power of those moves is boosted a little.
+{{Gentable|VI|rowspan=2}}
+|-
+| class="l" | The Pokémon's Normal-type moves become Ice-type moves and their power is boosted by 20%.
+|-
+| rowspan="2" | 175
+| rowspan="2" | {{a|Sweet Veil}}
+| class="l" | Prevents the Pokémon and its allies from falling asleep.
+{{Gentable|VI|rowspan=2}}
+|-
+| class="l" | The Pokémon and its allies cannot become drowsy or be put to sleep.
+|-
+| rowspan="2" | 176
+| rowspan="2" | {{a|Stance Change}}
+| class="l" | The Pokémon changes form depending on how it battles.
+{{Gentable|VI|rowspan=2}}
+|-
+| class="l" | The Pokémon changes into its Blade Forme when it attacks and changes into its Shield Forme when it uses the move King's Shield.
+|-
+| rowspan="2" | 177
+| rowspan="2" | {{a|Gale Wings}}
+| class="l" | Gives priority to Flying-type moves at full HP.
+{{Gentable|VI|rowspan=2}}
+|-
+| class="l" | Increases the priority of the Pokémon's Flying-type moves by 1 stage while its HP is full.
+|-
+| rowspan="2" | 178
+| rowspan="2" | {{a|Mega Launcher}}
+| class="l" | Powers up pulse, cannon and shot moves.
+{{Gentable|VI|rowspan=2}}
+|-
+| class="l" | Boosts the power of the Pokémon's pulse, cannon and shot moves by 50%.
+|-
+| rowspan="2" | 179
+| rowspan="2" | {{a|Grass Pelt}}
+| class="l" | Boosts the Pokémon's Defense stat on Grassy Terrain.
+{{Gentable|VI|rowspan=2}}
+|-
+| class="l" | Boosts the Pokémon's Defense stat by 50% when on Grassy Terrain.
+|-
+| rowspan="2" | 180
+| rowspan="2" | {{a|Symbiosis}}
+| class="l" | The Pokémon passes its held item to an ally that has used up an item.
+{{Gentable|VI|rowspan=2}}
+|-
+| class="l" | When an ally consumes an item, the Pokémon gives its own held item to that ally.
+|-
+| rowspan="2" | 181
+| rowspan="2" | {{a|Tough Claws}}
+| class="l" | Powers up moves that make direct contact.
+{{Gentable|VI|rowspan=2}}
+|-
+| class="l" | Boosts the power of the Pokémon's contact moves by 30%.
+|-
+| rowspan="2" | 182
+| rowspan="2" | {{a|Pixilate}}
+| class="l" | Normal-type moves become Fairy-type moves. The power of those moves is boosted a little.
+{{Gentable|VI|rowspan=2}}
+|-
+| class="l" | The Pokémon's Normal-type moves become Fairy-type moves and their power is boosted by 20%.
+|-
+| rowspan="2" | 183
+| rowspan="2" | {{a|Gooey}}
+| class="l" | Contact with the Pokémon lowers the attacker's Speed stat.
+{{Gentable|VI|rowspan=2}}
+|-
+| class="l" | When the Pokémon is hit by a contact move, the attacker's Speed stat is lowered by 1 stage.
+|-
+| rowspan="2" | 184
+| rowspan="2" | {{a|Aerilate}}
+| class="l" | Normal-type moves become Flying-type moves. The power of those moves is boosted a little.
+{{Gentable|VI|rowspan=2}}
+|-
+| class="l" | The Pokémon's Normal-type moves become Flying-type moves and their power is boosted by 20%.
+|-
+| rowspan="2" | 185
+| rowspan="2" | {{a|Parental Bond}}
+| class="l" | The parent and child attack one after the other.
+{{Gentable|VI|rowspan=2}}
+|-
+| class="l" | The parent and child attack one after the other. The power of the child's attacks is 1/4 of those of the parent.
+|-
+| rowspan="2" | 186
+| rowspan="2" | {{a|Dark Aura}}
+| class="l" | Powers up each Pokémon's Dark-type moves.
+{{Gentable|VI|rowspan=2}}
+|-
+| class="l" | Boosts the power of the Dark-type moves of all Pokémon on the field by 33%.
+|-
+| rowspan="2" | 187
+| rowspan="2" | {{a|Fairy Aura}}
+| class="l" | Powers up each Pokémon's Fairy-type moves.
+{{Gentable|VI|rowspan=2}}
+|-
+| class="l" | Boosts the power of the Fairy-type moves of all Pokémon on the field by 33%.
+|-
+| rowspan="2" | 188
+| rowspan="2" | {{a|Aura Break}}
+| class="l" | The effects of "Aura" Abilities are reversed to lower the power of affected moves.
+{{Gentable|VI|rowspan=2}}
+|-
+| class="l" | Reverses the effects of Fairy Aura and Dark Aura, causing affected moves to deal 25% less damage instead of more.
+|-
+| rowspan="2" | 189
+| rowspan="2" | {{a|Primordial Sea}}
+| class="l" | Summons Heavy Rain and nullifies any Water-type attacks.
+{{Gentable|VI|rowspan=2}}
+|-
+| class="l" | Turns the weather into Heavy Rain and causes Water-type attacks to fail.
+|-
+| rowspan="2" | 190
+| rowspan="2" | {{a|Desolate Land}}
+| class="l" | Summons Harsh Sunlight and nullifies any Water-type attacks.
+{{Gentable|VI|rowspan=2}}
+|-
+| class="l" | Turns the weather into Harsh Sunlight and causes Water-type attacks to fail.
+|-
+| rowspan="2" | 191
+| rowspan="2" | {{a|Delta Stream}}
+| class="l" | Affects weather and eliminates all of the Flying type's weaknesses.
+{{Gentable|VI|rowspan=2}}
+|-
+| class="l" | The Pokémon changes the weather so that no moves are supereffective against the Flying type.
+|-
+| rowspan="2" | 192
+| rowspan="2" | {{a|Stamina}}
+| class="l" | Boosts the Defense stat when the Pokémon is hit by an attack.
+{{Gentable|VII|rowspan=2}}
+|-
+| class="l" | When the Pokémon takes damage from a move, its Defense stat is boosted by 1 stage.
+|-
+| rowspan="2" | 193
+| rowspan="2" | {{a|Wimp Out}}
+| class="l" | Switches out at half HP or less.
+{{Gentable|VII|rowspan=2}}
+|-
+| class="l" | The Pokémon cowardly switches out when its HP drops to 1/2 or less of its max.
+|-
+| rowspan="2" | 194
+| rowspan="2" | {{a|Emergency Exit}}
+| class="l" | Switches out at half HP or less.
+{{Gentable|VII|rowspan=2}}
+|-
+| class="l" | The Pokémon, sensing danger, switches out when its HP drops to 1/2 of its max.
+|-
+| rowspan="2" | 195
+| rowspan="2" | {{a|Water Compaction}}
+| class="l" | Boosts the Defense stat sharply when the Pokémon is hit by a Water-type move.
+{{Gentable|VII|rowspan=2}}
+|-
+| class="l" | Boosts the Defense stat by 2 stages when the Pokémon is hit by a Water-type move.
+|-
+| rowspan="2" | 196
+| rowspan="2" | {{a|Merciless}}
+| class="l" | The Pokémon's attacks become critical hits if the target is poisoned.
+{{Gentable|VII|rowspan=2}}
+|-
+| class="l" | The Pokémon's attacks become critical hits if the target is poisoned or badly poisoned.
+|-
+| rowspan="2" | 197
+| rowspan="2" | {{a|Shields Down}}
+| class="l" | When its HP drops to half or less, the Pokémon's shell breaks.
+{{Gentable|VII|rowspan=2}}
+|-
+| class="l" | When its HP drops to 1/2 or less of its max, the Pokémon's shell breaks and it becomes aggressive. When its HP is above 1/2 of its max, the Pokémon's shell reforms and it becomes defensive.
+|-
+| rowspan="2" | 198
+| rowspan="2" | {{a|Stakeout}}
+| class="l" | Doubles the damage dealt to a target that has just switched into battle.
+{{Gentable|VII|rowspan=2}}
+|-
+| class="l" | Doubles the damage dealt to the target's replacement if the target switches out.
+|-
+| rowspan="2" | 199
+| rowspan="2" | {{a|Water Bubble}}
+| class="l" | Lowers the power of Fire-type moves that hit the Pokémon and prevents it from being burned
+{{Gentable|VII|rowspan=2}}
+|-
+| class="l" | Halves the damage the Pokémon takes from Fire-type moves and doubles the power of its Water-type moves. The Pokémon cannot be burned.
+|-
+| rowspan="2" | 200
+| rowspan="2" | {{a|Steelworker}}
+| class="l" | Powers up Steel-type moves.
+{{Gentable|VII|rowspan=2}}
+|-
+| class="l" | Boosts the power of this Pokémon’s Steel-type moves by 50%.
+|-
+| rowspan="2" | 201
+| rowspan="2" | {{a|Berserk}}
+| class="l" | Boosts the Pokémon's Sp. Atk when it drops to half HP or less.
+{{Gentable|VII|rowspan=2}}
+|-
+| class="l" | Boosts the Pokémon's Sp. Atk stat by 1 stage when an attack causes its HP to drop to 1/2 or less of its max.
+|-
+| rowspan="2" | 202
+| rowspan="2" | {{a|Slush Rush}}
+| class="l" | Boosts the Pokémon's Speed stat in snow.
+{{Gentable|VII|rowspan=2}}
+|-
+| class="l" | Doubles the Pokémon's Speed stat in snow.
+|-
+| rowspan="2" | 203
+| rowspan="2" | {{a|Long Reach}}
+| class="l" | The Pokémon uses its moves without making contact with the target.
+{{Gentable|VII|rowspan=2}}
+|-
+| class="l" | None of the moves used by the Pokémon are considered contact moves.
+|-
+| rowspan="2" | 204
+| rowspan="2" | {{a|Liquid Voice}}
+| class="l" | Sound-based moves become Water-type moves.
+{{Gentable|VII|rowspan=2}}
+|-
+| class="l" | The Pokémon's sound-based moves become Water-type moves.
+|-
+| rowspan="2" | 205
+| rowspan="2" | {{a|Triage}}
+| class="l" | Gives priority to the Pokémon's healing moves.
+{{Gentable|VII|rowspan=2}}
+|-
+| class="l" | Increases the priority of the Pokémon's healing moves by 3 stages.
+|-
+| rowspan="2" | 206
+| rowspan="2" | {{a|Galvanize}}
+| class="l" | Normal-type moves become Electric-type moves. The power of those moves is boosted a little.
+{{Gentable|VII|rowspan=2}}
+|-
+| class="l" | The Pokémon's Normal-type moves become Electric-type moves and their power is boosted by 20%.
+|-
+| rowspan="2" | 207
+| rowspan="2" | {{a|Surge Surfer}}
+| class="l" | Doubles the Pokémon’s Speed on Electric Terrain.
+{{Gentable|VII|rowspan=2}}
+|-
+| class="l" | Doubles the Pokémon's Speed stat on Electric Terrain.
+|-
+| rowspan="2" | 208
+| rowspan="2" | {{a|Schooling}}
+| class="l" | The Pokémon schools when HP is Half or less.
+{{Gentable|VII|rowspan=2}}
+|-
+| class="l" | The Pokémon forms a powerful school when its HP is above 1/2 of its max. It stops schooling when its HP is 1/2 or less of its max.
+|-
+| rowspan="2" | 209
+| rowspan="2" | {{a|Disguise}}
+| class="l" | Once per battle, the shroud that covers the Pokémon can protect it from an attack.
+{{Gentable|VII|rowspan=2}}
+|-
+| class="l" | When the Pokémon is in its Disguised Form and would take damage from a move, it loses 1/8 of its max HP instead of taking the damage, then changes into its Busted Form.
+|-
+| rowspan="2" | 210
+| rowspan="2" | {{a|Battle Bond}}
+| class="l" | Defeating a Pokémon transforms it into Ash-Greninja and strengthens Water Shuriken.
+{{Gentable|VII|rowspan=2}}
+|-
+| class="l" | Defeating an opposing Pokémon strengthens the Pokémon's bond with its Trainer, and it becomes Ash-Greninja. Water Shuriken’s power increases to 20.
+|-
+| rowspan="2" | 211
+| rowspan="2" | {{a|Power Construct}}
+| class="l" | The Pokémon changes to its Complete Forme when at half HP or less.
+{{Gentable|VII|rowspan=2}}
+|-
+| class="l" | Cells gather to aid the Pokémon when its HP drops to 1/2 or less of its max, causing it to change into its Complete Forme. The Pokémon's max HP will also increase.
+|-
+| rowspan="2" | 212
+| rowspan="2" | {{a|Corrosion}}
+| class="l" | The Pokémon can poison the target even if it's a Steel or Poison type.
+{{Gentable|VII|rowspan=2}}
+|-
+| class="l" | The Pokémon can poison or badly poison targets even if they're Steel or Poison types.
+|-
+| rowspan="2" | 213
+| rowspan="2" | {{a|Comatose}}
+| class="l" | Is always drowsing but can still act.
+{{Gentable|VII|rowspan=2}}
+|-
+| class="l" | The Pokémon is always drowsing and is treated as asleep, but it can still use moves.
+|-
+| rowspan="2" | 214
+| rowspan="2" | {{a|Queenly Majesty}}
+| class="l" | Prevents opposing Pokémon from using priority moves.
+{{Gentable|VII|rowspan=2}}
+|-
+| class="l" | The Pokémon's majesty pressures opponents and makes them unable to use priority moves against the Pokémon or its allies.
+|-
+| rowspan="2" | 215
+| rowspan="2" | {{a|Innards Out}}
+| class="l" | Damages the attacker landing the finishing hit by the amount equal to its last HP.
+{{Gentable|VII|rowspan=2}}
+|-
+| class="l" | When the Pokémon takes damage from a move that knocks it out, it deals the same amount of damage to the attacker.
+|-
+| rowspan="2" | 216
+| rowspan="2" | {{a|Dancer}}
+| class="l" | Immediately copies dance moves used by other Pokémon.
+{{Gentable|VII|rowspan=2}}
+|-
+| class="l" | When another Pokémon uses a dance move, this Pokémon immediately performs the same move regardless of speed and without replacing their own move. This effect does not trigger from other Dancer activations.
+|-
+| rowspan="2" | 217
+| rowspan="2" | {{a|Battery}}
+| class="l" | Powers up ally Pokémon's special moves.
+{{Gentable|VII|rowspan=2}}
+|-
+| class="l" | Boosts the power of ally Pokémon’s special moves by 30%.
+|-
+| rowspan="2" | 218
+| rowspan="2" | {{a|Fluffy}}
+| class="l" | Halves damage from contact moves but doubles damage from Fire-type moves.
+{{Gentable|VII|rowspan=2}}
+|-
+| class="l" | Halves the damage taken from moves that make direct contact, but doubles that of Fire-type moves.
+|-
+| rowspan="2" | 219
+| rowspan="2" | {{a|Dazzling}}
+| class="l" | Opponents are unable to use priority moves against the Pokémon or its allies.
+{{Gentable|VII|rowspan=2}}
+|-
+| class="l" | The Pokémon dazzles its opponents, making them unable to use priority moves against the Pokémon or its allies.
+|-
+| rowspan="2" | 220
+| rowspan="2" | {{a|Soul-Heart}}
+| class="l" | Boosts the Pokémon's Sp. Atk stat every time another Pokémon faints.
+{{Gentable|VII|rowspan=2}}
+|-
+| class="l" | Whenever another Pokémon, opponent or ally, faints, the Sp. Atk stat of the Pokémon is boosted by 1 stage.
+|-
+| rowspan="2" | 221
+| rowspan="2" | {{a|Tangling Hair}}
+| class="l" | Contact with the Pokémon lowers the attacker's Speed stat.
+{{Gentable|VII|rowspan=2}}
+|-
+| class="l" | When the Pokémon is hit by a contact move, the attacker's Speed stat is lowered by 1 stage.
+|-
+| rowspan="2" | 222
+| rowspan="2" | {{a|Receiver}}
+| class="l" | The Pokémon copies the Ability of a defeated ally.
+{{Gentable|VII|rowspan=2}}
+|-
+| class="l" | The Pokémon changes its Ability to match that of a defeated ally.
+|-
+| rowspan="2" | 223
+| rowspan="2" | {{a|Power of Alchemy}}
+| class="l" | The Pokémon copies the Ability of a defeated ally.
+{{Gentable|VII|rowspan=2}}
+|-
+| class="l" | The Pokémon changes its Ability to match that of a defeated ally.
+|-
+| rowspan="2" | 224
+| rowspan="2" | {{a|Beast Boost}}
+| class="l" | Boosts the Pokémon's highest stat when it knocks out a target.
+{{Gentable|VII|rowspan=2}}
+|-
+| class="l" | Raises this Pokémon’s most proficient stat by 1 stage every time it knocks out a target.
+|-
+| 225
+| {{a|RKS System}}
+| class="l" | Changes the Pokémon's type to match the memory disc it holds.
+{{Gentable|VII}}
+|-
+| rowspan="2" | 226
+| rowspan="2" | {{a|Electric Surge}}
+| class="l" | Turns the ground into Electric Terrain when the Pokémon enters a battle.
+{{Gentable|VII|rowspan=2}}
+|-
+| class="l" | Turns the ground into Electric Terrain for 5 turns when the Pokémon enters a battle.
+|-
+| rowspan="2" | 227
+| rowspan="2" | {{a|Psychic Surge}}
+| class="l" | Turns the ground into Psychic Terrain when the Pokémon enters a battle.
+{{Gentable|VII|rowspan=2}}
+|-
+| class="l" | Turns the ground into Psychic Terrain for 5 turns when the Pokémon enters a battle.
+|-
+| rowspan="2" | 228
+| rowspan="2" | {{a|Misty Surge}}
+| class="l" | Turns the ground into Misty Terrain when the Pokémon enters a battle.
+{{Gentable|VII|rowspan=2}}
+|-
+| class="l" | Turns the ground into Misty Terrain for 5 turns when the Pokémon enters a battle.
+|-
+| rowspan="2" | 229
+| rowspan="2" | {{a|Grassy Surge}}
+| class="l" | Turns the ground into Grassy Terrain when the Pokémon enters a battle.
+{{Gentable|VII|rowspan=2}}
+|-
+| class="l" | Turns the ground into Grassy Terrain for 5 turns when the Pokémon enters a battle.
+|-
+| rowspan="2" | 230
+| rowspan="2" | {{a|Full Metal Body}}
+| class="l" | Prevents other Pokémon from lowering its stats.
+{{Gentable|VII|rowspan=2}}
+|-
+| class="l" | The Pokémon's stats cannot be lowered by other Pokémon's moves or Abilities.
+|-
+| rowspan="2" | 231
+| rowspan="2" | {{a|Shadow Shield}}
+| class="l" | Reduces damage taken when HP is full.
+{{Gentable|VII|rowspan=2}}
+|-
+| class="l" | Halves the damage the Pokémon takes while its HP is full.
+|-
+| rowspan="2" | 232
+| rowspan="2" | {{a|Prism Armor}}
+| class="l" | Reduces the power of supereffective attacks that hit the Pokémon.
+{{Gentable|VII|rowspan=2}}
+|-
+| class="l" | Reduces the damage the Pokémon takes from supereffective moves by 25%.
+|-
+| rowspan="2" | 233
+| rowspan="2" | {{a|Neuroforce}}
+| class="l" | Powers up the Pokémon's supereffective attacks even further.
+{{Gentable|VII|rowspan=2}}
+|-
+| class="l" | Boosts the power of the Pokémon's supereffective attacks by 25%.
+|-
+| rowspan="2" | 234
+| rowspan="2" | {{a|Intrepid Sword}}
+| class="l" | Boosts the Pokémon's Attack on first entry.
+{{Gentable|VIII|rowspan=2}}
+|-
+| class="l" | Boosts the Pokémon's Attack stat by 1 stage the first time the Pokémon enters a battle.
+|-
+| rowspan="2" | 235
+| rowspan="2" | {{a|Dauntless Shield}}
+| class="l" | Boosts the Pokémon's Defense on first entry.
+{{Gentable|VIII|rowspan=2}}
+|-
+| class="l" | Boosts the Pokémon's Defense stat by 1 stage the first time the Pokémon enters a battle.
+|-
+| rowspan="2" | 236
+| rowspan="2" | {{a|Libero}}
+| class="l" | Changes the Pokémon's type to the type of the move it's about to use.
+{{Gentable|VIII|rowspan=2}}
+|-
+| class="l" | Changes the Pokémon's type to the type of the move it's about to use. This works only once per time the Pokémon enters battle.
+|-
+| rowspan="2" | 237
+| rowspan="2" | {{a|Ball Fetch}}
+| class="l" | If not holding an item, retrieves the first failed Poké Ball.
+{{Gentable|VIII|rowspan=2}}
+|-
+| class="l" | If the Pokémon is not holding an item, it will fetch the Poké Ball from the first failed throw of the battle.
+|-
+| rowspan="2" | 238
+| rowspan="2" | {{a|Cotton Down}}
+| class="l" | Lowers all other Pokémon’s Speed when hit.
+{{Gentable|VIII|rowspan=2}}
+|-
+| class="l" | When this Pokémon is hit by an attack, it scatters cotton fluff around, lowering the Speed of all other Pokémon by 1 stage.
+|-
+| rowspan="2" | 239
+| rowspan="2" | {{a|Propeller Tail}}
+| class="l" | Ignores the effects of Abilities and moves that draw in moves.
+{{Gentable|VIII|rowspan=2}}
+|-
+| class="l" | The Pokémon ignores the effects of Abilities and moves that draw in moves.
+|-
+| rowspan="2" | 240
+| rowspan="2" | {{a|Mirror Armor}}
+| class="l" | Bounces back only the stat-lowering effects that the Pokémon receives.
+{{Gentable|VIII|rowspan=2}}
+|-
+| class="l" | Instead of being affected by stat-lowering effects, the Pokémon bounces them back at whichever Pokémon caused them.
+|-
+| rowspan="2" | 241
+| rowspan="2" | {{a|Gulp Missile}}
+| class="l" | After using Surf or Dive, returns with prey and when hit, spits it out to damage and hinder the attacker.
+{{Gentable|VIII|rowspan=2}}
+|-
+| class="l" | After using Surf or Dive, the Pokémon returns with prey, changing form based on its HP. Above half HP, it catches an Arrokuda. At half HP or less, a Pikachu. When it takes damage, it spits the prey at the attacker, dealing 1/4 of the attacker’s max HP. Arrokuda lowers the attacker’s Defense by 1 stage, Pikachu paralyzes it.
+|-
+| rowspan="2" | 242
+| rowspan="2" | {{a|Stalwart}}
+| class="l" | Ignores the effects of Abilities and moves that draw in moves.
+{{Gentable|VIII|rowspan=2}}
+|-
+| class="l" | The Pokémon ignores the effects of Abilities and moves that draw in moves.
+|-
+| rowspan="2" | 243
+| rowspan="2" | {{a|Steam Engine}}
+| class="l" | Boosts the Pokémon's Speed stat drastically if hit by a Fire- or Water-type move.
+{{Gentable|VIII|rowspan=2}}
+|-
+| class="l" | Boosts the Pokémon's Speed stat to its sixth stage when the Pokémon is hit by a Fire- or Water-type move. If the Pokémon is in the first party slot, Pokémon eggs hatch twice as fast.
+|-
+| rowspan="2" | 244
+| rowspan="2" | {{a|Punk Rock}}
+| class="l" | Boosts sound-based moves and reduces their damage taken.
+{{Gentable|VIII|rowspan=2}}
+|-
+| class="l" | Boosts the power of sound-based moves by 30%. The Pokémon also takes half damage from these kinds of moves.
+|-
+| rowspan="2" | 245
+| rowspan="2" | {{a|Sand Spit}}
+| class="l" | Summons a sandstorm when the Pokémon is hit by an attack.
+{{Gentable|VIII|rowspan=2}}
+|-
+| class="l" | Summons a sandstorm for 5 turns when the Pokémon takes damage from moves.
+|-
+| rowspan="2" | 246
+| rowspan="2" | {{a|Ice Scales}}
+| class="l" | Halves damage taken from special moves.
+{{Gentable|VIII|rowspan=2}}
+|-
+| class="l" | The Pokémon is protected by ice scales, which halve the damage taken from special moves.
+|-
+| rowspan="2" | 247
+| rowspan="2" | {{a|Ripen}}
+| class="l" | Ripens Berries and doubles their effect.
+{{Gentable|VIII|rowspan=2}}
+|-
+| class="l" | Doubles the effects of Berries eaten by the Pokémon.
+|-
+| rowspan="2" | 248
+| rowspan="2" | {{a|Ice Face}}
+| class="l" | Blocks the first physical hit and changes form, then restores in snow.
+{{Gentable|VIII|rowspan=2}}
+|-
+| class="l" | When the Pokémon is in its Ice Face form and is hit by a physical move, it takes no damage and changes into its Noice Face Form. Its Ice Face is restored when snow begins or if it enters battle during snow.
+|-
+| rowspan="2" | 249
+| rowspan="2" | {{a|Power Spot}}
+| class="l" | Just being next to the Pokémon powers up moves.
+{{Gentable|VIII|rowspan=2}}
+|-
+| class="l" | Boosts the power of moves used by the Pokémon's allies by 30%.
+|-
+| rowspan="2" | 250
+| rowspan="2" | {{a|Mimicry}}
+| class="l" | Changes the Pokémon's type based on the terrain.
+{{Gentable|VIII|rowspan=2}}
+|-
+| class="l" | The Pokémon's type changes to match the terrain.
+|-
+| rowspan="2" | 251
+| rowspan="2" | {{a|Screen Cleaner}}
+| class="l" | When the Pokémon enters a battle, it removes Light Screen, Reflect, and Aurora Veil.
+{{Gentable|VIII|rowspan=2}}
+|-
+| class="l" | When the Pokémon enters a battle, the effects of Light Screen, Reflect, and Aurora Veil are nullified for both opposing and ally Pokémon.
+|-
+| rowspan="2" | 252
+| rowspan="2" | {{a|Steely Spirit}}
+| class="l" | Boosts Steel-type moves for itself and its allies.
+{{Gentable|VIII|rowspan=2}}
+|-
+| class="l" | The Pokémon’s ironclad spirit empowers it and its allies, boosting the power of their Steel-type moves by 50%. This effect stacks if multiple Pokémon with this Ability are on the field.
+|-
+| rowspan="2" | 253
+| rowspan="2" | {{a|Perish Body}}
+| class="l" | When hit by a contact move, the Pokémon and the attacker will faint after three turns.
+{{Gentable|VIII|rowspan=2}}
+|-
+| class="l" | When hit by a move that makes direct contact, the Pokémon and the attacker will faint after three turns unless they switch out of battle.
+|-
+| rowspan="2" | 254
+| rowspan="2" | {{a|Wandering Spirit}}
+| class="l" | Swaps abilities with a Pokémon that makes contact.
+{{Gentable|VIII|rowspan=2}}
+|-
+| class="l" | When the Pokémon is hit by a contact move, it swaps Abilities with the attacker.
+|-
+| rowspan="2" | 255
+| rowspan="2" | {{a|Gorilla Tactics}}
+| class="l" | Boosts the Pokémon's Attack stat but only allows the use of a single move.
+{{Gentable|VIII|rowspan=2}}
+|-
+| class="l" | Boosts the holder's Attack stat by 50%. However, once the Pokémon uses a move, it becomes unable to use any other move but that one until it switches out of battle.
+|-
+| rowspan="2" | 256
+| rowspan="2" | {{a|Neutralizing Gas}}
+| class="l" | Nullifies the Abilities of other Pokémon.
+{{Gentable|VIII|rowspan=2}}
+|-
+| class="l" | While the Pokémon is in the battle, the effects of all other Pokémon's Abilities will be nullified or will not be triggered.
+|-
+| rowspan="2" | 257
+| rowspan="2" | {{a|Pastel Veil}}
+| class="l" | Prevents the Pokémon and its allies from being poisoned.
+{{Gentable|VIII|rowspan=2}}
+|-
+| class="l" | Prevents the Pokémon and its allies from being poisoned or badly poisoned.
+|-
+| rowspan="2" | 258
+| rowspan="2" | {{a|Hunger Switch}}
+| class="l" | The Pokémon changes its form after every turn.
+{{Gentable|VIII|rowspan=2}}
+|-
+| class="l" | The Pokémon changes its form, alternating between its Full Belly Mode and Hangry Mode at the end of every turn.
+|-
+| rowspan="2" | 259
+| rowspan="2" | {{a|Quick Draw}}
+| class="l" | Enables the Pokémon to move first occasionally.
+{{Gentable|VIII|rowspan=2}}
+|-
+| class="l" | The Pokémon's moves have a 30% chance of going first among moves of the same priority.
+|-
+| rowspan="2" | 260
+| rowspan="2" | {{a|Unseen Fist}}
+| class="l" | If the Pokémon can make contact, it can attack a protecting target but for less damage.
+{{Gentable|VIII|rowspan=2}}
+|-
+| class="l" | When the Pokémon uses contact moves, it can hit even targets that are protecting themselves, dealing 1/4 of the damage that the move would otherwise deal. Everything aside from the target's protective effects is still triggered.
+|-
+| rowspan="2" | 261
+| rowspan="2" | {{a|Curious Medicine}}
+| class="l" | Removes allies’ stat changes when it enters battle.
+{{Gentable|VIII|rowspan=2}}
+|-
+| class="l" | When the Pokémon enters a battle, it scatters medicine from its shell, which removes all stat changes from allies.
+|-
+| rowspan="2" | 262
+| rowspan="2" | {{a|Transistor}}
+| class="l" | Powers up Electric-type moves.
+{{Gentable|VIII|rowspan=2}}
+|-
+| class="l" | Boosts the power of this Pokémon’s Electric-type moves by 50%.
+|-
+| rowspan="2" | 263
+| rowspan="2" | {{a|Dragon's Maw}}
+| class="l" | Powers up Dragon-type moves.
+{{Gentable|VIII|rowspan=2}}
+|-
+| class="l" | Boosts the power of this Pokémon’s Dragon-type moves by 50%.
+|-
+| rowspan="2" | 264
+| rowspan="2" | {{a|Chilling Neigh}}
+| class="l" | Boosts the Attack stat after knocking out any Pokémon.
+{{Gentable|VIII|rowspan=2}}
+|-
+| class="l" | When the Pokémon knocks out a target, it utters a chilling neigh, which raises its Attack stat by 1 stage.
+|-
+| rowspan="2" | 265
+| rowspan="2" | {{a|Grim Neigh}}
+| class="l" | Boosts the Sp. Atk stat after knocking out any Pokémon.
+{{Gentable|VIII|rowspan=2}}
+|-
+| class="l" | When the Pokémon knocks out a target, it utters a terrifying neigh, which raises its Sp. Atk stat by 1 stage.
+|-
+| rowspan="2" | 266
+| rowspan="2" | {{a|As One}}
+| class="l" | Combines the effects of Unnerve and Chilling Neigh into one Ability.
+{{Gentable|VIII|rowspan=2}}
+|-
+| class="l" | Prevents opposing Pokémon from eating Berries. When this Pokémon knocks out a target, its Attack stat is raised by 1 stage.
+|-
+| rowspan="2" | 267
+| rowspan="2" | {{a|As One}}
+| class="l" | Combines the effects of Unnerve and Grim Neigh into one Ability.
+{{Gentable|VIII|rowspan=2}}
+|-
+| class="l" | Prevents opposing Pokémon from eating Berries. When this Pokémon knocks out a target, its Special Attack stat is raised by 1 stage.
+|-
+| rowspan="2" | 268
+| rowspan="2" | {{a|Lingering Aroma}}
+| class="l" | Contact with the Pokémon spreads their aroma to the attacker.
+{{Gentable|IX|rowspan=2}}
+|-
+| class="l" | Contact with the Pokémon changes the attacker's Ability to Lingering Aroma.
+|-
+| rowspan="2" | 269
+| rowspan="2" | {{a|Seed Sower}}
+| class="l" | Turns the ground into Grassy Terrain when the Pokémon is hit by an attack.
+{{Gentable|IX|rowspan=2}}
+|-
+| class="l" | Turns the ground into Grassy Terrain for 5 turns when the Pokémon takes damage from moves.
+|-
+| rowspan="2" | 270
+| rowspan="2" | {{a|Thermal Exchange}}
+| class="l" | Boosts Attack when hit with a Fire-type move and cannot be burned.
+{{Gentable|IX|rowspan=2}}
+|-
+| class="l" | Boosts the Attack stat by 1 stage when the Pokémon is hit by a Fire-type attack. The Pokémon also cannot be burned.
+|-
+| rowspan="2" | 271
+| rowspan="2" | {{a|Anger Shell}}
+| class="l" | Boosts Attack, Sp. Atk, and Speed but lowers defenses when HP drops below half.
+{{Gentable|IX|rowspan=2}}
+|-
+| class="l" | When this Pokémon takes damage from a move that causes its HP to drop to half or less, it gets angry. This raises its Attack, Sp. Atk, and Speed by 1 stage, but lowers its Defense and Sp. Def by 1 stage.
+|-
+| rowspan="2" | 272
+| rowspan="2" | {{a|Purifying Salt}}
+| class="l" | Prevents status conditions and halves damage from Ghost moves.
+{{Gentable|IX|rowspan=2}}
+|-
+| class="l" | The Pokémon's pure salt protects it from status conditions and halves the damage taken from Ghost-type moves.
+|-
+| rowspan="2" | 273
+| rowspan="2" | {{a|Well-Baked Body}}
+| class="l" | Sharply boosts its Defense stat when it's hit by an Fire-type move.
+{{Gentable|IX|rowspan=2}}
+|-
+| class="l" | Fire-type moves do not work on the Pokémon. Instead, they boost its Defense stat by 2 stages.
+|-
+| rowspan="2" | 274
+| rowspan="2" | {{a|Wind Rider}}
+| class="l" | Raises Attack in Tailwind or when hit by a wind move.
+{{Gentable|IX|rowspan=2}}
+|-
+| class="l" | Raises this Pokémon’s Attack by 1 stage if Tailwind is active on its side or if it is hit by a wind move. This Pokémon is also immune to damage from wind moves.
+|-
+| rowspan="2" | 275
+| rowspan="2" | {{a|Guard Dog}}
+| class="l" | Boosts Attack if intimidated. Cannot be forced to switch out.
+{{Gentable|IX|rowspan=2}}
+|-
+| class="l" | Boosts the Pokémon's Attack stat by 1 stage instead of lowering it if intimidated. Moves and items that would force the Pokémon to switch out of battle also fail to work.
+|-
+| rowspan="2" | 276
+| rowspan="2" | {{a|Rocky Payload}}
+| class="l" | Powers up Rock-type moves.
+{{Gentable|IX|rowspan=2}}
+|-
+| class="l" | Boosts the power of this Pokémon’s Rock-type moves by 50%.
+|-
+| rowspan="2" | 277
+| rowspan="2" | {{a|Wind Power}}
+| class="l" | Becomes charged in Tailwind or when hit by a wind move, doubling its next Electric move.
+{{Gentable|IX|rowspan=2}}
+|-
+| class="l" | If Tailwind is active on its side or it is hit by a wind move, the Pokémon becomes charged, doubling the power of the next Electric-type move it uses.
+|-
+| rowspan="2" | 278
+| rowspan="2" | {{a|Zero to Hero}}
+| class="l" | The Pokémon transforms into its Hero Form when it switches out.
+{{Gentable|IX|rowspan=2}}
+|-
+| class="l" | The Pokémon changes into its Hero Form when it switches out of battle.
+|-
+| rowspan="2" | 279
+| rowspan="2" | {{a|Commander}}
+| class="l" | Enters an ally Dondozo’s mouth, becoming untargetable and boosting Dondozo's stats.
+{{Gentable|IX|rowspan=2}}
+|-
+| class="l" | When this Pokémon enters battle with Dondozo, it goes inside its mouth, becoming unable to act or be targeted. While inside, it raises Dondozo’s Attack, Defense, Sp. Atk, Sp. Def, and Speed by 2 stages each. If the Pokémon is in the first party slot, wild encounters have a 30% chance to be double battles.
+|-
+| rowspan="2" | 280
+| rowspan="2" | {{a|Electromorphosis}}
+| class="l" | Becomes charged in when hit, doubling its next Electric move.
+{{Gentable|IX|rowspan=2}}
+|-
+| class="l" | The Pokémon becomes charged when it takes damage, doubling the power of the next Electric-type move the Pokémon uses.
+|-
+| rowspan="2" | 281
+| rowspan="2" | {{a|Protosynthesis}}
+| class="l" | Boosts the Pokémon's highest stat in harsh sunlight or if the it's holding Booster Energy.
+{{Gentable|IX|rowspan=2}}
+|-
+| class="l" | Boosts the Pokémon's most proficient stat by 30%, or 50% if Speed is the most proficient, in harsh sunlight or if the Pokémon is holding Booster Energy.
+|-
+| rowspan="2" | 282
+| rowspan="2" | {{a|Quark Drive}}
+| class="l" | Boosts the Pokémon's highest stat in Electric Terrain or if the it's holding Booster Energy.
+{{Gentable|IX|rowspan=2}}
+|-
+| class="l" | Boosts the Pokémon's most proficient stat by 30%, or 50% if Speed is the most proficient, in on Electric Terrain or if the Pokémon is holding Booster Energy.
+|-
+| rowspan="2" | 283
+| rowspan="2" | {{a|Good as Gold}}
+| class="l" | The Pokémon is immune to status moves.
+{{Gentable|IX|rowspan=2}}
+|-
+| class="l" | A body of pure, solid gold gives the Pokémon full immunity to other Pokémon's status moves.
+|-
+| rowspan="2" | 284
+| rowspan="2" | {{a|Vessel of Ruin}}
+| class="l" | Lowers Sp. Atk of all other Pokémon.
+{{Gentable|IX|rowspan=2}}
+|-
+| class="l" | The power of the Pokémon’s ruinous vessel lowers the Sp. Atk of all Pokémon except itself by 25%.
+|-
+| rowspan="2" | 285
+| rowspan="2" | {{a|Sword of Ruin}}
+| class="l" | Lowers Defense of all other Pokémon.
+{{Gentable|IX|rowspan=2}}
+|-
+| class="l" | The power of the Pokémon's ruinous sword lowers the Defense stats of all Pokémon except itself by 25%.
+|-
+| rowspan="2" | 286
+| rowspan="2" | {{a|Tablets of Ruin}}
+| class="l" | Lowers Attack of all other Pokémon.
+{{Gentable|IX|rowspan=2}}
+|-
+| class="l" | The power of the Pokémon's ruinous wooden tablets lowers the Attack stats of all Pokémon except itself by 25%.
+|-
+| rowspan="2" | 287
+| rowspan="2" | {{a|Beads of Ruin}}
+| class="l" | Lowers Sp.Def of all other Pokémon.
+{{Gentable|IX|rowspan=2}}
+|-
+| class="l" | The power of the Pokémon’s ruinous beads lowers the Sp. Def of all Pokémon excep itself by 25%.
+|-
+| rowspan="2" | 288
+| rowspan="2" | {{a|Orichalcum Pulse}}
+| class="l" | Summons harsh sunlight and boosts highest attacking stat when in harsh sunlight.
+{{Gentable|IX|rowspan=2}}
+|-
+| class="l" | Turns the sunlight harsh for 5 turns when the Pokémon enters a battle. The ancient pulse thrumming through the Pokémon also boosts its most proficient offensive stat by 33% in harsh sunlight.
+|-
+| rowspan="2" | 289
+| rowspan="2" | {{a|Hadron Engine}}
+| class="l" | Turns ground to Electric terrain and boosts highest attacking stat when on Electric Terrain.
+{{Gentable|IX|rowspan=2}}
+|-
+| class="l" | Turns the ground into Electric Terrain for 5 turns when the Pokémon enters a battle. The futuristic engine within the Pokémon also boosts its most proficient offensive stat by 33% on Electric Terrain.
+|-
+| rowspan="2" | 290
+| rowspan="2" | {{a|Opportunist}}
+| class="l" | Copies opponent's stat boosts whenever it can.
+{{Gentable|IX|rowspan=2}}
+|-
+| class="l" | If an opponent's stat is boosted, the Pokémon seizes the opportunity to boost the same stat for itself.
+|-
+| rowspan="2" | 291
+| rowspan="2" | {{a|Cud Chew}}
+| class="l" | Eats a Berry again on the next turn.
+{{Gentable|IX|rowspan=2}}
+|-
+| class="l" | When the Pokémon eats a Berry, it will regurgitate that Berry at the end of the next turn and eat it one more time.
+|-
+| rowspan="2" | 292
+| rowspan="2" | {{a|Sharpness}}
+| class="l" | Powers up slicing moves.
+{{Gentable|IX|rowspan=2}}
+|-
+| class="l" | Boosts the power of the Pokémon's slicing moves by 50%. The Pokémon can also cut Tall Grass within a two-square radius instead of a one-square radius when using Cut outside of battle.
+|-
+| rowspan="2" | 293
+| rowspan="2" | {{a|Supreme Overlord}}
+| class="l" | Boosts damage for each fainted ally.
+{{Gentable|IX|rowspan=2}}
+|-
+| class="l" | When the Pokémon enters a battle, the power of its moves is boosted by 10% for each Pokémon in its party that has been defeated in the battle already. The maximum boost is 50%.
+|-
+| rowspan="2" | 294
+| rowspan="2" | {{a|Costar}}
+| class="l" | When this Pokémon enters battle, it copies an ally’s stat changes.
+{{Gentable|IX|rowspan=2}}
+|-
+| class="l" | When the Pokémon enters a battle, it copies an ally's stat changes. If the Pokémon is in the first party slot, wild encounters have a 30% chance to be double battles.
+|-
+| rowspan="2" | 295
+| rowspan="2" | {{a|Toxic Debris}}
+| class="l" | Scatters Toxic Spikes when hit by physical moves.
+{{Gentable|IX|rowspan=2}}
+|-
+| class="l" | When this Pokémon takes damage from a physical move, it scatters a Toxic Spikes trap at the feet of the opposing team.
+|-
+| rowspan="2" | 296
+| rowspan="2" | {{a|Armor Tail}}
+| class="l" | Opponents are unable to use priority moves against the Pokémon or its allies.
+{{Gentable|IX|rowspan=2}}
+|-
+| class="l" | The mysterious tail covering the Pokémon's head makes opponents unable to use priority moves against the Pokémon or its allies.
+|-
+| rowspan="2" | 297
+| rowspan="2" | {{a|Earth Eater}}
+| class="l" | Restores HP if hit by a Ground-type move.
+{{Gentable|IX|rowspan=2}}
+|-
+| class="l" | Ground-type moves do not work on the Pokémon. Instead, they restore 1/4 of its max HP.
+|-
+| rowspan="2" | 298
+| rowspan="2" | {{a|Mycelium Might}}
+| class="l" | The Pokémon's status moves will happen more slowly, but ignore the target's ability.
+{{Gentable|IX|rowspan=2}}
+|-
+| class="l" | The Pokémon will always act last within its own priority bracket when using status moves, but these moves will be unimpeded by the Ability of the target.
+|-
+| rowspan="2" | 299
+| rowspan="2" | {{a|Hospitality}}
+| class="l" | Restores ally's HP when it enters battle.
+{{Gentable|IX|rowspan=2}}
+|-
+| class="l" | When the Pokémon enters a battle, it showers its ally with hospitality, restoring 1/4 of its max HP.
+|-
+| rowspan="2" | 300
+| rowspan="2" | {{a|Mind's Eye}}
+| class="l" | The Pokémon ignores evasiveness and accuracy changes and Ghost-type immunities.
+{{Gentable|IX|rowspan=2}}
+|-
+| class="l" | The Pokémon ignores changes to opponents' evasiveness, its accuracy can't be lowered, and it can hit Ghost types with Normal- and Fighting-type moves.
+|-
+| rowspan="2" | 301
+| rowspan="2" | {{a|Embody Aspect}}
+| class="l" | Boosts the Pokémon's Speed stat when it Terastalizes.
+{{Gentable|IX|rowspan=2}}
+|-
+| class="l" | The Pokémon's heart fills with memories, causing the Teal Mask to shine and the Pokémon's Speed stat to be boosted.
+|-
+| rowspan="2" | 302
+| rowspan="2" | {{a|Embody Aspect}}
+| class="l" | Boosts the Pokémon's Attack stat when it Terastalizes.
+{{Gentable|IX|rowspan=2}}
+|-
+| class="l" | The Pokémon's heart fills with memories, causing the Hearthflame Mask to shine and the Pokémon's Attack stat to be boosted.
+|-
+| rowspan="2" | 303
+| rowspan="2" | {{a|Embody Aspect}}
+| class="l" | Boosts the Pokémon's Sp. Def stat when it Terastalizes.
+{{Gentable|IX|rowspan=2}}
+|-
+| class="l" | The Pokémon's heart fills with memories, causing the Wellspring Mask to shine and the Pokémon's Sp. Def stat to be boosted.
+|-
+| rowspan="2" | 304
+| rowspan="2" | {{a|Embody Aspect}}
+| class="l" | Boosts the Pokémon's Defense stat when it Terastalizes.
+{{Gentable|IX|rowspan=2}}
+|-
+| class="l" | The Pokémon's heart fills with memories, causing the Cornerstone Mask to shine and the Pokémon's Defense stat to be boosted.
+|-
+| rowspan="2" | 305
+| rowspan="2" | {{a|Toxic Chain}}
+| class="l" | May badly poison any target the Pokémon hits with a move.
+{{Gentable|IX|rowspan=2}}
+|-
+| class="l" | The power of the Pokémon's toxic chain has a 30% chance to badly poison any target the Pokémon hits with an attack.
+|-
+| rowspan="2" | 306
+| rowspan="2" | {{a|Supersweet Syrup}}
+| class="l" | Lowers the opposing Pokémon's evasiveness stats on first entry.
+{{Gentable|IX|rowspan=2}}
+|-
+| class="l" | A sickly sweet scent spreads across the field the first time the Pokémon enters a battle, opponents' evasiveness is lowered by 1 stage. This Ability is triggered only once per battle.
+|-
+| rowspan="2" | 307
+| rowspan="2" | {{a|Tera Shift}}
+| class="l" | The Pokémon transforms into its Terastal Form when it enters battle.
+{{Gentable|IX|rowspan=2}}
+|-
+| class="l" | When the Pokémon enters a battle, it absorbs the energy around itself and transforms into its Terastal Form.
+|-
+| rowspan="2" | 308
+| rowspan="2" | {{a|Tera Shell}}
+| class="l" | When HP is full, all attacks are not very effective.
+{{Gentable|IX|rowspan=2}}
+|-
+| class="l" | The Pokémon's shell contains the powers of each type. All damage-dealing moves that hit the Pokémon when its HP is full will not be very effective.
+|-
+| rowspan="2" | 309
+| rowspan="2" | {{a|Teraform Zero}}
+| class="l" | Removes weather and terrain when the Pokémon enters its Stellar Form.
+{{Gentable|IX|rowspan=2}}
+|-
+| class="l" | When Terapagos changes into its Stellar Form, it uses its hidden powers to eliminate all effects of weather and terrain, reducing them to zero.
+|-
+| rowspan="2" | 310
+| rowspan="2" | {{a|Poison Puppeteer}}
+| class="l" | Pokemon poisoned by the Pokémon's moves will also be confused.
+{{Gentable|IX|rowspan=2}}
+|-
+| class="l" | Pokémon poisoned or badly poisoned by Pecharunt's moves will also become confused.
+|-
+| rowspan="2" | 311
+| rowspan="2" | {{a|Piercing Drill}}
+| class="l" | If the Pokémon can make contact, it can attack a protecting target but for less damage.
+{{Gentable|IX|rowspan=2}}
+|-
+| class="l" | When the Pokémon uses contact moves, it can hit even targets that are protecting themselves, dealing 1/4 of the damage that the move would otherwise deal. Everything aside from the target's protective effects is still triggered.
+|-
+| rowspan="2" | 312
+| rowspan="2" | {{a|Dragonize}}
+| class="l" | Normal-type moves become Dragon-type moves. The power of those moves is boosted a little.
+{{Gentable|IX|rowspan=2}}
+|-
+| class="l" | The Pokémon's Normal-type moves become Dragon-type moves and their power is boosted by 20%.
+|-
+| rowspan="2" | 313
+| rowspan="2" | {{a|Dragonize}}
+| class="l" | Normal-type moves become Dragon-type moves. The power of those moves is boosted a little.
+{{Gentable|IX|rowspan=2}}
+|-
+| class="l" | The Pokémon's Normal-type moves become Dragon-type moves and their power is boosted by 20%.
+|-
+| rowspan="2" | 314
+| rowspan="2" | {{a|Dragonize}}
+| class="l" | Normal-type moves become Dragon-type moves. The power of those moves is boosted a little.
+{{Gentable|IX|rowspan=2}}
+|-
+| class="l" | The Pokémon's Normal-type moves become Dragon-type moves and their power is boosted by 20%.
+|-
+| rowspan="2" | 315
+| rowspan="2" | {{a|Mega Sol}}
+| class="l" | Moves used by the Pokémon are treated as if the sunlight is harsh.
+{{Gentable|IX|rowspan=2}}
+|-
+| class="l" | Even when the sunlight has not turned harsh, the Pokémon can use its moves as if the weather were harsh sunlight.
+|-
+| rowspan="2" | 316
+| rowspan="2" | {{a|Mega Sol}}
+| class="l" | Moves used by the Pokémon are treated as if the sunlight is harsh.
+{{Gentable|IX|rowspan=2}}
+|-
+| class="l" | Even when the sunlight has not turned harsh, the Pokémon can use its moves as if the weather were harsh sunlight.
+|-
+| rowspan="2" | 317
+| rowspan="2" | {{a|Mega Sol}}
+| class="l" | Moves used by the Pokémon are treated as if the sunlight is harsh.
+{{Gentable|IX|rowspan=2}}
+|-
+| class="l" | Even when the sunlight has not turned harsh, the Pokémon can use its moves as if the weather were harsh sunlight.
+|-
+| rowspan="2" | 318
+| rowspan="2" | {{a|Spicy Spray}}
+| class="l" | Burns attackers when the Pokémon is hit by an attack.
+{{Gentable|IX|rowspan=2}}
+|-
+| class="l" | When the Pokémon takes damage from a move, it burns the attacker.

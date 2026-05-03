@@ -1,118 +1,493 @@
 ﻿# See the documentation on the wiki to learn how to edit this file.
 #-------------------------------
-[ROCKBODY]
-Name = Rock Body
-Description = The Pokémon gradually regains HP in a sandstorm.
+[ABSOLUTEZERO]
+Name = Absolute Zero
+ShortDesc = Summons snow, boosts highest offensive stat in snow.
+Description = Summons hail when the Pokémon enters a battle. The freezing emptiness in the Pokémon also boosts its most proficient offensive stat by 33% when in snow.
 #-------------------------------
-[PERMAFROST]
-Name = Permafrost
-Description = The Pokémon is always frozen and will never thaw. It can attack while in its frozen state.
+[ARCHANGELSFLIGHT]
+Name = Archangel's Flight
+ShortDesc = The Pokémon is also Flying-Type, this also combines the effect of Purifying Light.
+Description = Bathed in holy light, the Pokémon becomes Flying-type, is immune to Shadow-type moves, and its moves ignore the target’s Ability (with certain exceptions).
 #-------------------------------
-[IGNITION]
-Name = Ignition
-Description = Gives priority to the Pokémon's Fire-type moves while its HP is full.
-#-------------------------------
-[MACHFIVE]
-Name = Mach 5
-Description = The Pokémon's supersonic engines allow it to raise its speed if it makes contact with another Pokémon.
-#-------------------------------
-[JETLAG]
-Name = Jet Lag
-Description = For its first turn on the field, all damaging moves go first.
-#-------------------------------
-[PUFFEDOUT]
-Name = Puffed Out
-Description = The Pokémon's cowardice causes it to inflate and become defensive for the rest of the battle if its HP drops below half or less without fainting.
-#-------------------------------
-[VAMPYRE]
-Name = Vampyre
-Description = Fire-type moves become Ghost-type moves. The power of those moves is boosted a little.
-#-------------------------------
-[CORRUPTION]
-Name = Corruption
-Description = Normal-type moves become Dark-type moves. The power of those moves is boosted a little.
-#-------------------------------
-[DRACONIFY]
-Name = Draconify
-Description = Normal-type moves become Dragon-type moves. The power of those moves is boosted a little.
-#-------------------------------
-[GROUNDED]
-Name = Grounded
-Description = The Pokémon's lack of flight allows it to be effected by Ground-Type Moves and Terrain, but Ground-Type Pokémon are now susceptible to its Electric-Type Moves.
-#-------------------------------
-[BOTANIST]
-Name = Botanist
-Description = Powers up Grass-type moves.
-#-------------------------------
-[RETELLER]
-Name = Reteller
-Description = Whenever a sound move is used in battle, the Pokémon will copy the user to immediately repeat what was said.
-#-------------------------------
-[TRUEWISDOM]
-Name = True Wisdom
-Description = The Pokémon's true wisdom allows it to double the damage done by any super-effective sound-based move.
+[BIOLUMINESCENCE]
+Name = Bioluminescence
+ShortDesc = Doubles Speed in the dark and halves it in harsh sunlight.
+Description = Doubles this Pokémon’s Speed at night or in caves, but halves it during harsh sunlight. If the Pokémon is in the first party slot, wild Pokémon appear twice as often.
 #-------------------------------
 [BOILINGPOINT]
 Name = Boiling Point
-Description = The boiling system within the Pokémon heats up their water-type attacks, causing them to have a extra 10% chance to burn.
+ShortDesc = Water-type attacks have an extra 10% chance to burn.
+Description = The boiling system within the Pokémon heats up its Water-type attacks, increasing their chance to burn by 10%. These moves will also thaw any frozen Pokémon that uses or is hit by them.
 #-------------------------------
-[SMOOTHSTONE]
-Name = Smooth Stone
-Description = The Pokémon's smooth surface halves damage from all Water-Type Attacks.
-#-------------------------------
-[CHIPPEDSTONE]
-Name = Chipped Stone
-Description = Scatters spikes at the feet of the opposing team when the Pokémon takes damage from physical moves.
-#-------------------------------
-[EMPTYSOUNDSCAPE]
-Name = Empty Soundscape
-Description = The Pokémon creates an empty soundscape as long as it is in battle, nullifying all sound-based moves.
-#-------------------------------
-[TONOFBRICKS]
-Name = Ton of Bricks
-Description = Scatters plastic toys around the opposing team when the Pokémon takes damage from physical moves.
-#-------------------------------
-[LETHALLEGS]
-Name = Lethal Legs
-Description = Powers up kicking moves.
-#-------------------------------
-[THERMALINSULATION]
-Name = Thermal Insulation
-Description = Boosts the Special Defense stat sharply when the Pokémon is hit by a Fire-type move. The Pokémon also cannot be burned.
+[BOTANIST]
+Name = Botanist
+ShortDesc = Powers up Grass-type moves.
+Description = Boosts the power of this Pokémon’s Grass-type moves by 50%.
 #-------------------------------
 [BRITTLEIRON]
 Name = Brittle Iron
-Description = The Pokémon's cold, hard body shatters metal that hit it, giving it immunity to Steel-Type Physical Attacks.
+ShortDesc = The Pokémon is immune to Steel-type physical attacks.
+Description = The Pokémon’s cold, brittle body shatters incoming metal, making it immune to Steel-type physical attacks.
 #-------------------------------
-[FORCEOFNATURE]
-Name = Force of Nature
-Description = Boosts the Pokémon's Attack if it uses a Dragon-Type move, boosts its Special Attack if it uses a Grass-Type Move.
+[BOOKMARK]
+Name = Bookmark
+ShortDesc = Enters an ally Wikiridion’s pages, becoming untargetable and boosting Wikiridion’s stats.
+Description = When this Pokémon enters battle with Wikiridion, it goes inside its pages, becoming unable to act or be targeted. While inside, it raises Wikiridion’s Attack, Defense, Sp. Atk, Sp. Def, and Speed by 2 stages each.
 #-------------------------------
-[ENGINEOFINDUSTRY]
-Name = Engine of Industry
-Description = Boosts the Pokémon's Defense if it uses a Steel-Type move, boosts its Special Defense if it uses a Ground-Type Move.
+[BRUTALBROADCAST]
+Name = Brutal Broadcast
+ShortDesc = Each turn, lowers a random stat of all non-Shadow Pokémon.
+Description = The Pokémon emits brutal radio waves that disrupt others. At the end of each turn, all non-Shadow Pokémon have a random stat lowered. This effect does not trigger abilities that activate when stats are lowered.
 #-------------------------------
-[FERMENTATION]
-Name = Fermentation
-Description = The Pokémon's fermented internal liquid confuses attackers that use HP-draining moves.
-#-------------------------------
-[BIOLUMINESENCE]
-Name = Bioluminesence
-Description = The Pokémon's Speed is doubled in the dark, but halved in harsh sunlight.
-#-------------------------------
-[RINGTOSS]
-Name = Ring Toss
-Description = Boosts the power of Fling by 50%. May also retrieve the flung item at the beginning of the next turn.
-#-------------------------------
-[GFORCE]
-Name = G-Force
-Description = Intensifies gravity when the Pokémon enters a battle.
-#-------------------------------
-[MUSCLESTIM]
-Name = Muscle Stim
-Description = The Pokémon draws in all Electric-type moves. Instead of taking damage from them, its Attack stat is boosted.
+[BULWARK]
+Name = Bulwark
+ShortDesc = Prevents recoil damage and halves damage from Rock-type moves.
+Description = Protects the Pokémon from recoil damage and halves the damage it takes from Rock-type moves.
 #-------------------------------
 [CAFFEINERUSH]
 Name = Caffeine Rush
-Description = Prevents all Pokémon on the field from falling asleep.
+ShortDesc = Prevents Pokémon on the field from falling asleep.
+Description = Prevents all Pokémon on the field from becoming drowsy or falling asleep.
+#-------------------------------
+[CATEGORYSIX]
+Name = Category 6
+ShortDesc = In weather, Flying moves gain priority and the Pokémon is immune to sandstorm damage.
+Description = If weather is active, this Pokémon’s Flying-type moves have their priority increased by 1 stage. It is also immune to damage from sandstorms.
+#-------------------------------
+[CHIPPEDSTONE]
+Name = Chipped Stone
+ShortDesc = Scatters Stealth Rock when hit by physical moves.
+Description = When this Pokémon takes damage from a physical move, it scatters a Stealth Rock trap around the opposing team.
+#-------------------------------
+[CHITINOUSSHELL]
+Name = Chitinous Shell
+ShortDesc = Protects the Pokémon from sandstorm damage and powder moves.
+Description = The Pokémon’s chitinous shell protects it from sandstorms and prevents the effects of powder and spores.
+#-------------------------------
+[COLDASICE]
+Name = Cold as Ice
+ShortDesc = Prevents other Pokémon from using self-targeting status moves.
+Description = A heart of cold, hateful callousness prevents other Pokémon from using self-targeting status moves.
+#-------------------------------
+[CONTAMINATE]
+Name = Contaminate
+ShortDesc = Normal-type moves become Poison-type moves. The power of those moves is boosted a little.
+Description = The Pokémon's Normal-type moves become Poison-type moves and their power is boosted by 20%.
+#-------------------------------
+[CONTROLLEDDEMOLITION]
+Name = Controlled Demolition
+ShortDesc = If above half HP, the Pokémon survives explosive moves with a little HP remaining.
+Description = If the Pokémon is above 50% HP, it will survive using any explosive move with 1/16th HP remaining.
+#-------------------------------
+[CORRUPTION]
+Name = Corruption
+ShortDesc = Normal-type moves become Dark-type moves. The power of those moves is boosted a little.
+Description = The Pokémon's Normal-type moves become Dark-type moves and their power is boosted by 20%.
+#-------------------------------
+[CRACKEDFISTS]
+Name = Cracked Fists
+ShortDesc = On contact, raises Attack and Speed but sharply lowers Defense.
+Description = When this Pokémon makes contact with another Pokémon or is hit by a contact move, its Attack and Speed are raised by 1 stage, but its Defense is lowered by 2 stages.
+#-------------------------------
+[DERMATOPHAGY]
+Name = Dermatophagy
+ShortDesc = Restores a little HP every other turn.
+Description = The Pokémon eats its own shed skin every other turn, regaining 1/16 of its max HP.
+#-------------------------------
+[DIRTBALL]
+Name = Dirt Ball
+ShortDesc = Lowers the power of moves make direct contact with the Pokémon and prevents it from being burned.
+Description = Halves the damage the Pokémon takes from contact moves and doubles the power of its Ground-type moves. The Pokémon cannot be burned.
+#-------------------------------
+[DONOEVIL]
+Name = Do No Evil
+ShortDesc = Draws in and reflects Dark-type moves, healing itself and allies based on the damage dealt.
+Description = Guided by its vow to do no evil, the Pokémon draws in Dark-type moves and reflects them back at the attacker. It then restores its own HP and that of its allies by 25% of the damage dealt.
+#-------------------------------
+[DREAMENGINE]
+Name = Dream Engine
+ShortDesc = While asleep, the Pokémon can still act and powers up moves of the same type.
+Description = The Pokémon can act while asleep. While asleep, moves of the same type as the Pokémon have power boosted by 100% instead of 50%.
+#-------------------------------
+[DUBSTEP]
+Name = Dubstep
+ShortDesc = Boosts sound-based moves and reduces their damage taken.
+Description = Boosts the power of sound-based moves by 30%. The Pokémon also takes half damage from these kinds of moves.
+#-------------------------------
+[EFFECTDISRUPTION]
+Name = Effect Disruption
+ShortDesc = The Pokémon is immune to Supereffective moves.
+Description = The Pokémon is immune to Supereffective moves.
+#-------------------------------
+[ELDRITCHSKIN]
+Name = Eldritch Skin
+ShortDesc = Contact with the Pokémon may confuse the attacker.
+Description = When the Pokémon is hit by a contact move, the attacker has a 30% chance of being confused.
+#-------------------------------
+[EMPTYSOUNDSCAPE]
+Name = Empty Soundscape
+ShortDesc = Nullifies any sound-based move.
+Description = The Pokémon creates an empty soundscape as long as it is in battle, nullifying all sound-based moves.
+#-------------------------------
+[ENGINEOFINDUSTRY]
+Name = Engine of Industry
+ShortDesc = Using Steel attacks raises Defense, and using Ground attacks raises Sp. Def.
+Description = The Pokémon’s industrial engine reinforces its defenses. Using Steel-type attacks raises its Defense stat by 1 stage, while using Ground-type attacks raises its Sp. Def stat by 1 stage.
+#-------------------------------
+[EPIDEMIC]
+Name = Epidemic
+ShortDesc = Uninfected Pokémon have their damage lowered.
+Description = Any Pokémon on the field without Pokérus will have the power of their moves lowered by 30%.
+#-------------------------------
+[ERUPTINGBEAST]
+Name = Erupting Beast
+ShortDesc = Ground-type attacks have an extra 10% chance to burn and have their power boosted a little.
+Description = All Ground-type attacks have an extra 10% chance to burn. The power of these moves is boosted. by 30%
+#-------------------------------
+[ETERNALFLAME]
+Name = Eternal Flame
+ShortDesc = Contact with the Pokémon will burn, Fire-type Moves will critical hit burnt Pokémon.
+Description = When the Pokémon is hit by a contact move, the attacker will be burned. The Pokémon's Fire-type attacks become critical hits if the target is burned. If the Pokémon is in the first party slot, Pokémon eggs hatch twice as fast.
+Flags = FasterEggHatching
+#-------------------------------
+[EYESOFODIN]
+Name = Eyes of Odin
+ShortDesc = The two Pokémon attack one after the other.
+Description = The two Pokémon attack one after the other. The power of their attacks are 2/3 of their usual power.
+#-------------------------------
+[FERMENTATION]
+Name = Fermentation
+ShortDesc = Confuses attackers using any draining move.
+Description = The Pokémon's fermented internal liquid confuses attackers that use HP-draining moves instead of healing them. The Pokémon also has a 1/16 chance to turn any Berry into Berry Juice after battle.
+#-------------------------------
+[FIERYPASSION]
+Name = Fiery Passion
+ShortDesc = The Pokémon can infatuate any Pokémon.
+Description = The Pokémon's intense passion allows it to infatuate any Pokémon regardless of Gender.
+#-------------------------------
+[FIMBULWINTER]
+Name = Fimbulwinter
+ShortDesc = Doubles not very effective damage dealt and halves damage taken from supereffective moves.
+Description = The Pokémon’s frigid aura dulls extremes in battle. It doubles the damage of its not very effective moves and halves the damage it takes from supereffective moves.
+#-------------------------------
+[FISHMONGER]
+Name = Fishmonger
+ShortDesc = Powers up Water-type moves.
+Description = Boosts the power of this Pokémon’s Water-type moves by 50%.
+#-------------------------------
+[FLOATLIKEABUTTERFLY]
+Name = Float Like a Butterfly
+ShortDesc = Boosts the Pokémon's evasiveness on first entry.
+Description = Boosts the Pokémon's evasiveness stat by 1 stage the first time the Pokémon enters a battle.
+#-------------------------------
+[FORCEOFNATURE]
+Name = Force of Nature
+ShortDesc = Using Dragon attacks raises Attack, and using Grass attacks raises Sp. Atk.
+Description = The Pokémon’s bond with nature bolstens its strength. Using Dragon-type attacks raises its Attack by 1 stage, while using Grass-type attacks raises its Sp. Atk by 1 stage.
+#-------------------------------
+[FROSTBLIGHT]
+Name = Frostblight
+ShortDesc = Boosts the power of Poison-type moves in snow.
+Description = Boosts the power of the Pokémon's Poison-type moves by 30% in snow.
+#-------------------------------
+[FROSTEDFRUIT]
+Name = Frosted Fruit
+ShortDesc = Any Berry the Pokémon holds can also be used as a Yache Berry.
+Description = If the Pokémon is holding a Berry and it is hit with a Supereffective Ice-type move, it eats the Berry and halves the damage taken, the Berry's normal effect also applies. The Pokémon will regain 1/4 of its max HP instead of taking damage if the Berry is a Yache Berry.
+#-------------------------------
+[GFORCE]
+Name = G-Force
+ShortDesc = The Pokémon intensifies gravity in battle.
+Description = Intensifies gravity for 5 turns when the Pokémon enters a battle.
+#-------------------------------
+[GALVANICGUARDIAN]
+Name = Galvanic Guardian
+ShortDesc = Using Fighting attacks raises Attack, and using Electric attacks raises Sp. Atk.
+Description = The Pokémon’s fusion engine empowers its strength. Using Fighting-type attacks raises its Attack by 1 stage, while using Electric-type attacks raises its Sp. Atk by 1 stage.
+#-------------------------------
+[GLASSSPLINTERS]
+Name = Glass Splinters
+ShortDesc = Scatters Spikes when hit by physical moves.
+Description = When this Pokémon takes damage from a physical move, it scatters a Spikes trap at the feet of the opposing team.
+#-------------------------------
+[GROUNDWIRE]
+Name = Ground Wire
+ShortDesc = Turns the ground into Electric Terrain when the Pokémon is hit by an attack.
+Description = Turns the ground into Electric Terrain 5 turns when the Pokémon takes damage from moves.
+#-------------------------------
+[GROUNDED]
+Name = Grounded
+ShortDesc = Can be hit by Ground Moves, but Ground-Type Pokémon can be hit by their Electric Moves.
+Description = The Pokémon's lack of flight means it is permanently grounded, allowing it to be effected by Ground-Type Moves, Terrain and Traps, but Ground-Type Pokémon are now susceptible to its Electric-Type Moves.
+#-------------------------------
+[GUARDIANGLADIATOR]
+Name = Guardian Gladiator
+ShortDesc = Using Steel attacks raises Defense, and using Fighting attacks raises Attack.
+Description = The Pokémon’s reinvigorated engine reinforces its defenses. Using Steel-type attacks raises its Defense stat by 1 stage, while using Fighting-type attacks raises its Attack stat by 1 stage.
+#-------------------------------
+[GUMMYBODY]
+Name = Gummy Body
+ShortDesc = Halves damage from physical moves.
+Description = Halves the damage the Pokémon takes from physical moves.
+#-------------------------------
+[HEARNOEVIL]
+Name = Hear No Evil
+ShortDesc = Sound moves instead raise Offense and Accuracy. Accuracy and Evasion share stat changes.
+Description = Deprived of hearing, the Pokémon sharpens its other senses. If an opponent uses a sound-based move, its Attack, Sp. Atk, and Accuracy are raised by 1 stage instead. Its Accuracy and Evasion share stat changes.
+#-------------------------------
+[HEARTOFFLAME]
+Name = Heart of Flame
+ShortDesc = Using Dragon attacks raises Attack, and using Fire attacks raises Sp. Atk.
+Description = The Pokémon’s passionate heart provides its strength. Using Dragon-type attacks raises its Attack stat by 1 stage, while using Fire-type attacks raises its Sp. Atk stat by 1 stage.
+#-------------------------------
+[HELIOSPHERE]
+Name = Heliosphere
+ShortDesc = Summons Semi-Permanent Harsh Sunlight and Electric Terrain.
+Description = So long as the Pokémon is on the field, Harsh Sunlight and Electric Terrain are present on the field. If the Pokémon is switched out, these effects do not persist.
+#-------------------------------
+[IGNITION]
+Name = Ignition
+ShortDesc = Gives priority to Fire-type moves at full HP.
+Description = Increases the priority of the Pokémon's Fire-type moves by 1 stage while its HP is full.
+#-------------------------------
+[JETLAG]
+Name = Jet Lag
+ShortDesc = For its first turn on the field, the Pokémon's damaging moves go first.
+Description = Increases the priority of the Pokémon's damaging moves by 1 stage for its first full turn on the field. This effect resets after switching out of battle.
+#-------------------------------
+[LACHRYMATOR]
+Name = Lachrymator
+ShortDesc = Opposing Pokémon may flinch when targeting the Pokémon
+Description = Opposing Pokémon that target the Pokémon will have a 10% chance to flinch instead.
+#-------------------------------
+[LETHALLEGS]
+Name = Lethal Legs
+ShortDesc = Powers up kicking moves.
+Description = Boosts the power of the Pokémon's kicking moves by 20%.
+#-------------------------------
+[MACHFIVE]
+Name = Mach 5
+ShortDesc = Boosts Speed when the Pokémon makes contact.
+Description = The Pokémon's supersonic engines allow it to raise its speed by 1 stage if it hits a target with a contact move.
+#-------------------------------
+[MINDOVERMATTER]
+Name = Mind Over Matter
+ShortDesc = Psychic-Type moves will break barriers and will deal double damage when resisted.
+Description = Psychic-Type moves will remove the effects of Light Screen, Reflect and Aurora Veil, and will deal double damage when not very effective.
+#-------------------------------
+[MINDVEIL]
+Name = Mind Veil
+ShortDesc = Opponents are unable to use priority moves against the Pokémon or its allies.
+Description = Shrouded in an eerie aura, the Pokémon distorts the perception of time and space around it, making opponents unable to use priority moves against the Pokémon or its allies.
+#-------------------------------
+[MIRAGE]
+Name = Mirage
+ShortDesc = Gives priority to Dragon-type moves at full HP.
+Description = Increases the priority of the Pokémon's Dragon-type moves by 1 stage while its HP is full.
+#-------------------------------
+[MUSCLESTIM]
+Name = Muscle Stim
+ShortDesc = Boosts Attack when hit by a Electric-type move.
+Description = Electric-type moves do not work on the Pokémon. Instead, they boost its Attack stat by 1 stage.
+#-------------------------------
+[NATURESSAVIOR]
+Name = Nature's Savior
+ShortDesc = Using Dragon attacks raises Sp. Atk, and using Grass attacks raises Sp. Def.
+Description = The Pokémon’s rekindled fury energises its body. Using Dragon-type attacks raises its Sp. Atk stat by 1 stage, while using Grass-type attacks raises its Sp. Def stat by 1 stage.
+#-------------------------------
+[NOURISHINGSOUL]
+Name = Nourishing Soul
+ShortDesc = When the Pokémon knocks out another Pokémon, the Pokémon gains their stat boosts.
+Description = When the Pokémon knocks out another Pokémon, it will steal any stat boosts they had and add them to its own.
+#-------------------------------
+[ODINSMEMORY]
+Name = Odin's Memory
+ShortDesc = The Pokémon regains half the damage it just took at the end of each turn.
+Description = After every turn, the Pokémon regains half of the HP taken from the last attack. Fails if HP is 0, only takes the final hit of a multi-hit move into account.
+#-------------------------------
+[ODINSTHOUGHT]
+Name = Odin's Thought
+ShortDesc = The Pokémon regains some PP to a random move every other turn.
+Description = After every other turn, the Pokémon regains 1 PP for a random move. The Pokémon is also uneffected by moves or Abilities that accelerate PP usage.
+#-------------------------------
+[PERMAFROST]
+Name = Permafrost
+ShortDesc = Is always frozen but can still act.
+Description = The Pokémon is always frozen and will never thaw, but it can still use moves. 
+#-------------------------------
+[PILEOFCOINS]
+Name = Pile of Coins
+ShortDesc = The Pokémon is immune to traps.
+Description = The Pokémon is used to living on gold coins, giving it immunity to all traps.
+#-------------------------------
+[POISONBODY]
+Name = Poison Body
+ShortDesc = The Pokémon has the resistances of the Poison-type.
+Description = The Pokémon takes 1/2 damage from Fighting-, Poison-, Grass-, Bug-, and Fairy-type attacks and also cannot be poisoned or badly poisoned.
+#-------------------------------
+[PRECOGNITION]
+Name = Precognition
+ShortDesc = The Pokémon's moves happen in a single turn.
+Description = The Pokémon skips charge-up and recharge turns, including the likes of Future Sight and Dig.
+#-------------------------------
+[PUFFEDIN]
+Name = Puffed In
+ShortDesc = When it has a lot of HP, the Pokémon inflates. It deflates when its HP is low.
+Description = When the Pokémon has above 1/2 of its max HP, it inflates into a defensive form. It deflates when its HP drops to 1/2 of its max or below.
+#-------------------------------
+[PUFFEDOUT]
+Name = Puffed Out
+ShortDesc = The Pokémon inflates when HP is Half or less.
+Description = The Pokémon's cowardice causes it to inflate and become defensive for the rest of the battle if its HP drops below half or less without fainting.
+#-------------------------------
+[PURIFYINGBEAST]
+Name = Purifying Beast
+ShortDesc = The Pokémon and resists poison and gradually regains HP in rain.
+Description = The Pokémon also takes 30% less damage from Poison-Type moves and cannot be poisoned or badly poisoned. The Pokémon also has 1/16 of its max HP restored at the end of every turn in rain.
+#-------------------------------
+[PURIFYINGLIGHT]
+Name = Purifying Light
+ShortDesc = The Pokémon is immune to Shadow moves and can hit targets regardless of Abilities.
+Description = The Pokémon is bathed in purifying light, making it immune to Shadow-type moves and allowing its moves to ignore the target’s Ability (with certain exceptions).
+#-------------------------------
+[RADIOACTIVEDECAY]
+Name = Radioactive Decay
+ShortDesc = Lowers the opposing Pokémon's Sp. Def stats.
+Description = When the Pokémon enters a battle, it radiates dangerous waves towards opposing Pokémon, lowering their Sp. Def stats by 1 stage.
+#-------------------------------
+[REKINDLEDRAGE]
+Name = Rekindled Rage
+ShortDesc = Grass-type attacks have an extra 10% chance to burn and have their power boosted a little.
+Description = All Grass-type attacks have an extra 10% chance to burn. The power of these moves is boosted. by 30%
+#-------------------------------
+[RETELLER]
+Name = Reteller
+ShortDesc = Immediately copies sound-based moves used by other Pokémon.
+Description = When another Pokémon uses a sound-based move, this Pokémon immediately repeats the move regardless of speed and without replacing their own move. This effect does not trigger from other Reteller activations.
+#-------------------------------
+[REVERBERATE]
+Name = Reverberate
+ShortDesc = The Pokémon's sound-based moves will repeat with less power.
+Description = When the Pokémon uses a sound-based attack, they will repeat the move again but at 1/3 of the power.
+#-------------------------------
+[RINGTOSS]
+Name = Ring Toss
+ShortDesc = Boosts the power of Fling and may retrieve the item afterwards.
+Description = Boosts the power of Fling by 50%. The Pokémon also has a 50% chance to retrieve the flung item at the beginning of each turn unless it gains another item.
+#-------------------------------
+[ROCKBODY]
+Name = Rock Body
+ShortDesc = The Pokémon gradually regains HP in a sandstorm.
+Description = The Pokémon has 1/16 of its max HP restored at the end of every turn in a sandstorm.
+#-------------------------------
+[ROCKPASS]
+Name = Rock Pass
+ShortDesc = The Pokémon passes traps to the opposing sides.
+Description = If there is a trap placed on the Pokémon's side or the Pokémon switches into battle while a trap is on their side, the Pokémon will immediately pass all traps over to the opposing side of the field.
+#-------------------------------
+[SEALEDTIGHT]
+Name = Sealed Tight
+ShortDesc = Protects the Pokémon from item theft.
+Description = The Pokémon's held item is sealed tight within its packaging, preventing it from being stolen or removed by other Pokémon.
+#-------------------------------
+[SEENOEVIL]
+Name = See No Evil
+ShortDesc = Ignores visual moves, sharply raising Defense instead. Accuracy cannot be lowered.
+Description = The Pokémon shuts out all external distractions. If an opponent uses a move that causes infatuation, taunts, involves dancing, or is light-based, its Defense is raised by 2 stages instead. Its Accuracy also cannot be lowered.
+#-------------------------------
+[SHOCKINGSTING]
+Name = Shocking Sting
+ShortDesc = Damages and may paralyze attackers that make contact with it.
+Description = When the Pokémon is hit by a contact move, the attacker takes damage equal to 1/8 of its max HP and has a 30% chance of being paralyzed.
+#-------------------------------
+[SMOOTHSTONE]
+Name = Smooth Stone
+ShortDesc = Boosts the Pokémon's Speed in Rain or Sandstorms.
+Description = Boosts the Pokémon's Speed stat by 30% in Rain or Sandstorms. The Pokémon also takes 1/2 damage from Water-type Attacks.
+#-------------------------------
+[SNOWSTRIFE]
+Name = Snow Strife
+ShortDesc = Boosts the Pokémon's Attack stat in snow.
+Description = Boosts the Pokémon's Attack stat by 30% in snow.
+#-------------------------------
+[SOGGY]
+Name = Soggy
+ShortDesc = The Pokémon resists Fire-type moves but is weak to Water-type moves.
+Description = The Pokémon is soaked with water, making it weak to Water-Type Moves but resistant to Fire-Type Moves, regardless of the Pokémon's type.
+#-------------------------------
+[SPEAKNOEVIL]
+Name = Speak No Evil
+ShortDesc = Sound-based moves become Water-type, sharply raise Speed, and prevent Evasion loss.
+Description = Having forsaken speech, the Pokémon expresses itself through flowing movement. All sound-based moves become Water-type moves and are no longer treated as sound-based. These moves sharply raise its Speed, and its Evasion cannot be lowered.
+#-------------------------------
+[STABILITYROD]
+Name = Stability Rod
+ShortDesc = The Pokémon has a meltdown when HP is half or less.
+Description = The rod that keeps the Pokémon stable falls out of place if its HP drops to 1/2 of its max, causing the Pokémon to have a meltdown for the rest of the battle.
+#-------------------------------
+[STEELSTEALER]
+Name = Steel Stealer
+ShortDesc = Restores HP if hit by a Steel-type move.
+Description = Steel-type moves do not work on the Pokémon. Instead, they restore 1/4 of its max HP.
+#-------------------------------
+[STINGLIKEABEE]
+Name = Sting Like a Bee
+ShortDesc = Boosts the Pokémon's Attack on first entry.
+Description = Boosts the Pokémon's Attack stat by 1 stage the first time the Pokémon enters a battle.
+#-------------------------------
+[STONEHENGE]
+Name = Stonehenge
+ShortDesc = Rock-type moves do not miss, the power of these moves are boosted.
+Description = The Pokémon's mastery over rocks makes it to Rock-type moves will never miss and their power is boosted by 30%.
+#-------------------------------
+[STORMBODY]
+Name = Storm Body
+ShortDesc = The Pokémon's stats are boosted in weather and it doesn't take sandstorm damage.
+Description = The Pokémon’s stormy body shifts with the weather, boosting a different stat by 50% depending on the conditions: harsh sunlight raises its Sp. Atk, rain raises its Speed, sandstorms raise its Defense, and snow raises its Sp. Def. It also takes no damage from sandstorms.
+#-------------------------------
+[STORMINGBEAST]
+Name = Storming Beast
+ShortDesc = Elecrtric-type moves never miss and cause paralysis more often.
+Description = The Pokémon and its allies Electric-type moves will never miss and their chance to cause paralysis is doubled.
+#-------------------------------
+[SURTRSWRATH]
+Name = Surtr's Wrath
+ShortDesc = Powers up Fire-type moves.
+Description = Boosts the power of this Pokémon’s Fire-type moves by 50%.
+#-------------------------------
+[THERMALINSULATION]
+Name = Thermal Insulation
+ShortDesc = Boosts the Sp. Def stat sharply when the Pokémon is hit by a Fire-type attack.
+Description = Boosts the Sp. Def stat by 2 stages when the Pokémon is hit by a Fire-type attack. The Pokémon also cannot be burned.
+#-------------------------------
+[TONOFBRICKS]
+Name = Ton of Bricks
+ShortDesc = Scatters Plastic Toys when hit by physical moves.
+Description = When this Pokémon takes damage from a physical move, it spreads a Scattered Toys trap at the feet of the opposing team.
+#-------------------------------
+[TOONFORCE]
+Name = Toon Force
+ShortDesc = Boosts Attack when hit by a Fairy-type move.
+Description = Fairy-type moves do not work on the Pokémon. Instead, they boost its Attack stat by 1 stage.
+#-------------------------------
+[TOXICOLOGIST]
+Name = Toxicologist
+ShortDesc = Powers up Poison-type moves.
+Description = Boosts the power of this Pokémon’s Poison-type moves by 50%.
+#-------------------------------
+[TROLLTOLL]
+Name = Troll Toll
+ShortDesc = Opponents lose HP when they switch out of battle.
+Description = Opposing Pokémon that switch out have to pay a hefty toll, losing 1/5 of their max HP.
+#-------------------------------
+[TRUEWISDOM]
+Name = True Wisdom
+ShortDesc = Boosts the power of sound-based attacks if they are supereffective.
+Description = The Pokémon's ancient wisdom allows it to double the power of any sound-based attack if it is supereffective.
+#-------------------------------
+[VAMPYRE]
+Name = Vampyre
+ShortDesc = Fire-type moves become Ghost-type moves. The power of those moves is boosted a little.
+Description = The Pokémon's Fire-type moves become Ghost-type moves and their power is boosted by 20%.
 #-------------------------------

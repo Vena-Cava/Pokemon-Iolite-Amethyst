@@ -1,4 +1,55 @@
 #===============================================================================
+# Absolute Zero
+# Summons Snow when the Pokémon enters battle. Multiplies the damage of the 
+# higher of its Attack or Special Attack by 4/3 when Snow is active.
+#===============================================================================
+
+Battle::AbilityEffects::OnSwitchIn.add(:ABSOLUTEZERO,
+  proc { |ability, battler, battle, switch_in|
+    # Summon Snow when the Pokémon enters battle
+    if [:Hail, :Snow].include?(battle.field.weather)
+      battle.pbShowAbilitySplash(battler)
+      battle.pbDisplay(_INTL("{1} thrives in the snow, plunging its temperatures to zero!", battler.pbThis))
+      battle.pbHideAbilitySplash(battler)
+	else
+      battle.pbStartWeatherAbility(:Hail, battler)
+      battle.pbDisplay(_INTL("{1} made it snow, plunging its temperatures to zero!", battler.pbThis))
+    
+    end
+  }
+)
+
+Battle::AbilityEffects::DamageCalcFromUser.add(:ABSOLUTEZERO,
+  proc { |ability, user, target, move, mults, baseDmg, type|
+    # Check if Snow is active
+    if user.battle.field.weather == [:Snow, :Hail]
+      # Boost the damage if the move matches the user's higher offensive stat
+      if user.attack >= user.spatk && move.physicalMove?
+        mults[:attack_multiplier] *= 4 / 3.0
+      elsif user.spatk > user.attack && move.specialMove?
+        mults[:attack_multiplier] *= 4 / 3.0
+      end
+    end
+  }
+)
+
+#===============================================================================
+# Bioluminescence
+# Double Speed at Night or in a Cave
+# Half Speed in Harsh Sunlight
+#===============================================================================
+
+Battle::AbilityEffects::SpeedCalc.add(:BIOLUMINESCENCE,
+  proc { |ability, battler, mult|
+    if battler.effectiveWeather == :HarshSun
+      next mult / 2
+    elsif battler.battle.time == 2   # Night or cave
+      next mult * 2
+    end
+  }
+)
+
+#===============================================================================
 # Rock Body
 #===============================================================================
 
@@ -22,8 +73,8 @@ Battle::AbilityEffects::EndOfRoundWeather.add(:ROCKBODY,
 #===============================================================================
 
 Battle::AbilityEffects::DamageCalcFromUser.add(:LETHALLEGS,
-  proc { |ability, user, target, move, mults, baseDmg, type|
-    mults[:base_damage_multiplier] *= 1.2 if move.kickingMove?
+  proc { |ability, user, target, move, mults, power, type|
+    mults[:power_multiplier] *= 1.2 if move.kickingMove?
   }
 )
 
@@ -51,17 +102,7 @@ Battle::AbilityEffects::ModifyMoveBaseType.add(:SCALIATE,
   }
 )
 
-#===============================================================================
-# Vampyre
-#===============================================================================
 
-Battle::AbilityEffects::ModifyMoveBaseType.add(:VAMPYRE,
-  proc { |ability, user, move, type|
-    next if type != :FIRE || !GameData::Type.exists?(:GHOST)
-    move.powerBoost = true
-    next :GHOST
-  }
-)
 
 #===============================================================================
 # Type-Changing Abilities
@@ -258,40 +299,7 @@ Battle::AbilityEffects::MoveBlocking.add(:EMPTYSOUNDSCAPE,
   }
 )
 
-#===============================================================================
-# Absolute Zero
-# Summons Hail when the Pokémon enters battle. Multiplies the damage of the 
-# higher of its Attack or Special Attack by 4/3 when Hail is active.
-#===============================================================================
 
-Battle::AbilityEffects::OnSwitchIn.add(:ABSOLUTEZERO,
-  proc { |ability, battler, battle, switch_in|
-    # Summon Hail when the Pokémon enters battle
-    if [:Hail, :Snow].include?(battle.field.weather)
-      battle.pbShowAbilitySplash(battler)
-      battle.pbDisplay(_INTL("{1} thrives in the hailstorm, plunging its temperatures to zero!", battler.pbThis))
-      battle.pbHideAbilitySplash(battler)
-	else
-      battle.pbStartWeatherAbility(:Hail, battler)
-      battle.pbDisplay(_INTL("{1} summoned a hailstorm, plunging its temperatures to zero!", battler.pbThis))
-    
-    end
-  }
-)
-
-Battle::AbilityEffects::DamageCalcFromUser.add(:ABSOLUTEZERO,
-  proc { |ability, user, target, move, mults, baseDmg, type|
-    # Check if Hail is active
-    if user.battle.field.weather == :Hail
-      # Boost the damage if the move matches the user's higher offensive stat
-      if user.attack >= user.spatk && move.physicalMove?
-        mults[:attack_multiplier] *= 4 / 3.0
-      elsif user.spatk > user.attack && move.specialMove?
-        mults[:attack_multiplier] *= 4 / 3.0
-      end
-    end
-  }
-)
 
 #===============================================================================
 # Muscle Stim
@@ -302,3 +310,117 @@ Battle::AbilityEffects::MoveImmunity.add(:MUSCLESTIM,
        :ELECTRIC, :ATTACK, 1, show_message)
   }
 )
+
+#===============================================================================
+# G-Force
+#===============================================================================
+Battle::AbilityEffects::OnSwitchIn.add(:GFORCE,
+  proc { |ability, battler, battle, switch_in|
+    next if battle.field.effects[PBEffects::Gravity] > 0
+    battle.pbShowAbilitySplash(battler)
+    battle.field.effects[PBEffects::Gravity] = 5
+    battle.pbDisplay(_INTL("Gravity intensified!"))
+    battle.pbHideAbilitySplash(battler)
+  }
+)
+
+#===============================================================================
+# Vampyre
+#===============================================================================
+
+Battle::AbilityEffects::ModifyMoveBaseType.add(:VAMPYRE,
+  proc { |ability, user, move, type|
+    next if type != :FIRE || !GameData::Type.exists?(:GHOST)
+    move.powerBoost = true
+    next :GHOST
+  }
+)
+
+#===============================================================================
+# Boiling Point
+# Water-type damaging moves gain +10% burn chance.
+# They also thaw the user and the target.
+#===============================================================================
+
+Battle::AbilityEffects::OnDealingHit.add(:BOILINGPOINT,
+  proc { |ability, user, target, move, battle|
+    next if !move.damagingMove?
+    next if move.pbCalcType(user) != :WATER
+
+    showed_splash = false
+
+    # Thaw user
+    if user.status == :FROZEN
+      battle.pbShowAbilitySplash(user) unless showed_splash
+      showed_splash = true
+      user.pbCureStatus(false)
+      battle.pbDisplay(_INTL("{1}'s Boiling Point thawed it out!", user.pbThis))
+    end
+
+    # Thaw target
+    if target.status == :FROZEN
+      battle.pbShowAbilitySplash(user) unless showed_splash
+      showed_splash = true
+      target.pbCureStatus(false)
+      battle.pbDisplay(_INTL("{1} was thawed by the boiling water!", target.pbThis))
+    end
+
+    # Burn chance
+    if target.status == :NONE &&
+      target.pbCanBurn?(user, false) &&
+      battle.pbRandom(100) < 10
+      battle.pbShowAbilitySplash(user) unless showed_splash
+      showed_splash = true
+      target.pbBurn(user, _INTL("{1} was burned by {2}'s Boiling Point!", target.pbThis, user.pbThis(true)))
+    end
+
+    battle.pbHideAbilitySplash(user) if showed_splash
+  }
+)
+
+class Battle::Battler
+  alias ia_boilingpoint_pbTryUseMove pbTryUseMove unless method_defined?(:ia_boilingpoint_pbTryUseMove)
+
+  def pbTryUseMove(*args)
+    move = args.find { |arg| arg.is_a?(Battle::Move) }
+
+    if self.status == :FROZEN &&
+       self.hasActiveAbility?(:BOILINGPOINT) &&
+       move &&
+       move.damagingMove? &&
+       move.pbCalcType(self) == :WATER
+
+      @battle.pbShowAbilitySplash(self)
+      self.pbCureStatus(false)
+      @battle.pbDisplay(_INTL("{1}'s Boiling Point thawed it out!", self.pbThis))
+      @battle.pbHideAbilitySplash(self)
+    end
+
+    return ia_boilingpoint_pbTryUseMove(*args)
+  end
+end
+
+#===============================================================================
+# Dirt Ball
+# Contact moves deal 50% damage.
+# Ground moves power is doubled.
+# Immune to Burn.
+#===============================================================================
+
+Battle::AbilityEffects::DamageCalcFromTarget.add(:DIRTBALL,
+  proc { |ability, user, target, move, mults, power, type|
+    mults[:final_damage_multiplier] /= 2 if move.pbContactMove?(user)
+  }
+)
+
+Battle::AbilityEffects::DamageCalcFromUser.add(:DIRTBALL,
+  proc { |ability, user, target, move, mults, power, type|
+    mults[:attack_multiplier] *= 2 if type == :GROUND
+  }
+)
+
+Battle::AbilityEffects::OnSwitchOut.copy(:WATERVEIL, :DIRTBALL)
+
+Battle::AbilityEffects::StatusImmunity.copy(:WATERVEIL, :DIRTBALL)
+
+Battle::AbilityEffects::StatusCure.copy(:WATERVEIL, :DIRTBALL)

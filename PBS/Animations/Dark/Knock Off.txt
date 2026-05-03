@@ -1,0 +1,82 @@
+﻿# See the documentation on the wiki to learn how to edit this file.
+#-------------------------------
+[Move,KNOCKOFF]
+Name = Essentials
+Credit = Maruno
+<User>
+    MoveX = 0,2,32
+    MoveY = 0,2,-16
+    MoveX = 4,2,0
+    MoveY = 4,2,0
+<Target>
+    MoveY = 10,1,8
+    MoveY = 11,2,-8
+    MoveY = 13,1,0
+<Hand>
+    Graphic = hand slap
+    Focus = Target
+    SetX = 6,-8
+    SetY = 6,-128
+    SetZ = 6,30
+    SetZoomX = 6,140
+    SetZoomY = 6,140
+    SetAngle = 6,270
+    SetColor = 6,300000E0
+    MoveY = 6,2,96
+    SetFrame = 8,1
+    SetZoomX = 8,150
+    SetZoomY = 8,150
+    MoveY = 8,3,128,EaseOut
+    MoveZoomX = 8,3,190
+    MoveZoomY = 8,3,190
+    SetFrame = 11,2
+    MoveY = 11,3,96,EaseBoth
+    MoveZoomX = 11,10,130
+    MoveZoomY = 11,10,130
+    MoveY = 14,2,100,EaseBoth
+    MoveOpacity = 16,5,0
+    SetVisible = 21,false
+<Hit 1>
+    Graphic = hit
+    Focus = Target
+    SetZ = 7,10
+    SetColor = 7,F8F800FF
+    MoveZoomX = 7,4,225
+    MoveZoomY = 7,4,225
+    MoveOpacity = 9,2,0
+    SetVisible = 11,false
+<Hit 2>
+    Graphic = hit
+    Focus = Target
+    SetZ = 7,10
+    SetZoomX = 7,80
+    SetZoomY = 7,80
+    MoveZoomX = 7,4,200
+    MoveZoomY = 7,4,200
+    MoveOpacity = 9,2,0
+    SetVisible = 11,false
+<Spark spawner>
+    Graphic = spark
+    Focus = Target
+    Emitter = Straight
+    EmitterRate = 80
+    EmitterIntensity = 2
+    SetZ = 7,5
+    SetZoomX = 7,60
+    SetZoomY = 7,60
+    SetOpacity = 7,0
+    SetEmitting = 7,true
+    SetEmitSpeed = 7,400
+    SetEmitSpeedRange = 7,75
+    SetEmitAngleRange = 7,180
+    MoveOpacity = 7,1,255
+    SetColor = 9,E0E02000
+    SetEmitting = 9,false
+    MoveColor = 9,4,E0E020E0
+    MoveZoomX = 13,4,0
+    MoveZoomY = 13,4,0
+    MoveOpacity = 13,4,0
+    SetVisible = 17,false
+<SE>
+    Play = 2,Dark/Knock Off 1,80
+    Play = 10,Dark/Knock Off 2,80

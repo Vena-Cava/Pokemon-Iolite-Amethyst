@@ -133,8 +133,8 @@ module WeatherConfig
   # Probability of weather in summer.
   # Order: None, Rain, Storm, Snow, Blizzard, Sandstorm, HeavyRain, Sun/Sunny, Fog
   ZONE_WEATHER_SUMMER = [
-    [30, 10, 60, 0, 0, 0, 0, 0, 0],
-    [30, 0, 0, 50, 0, 0, 0, 0, 20],
+    [100, 0, 0, 0, 0, 0, 0, 0, 0],
+    [100, 0, 0, 0, 0, 0, 0, 0, 0],
     [40, 50],
     [60]
   ]
@@ -142,8 +142,8 @@ module WeatherConfig
   # Probability of weather in autumn.
   # Order: None, Rain, Storm, Snow, Blizzard, Sandstorm, HeavyRain, Sun/Sunny, Fog
   ZONE_WEATHER_AUTUMN = [
-    [0, 20, 3, 50, 0, 0, 0, 0, 30],
-    [0, 20, 3, 50, 0, 0, 0, 0, 30],
+    [100, 0, 0, 0, 0, 0, 0, 0, 0],
+    [100, 0, 0, 0, 0, 0, 0, 0, 0],
     [40, 50],
     [60]
   ]
@@ -151,8 +151,8 @@ module WeatherConfig
   # Probability of weather in winter.
   # Order: None, Rain, Storm, Snow, Blizzard, Sandstorm, HeavyRain, Sun/Sunny, Fog
   ZONE_WEATHER_WINTER = [
-    [0, 0, 0, 0, 0, 0, 0, 100],
-    [0, 20, 3, 50, 0, 0, 0, 30],
+    [100, 0, 0, 0, 0, 0, 0, 0, 0],
+    [100, 0, 0, 0, 0, 0, 0, 0, 0],
     [40, 50],
     [60]
   ]
@@ -160,8 +160,8 @@ module WeatherConfig
   # Probability of weather in spring.
   # Order: None, Rain, Storm, Snow, Blizzard, Sandstorm, HeavyRain, Sun/Sunny, Fog
   ZONE_WEATHER_SPRING = [
-    [0, 20, 3, 50, 0, 0, 0, 30],
-    [0, 20, 3, 50, 0, 0, 0, 30],
+    [100, 0, 0, 0, 0, 0, 0, 0, 0],
+    [100, 0, 0, 0, 0, 0, 0, 0, 0],
     [40, 50],
     [60]
   ]

@@ -1,173 +1,236 @@
 ﻿# See the documentation on the wiki to learn how to edit this file.
 #-------------------------------
-[ANGERSHELL]
-Name = Anger Shell
-Description = When an attack causes its HP to drop to half or less, the Pokémon gets angry. This lowers its Defense and Sp. Def stats but boosts its Attack, Sp. Atk, and Speed stats.
-#-------------------------------
-[ARMORTAIL]
-Name = Armor Tail
-Description = The mysterious tail covering the Pokémon's head makes opponents unable to use priority moves against the Pokémon or its allies.
-#-------------------------------
-[BEADSOFRUIN]
-Name = Beads of Ruin
-Description = The power of the Pokémon's ruinous beads lowers the Sp. Def stats of all Pokémon except itself.
-#-------------------------------
-[COMMANDER]
-Name = Commander
-Description = When the Pokémon enters a battle, it goes inside the mouth of an ally Dondozo if one is on the field. The Pokémon then issues commands from there.
-#-------------------------------
-[COSTAR]
-Name = Costar
-Description = When the Pokémon enters a battle, it copies an ally's stat changes.
-#-------------------------------
-[CUDCHEW]
-Name = Cud Chew
-Description = When the Pokémon eats a Berry, it will regurgitate that Berry at the end of the next turn and eat it one more time.
-#-------------------------------
-[EARTHEATER]
-Name = Earth Eater
-Description = If hit by a Ground-type move, the Pokémon has its HP restored instead of taking damage.
-#-------------------------------
-[ELECTROMORPHOSIS]
-Name = Electromorphosis
-Description = The Pokémon becomes charged when it takes damage, boosting the power of the next Electric-type move the Pokémon uses.
-#-------------------------------
-[GOODASGOLD]
-Name = Good as Gold
-Description = A body of pure, solid gold gives the Pokémon full immunity to other Pokémon's status moves.
-#-------------------------------
-[GUARDDOG]
-Name = Guard Dog
-Description = 	Boosts the Pokémon's Attack stat if intimidated. Moves and items that would force the Pokémon to switch out also fail to work.
-#-------------------------------
-[HADRONENGINE]
-Name = Hadron Engine
-Description = Turns the ground into Electric Terrain when the Pokémon enters a battle. The futuristic engine within the Pokémon also boosts its Highest Attack stat on Electric Terrain.
-#-------------------------------
 [LINGERINGAROMA]
 Name = Lingering Aroma
+ShortDesc = Contact with the Pokémon spreads their aroma to the attacker.
 Description = Contact with the Pokémon changes the attacker's Ability to Lingering Aroma.
-#-------------------------------
-[MYCELIUMMIGHT]
-Name = Mycelium Might
-Description = The Pokémon will always act more slowly when using status moves, but these moves will be unimpeded by the Ability of the target.
-#-------------------------------
-[OPPORTUNIST]
-Name = Opportunist
-Description = If an opponent's stat is boosted, the Pokémon seizes the opportunity to boost the same stat for itself.
-#-------------------------------
-[ORICHALCUMPULSE]
-Name = Orichalcum Pulse
-Description = Turns the sunlight harsh when the Pokémon enters a battle. The ancient pulse thrumming through the Pokémon also boosts its Highest Attack stat in harsh sunlight.
-#-------------------------------
-[PROTOSYNTHESIS]
-Name = Protosynthesis
-Description = Boosts the Pokémon's most proficient stat in harsh sunlight or if the Pokémon is holding Booster Energy.
-#-------------------------------
-[PURIFYINGSALT]
-Name = Purifying Salt
-Description = The Pokémon's pure salt protects it from status conditions and halves the damage taken from Ghost-type moves.
-#-------------------------------
-[QUARKDRIVE]
-Name = Quark Drive
-Description = Boosts the Pokémon's most proficient stat on Electric Terrain or if the Pokémon is holding Booster Energy.
-#-------------------------------
-[ROCKYPAYLOAD]
-Name = Rocky Payload
-Description = Powers up Rock-type moves.
 #-------------------------------
 [SEEDSOWER]
 Name = Seed Sower
-Description = Turns the ground into Grassy Terrain when the Pokémon is hit by an attack.
-#-------------------------------
-[SHARPNESS]
-Name = Sharpness
-Description = Powers up slicing moves.
-#-------------------------------
-[SUPREMEOVERLORD]
-Name = Supreme Overlord
-Description = When the Pokémon enters a battle, its Attack and Sp. Atk stats are slightly boosted for each of the allies in its party that have already been defeated.
-#-------------------------------
-[SWORDOFRUIN]
-Name = Sword of Ruin
-Description = The power of the Pokémon's ruinous sword lowers the Defense stats of all Pokémon except itself.
-#-------------------------------
-[TABLETSOFRUIN]
-Name = Tablets of Ruin
-Description = The power of the Pokémon's ruinous wooden tablets lowers the Attack stats of all Pokémon except itself.
+ShortDesc = Turns the ground into Grassy Terrain when the Pokémon is hit by an attack.
+Description = Turns the ground into Grassy Terrain for 5 turns when the Pokémon takes damage from moves.
 #-------------------------------
 [THERMALEXCHANGE]
 Name = Thermal Exchange
-Description = Boosts the Attack stat when the Pokémon is hit by a Fire-type move. The Pokémon also cannot be burned.
+ShortDesc = Boosts Attack when hit with a Fire-type move and cannot be burned.
+Description = Boosts the Attack stat by 1 stage when the Pokémon is hit by a Fire-type attack. The Pokémon also cannot be burned.
 #-------------------------------
-[TOXICDEBRIS]
-Name = Toxic Debris
-Description = Scatters poison spikes at the feet of the opposing team when the Pokémon takes damage from physical moves.
+[ANGERSHELL]
+Name = Anger Shell
+ShortDesc = Boosts Attack, Sp. Atk, and Speed but lowers defenses when HP drops below half.
+Description = When this Pokémon takes damage from a move that causes its HP to drop to half or less, it gets angry. This raises its Attack, Sp. Atk, and Speed by 1 stage, but lowers its Defense and Sp. Def by 1 stage.
 #-------------------------------
-[VESSELOFRUIN]
-Name = Vessel of Ruin
-Description = The power of the Pokémon's ruinous vessel lowers the Sp. Atk stats of all Pokémon except itself.
+[PURIFYINGSALT]
+Name = Purifying Salt
+ShortDesc = Prevents status conditions and halves damage from Ghost moves.
+Description = The Pokémon's pure salt protects it from status conditions and halves the damage taken from Ghost-type moves.
 #-------------------------------
 [WELLBAKEDBODY]
 Name = Well-Baked Body
-Description = The Pokémon takes no damage when hit by Fire-type moves. Instead, its Defense stat is sharply boosted.
-#-------------------------------
-[WINDPOWER]
-Name = Wind Power
-Description = The Pokémon becomes charged when it is hit by a wind move, boosting the power of the next Electric-type move the Pokémon uses.
+ShortDesc = Sharply boosts its Defense stat when it's hit by an Fire-type move.
+Description = Fire-type moves do not work on the Pokémon. Instead, they boost its Defense stat by 2 stages.
 #-------------------------------
 [WINDRIDER]
 Name = Wind Rider
-Description = Boosts the Pokémon's Attack stat if Tailwind takes effect or if the Pokémon is hit by a wind move. The Pokémon also takes no damage from wind moves.
+ShortDesc = Raises Attack in Tailwind or when hit by a wind move.
+Description = Raises this Pokémon’s Attack by 1 stage if Tailwind is active on its side or if it is hit by a wind move. This Pokémon is also immune to damage from wind moves.
+#-------------------------------
+[GUARDDOG]
+Name = Guard Dog
+ShortDesc = Boosts Attack if intimidated. Cannot be forced to switch out.
+Description = Boosts the Pokémon's Attack stat by 1 stage instead of lowering it if intimidated. Moves and items that would force the Pokémon to switch out of battle also fail to work.
+#-------------------------------
+[ROCKYPAYLOAD]
+Name = Rocky Payload
+ShortDesc = Powers up Rock-type moves.
+Description = Boosts the power of this Pokémon’s Rock-type moves by 50%.
+#-------------------------------
+[WINDPOWER]
+Name = Wind Power
+ShortDesc = Becomes charged in Tailwind or when hit by a wind move, doubling its next Electric move.
+Description = If Tailwind is active on its side or it is hit by a wind move, the Pokémon becomes charged, doubling the power of the next Electric-type move it uses.
 #-------------------------------
 [ZEROTOHERO]
 Name = Zero to Hero
-Description = The Pokémon transforms into its Hero Form when it switches out.
+ShortDesc = The Pokémon transforms into its Hero Form when it switches out.
+Description = The Pokémon changes into its Hero Form when it switches out of battle.
 #-------------------------------
-[SUPERSWEETSYRUP]
-Name = Supersweet Syrup
-Description = A sickly sweet scent spreads across the field the first time the Pokémon enters a battle, lowering the evasiveness of opposing Pokémon.
+[COMMANDER]
+Name = Commander
+ShortDesc = Enters an ally Dondozo’s mouth, becoming untargetable and boosting Dondozo's stats.
+Description = When this Pokémon enters battle with Dondozo, it goes inside its mouth, becoming unable to act or be targeted. While inside, it raises Dondozo’s Attack, Defense, Sp. Atk, Sp. Def, and Speed by 2 stages each. If the Pokémon is in the first party slot, wild encounters have a 30% chance to be double battles.
+#-------------------------------
+[ELECTROMORPHOSIS]
+Name = Electromorphosis
+ShortDesc = Becomes charged in when hit, doubling its next Electric move.
+Description = The Pokémon becomes charged when it takes damage, doubling the power of the next Electric-type move the Pokémon uses.
+#-------------------------------
+[PROTOSYNTHESIS]
+Name = Protosynthesis
+ShortDesc = Boosts the Pokémon's highest stat in harsh sunlight or if the it's holding Booster Energy.
+Description = Boosts the Pokémon's most proficient stat by 30%, or 50% if Speed is the most proficient, in harsh sunlight or if the Pokémon is holding Booster Energy.
+#-------------------------------
+[QUARKDRIVE]
+Name = Quark Drive
+ShortDesc = Boosts the Pokémon's highest stat in Electric Terrain or if the it's holding Booster Energy.
+Description = Boosts the Pokémon's most proficient stat by 30%, or 50% if Speed is the most proficient, in on Electric Terrain or if the Pokémon is holding Booster Energy.
+#-------------------------------
+[GOODASGOLD]
+Name = Good as Gold
+ShortDesc = The Pokémon is immune to status moves.
+Description = A body of pure, solid gold gives the Pokémon full immunity to other Pokémon's status moves.
+#-------------------------------
+[VESSELOFRUIN]
+Name = Vessel of Ruin
+ShortDesc = Lowers Sp. Atk of all other Pokémon.
+Description = The power of the Pokémon’s ruinous vessel lowers the Sp. Atk of all Pokémon except itself by 25%.
+#-------------------------------
+[SWORDOFRUIN]
+Name = Sword of Ruin
+ShortDesc = Lowers Defense of all other Pokémon.
+Description = The power of the Pokémon's ruinous sword lowers the Defense stats of all Pokémon except itself by 25%.
+#-------------------------------
+[TABLETSOFRUIN]
+Name = Tablets of Ruin
+ShortDesc = Lowers Attack of all other Pokémon.
+Description = The power of the Pokémon's ruinous wooden tablets lowers the Attack stats of all Pokémon except itself by 25%.
+#-------------------------------
+[BEADSOFRUIN]
+Name = Beads of Ruin
+ShortDesc = Lowers Sp.Def of all other Pokémon.
+Description = The power of the Pokémon’s ruinous beads lowers the Sp. Def of all Pokémon excep itself by 25%.
+#-------------------------------
+[ORICHALCUMPULSE]
+Name = Orichalcum Pulse
+ShortDesc = Summons harsh sunlight and boosts highest attacking stat when in harsh sunlight.
+Description = Turns the sunlight harsh for 5 turns when the Pokémon enters a battle. The ancient pulse thrumming through the Pokémon also boosts its most proficient offensive stat by 33% in harsh sunlight.
+#-------------------------------
+[HADRONENGINE]
+Name = Hadron Engine
+ShortDesc = Turns ground to Electric terrain and boosts highest attacking stat when on Electric Terrain.
+Description = Turns the ground into Electric Terrain for 5 turns when the Pokémon enters a battle. The futuristic engine within the Pokémon also boosts its most proficient offensive stat by 33% on Electric Terrain.
+#-------------------------------
+[OPPORTUNIST]
+Name = Opportunist
+ShortDesc = Copies opponent's stat boosts whenever it can.
+Description = If an opponent's stat is boosted, the Pokémon seizes the opportunity to boost the same stat for itself.
+#-------------------------------
+[CUDCHEW]
+Name = Cud Chew
+ShortDesc = Eats a Berry again on the next turn.
+Description = When the Pokémon eats a Berry, it will regurgitate that Berry at the end of the next turn and eat it one more time.
+#-------------------------------
+[SHARPNESS]
+Name = Sharpness
+ShortDesc = Powers up slicing moves.
+Description = Boosts the power of the Pokémon's slicing moves by 50%. The Pokémon can also cut Tall Grass within a two-square radius instead of a one-square radius when using Cut outside of battle.
+#-------------------------------
+[SUPREMEOVERLORD]
+Name = Supreme Overlord
+ShortDesc = Boosts damage for each fainted ally.
+Description = When the Pokémon enters a battle, the power of its moves is boosted by 10% for each Pokémon in its party that has been defeated in the battle already. The maximum boost is 50%.
+#-------------------------------
+[COSTAR]
+Name = Costar
+ShortDesc = When this Pokémon enters battle, it copies an ally’s stat changes.
+Description = When the Pokémon enters a battle, it copies an ally's stat changes. If the Pokémon is in the first party slot, wild encounters have a 30% chance to be double battles.
+#-------------------------------
+[TOXICDEBRIS]
+Name = Toxic Debris
+ShortDesc = Scatters Toxic Spikes when hit by physical moves.
+Description = When this Pokémon takes damage from a physical move, it scatters a Toxic Spikes trap at the feet of the opposing team.
+#-------------------------------
+[ARMORTAIL]
+Name = Armor Tail
+ShortDesc = Opponents are unable to use priority moves against the Pokémon or its allies.
+Description = The mysterious tail covering the Pokémon's head makes opponents unable to use priority moves against the Pokémon or its allies.
+#-------------------------------
+[EARTHEATER]
+Name = Earth Eater
+ShortDesc = Restores HP if hit by a Ground-type move.
+Description = Ground-type moves do not work on the Pokémon. Instead, they restore 1/4 of its max HP.
+#-------------------------------
+[MYCELIUMMIGHT]
+Name = Mycelium Might
+ShortDesc = The Pokémon's status moves will happen more slowly, but ignore the target's ability.
+Description = The Pokémon will always act last within its own priority bracket when using status moves, but these moves will be unimpeded by the Ability of the target.
 #-------------------------------
 [HOSPITALITY]
 Name = Hospitality
-Description = When the Pokémon enters a battle, it showers its ally with hospitality, restoring a small amount of the ally's HP.
-#-------------------------------
-[TOXICCHAIN]
-Name = Toxic Chain
-Description = The power of the Pokémon's toxic chain may badly poison any target the Pokémon hits with a move.
+ShortDesc = Restores ally's HP when it enters battle.
+Description = When the Pokémon enters a battle, it showers its ally with hospitality, restoring 1/4 of its max HP.
 #-------------------------------
 [MINDSEYE]
 Name = Mind's Eye
+ShortDesc = The Pokémon ignores evasiveness and accuracy changes and Ghost-type immunities.
 Description = The Pokémon ignores changes to opponents' evasiveness, its accuracy can't be lowered, and it can hit Ghost types with Normal- and Fighting-type moves.
 #-------------------------------
 [EMBODYASPECT]
 Name = Embody Aspect
+ShortDesc = Boosts the Pokémon's Speed stat when it Terastalizes.
 Description = The Pokémon's heart fills with memories, causing the Teal Mask to shine and the Pokémon's Speed stat to be boosted.
-#-------------------------------
-[EMBODYASPECT_1]
-Name = Embody Aspect
-Description = The Pokémon's heart fills with memories, causing the Wellspring Mask to shine and the Pokémon's Sp. Def stat to be boosted.
 #-------------------------------
 [EMBODYASPECT_2]
 Name = Embody Aspect
+ShortDesc = Boosts the Pokémon's Attack stat when it Terastalizes.
 Description = The Pokémon's heart fills with memories, causing the Hearthflame Mask to shine and the Pokémon's Attack stat to be boosted.
+#-------------------------------
+[EMBODYASPECT_1]
+Name = Embody Aspect
+ShortDesc = Boosts the Pokémon's Sp. Def stat when it Terastalizes.
+Description = The Pokémon's heart fills with memories, causing the Wellspring Mask to shine and the Pokémon's Sp. Def stat to be boosted.
 #-------------------------------
 [EMBODYASPECT_3]
 Name = Embody Aspect
+ShortDesc = Boosts the Pokémon's Defense stat when it Terastalizes.
 Description = The Pokémon's heart fills with memories, causing the Cornerstone Mask to shine and the Pokémon's Defense stat to be boosted.
 #-------------------------------
-[POISONPUPPETEER]
-Name = Poison Puppeteer
-Description = Pokémon poisoned by Pecharunt's moves will also become confused.
+[TOXICCHAIN]
+Name = Toxic Chain
+ShortDesc = May badly poison any target the Pokémon hits with a move.
+Description = The power of the Pokémon's toxic chain has a 30% chance to badly poison any target the Pokémon hits with an attack.
+#-------------------------------
+[SUPERSWEETSYRUP]
+Name = Supersweet Syrup
+ShortDesc = Lowers the opposing Pokémon's evasiveness stats on first entry.
+Description = A sickly sweet scent spreads across the field the first time the Pokémon enters a battle, opponents' evasiveness is lowered by 1 stage. This Ability is triggered only once per battle.
 #-------------------------------
 [TERASHIFT]
 Name = Tera Shift
+ShortDesc = The Pokémon transforms into its Terastal Form when it enters battle.
 Description = When the Pokémon enters a battle, it absorbs the energy around itself and transforms into its Terastal Form.
 #-------------------------------
 [TERASHELL]
 Name = Tera Shell
+ShortDesc = When HP is full, all attacks are not very effective.
 Description = The Pokémon's shell contains the powers of each type. All damage-dealing moves that hit the Pokémon when its HP is full will not be very effective.
 #-------------------------------
 [TERAFORMZERO]
 Name = Teraform Zero
+ShortDesc = Removes weather and terrain when the Pokémon enters its Stellar Form.
 Description = When Terapagos changes into its Stellar Form, it uses its hidden powers to eliminate all effects of weather and terrain, reducing them to zero.
+#-------------------------------
+[POISONPUPPETEER]
+Name = Poison Puppeteer
+ShortDesc = Pokemon poisoned by the Pokémon's moves will also be confused.
+Description = Pokémon poisoned or badly poisoned by Pecharunt's moves will also become confused.
+#-------------------------------
+[PIERCINGDRILL]
+Name = Piercing Drill
+ShortDesc = If the Pokémon can make contact, it can attack a protecting target but for less damage.
+Description = When the Pokémon uses contact moves, it can hit even targets that are protecting themselves, dealing 1/4 of the damage that the move would otherwise deal. Everything aside from the target's protective effects is still triggered.
+#-------------------------------
+[DRAGONIZE]
+Name = Dragonize
+ShortDesc = Normal-type moves become Dragon-type moves. The power of those moves is boosted a little.
+Description = The Pokémon's Normal-type moves become Dragon-type moves and their power is boosted by 20%.
+#-------------------------------
+[MEGASOL]
+Name = Mega Sol
+ShortDesc = Moves used by the Pokémon are treated as if the sunlight is harsh.
+Description = Even when the sunlight has not turned harsh, the Pokémon can use its moves as if the weather were harsh sunlight.
+#-------------------------------
+[SPICYSPRAY]
+Name = Spicy Spray
+ShortDesc = Burns attackers when the Pokémon is hit by an attack.
+Description = When the Pokémon takes damage from a move, it burns the attacker.

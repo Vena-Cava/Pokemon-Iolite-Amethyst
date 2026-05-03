@@ -162,7 +162,7 @@ Category = Special
 Power = 100
 Accuracy = 95
 TotalPP = 10
-Target = NearOther
+Target = Other
 FunctionCode = EffectivenessIncludesFireType
 Flags = CanProtect,CanMirrorMove
 EffectChance = 30
@@ -175,7 +175,7 @@ Category = Status
 Accuracy = 0
 TotalPP = 5
 Target = User
-FunctionCode = HealUserDependingOnHailstorm
+FunctionCode = HealUserDependingOnHail
 Description = The user regains up to half of its max HP. It restores more HP in a hailstorm.
 #-------------------------------
 [GLADEGASH]
@@ -430,8 +430,9 @@ Power = 70
 Accuracy = 100
 TotalPP = 20
 Target = NearOther
-FunctionCode = SuperEffectiveAgainstWaterGround
+FunctionCode = PoisonTargetSuperEffectiveAgainstWaterGround
 Flags = CanProtect,CanMirrorMove
+EffectChance = 10
 Description = A toxic liquid seeps out of the user that pollutes the environment. This move is super-effective against Water- and Ground-Type Pokémon.
 #-------------------------------
 [REFORGERY]
@@ -469,4 +470,100 @@ FunctionCode = CannotMakeTargetFaintFlinch
 Flags = Contact,CanProtect,CanMirrorMove,CanMirrorMove
 EffectChance = 30
 Description = A vicious blow that stops just short of finishing the job. The target is left with at least 1 HP. It may also cause the target to flinch.
+#-------------------------------
+[VOLTVAULT]
+Name = Volt Vault
+Type = ELECTRIC
+Category = Physical
+Power = 55
+Accuracy = 100
+TotalPP = 20
+Target = NearOther
+FunctionCode = HigherPriorityInElectricTerrain
+Flags = Contact,CanProtect,CanMirrorMove
+Description = Vaulting across the ground, the user attacks the target. This move always goes first on Electric Terrain.
+#-------------------------------
+[ZENZIP]
+Name = Zen Zip
+Type = PSYCHIC
+Category = Physical
+Power = 55
+Accuracy = 100
+TotalPP = 20
+Target = NearOther
+FunctionCode = HigherPriorityInPsychicTerrain
+Flags = Contact,CanProtect,CanMirrorMove,IgnorePsychicTerrain
+Description = Zipping across the ground, the user attacks the target. This move always goes first on Psychic Terrain.
+#-------------------------------
+[MISTYMIRAGE]
+Name = Misty Mirage
+Type = FAIRY
+Category = Physical
+Power = 55
+Accuracy = 100
+TotalPP = 20
+Target = NearOther
+FunctionCode = HigherPriorityInMistyTerrain
+Flags = Contact,CanProtect,CanMirrorMove
+Description = Moving across the ground, the user attacks the target. This move always goes first on Misty Terrain.
+#-------------------------------
+[SHINDIG]
+Name = Shindig
+Type = DARK
+Category = Physical
+Power = 85
+Accuracy = 90
+TotalPP = 10
+Target = NearOther
+FunctionCode = None
+Flags = Contact,CanProtect,CanMirrorMove,HighCriticalHitRate,Kicking
+Description = Moving across the ground, the user attacks the target. This move always goes first on Misty Terrain.
+#-------------------------------
+[LIGHTNINGLASH]
+Name = Lightning Lash
+Type = ELECTRIC
+Category = Physical
+Power = 80
+Accuracy = 100
+TotalPP = 15
+Target = NearOther
+FunctionCode = LowerTargetDefense1
+Flags = Contact,CanProtect,CanMirrorMove
+EffectChance = 100
+Description = The user strikes the target with a electrified lash. This also lowers the target's Defense stat.
+#-------------------------------
+[CHOCOLANCHE]
+Name = Choco-lanche
+Type = FAIRY
+Category = Physical
+Power = 120
+Accuracy = 100
+TotalPP = 5
+Target = AllNearFoes
+FunctionCode = AddMoneyGainedFromBattleLowerUserAtk1
+Flags = CanProtect,CanMirrorMove,CannotMetronome
+Description = The user attacks by showering the target in Chocolate Coins. This also lowers the user's Attack stat. Money is earned after the battle.
+#-------------------------------
+[BONFIREBARRAGE]
+Name = Bonfire Barrage
+Type = FIRE
+Category = Special
+Power = 150
+Accuracy = 100
+TotalPP = 5
+Target = AllNearOthers
+FunctionCode = RecoilHalfOfTotalHP
+Flags = CanProtect,CanMirrorMove
+Description = The user attacks everything around it by creating a barrage of white-hot explosions. This also damages the user.
+#-------------------------------
+[FREEZER]
+Name = Freezer
+Type = ICE
+Category = Status
+Accuracy = 100
+TotalPP = 15
+Target = NearOther
+FunctionCode = FreezeTarget
+Flags = CanProtect,CanMirrorMove,ZPower_ATTACK_1
+Description = Debug Move to 100% freeze the target.
 #-------------------------------

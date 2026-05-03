@@ -17,7 +17,7 @@ RaidRanks = 1,2
 [PETILIL,2]
 FormName = Niphosian
 Types = GRASS,PSYCHIC
-Abilities = BIOLUMINESENCE,OWNTEMPO
+Abilities = BIOLUMINESCENCE,OWNTEMPO
 HiddenAbilities = LEAFGUARD
 BaseStats = 45,35,40,10,100,50
 RaidRanks = 1,2
@@ -25,7 +25,7 @@ RaidRanks = 1,2
 [LILLIGANT,2]
 FormName = Niphosian
 Types = GRASS,PSYCHIC
-Abilities = BIOLUMINESENCE,OWNTEMPO
+Abilities = BIOLUMINESCENCE,OWNTEMPO
 HiddenAbilities = LEAFGUARD
 BaseStats = 70,60,55,55,165,75
 RaidRanks = 3,4
@@ -173,6 +173,16 @@ Height = 2.0
 Weight = 542.3
 IoPokedex = Discarding their axes, Barbearien choose to bulk up and improve their strength. They can lift up to 20 times their own weight, and don't need their claws to fight.
 AmPokedex = Their signature razor claws have blunted, and are now strong bludgeoning tools. It's not uncommon to see titanic trees felled in single punches.
+#-------------------------------
+[SKARADIMENT,1]
+FormName = Mega Skaradiment
+MegaStone = SKARADIMITE
+BaseStats = 93,112,140,114,20,121
+BaseExp = 350
+Abilities = DIRTBALL
+HiddenAbilities = DIRTBALL
+IoPokedex = ???
+AmPokedex = ???
 #-------------------------------
 [FERMENTAL,1]
 FormName = Mega Fermental

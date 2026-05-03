@@ -221,9 +221,9 @@ class Battle::Move::CureUserSaltCure < Battle::Move
  end
 
 #===============================================================================
-# Heals user by 1/2 of its max HP, or 2/3 of its max HP in a hailstorm. (Whiteout)
+# Heals user by 1/2 of its max HP, or 2/3 of its max HP in snow. (Whiteout)
 #===============================================================================
-class Battle::Move::HealUserDependingOnHailstorm < Battle::Move::HealingMove
+class Battle::Move::HealUserDependingOnHail < Battle::Move::HealingMove
   def pbHealAmount(user)
     return (user.totalhp * 2 / 3.0).round if user.effectiveWeather == :Hail
     return (user.totalhp / 2.0).round
@@ -491,6 +491,82 @@ class Battle::Move::LowerTargetSpeed1MakeTargetWeakerToFire < Battle::Move::Targ
     if !target.effects[PBEffects::TarShot]
       target.effects[PBEffects::TarShot] = true
       @battle.pbDisplay(_INTL("{1} became weaker to fire!", target.pbThis))
+    end
+  end
+end
+
+#===============================================================================
+# If Electric Terrain applies, priority is increased by 1. (Volt Vault)
+#===============================================================================
+class Battle::Move::HigherPriorityInElectricTerrain < Battle::Move
+  def pbPriority(user)
+    ret = super
+    ret += 1 if @battle.field.terrain == :Electric && user.affectedByTerrain?
+    return ret
+  end
+end
+
+#===============================================================================
+# If Psychic Terrain applies, priority is increased by 1. (Zen Zip)
+#===============================================================================
+class Battle::Move::HigherPriorityInPsychicTerrain < Battle::Move
+  def pbPriority(user)
+    ret = super
+    ret += 1 if @battle.field.terrain == :Psychic && user.affectedByTerrain?
+    return ret
+  end
+end
+
+#===============================================================================
+# If Misty Terrain applies, priority is increased by 1. (Misty Mirage)
+#===============================================================================
+class Battle::Move::HigherPriorityInMistyTerrain < Battle::Move
+  def pbPriority(user)
+    ret = super
+    ret += 1 if @battle.field.terrain == :Misty && user.affectedByTerrain?
+    return ret
+  end
+end
+
+#===============================================================================
+# Poisons the target. Effectiveness against Water and Ground-type is 2x. (Pollution)
+#===============================================================================
+class Battle::Move::PoisonTargetSuperEffectiveAgainstWaterGround < Battle::Move::PoisonTarget
+  def pbCalcTypeModSingle(moveType, defType, user, target)
+    return Effectiveness::SUPER_EFFECTIVE_MULTIPLIER if defType == :WATER
+    return Effectiveness::SUPER_EFFECTIVE_MULTIPLIER if defType == :GROUND
+    return super
+  end
+end
+
+#===============================================================================
+# Choco-lanche
+#===============================================================================
+# Lowers the user's Atk by 1 stage. Also scatters coins to be picked up.
+#-------------------------------------------------------------------------------
+class Battle::Move::AddMoneyGainedFromBattleLowerUserAtk1 < Battle::Move
+  attr_reader :statDown
+  def initialize(battle, move)
+    super
+    @statDown = [:ATTACK, 1]
+  end
+  
+  def pbEndOfMoveUsageEffect(user, targets, numHits, switchedBattlers)
+    return if @battle.pbAllFainted?(user.idxOpposingSide)
+    hit_target = false
+    targets.each do |b|
+      next if b.damageState.missed
+      next if b.damageState.protected
+      next if b.damageState.unaffected
+      hit_target = true
+      # Money modifier
+      next if !user.pbOwnedByPlayer?
+      @battle.field.effects[PBEffects::PayDay] += 5 * user.level
+    end
+    @battle.pbDisplay(_INTL("Chocolate Coins were scattered everywhere!")) if hit_target
+    # Stats modifier
+    if user.pbCanLowerStatStage?(@statDown[0], user, self) && hit_target
+      user.pbLowerStatStage(@statDown[0], @statDown[1], user)
     end
   end
 end

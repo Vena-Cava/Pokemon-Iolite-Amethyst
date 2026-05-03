@@ -1,0 +1,78 @@
+﻿# See the documentation on the wiki to learn how to edit this file.
+#-------------------------------
+[Move,SUNNYDAY]
+Name = Essentials
+NoUser = true
+NoTarget = true
+Credit = Maruno
+<Background>
+    Graphic = Screens/white
+    Focus = Background
+    SetOpacity = 0,0
+    SetColor = 0,E0E060FF
+    MoveOpacity = 0,5,192
+    MoveOpacity = 35,5,0
+<Ray emitter>
+    Graphic = ray [bottom]
+    Focus = Foreground
+    Emitter = NoMovement
+    EmitterRate = 5
+    RandomAngleRange = 20
+    SetZ = 0,10
+    SetZoomX = 0,10
+    SetZoomY = 0,50
+    SetAngle = 0,225
+    SetColor = 0,E0E00000
+    SetEmitting = 0,true
+    SetEmitX = 0,-64
+    SetEmitY = 0,-64
+    MoveColor = 0,4,E0E00020,EaseIn
+    MoveZoomX = 0,22,200
+    MoveZoomY = 0,22,500
+    MoveOpacity = 0,22,0,EaseIn
+    MoveColor = 4,18,E0E040FF,EaseIn
+    SetEmitting = 15,false
+    SetVisible = 22,false
+<Strobe emitter>
+    Graphic = strobe 2 [bottom]
+    Focus = Foreground
+    Emitter = NoMovement
+    EmitterRate = 5
+    RandomAngleRange = 20
+    SetZ = 0,10
+    SetZoomY = 0,50
+    SetAngle = 0,225
+    SetColor = 0,E0E00000
+    SetEmitting = 0,true
+    SetEmitX = 0,-64
+    SetEmitY = 0,-64
+    MoveColor = 0,4,E0E00020,EaseIn
+    MoveZoomY = 0,22,1000
+    MoveOpacity = 0,22,0,EaseIn
+    MoveColor = 4,18,E0E040FF,EaseIn
+    SetEmitting = 15,false
+    SetVisible = 22,false
+<Hexagon emitter>
+    Graphic = strobe 3
+    Focus = Foreground
+    Emitter = NoMovement
+    EmitterRate = 5
+    SetZ = 0,20
+    SetZoomX = 0,10
+    SetZoomY = 0,10
+    SetAngle = 0,45
+    SetColor = 0,E0E00020
+    SetEmitting = 0,true
+    SetEmitX = 0,-16
+    SetEmitY = 0,-16
+    MoveX = 0,22,200
+    MoveY = 0,22,200
+    MoveZoomX = 0,22,500
+    MoveZoomY = 0,22,500
+    MoveOpacity = 0,22,0,EaseIn
+    MoveColor = 4,8,E0C00090,EaseIn
+    MoveColor = 12,10,E0E040FF
+    SetEmitting = 15,false
+    SetVisible = 22,false
+<SE>
+    Play = 0,Fire/Sunny Day,80
