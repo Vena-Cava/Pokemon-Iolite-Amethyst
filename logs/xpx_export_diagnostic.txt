@@ -190,5 +190,5 @@ ts_list length: 51
   Map104 (Windmill Forest): stored_id=23, slot_path='C:\\Users\\Vena\\Documents\\folders\\RPGMaker\\Pokemon IA XPX\\Graphics\\Tilesets\\Niphos Outside.png', slot_name='Niphos Outside', resolved_id=23 (matched 'niphos outside.png')
 
 === Summary ===
-Exported: 2 maps
-Skipped : 102 maps (rxdata up-to-date, no mismatch)
+Exported: 3 maps
+Skipped : 101 maps (rxdata up-to-date, no mismatch)
