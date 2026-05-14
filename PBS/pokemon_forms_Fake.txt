@@ -57,7 +57,7 @@ Color = Red
 Evolutions = HYDREIGON,Level,64
 RaidRanks = 3,4
 #-------------------------------
-[GARCHOMP,1]
+[GARCHOMP,3]
 FormName = Niphosian
 Types = DRAGON,FIRE
 Abilities = IGNITION

@@ -708,7 +708,7 @@ end
 #-------------------------------------------------------------------------------
 class Battle::Move::RemoveUserBindingAndEntryHazardsPoisonTarget < Battle::Move::PoisonTarget
   def pbEffectAfterAllHits(user, target)
-    return if user.fainted? || target.damageState.unaffected
+    return if (user.fainted? && Settings::CHAMPIONS_MECHANICS) || target.damageState.unaffected
     if user.effects[PBEffects::Trapping] > 0
       trapMove = GameData::Move.get(user.effects[PBEffects::TrappingMove]).name
       trapUser = @battle.battlers[user.effects[PBEffects::TrappingUser]]

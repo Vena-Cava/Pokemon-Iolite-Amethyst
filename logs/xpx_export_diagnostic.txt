@@ -1,0 +1,194 @@
+=== XPX rxdata export diagnostic ===
+Tilesets.rxdata at: C:\Users\Vena\Documents\folders\RPGMaker\Pokemon IA XPX\Data\Tilesets.rxdata
+ts_list length: 51
+
+=== Raw position dump (every array entry) ===
+  [  0] = None
+  [  1] = RubyObject @tileset_name='Outside' @name='Outside'
+  [  2] = RubyObject @tileset_name='Outside' @name='Outside waterfall'
+  [  3] = RubyObject @tileset_name='Interior general' @name='Inside'
+  [  4] = RubyObject @tileset_name='Poke Centre interior' @name='Poké Center'
+  [  5] = RubyObject @tileset_name='Mart interior' @name='Poké Mart'
+  [  6] = RubyObject @tileset_name='Caves' @name='Caves'
+  [  7] = RubyObject @tileset_name='Caves' @name='Dungeon'
+  [  8] = RubyObject @tileset_name='Bike shop interior' @name='Bike Shop'
+  [  9] = RubyObject @tileset_name='Boat' @name='Boat'
+  [ 10] = RubyObject @tileset_name='Department store interior' @name='Department Store'
+  [ 11] = RubyObject @tileset_name='Factory interior' @name='Factory'
+  [ 12] = RubyObject @tileset_name='Game Corner interior' @name='Game Corner'
+  [ 13] = RubyObject @tileset_name='Graveyard tower interior' @name='Graveyard'
+  [ 14] = RubyObject @tileset_name='Gyms interior' @name='Gyms'
+  [ 15] = RubyObject @tileset_name='Harbour interior' @name='Harbour'
+  [ 16] = RubyObject @tileset_name='Mansion interior' @name='Mansion'
+  [ 17] = RubyObject @tileset_name='Multiplayer rooms' @name='Multiplayer rooms'
+  [ 18] = RubyObject @tileset_name='Museum interior' @name='Museum'
+  [ 19] = RubyObject @tileset_name='Ruins interior' @name='Ruins'
+  [ 20] = RubyObject @tileset_name='Trainer Tower interior' @name='Trainer Tower'
+  [ 21] = RubyObject @tileset_name='Underground path' @name='Underground Path'
+  [ 22] = RubyObject @tileset_name='Underwater' @name='Underwater'
+  [ 23] = RubyObject @tileset_name='Niphos Outside' @name='Niphos Outside'
+  [ 24] = RubyObject @tileset_name='Niphos Inside' @name='Niphos Inside'
+  [ 25] = RubyObject @tileset_name='General-Interior' @name='General Interior'
+  [ 26] = RubyObject @tileset_name='Pokemon-Center-Interior' @name='Pokémon Center/Mart'
+  [ 27] = RubyObject @tileset_name='' @name=''
+  [ 28] = RubyObject @tileset_name='' @name=''
+  [ 29] = RubyObject @tileset_name='' @name=''
+  [ 30] = RubyObject @tileset_name='' @name=''
+  [ 31] = RubyObject @tileset_name='' @name=''
+  [ 32] = RubyObject @tileset_name='' @name=''
+  [ 33] = RubyObject @tileset_name='' @name=''
+  [ 34] = RubyObject @tileset_name='' @name=''
+  [ 35] = RubyObject @tileset_name='' @name=''
+  [ 36] = RubyObject @tileset_name='' @name=''
+  [ 37] = RubyObject @tileset_name='' @name=''
+  [ 38] = RubyObject @tileset_name='' @name=''
+  [ 39] = RubyObject @tileset_name='' @name=''
+  [ 40] = RubyObject @tileset_name='' @name=''
+  [ 41] = RubyObject @tileset_name='' @name=''
+  [ 42] = RubyObject @tileset_name='' @name=''
+  [ 43] = RubyObject @tileset_name='' @name=''
+  [ 44] = RubyObject @tileset_name='' @name=''
+  [ 45] = RubyObject @tileset_name='' @name=''
+  [ 46] = RubyObject @tileset_name='' @name=''
+  [ 47] = RubyObject @tileset_name='' @name=''
+  [ 48] = RubyObject @tileset_name='' @name=''
+  [ 49] = RubyObject @tileset_name='' @name=''
+  [ 50] = RubyObject @tileset_name='' @name=''
+
+=== Lookup entries (84) ===
+  [  1] -> ['outside', 'outside.png']
+  [  2] -> ['outside waterfall', 'outside waterfall.png']
+  [  3] -> ['inside', 'inside.png', 'interior general', 'interior general.png']
+  [  4] -> ['poke centre interior', 'poke centre interior.png', 'poké center', 'poké center.png']
+  [  5] -> ['mart interior', 'mart interior.png', 'poké mart', 'poké mart.png']
+  [  6] -> ['caves', 'caves.png']
+  [  7] -> ['dungeon', 'dungeon.png']
+  [  8] -> ['bike shop', 'bike shop interior', 'bike shop interior.png', 'bike shop.png']
+  [  9] -> ['boat', 'boat.png']
+  [ 10] -> ['department store', 'department store interior', 'department store interior.png', 'department store.png']
+  [ 11] -> ['factory', 'factory interior', 'factory interior.png', 'factory.png']
+  [ 12] -> ['game corner', 'game corner interior', 'game corner interior.png', 'game corner.png']
+  [ 13] -> ['graveyard', 'graveyard tower interior', 'graveyard tower interior.png', 'graveyard.png']
+  [ 14] -> ['gyms', 'gyms interior', 'gyms interior.png', 'gyms.png']
+  [ 15] -> ['harbour', 'harbour interior', 'harbour interior.png', 'harbour.png']
+  [ 16] -> ['mansion', 'mansion interior', 'mansion interior.png', 'mansion.png']
+  [ 17] -> ['multiplayer rooms', 'multiplayer rooms.png']
+  [ 18] -> ['museum', 'museum interior', 'museum interior.png', 'museum.png']
+  [ 19] -> ['ruins', 'ruins interior', 'ruins interior.png', 'ruins.png']
+  [ 20] -> ['trainer tower', 'trainer tower interior', 'trainer tower interior.png', 'trainer tower.png']
+  [ 21] -> ['underground path', 'underground path.png']
+  [ 22] -> ['underwater', 'underwater.png']
+  [ 23] -> ['niphos outside', 'niphos outside.png']
+  [ 24] -> ['niphos inside', 'niphos inside.png']
+  [ 25] -> ['general interior', 'general interior.png', 'general-interior', 'general-interior.png']
+  [ 26] -> ['pokemon-center-interior', 'pokemon-center-interior.png', 'pokémon center/mart', 'pokémon center/mart.png']
+
+=== Per-map reconciliation ===
+  Map001 (Intro): stored_id=4, slot_path='C:\\Users\\Vena\\Documents\\folders\\RPGMaker\\Pokemon IA XPX\\Graphics\\Tilesets\\Poke Centre interior.png', slot_name='Poké Center', resolved_id=4 (matched 'poke centre interior.png')
+  Map002 (Lappet Town): stored_id=1, slot_path='C:\\Users\\Vena\\Documents\\folders\\RPGMaker\\Pokemon IA XPX\\Graphics\\Tilesets\\Outside.png', slot_name='Outside', resolved_id=1 (matched 'outside.png')
+  Map003 (\PN's house): stored_id=3, slot_path='C:\\Users\\Vena\\Documents\\folders\\RPGMaker\\Pokemon IA XPX\\Graphics\\Tilesets\\Interior general.png', slot_name='Inside', resolved_id=3 (matched 'interior general.png')
+  Map004 (Pokémon Lab): stored_id=3, slot_path='C:\\Users\\Vena\\Documents\\folders\\RPGMaker\\Pokemon IA XPX\\Graphics\\Tilesets\\Interior general.png', slot_name='Inside', resolved_id=3 (matched 'interior general.png')
+  Map005 (Route 1): stored_id=1, slot_path='C:\\Users\\Vena\\Documents\\folders\\RPGMaker\\Pokemon IA XPX\\Graphics\\Tilesets\\Outside.png', slot_name='Outside', resolved_id=1 (matched 'outside.png')
+  Map006 (Kurt's house): stored_id=3, slot_path='C:\\Users\\Vena\\Documents\\folders\\RPGMaker\\Pokemon IA XPX\\Graphics\\Tilesets\\Interior general.png', slot_name='Inside', resolved_id=3 (matched 'interior general.png')
+  Map007 (Cedolan City): stored_id=1, slot_path='C:\\Users\\Vena\\Documents\\folders\\RPGMaker\\Pokemon IA XPX\\Graphics\\Tilesets\\Outside.png', slot_name='Outside', resolved_id=1 (matched 'outside.png')
+  Map008 (Daisy's house): stored_id=3, slot_path='C:\\Users\\Vena\\Documents\\folders\\RPGMaker\\Pokemon IA XPX\\Graphics\\Tilesets\\Interior general.png', slot_name='Inside', resolved_id=3 (matched 'interior general.png')
+  Map009 (Cedolan City Poké Center): stored_id=4, slot_path='C:\\Users\\Vena\\Documents\\folders\\RPGMaker\\Pokemon IA XPX\\Graphics\\Tilesets\\Poke Centre interior.png', slot_name='Poké Center', resolved_id=4 (matched 'poke centre interior.png')
+  Map010 (Cedolan Gym): stored_id=14, slot_path='C:\\Users\\Vena\\Documents\\folders\\RPGMaker\\Pokemon IA XPX\\Graphics\\Tilesets\\Gyms interior.png', slot_name='Gyms', resolved_id=14 (matched 'gyms interior.png')
+  Map011 (Pokémon Institute): stored_id=3, slot_path='C:\\Users\\Vena\\Documents\\folders\\RPGMaker\\Pokemon IA XPX\\Graphics\\Tilesets\\Interior general.png', slot_name='Inside', resolved_id=3 (matched 'interior general.png')
+  Map012 (Cedolan City Condo): stored_id=3, slot_path='C:\\Users\\Vena\\Documents\\folders\\RPGMaker\\Pokemon IA XPX\\Graphics\\Tilesets\\Interior general.png', slot_name='Inside', resolved_id=3 (matched 'interior general.png')
+  Map013 (Game Corner): stored_id=12, slot_path='C:\\Users\\Vena\\Documents\\folders\\RPGMaker\\Pokemon IA XPX\\Graphics\\Tilesets\\Game Corner interior.png', slot_name='Game Corner', resolved_id=12 (matched 'game corner interior.png')
+  Map014 (Cedolan Dept. 1F): stored_id=10, slot_path='C:\\Users\\Vena\\Documents\\folders\\RPGMaker\\Pokemon IA XPX\\Graphics\\Tilesets\\Department store interior.png', slot_name='Department Store', resolved_id=10 (matched 'department store interior.png')
+  Map015 (Cedolan Dept. 2F): stored_id=10, slot_path='C:\\Users\\Vena\\Documents\\folders\\RPGMaker\\Pokemon IA XPX\\Graphics\\Tilesets\\Department store interior.png', slot_name='Department Store', resolved_id=10 (matched 'department store interior.png')
+  Map016 (Cedolan Dept. 3F): stored_id=10, slot_path='C:\\Users\\Vena\\Documents\\folders\\RPGMaker\\Pokemon IA XPX\\Graphics\\Tilesets\\Department store interior.png', slot_name='Department Store', resolved_id=10 (matched 'department store interior.png')
+  Map017 (Cedolan Dept. 4F): stored_id=10, slot_path='C:\\Users\\Vena\\Documents\\folders\\RPGMaker\\Pokemon IA XPX\\Graphics\\Tilesets\\Department store interior.png', slot_name='Department Store', resolved_id=10 (matched 'department store interior.png')
+  Map018 (Cedolan Dept. 5F): stored_id=10, slot_path='C:\\Users\\Vena\\Documents\\folders\\RPGMaker\\Pokemon IA XPX\\Graphics\\Tilesets\\Department store interior.png', slot_name='Department Store', resolved_id=10 (matched 'department store interior.png')
+  Map019 (Cedolan Dept. Rooftop): stored_id=10, slot_path='C:\\Users\\Vena\\Documents\\folders\\RPGMaker\\Pokemon IA XPX\\Graphics\\Tilesets\\Department store interior.png', slot_name='Department Store', resolved_id=10 (matched 'department store interior.png')
+  Map020 (Cedolan Dept. Elevator): stored_id=10, slot_path='C:\\Users\\Vena\\Documents\\folders\\RPGMaker\\Pokemon IA XPX\\Graphics\\Tilesets\\Department store interior.png', slot_name='Department Store', resolved_id=10 (matched 'department store interior.png')
+  Map021 (Route 2): stored_id=1, slot_path='C:\\Users\\Vena\\Documents\\folders\\RPGMaker\\Pokemon IA XPX\\Graphics\\Tilesets\\Outside.png', slot_name='Outside', resolved_id=1 (matched 'outside.png')
+  Map022 (Pinella Town): stored_id=23, slot_path='C:\\Users\\Vena\\Documents\\folders\\RPGMaker\\Pokemon IA XPX\\Graphics\\Tilesets\\Niphos Outside.png', slot_name='Niphos Outside', resolved_id=23 (matched 'niphos outside.png')
+  Map023 (Lerucean Town): stored_id=1, slot_path='C:\\Users\\Vena\\Documents\\folders\\RPGMaker\\Pokemon IA XPX\\Graphics\\Tilesets\\Outside.png', slot_name='Outside', resolved_id=1 (matched 'outside.png')
+  Map024 (Lerucean Town Poké Center): stored_id=4, slot_path='C:\\Users\\Vena\\Documents\\folders\\RPGMaker\\Pokemon IA XPX\\Graphics\\Tilesets\\Poke Centre interior.png', slot_name='Poké Center', resolved_id=4 (matched 'poke centre interior.png')
+  Map025 (Lerucean Town Mart): stored_id=5, slot_path='C:\\Users\\Vena\\Documents\\folders\\RPGMaker\\Pokemon IA XPX\\Graphics\\Tilesets\\Mart interior.png', slot_name='Poké Mart', resolved_id=5 (matched 'mart interior.png')
+  Map026 (Pokémon Fan Club): stored_id=3, slot_path='C:\\Users\\Vena\\Documents\\folders\\RPGMaker\\Pokemon IA XPX\\Graphics\\Tilesets\\Interior general.png', slot_name='Inside', resolved_id=3 (matched 'interior general.png')
+  Map027 (Pokémon Day Care): stored_id=3, slot_path='C:\\Users\\Vena\\Documents\\folders\\RPGMaker\\Pokemon IA XPX\\Graphics\\Tilesets\\Interior general.png', slot_name='Inside', resolved_id=3 (matched 'interior general.png')
+  Map028 (Natural Park): stored_id=1, slot_path='C:\\Users\\Vena\\Documents\\folders\\RPGMaker\\Pokemon IA XPX\\Graphics\\Tilesets\\Outside.png', slot_name='Outside', resolved_id=1 (matched 'outside.png')
+  Map029 (Natural Park Entrance): stored_id=3, slot_path='C:\\Users\\Vena\\Documents\\folders\\RPGMaker\\Pokemon IA XPX\\Graphics\\Tilesets\\Interior general.png', slot_name='Inside', resolved_id=3 (matched 'interior general.png')
+  Map030 (Natural Park Pavillion): stored_id=3, slot_path='C:\\Users\\Vena\\Documents\\folders\\RPGMaker\\Pokemon IA XPX\\Graphics\\Tilesets\\Interior general.png', slot_name='Inside', resolved_id=3 (matched 'interior general.png')
+  Map031 (Route 3): stored_id=1, slot_path='C:\\Users\\Vena\\Documents\\folders\\RPGMaker\\Pokemon IA XPX\\Graphics\\Tilesets\\Outside.png', slot_name='Outside', resolved_id=1 (matched 'outside.png')
+  Map032 (Old Couple's house): stored_id=25, slot_path='C:\\Users\\Vena\\Documents\\folders\\RPGMaker\\Pokemon IA XPX\\Graphics\\Tilesets\\General-Interior.png', slot_name='General Interior', resolved_id=25 (matched 'general-interior.png')
+  Map033 (Rival's house): stored_id=25, slot_path='C:\\Users\\Vena\\Documents\\folders\\RPGMaker\\Pokemon IA XPX\\Graphics\\Tilesets\\General-Interior.png', slot_name='General Interior', resolved_id=25 (matched 'general-interior.png')
+  Map034 (Ice Cave): stored_id=6, slot_path='C:\\Users\\Vena\\Documents\\folders\\RPGMaker\\Pokemon IA XPX\\Graphics\\Tilesets\\Caves.png', slot_name='Caves', resolved_id=6 (matched 'caves.png')
+  Map035 (Ingido Plateau outside): stored_id=1, slot_path='C:\\Users\\Vena\\Documents\\folders\\RPGMaker\\Pokemon IA XPX\\Graphics\\Tilesets\\Outside.png', slot_name='Outside', resolved_id=1 (matched 'outside.png')
+  Map036 (Pokémon League entrance): stored_id=4, slot_path='C:\\Users\\Vena\\Documents\\folders\\RPGMaker\\Pokemon IA XPX\\Graphics\\Tilesets\\Poke Centre interior.png', slot_name='Poké Center', resolved_id=4 (matched 'poke centre interior.png')
+  Map037 (Pokémon League room 1): stored_id=14, slot_path='C:\\Users\\Vena\\Documents\\folders\\RPGMaker\\Pokemon IA XPX\\Graphics\\Tilesets\\Gyms interior.png', slot_name='Gyms', resolved_id=14 (matched 'gyms interior.png')
+  Map038 (Hall of Fame): stored_id=14, slot_path='C:\\Users\\Vena\\Documents\\folders\\RPGMaker\\Pokemon IA XPX\\Graphics\\Tilesets\\Gyms interior.png', slot_name='Gyms', resolved_id=14 (matched 'gyms interior.png')
+  Map039 (Route 4): stored_id=1, slot_path='C:\\Users\\Vena\\Documents\\folders\\RPGMaker\\Pokemon IA XPX\\Graphics\\Tilesets\\Outside.png', slot_name='Outside', resolved_id=1 (matched 'outside.png')
+  Map040 (Route 4 Cycling Road): stored_id=1, slot_path='C:\\Users\\Vena\\Documents\\folders\\RPGMaker\\Pokemon IA XPX\\Graphics\\Tilesets\\Outside.png', slot_name='Outside', resolved_id=1 (matched 'outside.png')
+  Map041 (Route 5): stored_id=1, slot_path='C:\\Users\\Vena\\Documents\\folders\\RPGMaker\\Pokemon IA XPX\\Graphics\\Tilesets\\Outside.png', slot_name='Outside', resolved_id=1 (matched 'outside.png')
+  Map042 (\PN's house): stored_id=25, slot_path='C:\\Users\\Vena\\Documents\\folders\\RPGMaker\\Pokemon IA XPX\\Graphics\\Tilesets\\General-Interior.png', slot_name='General Interior', resolved_id=25 (matched 'general-interior.png')
+  Map043 (Tulpha Grove): stored_id=23, slot_path='C:\\Users\\Vena\\Documents\\folders\\RPGMaker\\Pokemon IA XPX\\Graphics\\Tilesets\\Niphos Outside.png', slot_name='Niphos Outside', resolved_id=23 (matched 'niphos outside.png')
+  Map044 (Route 6): stored_id=1, slot_path='C:\\Users\\Vena\\Documents\\folders\\RPGMaker\\Pokemon IA XPX\\Graphics\\Tilesets\\Outside.png', slot_name='Outside', resolved_id=1 (matched 'outside.png')
+  Map045 (Route 6 Cycling Road): stored_id=1, slot_path='C:\\Users\\Vena\\Documents\\folders\\RPGMaker\\Pokemon IA XPX\\Graphics\\Tilesets\\Outside.png', slot_name='Outside', resolved_id=1 (matched 'outside.png')
+  Map046 (Route 4 Cycling Road gate): stored_id=3, slot_path='C:\\Users\\Vena\\Documents\\folders\\RPGMaker\\Pokemon IA XPX\\Graphics\\Tilesets\\Interior general.png', slot_name='Inside', resolved_id=3 (matched 'interior general.png')
+  Map047 (Route 7): stored_id=1, slot_path='C:\\Users\\Vena\\Documents\\folders\\RPGMaker\\Pokemon IA XPX\\Graphics\\Tilesets\\Outside.png', slot_name='Outside', resolved_id=1 (matched 'outside.png')
+  Map048 (Pinella Fields): stored_id=23, slot_path='C:\\Users\\Vena\\Documents\\folders\\RPGMaker\\Pokemon IA XPX\\Graphics\\Tilesets\\Niphos Outside.png', slot_name='Niphos Outside', resolved_id=23 (matched 'niphos outside.png')
+  Map049 (Rock Cave 1F): stored_id=6, slot_path='C:\\Users\\Vena\\Documents\\folders\\RPGMaker\\Pokemon IA XPX\\Graphics\\Tilesets\\Caves.png', slot_name='Caves', resolved_id=6 (matched 'caves.png')
+  Map050 (Rock Cave B1F): stored_id=6, slot_path='C:\\Users\\Vena\\Documents\\folders\\RPGMaker\\Pokemon IA XPX\\Graphics\\Tilesets\\Caves.png', slot_name='Caves', resolved_id=6 (matched 'caves.png')
+  Map051 (Dungeon): stored_id=7, slot_path='C:\\Users\\Vena\\Documents\\folders\\RPGMaker\\Pokemon IA XPX\\Graphics\\Tilesets\\Caves.png', slot_name='Dungeon', resolved_id=6 (matched 'caves.png') *** MISMATCH ***
+  Map052 (Battle Frontier): stored_id=1, slot_path='C:\\Users\\Vena\\Documents\\folders\\RPGMaker\\Pokemon IA XPX\\Graphics\\Tilesets\\Outside.png', slot_name='Outside', resolved_id=1 (matched 'outside.png')
+  Map053 (Battle Frontier Poké Center): stored_id=4, slot_path='C:\\Users\\Vena\\Documents\\folders\\RPGMaker\\Pokemon IA XPX\\Graphics\\Tilesets\\Poke Centre interior.png', slot_name='Poké Center', resolved_id=4 (matched 'poke centre interior.png')
+  Map054 (Battle Frontier Mart): stored_id=5, slot_path='C:\\Users\\Vena\\Documents\\folders\\RPGMaker\\Pokemon IA XPX\\Graphics\\Tilesets\\Mart interior.png', slot_name='Poké Mart', resolved_id=5 (matched 'mart interior.png')
+  Map055 (Battle Tower): stored_id=20, slot_path='C:\\Users\\Vena\\Documents\\folders\\RPGMaker\\Pokemon IA XPX\\Graphics\\Tilesets\\Trainer Tower interior.png', slot_name='Trainer Tower', resolved_id=20 (matched 'trainer tower interior.png')
+  Map056 (Battle Tower arena): stored_id=20, slot_path='C:\\Users\\Vena\\Documents\\folders\\RPGMaker\\Pokemon IA XPX\\Graphics\\Tilesets\\Trainer Tower interior.png', slot_name='Trainer Tower', resolved_id=20 (matched 'trainer tower interior.png')
+  Map057 (Stadium Cup lobby): stored_id=20, slot_path='C:\\Users\\Vena\\Documents\\folders\\RPGMaker\\Pokemon IA XPX\\Graphics\\Tilesets\\Trainer Tower interior.png', slot_name='Trainer Tower', resolved_id=20 (matched 'trainer tower interior.png')
+  Map058 (Battle Palace): stored_id=3, slot_path='C:\\Users\\Vena\\Documents\\folders\\RPGMaker\\Pokemon IA XPX\\Graphics\\Tilesets\\Interior general.png', slot_name='Inside', resolved_id=3 (matched 'interior general.png')
+  Map059 (Battle Palace arena): stored_id=3, slot_path='C:\\Users\\Vena\\Documents\\folders\\RPGMaker\\Pokemon IA XPX\\Graphics\\Tilesets\\Interior general.png', slot_name='Inside', resolved_id=3 (matched 'interior general.png')
+  Map060 (Battle Arena): stored_id=3, slot_path='C:\\Users\\Vena\\Documents\\folders\\RPGMaker\\Pokemon IA XPX\\Graphics\\Tilesets\\Interior general.png', slot_name='Inside', resolved_id=3 (matched 'interior general.png')
+  Map061 (Battle Arena arena): stored_id=14, slot_path='C:\\Users\\Vena\\Documents\\folders\\RPGMaker\\Pokemon IA XPX\\Graphics\\Tilesets\\Gyms interior.png', slot_name='Gyms', resolved_id=14 (matched 'gyms interior.png')
+  Map062 (Battle Factory): stored_id=3, slot_path='C:\\Users\\Vena\\Documents\\folders\\RPGMaker\\Pokemon IA XPX\\Graphics\\Tilesets\\Interior general.png', slot_name='Inside', resolved_id=3 (matched 'interior general.png')
+  Map063 (Battle Factory intro corridor): stored_id=3, slot_path='C:\\Users\\Vena\\Documents\\folders\\RPGMaker\\Pokemon IA XPX\\Graphics\\Tilesets\\Interior general.png', slot_name='Inside', resolved_id=3 (matched 'interior general.png')
+  Map064 (Battle Factory arena): stored_id=3, slot_path='C:\\Users\\Vena\\Documents\\folders\\RPGMaker\\Pokemon IA XPX\\Graphics\\Tilesets\\Interior general.png', slot_name='Inside', resolved_id=3 (matched 'interior general.png')
+  Map065 (Battle Factory corridor): stored_id=3, slot_path='C:\\Users\\Vena\\Documents\\folders\\RPGMaker\\Pokemon IA XPX\\Graphics\\Tilesets\\Interior general.png', slot_name='Inside', resolved_id=3 (matched 'interior general.png')
+  Map066 (Safari Zone outside): stored_id=1, slot_path='C:\\Users\\Vena\\Documents\\folders\\RPGMaker\\Pokemon IA XPX\\Graphics\\Tilesets\\Outside.png', slot_name='Outside', resolved_id=1 (matched 'outside.png')
+  Map067 (Safari Zone gate): stored_id=3, slot_path='C:\\Users\\Vena\\Documents\\folders\\RPGMaker\\Pokemon IA XPX\\Graphics\\Tilesets\\Interior general.png', slot_name='Inside', resolved_id=3 (matched 'interior general.png')
+  Map068 (Safari Zone): stored_id=1, slot_path='C:\\Users\\Vena\\Documents\\folders\\RPGMaker\\Pokemon IA XPX\\Graphics\\Tilesets\\Outside.png', slot_name='Outside', resolved_id=1 (matched 'outside.png')
+  Map069 (Route 8): stored_id=2, slot_path='C:\\Users\\Vena\\Documents\\folders\\RPGMaker\\Pokemon IA XPX\\Graphics\\Tilesets\\Outside.png', slot_name='Outside waterfall', resolved_id=1 (matched 'outside.png') *** MISMATCH ***
+  Map070 (Route 8 underwater): stored_id=22, slot_path='C:\\Users\\Vena\\Documents\\folders\\RPGMaker\\Pokemon IA XPX\\Graphics\\Tilesets\\Underwater.png', slot_name='Underwater', resolved_id=22 (matched 'underwater.png')
+  Map071 (Route 8 harbor): stored_id=15, slot_path='C:\\Users\\Vena\\Documents\\folders\\RPGMaker\\Pokemon IA XPX\\Graphics\\Tilesets\\Harbour interior.png', slot_name='Harbour', resolved_id=15 (matched 'harbour interior.png')
+  Map072 (Berth Island): stored_id=1, slot_path='C:\\Users\\Vena\\Documents\\folders\\RPGMaker\\Pokemon IA XPX\\Graphics\\Tilesets\\Outside.png', slot_name='Outside', resolved_id=1 (matched 'outside.png')
+  Map073 (Faraday Island): stored_id=1, slot_path='C:\\Users\\Vena\\Documents\\folders\\RPGMaker\\Pokemon IA XPX\\Graphics\\Tilesets\\Outside.png', slot_name='Outside', resolved_id=1 (matched 'outside.png')
+  Map074 (Route 6 Cycling Road gate): stored_id=3, slot_path='C:\\Users\\Vena\\Documents\\folders\\RPGMaker\\Pokemon IA XPX\\Graphics\\Tilesets\\Interior general.png', slot_name='Inside', resolved_id=3 (matched 'interior general.png')
+  Map075 (Tiall Region): stored_id=1, slot_path='C:\\Users\\Vena\\Documents\\folders\\RPGMaker\\Pokemon IA XPX\\Graphics\\Tilesets\\Outside.png', slot_name='Outside', resolved_id=1 (matched 'outside.png')
+  Map076 (Tulpha Grove): stored_id=23, slot_path='C:\\Users\\Vena\\Documents\\folders\\RPGMaker\\Pokemon IA XPX\\Graphics\\Tilesets\\Niphos Outside.png', slot_name='Niphos Outside', resolved_id=23 (matched 'niphos outside.png')
+  Map077 (Hidden Grotto): stored_id=23, slot_path='C:\\Users\\Vena\\Documents\\folders\\RPGMaker\\Pokemon IA XPX\\Graphics\\Tilesets\\Niphos Outside.png', slot_name='Niphos Outside', resolved_id=23 (matched 'niphos outside.png')
+  Map078 (Tulphoise City): stored_id=23, slot_path='C:\\Users\\Vena\\Documents\\folders\\RPGMaker\\Pokemon IA XPX\\Graphics\\Tilesets\\Niphos Outside.png', slot_name='Niphos Outside', resolved_id=23 (matched 'niphos outside.png')
+  Map079 (Tulphoise Café): stored_id=25, slot_path='C:\\Users\\Vena\\Documents\\folders\\RPGMaker\\Pokemon IA XPX\\Graphics\\Tilesets\\General-Interior.png', slot_name='General Interior', resolved_id=25 (matched 'general-interior.png')
+  Map080 (Tulphoise City Mart): stored_id=26, slot_path='C:\\Users\\Vena\\Documents\\folders\\RPGMaker\\Pokemon IA XPX\\Graphics\\Tilesets\\Pokemon-Center-Interior.png', slot_name='Pokémon Center/Mart', resolved_id=26 (matched 'pokemon-center-interior.png')
+  Map081 (Tulphoise City Poké Center): stored_id=26, slot_path='C:\\Users\\Vena\\Documents\\folders\\RPGMaker\\Pokemon IA XPX\\Graphics\\Tilesets\\Pokemon-Center-Interior.png', slot_name='Pokémon Center/Mart', resolved_id=26 (matched 'pokemon-center-interior.png')
+  Map082 (LowerLeftHouseSmall): stored_id=25, slot_path='C:\\Users\\Vena\\Documents\\folders\\RPGMaker\\Pokemon IA XPX\\Graphics\\Tilesets\\General-Interior.png', slot_name='General Interior', resolved_id=25 (matched 'general-interior.png')
+  Map083 (LowerRightHouseSmall): stored_id=25, slot_path='C:\\Users\\Vena\\Documents\\folders\\RPGMaker\\Pokemon IA XPX\\Graphics\\Tilesets\\General-Interior.png', slot_name='General Interior', resolved_id=25 (matched 'general-interior.png')
+  Map084 (CentralHouse): stored_id=25, slot_path='C:\\Users\\Vena\\Documents\\folders\\RPGMaker\\Pokemon IA XPX\\Graphics\\Tilesets\\General-Interior.png', slot_name='General Interior', resolved_id=25 (matched 'general-interior.png')
+  Map085 (Niphos): stored_id=23, slot_path='C:\\Users\\Vena\\Documents\\folders\\RPGMaker\\Pokemon IA XPX\\Graphics\\Tilesets\\Niphos Outside.png', slot_name='Niphos Outside', resolved_id=23 (matched 'niphos outside.png')
+  Map086 (Default): stored_id=1, slot_path='C:\\Users\\Vena\\Documents\\folders\\RPGMaker\\Pokemon IA XPX\\Graphics\\Tilesets\\Outside.png', slot_name='Outside', resolved_id=1 (matched 'outside.png')
+  Map087 (Fenne Ruins): stored_id=23, slot_path='C:\\Users\\Vena\\Documents\\folders\\RPGMaker\\Pokemon IA XPX\\Graphics\\Tilesets\\Niphos Outside.png', slot_name='Niphos Outside', resolved_id=23 (matched 'niphos outside.png')
+  Map088 (Nordra): stored_id=23, slot_path='C:\\Users\\Vena\\Documents\\folders\\RPGMaker\\Pokemon IA XPX\\Graphics\\Tilesets\\Niphos Outside.png', slot_name='Niphos Outside', resolved_id=23 (matched 'niphos outside.png')
+  Map089 (Daiseye Town): stored_id=23, slot_path='C:\\Users\\Vena\\Documents\\folders\\RPGMaker\\Pokemon IA XPX\\Graphics\\Tilesets\\Niphos Outside.png', slot_name='Niphos Outside', resolved_id=23 (matched 'niphos outside.png')
+  Map090 (\PN's house): stored_id=25, slot_path='C:\\Users\\Vena\\Documents\\folders\\RPGMaker\\Pokemon IA XPX\\Graphics\\Tilesets\\General-Interior.png', slot_name='General Interior', resolved_id=25 (matched 'general-interior.png')
+  Map091 (Hidden Grotto): stored_id=23, slot_path='C:\\Users\\Vena\\Documents\\folders\\RPGMaker\\Pokemon IA XPX\\Graphics\\Tilesets\\Niphos Outside.png', slot_name='Niphos Outside', resolved_id=23 (matched 'niphos outside.png')
+  Map092 (Lassula City): stored_id=23, slot_path='C:\\Users\\Vena\\Documents\\folders\\RPGMaker\\Pokemon IA XPX\\Graphics\\Tilesets\\Niphos Outside.png', slot_name='Niphos Outside', resolved_id=23 (matched 'niphos outside.png')
+  Map093 (Lassula City Poké Center): stored_id=26, slot_path='C:\\Users\\Vena\\Documents\\folders\\RPGMaker\\Pokemon IA XPX\\Graphics\\Tilesets\\Pokemon-Center-Interior.png', slot_name='Pokémon Center/Mart', resolved_id=26 (matched 'pokemon-center-interior.png')
+  Map094 (Lassula City Mart): stored_id=26, slot_path='C:\\Users\\Vena\\Documents\\folders\\RPGMaker\\Pokemon IA XPX\\Graphics\\Tilesets\\Pokemon-Center-Interior.png', slot_name='Pokémon Center/Mart', resolved_id=26 (matched 'pokemon-center-interior.png')
+  Map095 (Lassula City Gym): stored_id=25, slot_path='C:\\Users\\Vena\\Documents\\folders\\RPGMaker\\Pokemon IA XPX\\Graphics\\Tilesets\\General-Interior.png', slot_name='General Interior', resolved_id=25 (matched 'general-interior.png')
+  Map096 (Lassula West Forest): stored_id=23, slot_path='C:\\Users\\Vena\\Documents\\folders\\RPGMaker\\Pokemon IA XPX\\Graphics\\Tilesets\\Niphos Outside.png', slot_name='Niphos Outside', resolved_id=23 (matched 'niphos outside.png')
+  Map097 (Lassula Café): stored_id=25, slot_path='C:\\Users\\Vena\\Documents\\folders\\RPGMaker\\Pokemon IA XPX\\Graphics\\Tilesets\\General-Interior.png', slot_name='General Interior', resolved_id=25 (matched 'general-interior.png')
+  Map098 (Lilycombe City): stored_id=23, slot_path='C:\\Users\\Vena\\Documents\\folders\\RPGMaker\\Pokemon IA XPX\\Graphics\\Tilesets\\Niphos Outside.png', slot_name='Niphos Outside', resolved_id=23 (matched 'niphos outside.png')
+  Map099 (Daiseye Bay): stored_id=23, slot_path='C:\\Users\\Vena\\Documents\\folders\\RPGMaker\\Pokemon IA XPX\\Graphics\\Tilesets\\Niphos Outside.png', slot_name='Niphos Outside', resolved_id=23 (matched 'niphos outside.png')
+  Map100 (Daiseye Bay): stored_id=23, slot_path='C:\\Users\\Vena\\Documents\\folders\\RPGMaker\\Pokemon IA XPX\\Graphics\\Tilesets\\Niphos Outside.png', slot_name='Niphos Outside', resolved_id=23 (matched 'niphos outside.png')
+  Map101 (Abercorn): stored_id=23, slot_path='C:\\Users\\Vena\\Documents\\folders\\RPGMaker\\Pokemon IA XPX\\Graphics\\Tilesets\\Niphos Outside.png', slot_name='Niphos Outside', resolved_id=23 (matched 'niphos outside.png')
+  Map102 (Abercorn Poké Center): stored_id=26, slot_path='C:\\Users\\Vena\\Documents\\folders\\RPGMaker\\Pokemon IA XPX\\Graphics\\Tilesets\\Pokemon-Center-Interior.png', slot_name='Pokémon Center/Mart', resolved_id=26 (matched 'pokemon-center-interior.png')
+  Map103 (Abercorn Mart): stored_id=26, slot_path='C:\\Users\\Vena\\Documents\\folders\\RPGMaker\\Pokemon IA XPX\\Graphics\\Tilesets\\Pokemon-Center-Interior.png', slot_name='Pokémon Center/Mart', resolved_id=26 (matched 'pokemon-center-interior.png')
+  Map104 (Windmill Forest): stored_id=23, slot_path='C:\\Users\\Vena\\Documents\\folders\\RPGMaker\\Pokemon IA XPX\\Graphics\\Tilesets\\Niphos Outside.png', slot_name='Niphos Outside', resolved_id=23 (matched 'niphos outside.png')
+
+=== Summary ===
+Exported: 2 maps
+Skipped : 102 maps (rxdata up-to-date, no mismatch)

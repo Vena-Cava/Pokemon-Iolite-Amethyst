@@ -1738,6 +1738,9 @@ IoPokedex = This Pokémon can pick up the scent of a Veluza just over 65 feet aw
 Generation = 9
 Evolutions = WUGTRIO,Level,26
 RaidRanks = 1,2
+WildDropCommon = WIGLETTSAND,1,3
+WildDropUncommon = WIGLETTSAND,1,3
+WildDropRare = WIGLETTSAND,1,3
 #-------------------------------
 [WUGTRIO]
 Name = Wugtrio
@@ -1764,6 +1767,9 @@ Category = Garden Eel
 IoPokedex = It has a vicious temperament, contrary to what its appearance may suggest. It wraps its long bodies around prey, then drags the prey into its den.
 Generation = 9
 RaidRanks = 3,4
+WildDropCommon = WIGLETTSAND,2,4
+WildDropUncommon = WIGLETTSAND,2,4
+WildDropRare = WIGLETTSAND,2,4
 #-------------------------------
 [BOMBIRDIER]
 Name = Bombirdier

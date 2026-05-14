@@ -17,7 +17,7 @@ Price = 300
 FieldUse = OnPokemon
 BattleUse = OnPokemon
 Flags = Fling_30
-Description = The Niphos region's specialty--veggie and meat wrap. It can be used to restore 80 HP to a single Pokémon.
+Description = The Niphos region's specialty--veggie and meat wrap. It can be used to restore 100 HP to a single Pokémon.
 #-------------------------------
 [LEANGYRO]
 Name = Lean Gyro

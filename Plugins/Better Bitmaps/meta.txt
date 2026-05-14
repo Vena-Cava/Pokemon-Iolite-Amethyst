@@ -1,0 +1,5 @@
+Name         = Better Bitmaps
+Essentials   = 21.1
+Version      = 1.1
+Website      = https://reliccastle.com/resources/169/
+Credits      = Marin

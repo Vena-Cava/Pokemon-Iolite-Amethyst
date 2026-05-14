@@ -134,8 +134,9 @@ Battle::PokeBallEffects::ModifyCatchRate.add(:STRANGEBALL, proc { |ball, catchRa
 })
 
 Battle::PokeBallEffects::IsUnconditional.add(:ORIGINBALL, proc { |ball, battle, battler|
-  next [:DIALGA, :PALKIA, :GIRATINA].include?(battler.species) && battler.form == 1
+  next true
 })
+
 
 
 ################################################################################

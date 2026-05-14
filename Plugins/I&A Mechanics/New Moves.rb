@@ -295,7 +295,7 @@ end
 #===============================================================================
 class Battle::Move::HitTwiceNotEffectiveAgainstFairy < Battle::Move::HitTwoTimes
   def pbCalcTypeModSingle(moveType, defType, user, target)
-    return Effectiveness::NOT_VERY_EFFECTIVE_ONE if defType == :FAIRY
+    return Effectiveness::NORMAL_EFFECTIVE_MULTIPLIER if moveType == :DRAGON && defType == :FAIRY
     return super
   end
 end

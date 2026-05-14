@@ -21298,6 +21298,9 @@ Generation = 7
 WildItemUncommon = SPELLTAG
 Evolutions = PALOSSAND,Level,42
 RaidRanks = 1,2,3
+WildDropCommon = SANDYGASTSAND,1,3
+WildDropUncommon = SANDYGASTSAND,1,3
+WildDropRare = SANDYGASTSAND,1,3
 #-------------------------------
 [PALOSSAND]
 Name = Palossand
@@ -21325,6 +21328,9 @@ IoPokedex = Buried beneath the castle are masses of dried-up bones from those wh
 Generation = 7
 WildItemUncommon = SPELLTAG
 RaidRanks = 3,4,5
+WildDropCommon = SANDYGASTSAND,2,4
+WildDropUncommon = SANDYGASTSAND,2,4
+WildDropRare = SANDYGASTSAND,2,4
 #-------------------------------
 [PYUKUMUKU]
 Name = Pyukumuku

@@ -525,7 +525,7 @@ Description = The Pokémon's moves are unaffected by the Ability of the target (
 [SUPERLUCK]
 Name = Super Luck
 ShortDesc = Boosts the critical-hit ratios of moves.
-Description = The Pokémon is so lucky that it has a 1-stage Critical-Hit Ratio Boost.
+Description = The Pokémon is so lucky that it has a 1-stage Critical-Hit Ratio Boost. This also increases the rarity group of loot from PokéChests, Breakabe Rocks and Sand Castles.
 #-------------------------------
 [AFTERMATH]
 Name = Aftermath
@@ -569,8 +569,8 @@ Description = The Pokémon can hit Ghost-type Pokémon with Normal- and Fighting
 #-------------------------------
 [STORMDRAIN]
 Name = Storm Drain
-ShortDesc = Draws in all Electric-type moves to boost its Sp. Atk stat.
-Description = The Pokémon draws in all Electric-type moves. These moves do not work on the Pokémon. Instead, they boost its Sp. Atk stat by 1 stage.
+ShortDesc = Draws in all Water-type moves to boost its Sp. Atk stat.
+Description = The Pokémon draws in all Water-type moves. These moves do not work on the Pokémon. Instead, they boost its Sp. Atk stat by 1 stage.
 #-------------------------------
 [ICEBODY]
 Name = Ice Body

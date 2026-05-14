@@ -1,0 +1,4 @@
+Name         = Marin's Side Stairs
+Essentials   = 21.1
+Version      = 1.0
+Credits      = Marin

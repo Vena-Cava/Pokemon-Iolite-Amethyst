@@ -105,3 +105,4 @@ class Battle::Scene::CommandMenu < Battle::Scene::MenuBase
     refreshButtons
   end
 end
+

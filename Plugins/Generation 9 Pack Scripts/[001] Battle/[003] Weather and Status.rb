@@ -198,6 +198,24 @@ end
 
 class Battle::Battler
   #-----------------------------------------------------------------------------
+  # Sleep
+  #-----------------------------------------------------------------------------
+  def pbSleepDuration(duration = -1)
+    duration = 2 + @battle.pbRandom(3) if duration <= 0
+    duration = 3 if Settings::CHAMPIONS_MECHANICS
+    duration = (duration / 2).floor if hasActiveAbility?(:EARLYBIRD)
+    return duration
+  end
+
+  #-----------------------------------------------------------------------------
+  # Freeze
+  #-----------------------------------------------------------------------------
+  def pbFreeze(msg = nil)
+    duration = Settings::CHAMPIONS_MECHANICS ? 3 : 0
+    pbInflictStatus(:FROZEN, duration, msg)
+  end
+
+  #-----------------------------------------------------------------------------
   # Drowsy utilities. 
   #-----------------------------------------------------------------------------
   def drowsy?
@@ -483,12 +501,57 @@ class Battle::Battler
   end
   
   #-----------------------------------------------------------------------------
-  # Aliased to prevent the use of moves due to being Drowsy.
+  # Aliased to prevent the use of moves due to being Drowsy and champions statuses update.
   #-----------------------------------------------------------------------------
   alias paldea_pbTryUseMove pbTryUseMove
   def pbTryUseMove(*args)
+    oldStatus = @status
+    @status = nil if Settings::CHAMPIONS_MECHANICS && [:SLEEP, :FROZEN, :PARALYSIS].include?(@status)
     ret = paldea_pbTryUseMove(*args)
     return false if !ret
+    # Update Champions
+    if Settings::CHAMPIONS_MECHANICS
+      @status = oldStatus
+      move = args[1]
+      # Check status problems and continue their effects/cure them
+      case @status
+      when :SLEEP
+        self.statusCount -= 1
+        if @statusCount <= 0
+          pbCureStatus
+        elsif @statusCount == 1 && @battle.pbRandom(100) < (100/3.0)
+          pbCureStatus
+        else
+          pbContinueStatus
+          if !move.usableWhenAsleep?   # Snore/Sleep Talk
+            PBDebug.log("[Move failed] #{pbThis} is asleep")
+            @lastMoveFailed = true
+            return false
+          end
+        end
+      when :FROZEN
+        self.statusCount -= 1
+        if @statusCount <= 0
+          pbCureStatus
+        elsif !move.thawsUser?
+          if @battle.pbRandom(100) < 25
+            pbCureStatus
+          else
+            pbContinueStatus
+            PBDebug.log("[Move failed] #{pbThis} is frozen")
+            @lastMoveFailed = true
+            return false
+          end
+        end
+      end
+      # Paralysis
+      if @status == :PARALYSIS && @battle.pbRandom(100) < 12.5
+        pbContinueStatus
+        PBDebug.log("[Move failed] #{pbThis} is paralyzed")
+        @lastMoveFailed = true
+        return false
+      end
+    end
     if @status == :DROWSY
       self.statusCount -= 1
       if @statusCount <= 0

@@ -1,0 +1,46 @@
+#===============================================================================
+# Cuttable Tall Grass: Debug Print
+#===============================================================================
+
+module CuttableTallGrass
+  DEBUG_AUTOTILES = true
+
+  def self.debug_tile_char(x, y, layer, key)
+    return " " if x < 0 || y < 0 || x >= $game_map.width || y >= $game_map.height
+    tile_id = $game_map.data[x, y, layer]
+    return "." if !tile_id || tile_id == 0
+    return "G" if autotile_key(tile_id) == key
+    return "X"
+  end
+
+  def self.debug_tile_id(x, y, layer)
+    return "----" if x < 0 || y < 0 || x >= $game_map.width || y >= $game_map.height
+    tile_id = $game_map.data[x, y, layer]
+    return tile_id ? tile_id.to_s.rjust(4, " ") : " nil"
+  end
+
+  def self.debug_print_area(cx, cy, layer, key, label = "")
+    return if !DEBUG_AUTOTILES
+    echoln("")
+    echoln("=== CuttableTallGrass Debug #{label} ===")
+    echoln("Center: #{cx},#{cy} | Layer: #{layer} | Key: #{key.inspect}")
+
+    echoln("Shape map: G=same grass, .=empty, X=other tile")
+    (cy - 2..cy + 2).each do |y|
+      row = ""
+      (cx - 2..cx + 2).each do |x|
+        row += debug_tile_char(x, y, layer, key)
+      end
+      echoln(row)
+    end
+
+    echoln("Tile IDs:")
+    (cy - 2..cy + 2).each do |y|
+      row = ""
+      (cx - 2..cx + 2).each do |x|
+        row += debug_tile_id(x, y, layer) + " "
+      end
+      echoln(row)
+    end
+  end
+end

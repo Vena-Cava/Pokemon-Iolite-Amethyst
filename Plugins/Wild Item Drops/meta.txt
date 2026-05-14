@@ -1,0 +1,4 @@
+Name         = Wild Item Drops
+Essentials   = 21.1
+Version      = 1.0
+Credits      = Vendily

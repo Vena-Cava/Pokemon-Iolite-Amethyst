@@ -1266,7 +1266,7 @@ IoPokedex = It swings its ears like whips and strikes its enemies with them. It 
 AmPokedex = 
 Generation = 6
 #-------------------------------
-[GARCHOMP,2]
+[GARCHOMP,1]
 FormName = Mega Garchomp
 MegaStone = GARCHOMPITE
 BaseStats = 108,170,115,92,120,95

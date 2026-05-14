@@ -121,7 +121,7 @@ module Battle::CatchAndStoreMixin
         pbDisplayPaused(_INTL("{1} has been sent to Box \"{2}\"!", pkmn.name, box_name))
       end
     else
-      raid_pbStorePokemon
+      raid_pbStorePokemon(pkmn)
     end
   end
   

@@ -434,11 +434,11 @@ Battle::AI::Handlers::GeneralMoveScore.add(:protect_after_glaive_rush,
 )
 
 #===============================================================================
-# Gigaton Hammer
+# Gigaton Hammer, Blood Moon
 #===============================================================================
 Battle::AI::Handlers::MoveFailureCheck.add("CantSelectConsecutiveTurns",
   proc { |move, user, ai, battle|
-    next true if user.effects[PBEffects::SuccessiveMove] == @id
+    next true if user.effects[PBEffects::SuccessiveMove] == move.id
     next false
   }
 )
@@ -519,7 +519,7 @@ Battle::AI::Handlers::MoveEffectScore.add("ProtectUserFromDamagingMovesSilkTrap"
     ai.each_foe_battler(user.side) do |b, i|
       next if !b.can_attack?
       next if !b.check_for_move { |m| m.damagingMove? && m.canProtectAgainst? }
-      next if b.has_active_ability?(:UNSEENFIST) && b.check_for_move { |m| m.contactMove? }
+      next if b.has_active_ability?(:UNSEENFIST) && b.check_for_move { |m| m.contactMove? } && !Settings::CHAMPIONS_MECHANICS
       useless = false
       # General preference
       score += 7
@@ -778,9 +778,8 @@ Battle::AI::Handlers::MoveEffectScore.add("UserMakeSubstituteSwitchOut",
 Battle::AI::Handlers::MoveFailureAgainstTargetCheck.add("SetUserAlliesAbilityToTargetAbility",
   proc { |move, user, target, ai, battle|
     will_fail = true
-    # battle.allSameSideBattlers(user.index).each do |b|
     ai.each_same_side_battler(user.side) do |b, i|
-      next if b.ability != target.ability && !b.unstoppableAbility? &&
+      next if b.ability != target.ability && !b.battler.unstoppableAbility? &&
               b.has_active_item?(:ABILITYSHIELD)
       will_fail = false
       break
@@ -945,7 +944,7 @@ Battle::AI::Handlers::MoveEffectScore.add("ProtectUserBanefulBunker",
     ai.each_foe_battler(user.side) do |b, i|
       next if !b.can_attack?
       next if !b.check_for_move { |m| m.canProtectAgainst? }
-      next if b.has_active_ability?(:UNSEENFIST) && b.check_for_move { |m| m.contactMove? }
+      next if b.has_active_ability?(:UNSEENFIST) && b.check_for_move { |m| m.contactMove? } && !Settings::CHAMPIONS_MECHANICS
       useless = false
       # General preference
       score += 7

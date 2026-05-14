@@ -247,6 +247,9 @@ class Battle::Scene
         unknown_species = false if Settings::SHOW_TYPE_EFFECTIVENESS_FOR_NEW_SPECIES
         unknown_species = true if b.celestial?
         value = Effectiveness.calculate(type, *b.pbTypes(true))
+		if defined?(InverseBattle) && InverseBattle.active?
+		  value = InverseBattle.invert_multiplier(value)
+		end
         if unknown_species                             then effct = 0
         elsif b.tera? && type == :STELLAR              then effct = 3
         elsif Effectiveness.ineffective?(value)        then effct = 1

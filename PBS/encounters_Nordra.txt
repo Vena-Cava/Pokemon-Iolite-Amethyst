@@ -28,6 +28,27 @@ LandNight,21
     15,SNOWL,3,4
     15,QUILTOX,3,4
 #-------------------------------
+[100] # Daiseye Bay 2
+LandDay,21
+    25,SNOWL,2,3
+    25,RATTOSSK,2,3
+    20,MAGGLO,2,3
+    15,SNOWL,3,4
+    15,RATTOSSK,3,4
+LandNight,21
+    25,SNOWL,2,3
+    25,QUILTOX,2,3
+    20,MAGGLO,2,3
+    15,SNOWL,3,4
+    15,QUILTOX,3,4
+SandCastle,30
+    20,WIGLETT,6,7
+SandCastleLarge,30
+    80,PALOSSAND,6,7
+    20,WUGTRIO,6,7
+GimmighoulChest,100
+    100,GIMMIGHOUL,10,20
+#-------------------------------
 [104] # Windmill Forest
 Land,21
     20,SEWADDLE,2,3
@@ -37,6 +58,14 @@ Land,21
     15,PETILIL,4
     10,SLAKOTH,4
     5,PIKACHU,3,4
+DarkGrass,21
+    20,SEWADDLE,4,5
+    20,VENIPEDE,4,5
+    15,PIDOVE,6
+    15,COTTONEE,6
+    15,PETILIL,6
+    10,SLAKOTH,6
+    5,PIKACHU,5,6
 Water,2
     30,MARILL,5,20
     30,BASCULIN,5,20

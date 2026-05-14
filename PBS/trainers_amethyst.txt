@@ -220,3 +220,15 @@ Pokemon = SLOWBRO,100
     IV = 31,0,31,31,31,31
     EV = 248,0,216,0,0,44
     Ball = NETBALL
+#-------------------------------
+[LEADER_Sedric,Test]
+Items = POTION
+LoseText = ...
+Pokemon = FERROTHORN,100
+    Moves = STEALTHROCK,STEALTHROCK,STEALTHROCK,STEALTHROCK
+    Ability = PRANKSTER
+    Gender = male
+    Ball = NETBALL
+    NoTera = true
+    NoDynamax = true
+#-------------------------------

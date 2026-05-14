@@ -383,6 +383,16 @@ module GameData
       return ret
     end
   end
+  
+module InverseBattle
+  def self.active?
+    return $game_temp.inverse_battle
+  end
+
+  def self.hazard_effectiveness(attack_type, battler)
+    return Effectiveness.calculate(attack_type, *battler.pbTypes(true))
+  end
+end
 end
 
 #===============================================================================

@@ -61,8 +61,7 @@ class Battle
     battler_side = battler.pbOwnSide
     if battler_side.effects[PBEffects::Steelsurge] && battler.takesIndirectDamage? &&
        GameData::Type.exists?(:STEEL) && !battler.hasActiveItem?(:HEAVYDUTYBOOTS)
-      bTypes = battler.pbTypes(true)
-      eff = Effectiveness.calculate(:STEEL, *bTypes)
+      eff = InverseBattle.hazard_effectiveness(:STEEL, battler)
       if !Effectiveness.ineffective?(eff)
         battler.pbReduceHP(battler.totalhp * eff / 8, false)
         pbDisplay(_INTL("The sharp steel bit into {1}!", battler.pbThis(true)))

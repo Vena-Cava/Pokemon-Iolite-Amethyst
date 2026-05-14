@@ -563,6 +563,9 @@ Name = Daiseye Bay
 Outdoor = true
 ShowArea = true
 MapPosition = 0,18,17
+BattleBack = Beach
+WildBattleBGM = Pokemon Iolite and Amethyst - Battle! Vs Wild Pokemon
+TrainerBattleBGM = Pokemon Iolite and Amethyst - Battle! Vs Trainer
 #-------------------------------
 [101]   # Abercorn
 Name = Abercorn
@@ -577,3 +580,5 @@ Name = Windmill Forest
 Outdoor = true
 Bicycle = true
 MapPosition = 0,19,18
+BattleBack = forest
+Environment = ForestGrass
