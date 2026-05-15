@@ -266,6 +266,11 @@ Name = Lethal Legs
 ShortDesc = Powers up kicking moves.
 Description = Boosts the power of the Pokémon's kicking moves by 20%.
 #-------------------------------
+[LIMITBREAK]
+Name = Limit Break
+ShortDesc = The Pokémon's Offensive and Speed stats are maxxed when a move runs out of PP.
+Description = When any of the Pokémon's moves have its PP reduced to 0, its Attack, Special Attack and Speed stats are boosted to their sixth stage.
+#-------------------------------
 [MACHFIVE]
 Name = Mach 5
 ShortDesc = Boosts Speed when the Pokémon makes contact.

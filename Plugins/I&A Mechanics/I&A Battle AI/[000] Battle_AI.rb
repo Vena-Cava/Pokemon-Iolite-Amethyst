@@ -19,28 +19,37 @@ class Battle::AI
       :DREAMENGINE,
       :CONTAMINATE,
       :CORRUPTION,
-      :PRECOGNITION
+      :PRECOGNITION,
+	  :LIMITBREAK,
+	  :TRUEWISDOM
     ],
   
     7 => [
       :FORCEOFNATURE,
       :ENGINEOFINDUSTRY,
-      :GALVANICGLADIATOR,
+      :GALVANICGUARDIAN,
       :GUARDIANGLADIATOR,
       :HEARTOFFLAME,
       :NATURESSAVIOR,
-  
       :GUMMYBODY,
       :RADIOACTIVEDECAY,
       :GFORCE,
       :STEELSTEALER,
       :MUSCLESTIM,
       :THERMALINSULATION,
-  
       :BOTANIST,
       :FISHMONGER,
       :SURTRSWRATH,
-      :TOXICOLOGIST
+      :TOXICOLOGIST,
+	  :BRUTALBROADCAST,
+	  :CONTROLLEDDEMOLITION,
+	  :GALVANICGUARDIAN,
+	  :HELIOSPHERE,
+	  :STONEHENGE,
+	  :STORMBODY,
+	  :STORMINGBEAST,
+	  :VAMPYRE,
+	  :COLDASICE
     ],
   
     6 => [
@@ -51,30 +60,44 @@ class Battle::AI
       :IGNITION,
       :MIRAGE,
       :CATEGORYSIX,
-      :NOURISHINGSOUL
+      :NOURISHINGSOUL,
+	  :ARCHANGELSFLIGHT,
+	  :COLDASICE,
+	  :EMPTYSOUNDSCAPE,
+	  :EPIDEMIC,
+	  :FIERYPASSION,
+	  :GROUNDED,
+	  :RINGTOSS
     ],
   
     5 => [
       :MINDVEIL,
       :REVERBERATE,
       :DUBSTEP,
-  
       :BOILINGPOINT,
       :ERUPTINGBEAST,
       :REKINDLEDRAGE,
-  
       :CHIPPEDSTONE,
       :GLASSSPLINTERS,
       :TONOFBRICKS,
-  
       :GROUNDWIRE,
       :SHOCKINGSTING,
       :ELDRITCHSKIN,
-  
       :BULWARK,
       :ROCKBODY,
       :SNOWSTRIFE,
-      :FROSTBLIGHT
+      :FROSTBLIGHT,
+	  :DONOEVIL,
+	  :EFFECTDISRUPTION,
+	  :HEARNOEVIL,
+	  :JETLAG,
+	  :ODINSMEMORY,
+	  :PILEOFCOINS,
+	  :RETELLER,
+	  :ROCKPASS,
+	  :SEENOEVIL,
+	  :SPEAKNOEVIL,
+	  :TROLLTOLL
     ],
   
     4 => [
@@ -117,16 +140,23 @@ class Battle::AI
 
   HP_HEAL_ITEMS[:HEARTYGYRO] = 100
   
-  IA_ALL_STATUS_CURE_ITEMS = [
-    :STUFFEDGYRO
-  ]
-  
   ONE_STAT_RAISE_ITEMS[:LEANGYRO]    = [:ATTACK, 3]
   ONE_STAT_RAISE_ITEMS[:TOUGHGYRO]   = [:DEFENSE, 3]
   ONE_STAT_RAISE_ITEMS[:CHEESYGYRO]  = [:SPECIAL_ATTACK, 3]
   ONE_STAT_RAISE_ITEMS[:SEAFOODGYRO] = [:SPECIAL_DEFENSE, 3]
   ONE_STAT_RAISE_ITEMS[:LOWFATGYRO]  = [:SPEED, 3]
   
+  IA_BASE_ABILITY_RATINGS.each_pair do |val, abilities|
+    BASE_ABILITY_RATINGS[val] ||= []
+    abilities.each { |a| BASE_ABILITY_RATINGS[val].push(a) if !BASE_ABILITY_RATINGS[val].include?(a) }
+  end
+
+  IA_BASE_ITEM_RATINGS.each_pair do |val, items|
+    BASE_ITEM_RATINGS[val] ||= []
+    items.each { |i| BASE_ITEM_RATINGS[val].push(i) if !BASE_ITEM_RATINGS[val].include?(i) }
+  end
+
+  ALL_STATUS_CURE_ITEMS.push(:STUFFEDGYRO) if !ALL_STATUS_CURE_ITEMS.include?(:STUFFEDGYRO)
 
   #===============================================================================
   # AI_ChooseMove
@@ -157,49 +187,39 @@ class Battle::AI
   
 end
 
-################################################################################
-# 
-# Battle::AI::AIBattler class changes.
-# 
-################################################################################
+Battle::AI::Handlers::GeneralMoveScore.add(:limit_break_prefer_1pp_move,
+  proc { |score, move, user, ai, battle|
+    next score if !user.has_active_ability?(:LIMITBREAK)
+    next score if move.pp != 1
+
+    score += 30
+    score += 10 if user.stages[:ATTACK] < 6
+    score += 10 if user.stages[:SPECIAL_ATTACK] < 6
+    score += 10 if user.stages[:SPEED] < 6
+
+    next score
+  }
+)
+
 class Battle::AI::AIBattler
-  # Added IA base item ratings
-  alias ioam_wants_item? wants_item?
-  def wants_item?(item)
-    Battle::AI::IA_BASE_ITEM_RATINGS.each_pair do |val, items|
-      next if Battle::AI::BASE_ITEM_RATINGS[val] && Battle::AI::BASE_ITEM_RATINGS[val].include?(item)
-      Battle::AI::BASE_ITEM_RATINGS[val] = [] if !Battle::AI::BASE_ITEM_RATINGS[val]
-      items.each{|itm|
-        Battle::AI::BASE_ITEM_RATINGS[val].push(itm)
-      }
-    end
-    return ioam_wants_item?(item)
-  end
-  
-  # Added IA all status cure item ratings
-  alias ioam_wants_all_status_cure_item? wants_item?
-  def wants_item?(item)
-    Battle::AI::IA_ALL_STATUS_CURE_ITEMS.each_pair do |val, items|
-      next if Battle::AI::ALL_STATUS_CURE_ITEMS[val] && Battle::AI::ALL_STATUS_CURE_ITEMS[val].include?(item)
-      Battle::AI::ALL_STATUS_CURE_ITEMS[val] = [] if !Battle::AI::ALL_STATUS_CURE_ITEMS[val]
-      items.each{|itm|
-        Battle::AI::ALL_STATUS_CURE_ITEMS[val].push(itm)
-      }
-    end
-    return ioam_wants_all_status_cure_item?(item)
-  end
+  alias ia_effectiveness_of_type_against_battler effectiveness_of_type_against_battler
 
-  # Added IA base ability ratings
-  alias ioam_wants_ability? wants_ability?
-  def wants_ability?(ability = :NONE)
-    Battle::AI::IA_BASE_ABILITY_RATINGS.each_pair do |val, abilities|
-      next if Battle::AI::BASE_ABILITY_RATINGS[val] && Battle::AI::BASE_ABILITY_RATINGS[val].include?(ability)
-      Battle::AI::BASE_ABILITY_RATINGS[val] = [] if !Battle::AI::BASE_ABILITY_RATINGS[val]
-      abilities.each{|ab|
-        Battle::AI::BASE_ABILITY_RATINGS[val].push(ab)
-      }
-    end
-    return ioam_wants_ability?(ability)
-  end
+  def effectiveness_of_type_against_battler(type, user = nil, move = nil)
+    ret = ia_effectiveness_of_type_against_battler(type, user, move)
 
+    return ret if !move
+
+    pbTypes(true).each do |defend_type|
+      case move.function_code
+      when "PoisonTargetSuperEffectiveAgainstWaterGround"
+        ret *= 2 if [:WATER, :GROUND].include?(defend_type)
+      when "SuperEffectiveAgainstPoisonSteel"
+        ret *= 2 if [:POISON, :STEEL].include?(defend_type)
+      when "SuperEffectiveAgainstBug"
+        ret *= 2 if defend_type == :BUG
+      end
+    end
+
+    return ret
+  end
 end

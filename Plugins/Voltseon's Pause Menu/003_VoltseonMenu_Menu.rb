@@ -6,8 +6,8 @@ class VoltseonsPauseMenu < Component
     super(viewport, menu)
     @sprites = spritehash
     @entries = []
-    @current_selection = $game_temp.menu_last_choice
-    @current_selection = 0 if @current_selection < 0
+    @current_selection = $game_temp.menu_last_choice || 0
+	@current_selection = 0 if @current_selection < 0
     @should_refresh    = true
     # Background image
     @sprites["menuback"] = Sprite.new(@viewport)
@@ -34,6 +34,10 @@ class VoltseonsPauseMenu < Component
     @sprites["entrytext"].y     = Graphics.height - 188
     @sprites["entrytext"].ox    = Graphics.width / 4
     @sprites["entrytext"].x     = Graphics.width / 2
+	@sprites["savehint"]        = Sprite.new(@viewport)
+	@sprites["savehint"].bitmap = Bitmap.new(Graphics.width, 32)
+	@sprites["savehint"].x      = 0
+    @sprites["savehint"].y      = Graphics.height - 188
     @sprites["leftarrow"].visible  = @disp_indices.length != 1
     @sprites["rightarrow"].visible = @disp_indices.length > 1
   end
@@ -48,6 +52,28 @@ class VoltseonsPauseMenu < Component
       shift_cursor(-1)
     elsif Input.press?(Input::RIGHT) && @disp_indices.length > 1
       shift_cursor(1)
+	elsif Input.trigger?(Input::SPECIAL)
+	  old_selection = @current_selection
+	  save_index = @entries.find_index { |e| e[:name] == _INTL("Save") }
+
+	  if save_index
+	    pbPlayDecisionSE
+	    old_menu_theme = $PokemonSystem.current_menu_theme
+
+	    exit = @entries[save_index][:proc].call(@menu)
+
+	    $game_temp.menu_last_choice = old_selection
+	    exit = true if old_menu_theme != $PokemonSystem.current_menu_theme
+	    @menu.should_exit = exit
+
+	    if !exit
+		  recalc_menu_entries
+		  calc_display_index
+		  redraw_menu_icons
+		  recalc_icon_positions(true)
+		  @should_refresh = true
+	    end
+	  end
     elsif Input.trigger?(Input::USE)
       pbPlayDecisionSE
       old_menu_theme = $PokemonSystem.current_menu_theme
@@ -285,6 +311,11 @@ class VoltseonsPauseMenu < Component
     pbSetSystemFont(@sprites["entrytext"].bitmap)
     base_color = $PokemonSystem.from_current_menu_theme(MENU_TEXTCOLOR, Color.new(248, 248, 248))
     shdw_color = $PokemonSystem.from_current_menu_theme(MENU_TEXTOUTLINE, Color.new(48, 48, 48))
-    pbDrawTextPositions(@sprites["entrytext"].bitmap, [[text, Graphics.width / 4, 8, 2, base_color, shdw_color]])
+    pbDrawTextPositions(@sprites["entrytext"].bitmap, [
+	  [text, Graphics.width / 4, 8, 2, base_color, shdw_color]
+	])
+	pbDrawTextPositions(@sprites["savehint"].bitmap, [
+      [_INTL("Save: [SPECIAL]"), 4, 8, 0, base_color, shdw_color]
+    ])
   end
 end

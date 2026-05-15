@@ -14,7 +14,7 @@
         "Scripts/XPX_Preload.rb"
     ],
     "integerScalingActive": true,
-    "integerScalingLastMile": true,
+    "integerScalingLastMile": false,
     "fixedFramerate": 40,
     "iconPath": "Game.ico"
 }

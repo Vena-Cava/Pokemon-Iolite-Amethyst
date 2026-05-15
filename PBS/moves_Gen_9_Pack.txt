@@ -953,7 +953,7 @@ Accuracy = 100
 TotalPP = 10
 Target = NearOther
 FunctionCode = TwoTurnAttackOneTurnInRainRaiseUserSpAtk1
-Flags = CanProtect,CanMirrorMove
+Flags = CanProtect,CanMirrorMove,Pulse
 EffectChance = 100
 Description = A two-turn attack. The user boosts its Sp. Atk and then fires a high-voltage shot.
 #-------------------------------

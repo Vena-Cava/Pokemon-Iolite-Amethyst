@@ -139,7 +139,7 @@ Power = 40
 Accuracy = 100
 TotalPP = 10
 Target = NearOther
-FunctionCode = CureUserSaltCure
+FunctionCode = CureUserSaltCureBoostAgainstRock
 Flags = CanProtect,CanMirrorMove
 Description = The Pokémon attacks using a golden needle. This attack cures the user of Salt Curing and deals more damage to Rock-Types.
 #-------------------------------
@@ -249,7 +249,7 @@ TotalPP = 5
 Target = Other
 FunctionCode = ParaAndSkipNextTurn
 Flags = CanMirrorMove
-Description = The user stares at the target. Its lethal gaze will paralyze if it meets the target.
+Description = The user stares at the target. Its lethal gaze will paralyze if it meets the target. The user must rest on the next turn.
 #-------------------------------
 [GLACIALSMASH]
 Name = Glacial Smash
@@ -325,7 +325,7 @@ TotalPP = 10
 Target = NearOther
 FunctionCode = HitTwiceNotEffectiveAgainstFairy
 Flags = Contact,CanProtect,CanMirrorMove,Slicing
-Description = The user swings a sharp appendage at the target twice. This move ignores immunities.
+Description = The user attacks by brutally cleaving the target twice in a row, striking even Fairy types and ignoring any stat changes affecting its targets.
 #-------------------------------
 [GIANTSWRATH]
 Name = Giant's Wrath
@@ -466,7 +466,7 @@ Power = 40
 Accuracy = 0
 TotalPP = 40
 Target = NearOther
-FunctionCode = CannotMakeTargetFaintFlinch
+FunctionCode = CannotMakeTargetFaintFlinchTarget
 Flags = Contact,CanProtect,CanMirrorMove,CanMirrorMove
 EffectChance = 30
 Description = A vicious blow that stops just short of finishing the job. The target is left with at least 1 HP. It may also cause the target to flinch.

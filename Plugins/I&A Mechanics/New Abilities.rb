@@ -426,4 +426,57 @@ Battle::AbilityEffects::StatusImmunity.copy(:WATERVEIL, :DIRTBALL)
 Battle::AbilityEffects::StatusCure.copy(:WATERVEIL, :DIRTBALL)
 
 
+#===============================================================================
+# Limit Break
+# When one of this Pokémon's moves reaches 0 PP,
+# its Attack, Special Attack, and Speed rise to +6
+# AFTER the move is used.
+#===============================================================================
 
+class Battle::Battler
+  attr_accessor :limit_break_pending
+
+  alias ia_limitbreak_pbReducePP pbReducePP unless method_defined?(:ia_limitbreak_pbReducePP)
+  def pbReducePP(move)
+    old_pp = move.pp
+    ret = ia_limitbreak_pbReducePP(move)
+
+    if ret &&
+       old_pp > 0 &&
+       move.pp == 0 &&
+       hasActiveAbility?(:LIMITBREAK)
+      self.limit_break_pending = true
+    end
+
+    return ret
+  end
+end
+
+class Battle::Move
+  alias ia_limitbreak_pbEndOfMoveUsageEffect pbEndOfMoveUsageEffect unless method_defined?(:ia_limitbreak_pbEndOfMoveUsageEffect)
+
+  def pbEndOfMoveUsageEffect(*args)
+    ia_limitbreak_pbEndOfMoveUsageEffect(*args)
+
+    user = args[0]
+    return if !user
+    return if !user.limit_break_pending
+
+    user.limit_break_pending = false
+
+    stats_to_raise = [:ATTACK, :SPECIAL_ATTACK, :SPEED]
+    can_raise = stats_to_raise.any? { |s| user.pbCanRaiseStatStage?(s, user) }
+    return if !can_raise
+
+    user.battle.pbShowAbilitySplash(user)
+	
+	user.battle.pbDisplay(_INTL("{1} went even further beyond!", user.pbThis))
+
+    stats_to_raise.each do |stat|
+      next if user.statStageAtMax?(stat)
+      user.pbRaiseStatStage(stat, 6 - user.stages[stat], user)
+    end
+
+    user.battle.pbHideAbilitySplash(user)
+  end
+end

@@ -52,7 +52,7 @@ class Battle::Move::CategoryDependsOnHigherDamageChangeType < Battle::Move
     special_damage = real_special_attack.to_f / real_special_defense
     # Determine move's category
     if physical_damage == special_damage
-      @calcCategry = @battle.pbRandom(2)
+      @calcCategory = @battle.pbRandom(2)
     else
       @calcCategory = (physical_damage > special_damage) ? 0 : 1
     end
@@ -199,7 +199,7 @@ end
 # Cures user of Salt Curing. (Gilded Needle)
 #===============================================================================
 class Battle::Battler
-	def pbCureSaltCure
+	def CureUserSaltCureBoostAgainstRock
 		@effects[PBEffects::SaltCure] = false
 	end
 end
@@ -214,30 +214,30 @@ class Battle::Move::CureUserSaltCure < Battle::Move
 
   def pbEffectGeneral(user)
 	if user.effects[PBEffects::SaltCure]
-		user.pbCureSaltCure
+		user.CureUserSaltCureBoostAgainstRock
 		@battle.pbDisplay(_INTL("{1} cured its Salt Curing!", user.pbThis))
 	end
   end
- end
+end
 
 #===============================================================================
 # Heals user by 1/2 of its max HP, or 2/3 of its max HP in snow. (Whiteout)
 #===============================================================================
 class Battle::Move::HealUserDependingOnHail < Battle::Move::HealingMove
   def pbHealAmount(user)
-    return (user.totalhp * 2 / 3.0).round if user.effectiveWeather == :Hail
+    return (user.totalhp * 2 / 3.0).round if [:Hail, :Snow].include?(user.effectiveWeather)
     return (user.totalhp / 2.0).round
   end
 end
 
 #===============================================================================
-# Entry hazard. Lays stealth rocks on the opposing side. (Scattered Toys)
+# Entry hazard. Lays scattered toys on the opposing side. (Scattered Toys)
 #===============================================================================
-class Battle::Move::AddStealthRocksToFoeSide < Battle::Move
+class Battle::Move::AddScatteredToysToFoeSide < Battle::Move
   def canMagicCoat?; return true; end
 
   def pbMoveFailed?(user, targets)
-    if user.pbOpposingSide.effects[PBEffects::StealthRock]
+    if user.pbOpposingSide.effects[PBEffects::ScatteredToys]
       @battle.pbDisplay(_INTL("But it failed!"))
       return true
     end
@@ -246,7 +246,7 @@ class Battle::Move::AddStealthRocksToFoeSide < Battle::Move
 
   def pbEffectGeneral(user)
     user.pbOpposingSide.effects[PBEffects::StealthRock] = true
-    @battle.pbDisplay(_INTL("Pointed stones float in the air around {1}!",
+    @battle.pbDisplay(_INTL("Plastic toys were scattered on the ground around {1}!",
                             user.pbOpposingTeam(true)))
   end
 end
@@ -291,12 +291,24 @@ class Battle::Move::ParaTargetDoublePowerIfTargetInSky < Battle::Move::ParalyzeT
 end
 
 #===============================================================================
-# Effectiveness against Fairy-type is 0.5x. (Dual Cleave)
+# Effectiveness against Fairy-type is 1x.
+# This move ignores target's Defense, Special Defense and evasion stat changes.
+# (Dual Cleave)
 #===============================================================================
 class Battle::Move::HitTwiceNotEffectiveAgainstFairy < Battle::Move::HitTwoTimes
   def pbCalcTypeModSingle(moveType, defType, user, target)
     return Effectiveness::NORMAL_EFFECTIVE_MULTIPLIER if moveType == :DRAGON && defType == :FAIRY
     return super
+  end
+
+  def pbCalcAccuracyModifiers(user, target, modifiers)
+    super
+    modifiers[:evasion_stage] = 0
+  end
+
+  def pbGetDefenseStats(user, target)
+    ret1, _ret2 = super
+    return ret1, Battle::Battler::STAT_STAGE_MAXIMUM   # Def/SpDef stat stage
   end
 end
 
@@ -325,7 +337,7 @@ end
 #===============================================================================
 # Effectiveness against Water- and Ground-Type is 2x. (Pollution)
 #===============================================================================
-class Battle::Move::SuperEffectiveAgainstWaterSteel < Battle::Move
+class Battle::Move::PoisonTargetSuperEffectiveAgainstWaterGround < Battle::Move::PoisonTarget
   def pbCalcTypeModSingle(moveType, defType, user, target)
     return Effectiveness::SUPER_EFFECTIVE_ONE if defType == :WATER
 	return Effectiveness::SUPER_EFFECTIVE_ONE if defType == :GROUND
@@ -455,14 +467,14 @@ end
 #===============================================================================
 # Decreases the target's Speed by 2 stages. (Cotton Spore, Scary Face, String Shot)
 #===============================================================================
-class Battle::Move::LowerTargetSpeed2 < Battle::Move::TargetStatDownMove
-  def initialize(battle, move)
-    super
-	if pulseMove? && user.hasActiveAbility?(:MEGALAUNCHER)
-      @statDown = [:SPEED, 3]
-	else
-	  @statDown = [:SPEED, 2]
-    end
+class Battle::Move::LowerTargetSpeed2 < Battle::Move
+  def pbEffectAgainstTarget(user, target)
+    return if target.damageState.substitute
+
+    stages = 2
+    stages = 3 if pulseMove? && user.hasActiveAbility?(:MEGALAUNCHER)
+
+    target.pbLowerStatStage(:SPEED, stages, user)
   end
 end
 
@@ -474,11 +486,7 @@ end
 class Battle::Move::LowerTargetSpeed1MakeTargetWeakerToFire < Battle::Move::TargetStatDownMove
   def initialize(battle, move)
     super
-	if pulseMove? && user.hasActiveAbility?(:MEGALAUNCHER)
-      @statDown = [:SPEED, 2]
-	else
-	  @statDown = [:SPEED, 1]
-	end
+    @statDown = [:SPEED, 1]
   end
 
   def pbFailsAgainstTarget?(user, target, show_message)
@@ -487,7 +495,13 @@ class Battle::Move::LowerTargetSpeed1MakeTargetWeakerToFire < Battle::Move::Targ
   end
 
   def pbEffectAgainstTarget(user, target)
+    old_stat_down = @statDown
+    @statDown = [:SPEED, (pulseMove? && user.hasActiveAbility?(:MEGALAUNCHER)) ? 2 : 1]
+
     super
+
+    @statDown = old_stat_down
+
     if !target.effects[PBEffects::TarShot]
       target.effects[PBEffects::TarShot] = true
       @battle.pbDisplay(_INTL("{1} became weaker to fire!", target.pbThis))
