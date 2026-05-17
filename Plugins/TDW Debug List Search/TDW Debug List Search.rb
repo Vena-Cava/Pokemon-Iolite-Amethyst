@@ -88,10 +88,10 @@ def pbCommandsSortable(cmdwindow, commands, cmdIfCancel, defaultindex = -1, sort
       Graphics.update
       Input.update
       cmdwindow.update
-      if Input.trigger?(Input::ACTION) && sortable
+      if Keybinds.trigger?(:action) && sortable
         command = [1, cmdwindow.index]
         break
-      elsif Input.trigger?(Input::BACK)
+      elsif Keybinds.trigger?(:back)
         command = [0, (cmdIfCancel > 0) ? cmdIfCancel - 1 : cmdIfCancel]
         break
       elsif Input.triggerex?(:F) #Added for quick search
@@ -100,7 +100,7 @@ def pbCommandsSortable(cmdwindow, commands, cmdIfCancel, defaultindex = -1, sort
             command = [2, newSearch]
             break
           end
-      elsif Input.trigger?(Input::USE)
+      elsif Keybinds.trigger?(:use)
         command = [0, cmdwindow.index]
         break
       end
@@ -145,12 +145,12 @@ def pbListScreenBlock(title, lister)
         lister.refresh(list.index)
         selectedmap = list.index
       end
-      if Input.trigger?(Input::ACTION)
-        yield(Input::ACTION, lister.value(selectedmap))
+      if Keybinds.trigger?(:action)
+        yield(:action, lister.value(selectedmap))
         list.commands = lister.commands
         list.index = list.commands.length if list.index == list.commands.length
         lister.refresh(list.index)
-      elsif Input.trigger?(Input::BACK)
+      elsif Keybinds.trigger?(:back)
         break
       elsif Input.triggerex?(:F) #Added for quick search
         newSearch = pbOpenGenericListSearch(list.commands, 1)
@@ -159,8 +159,8 @@ def pbListScreenBlock(title, lister)
             list.commands = lister.commands
             lister.refresh(0)
         end
-      elsif Input.trigger?(Input::USE)
-        yield(Input::USE, lister.value(selectedmap))
+      elsif Keybinds.trigger?(:use)
+        yield(:use, lister.value(selectedmap))
         list.commands = lister.commands
         list.index = list.commands.length if list.index == list.commands.length
         lister.refresh(list.index)

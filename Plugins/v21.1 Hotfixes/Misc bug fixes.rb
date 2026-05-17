@@ -174,14 +174,14 @@ class PokemonRegionMap_Scene
       end
       @sprites["mapbottom"].maplocation = pbGetMapLocation(@map_x, @map_y)
       @sprites["mapbottom"].mapdetails  = pbGetMapDetails(@map_x, @map_y)
-      if Input.trigger?(Input::BACK)
+      if Keybinds.trigger?(:back)
         if @editor && @changed
           pbSaveMapData if pbConfirmMessage(_INTL("Save changes?")) { pbUpdate }
           break if pbConfirmMessage(_INTL("Exit from the map?")) { pbUpdate }
         else
           break
         end
-      elsif Input.trigger?(Input::USE) && @mode == 1   # Choosing an area to fly to
+      elsif Keybinds.trigger?(:use) && @mode == 1   # Choosing an area to fly to
         healspot = pbGetHealingSpot(@map_x, @map_y)
         if healspot && ($PokemonGlobal.visitedMaps[healspot[0]] ||
            ($DEBUG && Input.press?(Input::CTRL)))
@@ -189,9 +189,9 @@ class PokemonRegionMap_Scene
           name = pbGetMapNameFromId(healspot[0])
           return healspot if pbConfirmMessage(_INTL("Would you like to use Fly to go to {1}?", name)) { pbUpdate }
         end
-      elsif Input.trigger?(Input::USE) && @editor   # Intentionally after other USE input check
+      elsif Keybinds.trigger?(:use) && @editor   # Intentionally after other USE input check
         pbChangeMapLocation(@map_x, @map_y)
-      elsif Input.trigger?(Input::ACTION) && Settings::CAN_FLY_FROM_TOWN_MAP &&
+      elsif Keybinds.trigger?(:action) && Settings::CAN_FLY_FROM_TOWN_MAP &&
             !@wallmap && !@fly_map && pbCanFly?
         pbPlayDecisionSE
         @mode = (@mode == 1) ? 0 : 1

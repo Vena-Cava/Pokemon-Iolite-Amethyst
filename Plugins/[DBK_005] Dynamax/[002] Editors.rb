@@ -163,16 +163,16 @@ class DynamaxSpritePositioner < SpritePositioner
       when 1 then @sprites["info"].setTextToFit("Enemy Position = #{xpos},#{ypos}")
       when 2 then @sprites["info"].setTextToFit("Shadow Position = #{xpos}")
       end
-      if (Input.repeat?(Input::UP) || Input.repeat?(Input::DOWN)) && param != 2
-        ypos += (Input.repeat?(Input::DOWN)) ? 1 : -1
+      if (Keybinds.repeat?(:up) || Keybinds.repeat?(:down)) && param != 2
+        ypos += (Keybinds.repeat?(:down)) ? 1 : -1
         case param
         when 0 then metrics_data.dmax_back_sprite[1]  = ypos
         when 1 then metrics_data.dmax_front_sprite[1] = ypos
         end
         refresh
       end
-      if Input.repeat?(Input::LEFT) || Input.repeat?(Input::RIGHT)
-        xpos += (Input.repeat?(Input::RIGHT)) ? 1 : -1
+      if Keybinds.repeat?(:left) || Keybinds.repeat?(:right)
+        xpos += (Keybinds.repeat?(:right)) ? 1 : -1
         case param
         when 0 then metrics_data.dmax_back_sprite[0]  = xpos
         when 1 then metrics_data.dmax_front_sprite[0] = xpos
@@ -180,12 +180,12 @@ class DynamaxSpritePositioner < SpritePositioner
         end
         refresh
       end
-      if Input.repeat?(Input::ACTION) && param != 2
+      if Keybinds.repeat?(:action) && param != 2
         @metricsChanged = true if xpos != oldxpos || ypos != oldypos
         ret = true
         pbPlayDecisionSE
         break
-      elsif Input.repeat?(Input::BACK)
+      elsif Keybinds.repeat?(:back)
         case param
         when 0
           metrics_data.dmax_back_sprite[0] = oldxpos
@@ -199,7 +199,7 @@ class DynamaxSpritePositioner < SpritePositioner
         pbPlayCancelSE
         refresh
         break
-      elsif Input.repeat?(Input::USE)
+      elsif Keybinds.repeat?(:use)
         @metricsChanged = true if xpos != oldxpos || (param != 2 && ypos != oldypos)
         pbPlayDecisionSE
         break
@@ -227,11 +227,11 @@ class DynamaxSpritePositioner < SpritePositioner
       Input.update
       cw.update
       self.update
-      if Input.trigger?(Input::USE)
+      if Keybinds.trigger?(:use)
         pbPlayDecisionSE
         ret = cw.index
         break
-      elsif Input.trigger?(Input::BACK)
+      elsif Keybinds.trigger?(:back)
         pbPlayCancelSE
         break
       end
@@ -280,11 +280,11 @@ class DynamaxSpritePositioner < SpritePositioner
         refresh
       end
       self.update
-      if Input.trigger?(Input::BACK)
+      if Keybinds.trigger?(:back)
         pbChangeSpecies(nil, nil)
         refresh
         break
-      elsif Input.trigger?(Input::USE)
+      elsif Keybinds.trigger?(:use)
         pbChangeSpecies(allspecies[cw.index][1], allspecies[cw.index][2])
         ret = true
         break

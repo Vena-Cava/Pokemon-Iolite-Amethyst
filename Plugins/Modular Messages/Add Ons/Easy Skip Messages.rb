@@ -9,7 +9,7 @@ module Modular_Messages
   alias es_upon_trigger upon_trigger
   def upon_trigger
 	if EASY_SKIP_MESSAGES
-      if Input.press?(Input::BACK)
+      if Keybinds.press?(:back)
 	    unless @@hash["msg_window"].textspeed == -999
           @@hash["old_txt_speed"] = @@hash["msg_window"].textspeed
 	    end

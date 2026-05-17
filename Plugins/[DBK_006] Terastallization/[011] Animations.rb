@@ -246,7 +246,7 @@ class Battle::Scene
   def pbShowTerastallize(idxBattler)
     teraAnim = Animation::BattlerTerastallize.new(@sprites, @viewport, idxBattler, @battle)
     loop do
-      if Input.press?(Input::ACTION)
+      if Keybinds.press?(:action)
         pbPlayCancelSE
         break 
       end

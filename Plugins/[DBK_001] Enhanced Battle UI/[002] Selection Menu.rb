@@ -201,8 +201,8 @@ class Battle::Scene
       pbUpdateInfoSprites
       oldSide = idxSide
       oldPoke = idxPoke
-      break if Input.trigger?(Input::BACK) || Input.trigger?(Input::JUMPUP)
-      if Input.trigger?(Input::USE)
+      break if Keybinds.trigger?(:back) || Keybinds.trigger?(:jumpup)
+      if Keybinds.trigger?(:use)
         pbPlayDecisionSE
         ret = pbOpenBattlerInfo(battler, battlers)
         case ret
@@ -216,15 +216,15 @@ class Battle::Scene
           break
         when nil then break
         end
-      elsif Input.trigger?(Input::LEFT) && @battle.pbSideBattlerCount(idxSide) > 1
+      elsif Keybinds.trigger?(:left) && @battle.pbSideBattlerCount(idxSide) > 1
         idxPoke -= 1
         idxPoke = @battle.pbSideBattlerCount(idxSide) - 1 if idxPoke < 0
         pbPlayCursorSE
-      elsif Input.trigger?(Input::RIGHT) && @battle.pbSideBattlerCount(idxSide) > 1
+      elsif Keybinds.trigger?(:right) && @battle.pbSideBattlerCount(idxSide) > 1
         idxPoke += 1
         idxPoke = 0 if idxPoke > @battle.pbSideBattlerCount(idxSide) - 1
         pbPlayCursorSE
-      elsif Input.trigger?(Input::UP) || Input.trigger?(Input::DOWN)
+      elsif Keybinds.trigger?(:up) || Keybinds.trigger?(:down)
         idxSide = (idxSide == 0) ? 1 : 0
         if idxPoke > @battle.pbSideBattlerCount(idxSide) - 1
           until idxPoke == @battle.pbSideBattlerCount(idxSide) - 1
@@ -232,7 +232,7 @@ class Battle::Scene
           end
         end
         pbPlayCursorSE
-      elsif Input.trigger?(Input::JUMPDOWN)
+      elsif Keybinds.trigger?(:jumpdown)
         if cw.visible
           switchUI = 1
           break
@@ -277,22 +277,22 @@ class Battle::Scene
       if Settings::UI_PROMPT_DISPLAY == 2 && pbShowingPrompt?
         pbToggleUIPrompt if System.uptime - promptTimer > 2
       end
-      if Input.trigger?(Input::LEFT)
+      if Keybinds.trigger?(:left)
         cw.index -= 1 if (cw.index & 1) == 1
-      elsif Input.trigger?(Input::RIGHT)
+      elsif Keybinds.trigger?(:right)
         cw.index += 1 if (cw.index & 1) == 0
-      elsif Input.trigger?(Input::UP)
+      elsif Keybinds.trigger?(:up)
         cw.index -= 2 if (cw.index & 2) == 2
-      elsif Input.trigger?(Input::DOWN)
+      elsif Keybinds.trigger?(:down)
         cw.index += 2 if (cw.index & 2) == 0
       end
       pbPlayCursorSE if cw.index != oldIndex
-      if Input.trigger?(Input::USE)
+      if Keybinds.trigger?(:use)
         pbPlayDecisionSE
         ret = cw.index
         @lastCmd[idxBattler] = ret
         break
-      elsif Input.trigger?(Input::BACK) && mode > 0
+      elsif Keybinds.trigger?(:back) && mode > 0
         pbPlayCancelSE
         break
       elsif Input.trigger?(Input::F9) && $DEBUG
@@ -300,10 +300,10 @@ class Battle::Scene
         pbHideInfoUI
         ret = -2
         break
-      elsif Input.trigger?(Input::JUMPUP) && !pbInSafari?
+      elsif Keybinds.trigger?(:jumpup) && !pbInSafari?
         pbToggleBattleInfo
         promptTimer = System.uptime
-      elsif Input.trigger?(Input::JUMPDOWN) && !pbInSafari?
+      elsif Keybinds.trigger?(:jumpdown) && !pbInSafari?
         if pbToggleBallInfo(idxBattler)
           ret = 1
           break

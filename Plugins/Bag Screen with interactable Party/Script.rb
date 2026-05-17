@@ -11,18 +11,18 @@ class SpriteWindow_Selectable < SpriteWindow_Base
   def update
     super
     if self.active && @item_max > 0 && @index >= 0 && !@ignore_input && @bag
-      if Input.repeat?(Input::UP)
+      if Keybinds.repeat?(:up)
         if @index >= @column_max ||
-           (Input.trigger?(Input::UP) && (@item_max % @column_max) == 0)
+           (Keybinds.trigger?(:up) && (@item_max % @column_max) == 0)
           oldindex = @index
           @index = (@index - @column_max + @item_max) % @item_max
           if @index != oldindex
             update_cursor_rect
           end
         end
-      elsif Input.repeat?(Input::DOWN)
+      elsif Keybinds.repeat?(:down)
         if @index < @item_max - @column_max ||
-           (Input.trigger?(Input::DOWN) && (@item_max % @column_max) == 0)
+           (Keybinds.trigger?(:down) && (@item_max % @column_max) == 0)
           oldindex = @index
           @index = (@index + @column_max) % @item_max
           if @index != oldindex
@@ -31,9 +31,9 @@ class SpriteWindow_Selectable < SpriteWindow_Base
         end
       end
     elsif  self.active && @item_max > 0 && @index >= 0 && !@ignore_input
-      if Input.repeat?(Input::UP)
+      if Keybinds.repeat?(:up)
         if @index >= @column_max ||
-           (Input.trigger?(Input::UP) && (@item_max % @column_max) == 0)
+           (Keybinds.trigger?(:up) && (@item_max % @column_max) == 0)
           oldindex = @index
           @index = (@index - @column_max + @item_max) % @item_max
           if @index != oldindex
@@ -41,9 +41,9 @@ class SpriteWindow_Selectable < SpriteWindow_Base
             update_cursor_rect
           end
         end
-      elsif Input.repeat?(Input::DOWN)
+      elsif Keybinds.repeat?(:down)
         if @index < @item_max - @column_max ||
-           (Input.trigger?(Input::DOWN) && (@item_max % @column_max) == 0)
+           (Keybinds.trigger?(:down) && (@item_max % @column_max) == 0)
           oldindex = @index
           @index = (@index + @column_max) % @item_max
           if @index != oldindex
@@ -51,7 +51,7 @@ class SpriteWindow_Selectable < SpriteWindow_Base
             update_cursor_rect
           end
         end
-      elsif Input.repeat?(Input::LEFT)
+      elsif Keybinds.repeat?(:left)
         if @column_max >= 2 && @index > 0
           oldindex = @index
           @index -= 1
@@ -60,7 +60,7 @@ class SpriteWindow_Selectable < SpriteWindow_Base
             update_cursor_rect
           end
         end
-      elsif Input.repeat?(Input::RIGHT)
+      elsif Keybinds.repeat?(:right)
         if @column_max >= 2 && @index < @item_max - 1
           oldindex = @index
           @index += 1
@@ -69,7 +69,7 @@ class SpriteWindow_Selectable < SpriteWindow_Base
             update_cursor_rect
           end
         end
-      elsif Input.repeat?(Input::JUMPUP)
+      elsif Keybinds.repeat?(:jumpup)
         if @index > 0
           oldindex = @index
           @index = [self.index - self.page_item_max, 0].max
@@ -79,7 +79,7 @@ class SpriteWindow_Selectable < SpriteWindow_Base
             update_cursor_rect
           end
         end
-      elsif Input.repeat?(Input::JUMPDOWN)
+      elsif Keybinds.repeat?(:jumpdown)
         if @index < @item_max - 1
           oldindex = @index
           @index = [self.index + self.page_item_max, @item_max - 1].min
@@ -763,11 +763,11 @@ class PokemonBag_Scene
       Input.update
       pbUpdate
       if @sprites["msgwindow"].busy?
-        if Input.trigger?(Input::USE)
+        if Keybinds.trigger?(:use)
           pbPlayDecisionSE if @sprites["msgwindow"].pausing?
           @sprites["msgwindow"].resume
         end
-      elsif Input.trigger?(Input::BACK) || Input.trigger?(Input::USE)
+      elsif Keybinds.trigger?(:back) || Keybinds.trigger?(:use)
         break
       end
     end
@@ -1013,12 +1013,12 @@ class PokemonBag_Scene
           pbRefresh
         end
         if itemwindow.sorting
-          if Input.trigger?(Input::ACTION) ||
-             Input.trigger?(Input::USE)
+          if Keybinds.trigger?(:action) ||
+             Keybinds.trigger?(:use)
             itemwindow.sorting = false
             pbPlayDecisionSE
             pbRefresh
-          elsif Input.trigger?(Input::BACK)
+          elsif Keybinds.trigger?(:back)
             thispocket.insert(swapinitialpos, thispocket.delete_at(itemwindow.index))
             itemwindow.index = swapinitialpos
             itemwindow.sorting = false
@@ -1027,12 +1027,12 @@ class PokemonBag_Scene
           end
         else
           # Plays SE when scrolling the item list
-          if Input.repeat?(Input::UP) && thispocket.length   > 0 || 
-             Input.repeat?(Input::DOWN) && thispocket.length > 0
+          if Keybinds.repeat?(:up) && thispocket.length   > 0 || 
+             Keybinds.repeat?(:down) && thispocket.length > 0
             pbSEPlay("GUI bag cursor") if itemwindow.index != oldindex
           end
           # Change pockets
-          if Input.trigger?(Input::LEFT)
+          if Keybinds.trigger?(:left)
             newpocket = itemwindow.pocket
             loop do
               newpocket = (newpocket == 1) ? PokemonBag.pocket_count : newpocket - 1
@@ -1053,7 +1053,7 @@ class PokemonBag_Scene
               pbWait(0.1) {pbUpdate}
               @sprites["currentpocket"].x += 2
             end
-          elsif Input.trigger?(Input::RIGHT)
+          elsif Keybinds.trigger?(:right)
             newpocket = itemwindow.pocket
             loop do
               newpocket = (newpocket == PokemonBag.pocket_count) ? 1 : newpocket + 1
@@ -1074,7 +1074,7 @@ class PokemonBag_Scene
               pbWait(0.1) {pbUpdate}
               @sprites["currentpocket"].x -= 2
             end
-          elsif Input.trigger?(Input::SPECIAL)   # Checking party
+          elsif Keybinds.trigger?(:special)   # Checking party
             if $player.pokemon_count == 0
               pbMessage(_INTL("There is no Pokémon."))
             else
@@ -1084,7 +1084,7 @@ class PokemonBag_Scene
               pbDeactivateWindows(@sprites){pbChoosePoke(3, false)}
               pbRefresh
             end
-          elsif Input.trigger?(Input::ACTION)   # Start switching the selected item
+          elsif Keybinds.trigger?(:action)   # Start switching the selected item
             if !@choosing && thispocket.length > 1 && itemwindow.index < thispocket.length &&
                !Settings::BAG_POCKET_AUTO_SORT[itemwindow.pocket - 1]
               itemwindow.sorting = true
@@ -1092,10 +1092,10 @@ class PokemonBag_Scene
               pbPlayDecisionSE
               pbRefresh
             end
-          elsif Input.trigger?(Input::BACK)   # Cancel the item screen
+          elsif Keybinds.trigger?(:back)   # Cancel the item screen
             pbPlayCloseMenuSE
             return nil
-          elsif Input.trigger?(Input::USE)   # Choose selected item
+          elsif Keybinds.trigger?(:use)   # Choose selected item
             (itemwindow.item) ? pbPlayDecisionSE : pbPlayCloseMenuSE
             return itemwindow.item
           end
@@ -1115,7 +1115,7 @@ class PokemonBag_Scene
   def pbChangeSelection(key,currentsel)
     numsprites = @party.length - 1
     case key
-    when Input::LEFT
+    when :left
       begin
         currentsel -= 1
       end while currentsel >= 0 && currentsel < @party.length && !@party[currentsel]
@@ -1123,12 +1123,12 @@ class PokemonBag_Scene
         currentsel = @party.length - 1
       end
       currentsel = numsprites if currentsel < 0 || currentsel > numsprites
-    when Input::RIGHT
+    when :right
       begin
         currentsel += 1
       end while currentsel < @party.length && !@party[currentsel]
       currentsel = 0 if currentsel == @party.length
-    when Input::UP
+    when :up
       if currentsel > numsprites
         currentsel -= 1
         while currentsel > 0 && currentsel < numsprites && !@party[currentsel]
@@ -1143,7 +1143,7 @@ class PokemonBag_Scene
         currentsel = numsprites
       end
       currentsel = numsprites if currentsel < 0
-    when Input::DOWN
+    when :down
       if currentsel >= Settings::MAX_PARTY_SIZE - 1
         currentsel += 1
       else
@@ -1197,11 +1197,11 @@ class PokemonBag_Scene
       pbUpdate
       oldsel = @activecmd
       key = -1
-      key = Input::DOWN if Input.repeat?(Input::DOWN) && @party.length > 2
-      key = Input::RIGHT if Input.repeat?(Input::RIGHT)
-      key = Input::LEFT if Input.repeat?(Input::LEFT)
-      key = Input::UP if Input.repeat?(Input::UP) && @party.length > 2
-      if key >= 0 && @party.length > 1
+      key = :down if Keybinds.repeat?(:down) && @party.length > 2
+      key = :right if Keybinds.repeat?(:right)
+      key = :left if Keybinds.repeat?(:left)
+      key = :up if Keybinds.repeat?(:up) && @party.length > 2
+      if key != -1 && @party.length > 1
         @activecmd = pbChangeSelection(key, @activecmd)
       end
       if @activecmd != oldsel   # Changing selection
@@ -1211,7 +1211,7 @@ class PokemonBag_Scene
           @sprites["pokemon#{i}"].selected = (i == @activecmd)
         end
       end
-      if Input.trigger?(Input::USE)
+      if Keybinds.trigger?(:use)
         pkmn = @party[@activecmd]
         if option == 0 # Choose
           return @activecmd
@@ -1312,7 +1312,7 @@ class PokemonBag_Scene
         elsif option == 4 # Interaction for switching item
           return @activecmd
         end
-      elsif Input.trigger?(Input::BACK)
+      elsif Keybinds.trigger?(:back)
         if option != 4
           pbSEPlay("GUI storage hide party panel")
           pbChangeCursor(2)
@@ -1347,11 +1347,11 @@ class PokemonBag_Scene
       pbUpdate
       oldsel = @activecmd
       key = -1
-      key = Input::DOWN if Input.repeat?(Input::DOWN) && @party.length > 2
-      key = Input::RIGHT if Input.repeat?(Input::RIGHT)
-      key = Input::LEFT if Input.repeat?(Input::LEFT)
-      key = Input::UP if Input.repeat?(Input::UP) && @party.length > 2
-      if key >= 0 && @party.length > 1
+      key = :down if Keybinds.repeat?(:down) && @party.length > 2
+      key = :right if Keybinds.repeat?(:right)
+      key = :left if Keybinds.repeat?(:left)
+      key = :up if Keybinds.repeat?(:up) && @party.length > 2
+      if key != -1 && @party.length > 1
         @activecmd = pbChangeSelection(key,@activecmd)
       end
       if @activecmd != oldsel   # Changing selection
@@ -1362,10 +1362,10 @@ class PokemonBag_Scene
         end
         @sprites["pokemon#{fusioncmd}"].selected = true
       end
-      if Input.trigger?(Input::USE)
+      if Keybinds.trigger?(:use)
         @sprites["pokemon#{fusioncmd}"].selected = false if fusioncmd != @activecmd
         return @activecmd
-      elsif Input.trigger?(Input::BACK)
+      elsif Keybinds.trigger?(:back)
         pbPlayCancelSE
         @sprites["pokemon#{fusioncmd}"].selected = false if fusioncmd != @activecmd
         return -1

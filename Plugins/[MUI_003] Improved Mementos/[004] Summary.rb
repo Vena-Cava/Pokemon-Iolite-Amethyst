@@ -355,7 +355,7 @@ class PokemonSummary_Scene
       count = 0
       dorefresh = false
       #-------------------------------------------------------------------------
-      if Input.repeat?(Input::UP)
+      if Keybinds.repeat?(:up)
         if index >= row_size
           index -= row_size
           dorefresh = true
@@ -376,7 +376,7 @@ class PokemonSummary_Scene
           end
         end
       #-------------------------------------------------------------------------
-      elsif Input.repeat?(Input::DOWN)
+      elsif Keybinds.repeat?(:down)
         if index < row_size
           count = @sprites["mementos"].getPageSize(filter, page) - 1
           if count < index + row_size
@@ -403,7 +403,7 @@ class PokemonSummary_Scene
           end
         end
       #-------------------------------------------------------------------------
-      elsif Input.repeat?(Input::LEFT)
+      elsif Keybinds.repeat?(:left)
         if index > 0
           index -= 1
           dorefresh = true
@@ -422,7 +422,7 @@ class PokemonSummary_Scene
           end
         end
       #-------------------------------------------------------------------------
-      elsif Input.repeat?(Input::RIGHT)
+      elsif Keybinds.repeat?(:right)
         count = @sprites["mementos"].getPageSize(filter, page) - 1
         next if count == 0 && page == 0
         if index < count
@@ -440,21 +440,21 @@ class PokemonSummary_Scene
           end
         end
       #-------------------------------------------------------------------------
-      elsif Input.repeat?(Input::JUMPUP)
+      elsif Keybinds.repeat?(:jumpup)
         if page > 0
           page -= 1
           index = 0
           dorefresh = true
         end
       #-------------------------------------------------------------------------
-      elsif Input.repeat?(Input::JUMPDOWN)
+      elsif Keybinds.repeat?(:jumpdown)
         if page < maxpage
           page += 1
           index = 0
           dorefresh = true
         end
       #-------------------------------------------------------------------------
-      elsif Input.trigger?(Input::ACTION)
+      elsif Keybinds.trigger?(:action)
         if filter.include?(@pokemon.memento)
           oldpg, oldidx = page, index
           idxList = filter.index(@pokemon.memento)
@@ -463,7 +463,7 @@ class PokemonSummary_Scene
           dorefresh = (page != oldpg || index != oldidx)
         end
       #-------------------------------------------------------------------------
-      elsif Input.trigger?(Input::USE)
+      elsif Keybinds.trigger?(:use)
         if switching
           memento = @sprites["ribbonpresel"].getMemento(filter)
           oldidx = filter.index(memento)
@@ -484,7 +484,7 @@ class PokemonSummary_Scene
           end
         end
       #-------------------------------------------------------------------------
-      elsif Input.trigger?(Input::BACK)
+      elsif Keybinds.trigger?(:back)
         (switching) ? pbPlayCancelSE : pbPlayCloseMenuSE
         break if !switching
         @sprites["ribbonpresel"].activePage = -1

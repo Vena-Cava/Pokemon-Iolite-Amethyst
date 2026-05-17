@@ -9,6 +9,7 @@ class VoltseonsPauseMenu < Component
     @current_selection = $game_temp.menu_last_choice || 0
 	@current_selection = 0 if @current_selection < 0
     @should_refresh    = true
+	@last_input_device = Keybinds.last_device rescue nil
     # Background image
     @sprites["menuback"] = Sprite.new(@viewport)
     @sprites["menuback"].bitmap = RPG::Cache.load_bitmap(MENU_FILE_PATH, $PokemonSystem.from_current_menu_theme("bg"))
@@ -34,9 +35,9 @@ class VoltseonsPauseMenu < Component
     @sprites["entrytext"].y     = Graphics.height - 188
     @sprites["entrytext"].ox    = Graphics.width / 4
     @sprites["entrytext"].x     = Graphics.width / 2
-	@sprites["savehint"]        = Sprite.new(@viewport)
-	@sprites["savehint"].bitmap = Bitmap.new(Graphics.width, 32)
-	@sprites["savehint"].x      = 0
+    @sprites["savehint"]        = Sprite.new(@viewport)
+    @sprites["savehint"].bitmap = Bitmap.new(Graphics.width, 34)
+    @sprites["savehint"].x      = 0
     @sprites["savehint"].y      = Graphics.height - 188
     @sprites["leftarrow"].visible  = @disp_indices.length != 1
     @sprites["rightarrow"].visible = @disp_indices.length > 1
@@ -44,15 +45,22 @@ class VoltseonsPauseMenu < Component
 
   def update
     exit = false # should the menu-loop continue
-    if Input.trigger?(Input::BACK) || Input.trigger?(Input::ACTION)
+	if defined?(Keybinds)
+	  Keybinds.update
+	  if @last_input_device != Keybinds.last_device
+		@last_input_device = Keybinds.last_device
+		@should_refresh = true
+	  end
+	end
+    if Keybinds.trigger?(:back) || Keybinds.trigger?(:action)
       $game_temp.menu_last_choice = @current_selection
       @menu.should_exit = true
       return
-    elsif Input.press?(Input::LEFT)
-      shift_cursor(-1)
-    elsif Input.press?(Input::RIGHT) && @disp_indices.length > 1
-      shift_cursor(1)
-	elsif Input.trigger?(Input::SPECIAL)
+	elsif Keybinds.repeat?(:left)
+	  shift_cursor(-1)
+	elsif Keybinds.repeat?(:right) && @disp_indices.length > 1
+	  shift_cursor(1)
+	elsif Keybinds.trigger?(:special)
 	  old_selection = @current_selection
 	  save_index = @entries.find_index { |e| e[:name] == _INTL("Save") }
 
@@ -74,7 +82,7 @@ class VoltseonsPauseMenu < Component
 		  @should_refresh = true
 	    end
 	  end
-    elsif Input.trigger?(Input::USE)
+    elsif Keybinds.trigger?(:use)
       pbPlayDecisionSE
       old_menu_theme = $PokemonSystem.current_menu_theme
       exit = @entries[@current_selection][:proc].call(@menu)
@@ -307,15 +315,29 @@ class VoltseonsPauseMenu < Component
     @sprites["icon_dummy_r"].setBitmap(b2)
     return if !SHOW_MENU_NAMES
     @sprites["entrytext"].bitmap.clear
+    @sprites["savehint"].bitmap.clear
     text = @entries[@current_selection][:name]
     pbSetSystemFont(@sprites["entrytext"].bitmap)
     base_color = $PokemonSystem.from_current_menu_theme(MENU_TEXTCOLOR, Color.new(248, 248, 248))
     shdw_color = $PokemonSystem.from_current_menu_theme(MENU_TEXTOUTLINE, Color.new(48, 48, 48))
     pbDrawTextPositions(@sprites["entrytext"].bitmap, [
-	  [text, Graphics.width / 4, 8, 2, base_color, shdw_color]
-	])
-	pbDrawTextPositions(@sprites["savehint"].bitmap, [
-      [_INTL("Save: [SPECIAL]"), 4, 8, 0, base_color, shdw_color]
+      [text, Graphics.width / 4, 8, 2, base_color, shdw_color]
     ])
+    pbDrawTextPositions(@sprites["savehint"].bitmap, [
+      [_INTL("Save:"), 4, 8, 0, base_color, shdw_color]
+    ])
+
+    if Keybinds.gamepad?
+      button = Keybinds::GAMEPAD_BUTTONS[:special]
+      sheet = RPG::Cache.load_bitmap("Graphics/UI/", "controller_buttons")
+
+      src_rect = Rect.new(button * 32,$PokemonSystem.controller_layout * 32,32,32)
+
+      @sprites["savehint"].bitmap.blt(52, 2, sheet, src_rect)
+    else
+      pbDrawTextPositions(@sprites["savehint"].bitmap, [
+        [_INTL("[{1}]", Keybinds.button_name(:special)), 52, 8, 0, base_color, shdw_color]
+      ])
+    end
   end
 end

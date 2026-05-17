@@ -14,12 +14,12 @@ class PokemonPokedexInfo_Scene
       Input.update
       pbUpdate
       #-------------------------------------------------------------------------
-      if Input.trigger?(Input::BACK)
+      if Keybinds.trigger?(:back)
         pbPlayCancelSE
         @sprites["data_overlay"].bitmap.clear
         break
       #-------------------------------------------------------------------------
-      elsif Input.trigger?(Input::USE)
+      elsif Keybinds.trigger?(:use)
         case @cursor
         #-----------------------------------------------------------------------
         # Displays move lists.
@@ -39,7 +39,7 @@ class PokemonPokedexInfo_Scene
         end
         break if @forceRefresh
       #-------------------------------------------------------------------------
-      elsif Input.repeat?(Input::UP)
+      elsif Keybinds.repeat?(:up)
         old_cursor = @cursor
         case @cursor
         when :general then @cursor = :ability
@@ -57,7 +57,7 @@ class PokemonPokedexInfo_Scene
           pbDrawDataNotes
         end
       #-------------------------------------------------------------------------
-      elsif Input.repeat?(Input::DOWN)
+      elsif Keybinds.repeat?(:down)
         old_cursor = @cursor
         case @cursor
         when :general then @cursor = :family
@@ -75,7 +75,7 @@ class PokemonPokedexInfo_Scene
           pbDrawDataNotes
         end
       #-------------------------------------------------------------------------
-      elsif Input.repeat?(Input::LEFT)
+      elsif Keybinds.repeat?(:left)
         old_cursor = @cursor
         case @cursor
         when :general then @cursor = :general
@@ -93,7 +93,7 @@ class PokemonPokedexInfo_Scene
           pbDrawDataNotes
         end
       #-------------------------------------------------------------------------
-      elsif Input.repeat?(Input::RIGHT)
+      elsif Keybinds.repeat?(:right)
         old_cursor = @cursor
         case @cursor
         when :general then @cursor = :general

@@ -120,15 +120,15 @@
 
         # Choose which button will activate the Location Search Feature.
         # Be careful with what you've set for Region map changing, mode changing and location preview as it might conflict with those.
-        LocationSearchButton = Input::SPECIAL
+        LocationSearchButton = :special
 
         # Choose which button will activate the Quick Search Feature.
         # This may be the same button as you've set for LocationSearchButton but don't set this to the BACK or the USE button
-        QuickSearchButton = Input::ACTION
+        QuickSearchButton = :action
 
         # Choose which button will sort the list with locations.
         # If you set this to the same button as LocationSearchButton, make sure QuickSearchButton is set to a different one to avoid problems.
-        OrderSearchButton = Input::SPECIAL
+        OrderSearchButton = :special
 
       #=========================== Highlight Settings ===========================#
 
@@ -200,8 +200,8 @@
       # Choose which Button will activate the Quick Fly Feature
       # Possible buttons are: JUMPUP, JUMPDOWN, SPECIAL, AUX1 and AUX2. any other buttons are not recommended.
       # Press F1 in game to know which key a button is linked to.
-      # IMPORTANT: only change the JUMPUP to SPECIAL for example. So QuickFlyButton = Input::SPECIAL
-      QuickFlyButton = Input::JUMPUP
+      # IMPORTANT: only change the JUMPUP to SPECIAL for example. So QuickFlyButton = :special
+      QuickFlyButton = :jumpup
 
       # true = enabled: The Cursor will automatically move to the selected Location from the Quick Fly Menu (on selecting, not confirming).
       # false = disabled.
@@ -229,7 +229,7 @@
     #================================ Mode Settings ===============================#
       # Choose which button needs to be pressed to change the map mode. ACTION is the default one in essentials.
       # ATTENTION: if you set this to the same button that has been asigned for quick fly and/or quest preview then you won't be able to change modes anymore.
-      ChangeModeButton = Input::ACTION
+      ChangeModeButton = :action
 
       # Set the name for each mode you want to display on the Region Map.
       # Only change what's between the " ". quest and berry are modes that requires a plugin to be installed in order to be activated on the Region Map.
@@ -300,15 +300,15 @@
         ToggleZoomButton = Input::CTRL
 
         # Choose the button you need to press to Zoom in. (Only used while in Zoom Mode.)
-        ZoomInButton = Input::JUMPUP
+        ZoomInButton = :jumpup
 
         # Choose the button you need to press to Zoom out. (Only used while in Zoom Mode.)
-        ZoomOutButton = Input::JUMPDOWN
+        ZoomOutButton = :jumpdown
 
       #========================= Region Changing Settings =======================#
 
         # Choose the button that needs to be pressed to change the Region if more than 2 regions are available and have been visited.
-        ChangeRegionButton = Input::JUMPDOWN
+        ChangeRegionButton = :jumpdown
 
         # true = enabled: The UI and Graphics will change depending on the Region number.
         # false = disabled: The UI will stay unchanged.
@@ -437,7 +437,7 @@
         UseLocationPreview = true
 
         # Choose the button you need to press to view information about the Current Location.
-        ShowLocationButton = Input::USE
+        ShowLocationButton = :use
 
         # true = enabled: You can view info of Unvisited Locations as well (This setting has no effect if NoUnvistedMapInfo is set to false).
         # false = disabled: You can only view info of Visited Locations on the Region Map.
@@ -529,18 +529,18 @@
         UseExtendedPreview = true
 
         # Choose the button you need to press to show the Extended Location Preview of the current Location.
-        ShowExtendedButton = Input::USE
+        ShowExtendedButton = :use
 
         # Choose the button you need to press to open the Encounter Table (for now this is the only function, later it'll be a menu)
-        ShowExtendedSubButton = Input::USE
+        ShowExtendedSubButton = :use
 
         # Choose the button you need to press to reveal seen species from other maps that can be found on the current location.
         # You can also set this to nil, it'll then always reveal all seen species by default and won't be triggerable.
-        RevealAllSeenSpeciesButton = Input::SPECIAL
+        RevealAllSeenSpeciesButton = :special
 
         # Choose the button you need to press to select a species and view info about it.
         # pressing this button again, will change the info space of the current selected species.
-        SelectSpeciesButton = Input::USE
+        SelectSpeciesButton = :use
 
         # true = enabled: The Counter Text on the Main page of the Extended Preview will have a fixed position and won't change if for example no Wild Encounters are available on a map.
         # false = disabled: The Counter Text will show more compact when there's no data for an Counter.
@@ -660,8 +660,8 @@
         # Possible buttons are: USE, JUMPUP, JUMPDOWN, SPECIAL, AUX1 and AUX2. any other buttons are not recommended.
         # USE can be used this time because unlike with the fly map, it won't do anything.
         # Press F1 in game to know which key a button is linked to.
-        # IMPORTANT: only change the "USE" to JUMPDOWN for example so ShowQuestButton = Input::JUMPDOWN
-        ShowQuestButton = Input::USE
+        # IMPORTANT: only change the "USE" to JUMPDOWN for example so ShowQuestButton = :jumpdown
+        ShowQuestButton = :use
 
         # How to edit the Quest preview Box Graphics:
         # This is a bit less complex than the Location Preview Graphics as there are no Alt versions this time.
@@ -688,7 +688,7 @@
         ShowBerryIcons = true
 
         # Choose the button you need to press to view information about the Berries planted on the current Location.
-        ShowBerryButton = Input::USE
+        ShowBerryButton = :use
 
         # Exactly the same as the Quest Preview Setting but then for the Berry Preview
         MaxBerryLines = 4
@@ -721,13 +721,13 @@
 
     #=============================== Pokedex Settings =============================#   
       # Choose which button will activate Region Switching on the Pokedex Area Section (nil means disabled)
-      ToggleRegionSwitchButton = Input::ACTION 
+      ToggleRegionSwitchButton = :action 
 
       # Choose which button will activate the Location Filter Menu on the Pokedex Area Section (nil mean disabled)
-      ToggleLocFilterButton = Input::SPECIAL
+      ToggleLocFilterButton = :special
 
       # Choose which button will activate the Encounter Type Filter Menu on the Pokedex Area Section (nil means disabled)
-      ToggleEncTypeFilterButton = Input::JUMPDOWN
+      ToggleEncTypeFilterButton = :jumpdown
 
       # "default" = location filter and encounter type filter trigger separatly
       # "choice" = choice menu with which filter to choose and apply.

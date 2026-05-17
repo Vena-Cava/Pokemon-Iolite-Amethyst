@@ -31,7 +31,7 @@ class BattleRulesDebug
       sprites["textbox"].text = @commands.getDesc(cmdwindow.index)
       Graphics.update
       Input.update
-      if Input.trigger?(Input::BACK)
+      if Keybinds.trigger?(:back)
         if @selecting
           pbPlayCancelSE
           @selecting = false
@@ -39,7 +39,7 @@ class BattleRulesDebug
         else
           break
         end
-      elsif Input.trigger?(Input::USE)
+      elsif Keybinds.trigger?(:use)
         pbPlayDecisionSE
         cmd = @commands.getCommand(cmdwindow.index)
         if @selecting || [:add_new_rule, :clear_all_rules].include?(cmd)

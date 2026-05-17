@@ -170,12 +170,12 @@ class AdventureMenuScene
       # UP/DOWN KEYS
       #-------------------------------------------------------------------------
       # Cycles through list of rental Pokemon.
-      if Input.repeat?(Input::UP)
+      if Keybinds.repeat?(:up)
         pbPlayCursorSE
         idxPkmn -= 1
         idxPkmn = RENTAL_LIST_SIZE - 1 if idxPkmn < 0
         RENTAL_LIST_SIZE.times { |i| @sprites["rental_#{i}"].selected = (i == idxPkmn) }
-      elsif Input.repeat?(Input::DOWN)
+      elsif Keybinds.repeat?(:down)
         pbPlayCursorSE
         idxPkmn += 1
         idxPkmn = 0 if idxPkmn > RENTAL_LIST_SIZE - 1
@@ -184,7 +184,7 @@ class AdventureMenuScene
       # ACTION KEY
       #-------------------------------------------------------------------------
       # Opens the Summary for the rental party.
-      elsif Input.trigger?(Input::ACTION)
+      elsif Keybinds.trigger?(:action)
         next if new_party.empty?
         pbPlayDecisionSE
         pbSummary(new_party)
@@ -192,13 +192,13 @@ class AdventureMenuScene
       # BACK KEY
       #-------------------------------------------------------------------------
       # Exits the menu and prematurely ends the Adventure.
-      elsif Input.trigger?(Input::BACK)
+      elsif Keybinds.trigger?(:back)
         break if pbConfirmMessage(_INTL("Exit and end your {1}?", adventure_name))
       #-------------------------------------------------------------------------
       # USE KEY
       #-------------------------------------------------------------------------
       # Selects a rental Pokemon and opens the command menu.
-      elsif Input.trigger?(Input::USE)
+      elsif Keybinds.trigger?(:use)
         pbPlayDecisionSE
         pkmn = @sprites["rental_#{idxPkmn}"].pokemon
         commands = [_INTL("Select"), _INTL("Summary"), _INTL("Back")]

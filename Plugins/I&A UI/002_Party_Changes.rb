@@ -4,7 +4,7 @@
 class PokemonPartyConfirmCancelSprite < Sprite
   attr_reader :selected
 
-  def initialize(text, x, y, narrowbox = false, viewport = nil)
+  def initialize(text, x, y, narrowbox = false, viewport = nil, action = nil)
     super(viewport)
     @refreshBitmap = true
     @bgsprite = ChangelingSprite.new(0, 0, viewport)
@@ -19,7 +19,27 @@ class PokemonPartyConfirmCancelSprite < Sprite
     @overlaysprite = BitmapSprite.new(@bgsprite.bitmap.width, @bgsprite.bitmap.height, viewport)
     @overlaysprite.z = self.z + 1
     pbSetSystemFont(@overlaysprite.bitmap)
-    textpos = [[text, 56, (narrowbox) ? 8 : 14, :center, Color.new(248, 248, 248), Color.new(40, 40, 40)]]
+    if action && defined?(Keybinds) && Keybinds.gamepad?
+      @overlaysprite.bitmap.clear
+
+      sheet = RPG::Cache.load_bitmap("Graphics/UI/", "controller_buttons")
+      button = Keybinds::GAMEPAD_BUTTONS[action]
+
+      src_rect = Rect.new(
+      button * 32,
+      $PokemonSystem.controller_layout * 32,
+      32,
+      32
+      )
+
+      @overlaysprite.bitmap.blt(8, narrowbox ? 0 : 6, sheet, src_rect)
+
+      textpos = [[text, 62, narrowbox ? 8 : 14, :left, Color.new(248, 248, 248), Color.new(40, 40, 40)]]
+    else
+      label = action ? Keybinds.button_name(action) : text
+      textpos = [[label, 56, narrowbox ? 8 : 14, :center, Color.new(248, 248, 248), Color.new(40, 40, 40)]]
+    end
+
     pbDrawTextPositions(@overlaysprite.bitmap, textpos)
     self.x = x
     self.y = y
@@ -79,7 +99,7 @@ end
 #===============================================================================
 class PokemonPartyCancelSprite < PokemonPartyConfirmCancelSprite
   def initialize(viewport = nil)
-    super(_INTL("CANCEL"), 398, 328, false, viewport)
+    super(_INTL("Cancel"), 398, 328, false, viewport, :back)
   end
 end
 
@@ -88,7 +108,7 @@ end
 #===============================================================================
 class PokemonPartyConfirmSprite < PokemonPartyConfirmCancelSprite
   def initialize(viewport = nil)
-    super(_INTL("CONFIRM"), 398, 308, true, viewport)
+    super(_INTL("Confirm"), 398, 308, true, viewport, :use)
   end
 end
 
@@ -97,7 +117,7 @@ end
 #===============================================================================
 class PokemonPartyCancelSprite2 < PokemonPartyConfirmCancelSprite
   def initialize(viewport = nil)
-    super(_INTL("CANCEL"), 398, 346, true, viewport)
+    super(_INTL("Cancel"), 398, 346, true, viewport, :back)
   end
 end
 
@@ -484,27 +504,55 @@ class PokemonParty_Scene
     @viewport.z = 99999
     @multiselect = multiselect
     @can_access_storage = can_access_storage
+    @last_input_device = Keybinds.last_device rescue nil
     @sprites["partybg"] = IconSprite.new(0, 0, @viewport)
     @sprites["partybg"].setBitmap("Graphics/UI/Party/bg")
     @sprites["panorama"] = IconSprite.new(0, 0, @viewport)
     @sprites["panorama"].setBitmap("Graphics/UI/Party/bg_pan_am")
-	@sprites["panorama"].z = -2
+    @sprites["panorama"].z = -2
     @sprites["messagebox"] = Window_AdvancedTextPokemon.new("")
     @sprites["messagebox"].z              = 50
     @sprites["messagebox"].viewport       = @viewport
     @sprites["messagebox"].visible        = false
     @sprites["messagebox"].letterbyletter = true
     pbBottomLeftLines(@sprites["messagebox"], 2)
-    @sprites["storagetext"] = Window_UnformattedTextPokemon.new(
-      @can_access_storage ? _INTL("[Special]: To Boxes") : ""
-    )
-    @sprites["storagetext"].x           = 32
-    @sprites["storagetext"].y           = Graphics.height - @sprites["messagebox"].height - 16
-    @sprites["storagetext"].z           = 10
-    @sprites["storagetext"].viewport    = @viewport
-    @sprites["storagetext"].baseColor   = Color.new(248, 248, 248)
-    @sprites["storagetext"].shadowColor = Color.black
-    @sprites["storagetext"].windowskin  = nil
+    @sprites["storagetext"] = BitmapSprite.new(240, 36, @viewport)
+    @sprites["storagetext"].x = 32
+    @sprites["storagetext"].y = Graphics.height - @sprites["messagebox"].height - 16
+    @sprites["storagetext"].z = 10
+
+    refresh_storage_text
+
+    if @can_access_storage
+      bitmap = @sprites["storagetext"].bitmap
+      bitmap.clear
+
+      base_color = Color.new(248, 248, 248)
+      shdw_color = Color.black
+
+      if Keybinds.gamepad?
+        sheet = RPG::Cache.load_bitmap("Graphics/UI/", "controller_buttons")
+        button = Keybinds::GAMEPAD_BUTTONS[:special]
+
+        src_rect = Rect.new(
+          button * 32,
+          $PokemonSystem.controller_layout * 32,
+          32,
+          32
+        )
+
+        bitmap.blt(0, 2, sheet, src_rect)
+
+        pbDrawTextPositions(bitmap, [
+          [_INTL(": To Boxes"), 40, 8, 0, base_color, shdw_color]
+        ])
+      else
+        pbDrawTextPositions(bitmap, [
+          [_INTL("[{1}]: To Boxes", Keybinds.button_name(:special)),
+          0, 8, 0, base_color, shdw_color]
+        ])
+      end
+    end
     @sprites["helpwindow"] = Window_UnformattedTextPokemon.new(starthelptext)
     @sprites["helpwindow"].viewport = @viewport
     @sprites["helpwindow"].visible  = true
@@ -530,6 +578,40 @@ class PokemonParty_Scene
     @sprites["pokemon0"].selected = true
     pbFadeInAndShow(@sprites) { update }
   end
+  
+  def refresh_storage_text
+    return if !@sprites["storagetext"]
+
+    bitmap = @sprites["storagetext"].bitmap
+    bitmap.clear
+
+    return if !@can_access_storage
+
+    base_color = Color.new(248, 248, 248)
+    shdw_color = Color.black
+
+    if Keybinds.gamepad?
+      sheet = RPG::Cache.load_bitmap("Graphics/UI/", "controller_buttons")
+      button = Keybinds::GAMEPAD_BUTTONS[:special]
+
+      src_rect = Rect.new(
+        button * 32,
+        $PokemonSystem.controller_layout * 32,
+        32,
+        32
+      )
+
+      bitmap.blt(0, 2, sheet, src_rect)
+
+      pbDrawTextPositions(bitmap, [
+        [_INTL(": To Boxes"), 40, 8, 0, base_color, shdw_color]
+      ])
+    else
+      pbDrawTextPositions(bitmap, [
+        [_INTL("[{1}]: To Boxes", Keybinds.button_name(:special)), 0, 8, 0, base_color, shdw_color]
+      ])
+    end
+  end
 
   def pbEndScene
     pbFadeOutAndHide(@sprites) { update }
@@ -547,11 +629,11 @@ class PokemonParty_Scene
       Input.update
       self.update
       if @sprites["messagebox"].busy?
-        if Input.trigger?(Input::USE)
+        if Keybinds.trigger?(:use)
           pbPlayDecisionSE if @sprites["messagebox"].pausing?
           @sprites["messagebox"].resume
         end
-      elsif Input.trigger?(Input::BACK) || Input.trigger?(Input::USE)
+      elsif Keybinds.trigger?(:back) || Keybinds.trigger?(:use)
         break
       end
     end
@@ -576,10 +658,10 @@ class PokemonParty_Scene
         cmdwindow.update
         self.update
         if !@sprites["messagebox"].busy?
-          if Input.trigger?(Input::BACK)
+          if Keybinds.trigger?(:back)
             ret = false
             break
-          elsif Input.trigger?(Input::USE) && @sprites["messagebox"].resume
+          elsif Keybinds.trigger?(:use) && @sprites["messagebox"].resume
             ret = (cmdwindow.index == 0)
             break
           end
@@ -607,11 +689,11 @@ class PokemonParty_Scene
         Input.update
         cmdwindow.update
         self.update
-        if Input.trigger?(Input::BACK)
+        if Keybinds.trigger?(:back)
           pbPlayCancelSE
           ret = -1
           break
-        elsif Input.trigger?(Input::USE)
+        elsif Keybinds.trigger?(:use)
           pbPlayDecisionSE
           ret = cmdwindow.index
           break
@@ -761,11 +843,11 @@ class PokemonParty_Scene
       self.update
       oldsel = @activecmd
       key = -1
-      key = Input::DOWN if Input.repeat?(Input::DOWN)
-      key = Input::RIGHT if Input.repeat?(Input::RIGHT)
-      key = Input::LEFT if Input.repeat?(Input::LEFT)
-      key = Input::UP if Input.repeat?(Input::UP)
-      if key >= 0
+      key = :down if Keybinds.repeat?(:down)
+      key = :right if Keybinds.repeat?(:right)
+      key = :left if Keybinds.repeat?(:left)
+      key = :up if Keybinds.repeat?(:up)
+      if key != -1
         @activecmd = pbChangeSelection(key, @activecmd)
       end
       if @activecmd != oldsel   # Changing selection
@@ -776,7 +858,7 @@ class PokemonParty_Scene
         end
       end
       cancelsprite = Settings::MAX_PARTY_SIZE + ((@multiselect) ? 1 : 0)
-      if Input.trigger?(Input::SPECIAL) && @can_access_storage && canswitch != 2
+      if Keybinds.trigger?(:special) && @can_access_storage && canswitch != 2
         pbPlayDecisionSE
         pbFadeOutIn do
           scene = PokemonStorageScene.new
@@ -784,15 +866,15 @@ class PokemonParty_Scene
           screen.pbStartScreen(0)
           pbHardRefresh
         end
-      elsif Input.trigger?(Input::ACTION) && canswitch == 1 && @activecmd != cancelsprite
+      elsif Keybinds.trigger?(:action) && canswitch == 1 && @activecmd != cancelsprite
         pbPlayDecisionSE
         return [1, @activecmd]
-      elsif Input.trigger?(Input::ACTION) && canswitch == 2
+      elsif Keybinds.trigger?(:action) && canswitch == 2
         return -1
-      elsif Input.trigger?(Input::BACK)
+      elsif Keybinds.trigger?(:back)
         pbPlayCloseMenuSE if !switching
         return -1
-      elsif Input.trigger?(Input::USE)
+      elsif Keybinds.trigger?(:use)
         if @activecmd == cancelsprite
           (switching) ? pbPlayDecisionSE : pbPlayCloseMenuSE
           return -1
@@ -807,7 +889,7 @@ class PokemonParty_Scene
   def pbChangeSelection(key, currentsel)
     numsprites = Settings::MAX_PARTY_SIZE + ((@multiselect) ? 2 : 1)
     case key
-    when Input::LEFT
+    when :left
       loop do
         currentsel -= 1
         break unless currentsel > 0 && currentsel < Settings::MAX_PARTY_SIZE && !@party[currentsel]
@@ -816,7 +898,7 @@ class PokemonParty_Scene
         currentsel = @party.length - 1
       end
       currentsel = numsprites - 1 if currentsel < 0
-    when Input::RIGHT
+    when :right
       loop do
         currentsel += 1
         break unless currentsel < Settings::MAX_PARTY_SIZE && !@party[currentsel]
@@ -824,7 +906,7 @@ class PokemonParty_Scene
       if currentsel == numsprites
         currentsel = (@party.length == 0) ? Settings::MAX_PARTY_SIZE : 0
       end
-    when Input::UP
+    when :up
       if currentsel >= Settings::MAX_PARTY_SIZE
         currentsel -= 1
         while currentsel > 0 && currentsel < Settings::MAX_PARTY_SIZE && !@party[currentsel]
@@ -841,7 +923,7 @@ class PokemonParty_Scene
         currentsel = @party.length - 1
       end
       currentsel = numsprites - 1 if currentsel < 0
-    when Input::DOWN
+    when :down
       if currentsel >= Settings::MAX_PARTY_SIZE - 1
         currentsel += 1
       else
@@ -903,6 +985,13 @@ class PokemonParty_Scene
   end
 
   def update
+    if defined?(Keybinds)
+      Keybinds.update
+      if @last_input_device != Keybinds.last_device
+        @last_input_device = Keybinds.last_device
+        refresh_storage_text
+      end
+    end
     pbUpdateSpriteHash(@sprites)
     @sprites["panorama"].x  = 0 if @sprites["panorama"].x == - 56
     @sprites["panorama"].x -= 2

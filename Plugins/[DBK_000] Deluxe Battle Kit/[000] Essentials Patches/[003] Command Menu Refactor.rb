@@ -238,34 +238,34 @@ class Battle::Scene
       end
       oldIndex = cw.index
       pbUpdate(cw)
-      if Input.trigger?(Input::LEFT)
+      if Keybinds.trigger?(:left)
         cw.index -= 1 if (cw.index & 1) == 1
-      elsif Input.trigger?(Input::RIGHT)
+      elsif Keybinds.trigger?(:right)
         cw.index += 1 if battler.moves[cw.index + 1]&.id && (cw.index & 1) == 0
-      elsif Input.trigger?(Input::UP)
+      elsif Keybinds.trigger?(:up)
         cw.index -= 2 if (cw.index & 2) == 2
-      elsif Input.trigger?(Input::DOWN)
+      elsif Keybinds.trigger?(:down)
         cw.index += 2 if battler.moves[cw.index + 2]&.id && (cw.index & 2) == 0
       end
       if cw.index != oldIndex
         pbPlayCursorSE
         pbFightMenu_Update(battler, specialAction, cw)		
       end
-      if Input.trigger?(Input::USE)
+      if Keybinds.trigger?(:use)
         pbPlayDecisionSE
         break if yield pbFightMenu_Confirm(battler, specialAction, cw)
         needFullRefresh = true
         needRefresh = true
-      elsif Input.trigger?(Input::BACK)
+      elsif Keybinds.trigger?(:back)
         break if yield pbFightMenu_Cancel(battler, specialAction, cw)
         needRefresh = true
-      elsif Input.trigger?(Input::ACTION)
+      elsif Keybinds.trigger?(:action)
         if specialAction
           needFullRefresh = pbFightMenu_Action(battler, specialAction, cw)
           break if yield specialAction
           needRefresh = true
         end
-      elsif Input.trigger?(Input::SPECIAL)
+      elsif Keybinds.trigger?(:special)
         if cw.shiftMode > 0
           break if yield pbFightMenu_Shift(battler, cw)
           needRefresh = true

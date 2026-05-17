@@ -46,10 +46,10 @@ class AdventureMenuScene
       Input.update
       Graphics.update
       pbUpdate
-      if Input.trigger?(Input::ACTION)
+      if Keybinds.trigger?(:action)
         pbPlayDecisionSE
         pbSummary(record[:party])
-      elsif Input.trigger?(Input::BACK)
+      elsif Keybinds.trigger?(:back)
         break
       end
     end

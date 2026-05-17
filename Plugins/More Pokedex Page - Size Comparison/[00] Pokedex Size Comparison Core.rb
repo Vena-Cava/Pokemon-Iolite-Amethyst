@@ -425,18 +425,18 @@ def drawPageSizes
       Graphics.update
       Input.update
       pbUpdate
-      if Input.trigger?(Input::UP)
+      if Keybinds.trigger?(:up)
         pbPlayCursorSE
         index = (index + hw.length - 1) % hw.length
-      elsif Input.trigger?(Input::DOWN)
+      elsif Keybinds.trigger?(:down)
         pbPlayCursorSE
         index = (index + 1) % hw.length
-      elsif Input.trigger?(Input::BACK)
+      elsif Keybinds.trigger?(:back)
         pbPlayCancelSE
         @hwComparator = oldcomp
         drawPage(@page)
         break
-      elsif Input.trigger?(Input::USE)
+      elsif Keybinds.trigger?(:use)
         pbPlayDecisionSE
         break
       end

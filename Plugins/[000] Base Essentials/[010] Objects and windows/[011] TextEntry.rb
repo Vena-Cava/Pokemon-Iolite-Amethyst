@@ -155,21 +155,21 @@ class Window_TextEntry < SpriteWindow_Base
     end
     return if !self.active
     # Moving cursor
-    if Input.repeat?(Input::LEFT) && Input.press?(Input::ACTION)
+    if Keybinds.repeat?(:left) && Keybinds.press?(:action)
       if @helper.cursor > 0
         @helper.cursor -= 1
         @cursor_timer_start = System.uptime
         @cursor_shown = true
         self.refresh
       end
-    elsif Input.repeat?(Input::RIGHT) && Input.press?(Input::ACTION)
+    elsif Keybinds.repeat?(:right) && Keybinds.press?(:action)
       if @helper.cursor < self.text.scan(/./m).length
         @helper.cursor += 1
         @cursor_timer_start = System.uptime
         @cursor_shown = true
         self.refresh
       end
-    elsif Input.repeat?(Input::BACK)   # Backspace
+    elsif Keybinds.repeat?(:back)   # Backspace
       self.delete if @helper.cursor > 0
     end
   end

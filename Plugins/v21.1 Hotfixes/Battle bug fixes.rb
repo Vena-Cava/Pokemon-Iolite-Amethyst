@@ -294,7 +294,7 @@ class Battle::Scene
           break
         end
       end
-      if Input.trigger?(Input::BACK) || Input.trigger?(Input::USE) || @abortable
+      if Keybinds.trigger?(:back) || Keybinds.trigger?(:use) || @abortable
         if cw.busy?
           pbPlayDecisionSE if cw.pausing? && !@abortable
           cw.skipAhead
@@ -332,7 +332,7 @@ class Battle::Scene
           end
         end
       end
-      if Input.trigger?(Input::BACK) || Input.trigger?(Input::USE) || @abortable
+      if Keybinds.trigger?(:back) || Keybinds.trigger?(:use) || @abortable
         if cw.busy?
           pbPlayDecisionSE if cw.pausing? && !@abortable
           cw.skipAhead

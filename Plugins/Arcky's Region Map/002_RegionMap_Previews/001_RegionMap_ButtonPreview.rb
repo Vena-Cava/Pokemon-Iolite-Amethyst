@@ -230,7 +230,7 @@ class PokemonRegionMap_Scene
       :HideInfo => {
         condition: @mode == 0 && @previewBox.isShown,
         text: _INTL("Hide Info"),
-        button: Input::BACK,
+        button: :back,
         order: 30
       },
       :ViewExtInfo => {
@@ -242,7 +242,7 @@ class PokemonRegionMap_Scene
       :HideExtInfo => {
         condition: @previewBox.isExtShown && @extendedBox.isMain,
         text: _INTL("Hide Info"),
-        button: Input::BACK,
+        button: :back,
         order: 30
       },
       :ShowEncTable => {
@@ -272,13 +272,13 @@ class PokemonRegionMap_Scene
       :ChangePage => {
         condition: (@previewBox.isExtShown && @getData && @getData.length > 1 && @extendedBox.isMain) || (@extendedBox.isSubOne && @tableData.length > 1) && !@extendedBox.isSubTwo,
         text: _INTL("Change Page"),
-        button: [Input::LEFT, Input::RIGHT],
+        button: [:left, :right],
         order: 30
       },
       :ChangeSpecies => {
         condition: @extendedBox.isSubTwo && @activeIndex.length > 1,
         text: _INTL("Change Species"),
-        button: [Input::JUMPUP, Input::JUMPDOWN],
+        button: [:jumpup, :jumpdown],
         order: 20
       },
       :ChangeSpeciesInfo => {
@@ -290,7 +290,7 @@ class PokemonRegionMap_Scene
       :GoPreviousPage => {
         condition: @extendedBox.isSubOne || @extendedBox.isSubTwo,
         text: _INTL("Go Back"),
-        button: Input::BACK,
+        button: :back,
         order: 40
       },
       :SearchLocation => {
@@ -326,7 +326,7 @@ class PokemonRegionMap_Scene
       :HideQuest => {
         condition: @mode == 2 && @previewBox.isShown,
         text: _INTL("Hide Quest"),
-        button: Input::BACK,
+        button: :back,
         order: 20
       },
       :ShowQuests => {
@@ -362,13 +362,13 @@ class PokemonRegionMap_Scene
       :HideBerry => {
         condition: @mode == 3 && @previewBox.isShown,
         text: _INTL("Hide Berry"),
-        button: Input::BACK,
+        button: :back,
         order: 20
       },
       :Quit => {
         condition: @previewBox.isHidden && !@searchActive,
         text: _INTL("Close Map"),
-        button: Input::BACK,
+        button: :back,
         order: 90
       }
     }

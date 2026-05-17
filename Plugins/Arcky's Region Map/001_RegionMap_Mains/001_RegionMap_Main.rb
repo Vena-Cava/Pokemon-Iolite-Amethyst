@@ -333,10 +333,10 @@ class PokemonRegionMap_Scene
           next
         end
       elsif @zoom
-        if Input.trigger?(Input::JUMPUP) && (@zoomIndex != 0 && @zoomHash[@zoomIndex - 1][:enabled]) # zoom in
+        if Keybinds.trigger?(:jumpup) && (@zoomIndex != 0 && @zoomHash[@zoomIndex - 1][:enabled]) # zoom in
           @zoomIndex -= 1
           @zoomTriggered = true
-        elsif Input.trigger?(Input::JUMPDOWN) && (@zoomIndex != @zoomHash.length - 1 && @zoomHash[@zoomIndex + 1][:enabled]) # zoom out
+        elsif Keybinds.trigger?(:jumpdown) && (@zoomIndex != @zoomHash.length - 1 && @zoomHash[@zoomIndex + 1][:enabled]) # zoom out
           @zoomIndex += 1
           @zoomTriggered = true
         end
@@ -366,7 +366,7 @@ class PokemonRegionMap_Scene
         elsif Input.trigger?(ARMSettings::ShowExtendedButton) && @previewBox.isShown && !@cannotExtPreview && @mode == 0 && ARMSettings::ProgressCounter
           pbPlayDecisionSE
           showExtendedPreview
-        elsif ((Input.trigger?(Input::USE) || Input.trigger?(ARMSettings::MouseButtonSelectLocation)) && @mode == 1) || inputFly
+        elsif ((Keybinds.trigger?(:use) || Input.trigger?(ARMSettings::MouseButtonSelectLocation)) && @mode == 1) || inputFly
           return @healspot if getFlyLocationAndConfirm { pbUpdate }
         elsif Input.trigger?(ARMSettings::ShowQuestButton) && QuestPlugin && @mode == 2
           @ChangeQuestIcon = true
@@ -411,7 +411,7 @@ class PokemonRegionMap_Scene
           end
         end
       end
-      if Input.trigger?(Input::BACK)
+      if Keybinds.trigger?(:back)
         next if previewAnimation
         if @previewBox.isShown || @previewBox.isUpdated
           @previewBox.hideIt

@@ -161,7 +161,7 @@ class AdventureMenuScene
       #-------------------------------------------------------------------------
       # UP/DOWN KEYS
       #-------------------------------------------------------------------------
-      if Input.press?(Input::UP)
+      if Keybinds.press?(:up)
         next if pokemon.length <= rowSize
         pbPlayCursorSE
         idxReward -= rowSize
@@ -171,7 +171,7 @@ class AdventureMenuScene
         @sprites["pokemon"].setPokemonBitmap(pokemon[idxReward])
         drawPokemonName(pokemon[idxReward], name_overlay)
         pbPauseScene(0.2)
-      elsif Input.press?(Input::DOWN)
+      elsif Keybinds.press?(:down)
         next if pokemon.length <= rowSize
         pbPlayCursorSE
         idxReward += rowSize
@@ -184,7 +184,7 @@ class AdventureMenuScene
       #-------------------------------------------------------------------------
       # LEFT/RIGHT KEYS
       #-------------------------------------------------------------------------
-      elsif Input.press?(Input::LEFT)
+      elsif Keybinds.press?(:left)
         next if pokemon.length <= 1
         pbPlayCursorSE
         idxReward -= 1
@@ -193,7 +193,7 @@ class AdventureMenuScene
         @sprites["pokemon"].setPokemonBitmap(pokemon[idxReward])
         drawPokemonName(pokemon[idxReward], name_overlay)
         pbPauseScene(0.2)
-      elsif Input.press?(Input::RIGHT)
+      elsif Keybinds.press?(:right)
         next if pokemon.length <= 1
         pbPlayCursorSE
         idxReward += 1
@@ -205,18 +205,18 @@ class AdventureMenuScene
       #-------------------------------------------------------------------------
       # ACTION KEY
       #-------------------------------------------------------------------------
-      elsif Input.trigger?(Input::ACTION)
+      elsif Keybinds.trigger?(:action)
         pbPlayDecisionSE
         pbSummary(pokemon, idxReward)
       #-------------------------------------------------------------------------
       # BACK KEY
       #-------------------------------------------------------------------------
-      elsif Input.trigger?(Input::BACK)
+      elsif Keybinds.trigger?(:back)
         break if pbConfirmMessage(_INTL("Exit without claiming any of the captured Pokémon?"))
       #-------------------------------------------------------------------------
       # USE KEY
       #-------------------------------------------------------------------------
-      elsif Input.trigger?(Input::USE)
+      elsif Keybinds.trigger?(:use)
         pbPlayDecisionSE
         pkmn = pokemon[idxReward]
         if pbConfirmMessage(_INTL("Would you like to claim {1} and take it with you?", pkmn.name)) { pbUpdate }

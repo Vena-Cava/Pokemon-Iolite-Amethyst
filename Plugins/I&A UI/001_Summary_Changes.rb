@@ -392,6 +392,7 @@ class PokemonSummary_Scene
 	@party      = party
 	@partyindex = partyindex
 	@pokemon    = @party[@partyindex]
+  @last_input_device = Keybinds.last_device rescue nil
 	@inbattle   = inbattle
 	@White		= Tone.new(255,255,255)
 	@page = 1
@@ -555,11 +556,11 @@ class PokemonSummary_Scene
       Input.update
       pbUpdate
       if @sprites["messagebox"].busy?
-        if Input.trigger?(Input::USE)
+        if Keybinds.trigger?(:use)
           pbPlayDecisionSE if @sprites["messagebox"].pausing?
       	@sprites["messagebox"].resume
         end
-      elsif Input.trigger?(Input::USE) || Input.trigger?(Input::BACK)
+      elsif Keybinds.trigger?(:use) || Keybinds.trigger?(:back)
         break
       end
     end
@@ -582,10 +583,10 @@ class PokemonSummary_Scene
         cmdwindow.update
         pbUpdate
         if !@sprites["messagebox"].busy?
-          if Input.trigger?(Input::BACK)
+          if Keybinds.trigger?(:back)
             ret = false
             break
-          elsif Input.trigger?(Input::USE) && @sprites["messagebox"].resume
+          elsif Keybinds.trigger?(:use) && @sprites["messagebox"].resume
             ret = (cmdwindow.index == 0)
             break
           end
@@ -607,11 +608,11 @@ class PokemonSummary_Scene
         Input.update
         cmdwindow.update
         pbUpdate
-        if Input.trigger?(Input::BACK)
+        if Keybinds.trigger?(:back)
           pbPlayCancelSE
           ret = -1
           break
-        elsif Input.trigger?(Input::USE)
+        elsif Keybinds.trigger?(:use)
           pbPlayDecisionSE
           ret = cmdwindow.index
           break
@@ -716,6 +717,33 @@ class PokemonSummary_Scene
     when 6 then drawPageMementos
     end
   end
+  
+  def draw_special_more_hint(overlay, x = 8, y = 348)
+    base   = Color.new(248, 248, 248)
+    shadow = Color.new(104, 104, 104)
+
+    pbDrawTextPositions(overlay, [
+      [_INTL("More:"), x, y, 0, base, shadow]
+    ])
+
+    if defined?(Keybinds) && Keybinds.gamepad?
+      sheet = RPG::Cache.load_bitmap("Graphics/UI/", "controller_buttons")
+      button = Keybinds::GAMEPAD_BUTTONS[:special]
+
+      src_rect = Rect.new(
+        button * 32,
+        $PokemonSystem.controller_layout * 32,
+        32,
+        32
+      )
+
+      overlay.blt(x + 54, y - 6, sheet, src_rect)
+    else
+      pbDrawTextPositions(overlay, [
+        [_INTL("[{1}]", Keybinds.button_name(:special)), x + 54, y, 0, base, shadow]
+      ])
+    end
+  end
 
   def drawPageOne
     overlay = @sprites["overlay"].bitmap
@@ -757,9 +785,7 @@ class PokemonSummary_Scene
 		8
 	  )
 	  drawTextEx(overlay, 8, 92, 178, 8, short_text, base, shadow)
-	  pbDrawTextPositions(overlay, [
-		["More: [Special]", 8, 348, 0, base, shadow]
-	  ])
+	  draw_special_more_hint(overlay)
 	end
     # Write the Regional/National Dex number
     dexnum = 0
@@ -1171,9 +1197,7 @@ class PokemonSummary_Scene
 		8
 	  )
 	  drawTextEx(overlay, 8, 92, 178, 8, short_text, base, shadow)
-	  pbDrawTextPositions(overlay, [
-		["More: [Special]", 8, 348, 0, base, shadow]
-	  ])
+	  draw_special_more_hint(overlay)
 	end
     # Draw all text
     pbDrawImagePositions(overlay, imagepos)
@@ -1246,9 +1270,7 @@ class PokemonSummary_Scene
 		8
 	  )
 	  drawTextEx(overlay, 8, 92, 178, 8, short_text, base, shadow)
-	  pbDrawTextPositions(overlay, [
-		["More: [Special]", 8, 348, 0, base, shadow]
-	  ])
+	  draw_special_more_hint(overlay)
 	end
     # Draw all text
     pbDrawTextPositions(overlay, textpos)
@@ -1323,9 +1345,7 @@ class PokemonSummary_Scene
 		8
 	  )
 	  drawTextEx(overlay, 8, 92, 178, 8, short_text, base, shadow)
-	  pbDrawTextPositions(overlay, [
-		["More: [Special]", 8, 348, 0, base, shadow]
-	  ])
+	  draw_special_more_hint(overlay)
     end
     # Draw all text and images
 	pbDrawImagePositions(overlay, imagepos)
@@ -1576,12 +1596,12 @@ end
       else
     	@sprites["movepresel"].z = @sprites["movesel"].z
       end
-      if Input.trigger?(Input::BACK)
+      if Keybinds.trigger?(:back)
         (switching) ? pbPlayCancelSE : pbPlayCloseMenuSE
         break if !switching
     	@sprites["movepresel"].visible = false
         switching = false
-      elsif Input.trigger?(Input::USE)
+      elsif Keybinds.trigger?(:use)
         pbPlayDecisionSE
         if selmove == Pokemon::MAX_MOVES
           break if !switching
@@ -1602,7 +1622,7 @@ end
             switching = true
           end
         end
-      elsif Input.trigger?(Input::UP)
+      elsif Keybinds.trigger?(:up)
         selmove -= 1
         if selmove < Pokemon::MAX_MOVES && selmove >= @pokemon.numMoves
           selmove = @pokemon.numMoves - 1
@@ -1612,7 +1632,7 @@ end
     	@sprites["movesel"].index = selmove
         pbPlayCursorSE
         drawSelectedMove(nil, @pokemon.moves[selmove])
-      elsif Input.trigger?(Input::DOWN)
+      elsif Keybinds.trigger?(:down)
         selmove += 1
         selmove = 0 if selmove < Pokemon::MAX_MOVES && selmove >= @pokemon.numMoves
         selmove = 0 if selmove >= Pokemon::MAX_MOVES
@@ -1728,7 +1748,7 @@ end
       count = 0
       dorefresh = false
       #-------------------------------------------------------------------------
-      if Input.repeat?(Input::UP)
+      if Keybinds.repeat?(:up)
         if index >= row_size
           index -= row_size
           dorefresh = true
@@ -1749,7 +1769,7 @@ end
           end
         end
       #-------------------------------------------------------------------------
-      elsif Input.repeat?(Input::DOWN)
+      elsif Keybinds.repeat?(:down)
         if index < row_size
           count = @sprites["mementos"].getPageSize(filter, page) - 1
           if count < index + row_size
@@ -1776,7 +1796,7 @@ end
           end
         end
       #-------------------------------------------------------------------------
-      elsif Input.repeat?(Input::LEFT)
+      elsif Keybinds.repeat?(:left)
         if index > 0
           index -= 1
           dorefresh = true
@@ -1795,7 +1815,7 @@ end
           end
         end
       #-------------------------------------------------------------------------
-      elsif Input.repeat?(Input::RIGHT)
+      elsif Keybinds.repeat?(:right)
         count = @sprites["mementos"].getPageSize(filter, page) - 1
         next if count == 0 && page == 0
         if index < count
@@ -1813,21 +1833,21 @@ end
           end
         end
       #-------------------------------------------------------------------------
-      elsif Input.repeat?(Input::JUMPUP)
+      elsif Keybinds.repeat?(:jumpup)
         if page > 0
           page -= 1
           index = 0
           dorefresh = true
         end
       #-------------------------------------------------------------------------
-      elsif Input.repeat?(Input::JUMPDOWN)
+      elsif Keybinds.repeat?(:jumpdown)
         if page < maxpage
           page += 1
           index = 0
           dorefresh = true
         end
       #-------------------------------------------------------------------------
-      elsif Input.trigger?(Input::ACTION)
+      elsif Keybinds.trigger?(:action)
         if filter.include?(@pokemon.memento)
           oldpg, oldidx = page, index
           idxList = filter.index(@pokemon.memento)
@@ -1836,7 +1856,7 @@ end
           dorefresh = (page != oldpg || index != oldidx)
         end
       #-------------------------------------------------------------------------
-      elsif Input.trigger?(Input::USE)
+      elsif Keybinds.trigger?(:use)
         if switching
           memento = @sprites["ribbonpresel"].getMemento(filter)
           oldidx = filter.index(memento)
@@ -1857,7 +1877,7 @@ end
           end
         end
       #-------------------------------------------------------------------------
-      elsif Input.trigger?(Input::BACK)
+      elsif Keybinds.trigger?(:back)
         (switching) ? pbPlayCancelSE : pbPlayCloseMenuSE
         break if !switching
         @sprites["ribbonpresel"].activePage = -1
@@ -1926,10 +1946,10 @@ end
       Graphics.update
       Input.update
       pbUpdate
-      if Input.trigger?(Input::BACK)
+      if Keybinds.trigger?(:back)
         pbPlayCloseMenuSE
         break
-      elsif Input.trigger?(Input::USE)
+      elsif Keybinds.trigger?(:use)
         pbPlayDecisionSE
         case index
         when 8   # OK
@@ -1941,13 +1961,13 @@ end
           markings[index] = ((markings[index] || 0) + 1) % mark_variants
           redraw = true
         end
-      elsif Input.trigger?(Input::ACTION)
+      elsif Keybinds.trigger?(:action)
         if index < 8 && markings[index] > 0
           pbPlayDecisionSE
           markings[index] = 0
           redraw = true
         end
-      elsif Input.trigger?(Input::UP)
+      elsif Keybinds.trigger?(:up)
         if index == 9
           index = 8
         elsif index == 8
@@ -1958,7 +1978,7 @@ end
           index -= 5
         end
         pbPlayCursorSE
-      elsif Input.trigger?(Input::DOWN)
+      elsif Keybinds.trigger?(:down)
         if index == 9
           index = 1
         elsif index == 8
@@ -1969,13 +1989,13 @@ end
           index += 5
         end
         pbPlayCursorSE
-      elsif Input.trigger?(Input::LEFT)
+      elsif Keybinds.trigger?(:left)
         if index < 8
           index -= 1
           index += 5 if index % 5 == 2
           pbPlayCursorSE
         end
-      elsif Input.trigger?(Input::RIGHT)
+      elsif Keybinds.trigger?(:right)
         if index < 8
           index += 1
           index -= 5 if index % 5 == 0
@@ -2139,14 +2159,14 @@ end
       Graphics.update
       Input.update
       pbUpdate
-      if Input.trigger?(Input::BACK)
+      if Keybinds.trigger?(:back)
         selmove = Pokemon::MAX_MOVES
         pbPlayCloseMenuSE if new_move
         break
-      elsif Input.trigger?(Input::USE)
+      elsif Keybinds.trigger?(:use)
         pbPlayDecisionSE
         break
-      elsif Input.trigger?(Input::UP)
+      elsif Keybinds.trigger?(:up)
         selmove -= 1
         selmove = maxmove if selmove < 0
         if selmove < Pokemon::MAX_MOVES && selmove >= @pokemon.numMoves
@@ -2155,7 +2175,7 @@ end
     	@sprites["movesel"].index = selmove
         selected_move = (selmove == Pokemon::MAX_MOVES) ? new_move : @pokemon.moves[selmove]
         drawSelectedMove(new_move, selected_move)
-      elsif Input.trigger?(Input::DOWN)
+      elsif Keybinds.trigger?(:down)
         selmove += 1
         selmove = 0 if selmove > maxmove
         if selmove < Pokemon::MAX_MOVES && selmove >= @pokemon.numMoves
@@ -2225,12 +2245,12 @@ def pbshowAbilityDescription
       Input.update
       pbUpdate
 
-      if Input.trigger?(Input::BACK) || Input.trigger?(Input::SPECIAL)
+      if Keybinds.trigger?(:back) || Keybinds.trigger?(:special)
         Input.update
         setSummarySpritePositions
         drawPage(@page)
         return
-      elsif Input.trigger?(Input::UP) && @partyindex > 0
+      elsif Keybinds.trigger?(:up) && @partyindex > 0
         oldindex = @partyindex
         pbGoToPrevious
         if @partyindex != oldindex
@@ -2238,7 +2258,7 @@ def pbshowAbilityDescription
           pbPlayCursorSE
           break
         end
-      elsif Input.trigger?(Input::DOWN) && @partyindex < @party.length - 1
+      elsif Keybinds.trigger?(:down) && @partyindex < @party.length - 1
         oldindex = @partyindex
         pbGoToNext
         if @partyindex != oldindex
@@ -2259,7 +2279,14 @@ end
       Input.update
       pbUpdate
       dorefresh = false
-	if Input.trigger?(Input::ACTION)
+      if defined?(Keybinds)
+        Keybinds.update
+        if @last_input_device != Keybinds.last_device
+          @last_input_device = Keybinds.last_device
+          dorefresh = true
+        end
+      end
+	if Keybinds.trigger?(:action)
 	  pbSEStop
 	  @pokemon.play_cry
 	  @show_back = !@show_back
@@ -2308,10 +2335,10 @@ end
 		end
 		@sprites[key] = glow
 	  end
-      elsif Input.trigger?(Input::BACK)
+      elsif Keybinds.trigger?(:back)
         pbPlayCloseMenuSE
         break
-      elsif Input.trigger?(Input::USE)
+      elsif Keybinds.trigger?(:use)
         dorefresh = pbPageCustomUse(@page_id)
         if !dorefresh
           case @page_id
@@ -2329,13 +2356,13 @@ end
             end
           end
         end
-	  elsif Input.trigger?(Input::SPECIAL)
+	  elsif Keybinds.trigger?(:special)
 	    if @page == 1 || @page == 3 || @page == 4 || @page == 5
           pbPlayDecisionSE
           pbshowAbilityDescription
           dorefresh = true
 		end
-      elsif Input.trigger?(Input::UP) && @partyindex > 0
+      elsif Keybinds.trigger?(:up) && @partyindex > 0
         oldindex = @partyindex
         pbGoToPrevious
         if @partyindex != oldindex
@@ -2343,7 +2370,7 @@ end
       	@ribbonOffset = 0
           dorefresh = true
         end
-      elsif Input.trigger?(Input::DOWN) && @partyindex < @party.length - 1
+      elsif Keybinds.trigger?(:down) && @partyindex < @party.length - 1
         oldindex = @partyindex
         pbGoToNext
         if @partyindex != oldindex
@@ -2351,7 +2378,7 @@ end
       	@ribbonOffset = 0
           dorefresh = true
         end
-	elsif Input.trigger?(Input::LEFT) && !@pokemon.egg?
+	elsif Keybinds.trigger?(:left) && !@pokemon.egg?
 	  oldpage = @page
 	  @page -= 1
 	  @page = 1 if @page < 1
@@ -2361,7 +2388,7 @@ end
 		dorefresh = true
 	  end
 
-	elsif Input.trigger?(Input::RIGHT) && !@pokemon.egg?
+	elsif Keybinds.trigger?(:right) && !@pokemon.egg?
 	  oldpage = @page
 	  @page += 1
 	  @page = 6 if @page > 6

@@ -296,7 +296,7 @@ module VMS
       msgwindow.setText(lines.join("\n"))
       msgwindow.update
       # Cancel
-      if Input.trigger?(Input::BACK)
+      if Keybinds.trigger?(:back)
         pbDisposeMessageWindow(msgwindow)
         $game_temp.vms[:state] = [:idle, nil]
         VMS.mb_clear_local_state

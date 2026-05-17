@@ -347,14 +347,14 @@ def pbTrainerTypeEditor
   pbListScreenBlock(_INTL("Trainer Types"), TrainerTypeLister.new(0, true)) do |button, tr_type|
     if tr_type
       case button
-      when Input::ACTION
+      when :action
         if tr_type.is_a?(Symbol) && pbConfirmMessageSerious("Delete this trainer type?")
           GameData::TrainerType::DATA.delete(tr_type)
           GameData::TrainerType.save
           pbConvertTrainerData
           pbMessage(_INTL("The Trainer type was deleted."))
         end
-      when Input::USE
+      when :use
         if tr_type.is_a?(Symbol)
           t_data = GameData::TrainerType.get(tr_type)
           data = []
@@ -480,14 +480,14 @@ def pbTrainerBattleEditor
   pbListScreenBlock(_INTL("Trainer Battles"), TrainerBattleLister.new(0, true)) do |button, trainer_id|
     if trainer_id
       case button
-      when Input::ACTION
+      when :action
         if trainer_id.is_a?(Array) && pbConfirmMessageSerious("Delete this trainer battle?")
           tr_data = GameData::Trainer::DATA[trainer_id]
           GameData::Trainer::DATA.delete(trainer_id)
           modified = true
           pbMessage(_INTL("The Trainer battle was deleted."))
         end
-      when Input::USE
+      when :use
         if trainer_id.is_a?(Array)   # Edit existing trainer
           tr_data = GameData::Trainer::DATA[trainer_id]
           old_type = tr_data.trainer_type
@@ -824,14 +824,14 @@ def pbItemEditor
   pbListScreenBlock(_INTL("Items"), ItemLister.new(0, true)) do |button, item|
     if item
       case button
-      when Input::ACTION
+      when :action
         if item.is_a?(Symbol) && pbConfirmMessageSerious("Delete this item?")
           GameData::Item::DATA.delete(item)
           GameData::Item.save
           Compiler.write_items
           pbMessage(_INTL("The item was deleted."))
         end
-      when Input::USE
+      when :use
         if item.is_a?(Symbol)
           itm = GameData::Item.get(item)
           data = []
@@ -928,14 +928,14 @@ def pbPokemonEditor
   pbListScreenBlock(_INTL("Pokémon species"), SpeciesLister.new(0, false)) do |button, species|
     if species
       case button
-      when Input::ACTION
+      when :action
         if species.is_a?(Symbol) && pbConfirmMessageSerious("Delete this species?")
           GameData::Species::DATA.delete(species)
           GameData::Species.save
           Compiler.write_pokemon
           pbMessage(_INTL("The species was deleted."))
         end
-      when Input::USE
+      when :use
         if species.is_a?(Symbol)
           spec = GameData::Species.get(species)
           data = []

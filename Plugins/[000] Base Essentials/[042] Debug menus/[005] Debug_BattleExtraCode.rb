@@ -306,19 +306,19 @@ class Battle::DebugSetEffects
   end
 
   def update_input_for_boolean(effect, variable_data)
-    if Input.trigger?(Input::USE)
+    if Keybinds.trigger?(:use)
       pbPlayDecisionSE
       @variables[effect] = !@variables[effect]
       return true
-    elsif Input.trigger?(Input::ACTION) && @variables[effect]
+    elsif Keybinds.trigger?(:action) && @variables[effect]
       pbPlayDecisionSE
       @variables[effect] = false
       return true
-    elsif Input.repeat?(Input::LEFT) && @variables[effect]
+    elsif Keybinds.repeat?(:left) && @variables[effect]
       pbPlayCursorSE
       @variables[effect] = false
       return true
-    elsif Input.repeat?(Input::RIGHT) && !@variables[effect]
+    elsif Keybinds.repeat?(:right) && !@variables[effect]
       pbPlayCursorSE
       @variables[effect] = true
       return true
@@ -330,22 +330,22 @@ class Battle::DebugSetEffects
     true_default = (default == -2) ? -1 : default
     min = variable_data[:min] || true_default
     max = variable_data[:max] || 99
-    if Input.trigger?(Input::USE)
+    if Keybinds.trigger?(:use)
       pbPlayDecisionSE
       new_value = choose_number(@variables[effect], min, max)
       if new_value != @variables[effect]
         @variables[effect] = new_value
         return true
       end
-    elsif Input.trigger?(Input::ACTION) && @variables[effect] != true_default
+    elsif Keybinds.trigger?(:action) && @variables[effect] != true_default
       pbPlayDecisionSE
       @variables[effect] = true_default
       return true
-    elsif Input.repeat?(Input::LEFT) && @variables[effect] > min
+    elsif Keybinds.repeat?(:left) && @variables[effect] > min
       pbPlayCursorSE
       @variables[effect] -= 1
       return true
-    elsif Input.repeat?(Input::RIGHT) && @variables[effect] < max
+    elsif Keybinds.repeat?(:right) && @variables[effect] < max
       pbPlayCursorSE
       @variables[effect] += 1
       return true
@@ -354,18 +354,18 @@ class Battle::DebugSetEffects
   end
 
   def update_input_for_battler_index(effect, variable_data)
-    if Input.trigger?(Input::USE)
+    if Keybinds.trigger?(:use)
       pbPlayDecisionSE
       new_value = choose_battler(@variables[effect])
       if new_value != @variables[effect]
         @variables[effect] = new_value
         return true
       end
-    elsif Input.trigger?(Input::ACTION) && @variables[effect] != -1
+    elsif Keybinds.trigger?(:action) && @variables[effect] != -1
       pbPlayDecisionSE
       @variables[effect] = -1
       return true
-    elsif Input.repeat?(Input::LEFT)
+    elsif Keybinds.repeat?(:left)
       if @variables[effect] > -1
         pbPlayCursorSE
         loop do
@@ -374,7 +374,7 @@ class Battle::DebugSetEffects
         end
         return true
       end
-    elsif Input.repeat?(Input::RIGHT)
+    elsif Keybinds.repeat?(:right)
       if @variables[effect] < @battle.battlers.length - 1
         pbPlayCursorSE
         loop do
@@ -388,14 +388,14 @@ class Battle::DebugSetEffects
   end
 
   def update_input_for_move(effect, variable_data)
-    if Input.trigger?(Input::USE)
+    if Keybinds.trigger?(:use)
       pbPlayDecisionSE
       new_value = pbChooseMoveList(@variables[effect])
       if new_value && new_value != @variables[effect]
         @variables[effect] = new_value
         return true
       end
-    elsif Input.trigger?(Input::ACTION) && @variables[effect]
+    elsif Keybinds.trigger?(:action) && @variables[effect]
       pbPlayDecisionSE
       @variables[effect] = nil
       return true
@@ -404,14 +404,14 @@ class Battle::DebugSetEffects
   end
 
   def update_input_for_item(effect, variable_data)
-    if Input.trigger?(Input::USE)
+    if Keybinds.trigger?(:use)
       pbPlayDecisionSE
       new_value = pbChooseItemList(@variables[effect])
       if new_value && new_value != @variables[effect]
         @variables[effect] = new_value
         return true
       end
-    elsif Input.trigger?(Input::ACTION) && @variables[effect]
+    elsif Keybinds.trigger?(:action) && @variables[effect]
       pbPlayDecisionSE
       @variables[effect] = nil
       return true
@@ -424,7 +424,7 @@ class Battle::DebugSetEffects
       Graphics.update
       Input.update
       @window.update
-      if Input.trigger?(Input::BACK)
+      if Keybinds.trigger?(:back)
         pbPlayCancelSE
         break
       end

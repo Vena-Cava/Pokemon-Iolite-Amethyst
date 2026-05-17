@@ -231,9 +231,9 @@ class Battle::Scene
   alias enhanced_pbFightMenu_Extra pbFightMenu_Extra
   def pbFightMenu_Extra(*args)
     return if pbInSafari?
-    if Input.trigger?(Input::JUMPUP)
+    if Keybinds.trigger?(:jumpup)
       pbToggleBattleInfo
-    elsif Input.trigger?(Input::JUMPDOWN)
+    elsif Keybinds.trigger?(:jumpdown)
       pbToggleMoveInfo(*args)
     end
   end

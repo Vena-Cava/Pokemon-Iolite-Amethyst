@@ -220,9 +220,9 @@ class DiegoWTsStarterSelection
       pbUpdateSpriteHash(@sprites)
       Graphics.update
       Input.update
-      if Input.trigger?(Input::RIGHT) || Input.trigger?(Input::LEFT) ||
-        Input.trigger?(Input::ACTION) || Input.trigger?(Input::USE) ||
-        Input.trigger?(Input::BACK)
+      if Keybinds.trigger?(:right) || Keybinds.trigger?(:left) ||
+        Keybinds.trigger?(:action) || Keybinds.trigger?(:use) ||
+        Keybinds.trigger?(:back)
         @select = 2
         @oldx = @sprites["ball_#{@select}"].x
         @frame = 0 
@@ -248,7 +248,7 @@ class DiegoWTsStarterSelection
       Graphics.update
       Input.update
       pbAnimation
-      if Input.trigger?(Input::RIGHT) && @select < 3
+      if Keybinds.trigger?(:right) && @select < 3
         @oldsel = @select
         @select += 1
         @oldx = @sprites["ball_#{@select}"].x
@@ -268,7 +268,7 @@ class DiegoWTsStarterSelection
         @sprites["selection"].x = @x[@select] - 28
         @sprites["select"].angle = 0
       end
-      if Input.trigger?(Input::LEFT) && @select > 1
+      if Keybinds.trigger?(:left) && @select > 1
         @oldsel = @select
         @select -= 1
         @oldx = @sprites["ball_#{@select}"].x
@@ -535,27 +535,27 @@ class DiegoWTsStarterSelection
       pbUpdateSpriteHash(@sprites)
       Graphics.update
       Input.update
-      if Input.trigger?(Input::DOWN) && @choicesel != 2
+      if Keybinds.trigger?(:down) && @choicesel != 2
         pbPlayCursorSE
         @choicesel += 1
         @sprites["choice1"].src_rect = Rect.new(0,0,140,48)
         @sprites["choice2"].src_rect = Rect.new(140,48,140,48)
         @sprites["choicesel"].y += 46
       end
-      if Input.trigger?(Input::UP) && @choicesel != 1
+      if Keybinds.trigger?(:up) && @choicesel != 1
         pbPlayCursorSE
         @choicesel -= 1
         @sprites["choice1"].src_rect = Rect.new(0,48,140,48)
         @sprites["choice2"].src_rect = Rect.new(140,0,140,48)
         @sprites["choicesel"].y -= 46
       end
-      if Input.trigger?(Input::USE) && @choicesel == 1
+      if Keybinds.trigger?(:use) && @choicesel == 1
         pbChoiceBoxes(1) # Turn off the choice boxes
         @sprites["choicesel"].opacity = 255
         pbPlayDecisionSE
         return 1
       end
-      if Input.trigger?(Input::BACK) || Input.trigger?(Input::USE) && @choicesel == 2
+      if Keybinds.trigger?(:back) || Keybinds.trigger?(:use) && @choicesel == 2
         pbChoiceBoxes(1) # Turn off the choice boxes
         pbPlayCancelSE
         @sprites["choicesel"].opacity = 255

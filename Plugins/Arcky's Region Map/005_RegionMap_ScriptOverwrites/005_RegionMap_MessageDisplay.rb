@@ -58,7 +58,7 @@ class PokemonRegionMap_Scene
       end
       msgwindow&.update
       yield if block_given?
-      if Input.trigger?(Input::BACK)
+      if Keybinds.trigger?(:back)
         if cmdIfCancel > 0
           command = cmdIfCancel - 1
           break
@@ -67,7 +67,7 @@ class PokemonRegionMap_Scene
           break
         end
       end
-      if Input.trigger?(Input::USE)
+      if Keybinds.trigger?(:use)
         command = cmdwindow.index
         break
       elsif @searchActive
@@ -213,7 +213,7 @@ class PokemonPokedexInfo_Scene
       end
       msgwindow&.update
       yield if block_given?
-      if Input.trigger?(Input::BACK)
+      if Keybinds.trigger?(:back)
         if cmdIfCancel > 0
           command = cmdIfCancel - 1
           break
@@ -222,7 +222,7 @@ class PokemonPokedexInfo_Scene
           break
         end
       end
-      if Input.trigger?(Input::USE)
+      if Keybinds.trigger?(:use)
         command = cmdwindow.index
         break
       end

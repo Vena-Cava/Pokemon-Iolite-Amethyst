@@ -82,7 +82,7 @@ class AdventureMenuScene
 	  #-------------------------------------------------------------------------
       # UP/DOWN KEYS
       #-------------------------------------------------------------------------
-      if Input.repeat?(Input::UP)
+      if Keybinds.repeat?(:up)
 		next if pageNum == 0 && maxIndex < rowSize
         idxItem -= rowSize
 		if idxItem < 0
@@ -93,7 +93,7 @@ class AdventureMenuScene
 		  idxItem += SPOILS_LIST_SIZE
 		end
         needRefresh = true
-      elsif Input.repeat?(Input::DOWN)
+      elsif Keybinds.repeat?(:down)
 	    next if pageNum == maxPage && maxIndex < rowSize
         idxItem += rowSize
 		if idxItem > maxIndex
@@ -107,7 +107,7 @@ class AdventureMenuScene
 	  #-------------------------------------------------------------------------
       # LEFT/RIGHT KEYS
       #-------------------------------------------------------------------------
-	  elsif Input.repeat?(Input::LEFT)
+	  elsif Keybinds.repeat?(:left)
 	    next if pageNum == 0 && idxItem == 0
 	    idxItem -= 1
 		if idxItem < 0
@@ -118,7 +118,7 @@ class AdventureMenuScene
 		  idxItem = SPOILS_LIST_SIZE - 1
 		end
 		needRefresh = true
-	  elsif Input.repeat?(Input::RIGHT)
+	  elsif Keybinds.repeat?(:right)
 	    next if pageNum == maxPage && idxItem == maxIndex
 	    idxItem += 1
 		if idxItem > maxIndex
@@ -132,12 +132,12 @@ class AdventureMenuScene
 	  #-------------------------------------------------------------------------
       # JUMPUP/JUMPDOWN KEYS
       #-------------------------------------------------------------------------
-	  elsif Input.trigger?(Input::JUMPUP)
+	  elsif Keybinds.trigger?(:jumpup)
 	    next if pageNum == 0
 	    idxItem = 0
 		pageNum -= 1
         needFullRefresh = true
-	  elsif Input.trigger?(Input::JUMPDOWN)
+	  elsif Keybinds.trigger?(:jumpdown)
 	    next if pageNum == maxPage
 	    idxItem = 0
 		pageNum += 1
@@ -145,7 +145,7 @@ class AdventureMenuScene
 	  #-------------------------------------------------------------------------
       # BACK KEY
       #-------------------------------------------------------------------------
-      elsif Input.trigger?(Input::USE) || Input.trigger?(Input::BACK)
+      elsif Keybinds.trigger?(:use) || Keybinds.trigger?(:back)
 	    if pokemon.nil?
 	      case pbRaidAdventureState.outcome
 		  when 1 then pbMessage(_INTL("All treasure acquired during your Adventure was added to your bag."))

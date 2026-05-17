@@ -128,13 +128,13 @@ class PokemonPokedexInfo_Scene
         pbUpdate
         #-----------------------------------------------------------------------
         # Scrolls through the three different types of movelists.
-        if Input.trigger?(Input::LEFT)
+        if Keybinds.trigger?(:left)
           @moveListIndex -= 1
           @moveListIndex = maxPage if @moveListIndex < 0
           pbGenerateMoveList
           pbPlayCursorSE
           pbDrawMoveList
-        elsif Input.trigger?(Input::RIGHT)
+        elsif Keybinds.trigger?(:right)
           @moveListIndex += 1
           @moveListIndex = 0 if @moveListIndex > maxPage
           pbGenerateMoveList
@@ -142,7 +142,7 @@ class PokemonPokedexInfo_Scene
           pbDrawMoveList
         #-----------------------------------------------------------------------
         # Views all owned species compatible with a highlighted move.
-        elsif Input.trigger?(Input::USE)
+        elsif Keybinds.trigger?(:use)
           if @moveListIndex <= 2
             pbDeactivateWindows(@sprites)
             pbChooseSpeciesDataList(:move)
@@ -153,7 +153,7 @@ class PokemonPokedexInfo_Scene
           end
         #-----------------------------------------------------------------------
         # Views all species in a similar Egg Group compatible with a highlighted move.
-        elsif Input.trigger?(Input::ACTION)
+        elsif Keybinds.trigger?(:action)
           if @moveListIndex <= 2
             pbDeactivateWindows(@sprites)
             pbChooseSpeciesDataList(:egg)
@@ -164,7 +164,7 @@ class PokemonPokedexInfo_Scene
           end
         #-----------------------------------------------------------------------
         # Closes the movelist menu.
-        elsif Input.trigger?(Input::BACK)
+        elsif Keybinds.trigger?(:back)
           @moveListIndex = 0
           @viewingMoves = false
           @sprites["movecmds"].index = 0

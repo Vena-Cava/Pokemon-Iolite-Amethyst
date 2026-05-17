@@ -229,7 +229,7 @@ class Battle::Scene
   def pbShowZMove(idxBattler, move_id)
     zmoveAnim = Animation::BattlerZMove.new(@sprites, @viewport, idxBattler, @battle, move_id)
     loop do
-      if Input.press?(Input::ACTION)
+      if Keybinds.press?(:action)
         pbPlayCancelSE
         break 
       end

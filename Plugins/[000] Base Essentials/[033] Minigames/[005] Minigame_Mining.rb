@@ -563,35 +563,35 @@ class MiningGameScene
         break
       end
       # Input
-      if Input.trigger?(Input::UP) || Input.repeat?(Input::UP)
+      if Keybinds.press?(:up) || Keybinds.repeat?(:up)
         if @sprites["cursor"].position >= BOARD_WIDTH
           pbSEPlay("Mining cursor")
           @sprites["cursor"].position -= BOARD_WIDTH
         end
-      elsif Input.trigger?(Input::DOWN) || Input.repeat?(Input::DOWN)
+      elsif Keybinds.press?(:down) || Keybinds.repeat?(:down)
         if @sprites["cursor"].position < (BOARD_WIDTH * (BOARD_HEIGHT - 1))
           pbSEPlay("Mining cursor")
           @sprites["cursor"].position += BOARD_WIDTH
         end
-      elsif Input.trigger?(Input::LEFT) || Input.repeat?(Input::LEFT)
+      elsif Keybinds.press?(:left) || Keybinds.repeat?(:left)
         if @sprites["cursor"].position % BOARD_WIDTH > 0
           pbSEPlay("Mining cursor")
           @sprites["cursor"].position -= 1
         end
-      elsif Input.trigger?(Input::RIGHT) || Input.repeat?(Input::RIGHT)
+      elsif Keybinds.press?(:right) || Keybinds.repeat?(:right)
         if @sprites["cursor"].position % BOARD_WIDTH < (BOARD_WIDTH - 1)
           pbSEPlay("Mining cursor")
           @sprites["cursor"].position += 1
         end
-      elsif Input.trigger?(Input::ACTION)   # Change tool mode
+      elsif Keybinds.press?(:action)   # Change tool mode
         pbSEPlay("Mining tool change")
         newmode = (@sprites["cursor"].mode + 1) % 2
         @sprites["cursor"].mode = newmode
         @sprites["tool"].src_rect.set(newmode * 68, 0, 68, 100)
         @sprites["tool"].y = 254 - (144 * newmode)
-      elsif Input.trigger?(Input::USE)   # Hit
+      elsif Keybinds.press?(:use)   # Hit
         pbHit
-      elsif Input.trigger?(Input::BACK)   # Quit
+      elsif Keybinds.press?(:back)   # Quit
         break if pbConfirmMessage(_INTL("Are you sure you want to give up?"))
       end
     end

@@ -245,7 +245,7 @@ class PokemonSummary_Scene
       Input.update
       pbUpdate
       dorefresh = false
-      if Input.trigger?(Input::ACTION)
+      if Keybinds.trigger?(:action)
         pbSEStop
         @pokemon.play_cry
         @show_back = !@show_back
@@ -254,10 +254,10 @@ class PokemonSummary_Scene
         else
           @sprites["pokemon"].setPokemonBitmap(@pokemon, @show_back)
         end
-      elsif Input.trigger?(Input::BACK)
+      elsif Keybinds.trigger?(:back)
         pbPlayCloseMenuSE
         break
-      elsif Input.trigger?(Input::USE)
+      elsif Keybinds.trigger?(:use)
         dorefresh = pbPageCustomUse(@page_id)
         if !dorefresh
           case @page_id
@@ -275,7 +275,7 @@ class PokemonSummary_Scene
             end
           end
         end
-      elsif Input.repeat?(Input::UP)
+      elsif Keybinds.repeat?(:up)
         oldindex = @partyindex
         pbGoToPrevious
         if @partyindex != oldindex
@@ -283,7 +283,7 @@ class PokemonSummary_Scene
           @ribbonOffset = 0
           dorefresh = true
         end
-      elsif Input.repeat?(Input::DOWN)
+      elsif Keybinds.repeat?(:down)
         oldindex = @partyindex
         pbGoToNext
         if @partyindex != oldindex
@@ -291,7 +291,7 @@ class PokemonSummary_Scene
           @ribbonOffset = 0
           dorefresh = true
         end
-      elsif Input.trigger?(Input::JUMPUP) && !@party.is_a?(PokemonBox)
+      elsif Keybinds.trigger?(:jumpup) && !@party.is_a?(PokemonBox)
         oldindex = @partyindex
         @partyindex = 0
         if @partyindex != oldindex
@@ -299,7 +299,7 @@ class PokemonSummary_Scene
           @ribbonOffset = 0
           dorefresh = true
         end
-      elsif Input.trigger?(Input::JUMPDOWN) && !@party.is_a?(PokemonBox)
+      elsif Keybinds.trigger?(:jumpdown) && !@party.is_a?(PokemonBox)
         oldindex = @partyindex
         @partyindex = @party.length - 1
         if @partyindex != oldindex
@@ -307,7 +307,7 @@ class PokemonSummary_Scene
           @ribbonOffset = 0
           dorefresh = true
         end
-      elsif Input.repeat?(Input::LEFT)
+      elsif Keybinds.repeat?(:left)
         oldpage = @page
         numpages = @page_list.length
         @page -= 1
@@ -318,7 +318,7 @@ class PokemonSummary_Scene
           @ribbonOffset = 0
           dorefresh = true
         end
-      elsif Input.repeat?(Input::RIGHT)
+      elsif Keybinds.repeat?(:right)
         oldpage = @page
         numpages = @page_list.length
         @page += 1

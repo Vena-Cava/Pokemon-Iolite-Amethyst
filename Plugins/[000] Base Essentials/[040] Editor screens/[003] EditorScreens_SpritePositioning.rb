@@ -202,16 +202,16 @@ class SpritePositioner
         pbChangeSpecies(@species, @form)
         refresh
       end
-      if Input.trigger?(Input::ACTION)   # Cycle to next option
+      if Keybinds.press?(:action)   # Cycle to next option
         pbPlayDecisionSE
         @metricsChanged = true if metrics_data.shadow_size != oldval
         ret = true
         break
-      elsif Input.trigger?(Input::BACK)
+      elsif Keybinds.press?(:back)
         metrics_data.shadow_size = oldval
         pbPlayCancelSE
         break
-      elsif Input.trigger?(Input::USE)
+      elsif Keybinds.press?(:use)
         pbPlayDecisionSE
         @metricsChanged = true if metrics_data.shadow_size != oldval
         break
@@ -257,16 +257,16 @@ class SpritePositioner
       when 1 then @sprites["info"].setTextToFit("Enemy Position = #{xpos},#{ypos}")
       when 3 then @sprites["info"].setTextToFit("Shadow Position = #{xpos}")
       end
-      if (Input.repeat?(Input::UP) || Input.repeat?(Input::DOWN)) && param != 3
-        ypos += (Input.repeat?(Input::DOWN)) ? 1 : -1
+      if (Keybinds.repeat?(:up) || Keybinds.repeat?(:down)) && param != 3
+        ypos += (Keybinds.repeat?(:down)) ? 1 : -1
         case param
         when 0 then metrics_data.back_sprite[1]  = ypos
         when 1 then metrics_data.front_sprite[1] = ypos
         end
         refresh
       end
-      if Input.repeat?(Input::LEFT) || Input.repeat?(Input::RIGHT)
-        xpos += (Input.repeat?(Input::RIGHT)) ? 1 : -1
+      if Keybinds.repeat?(:left) || Keybinds.repeat?(:right)
+        xpos += (Keybinds.repeat?(:right)) ? 1 : -1
         case param
         when 0 then metrics_data.back_sprite[0]  = xpos
         when 1 then metrics_data.front_sprite[0] = xpos
@@ -274,12 +274,12 @@ class SpritePositioner
         end
         refresh
       end
-      if Input.repeat?(Input::ACTION) && param != 3   # Cycle to next option
+      if Keybinds.repeat?(:action) && param != 3   # Cycle to next option
         @metricsChanged = true if xpos != oldxpos || ypos != oldypos
         ret = true
         pbPlayDecisionSE
         break
-      elsif Input.repeat?(Input::BACK)
+      elsif Keybinds.repeat?(:back)
         case param
         when 0
           metrics_data.back_sprite[0] = oldxpos
@@ -293,7 +293,7 @@ class SpritePositioner
         pbPlayCancelSE
         refresh
         break
-      elsif Input.repeat?(Input::USE)
+      elsif Keybinds.repeat?(:use)
         @metricsChanged = true if xpos != oldxpos || (param != 3 && ypos != oldypos)
         pbPlayDecisionSE
         break
@@ -322,11 +322,11 @@ class SpritePositioner
       Input.update
       cw.update
       self.update
-      if Input.trigger?(Input::USE)
+      if Keybinds.press?(:use)
         pbPlayDecisionSE
         ret = cw.index
         break
-      elsif Input.trigger?(Input::BACK)
+      elsif Keybinds.press?(:back)
         pbPlayCancelSE
         break
       end
@@ -367,11 +367,11 @@ class SpritePositioner
         refresh
       end
       self.update
-      if Input.trigger?(Input::BACK)
+      if Keybinds.press?(:back)
         pbChangeSpecies(nil, nil)
         refresh
         break
-      elsif Input.trigger?(Input::USE)
+      elsif Keybinds.press?(:use)
         pbChangeSpecies(allspecies[cw.index][1], allspecies[cw.index][2])
         ret = true
         break

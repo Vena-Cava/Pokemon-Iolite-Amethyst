@@ -100,7 +100,7 @@ class Battle::Scene
       item = items[index][0]
       @sprites["leftarrow"].visible = index > 0
       @sprites["rightarrow"].visible = index < maxIdx
-      if Input.trigger?(Input::USE)
+      if Keybinds.trigger?(:use)
         if !item
           pbPlayCloseMenuSE
           break
@@ -112,28 +112,28 @@ class Battle::Scene
           break
         end
         pbShowWindow(COMMAND_BOX)
-      elsif Input.trigger?(Input::ACTION)
+      elsif Keybinds.trigger?(:action)
         showDesc = !showDesc
         pbPlayDecisionSE
         dorefresh = true
-      elsif Input.trigger?(Input::BACK)
+      elsif Keybinds.trigger?(:back)
         pbPlayCloseMenuSE
         break
-      elsif Input.repeat?(Input::LEFT)
+      elsif Keybinds.repeat?(:left)
         index -= 1
         index = maxIdx if index < 0
         pbPlayCursorSE
         dorefresh = true
-      elsif Input.repeat?(Input::RIGHT) 
+      elsif Keybinds.repeat?(:right) 
         index += 1
         index = 0 if index > maxIdx
         pbPlayCursorSE
         dorefresh = true
-      elsif Input.trigger?(Input::JUMPUP) && index > 0
+      elsif Keybinds.trigger?(:jumpup) && index > 0
         index = 0
         pbPlayCursorSE
         dorefresh = true
-      elsif Input.trigger?(Input::JUMPDOWN) && index < maxIdx
+      elsif Keybinds.trigger?(:jumpdown) && index < maxIdx
         index = maxIdx
         pbPlayCursorSE
         dorefresh = true

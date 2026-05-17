@@ -237,7 +237,7 @@ class TriadScene
       Graphics.update
       Input.update
       pbUpdate
-      if Input.trigger?(Input::USE)
+      if Keybinds.press?(:use)
         if @sprites["helpwindow"].busy?
           pbPlayDecisionSE if @sprites["helpwindow"].pausing?
           @sprites["helpwindow"].resume
@@ -287,7 +287,7 @@ class TriadScene
         end
         index = command.index
       end
-      if Input.trigger?(Input::BACK)
+      if Keybinds.press?(:back)
         if chosenCards.length > 0
           item = chosenCards.pop
           @battle.pbAdd(cardStorage, item)
@@ -300,7 +300,7 @@ class TriadScene
         else
           pbPlayBuzzerSE
         end
-      elsif Input.trigger?(Input::USE)
+      elsif Keybinds.press?(:use)
         break if chosenCards.length == @battle.maxCards
         item = cardStorage[command.index]
         if !item || @battle.quantity(cardStorage, item[0]) == 0
@@ -322,7 +322,7 @@ class TriadScene
           index = -1
         end
       end
-      if Input.trigger?(Input::USE) || Input.trigger?(Input::BACK)
+      if Keybinds.press?(:use) || Keybinds.press?(:back)
         @battle.maxCards.times do |i|
           @sprites["player#{i}"].visible = (i < chosenCards.length)
         end
@@ -388,15 +388,15 @@ class TriadScene
       Graphics.update
       Input.update
       pbUpdate
-      if Input.repeat?(Input::DOWN)
+      if Keybinds.repeat?(:down)
         pbPlayCursorSE
         choice += 1
         choice = 0 if choice >= numCards
-      elsif Input.repeat?(Input::UP)
+      elsif Keybinds.repeat?(:up)
         pbPlayCursorSE
         choice -= 1
         choice = numCards - 1 if choice < 0
-      elsif Input.trigger?(Input::BACK)
+      elsif Keybinds.press?(:back)
         pbPlayCancelSE
         choice = -1
       end
@@ -427,18 +427,18 @@ class TriadScene
       Graphics.update
       Input.update
       pbUpdate
-      if Input.repeat?(Input::DOWN)
+      if Keybinds.repeat?(:down)
         pbPlayCursorSE
         choice += 1
         choice = 0 if choice >= numCards
-      elsif Input.repeat?(Input::UP)
+      elsif Keybinds.repeat?(:up)
         pbPlayCursorSE
         choice -= 1
         choice = numCards - 1 if choice < 0
-      elsif Input.trigger?(Input::USE)
+      elsif Keybinds.press?(:use)
         pbPlayDecisionSE
         break
-      elsif Input.trigger?(Input::ACTION) && @battle.openHand
+      elsif Keybinds.press?(:action) && @battle.openHand
         pbPlayDecisionSE
         pbViewOpponentCards(numCards)
         @sprites["helpwindow"].text = _INTL("Choose a card, or check opponent with Z.")
@@ -474,29 +474,29 @@ class TriadScene
       Graphics.update
       Input.update
       pbUpdate
-      if Input.repeat?(Input::DOWN)
+      if Keybinds.repeat?(:down)
         pbPlayCursorSE
         boardY += 1
         boardY = 0 if boardY >= @battle.height
         doRefresh = true
-      elsif Input.repeat?(Input::UP)
+      elsif Keybinds.repeat?(:up)
         pbPlayCursorSE
         boardY -= 1
         boardY = @battle.height - 1 if boardY < 0
         doRefresh = true
-      elsif Input.repeat?(Input::LEFT)
+      elsif Keybinds.repeat?(:left)
         pbPlayCursorSE
         boardX -= 1
         boardX = @battle.width - 1 if boardX < 0
         doRefresh = true
-      elsif Input.repeat?(Input::RIGHT)
+      elsif Keybinds.repeat?(:right)
         pbPlayCursorSE
         boardX += 1
         boardX = 0 if boardX >= @battle.width
         doRefresh = true
-      elsif Input.trigger?(Input::BACK)
+      elsif Keybinds.press?(:back)
         return nil
-      elsif Input.trigger?(Input::USE)
+      elsif Keybinds.press?(:use)
         if @battle.isOccupied?(boardX, boardY)
           pbPlayBuzzerSE
         else
@@ -1090,9 +1090,9 @@ def pbBuyTriads
       preview.bitmap = TriadCard.new(commands[cmdwindow.index][3]).createBitmap(1)
       olditem = commands[cmdwindow.index][3]
     end
-    if Input.trigger?(Input::BACK)
+    if Keybinds.press?(:back)
       break
-    elsif Input.trigger?(Input::USE)
+    elsif Keybinds.press?(:use)
       price    = commands[cmdwindow.index][0]
       item     = commands[cmdwindow.index][3]
       itemname = commands[cmdwindow.index][1]
@@ -1184,11 +1184,11 @@ def pbSellTriads
         preview.bitmap = TriadCard.new(item).createBitmap(1) if item
         olditem = item
       end
-      if Input.trigger?(Input::BACK)
+      if Keybinds.press?(:back)
         done = true
         break
       end
-      if Input.trigger?(Input::USE)
+      if Keybinds.press?(:use)
         if cmdwindow.index >= $PokemonGlobal.triads.length
           done = true
           break
@@ -1277,8 +1277,8 @@ def pbTriadList
         end
         lastIndex = cmdwindow.index
       end
-      if Input.trigger?(Input::BACK) ||
-         (Input.trigger?(Input::USE) && cmdwindow.index >= $PokemonGlobal.triads.length)
+      if Keybinds.press?(:back) ||
+         (Keybinds.press?(:use) && cmdwindow.index >= $PokemonGlobal.triads.length)
         done = true
         break
       end

@@ -87,7 +87,7 @@ class ItemCraft_Scene
       Graphics.update
       Input.update
       pbUpdate
-      if Input.trigger?(Input::RIGHT)
+      if Keybinds.trigger?(:right)
         if index < @stock.length-1
           pbPlayCursorSE
           hideIcons(index)
@@ -97,7 +97,7 @@ class ItemCraft_Scene
           pbRedrawItem(index,volume)
         end
       end
-      if Input.trigger?(Input::LEFT)
+      if Keybinds.trigger?(:left)
         if index > 0
           pbPlayCursorSE
           hideIcons(index)
@@ -107,7 +107,7 @@ class ItemCraft_Scene
           pbRedrawItem(index,volume)
         end
       end
-      if Input.trigger?(Input::UP)
+      if Keybinds.trigger?(:up)
         if volume < 99
           pbPlayCursorSE
           volume += 1
@@ -118,7 +118,7 @@ class ItemCraft_Scene
           refreshNumbers(index,volume)
         end
       end
-      if Input.trigger?(Input::DOWN)
+      if Keybinds.trigger?(:down)
         if volume > 1
           pbPlayCursorSE
           volume -= 1
@@ -129,7 +129,7 @@ class ItemCraft_Scene
           refreshNumbers(index,volume)
         end
       end
-      if Input.trigger?(Input::USE)
+      if Keybinds.trigger?(:use)
         recipe_data = GameData::Recipe.get(@stock[index])
         item = GameData::Item.get(recipe_data.item)
         itemname = (volume>1) ? item.name_plural : item.name
@@ -163,7 +163,7 @@ class ItemCraft_Scene
           end
         end
       end
-      if Input.trigger?(Input::BACK)
+      if Keybinds.trigger?(:back)
         pbPlayCloseMenuSE
         break
       end

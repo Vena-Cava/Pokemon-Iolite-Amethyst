@@ -248,7 +248,7 @@ class Game_FollowerFactory
       leader = event
     end
     # Check event triggers
-    if Input.trigger?(Input::USE) && !$game_temp.in_menu && !$game_temp.in_battle &&
+    if Keybinds.trigger?(:use) && !$game_temp.in_menu && !$game_temp.in_battle &&
        !$game_player.move_route_forcing && !$game_temp.message_window_showing &&
        !pbMapInterpreterRunning?
       # Get position of tile facing the player

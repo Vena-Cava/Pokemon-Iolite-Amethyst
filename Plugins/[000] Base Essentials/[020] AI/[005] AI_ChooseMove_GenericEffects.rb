@@ -757,11 +757,14 @@ class Battle::AI
         :Grassy   => :GRASSPELT
       }[terrain]
       good_moves = {
-        :Electric => ["DoublePowerInElectricTerrain"],
+        :Electric => ["DoublePowerInElectricTerrain",
+                      "HigherPriorityInElectricTerrain"],
         :Grassy   => ["HealTargetDependingOnGrassyTerrain",
                       "HigherPriorityInGrassyTerrain"],
-        :Misty    => ["UserFaintsPowersUpInMistyTerrainExplosive"],
-        :Psychic  => ["HitsAllFoesAndPowersUpInPsychicTerrain"]
+        :Misty    => ["UserFaintsPowersUpInMistyTerrainExplosive",
+                      "HigherPriorityInMistyTerrain"],
+        :Psychic  => ["HitsAllFoesAndPowersUpInPsychicTerrain",
+                      "HigherPriorityInPsychicTerrain"]
       }[terrain]
       bad_moves = {
         :Grassy => ["DoublePowerIfTargetUnderground",

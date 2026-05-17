@@ -212,7 +212,7 @@ class VoltorbFlip
   end
 
   def getInput
-    if Input.trigger?(Input::UP)
+    if Keybinds.press?(:up)
       pbPlayCursorSE
       if @index[1] > 0
         @index[1] -= 1
@@ -221,7 +221,7 @@ class VoltorbFlip
         @index[1] = 4
         @sprites["cursor"].y = 256
       end
-    elsif Input.trigger?(Input::DOWN)
+    elsif Keybinds.press?(:down)
       pbPlayCursorSE
       if @index[1] < 4
         @index[1] += 1
@@ -230,7 +230,7 @@ class VoltorbFlip
         @index[1] = 0
         @sprites["cursor"].y = 0
       end
-    elsif Input.trigger?(Input::LEFT)
+    elsif Keybinds.press?(:left)
       pbPlayCursorSE
       if @index[0] > 0
         @index[0] -= 1
@@ -239,7 +239,7 @@ class VoltorbFlip
         @index[0] = 4
         @sprites["cursor"].x = 256
       end
-    elsif Input.trigger?(Input::RIGHT)
+    elsif Keybinds.press?(:right)
       pbPlayCursorSE
       if @index[0] < 4
         @index[0] += 1
@@ -248,7 +248,7 @@ class VoltorbFlip
         @index[0] = 0
         @sprites["cursor"].x = 0
       end
-    elsif Input.trigger?(Input::USE)
+    elsif Keybinds.press?(:use)
       if @cursor[0][3] == 64   # If in mark mode
         @squares.length.times do |i|
           if (@index[0] * 64) + 128 == @squares[i][0] && @index[1] * 64 == @squares[i][1] && @squares[i][3] == false
@@ -392,7 +392,7 @@ class VoltorbFlip
         pbDisposeSpriteHash(@sprites)
         pbNewGame
       end
-    elsif Input.trigger?(Input::ACTION)
+    elsif Keybinds.press?(:action)
       pbPlayDecisionSE
       @sprites["cursor"].bitmap.clear
       if @cursor[0][3] == 0 # If in normal mode
@@ -402,7 +402,7 @@ class VoltorbFlip
         @cursor[0] = [@directory + "cursor", 128, 0, 0, 0, 64, 64]
         @sprites["memo"].visible = false
       end
-    elsif Input.trigger?(Input::BACK)
+    elsif Keybinds.press?(:back)
       @sprites["curtain"].opacity = 100
       if @points == 0
         if pbConfirmMessage("You haven't found any Coins! Are you sure you want to quit?")
@@ -499,7 +499,7 @@ class VoltorbFlip
       Graphics.update
       Input.update
       update
-      if Input.trigger?(Input::USE) || Input.trigger?(Input::BACK)
+      if Keybinds.press?(:use) || Keybinds.press?(:back)
         break
       end
     end

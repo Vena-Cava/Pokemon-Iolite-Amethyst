@@ -153,10 +153,10 @@ class AdventureMenuScene
 	    Input.update
         Graphics.update
         pbUpdate
-	    if Input.trigger?(Input::ACTION)
+	    if Keybinds.trigger?(:action)
 	      pbPlayDecisionSE
           pbSummary($player.party[0...PARTY_SIZE])
-	    elsif Input.trigger?(Input::BACK)
+	    elsif Keybinds.trigger?(:back)
 	      pbPlayCancelSE
 		  break
 	    end

@@ -536,17 +536,17 @@ class TilePuzzleScene
         loop do
           Graphics.update
           Input.update
-          break if Input.trigger?(Input::USE) || Input.trigger?(Input::BACK)
+          break if Keybinds.press?(:use) || Keybinds.press?(:back)
         end
         return true
       end
       # Input
-      @sprites["cursor"].selected = (Input.press?(Input::USE) && @game >= 3 && @game <= 6)
+      @sprites["cursor"].selected = (Keybinds.press?(:use) && @game >= 3 && @game <= 6)
       dir = 0
-      dir = 2 if Input.trigger?(Input::DOWN) || Input.repeat?(Input::DOWN)
-      dir = 4 if Input.trigger?(Input::LEFT) || Input.repeat?(Input::LEFT)
-      dir = 6 if Input.trigger?(Input::RIGHT) || Input.repeat?(Input::RIGHT)
-      dir = 8 if Input.trigger?(Input::UP) || Input.repeat?(Input::UP)
+      dir = 2 if Keybinds.press?(:down) || Keybinds.repeat?(:down)
+      dir = 4 if Keybinds.press?(:left) || Keybinds.repeat?(:left)
+      dir = 6 if Keybinds.press?(:right) || Keybinds.repeat?(:right)
+      dir = 8 if Keybinds.press?(:up) || Keybinds.repeat?(:up)
       if dir > 0
         if @game == 3 || (@game != 3 && @sprites["cursor"].selected)
           if pbCanMoveInDir?(@sprites["cursor"].position, dir, true)
@@ -559,13 +559,13 @@ class TilePuzzleScene
             @sprites["cursor"].position = pbMoveCursor(@sprites["cursor"].position, dir)
           end
         end
-      elsif (@game == 1 || @game == 2) && Input.trigger?(Input::USE)
+      elsif (@game == 1 || @game == 2) && Keybinds.press?(:use)
         pbGrabTile(@sprites["cursor"].position)
-      elsif (@game == 2 && Input.trigger?(Input::ACTION)) ||
-            (@game == 5 && Input.trigger?(Input::ACTION)) ||
-            (@game == 7 && Input.trigger?(Input::USE))
+      elsif (@game == 2 && Keybinds.press?(:action)) ||
+            (@game == 5 && Keybinds.press?(:action)) ||
+            (@game == 7 && Keybinds.press?(:use))
         pbRotateTile(@sprites["cursor"].position)
-      elsif Input.trigger?(Input::BACK)
+      elsif Keybinds.press?(:back)
         return false
       end
     end

@@ -192,19 +192,19 @@ class PokemonTilesetScene
     loop do
       Graphics.update
       Input.update
-      if Input.repeat?(Input::UP)
+      if Keybinds.repeat?(:up)
         update_cursor_position(0, -1)
-      elsif Input.repeat?(Input::DOWN)
+      elsif Keybinds.repeat?(:down)
         update_cursor_position(0, 1)
-      elsif Input.repeat?(Input::LEFT)
+      elsif Keybinds.repeat?(:left)
         update_cursor_position(-1, 0)
-      elsif Input.repeat?(Input::RIGHT)
+      elsif Keybinds.repeat?(:right)
         update_cursor_position(1, 0)
-      elsif Input.repeat?(Input::JUMPUP)
+      elsif Keybinds.repeat?(:jumpup)
         update_cursor_position(0, -@visible_height / 2)
-      elsif Input.repeat?(Input::JUMPDOWN)
+      elsif Keybinds.repeat?(:jumpdown)
         update_cursor_position(0, @visible_height / 2)
-      elsif Input.trigger?(Input::ACTION)
+      elsif Keybinds.press?(:action)
         commands = [
           _INTL("Go to bottom"),
           _INTL("Go to top"),
@@ -219,14 +219,14 @@ class PokemonTilesetScene
         when 2
           choose_tileset
         end
-      elsif Input.trigger?(Input::BACK)
+      elsif Keybinds.press?(:back)
         if pbConfirmMessage(_INTL("Save changes?"))
           save_data(@tilesets_data, "Data/Tilesets.rxdata")
           $data_tilesets = @tilesets_data
           pbMessage(_INTL("To ensure that the changes remain, close and reopen RPG Maker XP."))
         end
         break if pbConfirmMessage(_INTL("Exit from the editor?"))
-      elsif Input.trigger?(Input::USE)
+      elsif Keybinds.press?(:use)
         selected = tile_ID_from_coordinates(@x, @y)
         old_tag = @tileset.terrain_tags[selected]
         cmds = []

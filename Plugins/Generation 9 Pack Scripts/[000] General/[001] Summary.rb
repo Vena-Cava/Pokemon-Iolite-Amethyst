@@ -16,13 +16,13 @@ class PokemonSummary_Scene
       Input.update
       pbUpdate
       dorefresh = false
-      if Input.trigger?(Input::ACTION)
+      if Keybinds.trigger?(:action)
         pbSEStop
         @pokemon.play_cry
-      elsif Input.trigger?(Input::BACK)
+      elsif Keybinds.trigger?(:back)
         pbPlayCloseMenuSE
         break
-      elsif Input.trigger?(Input::USE)
+      elsif Keybinds.trigger?(:use)
         if @page == 5
           pbPlayDecisionSE
           pbRibbonSelection
@@ -31,7 +31,7 @@ class PokemonSummary_Scene
           pbPlayDecisionSE
           dorefresh = pbOptions
         end
-      elsif Input.trigger?(Input::UP) && @partyindex > 0
+      elsif Keybinds.trigger?(:up) && @partyindex > 0
         oldindex = @partyindex
         pbGoToPrevious
         if @partyindex != oldindex
@@ -39,7 +39,7 @@ class PokemonSummary_Scene
           @ribbonOffset = 0
           dorefresh = true
         end
-      elsif Input.trigger?(Input::DOWN) && @partyindex < @party.length - 1
+      elsif Keybinds.trigger?(:down) && @partyindex < @party.length - 1
         oldindex = @partyindex
         pbGoToNext
         if @partyindex != oldindex
@@ -47,7 +47,7 @@ class PokemonSummary_Scene
           @ribbonOffset = 0
           dorefresh = true
         end
-      elsif Input.trigger?(Input::LEFT) && !@pokemon.egg?
+      elsif Keybinds.trigger?(:left) && !@pokemon.egg?
         oldpage = @page
         @page -= 1
         @page = 1 if @page < 1
@@ -57,7 +57,7 @@ class PokemonSummary_Scene
           @ribbonOffset = 0
           dorefresh = true
         end
-      elsif Input.trigger?(Input::RIGHT) && !@pokemon.egg?
+      elsif Keybinds.trigger?(:right) && !@pokemon.egg?
         oldpage = @page
         @page += 1
         @page = 1 if @page < 1

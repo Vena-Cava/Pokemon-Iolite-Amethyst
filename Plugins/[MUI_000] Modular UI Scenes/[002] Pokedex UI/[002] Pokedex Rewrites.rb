@@ -156,13 +156,13 @@ class PokemonPokedexInfo_Scene
       Input.update
       pbUpdate
       dorefresh = false
-      if Input.trigger?(Input::ACTION)
+      if Keybinds.trigger?(:action)
         pbSEStop
         Pokemon.play_cry(@species, @form) if @page == 1
-      elsif Input.trigger?(Input::BACK)
+      elsif Keybinds.trigger?(:back)
         pbPlayCloseMenuSE
         break
-      elsif Input.trigger?(Input::USE)
+      elsif Keybinds.trigger?(:use)
         ret = pbPageCustomUse(@page_id)
         if !ret
           case @page_id
@@ -190,7 +190,7 @@ class PokemonPokedexInfo_Scene
         else
           dorefresh = true
         end
-      elsif Input.repeat?(Input::UP)
+      elsif Keybinds.repeat?(:up)
         oldindex = @index
         pbGoToPrevious
         if @index != oldindex
@@ -200,7 +200,7 @@ class PokemonPokedexInfo_Scene
           (@page == 1) ? Pokemon.play_cry(@species, @form) : pbPlayCursorSE
           dorefresh = true
         end
-      elsif Input.repeat?(Input::DOWN)
+      elsif Keybinds.repeat?(:down)
         oldindex = @index
         pbGoToNext
         if @index != oldindex
@@ -210,7 +210,7 @@ class PokemonPokedexInfo_Scene
           (@page == 1) ? Pokemon.play_cry(@species, @form) : pbPlayCursorSE
           dorefresh = true
         end
-      elsif Input.repeat?(Input::LEFT)
+      elsif Keybinds.repeat?(:left)
         oldpage = @page
         numpages = @page_list.length
         @page -= 1
@@ -220,7 +220,7 @@ class PokemonPokedexInfo_Scene
           pbPlayCursorSE
           dorefresh = true
         end
-      elsif Input.repeat?(Input::RIGHT)
+      elsif Keybinds.repeat?(:right)
         oldpage = @page
         numpages = @page_list.length
         @page += 1

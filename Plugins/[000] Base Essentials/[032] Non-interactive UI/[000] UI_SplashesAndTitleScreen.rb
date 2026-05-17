@@ -108,8 +108,8 @@ class IntroEventScene < EventScene
       @pic2.moveOpacity(TICKS_PER_ENTER_FLASH * 2 / 10, TICKS_PER_ENTER_FLASH * 4 / 10, 0)
       @pic2.moveOpacity(TICKS_PER_ENTER_FLASH * 6 / 10, TICKS_PER_ENTER_FLASH * 4 / 10, 255)
     end
-    if Input.press?(Input::DOWN) &&
-       Input.press?(Input::BACK) &&
+    if Keybinds.press?(:down) &&
+       Keybinds.press?(:back) &&
        Input.press?(Input::CTRL)
       close_title_screen_delete(scene, args)
     end

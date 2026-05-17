@@ -184,7 +184,7 @@ def pbChooseNumber(msgwindow, params)
     cmdwindow.update
     msgwindow&.update
     yield if block_given?
-    if Input.trigger?(Input::USE)
+    if Keybinds.trigger?(:use)
       ret = cmdwindow.number
       if ret > maximum
         pbPlayBuzzerSE
@@ -194,7 +194,7 @@ def pbChooseNumber(msgwindow, params)
         pbPlayDecisionSE
         break
       end
-    elsif Input.trigger?(Input::BACK)
+    elsif Keybinds.trigger?(:back)
       pbPlayCancelSE
       ret = cancelNumber
       break
@@ -647,7 +647,7 @@ def pbMessageDisplay(msgwindow, message, letterbyletter = true, commandProc = ni
       msgwindow.resume if msgwindow.busy?
       break if !msgwindow.busy?
     end
-    if Input.trigger?(Input::USE) || Input.trigger?(Input::BACK)
+    if Keybinds.trigger?(:use) || Keybinds.trigger?(:back)
       if msgwindow.busy?
         pbPlayDecisionSE if msgwindow.pausing?
         msgwindow.resume
@@ -742,7 +742,7 @@ def pbShowCommands(msgwindow, commands = nil, cmdIfCancel = 0, defaultCmd = 0)
     cmdwindow.update
     msgwindow&.update
     yield if block_given?
-    if Input.trigger?(Input::BACK)
+    if Keybinds.trigger?(:back)
       if cmdIfCancel > 0
         command = cmdIfCancel - 1
         break
@@ -751,7 +751,7 @@ def pbShowCommands(msgwindow, commands = nil, cmdIfCancel = 0, defaultCmd = 0)
         break
       end
     end
-    if Input.trigger?(Input::USE)
+    if Keybinds.trigger?(:use)
       command = cmdwindow.index
       break
     end
@@ -786,7 +786,7 @@ def pbShowCommandsWithHelp(msgwindow, commands, help, cmdIfCancel = 0, defaultCm
       msgwin.text = help[cmdwindow.index] if oldindex != cmdwindow.index
       msgwin.update
       yield if block_given?
-      if Input.trigger?(Input::BACK)
+      if Keybinds.trigger?(:back)
         if cmdIfCancel > 0
           command = cmdIfCancel - 1
           break
@@ -795,7 +795,7 @@ def pbShowCommandsWithHelp(msgwindow, commands, help, cmdIfCancel = 0, defaultCm
           break
         end
       end
-      if Input.trigger?(Input::USE)
+      if Keybinds.trigger?(:use)
         command = cmdwindow.index
         break
       end
@@ -821,7 +821,7 @@ def pbMessageWaitForInput(msgwindow, frames, showPause = false)
     msgwindow&.update
     pbUpdateSceneMap
     yield if block_given?
-    break if Input.trigger?(Input::USE) || Input.trigger?(Input::BACK)
+    break if Keybinds.trigger?(:use) || Keybinds.trigger?(:back)
     break if System.uptime - timer_start >= frames / 20.0
   end
   msgwindow.stopPause if msgwindow && showPause

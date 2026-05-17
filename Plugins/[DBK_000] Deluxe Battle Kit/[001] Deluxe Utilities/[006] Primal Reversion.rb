@@ -272,7 +272,7 @@ class Battle::Scene
   def pbShowPrimalReversion(idxBattler)
     primalAnim = Animation::BattlerPrimalReversion.new(@sprites, @viewport, idxBattler, @battle)
     loop do
-      if Input.press?(Input::ACTION)
+      if Keybinds.press?(:action)
         pbPlayCancelSE
         break 
       end

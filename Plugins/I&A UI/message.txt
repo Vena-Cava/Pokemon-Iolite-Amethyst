@@ -544,11 +544,11 @@ class PokemonParty_Scene
       Input.update
       self.update
       if @sprites["messagebox"].busy?
-        if Input.trigger?(Input::USE)
+        if Keybinds.trigger?(:use)
           pbPlayDecisionSE if @sprites["messagebox"].pausing?
           @sprites["messagebox"].resume
         end
-      elsif Input.trigger?(Input::BACK) || Input.trigger?(Input::USE)
+      elsif Keybinds.trigger?(:back) || Keybinds.trigger?(:use)
         break
       end
     end
@@ -573,10 +573,10 @@ class PokemonParty_Scene
         cmdwindow.update
         self.update
         if !@sprites["messagebox"].busy?
-          if Input.trigger?(Input::BACK)
+          if Keybinds.trigger?(:back)
             ret = false
             break
-          elsif Input.trigger?(Input::USE) && @sprites["messagebox"].resume
+          elsif Keybinds.trigger?(:use) && @sprites["messagebox"].resume
             ret = (cmdwindow.index == 0)
             break
           end
@@ -604,11 +604,11 @@ class PokemonParty_Scene
         Input.update
         cmdwindow.update
         self.update
-        if Input.trigger?(Input::BACK)
+        if Keybinds.trigger?(:back)
           pbPlayCancelSE
           ret = -1
           break
-        elsif Input.trigger?(Input::USE)
+        elsif Keybinds.trigger?(:use)
           pbPlayDecisionSE
           ret = cmdwindow.index
           break
@@ -758,11 +758,11 @@ class PokemonParty_Scene
       self.update
       oldsel = @activecmd
       key = -1
-      key = Input::DOWN if Input.repeat?(Input::DOWN)
-      key = Input::RIGHT if Input.repeat?(Input::RIGHT)
-      key = Input::LEFT if Input.repeat?(Input::LEFT)
-      key = Input::UP if Input.repeat?(Input::UP)
-      if key >= 0
+      key = :down if Keybinds.repeat?(:down)
+      key = :right if Keybinds.repeat?(:right)
+      key = :left if Keybinds.repeat?(:left)
+      key = :up if Keybinds.repeat?(:up)
+      if key != -1
         @activecmd = pbChangeSelection(key, @activecmd)
       end
       if @activecmd != oldsel   # Changing selection
@@ -773,7 +773,7 @@ class PokemonParty_Scene
         end
       end
       cancelsprite = Settings::MAX_PARTY_SIZE + ((@multiselect) ? 1 : 0)
-      if Input.trigger?(Input::SPECIAL) && @can_access_storage && canswitch != 2
+      if Keybinds.trigger?(:special) && @can_access_storage && canswitch != 2
         pbPlayDecisionSE
         pbFadeOutIn do
           scene = PokemonStorageScene.new
@@ -781,15 +781,15 @@ class PokemonParty_Scene
           screen.pbStartScreen(0)
           pbHardRefresh
         end
-      elsif Input.trigger?(Input::ACTION) && canswitch == 1 && @activecmd != cancelsprite
+      elsif Keybinds.trigger?(:action) && canswitch == 1 && @activecmd != cancelsprite
         pbPlayDecisionSE
         return [1, @activecmd]
-      elsif Input.trigger?(Input::ACTION) && canswitch == 2
+      elsif Keybinds.trigger?(:action) && canswitch == 2
         return -1
-      elsif Input.trigger?(Input::BACK)
+      elsif Keybinds.trigger?(:back)
         pbPlayCloseMenuSE if !switching
         return -1
-      elsif Input.trigger?(Input::USE)
+      elsif Keybinds.trigger?(:use)
         if @activecmd == cancelsprite
           (switching) ? pbPlayDecisionSE : pbPlayCloseMenuSE
           return -1
@@ -804,7 +804,7 @@ class PokemonParty_Scene
   def pbChangeSelection(key, currentsel)
     numsprites = Settings::MAX_PARTY_SIZE + ((@multiselect) ? 2 : 1)
     case key
-    when Input::LEFT
+    when :left
       loop do
         currentsel -= 1
         break unless currentsel > 0 && currentsel < Settings::MAX_PARTY_SIZE && !@party[currentsel]
@@ -813,7 +813,7 @@ class PokemonParty_Scene
         currentsel = @party.length - 1
       end
       currentsel = numsprites - 1 if currentsel < 0
-    when Input::RIGHT
+    when :right
       loop do
         currentsel += 1
         break unless currentsel < Settings::MAX_PARTY_SIZE && !@party[currentsel]
@@ -821,7 +821,7 @@ class PokemonParty_Scene
       if currentsel == numsprites
         currentsel = (@party.length == 0) ? Settings::MAX_PARTY_SIZE : 0
       end
-    when Input::UP
+    when :up
       if currentsel >= Settings::MAX_PARTY_SIZE
         currentsel -= 1
         while currentsel > 0 && currentsel < Settings::MAX_PARTY_SIZE && !@party[currentsel]
@@ -838,7 +838,7 @@ class PokemonParty_Scene
         currentsel = @party.length - 1
       end
       currentsel = numsprites - 1 if currentsel < 0
-    when Input::DOWN
+    when :down
       if currentsel >= Settings::MAX_PARTY_SIZE - 1
         currentsel += 1
       else

@@ -11,7 +11,7 @@ Gem::Specification.new do |s|
   s.require_paths = ["lib".freeze]
   s.authors = ["Nobu Nakada".freeze]
   s.bindir = "exe".freeze
-  s.date = "2026-04-15"
+  s.date = "2026-05-15"
   s.description = "Enables non-blocking mode with IO class".freeze
   s.email = ["nobu@ruby-lang.org".freeze]
   s.extensions = ["ext/io/nonblock/extconf.rb".freeze]

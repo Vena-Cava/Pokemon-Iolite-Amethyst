@@ -42,10 +42,10 @@ def pbListScreen(title, lister)
       lister.refresh(list.index)
       selectedmap = list.index
     end
-    if Input.trigger?(Input::BACK)
+    if Keybinds.trigger?(:back)
       selectedmap = -1
       break
-    elsif Input.trigger?(Input::USE)
+    elsif Keybinds.trigger?(:use)
       break
     end
   end
@@ -90,17 +90,19 @@ def pbListScreenBlock(title, lister)
       lister.refresh(list.index)
       selectedmap = list.index
     end
-    if Input.trigger?(Input::ACTION)
-      yield(Input::ACTION, lister.value(selectedmap))
+    if Keybinds.trigger?(:action)
+      Keybinds.wait_for_release(:action)
+      yield(:action, lister.value(selectedmap))
       list.commands = lister.commands
-      list.index = list.commands.length if list.index == list.commands.length
+      list.index = list.commands.length - 1 if list.index >= list.commands.length
       lister.refresh(list.index)
-    elsif Input.trigger?(Input::BACK)
+    elsif Keybinds.trigger?(:back)
       break
-    elsif Input.trigger?(Input::USE)
-      yield(Input::USE, lister.value(selectedmap))
+    elsif Keybinds.trigger?(:use)
+      Keybinds.wait_for_release(:use)
+      yield(:use, lister.value(selectedmap))
       list.commands = lister.commands
-      list.index = list.commands.length if list.index == list.commands.length
+      list.index = list.commands.length - 1 if list.index >= list.commands.length
       lister.refresh(list.index)
     end
   end

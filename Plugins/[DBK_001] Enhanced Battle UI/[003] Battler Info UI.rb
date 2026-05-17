@@ -28,24 +28,24 @@ class Battle::Scene
     loop do
       pbUpdate(cw)
       pbUpdateInfoSprites
-      break if Input.trigger?(Input::BACK)
-      if Input.trigger?(Input::LEFT)
+      break if Keybinds.trigger?(:back)
+      if Keybinds.trigger?(:left)
         idx -= 1
         idx = maxSize if idx < 0
         doFullRefresh = true
-      elsif Input.trigger?(Input::RIGHT)
+      elsif Keybinds.trigger?(:right)
         idx += 1
         idx = 0 if idx > maxSize
         doFullRefresh = true
-      elsif Input.repeat?(Input::UP) && effects.length > 1
+      elsif Keybinds.repeat?(:up) && effects.length > 1
         idxEffect -= 1
         idxEffect = effctSize if idxEffect < 0
         doRefresh = true
-      elsif	Input.repeat?(Input::DOWN) && effects.length > 1
+      elsif	Keybinds.repeat?(:down) && effects.length > 1
         idxEffect += 1
         idxEffect = 0 if idxEffect > effctSize
         doRefresh = true
-      elsif Input.trigger?(Input::JUMPDOWN)
+      elsif Keybinds.trigger?(:jumpdown)
         if cw.visible
           ret = 1
           break
@@ -53,7 +53,7 @@ class Battle::Scene
           ret = 2
           break
         end
-      elsif Input.trigger?(Input::JUMPUP) || Input.trigger?(Input::USE)
+      elsif Keybinds.trigger?(:jumpup) || Keybinds.trigger?(:use)
         ret = []
         if battler.opposes?
           ret.push(1)

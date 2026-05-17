@@ -102,7 +102,7 @@ class Battle::Scene
 
   def pbInputUpdate
     Input.update
-    if Input.trigger?(Input::BACK) && @abortable && !@aborted
+    if Keybinds.press?(:back) && @abortable && !@aborted
       @aborted = true
       @battle.pbAbort
     end
@@ -208,7 +208,7 @@ class Battle::Scene
           break
         end
       end
-      if Input.trigger?(Input::BACK) || Input.trigger?(Input::USE) || @abortable
+      if Keybinds.press?(:back) || Keybinds.press?(:use) || @abortable
         if cw.busy?
           pbPlayDecisionSE if cw.pausing? && !@abortable
           cw.skipAhead
@@ -249,7 +249,7 @@ class Battle::Scene
           end
         end
       end
-      if Input.trigger?(Input::BACK) || Input.trigger?(Input::USE) || @abortable
+      if Keybinds.press?(:back) || Keybinds.press?(:use) || @abortable
         if cw.busy?
           pbPlayDecisionSE if cw.pausing? && !@abortable
           cw.skipAhead
@@ -283,7 +283,7 @@ class Battle::Scene
       cw.visible = (!dw.busy?)
       pbUpdate(cw)
       dw.update
-      if Input.trigger?(Input::BACK) && defaultValue >= 0
+      if Keybinds.press?(:back) && defaultValue >= 0
         if dw.busy?
           pbPlayDecisionSE if dw.pausing?
           dw.resume
@@ -292,7 +292,7 @@ class Battle::Scene
           dw.text = ""
           return defaultValue
         end
-      elsif Input.trigger?(Input::USE)
+      elsif Keybinds.press?(:use)
         if dw.busy?
           pbPlayDecisionSE if dw.pausing?
           dw.resume

@@ -130,7 +130,7 @@ end
 
 # Displays a list of all Pokémon species, and returns the ID of the species
 # selected (or nil if the selection was canceled). "default", if specified, is
-# the ID of the species to initially select. Pressing Input::ACTION will toggle
+# the ID of the species to initially select. Pressing :action will toggle
 # the list sorting between numerical and alphabetical.
 def pbChooseSpeciesList(default = nil)
   return pbChooseFromGameDataList(:Species, default) do |data|
@@ -146,7 +146,7 @@ end
 
 # Displays a list of all types, and returns the ID of the type selected (or nil
 # if the selection was canceled). "default", if specified, is the ID of the type
-# to initially select. Pressing Input::ACTION will toggle the list sorting
+# to initially select. Pressing :action will toggle the list sorting
 # between numerical and alphabetical.
 def pbChooseTypeList(default = nil)
   return pbChooseFromGameDataList(:Type, default) do |data|
@@ -156,7 +156,7 @@ end
 
 # Displays a list of all items, and returns the ID of the item selected (or nil
 # if the selection was canceled). "default", if specified, is the ID of the item
-# to initially select. Pressing Input::ACTION will toggle the list sorting
+# to initially select. Pressing :action will toggle the list sorting
 # between numerical and alphabetical.
 def pbChooseItemList(default = nil)
   return pbChooseFromGameDataList(:Item, default)
@@ -164,7 +164,7 @@ end
 
 # Displays a list of all abilities, and returns the ID of the ability selected
 # (or nil if the selection was canceled). "default", if specified, is the ID of
-# the ability to initially select. Pressing Input::ACTION will toggle the list
+# the ability to initially select. Pressing :action will toggle the list
 # sorting between numerical and alphabetical.
 def pbChooseAbilityList(default = nil)
   return pbChooseFromGameDataList(:Ability, default)
@@ -172,7 +172,7 @@ end
 
 # Displays a list of all moves, and returns the ID of the move selected (or nil
 # if the selection was canceled). "default", if specified, is the ID of the move
-# to initially select. Pressing Input::ACTION will toggle the list sorting
+# to initially select. Pressing :action will toggle the list sorting
 # between numerical and alphabetical.
 def pbChooseMoveList(default = nil)
   return pbChooseFromGameDataList(:Move, default)
@@ -263,7 +263,7 @@ def pbCommands2(cmdwindow, commands, cmdIfCancel, defaultindex = -1, noresize = 
     Graphics.update
     Input.update
     cmdwindow.update
-    if Input.trigger?(Input::BACK)
+    if Keybinds.trigger?(:back)
       if cmdIfCancel > 0
         command = cmdIfCancel - 1
         break
@@ -271,7 +271,7 @@ def pbCommands2(cmdwindow, commands, cmdIfCancel, defaultindex = -1, noresize = 
         command = cmdIfCancel
         break
       end
-    elsif Input.trigger?(Input::USE)
+    elsif Keybinds.trigger?(:use)
       command = cmdwindow.index
       break
     end
@@ -300,24 +300,24 @@ def pbCommands3(cmdwindow, commands, cmdIfCancel, defaultindex = -1, noresize = 
     Graphics.update
     Input.update
     cmdwindow.update
-    if Input.trigger?(Input::SPECIAL)
+    if Keybinds.trigger?(:special)
       command = [5, cmdwindow.index]
       break
-    elsif Input.press?(Input::ACTION)
-      if Input.repeat?(Input::UP)
+    elsif Keybinds.trigger?(:action)
+      if Keybinds.repeat?(:up)
         command = [1, cmdwindow.index]
         break
-      elsif Input.repeat?(Input::DOWN)
+      elsif Keybinds.repeat?(:down)
         command = [2, cmdwindow.index]
         break
-      elsif Input.trigger?(Input::LEFT)
+      elsif Keybinds.trigger?(:left)
         command = [3, cmdwindow.index]
         break
-      elsif Input.trigger?(Input::RIGHT)
+      elsif Keybinds.trigger?(:right)
         command = [4, cmdwindow.index]
         break
       end
-    elsif Input.trigger?(Input::BACK)
+    elsif Keybinds.trigger?(:back)
       if cmdIfCancel > 0
         command = [0, cmdIfCancel - 1]
         break
@@ -325,7 +325,7 @@ def pbCommands3(cmdwindow, commands, cmdIfCancel, defaultindex = -1, noresize = 
         command = [0, cmdIfCancel]
         break
       end
-    elsif Input.trigger?(Input::USE)
+    elsif Keybinds.trigger?(:use)
       command = [0, cmdwindow.index]
       break
     end
@@ -393,13 +393,13 @@ def pbCommandsSortable(cmdwindow, commands, cmdIfCancel, defaultindex = -1, sort
     Graphics.update
     Input.update
     cmdwindow.update
-    if Input.trigger?(Input::ACTION) && sortable
+    if Keybinds.trigger?(:action) && sortable
       command = [1, cmdwindow.index]
       break
-    elsif Input.trigger?(Input::BACK)
+    elsif Keybinds.trigger?(:back)
       command = [0, (cmdIfCancel > 0) ? cmdIfCancel - 1 : cmdIfCancel]
       break
-    elsif Input.trigger?(Input::USE)
+    elsif Keybinds.trigger?(:use)
       command = [0, cmdwindow.index]
       break
     end

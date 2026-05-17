@@ -54,12 +54,12 @@ class AdventureMenuScene
       # UP/DOWN KEYS
       #-------------------------------------------------------------------------
       # Cycles through party Pokemon.
-      if Input.repeat?(Input::UP)
+      if Keybinds.repeat?(:up)
         pbPlayCursorSE
         idxPkmn -= 1
         idxPkmn = PARTY_SIZE - 1 if idxPkmn < 0
         PARTY_SIZE.times { |i| @sprites["party_#{i}"].selected = (i == idxPkmn) }
-      elsif Input.repeat?(Input::DOWN)
+      elsif Keybinds.repeat?(:down)
         pbPlayCursorSE
         idxPkmn += 1
         idxPkmn = 0 if idxPkmn > PARTY_SIZE - 1
@@ -68,20 +68,20 @@ class AdventureMenuScene
       # ACTION KEY
       #-------------------------------------------------------------------------
       # Opens the Summary for the new Pokemon.
-      elsif Input.trigger?(Input::ACTION)
+      elsif Keybinds.trigger?(:action)
         pbPlayDecisionSE
         pbSummary(new_pkmn)
       #-------------------------------------------------------------------------
       # BACK KEY
       #-------------------------------------------------------------------------
       # Exits the menu and keeps the same party.
-      elsif Input.trigger?(Input::BACK)
+      elsif Keybinds.trigger?(:back)
         exchangeEnd = pbConfirmMessage(_INTL("Exit and keep your current party?"))
       #-------------------------------------------------------------------------
       # USE KEY
       #-------------------------------------------------------------------------
       # Selects a party Pokemon and opens the command menu.
-      elsif Input.trigger?(Input::USE)
+      elsif Keybinds.trigger?(:use)
         pbPlayDecisionSE
         pkmn = $player.party[idxPkmn]
         commands = [_INTL("Select"), _INTL("Summary"), _INTL("Back")]

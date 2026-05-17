@@ -447,7 +447,7 @@ class Battle::Scene
   def pbShowMegaEvolution(idxBattler)
     megaAnim = Animation::BattlerMegaEvolve.new(@sprites, @viewport, idxBattler, @battle)
     loop do
-      if Input.press?(Input::ACTION)
+      if Keybinds.press?(:action)
         pbPlayCancelSE
         break 
       end

@@ -55,7 +55,7 @@ class AdventureMenuScene
       # UP KEY
       #-------------------------------------------------------------------------
       # Cycles through party Pokemon or Z-Crystal lists, depending on selectionMode.
-      if Input.repeat?(Input::UP)
+      if Keybinds.repeat?(:up)
         case selectionMode
         when 0 # Cycles through party.
 		  next if party_select.length <= 1
@@ -80,7 +80,7 @@ class AdventureMenuScene
       # DOWN KEY
       #-------------------------------------------------------------------------
 	  # Cycles through party Pokemon or Z-Crystal lists, depending on selectionMode.
-      elsif Input.repeat?(Input::DOWN)
+      elsif Keybinds.repeat?(:down)
         case selectionMode
         when 0 # Cycles through party.
 		  next if party_select.length <= 1
@@ -105,7 +105,7 @@ class AdventureMenuScene
       # LEFT/RIGHT KEYS
       #-------------------------------------------------------------------------
       # Navigates through item grid when selectionMode == 1.
-	  elsif Input.repeat?(Input::LEFT)
+	  elsif Keybinds.repeat?(:left)
 	    next if selectionMode != 1
 		pbPlayCursorSE
 	    idxItem -= 1
@@ -114,7 +114,7 @@ class AdventureMenuScene
 		itemName = @sprites["item_#{idxItem}"].item.name
         @sprites["name"].text = _INTL("<ac>{1}</ac>", itemName)
         @sprites["window"].text = @sprites["item_#{idxItem}"].item.held_description
-	  elsif Input.repeat?(Input::RIGHT)
+	  elsif Keybinds.repeat?(:right)
 	    next if selectionMode != 1
 		pbPlayCursorSE
 	    idxItem += 1
@@ -127,14 +127,14 @@ class AdventureMenuScene
       # ACTION KEY
       #-------------------------------------------------------------------------
       # Opens the Summary for the party.
-      elsif Input.trigger?(Input::ACTION)
+      elsif Keybinds.trigger?(:action)
         pbPlayDecisionSE
         pbSummary($player.party[0...PARTY_SIZE], idxPkmn)
       #-------------------------------------------------------------------------
       # BACK KEY
       #-------------------------------------------------------------------------
       # Exits the menu or returns to party selection, depending on selectionMode.
-      elsif Input.trigger?(Input::BACK)
+      elsif Keybinds.trigger?(:back)
         case selectionMode
         when 0 # Exits the menu.
           break if pbConfirmMessage(_INTL("Exit and stop changing the party's Z-Crystals?"))
@@ -156,7 +156,7 @@ class AdventureMenuScene
       # USE KEY
       #-------------------------------------------------------------------------
       # Selects a party Pokemon or a Z-Crystal, depending on selectionMode.
-      elsif Input.trigger?(Input::USE)
+      elsif Keybinds.trigger?(:use)
         case selectionMode
         when 0 # Selects a party Pokemon.
 		  if items[idxPkmn].empty?

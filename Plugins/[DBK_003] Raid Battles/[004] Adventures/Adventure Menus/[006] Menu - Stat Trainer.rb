@@ -122,7 +122,7 @@ class AdventureMenuScene
       # UP KEY
       #-------------------------------------------------------------------------
       # Cycles through party Pokemon or the stat list, depending on selectionMode.
-      if Input.repeat?(Input::UP)
+      if Keybinds.repeat?(:up)
         case selectionMode
         when 0 # Cycles through party.
           next if party_select.length <= 1
@@ -140,7 +140,7 @@ class AdventureMenuScene
       # DOWN KEY
       #-------------------------------------------------------------------------
       # Cycles through party Pokemon or the stat list, depending on selectionMode.
-      elsif Input.repeat?(Input::DOWN)
+      elsif Keybinds.repeat?(:down)
         case selectionMode
         when 0 # Cycles through party.
           next if party_select.length <= 1
@@ -158,14 +158,14 @@ class AdventureMenuScene
       # ACTION KEY
       #-------------------------------------------------------------------------
       # Opens the Summary for the party.
-      elsif Input.trigger?(Input::ACTION)
+      elsif Keybinds.trigger?(:action)
         pbPlayDecisionSE
         pbSummary($player.party[0...PARTY_SIZE], idxPkmn)
       #-------------------------------------------------------------------------
       # BACK KEY
       #-------------------------------------------------------------------------
       # Exits the menu or returns to party selection, depending on selectionMode.
-      elsif Input.trigger?(Input::BACK)
+      elsif Keybinds.trigger?(:back)
         case selectionMode
         when 0 # Exits the menu.
           break if pbConfirmMessage(_INTL("Exit and stop training the party's stats?"))
@@ -182,7 +182,7 @@ class AdventureMenuScene
       # USE KEY
       #-------------------------------------------------------------------------
       # Selects a party Pokemon or stat training, depending on selectionMode.
-      elsif Input.trigger?(Input::USE)
+      elsif Keybinds.trigger?(:use)
         pkmn = @sprites["party_#{idxPkmn}"].pokemon
         case selectionMode
         when 0 # Selects a party Pokemon.

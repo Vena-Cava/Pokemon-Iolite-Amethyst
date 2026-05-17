@@ -99,11 +99,11 @@ class AdventureMapEditor
         Input.update
         cmdwindow.update
         self.update
-        if Input.trigger?(Input::BACK)
+        if Keybinds.trigger?(:back)
           pbPlayCancelSE
           ret = -1
           break
-        elsif Input.trigger?(Input::USE)
+        elsif Keybinds.trigger?(:use)
           pbPlayDecisionSE
           ret = cmdwindow.index
           break
@@ -531,16 +531,16 @@ class AdventureMapEditor
       if paint_mode || erase_mode
         moved = false
         c = @cursor_tile.coords
-        if Input.repeat?(Input::UP) && c[1] > 0
+        if Keybinds.repeat?(:up) && c[1] > 0
           moved = true
           pbAutoPosition(c[0], c[1] - 1)
-        elsif Input.repeat?(Input::DOWN) && c[1] < @height - 1
+        elsif Keybinds.repeat?(:down) && c[1] < @height - 1
           moved = true
           pbAutoPosition(c[0], c[1] + 1)
-        elsif Input.repeat?(Input::LEFT) && c[0] > 0
+        elsif Keybinds.repeat?(:left) && c[0] > 0
           moved = true
           pbAutoPosition(c[0] - 1, c[1])
-        elsif Input.repeat?(Input::RIGHT) && c[0] < @width - 1
+        elsif Keybinds.repeat?(:right) && c[0] < @width - 1
           moved = true
           pbAutoPosition(c[0] + 1, c[1])
         end
@@ -568,9 +568,9 @@ class AdventureMapEditor
           else
             pbPlayCursorSE
           end
-        elsif Input.trigger?(Input::USE) ||
-              Input.trigger?(Input::BACK) ||		
-              Input.trigger?(Input::ACTION)
+        elsif Keybinds.trigger?(:use) ||
+              Keybinds.trigger?(:back) ||		
+              Keybinds.trigger?(:action)
           pbSEPlay("GUI storage pick up") if paint_mode
           pbSEPlay("GUI storage put down") if erase_mode
           paint_mode = false
@@ -582,22 +582,22 @@ class AdventureMapEditor
       #-------------------------------------------------------------------------
       # Normal directional controls.
       else
-        if Input.press?(Input::UP)
+        if Keybinds.press?(:up)
           @map_sprites.each_value { |s| s.y += 2 } if map.y < -1
           pbSetCursor(0, -2) if @ui_sprites["cursor"].y > -16
           pbUpdateCursor
         end
-        if Input.press?(Input::DOWN)
+        if Keybinds.press?(:down)
           @map_sprites.each_value { |s| s.y -= 2 } if map.y > mapY
           pbSetCursor(0, 2) if @ui_sprites["cursor"].y <= screenY
           pbUpdateCursor
         end
-        if Input.press?(Input::LEFT)
+        if Keybinds.press?(:left)
           @map_sprites.each_value { |s| s.x += 2 } if map.x < -1
           pbSetCursor(-2, 0) if @ui_sprites["cursor"].x > -16
           pbUpdateCursor
         end
-        if Input.press?(Input::RIGHT)
+        if Keybinds.press?(:right)
           @map_sprites.each_value { |s| s.x -= 2 } if map.x > mapX
           pbSetCursor(2, 0) if @ui_sprites["cursor"].x <= screenX
           pbUpdateCursor
@@ -608,7 +608,7 @@ class AdventureMapEditor
       #-------------------------------------------------------------------------
       # Accesses tile menu, or confirms a copy/move/link.
       #-------------------------------------------------------------------------
-      if Input.trigger?(Input::USE)
+      if Keybinds.trigger?(:use)
         #-----------------------------------------------------------------------
         # USAGE 1: Moves the player starting position to the selected tile.
         #-----------------------------------------------------------------------
@@ -773,7 +773,7 @@ class AdventureMapEditor
       #-------------------------------------------------------------------------
       # Returns to main menu, or cancels a copy/move/link.
       #-------------------------------------------------------------------------
-      elsif Input.trigger?(Input::BACK)
+      elsif Keybinds.trigger?(:back)
         pbPlayCancelSE
         if player_tile
           @ui_sprites["copy"].clearBitmap
@@ -802,7 +802,7 @@ class AdventureMapEditor
       #-------------------------------------------------------------------------
       # Toggles paint/erase modes.
       #-------------------------------------------------------------------------
-      elsif Input.trigger?(Input::ACTION) && !moving_tile
+      elsif Keybinds.trigger?(:action) && !moving_tile
         if copied_tile
           if pbHaveRequiredTiles?(copied_tile.tile_id)
             pbMessage(_INTL("The maximum amount of this tile has already been reached."))

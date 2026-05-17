@@ -189,14 +189,14 @@ class Scene_Map
     end
     return if $game_temp.message_window_showing
     if !pbMapInterpreterRunning? && !$PokemonGlobal.forced_movement?
-      if Input.trigger?(Input::USE)
+      if Keybinds.trigger?(:use)
         $game_temp.interact_calling = true
-      elsif Input.trigger?(Input::ACTION)
+      elsif Keybinds.trigger?(:action)
         if !$game_system.menu_disabled && !$game_player.moving?
           $game_temp.menu_calling = true
           $game_temp.menu_beep = true
         end
-      elsif Input.trigger?(Input::SPECIAL)
+      elsif Keybinds.press?(:special)
         $game_temp.ready_menu_calling = true if !$game_player.moving?
       elsif Input.press?(Input::F9)
         $game_temp.debug_calling = true if $DEBUG

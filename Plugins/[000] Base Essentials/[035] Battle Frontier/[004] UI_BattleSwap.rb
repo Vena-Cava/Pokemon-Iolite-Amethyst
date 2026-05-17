@@ -100,9 +100,9 @@ class BattleSwapScene
         Graphics.update
         Input.update
         pbUpdate
-        if Input.trigger?(Input::BACK) && canCancel
+        if Keybinds.press?(:back) && canCancel
           return -1
-        elsif Input.trigger?(Input::USE)
+        elsif Keybinds.press?(:use)
           index = @sprites["list"].index
           if index == @sprites["list"].commands.length - 1 && canCancel
             return -1

@@ -88,7 +88,7 @@ def pbDisplayMail(mail, _bearer = nil)
     Graphics.update
     Input.update
     pbUpdateSpriteHash(sprites)
-    if Input.trigger?(Input::BACK) || Input.trigger?(Input::USE)
+    if Keybinds.press?(:back) || Keybinds.press?(:use)
       break
     end
   end

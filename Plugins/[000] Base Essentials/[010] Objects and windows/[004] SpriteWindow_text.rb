@@ -695,7 +695,7 @@ class Window_InputNumberPokemon < SpriteWindow_Base
       refresh
     end
     if self.active
-      if Input.repeat?(Input::UP) || Input.repeat?(Input::DOWN)
+      if Keybinds.repeat?(:up) || Keybinds.repeat?(:down)
         pbPlayCursorSE
         if @index == 0 && @sign
           @negative = !@negative
@@ -703,15 +703,15 @@ class Window_InputNumberPokemon < SpriteWindow_Base
           place = 10**(digits - 1 - @index)
           n = @number / place % 10
           @number -= n * place
-          if Input.repeat?(Input::UP)
+          if Keybinds.repeat?(:up)
             n = (n + 1) % 10
-          elsif Input.repeat?(Input::DOWN)
+          elsif Keybinds.repeat?(:down)
             n = (n + 9) % 10
           end
           @number += n * place
         end
         refresh
-      elsif Input.repeat?(Input::RIGHT)
+      elsif Keybinds.repeat?(:right)
         if digits >= 2
           pbPlayCursorSE
           @index = (@index + 1) % digits
@@ -719,7 +719,7 @@ class Window_InputNumberPokemon < SpriteWindow_Base
           @cursor_shown = true
           refresh
         end
-      elsif Input.repeat?(Input::LEFT)
+      elsif Keybinds.repeat?(:left)
         if digits >= 2
           pbPlayCursorSE
           @index = (@index + digits - 1) % digits
@@ -864,9 +864,9 @@ class SpriteWindow_Selectable < SpriteWindow_Base
   def update
     super
     if self.active && @item_max > 0 && @index >= 0 && !@ignore_input
-      if Input.repeat?(Input::UP)
+      if Keybinds.repeat?(:up)
         if @index >= @column_max ||
-           (Input.trigger?(Input::UP) && (@item_max % @column_max) == 0)
+           (Keybinds.press?(:up) && (@item_max % @column_max) == 0)
           oldindex = @index
           @index = (@index - @column_max + @item_max) % @item_max
           if @index != oldindex
@@ -874,9 +874,9 @@ class SpriteWindow_Selectable < SpriteWindow_Base
             update_cursor_rect
           end
         end
-      elsif Input.repeat?(Input::DOWN)
+      elsif Keybinds.repeat?(:down)
         if @index < @item_max - @column_max ||
-           (Input.trigger?(Input::DOWN) && (@item_max % @column_max) == 0)
+           (Keybinds.press?(:down) && (@item_max % @column_max) == 0)
           oldindex = @index
           @index = (@index + @column_max) % @item_max
           if @index != oldindex
@@ -884,7 +884,7 @@ class SpriteWindow_Selectable < SpriteWindow_Base
             update_cursor_rect
           end
         end
-      elsif Input.repeat?(Input::LEFT)
+      elsif Keybinds.repeat?(:left)
         if @column_max >= 2 && @index > 0
           oldindex = @index
           @index -= 1
@@ -893,7 +893,7 @@ class SpriteWindow_Selectable < SpriteWindow_Base
             update_cursor_rect
           end
         end
-      elsif Input.repeat?(Input::RIGHT)
+      elsif Keybinds.repeat?(:right)
         if @column_max >= 2 && @index < @item_max - 1
           oldindex = @index
           @index += 1
@@ -902,7 +902,7 @@ class SpriteWindow_Selectable < SpriteWindow_Base
             update_cursor_rect
           end
         end
-      elsif Input.repeat?(Input::JUMPUP)
+      elsif Keybinds.repeat?(:jumpup)
         if @index > 0
           oldindex = @index
           @index = [self.index - self.page_item_max, 0].max
@@ -912,7 +912,7 @@ class SpriteWindow_Selectable < SpriteWindow_Base
             update_cursor_rect
           end
         end
-      elsif Input.repeat?(Input::JUMPDOWN)
+      elsif Keybinds.repeat?(:jumpdown)
         if @index < @item_max - 1
           oldindex = @index
           @index = [self.index + self.page_item_max, @item_max - 1].min

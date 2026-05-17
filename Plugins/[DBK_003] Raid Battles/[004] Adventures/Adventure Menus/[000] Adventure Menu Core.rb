@@ -347,11 +347,11 @@ class AdventureMenuScene
        Input.update
        cmdwindow.update
        pbUpdate
-       if Input.trigger?(Input::BACK)
+       if Keybinds.trigger?(:back)
          pbPlayCancelSE
          ret = -1
          break
-       elsif Input.trigger?(Input::USE)
+       elsif Keybinds.trigger?(:use)
          pbPlayDecisionSE
          ret = cmdwindow.index
          break

@@ -139,10 +139,10 @@ class QuestList_Scene
       Graphics.update
       Input.update
       pbUpdate
-      if Input.trigger?(Input::BACK)
+      if Keybinds.trigger?(:back)
         pbPlayCloseMenuSE
         break
-      elsif Input.trigger?(Input::USE)
+      elsif Keybinds.trigger?(:use)
         if @quests[@current_quest].length==0
           pbPlayBuzzerSE
         else
@@ -152,11 +152,11 @@ class QuestList_Scene
           pbQuest(@quests[@current_quest][selected])
           showContent
         end
-      elsif Input.trigger?(Input::RIGHT)
+      elsif Keybinds.trigger?(:right)
         pbPlayCursorSE
         @current_quest +=1; @current_quest = 0 if @current_quest > @quests.length-1
         dorefresh = true
-      elsif Input.trigger?(Input::LEFT)
+      elsif Keybinds.trigger?(:left)
         pbPlayCursorSE
         @current_quest -=1; @current_quest = @quests.length-1 if @current_quest < 0
         dorefresh = true
@@ -206,17 +206,17 @@ class QuestList_Scene
       Input.update
       pbUpdate
       showOtherInfo = false
-      if Input.trigger?(Input::RIGHT) && page==1
+      if Keybinds.trigger?(:right) && page==1
         pbPlayCursorSE
         page += 1
         @sprites["page_icon2"].mirror = true
         drawOtherInfo(quest)
-      elsif Input.trigger?(Input::LEFT) && page==2
+      elsif Keybinds.trigger?(:left) && page==2
         pbPlayCursorSE
         page -= 1
         @sprites["page_icon2"].mirror = false
         drawQuestDesc(quest)
-      elsif Input.trigger?(Input::BACK)
+      elsif Keybinds.trigger?(:back)
         pbPlayCloseMenuSE
         break
       end

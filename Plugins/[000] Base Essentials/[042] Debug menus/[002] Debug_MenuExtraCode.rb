@@ -179,27 +179,27 @@ def pbDebugVariables(mode)
     Graphics.update
     Input.update
     pbUpdateSpriteHash(sprites)
-    if Input.trigger?(Input::BACK)
+    if Keybinds.trigger?(:back)
       pbPlayCancelSE
       break
     end
     current_id = right_window.index + 1
     case mode
     when 0   # Switches
-      if Input.trigger?(Input::USE)
+      if Keybinds.trigger?(:use)
         pbPlayDecisionSE
         $game_switches[current_id] = !$game_switches[current_id]
         right_window.refresh
         $game_map.need_refresh = true
       end
     when 1   # Variables
-      if Input.repeat?(Input::LEFT)
+      if Keybinds.repeat?(:left)
         pbDebugSetVariable(current_id, -1)
         right_window.refresh
-      elsif Input.repeat?(Input::RIGHT)
+      elsif Keybinds.repeat?(:right)
         pbDebugSetVariable(current_id, 1)
         right_window.refresh
-      elsif Input.trigger?(Input::ACTION)
+      elsif Keybinds.trigger?(:action)
         case $game_variables[current_id]
         when 0
           $game_variables[current_id] = ""
@@ -215,7 +215,7 @@ def pbDebugVariables(mode)
         end
         right_window.refresh
         $game_map.need_refresh = true
-      elsif Input.trigger?(Input::USE)
+      elsif Keybinds.trigger?(:use)
         pbPlayDecisionSE
         pbDebugVariableScreen(current_id)
         right_window.refresh
@@ -474,7 +474,7 @@ def pbDebugRoamers
     else
       pkmn = nil
     end
-    if Input.trigger?(Input::ACTION) && cmdwindow.index < cmdwindow.roamerCount &&
+    if Keybinds.trigger?(:action) && cmdwindow.index < cmdwindow.roamerCount &&
        (pkmn[2] <= 0 || $game_switches[pkmn[2]]) &&
        $PokemonGlobal.roamPokemon[cmdwindow.index] != true
       # Roam selected Pokémon
@@ -495,10 +495,10 @@ def pbDebugRoamers
         $PokemonGlobal.roamedAlready = false
       end
       cmdwindow.refresh
-    elsif Input.trigger?(Input::BACK)
+    elsif Keybinds.trigger?(:back)
       pbPlayCancelSE
       break
-    elsif Input.trigger?(Input::USE)
+    elsif Keybinds.trigger?(:use)
       if cmdwindow.index < cmdwindow.roamerCount
         pbPlayDecisionSE
         # Toggle through roaming, not roaming, defeated
@@ -772,12 +772,12 @@ class PokemonDebugPartyScreen
       Input.update
       pbUpdate
       if @messageBox.busy?
-        if Input.trigger?(Input::USE)
+        if Keybinds.trigger?(:use)
           pbPlayDecisionSE if @messageBox.pausing?
           @messageBox.resume
         end
       else
-        if Input.trigger?(Input::BACK) || Input.trigger?(Input::USE)
+        if Keybinds.trigger?(:back) || Keybinds.trigger?(:use)
           break
         end
       end
@@ -803,10 +803,10 @@ class PokemonDebugPartyScreen
         cmdwindow.update
         pbUpdate
         if !@messageBox.busy?
-          if Input.trigger?(Input::BACK)
+          if Keybinds.trigger?(:back)
             ret = false
             break
-          elsif Input.trigger?(Input::USE) && @messageBox.resume
+          elsif Keybinds.trigger?(:use) && @messageBox.resume
             ret = (cmdwindow.index == 0)
             break
           end
@@ -833,11 +833,11 @@ class PokemonDebugPartyScreen
         Input.update
         cmdwindow.update
         pbUpdate
-        if Input.trigger?(Input::BACK)
+        if Keybinds.trigger?(:back)
           pbPlayCancelSE
           ret = -1
           break
-        elsif Input.trigger?(Input::USE)
+        elsif Keybinds.trigger?(:use)
           pbPlayDecisionSE
           ret = cmdwindow.index
           break

@@ -112,13 +112,13 @@ class PokemonSummary_Scene
       pbUpdate
       textpos = []
       imagepos = []
-      if Input.trigger?(Input::BACK)
+      if Keybinds.trigger?(:back)
         break
-      elsif Input.trigger?(Input::UP) && index > 0
+      elsif Keybinds.trigger?(:up) && index > 0
         index -= 1
         pbPlayCursorSE
         dorefresh = true
-      elsif Input.trigger?(Input::DOWN) && index < TOTAL_LEGACY_PAGES - 1
+      elsif Keybinds.trigger?(:down) && index < TOTAL_LEGACY_PAGES - 1
         index += 1
         pbPlayCursorSE
         dorefresh = true

@@ -42,20 +42,20 @@ class PokemonRegionMap_Scene
       pbUpdate
       @timer += 1 if @timer
       updateButtonInfo if !ARMSettings::ButtonBoxPosition.nil?
-      if Input.trigger?(Input::BACK)
+      if Keybinds.trigger?(:back)
         if @previewBox.isExtShown
           hideExtendedPreview
           showAndUpdateMapInfo
           break
         end
-      elsif Input.trigger?(Input::LEFT)
+      elsif Keybinds.trigger?(:left)
         if @dataIndex > 0
           @dataIndex -= 1
         else
           @dataIndex = @getData.length - 1
         end
         drawDataMain
-      elsif Input.trigger?(Input::RIGHT)
+      elsif Keybinds.trigger?(:right)
         if @dataIndex < @getData.length - 1
           @dataIndex += 1
         else
@@ -327,7 +327,7 @@ class PokemonRegionMap_Scene
       @timer += 1 if @timer
       updateButtonInfo if !ARMSettings::ButtonBoxPosition.nil?
       updateSprites
-      if Input.trigger?(Input::BACK)
+      if Keybinds.trigger?(:back)
         @sprites["EncounterBoxes"].visible = false
         disposeSprites
         drawDataMain
@@ -335,7 +335,7 @@ class PokemonRegionMap_Scene
         @extendedBox.main
         @sprites["previewExtMain"].setBitmap(findUsableUI("ExtendedPreview/mapExtBoxMain"))
         break
-      elsif Input.trigger?(Input::LEFT)
+      elsif Keybinds.trigger?(:left)
         if @tableIndex > 0
           @tableIndex -= 1
         else
@@ -344,7 +344,7 @@ class PokemonRegionMap_Scene
         @lastIndex = nil
         disposeSprites
         drawEncTable
-      elsif Input.trigger?(Input::RIGHT)
+      elsif Keybinds.trigger?(:right)
         if @tableIndex < @tableData.length - 1
           @tableIndex += 1
         else
@@ -795,7 +795,7 @@ class PokemonRegionMap_Scene
       maxPageInd = @rowList[0..(@pageIndex + (@colLength - 1))].map { |row| row.length }.sum - 1
       updateButtonInfo if !ARMSettings::ButtonBoxPosition.nil?
       updateSprites
-      if Input.trigger?(Input::BACK)
+      if Keybinds.trigger?(:back)
         @lastIndex = nil
         @sprites["EncCursor"].visible = false
         @sprites["mapbottom"].mapname = "#{@data[:name]} #{@typeProgress}"
@@ -806,7 +806,7 @@ class PokemonRegionMap_Scene
         disposeSprites
         drawEncTable
         break
-      elsif Input.trigger?(Input::RIGHT)
+      elsif Keybinds.trigger?(:right)
         index += 1
         if index > maxPageInd
           if maxPageInd < @list.length - 1
@@ -818,7 +818,7 @@ class PokemonRegionMap_Scene
         end
         disposeSprites
         getEncIcons
-      elsif Input.trigger?(Input::LEFT)
+      elsif Keybinds.trigger?(:left)
         index -= 1
         if index < minPageInd
           if minPageInd > 0
@@ -830,7 +830,7 @@ class PokemonRegionMap_Scene
         end
         disposeSprites
         getEncIcons
-      elsif Input.trigger?(Input::UP)
+      elsif Keybinds.trigger?(:up)
         if index - @rowLength >= 0
           index -= @rowLength
           if index < minPageInd
@@ -845,7 +845,7 @@ class PokemonRegionMap_Scene
         end
         disposeSprites
         getEncIcons
-      elsif Input.trigger?(Input::DOWN)
+      elsif Keybinds.trigger?(:down)
         if index + @rowLength <= @list.length - 1
           index += @rowLength
           if index > maxPageInd
@@ -862,7 +862,7 @@ class PokemonRegionMap_Scene
         end
         disposeSprites
         getEncIcons
-      elsif Input.trigger?(Input::JUMPUP) && !@activeIndex.empty?
+      elsif Keybinds.trigger?(:jumpup) && !@activeIndex.empty?
         index = @activeIndex.reverse.find { |value| value < index }
         index ||= @activeIndex.last
         if index < minPageInd
@@ -879,7 +879,7 @@ class PokemonRegionMap_Scene
         end
         disposeSprites
         getEncIcons
-      elsif Input.trigger?(Input::JUMPDOWN) && !@activeIndex.empty?
+      elsif Keybinds.trigger?(:jumpdown) && !@activeIndex.empty?
         index = @activeIndex.find { |value| value > index }
         index ||= @activeIndex.first
         if index > maxPageInd

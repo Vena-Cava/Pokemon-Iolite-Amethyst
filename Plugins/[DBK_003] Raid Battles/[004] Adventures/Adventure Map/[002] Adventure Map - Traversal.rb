@@ -90,7 +90,7 @@ class AdventureMapScene
     # Movement loop.
     loop do
       Input.update
-      instantMovement = @ui_sprites["controls"].visible && Input.press?(Input::ACTION)
+      instantMovement = @ui_sprites["controls"].visible && Keybinds.press?(:action)
       if !instantMovement && count % 2 == 0
         Graphics.update
         pbUpdate(true)
@@ -187,20 +187,20 @@ class AdventureMapScene
       # ARROW KEYS
       #-------------------------------------------------------------------------
       # Route selection.
-      if Input.trigger?(Input::UP)
+      if Keybinds.trigger?(:up)
         dir = 0 if dirs.include?(0)
-      elsif Input.trigger?(Input::DOWN)
+      elsif Keybinds.trigger?(:down)
         dir = 1 if dirs.include?(1)
-      elsif Input.trigger?(Input::LEFT)
+      elsif Keybinds.trigger?(:left)
         dir = 2 if dirs.include?(2)
-      elsif Input.trigger?(Input::RIGHT)
+      elsif Keybinds.trigger?(:right)
         dir = 3 if dirs.include?(3)
       end
       #-------------------------------------------------------------------------
       # USE KEY
       #-------------------------------------------------------------------------
       # Confirm selection.
-      if Input.trigger?(Input::USE) && 
+      if Keybinds.trigger?(:use) && 
          pbConfirmMessage(_INTL("Are you sure you want to follow this path?")) { pbUpdate }
         pbUpdatePokemon(true)
         pbHideUI
@@ -209,13 +209,13 @@ class AdventureMapScene
       # BACK KEY
       #-------------------------------------------------------------------------
       # Reverts to original route selection.
-      elsif Input.trigger?(Input::BACK)
+      elsif Keybinds.trigger?(:back)
         dir = dirs.first
       #-------------------------------------------------------------------------
       # ACTION KEY
       #-------------------------------------------------------------------------
       # Open command menu.
-      elsif Input.trigger?(Input::ACTION)
+      elsif Keybinds.trigger?(:action)
         cmd = 0
         commands = [_INTL("View Map")]
         cmd_ids = [:view]
@@ -316,22 +316,22 @@ class AdventureMapScene
       # ARROW KEYS
       #-------------------------------------------------------------------------
       # Directional map controls.
-      if Input.press?(Input::UP)
+      if Keybinds.press?(:up)
         @map_sprites.each_value { |s| s.y += 2 } if map.y < -1
         @ui_sprites["cursor"].y -= 2 if @ui_sprites["cursor"].y > -16
         pbUpdateCursor
       end
-      if Input.press?(Input::DOWN)
+      if Keybinds.press?(:down)
         @map_sprites.each_value { |s| s.y -= 2 } if map.y > mapY
         @ui_sprites["cursor"].y += 2 if @ui_sprites["cursor"].y <= screenY
         pbUpdateCursor
       end
-      if Input.press?(Input::LEFT)
+      if Keybinds.press?(:left)
         @map_sprites.each_value { |s| s.x += 2 } if map.x < -1
         @ui_sprites["cursor"].x -= 2 if @ui_sprites["cursor"].x > -16
         pbUpdateCursor
       end
-      if Input.press?(Input::RIGHT)
+      if Keybinds.press?(:right)
         @map_sprites.each_value { |s| s.x -= 2 } if map.x > mapX
         @ui_sprites["cursor"].x += 2 if @ui_sprites["cursor"].x <= screenX
         pbUpdateCursor
@@ -339,7 +339,7 @@ class AdventureMapScene
       #-------------------------------------------------------------------------
       # USE KEY
       #-------------------------------------------------------------------------
-      if Input.trigger?(Input::USE)
+      if Keybinds.trigger?(:use)
         # Confirms the selection of a valid tile to teleport to (Teleporter tile).
         if teleporter
           if @cursor_tile.isTile?(:Crossroad) && pbCursorReact?
@@ -372,7 +372,7 @@ class AdventureMapScene
       # ACTION KEY
       #-------------------------------------------------------------------------
       # Toggles the map grid visibility.
-      elsif Input.trigger?(Input::ACTION)
+      elsif Keybinds.trigger?(:action)
         next if teleporter
         pbPlayDecisionSE
         @map_sprites["grid"].visible = !@map_sprites["grid"].visible
@@ -380,7 +380,7 @@ class AdventureMapScene
       # JUMPUP KEY
       #-------------------------------------------------------------------------
       # Cycles the cursor to each Battle tile, in order.
-      elsif Input.trigger?(Input::JUMPUP)
+      elsif Keybinds.trigger?(:jumpup)
         next if teleporter
         id = @cursor_tile.isTile?(:Battle) ? @cursor_tile.battle_id + 1 : 0
         id = 0 if id > @boss_tile.battle_id
@@ -397,7 +397,7 @@ class AdventureMapScene
       # JUMPDOWN KEY
       #-------------------------------------------------------------------------
       # Cycles the cursor to each Battle tile, in reverse order.
-      elsif Input.trigger?(Input::JUMPDOWN)
+      elsif Keybinds.trigger?(:jumpdown)
         next if teleporter
         id = @cursor_tile.isTile?(:Battle) ? @cursor_tile.battle_id - 1 : @boss_tile.battle_id
         id = @boss_tile.battle_id if id < 0
@@ -414,7 +414,7 @@ class AdventureMapScene
       # BACK KEY
       #-------------------------------------------------------------------------
       # Exits the free map scroll mode and returns to route selection.
-      elsif Input.trigger?(Input::BACK)
+      elsif Keybinds.trigger?(:back)
         next if teleporter
         pbPlayCancelSE
         @ui_sprites["cursor"].visible = false

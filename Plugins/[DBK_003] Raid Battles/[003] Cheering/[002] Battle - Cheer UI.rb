@@ -44,17 +44,17 @@ class Battle::Scene
     loop do
       oldIndex = cw.index
       pbUpdate(cw)
-      if Input.trigger?(Input::LEFT)
+      if Keybinds.trigger?(:left)
         cw.index -= 1 if (cw.index & 1) == 1
-      elsif Input.trigger?(Input::RIGHT)
+      elsif Keybinds.trigger?(:right)
         cw.index += 1 if (cw.index & 1) == 0
-      elsif Input.trigger?(Input::UP)
+      elsif Keybinds.trigger?(:up)
         cw.index -= 2 if (cw.index & 2) == 2
-      elsif Input.trigger?(Input::DOWN)
+      elsif Keybinds.trigger?(:down)
         cw.index += 2 if (cw.index & 2) == 0
       end
       pbPlayCursorSE if cw.index != oldIndex
-      if Input.trigger?(Input::USE)
+      if Keybinds.trigger?(:use)
         cheer = @sprites["cheerWindow"].cheers[cw.index]
         next if cheer.id == :None
 		pbPlayDecisionSE
@@ -65,7 +65,7 @@ class Battle::Scene
 		  ret = cw.index
 		  break
 		end
-      elsif Input.trigger?(Input::BACK)
+      elsif Keybinds.trigger?(:back)
         ret = -1
         pbPlayCancelSE
         break

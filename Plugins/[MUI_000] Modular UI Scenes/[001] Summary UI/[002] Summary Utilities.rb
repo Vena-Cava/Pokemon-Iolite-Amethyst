@@ -88,14 +88,14 @@ class PokemonSummary_Scene
       Graphics.update
       Input.update
       pbUpdate
-      if Input.trigger?(Input::BACK)
+      if Keybinds.trigger?(:back)
         selmove = Pokemon::MAX_MOVES
         pbPlayCloseMenuSE
         break
-      elsif Input.trigger?(Input::USE)
+      elsif Keybinds.trigger?(:use)
         pbPlayDecisionSE
         break
-      elsif Input.trigger?(Input::UP)
+      elsif Keybinds.trigger?(:up)
         selmove -= 1
         selmove = maxmove if selmove < 0
         if selmove < Pokemon::MAX_MOVES && selmove >= @pokemon.numMoves
@@ -105,7 +105,7 @@ class PokemonSummary_Scene
         pbPlayCursorSE
         selected_move = (selmove == Pokemon::MAX_MOVES) ? new_move : @pokemon.moves[selmove]
         drawSelectedMove(new_move, selected_move)
-      elsif Input.trigger?(Input::DOWN)
+      elsif Keybinds.trigger?(:down)
         selmove += 1
         selmove = 0 if selmove > maxmove
         if selmove < Pokemon::MAX_MOVES && selmove >= @pokemon.numMoves

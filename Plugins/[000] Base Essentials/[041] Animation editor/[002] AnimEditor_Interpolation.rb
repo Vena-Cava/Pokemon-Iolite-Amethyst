@@ -364,7 +364,7 @@ class MapScreenScene
     loop do
       Graphics.update
       Input.update
-      break if Input.trigger?(Input::BACK) || Input.trigger?(Input::USE)
+      break if Keybinds.press?(:back) || Keybinds.press?(:use)
     end
     Input.update
     title.dispose
@@ -491,22 +491,22 @@ class MapScreenScene
         end
       end
     end
-    if Input.press?(Input::UP)
+    if Keybinds.press?(:up)
       @mapsprites.each do |i|
         i[1].y += 4 if i
       end
     end
-    if Input.press?(Input::DOWN)
+    if Keybinds.press?(:down)
       @mapsprites.each do |i|
         i[1].y -= 4 if i
       end
     end
-    if Input.press?(Input::LEFT)
+    if Keybinds.press?(:left)
       @mapsprites.each do |i|
         i[1].x += 4 if i
       end
     end
-    if Input.press?(Input::RIGHT)
+    if Keybinds.press?(:right)
       @mapsprites.each do |i|
         i[1].x -= 4 if i
       end
@@ -548,7 +548,7 @@ class MapScreenScene
       Graphics.update
       Input.update
       update
-      if Input.trigger?(Input::BACK)
+      if Keybinds.press?(:back)
         if pbConfirmMessage(_INTL("Save changes?"))
           serializeConnectionData
           MapFactoryHelper.clear

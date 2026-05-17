@@ -798,7 +798,7 @@ end
     loop do
       Graphics.update
       Input.update
-      if Input.trigger?(Input::BACK) || Input.trigger?(Input::USE)
+      if Keybinds.trigger?(:back) || Keybinds.trigger?(:use)
         break
       end
       msgwindow.update
@@ -830,10 +830,10 @@ end
       Input.update
       msgwindow.update
       cmdwindow.update
-      if Input.trigger?(Input::BACK)
+      if Keybinds.trigger?(:back)
         ret = -1
         break
-      elsif Input.trigger?(Input::USE)
+      elsif Keybinds.trigger?(:use)
         ret = cmdwindow.index
         break
       end
@@ -892,7 +892,7 @@ def pbChangeSelection(key, selection)
   @last_box_column = selection % PokemonBox::BOX_WIDTH if selection >= 0
 
   case key
-  when Input::UP
+  when :up
     if selection == -1
       selection = -3
     elsif selection == -3
@@ -902,7 +902,7 @@ def pbChangeSelection(key, selection)
       selection = -1 if selection < 0
     end
 
-  when Input::DOWN
+  when :down
     if selection == -1
       selection = @last_box_column
     elsif selection == -3
@@ -914,7 +914,7 @@ def pbChangeSelection(key, selection)
       selection = -3 if selection >= PokemonBox::BOX_SIZE
     end
 
-  when Input::LEFT
+  when :left
     case selection
     when 0  then selection = [:party, 1]
     when 6  then selection = [:party, 1]
@@ -927,7 +927,7 @@ def pbChangeSelection(key, selection)
       selection -= 1 if selection >= 0
     end
 
-  when Input::RIGHT
+  when :right
     case selection
     when 5  then selection = [:party, 0]
     when 11 then selection = [:party, 2]
@@ -973,7 +973,7 @@ end
 
 def pbPartyChangeSelection(key, selection)
   case key
-  when Input::LEFT
+  when :left
     return [:box, 5]  if selection == 0
     return 0          if selection == 1
     return [:box, 11] if selection == 2
@@ -981,7 +981,7 @@ def pbPartyChangeSelection(key, selection)
     return [:box, 23] if selection == 4
     return 4          if selection == 5
 
-  when Input::RIGHT
+  when :right
     return 1          if selection == 0
     return [:box, 0]  if selection == 1
     return 3          if selection == 2
@@ -989,11 +989,11 @@ def pbPartyChangeSelection(key, selection)
     return 5          if selection == 4
     return [:box, 24] if selection == 5
 
-  when Input::UP
+  when :up
     selection -= 1
     selection = Settings::MAX_PARTY_SIZE - 1 if selection < 0
 
-  when Input::DOWN
+  when :down
     selection += 1
     selection = 0 if selection >= Settings::MAX_PARTY_SIZE
   end
@@ -1010,11 +1010,11 @@ end
       Graphics.update
       Input.update
       key = -1
-      key = Input::DOWN if Input.repeat?(Input::DOWN)
-      key = Input::RIGHT if Input.repeat?(Input::RIGHT)
-      key = Input::LEFT if Input.repeat?(Input::LEFT)
-      key = Input::UP if Input.repeat?(Input::UP)
-      if key >= 0
+      key = :down if Keybinds.repeat?(:down)
+      key = :right if Keybinds.repeat?(:right)
+      key = :left if Keybinds.repeat?(:left)
+      key = :up if Keybinds.repeat?(:up)
+      if key != -1
         pbPlayCursorSE
         selection = pbChangeSelection(key, selection)
 		if selection.is_a?(Array) && selection[0] == :party
@@ -1050,31 +1050,31 @@ end
         pbSetMosaic(selection)
       end
       self.update
-      if Input.trigger?(Input::JUMPUP)
+      if Keybinds.repeat?(:jumpup)
         pbPlayCursorSE
         nextbox = (@storage.currentBox + @storage.maxBoxes - 1) % @storage.maxBoxes
         pbSwitchBoxToLeft(nextbox)
         @storage.currentBox = nextbox
         pbUpdateOverlay(selection)
         pbSetMosaic(selection)
-      elsif Input.trigger?(Input::JUMPDOWN)
+      elsif Keybinds.repeat?(:jumpdown)
         pbPlayCursorSE
         nextbox = (@storage.currentBox + 1) % @storage.maxBoxes
         pbSwitchBoxToRight(nextbox)
         @storage.currentBox = nextbox
         pbUpdateOverlay(selection)
         pbSetMosaic(selection)
-      elsif Input.trigger?(Input::SPECIAL)  # Swap from Data to Moves
+      elsif Keybinds.trigger?(:special)  # Swap from Data to Moves
 	    pbPlayCursorSE
 	    @show_moves = !@show_moves
 	    pbUpdateOverlay(selection)
-      elsif Input.trigger?(Input::ACTION) && @command == 0   # Organize only
+      elsif Keybinds.trigger?(:action) && @command == 0   # Organize only
         pbPlayDecisionSE
         pbSetQuickSwap(!@quickswap)
-      elsif Input.trigger?(Input::BACK)
+      elsif Keybinds.trigger?(:back)
         @selection = selection
         return nil
-      elsif Input.trigger?(Input::USE)
+      elsif Keybinds.trigger?(:use)
         @selection = selection
         if selection >= 0
           return [@storage.currentBox, selection]
@@ -1128,11 +1128,11 @@ end
       Graphics.update
       Input.update
       key = -1
-      key = Input::DOWN if Input.repeat?(Input::DOWN)
-      key = Input::RIGHT if Input.repeat?(Input::RIGHT)
-      key = Input::LEFT if Input.repeat?(Input::LEFT)
-      key = Input::UP if Input.repeat?(Input::UP)
-      if key >= 0
+      key = :down if Keybinds.repeat?(:down)
+      key = :right if Keybinds.repeat?(:right)
+      key = :left if Keybinds.repeat?(:left)
+      key = :up if Keybinds.repeat?(:up)
+      if key != -1
         pbPlayCursorSE
         newselection = pbPartyChangeSelection(key, selection)
 		if newselection.is_a?(Array) && newselection[0] == :box
@@ -1147,18 +1147,18 @@ end
 		end
       end
       self.update
-	  if Input.trigger?(Input::SPECIAL)
+	  if Keybinds.trigger?(:special)
 	    pbPlayCursorSE
 	    @show_moves = !@show_moves
 	    pbUpdateOverlay(selection, party)
-	  elsif Input.trigger?(Input::ACTION) && @command == 0   # Organize only
+	  elsif Keybinds.trigger?(:action) && @command == 0   # Organize only
         pbPlayDecisionSE
         pbSetQuickSwap(!@quickswap)
-      elsif Input.trigger?(Input::BACK)
+      elsif Keybinds.trigger?(:back)
 	    @selection = selection
 	    @choseFromParty = true
 	    return -1
-      elsif Input.trigger?(Input::USE)
+      elsif Keybinds.trigger?(:use)
         if selection >= 0 && selection < Settings::MAX_PARTY_SIZE
           @selection = selection
           return selection
@@ -1550,17 +1550,17 @@ end
 
   def pbMarkingChangeSelection(key, selection)
     case key
-    when Input::LEFT
+    when :left
       if selection < 6
         selection -= 1
         selection += 3 if selection % 3 == 2
       end
-    when Input::RIGHT
+    when :right
       if selection < 6
         selection += 1
         selection -= 3 if selection % 3 == 0
       end
-    when Input::UP
+    when :up
       if selection == 7
         selection = 6
       elsif selection == 6
@@ -1570,7 +1570,7 @@ end
       else
         selection -= 3
       end
-    when Input::DOWN
+    when :down
       if selection == 7
         selection = 1
       elsif selection == 6
@@ -1631,21 +1631,21 @@ end
       Graphics.update
       Input.update
       key = -1
-      key = Input::DOWN if Input.repeat?(Input::DOWN)
-      key = Input::RIGHT if Input.repeat?(Input::RIGHT)
-      key = Input::LEFT if Input.repeat?(Input::LEFT)
-      key = Input::UP if Input.repeat?(Input::UP)
-      if key >= 0
+      key = :down if Keybinds.repeat?(:down)
+      key = :right if Keybinds.repeat?(:right)
+      key = :left if Keybinds.repeat?(:left)
+      key = :up if Keybinds.repeat?(:up)
+      if key != -1
         oldindex = index
         index = pbMarkingChangeSelection(key, index)
         pbPlayCursorSE if index != oldindex
         pbMarkingSetArrow(@sprites["arrow"], index)
       end
       self.update
-      if Input.trigger?(Input::BACK)
+      if Keybinds.trigger?(:back)
         pbPlayCancelSE
         break
-      elsif Input.trigger?(Input::USE)
+      elsif Keybinds.trigger?(:use)
         pbPlayDecisionSE
         case index
         when 6   # OK

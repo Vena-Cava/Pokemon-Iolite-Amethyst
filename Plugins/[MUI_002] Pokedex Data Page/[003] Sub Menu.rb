@@ -128,7 +128,7 @@ class PokemonPokedexInfo_Scene
       sound = 0
       dorefresh = false
       #-------------------------------------------------------------------------
-      if Input.repeat?(Input::UP)
+      if Keybinds.repeat?(:up)
         if index >= row_size
           index -= row_size
           dorefresh = true
@@ -149,7 +149,7 @@ class PokemonPokedexInfo_Scene
           end
         end
       #-------------------------------------------------------------------------
-      elsif Input.repeat?(Input::DOWN)
+      elsif Keybinds.repeat?(:down)
         if index < row_size
           count = @sprites["pokelist"].getPageSize(list, page) - 1
           if count < index + row_size
@@ -176,7 +176,7 @@ class PokemonPokedexInfo_Scene
           end
         end
       #-------------------------------------------------------------------------
-      elsif Input.repeat?(Input::LEFT)
+      elsif Keybinds.repeat?(:left)
         if index > 0
           index -= 1
           dorefresh = true
@@ -195,7 +195,7 @@ class PokemonPokedexInfo_Scene
           end
         end
       #-------------------------------------------------------------------------
-      elsif Input.repeat?(Input::RIGHT)
+      elsif Keybinds.repeat?(:right)
         count = @sprites["pokelist"].getPageSize(list, page) - 1
         next if count == 0 && page == 0
         if index < count
@@ -213,7 +213,7 @@ class PokemonPokedexInfo_Scene
           end
         end
       #-------------------------------------------------------------------------
-      elsif Input.repeat?(Input::JUMPUP)
+      elsif Keybinds.repeat?(:jumpup)
         if page > 0
           page -= 1
           index = 0
@@ -221,7 +221,7 @@ class PokemonPokedexInfo_Scene
           dorefresh = true
         end
       #-------------------------------------------------------------------------
-      elsif Input.repeat?(Input::JUMPDOWN)
+      elsif Keybinds.repeat?(:jumpdown)
         if page < maxpage
           page += 1
           index = 0
@@ -229,7 +229,7 @@ class PokemonPokedexInfo_Scene
           dorefresh = true
         end
       #-------------------------------------------------------------------------
-      elsif Input.trigger?(Input::USE)
+      elsif Keybinds.trigger?(:use)
         page_size = PokemonDataPageSprite::PAGE_SIZE
         idxList = (page * page_size) + index
         sp = GameData::Species.try_get(list[idxList])
@@ -277,7 +277,7 @@ class PokemonPokedexInfo_Scene
           break
         end
       #-------------------------------------------------------------------------
-      elsif Input.trigger?(Input::ACTION)
+      elsif Keybinds.trigger?(:action)
         next if !@viewingMoves
         next if @data_hash[:egg].empty?
         move = GameData::Move.try_get(pbCurrentMoveID)
@@ -313,7 +313,7 @@ class PokemonPokedexInfo_Scene
           maxpage = ((list.length - 1) / page_size).floor
         end
       #-------------------------------------------------------------------------
-      elsif Input.trigger?(Input::BACK)
+      elsif Keybinds.trigger?(:back)
         pbSEPlay("GUI storage hide party panel")
         @sprites["pokelist"].visible = false
         if @viewingMoves
@@ -529,7 +529,7 @@ class PokemonPokedexInfo_Scene
       Graphics.update
       Input.update
       pbUpdate
-      if Input.repeat?(Input::UP)
+      if Keybinds.repeat?(:up)
         old_index = index
         index -= 1
         index = maxidx if index < 0
@@ -537,7 +537,7 @@ class PokemonPokedexInfo_Scene
           pbPlayCursorSE
           pbDrawDataList(list, index, cursor)
         end
-      elsif Input.repeat?(Input::DOWN)
+      elsif Keybinds.repeat?(:down)
         old_index = index
         index += 1
         index = 0 if index > maxidx
@@ -545,21 +545,21 @@ class PokemonPokedexInfo_Scene
           pbPlayCursorSE
           pbDrawDataList(list, index, cursor)
         end
-      elsif Input.repeat?(Input::JUMPUP)
+      elsif Keybinds.repeat?(:jumpup)
         old_index = index
         index = 0
         if index != old_index
           pbPlayCursorSE
           pbDrawDataList(list, index, cursor)
         end
-      elsif Input.repeat?(Input::JUMPDOWN)
+      elsif Keybinds.repeat?(:jumpdown)
         old_index = index
         index = maxidx
         if index != old_index
           pbPlayCursorSE
           pbDrawDataList(list, index, cursor)
         end
-      elsif Input.trigger?(Input::USE)
+      elsif Keybinds.trigger?(:use)
         if index == list.length - 1
           pbSEPlay("GUI storage hide party panel")
           drawPage(@page)
@@ -570,7 +570,7 @@ class PokemonPokedexInfo_Scene
           break if @forceRefresh
           pbDrawDataList(list, index, cursor)
         end
-      elsif Input.trigger?(Input::BACK)
+      elsif Keybinds.trigger?(:back)
         pbSEPlay("GUI storage hide party panel")
         drawPage(@page)
         pbDrawDataNotes

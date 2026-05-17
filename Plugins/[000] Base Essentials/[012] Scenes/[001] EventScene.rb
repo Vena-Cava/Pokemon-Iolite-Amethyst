@@ -163,9 +163,9 @@ class EventScene
       sprite.update
     end
     @onUpdate.trigger(self)
-    if Input.trigger?(Input::BACK)
+    if Keybinds.press?(:back)
       @onBTrigger.trigger(self)
-    elsif Input.trigger?(Input::USE)
+    elsif Keybinds.press?(:use)
       @onCTrigger.trigger(self)
     end
   end

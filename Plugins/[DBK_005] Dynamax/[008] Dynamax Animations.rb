@@ -599,7 +599,7 @@ class Battle::Scene
       dynamaxAnim = Animation::BattlerDynamax.new(@sprites, @viewport, idxBattler, @battle)
     end
     loop do
-      if Input.press?(Input::ACTION)
+      if Keybinds.press?(:action)
         pbPlayCancelSE
         break 
       end

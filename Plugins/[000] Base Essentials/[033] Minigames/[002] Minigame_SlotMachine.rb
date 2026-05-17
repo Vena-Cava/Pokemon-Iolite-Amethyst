@@ -242,7 +242,7 @@ class SlotMachineScene
           @sprites["credit"].score += 1
           this_tick = last_paid_tick
         end
-        if Input.trigger?(Input::USE) || @sprites["credit"].score == Settings::MAX_COINS
+        if Keybinds.press?(:use) || @sprites["credit"].score == Settings::MAX_COINS
           @sprites["credit"].score += @sprites["payout"].score
           @sprites["payout"].score = 0
         end
@@ -332,7 +332,7 @@ class SlotMachineScene
           Graphics.update
           Input.update
           update
-          if Input.trigger?(Input::USE)
+          if Keybinds.press?(:use)
             pbSEPlay("Slots stop")
             if @sprites["reel1"].spinning?
               @sprites["reel1"].stopSpinning(@replay)
@@ -374,7 +374,7 @@ class SlotMachineScene
           Graphics.update
           Input.update
           update
-          if Input.trigger?(Input::DOWN) && @wager < 3 && @sprites["credit"].score > 0
+          if Keybinds.press?(:down) && @wager < 3 && @sprites["credit"].score > 0
             pbSEPlay("Slots coin")
             @wager += 1
             @sprites["credit"].score -= 1
@@ -388,7 +388,7 @@ class SlotMachineScene
               @sprites["row1"].visible = true
             end
           elsif @wager >= 3 || (@wager > 0 && @sprites["credit"].score == 0) ||
-                (Input.trigger?(Input::USE) && @wager > 0) || @replay
+                (Keybinds.press?(:use) && @wager > 0) || @replay
             if @replay
               @wager = 3
               (1..5).each { |i| @sprites["row#{i}"].visible = true }
@@ -397,7 +397,7 @@ class SlotMachineScene
             @sprites["reel2"].startSpinning
             @sprites["reel3"].startSpinning
             @gameRunning = true
-          elsif Input.trigger?(Input::BACK) && @wager == 0
+          elsif Keybinds.press?(:back) && @wager == 0
             break
           end
           break if @gameRunning

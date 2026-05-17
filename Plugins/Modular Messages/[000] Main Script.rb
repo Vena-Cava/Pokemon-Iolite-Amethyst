@@ -106,8 +106,8 @@ module Modular_Messages
 #-------------------------------
 # Checks to see if a trigger has been pressed
   def upon_trigger(allow_anyway = false)
-    return unless Input.trigger?(Input::USE) ||
-	   Input.trigger?(Input::BACK) ||
+    return unless Keybinds.trigger?(:use) ||
+	   Keybinds.trigger?(:back) ||
 	   allow_anyway
     if @@hash["msg_window"].busy?
       pbPlayDecisionSE if @@hash["msg_window"].pausing?

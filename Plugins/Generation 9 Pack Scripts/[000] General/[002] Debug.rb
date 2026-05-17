@@ -187,14 +187,14 @@ end
 #-------------------------------------------------------------------------------
 class Battle::DebugSetEffects
   def update_input_for_stat(effect, variable_data)
-    if Input.trigger?(Input::USE)
+    if Keybinds.trigger?(:use)
       pbPlayDecisionSE
       new_value = pbChooseStatList(:main_battle, @variables[effect])
       if new_value && new_value != @variables[effect]
         @variables[effect] = new_value
         return true
       end
-    elsif Input.trigger?(Input::ACTION) && @variables[effect]
+    elsif Keybinds.trigger?(:action) && @variables[effect]
       pbPlayDecisionSE
       @variables[effect] = nil
       return true
@@ -203,14 +203,14 @@ class Battle::DebugSetEffects
   end
   
   def update_input_for_type(effect, variable_data)
-    if Input.trigger?(Input::USE)
+    if Keybinds.trigger?(:use)
       pbPlayDecisionSE
       new_value = pbChooseTypeList(@variables[effect])
       if new_value && new_value != @variables[effect]
         @variables[effect] = new_value
         return true
       end
-    elsif Input.trigger?(Input::ACTION) && @variables[effect]
+    elsif Keybinds.trigger?(:action) && @variables[effect]
       pbPlayDecisionSE
       @variables[effect] = nil
       return true
@@ -223,7 +223,7 @@ class Battle::DebugSetEffects
       Graphics.update
       Input.update
       @window.update
-      if Input.trigger?(Input::BACK)
+      if Keybinds.trigger?(:back)
         pbPlayCancelSE
         break
       end

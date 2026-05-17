@@ -61,7 +61,7 @@ module VMS
           return
         end
         # Check for cancellation
-        break if VMS::INTERACTION_WAIT <= 0 && Input.trigger?(Input::BACK)
+        break if VMS::INTERACTION_WAIT <= 0 && Keybinds.trigger?(:back)
       end
       # Check what the player said
       case player.state[0]
@@ -144,7 +144,7 @@ module VMS
         return
       end
       # Check for cancellation
-      break if VMS::INTERACTION_WAIT <= 0 && Input.trigger?(Input::BACK)
+      break if VMS::INTERACTION_WAIT <= 0 && Keybinds.trigger?(:back)
       # Check if player has responded
       break if player.state[1] == $player.id
     end
@@ -329,7 +329,7 @@ module VMS
       # Check if player still exists
       player = VMS.player_still_connected(player.id, msgwindow, false)
       # Compare states
-      if player.nil? || player.state[1] != $player.id || ((VMS::INTERACTION_WAIT <= 0 || indefinite) && Input.trigger?(Input::BACK))
+      if player.nil? || player.state[1] != $player.id || ((VMS::INTERACTION_WAIT <= 0 || indefinite) && Keybinds.trigger?(:back))
         # Dispose message window
         pbDisposeMessageWindow(msgwindow) unless msgwindow.nil?
         # Set state to idle

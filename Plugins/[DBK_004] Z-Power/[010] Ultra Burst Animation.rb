@@ -164,7 +164,7 @@ class Battle::Scene
   def pbShowUltraBurst(idxBattler)
     ultraAnim = Animation::BattlerUltraBurst.new(@sprites, @viewport, idxBattler, @battle)
     loop do
-	  if Input.press?(Input::ACTION)
+	  if Keybinds.press?(:action)
 	    pbPlayCancelSE
 	    break 
 	  end

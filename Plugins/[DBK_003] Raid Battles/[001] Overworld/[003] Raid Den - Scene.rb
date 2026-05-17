@@ -257,24 +257,24 @@ class RaidScene
       Graphics.update
       Input.update
       pbUpdate
-      if Input.trigger?(Input::UP)
+      if Keybinds.trigger?(:up)
         index -= 1
         index = 2 if index < 0
         pbPlayCursorSE
         @sprites["cursor"].y = 132 + 34 * index
-      elsif Input.trigger?(Input::DOWN)
+      elsif Keybinds.trigger?(:down)
         index += 1
         index = 0 if index > 2
         pbPlayCursorSE
         @sprites["cursor"].y = 132 + 34 * index
-      elsif Input.trigger?(Input::BACK)
+      elsif Keybinds.trigger?(:back)
 	    @sprites["cursor"].visible = false
         if pbConfirmMessage(_INTL("Would you like to leave the raid?"))
           pbSEPlay("GUI menu close")
           break
         end
 		@sprites["cursor"].visible = true
-      elsif Input.trigger?(Input::USE)
+      elsif Keybinds.trigger?(:use)
         pbPlayDecisionSE
         case index
         when 0 # Begin Raid
@@ -438,14 +438,14 @@ class RaidScene
       Graphics.update
       Input.update
       pbUpdate
-	  if Input.repeat?(Input::UP) || Input.repeat?(Input::DOWN) ||
-	     Input.repeat?(Input::JUMPUP) || Input.repeat?(Input::JUMPDOWN)
+	  if Keybinds.repeat?(:up) || Keybinds.repeat?(:down) ||
+	     Keybinds.repeat?(:jumpup) || Keybinds.repeat?(:jumpdown)
 		next if @sprites["itemwindow"].commands.empty?
 	    itemidx = @sprites["itemwindow"].index
 		itemdesc = GameData::Item.get(rewards[itemidx][0]).description
 		@sprites["itemtext"].text = itemdesc
 		@sprites["itemicon"].item = rewards[itemidx][0]
-	  elsif Input.trigger?(Input::USE)
+	  elsif Keybinds.trigger?(:use)
 	    next if @sprites["itemwindow"].commands.empty?
 		pbSEPlay("GUI party switch")
 	    if @sprites["itemtext"].visible
@@ -457,7 +457,7 @@ class RaidScene
 		  @sprites["itemicon"].visible = true
 		  pbDrawImagePositions(@sprites["itembox"].bitmap, itembg)
 		end
-      elsif Input.trigger?(Input::BACK)
+      elsif Keybinds.trigger?(:back)
         pbSEPlay("GUI menu close")
         Input.update
         break
