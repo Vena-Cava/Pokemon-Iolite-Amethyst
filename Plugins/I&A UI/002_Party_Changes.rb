@@ -6,7 +6,11 @@ class PokemonPartyConfirmCancelSprite < Sprite
 
   def initialize(text, x, y, narrowbox = false, viewport = nil, action = nil)
     super(viewport)
-    @refreshBitmap = true
+    @text = text
+    @action = action
+    @narrowbox = narrowbox
+    @last_input_device = Keybinds.last_device rescue nil
+
     @bgsprite = ChangelingSprite.new(0, 0, viewport)
     if narrowbox
       @bgsprite.addBitmap("desel", "Graphics/UI/Party/icon_cancel_narrow")
@@ -16,33 +20,71 @@ class PokemonPartyConfirmCancelSprite < Sprite
       @bgsprite.addBitmap("sel", "Graphics/UI/Party/icon_cancel_sel")
     end
     @bgsprite.changeBitmap("desel")
-    @overlaysprite = BitmapSprite.new(@bgsprite.bitmap.width, @bgsprite.bitmap.height, viewport)
+
+    @base_width = @bgsprite.bitmap.width
+    @base_height = @bgsprite.bitmap.height
+    #@anchor_right = x + @base_width
+
+    @overlaysprite = Sprite.new(viewport)
+    @overlaysprite.bitmap = Bitmap.new(220, @base_height)
     @overlaysprite.z = self.z + 1
-    pbSetSystemFont(@overlaysprite.bitmap)
-    if action && defined?(Keybinds) && Keybinds.gamepad?
-      @overlaysprite.bitmap.clear
 
-      sheet = RPG::Cache.load_bitmap("Graphics/UI/", "controller_buttons")
-      button = Keybinds::GAMEPAD_BUTTONS[action]
-
-      src_rect = Rect.new(
-      button * 32,
-      $PokemonSystem.controller_layout * 32,
-      32,
-      32
-      )
-
-      @overlaysprite.bitmap.blt(8, narrowbox ? 0 : 6, sheet, src_rect)
-
-      textpos = [[text, 62, narrowbox ? 8 : 14, :left, Color.new(248, 248, 248), Color.new(40, 40, 40)]]
-    else
-      label = action ? Keybinds.button_name(action) : text
-      textpos = [[label, 56, narrowbox ? 8 : 14, :center, Color.new(248, 248, 248), Color.new(40, 40, 40)]]
-    end
-
-    pbDrawTextPositions(@overlaysprite.bitmap, textpos)
     self.x = x
     self.y = y
+
+    refresh_input_display
+  end
+
+  def refresh_input_display
+    return if disposed?
+
+    label = @action ? "#{Keybinds.button_name(@action)} - #{@text}" : @text
+
+    temp = Bitmap.new(1, 1)
+    pbSetSystemFont(temp)
+    text_width = temp.text_size(label).width
+    temp.dispose
+
+    if @action && defined?(Keybinds) && Keybinds.gamepad?
+      @box_width = [@base_width, @text.length * 10 + 64].max
+    else
+      @box_width = [@base_width, text_width + 32].max
+    end
+
+    @overlaysprite.bitmap.dispose if @overlaysprite.bitmap
+    @overlaysprite.bitmap = Bitmap.new(@box_width, @base_height)
+
+    pbSetSystemFont(@overlaysprite.bitmap)
+    @overlaysprite.bitmap.clear
+
+    @bgsprite.zoom_x = @box_width.to_f / @base_width
+
+    base = Color.new(248, 248, 248)
+    shdw = Color.new(40, 40, 40)
+
+    if @action && defined?(Keybinds) && Keybinds.gamepad?
+      sheet = RPG::Cache.load_bitmap("Graphics/UI/", "controller_buttons")
+      button = Keybinds::GAMEPAD_BUTTONS[@action]
+
+      src_rect = Rect.new(
+        button * 32,
+        $PokemonSystem.controller_layout * 32,
+        32,
+        32
+      )
+
+      @overlaysprite.bitmap.blt(8, @narrowbox ? 0 : 6, sheet, src_rect)
+
+      pbDrawTextPositions(@overlaysprite.bitmap, [
+        [@text, 48, @narrowbox ? 8 : 14, 0, base, shdw]
+      ])
+    else
+      pbDrawTextPositions(@overlaysprite.bitmap, [
+        [label, @box_width / 2, @narrowbox ? 8 : 14, 2, base, shdw]
+      ])
+    end
+
+    refresh
   end
 
   def dispose
@@ -82,13 +124,14 @@ class PokemonPartyConfirmCancelSprite < Sprite
   def refresh
     if @bgsprite && !@bgsprite.disposed?
       @bgsprite.changeBitmap((@selected) ? "sel" : "desel")
-      @bgsprite.x     = self.x
-      @bgsprite.y     = self.y
+      @bgsprite.x = self.x
+      @bgsprite.y = self.y
       @bgsprite.color = self.color
     end
+
     if @overlaysprite && !@overlaysprite.disposed?
-      @overlaysprite.x     = self.x
-      @overlaysprite.y     = self.y
+      @overlaysprite.x = self.x
+      @overlaysprite.y = self.y
       @overlaysprite.color = self.color
     end
   end
@@ -990,6 +1033,10 @@ class PokemonParty_Scene
       if @last_input_device != Keybinds.last_device
         @last_input_device = Keybinds.last_device
         refresh_storage_text
+
+        @sprites.each_value do |sprite|
+          sprite.refresh_input_display if sprite.respond_to?(:refresh_input_display)
+        end
       end
     end
     pbUpdateSpriteHash(@sprites)

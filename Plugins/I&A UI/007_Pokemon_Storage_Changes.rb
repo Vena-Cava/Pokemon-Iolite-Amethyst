@@ -624,95 +624,154 @@ class PokemonStorageScene
     @command = 1
   end
   
-def pbCreatePokemonGlow
-  white = Tone.new(255, 255, 255)
-  positions = [
-    [592, 134],   # left
-    [596, 134],   # right
-    [594, 132],   # up
-    [594, 136]    # down
-  ]
+  def pbCreatePokemonGlow
+    white = Tone.new(255, 255, 255)
+    positions = [
+      [592, 134],   # left
+      [596, 134],   # right
+      [594, 132],   # up
+      [594, 136]    # down
+    ]
 
-  positions.each_with_index do |pos, i|
-    key = "pokemonglow#{i + 1}"
-    @sprites[key]&.dispose
-    @sprites[key] = AutoMosaicPokemonSprite.new(@boxsidesviewport)
-    @sprites[key].setOffset(PictureOrigin::CENTER)
-    @sprites[key].x = pos[0]
-    @sprites[key].y = pos[1]
-    @sprites[key].z = 300
-    @sprites[key].tone = white
-    @sprites[key].opacity = 120
-    @sprites[key].visible = false
+    positions.each_with_index do |pos, i|
+      key = "pokemonglow#{i + 1}"
+      @sprites[key]&.dispose
+      @sprites[key] = AutoMosaicPokemonSprite.new(@boxsidesviewport)
+      @sprites[key].setOffset(PictureOrigin::CENTER)
+      @sprites[key].x = pos[0]
+      @sprites[key].y = pos[1]
+      @sprites[key].z = 300
+      @sprites[key].tone = white
+      @sprites[key].opacity = 120
+      @sprites[key].visible = false
+    end
+
+    @sprites["pokemon"].z = 301 if @sprites["pokemon"]
   end
 
-  @sprites["pokemon"].z = 301 if @sprites["pokemon"]
-end
+  def pbSetPokemonGlow(pokemon)
+    if !pokemon
+      4.times do |i|
+        glow = @sprites["pokemonglow#{i + 1}"]
+        glow.visible = false if glow && !glow.disposed?
+      end
+      @glowPokemon = nil
+      return
+    end
 
-def pbSetPokemonGlow(pokemon)
-  if !pokemon
+    changed = (@glowPokemon != pokemon)
+    @glowPokemon = pokemon
+
     4.times do |i|
       glow = @sprites["pokemonglow#{i + 1}"]
-      glow.visible = false if glow && !glow.disposed?
+      next if !glow || glow.disposed?
+
+      glow.visible = @sprites["pokemon"].visible
+
+      # Only reload the sprite if this is a different Pokémon.
+      glow.setPokemonBitmap(pokemon) if changed
     end
-    @glowPokemon = nil
-    return
+  end
+    
+  def pbPrevBoxNumber(box)
+    return (box + @storage.maxBoxes - 1) % @storage.maxBoxes
   end
 
-  changed = (@glowPokemon != pokemon)
-  @glowPokemon = pokemon
-
-  4.times do |i|
-    glow = @sprites["pokemonglow#{i + 1}"]
-    next if !glow || glow.disposed?
-
-    glow.visible = @sprites["pokemon"].visible
-
-    # Only reload the sprite if this is a different Pokémon.
-    glow.setPokemonBitmap(pokemon) if changed
+  def pbNextBoxNumber(box)
+    return (box + 1) % @storage.maxBoxes
   end
-end
-  
-def pbPrevBoxNumber(box)
-  return (box + @storage.maxBoxes - 1) % @storage.maxBoxes
-end
 
-def pbNextBoxNumber(box)
-  return (box + 1) % @storage.maxBoxes
-end
+  def pbCreateBoxSprite(box_number, x, y, scale, z = 0, opacity = BOX_SIDE_OPACITY)
+    box = PokemonBoxSprite.new(@storage, box_number, @boxviewport)
+    box.x = x
+    box.y = y
+    box.scale = scale
+    box.z = z
+    box.opacity = opacity
+    return box
+  end
 
-def pbCreateBoxSprite(box_number, x, y, scale, z = 0, opacity = BOX_SIDE_OPACITY)
-  box = PokemonBoxSprite.new(@storage, box_number, @boxviewport)
-  box.x = x
-  box.y = y
-  box.scale = scale
-  box.z = z
-  box.opacity = opacity
-  return box
-end
+  def pbCreateSideBoxes
+    current = @storage.currentBox
 
-def pbCreateSideBoxes
-  current = @storage.currentBox
+    @sprites["box_left"]&.dispose
+    @sprites["box_right"]&.dispose
 
-  @sprites["box_left"]&.dispose
-  @sprites["box_right"]&.dispose
+    @sprites["box_left"] = pbCreateBoxSprite(
+      pbPrevBoxNumber(current),
+      BOX_LEFT_X + SIDE_BOX_X_OFFSET,
+      BOX_SIDE_Y,
+      BOX_SIDE_SCALE,
+      0
+    )
 
-  @sprites["box_left"] = pbCreateBoxSprite(
-    pbPrevBoxNumber(current),
-    BOX_LEFT_X + SIDE_BOX_X_OFFSET,
-    BOX_SIDE_Y,
-    BOX_SIDE_SCALE,
-    0
-  )
+    @sprites["box_right"] = pbCreateBoxSprite(
+      pbNextBoxNumber(current),
+      BOX_RIGHT_X + SIDE_BOX_X_OFFSET,
+      BOX_SIDE_Y,
+      BOX_SIDE_SCALE,
+      0
+    )
+  end
 
-  @sprites["box_right"] = pbCreateBoxSprite(
-    pbNextBoxNumber(current),
-    BOX_RIGHT_X + SIDE_BOX_X_OFFSET,
-    BOX_SIDE_Y,
-    BOX_SIDE_SCALE,
-    0
-  )
-end
+  def refresh_box_jump_prompts
+    return if !@sprites["jumpup_prompt"] || !@sprites["jumpdown_prompt"]
+
+    base   = Color.new(248, 248, 248)
+    shadow = Color.new(40, 40, 40)
+
+    [["jumpup_prompt", :jumpup, "<", 228], ["jumpdown_prompt", :jumpdown, ">", 392]].each do |key, action, arrow, anchor_x|
+      sprite = @sprites[key]
+      bitmap = sprite.bitmap
+      bitmap.clear
+
+      if Keybinds.gamepad?
+        sheet = RPG::Cache.load_bitmap("Graphics/UI/", "controller_buttons")
+        button = Keybinds::GAMEPAD_BUTTONS[action]
+
+        src_rect = Rect.new(
+          button * 32,
+          $PokemonSystem.controller_layout * 32,
+          32,
+          32
+        )
+
+        if action == :jumpup
+          pbDrawTextPositions(bitmap, [[arrow, 0, 8, 0, base, shadow]])
+          bitmap.blt(20, 2, sheet, src_rect)
+        else
+          bitmap.blt(0, 2, sheet, src_rect)
+          pbDrawTextPositions(bitmap, [[arrow, 38, 8, 0, base, shadow]])
+        end
+      else
+        key_text = Keybinds.button_name(action)
+
+        if action == :jumpup
+          text = _INTL("{1} {2}", arrow, key_text)
+        else
+          text = _INTL("{1} {2}", key_text, arrow)
+        end
+
+        pbDrawTextPositions(bitmap, [[text, 0, 8, 0, base, shadow]])
+      end
+
+      if Keybinds.gamepad?
+        width = 56
+      else
+        key_text = Keybinds.button_name(action)
+        text = (action == :jumpup) ? _INTL("{1} {2}", arrow, key_text) : _INTL("{1} {2}", key_text, arrow)
+        width = bitmap.text_size(text).width
+      end
+
+      if action == :jumpup
+        sprite.x = anchor_x - width   # right edge lands exactly on anchor_x
+      else
+        sprite.x = anchor_x           # left edge starts exactly on anchor_x
+      end
+
+      sprite.y = 26
+    end
+  end
 
   def pbStartBox(screen, command)
     @screen = screen
@@ -728,28 +787,40 @@ end
     @viewport = Viewport.new(0, 0, Graphics.width, Graphics.height)
     @viewport.z = 99999
     @selection = 0
-	@last_box_column = 0
+    @last_box_column = 0
     @quickswap = false
-	@show_moves = false
+    @show_moves = false
     @sprites = {}
     @choseFromParty = false
     @command = command
-	panorama_path = (IASummary::IAVERSION == 2) ? "Graphics/UI/Storage/bg_pan_io" : "Graphics/UI/Summary/bg_pan_am"
-	@sprites["panorama1"] = IconSprite.new(0, 0, @bgviewport)
-	@sprites["panorama1"].setBitmap(panorama_path)
-	@sprites["panorama2"] = IconSprite.new(@sprites["panorama1"].bitmap.width, 0, @bgviewport)
-	@sprites["panorama2"].setBitmap(panorama_path)
+    panorama_path = (IASummary::IAVERSION == 2) ? "Graphics/UI/Storage/bg_pan_io" : "Graphics/UI/Summary/bg_pan_am"
+    @sprites["panorama1"] = IconSprite.new(0, 0, @bgviewport)
+    @sprites["panorama1"].setBitmap(panorama_path)
+    @sprites["panorama2"] = IconSprite.new(@sprites["panorama1"].bitmap.width, 0, @bgviewport)
+    @sprites["panorama2"].setBitmap(panorama_path)
     @sprites["box"] = PokemonBoxSprite.new(@storage, @storage.currentBox, @boxviewport)
-	pbCreateSideBoxes
+    pbCreateSideBoxes
     @sprites["boxsides"] = IconSprite.new(0, 0, @boxsidesviewport)
     @sprites["boxsides"].setBitmap("Graphics/UI/Storage/overlay_main")
     @sprites["overlay"] = BitmapSprite.new(Graphics.width, Graphics.height, @boxsidesviewport)
     pbSetSystemFont(@sprites["overlay"].bitmap)
+    @last_input_device = Keybinds.last_device rescue nil
+
+    @sprites["jumpup_prompt"] = BitmapSprite.new(160, 40, @boxsidesviewport)
+    @sprites["jumpup_prompt"].z = 20
+
+    @sprites["jumpdown_prompt"] = BitmapSprite.new(160, 40, @boxsidesviewport)
+    @sprites["jumpdown_prompt"].z = 20
+
+    pbSetSystemFont(@sprites["jumpup_prompt"].bitmap)
+    pbSetSystemFont(@sprites["jumpdown_prompt"].bitmap)
+
+    refresh_box_jump_prompts
     @sprites["pokemon"] = AutoMosaicPokemonSprite.new(@boxsidesviewport)
     @sprites["pokemon"].setOffset(PictureOrigin::CENTER)
     @sprites["pokemon"].x = 594
     @sprites["pokemon"].y = 134
-	pbCreatePokemonGlow
+    pbCreatePokemonGlow
     @sprites["boxparty"] = PokemonBoxPartySprite.new(@storage.party, @boxsidesviewport)
     #if command != 2   # Drop down tab only on Deposit
     #  @sprites["boxparty"].x = 182
@@ -845,104 +916,104 @@ end
     return ret
   end
 
-def pbSetArrow(arrow, selection)
-  case selection
-  when -1, -4, -5
-    arrow.x = 274
-    arrow.y = -24
-  when -2
-    arrow.x = 238
-    arrow.y = 278
-  when -3   # Exit
-    arrow.x = 282
-    arrow.y = 278
-  else
-    # Moved 40px left because the box moved from x 184 to x 144.
-    arrow.x = ((97 + (24 * (selection % PokemonBox::BOX_WIDTH))) * 2) - 40
-    arrow.y = (8 + (24 * (selection / PokemonBox::BOX_WIDTH))) * 2
+  def pbSetArrow(arrow, selection)
+    case selection
+    when -1, -4, -5
+      arrow.x = 274
+      arrow.y = -24
+    when -2
+      arrow.x = 238
+      arrow.y = 278
+    when -3   # Exit
+      arrow.x = 282
+      arrow.y = 278
+    else
+      # Moved 40px left because the box moved from x 184 to x 144.
+      arrow.x = ((97 + (24 * (selection % PokemonBox::BOX_WIDTH))) * 2) - 40
+      arrow.y = (8 + (24 * (selection / PokemonBox::BOX_WIDTH))) * 2
+    end
   end
-end
 
-def pbPartySlotFromBoxSelection(selection, entering_from_left)
-  box_row = selection / PokemonBox::BOX_WIDTH
+  def pbPartySlotFromBoxSelection(selection, entering_from_left)
+    box_row = selection / PokemonBox::BOX_WIDTH
 
-  party_row = case box_row
+    party_row = case box_row
+                when 0 then 0
+                when 1, 2 then 1
+                else 2
+                end
+
+    return (party_row * 2) + (entering_from_left ? 1 : 0)
+  end
+
+  def pbBoxSelectionFromPartySlot(selection, leaving_left)
+    party_row = selection / 2
+
+    box_row = case party_row
               when 0 then 0
-              when 1, 2 then 1
-              else 2
+              when 1 then 1
+              else 3
               end
 
-  return (party_row * 2) + (entering_from_left ? 1 : 0)
-end
-
-def pbBoxSelectionFromPartySlot(selection, leaving_left)
-  party_row = selection / 2
-
-  box_row = case party_row
-            when 0 then 0
-            when 1 then 1
-            else 3
-            end
-
-  box_col = leaving_left ? PokemonBox::BOX_WIDTH - 1 : 0
-  return (box_row * PokemonBox::BOX_WIDTH) + box_col
-end
-
-def pbChangeSelection(key, selection)
-  @last_box_column = selection % PokemonBox::BOX_WIDTH if selection >= 0
-
-  case key
-  when :up
-    if selection == -1
-      selection = -3
-    elsif selection == -3
-      selection = 24 + @last_box_column
-    else
-      selection -= PokemonBox::BOX_WIDTH
-      selection = -1 if selection < 0
-    end
-
-  when :down
-    if selection == -1
-      selection = @last_box_column
-    elsif selection == -3
-      selection = -1
-    elsif selection >= 24 && selection <= 29
-      selection = -3
-    else
-      selection += PokemonBox::BOX_WIDTH
-      selection = -3 if selection >= PokemonBox::BOX_SIZE
-    end
-
-  when :left
-    case selection
-    when 0  then selection = [:party, 1]
-    when 6  then selection = [:party, 1]
-    when 12 then selection = [:party, 3]
-    when 18 then selection = [:party, 3]
-    when 24 then selection = [:party, 5]
-    else
-      selection = -4 if selection == -1
-      selection = PokemonBox::BOX_SIZE - 1 if selection == -3
-      selection -= 1 if selection >= 0
-    end
-
-  when :right
-    case selection
-    when 5  then selection = [:party, 0]
-    when 11 then selection = [:party, 2]
-    when 17 then selection = [:party, 2]
-    when 23 then selection = [:party, 4]
-    when 29 then selection = [:party, 4]
-    else
-      selection = -5 if selection == -1
-      selection = 0 if selection == -3
-      selection += 1 if selection >= 0
-    end
+    box_col = leaving_left ? PokemonBox::BOX_WIDTH - 1 : 0
+    return (box_row * PokemonBox::BOX_WIDTH) + box_col
   end
 
-  return selection
-end
+  def pbChangeSelection(key, selection)
+    @last_box_column = selection % PokemonBox::BOX_WIDTH if selection >= 0
+
+    case key
+    when :up
+      if selection == -1
+        selection = -3
+      elsif selection == -3
+        selection = 24 + @last_box_column
+      else
+        selection -= PokemonBox::BOX_WIDTH
+        selection = -1 if selection < 0
+      end
+
+    when :down
+      if selection == -1
+        selection = @last_box_column
+      elsif selection == -3
+        selection = -1
+      elsif selection >= 24 && selection <= 29
+        selection = -3
+      else
+        selection += PokemonBox::BOX_WIDTH
+        selection = -3 if selection >= PokemonBox::BOX_SIZE
+      end
+
+    when :left
+      case selection
+      when 0  then selection = [:party, 1]
+      when 6  then selection = [:party, 1]
+      when 12 then selection = [:party, 3]
+      when 18 then selection = [:party, 3]
+      when 24 then selection = [:party, 5]
+      else
+        selection = -4 if selection == -1
+        selection = PokemonBox::BOX_SIZE - 1 if selection == -3
+        selection -= 1 if selection >= 0
+      end
+
+    when :right
+      case selection
+      when 5  then selection = [:party, 0]
+      when 11 then selection = [:party, 2]
+      when 17 then selection = [:party, 2]
+      when 23 then selection = [:party, 4]
+      when 29 then selection = [:party, 4]
+      else
+        selection = -5 if selection == -1
+        selection = 0 if selection == -3
+        selection += 1 if selection >= 0
+      end
+    end
+
+    return selection
+  end
 
   def pbPartySetArrow(arrow, selection)
     return if selection < 0
@@ -971,35 +1042,35 @@ end
     arrow.y = yvalues[selection]
   end
 
-def pbPartyChangeSelection(key, selection)
-  case key
-  when :left
-    return [:box, 5]  if selection == 0
-    return 0          if selection == 1
-    return [:box, 11] if selection == 2
-    return 2          if selection == 3
-    return [:box, 23] if selection == 4
-    return 4          if selection == 5
+  def pbPartyChangeSelection(key, selection)
+    case key
+    when :left
+      return [:box, 5]  if selection == 0
+      return 0          if selection == 1
+      return [:box, 11] if selection == 2
+      return 2          if selection == 3
+      return [:box, 23] if selection == 4
+      return 4          if selection == 5
 
-  when :right
-    return 1          if selection == 0
-    return [:box, 0]  if selection == 1
-    return 3          if selection == 2
-    return [:box, 12] if selection == 3
-    return 5          if selection == 4
-    return [:box, 24] if selection == 5
+    when :right
+      return 1          if selection == 0
+      return [:box, 0]  if selection == 1
+      return 3          if selection == 2
+      return [:box, 12] if selection == 3
+      return 5          if selection == 4
+      return [:box, 24] if selection == 5
 
-  when :up
-    selection -= 1
-    selection = Settings::MAX_PARTY_SIZE - 1 if selection < 0
+    when :up
+      selection -= 1
+      selection = Settings::MAX_PARTY_SIZE - 1 if selection < 0
 
-  when :down
-    selection += 1
-    selection = 0 if selection >= Settings::MAX_PARTY_SIZE
+    when :down
+      selection += 1
+      selection = 0 if selection >= Settings::MAX_PARTY_SIZE
+    end
+
+    return selection
   end
-
-  return selection
-end
 
   def pbSelectBoxInternal(_party)
     selection = @selection
@@ -1089,34 +1160,34 @@ end
     end
   end
 
-def pbSelectBox(party)
-  loop do
-    if @choseFromParty
-      ret = pbSelectPartyInternal(party, false)
+  def pbSelectBox(party)
+    loop do
+      if @choseFromParty
+        ret = pbSelectPartyInternal(party, false)
 
-      if ret == -2
-        @choseFromParty = false
-        selection = @selection
-        pbSetArrow(@sprites["arrow"], selection)
-        pbUpdateOverlay(selection)
-        pbSetMosaic(selection)
-        next
-      elsif ret >= 0
-        return [-1, ret]
-      else
-        return nil
+        if ret == -2
+          @choseFromParty = false
+          selection = @selection
+          pbSetArrow(@sprites["arrow"], selection)
+          pbUpdateOverlay(selection)
+          pbSetMosaic(selection)
+          next
+        elsif ret >= 0
+          return [-1, ret]
+        else
+          return nil
+        end
       end
+
+      ret = pbSelectBoxInternal(party)
+
+      if ret && ret[0] == -1
+        @choseFromParty = true
+      end
+
+      return ret
     end
-
-    ret = pbSelectBoxInternal(party)
-
-    if ret && ret[0] == -1
-      @choseFromParty = true
-    end
-
-    return ret
   end
-end
 
   def pbSelectPartyInternal(party, depositing)
     selection = @selection
@@ -1200,129 +1271,129 @@ end
     Input.update
   end
 
-def pbSwitchBoxToRight(new_box_number)
-  old_left   = @sprites["box_left"]
-  old_center = @sprites["box"]
-  old_right  = @sprites["box_right"]
-  new_right = pbCreateBoxSprite(
-    pbNextBoxNumber(new_box_number),
-    Graphics.width + 20,
-    BOX_SIDE_Y,
-    BOX_SIDE_SCALE,
-    0
-  )
-  @sprites["box_right_new"] = new_right
-  timer_start = System.uptime
-  loop do
-    t = [(System.uptime - timer_start) / BOX_SWITCH_TIME, 1.0].min
-    old_left.x   = lerp(BOX_LEFT_X + SIDE_BOX_X_OFFSET, -180, BOX_SWITCH_TIME, timer_start, System.uptime)
-    old_center.x = lerp(BOX_CENTER_X, BOX_LEFT_X + SIDE_BOX_X_OFFSET, BOX_SWITCH_TIME, timer_start, System.uptime)
-    old_center.y = lerp(BOX_CENTER_Y, BOX_SIDE_Y, BOX_SWITCH_TIME, timer_start, System.uptime)
-    old_center.scale = lerp(1.0, BOX_SIDE_SCALE, BOX_SWITCH_TIME, timer_start, System.uptime)
-    old_right.x = lerp(BOX_RIGHT_X + SIDE_BOX_X_OFFSET, BOX_CENTER_X, BOX_SWITCH_TIME, timer_start, System.uptime)
-    old_right.y = lerp(BOX_SIDE_Y, BOX_CENTER_Y, BOX_SWITCH_TIME, timer_start, System.uptime)
-    old_right.scale = lerp(BOX_SIDE_SCALE, 1.0, BOX_SWITCH_TIME, timer_start, System.uptime)
-	old_center.opacity = lerp(BOX_CENTER_OPACITY, BOX_SIDE_OPACITY, BOX_SWITCH_TIME, timer_start, System.uptime)
-	old_right.opacity  = lerp(BOX_SIDE_OPACITY, BOX_CENTER_OPACITY, BOX_SWITCH_TIME, timer_start, System.uptime)
-	old_left.opacity   = lerp(BOX_SIDE_OPACITY, 0, BOX_SWITCH_TIME, timer_start, System.uptime)
-	new_right.opacity  = lerp(0, BOX_SIDE_OPACITY, BOX_SWITCH_TIME, timer_start, System.uptime)
-    new_right.x = lerp(Graphics.width + 20, BOX_RIGHT_X + SIDE_BOX_X_OFFSET, BOX_SWITCH_TIME, timer_start, System.uptime)
-    self.update
-    Graphics.update
-    break if t >= 1.0
+  def pbSwitchBoxToRight(new_box_number)
+    old_left   = @sprites["box_left"]
+    old_center = @sprites["box"]
+    old_right  = @sprites["box_right"]
+    new_right = pbCreateBoxSprite(
+      pbNextBoxNumber(new_box_number),
+      Graphics.width + 20,
+      BOX_SIDE_Y,
+      BOX_SIDE_SCALE,
+      0
+    )
+    @sprites["box_right_new"] = new_right
+    timer_start = System.uptime
+    loop do
+      t = [(System.uptime - timer_start) / BOX_SWITCH_TIME, 1.0].min
+      old_left.x   = lerp(BOX_LEFT_X + SIDE_BOX_X_OFFSET, -180, BOX_SWITCH_TIME, timer_start, System.uptime)
+      old_center.x = lerp(BOX_CENTER_X, BOX_LEFT_X + SIDE_BOX_X_OFFSET, BOX_SWITCH_TIME, timer_start, System.uptime)
+      old_center.y = lerp(BOX_CENTER_Y, BOX_SIDE_Y, BOX_SWITCH_TIME, timer_start, System.uptime)
+      old_center.scale = lerp(1.0, BOX_SIDE_SCALE, BOX_SWITCH_TIME, timer_start, System.uptime)
+      old_right.x = lerp(BOX_RIGHT_X + SIDE_BOX_X_OFFSET, BOX_CENTER_X, BOX_SWITCH_TIME, timer_start, System.uptime)
+      old_right.y = lerp(BOX_SIDE_Y, BOX_CENTER_Y, BOX_SWITCH_TIME, timer_start, System.uptime)
+      old_right.scale = lerp(BOX_SIDE_SCALE, 1.0, BOX_SWITCH_TIME, timer_start, System.uptime)
+    old_center.opacity = lerp(BOX_CENTER_OPACITY, BOX_SIDE_OPACITY, BOX_SWITCH_TIME, timer_start, System.uptime)
+    old_right.opacity  = lerp(BOX_SIDE_OPACITY, BOX_CENTER_OPACITY, BOX_SWITCH_TIME, timer_start, System.uptime)
+    old_left.opacity   = lerp(BOX_SIDE_OPACITY, 0, BOX_SWITCH_TIME, timer_start, System.uptime)
+    new_right.opacity  = lerp(0, BOX_SIDE_OPACITY, BOX_SWITCH_TIME, timer_start, System.uptime)
+      new_right.x = lerp(Graphics.width + 20, BOX_RIGHT_X + SIDE_BOX_X_OFFSET, BOX_SWITCH_TIME, timer_start, System.uptime)
+      self.update
+      Graphics.update
+      break if t >= 1.0
+    end
+    old_left.dispose
+    @sprites.delete("box_left")
+    @sprites.delete("box_right_new")
+    @sprites["box_left"]          = old_center
+    @sprites["box"]               = old_right
+    @sprites["box_right"]         = new_right
+    @sprites["box_left"].z        = 0
+    @sprites["box"].z             = 5
+    @sprites["box_right"].z       = 0
+    @sprites["box_left"].z        = 0
+    @sprites["box"].z             = 5
+    @sprites["box_right"].z       = 0
+    @sprites["box_left"].opacity  = BOX_SIDE_OPACITY
+    @sprites["box"].opacity       = BOX_CENTER_OPACITY
+    @sprites["box_right"].opacity = BOX_SIDE_OPACITY
+    @sprites["box_left"].refresh
+    @sprites["box"].refresh
+    @sprites["box_right"].refresh
+    Input.update
   end
-  old_left.dispose
-  @sprites.delete("box_left")
-  @sprites.delete("box_right_new")
-  @sprites["box_left"]          = old_center
-  @sprites["box"]               = old_right
-  @sprites["box_right"]         = new_right
-  @sprites["box_left"].z        = 0
-  @sprites["box"].z             = 5
-  @sprites["box_right"].z       = 0
-  @sprites["box_left"].z        = 0
-  @sprites["box"].z             = 5
-  @sprites["box_right"].z       = 0
-  @sprites["box_left"].opacity  = BOX_SIDE_OPACITY
-  @sprites["box"].opacity       = BOX_CENTER_OPACITY
-  @sprites["box_right"].opacity = BOX_SIDE_OPACITY
-  @sprites["box_left"].refresh
-  @sprites["box"].refresh
-  @sprites["box_right"].refresh
-  Input.update
-end
 
-def pbSwitchBoxToLeft(new_box_number)
-  old_left   = @sprites["box_left"]
-  old_center = @sprites["box"]
-  old_right  = @sprites["box_right"]
-  new_left = pbCreateBoxSprite(
-    pbPrevBoxNumber(new_box_number),
-    -180 + SIDE_BOX_X_OFFSET,
-    BOX_SIDE_Y,
-    BOX_SIDE_SCALE,
-    0
-  )
-  @sprites["box_left_new"] = new_left
-  timer_start = System.uptime
-  loop do
-    t = [(System.uptime - timer_start) / BOX_SWITCH_TIME, 1.0].min
-    old_right.x  = lerp(BOX_RIGHT_X + SIDE_BOX_X_OFFSET, Graphics.width + 20, BOX_SWITCH_TIME, timer_start, System.uptime)
-    old_center.x = lerp(BOX_CENTER_X, BOX_RIGHT_X + SIDE_BOX_X_OFFSET, BOX_SWITCH_TIME, timer_start, System.uptime)
-    old_center.y = lerp(BOX_CENTER_Y, BOX_SIDE_Y, BOX_SWITCH_TIME, timer_start, System.uptime)
-    old_center.scale = lerp(1.0, BOX_SIDE_SCALE, BOX_SWITCH_TIME, timer_start, System.uptime)
-    old_left.x = lerp(BOX_LEFT_X + SIDE_BOX_X_OFFSET, BOX_CENTER_X, BOX_SWITCH_TIME, timer_start, System.uptime)
-    old_left.y = lerp(BOX_SIDE_Y, BOX_CENTER_Y, BOX_SWITCH_TIME, timer_start, System.uptime)
-    old_left.scale = lerp(BOX_SIDE_SCALE, 1.0, BOX_SWITCH_TIME, timer_start, System.uptime)
-	old_center.opacity = lerp(BOX_CENTER_OPACITY, BOX_SIDE_OPACITY, BOX_SWITCH_TIME, timer_start, System.uptime)
-	old_left.opacity   = lerp(BOX_SIDE_OPACITY, BOX_CENTER_OPACITY, BOX_SWITCH_TIME, timer_start, System.uptime)
-	old_right.opacity  = lerp(BOX_SIDE_OPACITY, 0, BOX_SWITCH_TIME, timer_start, System.uptime)
-	new_left.opacity   = lerp(0, BOX_SIDE_OPACITY, BOX_SWITCH_TIME, timer_start, System.uptime)
-    new_left.x = lerp(-180 + SIDE_BOX_X_OFFSET, BOX_LEFT_X + SIDE_BOX_X_OFFSET, BOX_SWITCH_TIME, timer_start, System.uptime)
-    self.update
-    Graphics.update
-    break if t >= 1.0
+  def pbSwitchBoxToLeft(new_box_number)
+    old_left   = @sprites["box_left"]
+    old_center = @sprites["box"]
+    old_right  = @sprites["box_right"]
+    new_left = pbCreateBoxSprite(
+      pbPrevBoxNumber(new_box_number),
+      -180 + SIDE_BOX_X_OFFSET,
+      BOX_SIDE_Y,
+      BOX_SIDE_SCALE,
+      0
+    )
+    @sprites["box_left_new"] = new_left
+    timer_start = System.uptime
+    loop do
+      t = [(System.uptime - timer_start) / BOX_SWITCH_TIME, 1.0].min
+      old_right.x  = lerp(BOX_RIGHT_X + SIDE_BOX_X_OFFSET, Graphics.width + 20, BOX_SWITCH_TIME, timer_start, System.uptime)
+      old_center.x = lerp(BOX_CENTER_X, BOX_RIGHT_X + SIDE_BOX_X_OFFSET, BOX_SWITCH_TIME, timer_start, System.uptime)
+      old_center.y = lerp(BOX_CENTER_Y, BOX_SIDE_Y, BOX_SWITCH_TIME, timer_start, System.uptime)
+      old_center.scale = lerp(1.0, BOX_SIDE_SCALE, BOX_SWITCH_TIME, timer_start, System.uptime)
+      old_left.x = lerp(BOX_LEFT_X + SIDE_BOX_X_OFFSET, BOX_CENTER_X, BOX_SWITCH_TIME, timer_start, System.uptime)
+      old_left.y = lerp(BOX_SIDE_Y, BOX_CENTER_Y, BOX_SWITCH_TIME, timer_start, System.uptime)
+      old_left.scale = lerp(BOX_SIDE_SCALE, 1.0, BOX_SWITCH_TIME, timer_start, System.uptime)
+    old_center.opacity = lerp(BOX_CENTER_OPACITY, BOX_SIDE_OPACITY, BOX_SWITCH_TIME, timer_start, System.uptime)
+    old_left.opacity   = lerp(BOX_SIDE_OPACITY, BOX_CENTER_OPACITY, BOX_SWITCH_TIME, timer_start, System.uptime)
+    old_right.opacity  = lerp(BOX_SIDE_OPACITY, 0, BOX_SWITCH_TIME, timer_start, System.uptime)
+    new_left.opacity   = lerp(0, BOX_SIDE_OPACITY, BOX_SWITCH_TIME, timer_start, System.uptime)
+      new_left.x = lerp(-180 + SIDE_BOX_X_OFFSET, BOX_LEFT_X + SIDE_BOX_X_OFFSET, BOX_SWITCH_TIME, timer_start, System.uptime)
+      self.update
+      Graphics.update
+      break if t >= 1.0
+    end
+    old_right.dispose
+    @sprites.delete("box_right")
+    @sprites.delete("box_left_new")
+    @sprites["box_right"]         = old_center
+    @sprites["box"]               = old_left
+    @sprites["box_left"]          = new_left
+    @sprites["box_left"].z        = 0
+    @sprites["box"].z             = 5
+    @sprites["box_right"].z       = 0
+    @sprites["box_left"].z        = 0
+    @sprites["box"].z             = 5
+    @sprites["box_right"].z       = 0
+    @sprites["box_left"].opacity  = BOX_SIDE_OPACITY
+    @sprites["box"].opacity       = BOX_CENTER_OPACITY
+    @sprites["box_right"].opacity = BOX_SIDE_OPACITY
+    @sprites["box_left"].refresh
+    @sprites["box"].refresh
+    @sprites["box_right"].refresh
+    Input.update
   end
-  old_right.dispose
-  @sprites.delete("box_right")
-  @sprites.delete("box_left_new")
-  @sprites["box_right"]         = old_center
-  @sprites["box"]               = old_left
-  @sprites["box_left"]          = new_left
-  @sprites["box_left"].z        = 0
-  @sprites["box"].z             = 5
-  @sprites["box_right"].z       = 0
-  @sprites["box_left"].z        = 0
-  @sprites["box"].z             = 5
-  @sprites["box_right"].z       = 0
-  @sprites["box_left"].opacity  = BOX_SIDE_OPACITY
-  @sprites["box"].opacity       = BOX_CENTER_OPACITY
-  @sprites["box_right"].opacity = BOX_SIDE_OPACITY
-  @sprites["box_left"].refresh
-  @sprites["box"].refresh
-  @sprites["box_right"].refresh
-  Input.update
-end
 
-def pbJumpToBox(newbox)
-  return if newbox < 0
-  return if @storage.currentBox == newbox
-  @sprites["box"]&.dispose
-  @sprites["box_left"]&.dispose
-  @sprites["box_right"]&.dispose
-  @storage.currentBox = newbox
-  @sprites["box"] = PokemonBoxSprite.new(@storage, newbox, @boxviewport)
-  @sprites["box"].x = BOX_CENTER_X
-  @sprites["box"].y = BOX_CENTER_Y
-  @sprites["box"].zoom_x = 1.0
-  @sprites["box"].zoom_y = 1.0
-  @sprites["box"].refreshBox = true
-  @sprites["box"].refresh
-  pbCreateSideBoxes
-  pbSetArrow(@sprites["arrow"], @selection)
-  pbUpdateOverlay(@selection)
-  pbSetMosaic(@selection)
-end
+  def pbJumpToBox(newbox)
+    return if newbox < 0
+    return if @storage.currentBox == newbox
+    @sprites["box"]&.dispose
+    @sprites["box_left"]&.dispose
+    @sprites["box_right"]&.dispose
+    @storage.currentBox = newbox
+    @sprites["box"] = PokemonBoxSprite.new(@storage, newbox, @boxviewport)
+    @sprites["box"].x = BOX_CENTER_X
+    @sprites["box"].y = BOX_CENTER_Y
+    @sprites["box"].zoom_x = 1.0
+    @sprites["box"].zoom_y = 1.0
+    @sprites["box"].refreshBox = true
+    @sprites["box"].refresh
+    pbCreateSideBoxes
+    pbSetArrow(@sprites["arrow"], @selection)
+    pbUpdateOverlay(@selection)
+    pbSetMosaic(@selection)
+  end
 
   def pbSetMosaic(selection)
     return if @screen.pbHeldPokemon
@@ -1381,25 +1452,25 @@ end
 #    @sprites["arrow"].visible = true
 #  end
 
-def pbHold(selected)
-  pbSEPlay("GUI storage pick up")
+  def pbHold(selected)
+    pbSEPlay("GUI storage pick up")
 
-  if selected[0] == -1
-    @sprites["boxparty"].grabPokemon(selected[1], @sprites["arrow"])
-    @selection = selected[1]
-    @choseFromParty = true
-  else
-    @sprites["box"].grabPokemon(selected[1], @sprites["arrow"])
-    @selection = selected[1]
-    @choseFromParty = false
-  end
+    if selected[0] == -1
+      @sprites["boxparty"].grabPokemon(selected[1], @sprites["arrow"])
+      @selection = selected[1]
+      @choseFromParty = true
+    else
+      @sprites["box"].grabPokemon(selected[1], @sprites["arrow"])
+      @selection = selected[1]
+      @choseFromParty = false
+    end
 
-  while @sprites["arrow"].grabbing?
-    Graphics.update
-    Input.update
-    self.update
+    while @sprites["arrow"].grabbing?
+      Graphics.update
+      Input.update
+      self.update
+    end
   end
-end
 
   def pbSwap(selected, _heldpoke)
     pbSEPlay("GUI storage pick up")
@@ -1688,91 +1759,91 @@ end
     end
   end
   
-def pbShortenTextToFit(bitmap, text, max_width)
-  return text if bitmap.text_size(text).width <= max_width
+  def pbShortenTextToFit(bitmap, text, max_width)
+    return text if bitmap.text_size(text).width <= max_width
 
-  ellipsis = "..."
-  shortened = text.clone
+    ellipsis = "..."
+    shortened = text.clone
 
-  while shortened.length > 0
-    shortened = shortened[0...-1]
-    test_text = shortened + ellipsis
-    return test_text if bitmap.text_size(test_text).width <= max_width
+    while shortened.length > 0
+      shortened = shortened[0...-1]
+      test_text = shortened + ellipsis
+      return test_text if bitmap.text_size(test_text).width <= max_width
+    end
+
+    return ellipsis
   end
 
-  return ellipsis
-end
-
-def pbMoveTypeBoxPosition(type)
-  positions = {
-    :NORMAL   => 0,
-    :FIGHTING => 1,
-    :FLYING   => 2,
-    :POISON   => 3,
-    :GROUND   => 4,
-    :ROCK     => 5,
-    :BUG      => 6,
-    :GHOST    => 7,
-    :STEEL    => 8,
-    :QMARKS   => 9,
-    :FIRE     => 10,
-    :WATER    => 11,
-    :GRASS    => 12,
-    :ELECTRIC => 13,
-    :PSYCHIC  => 14,
-    :ICE      => 15,
-    :DRAGON   => 16,
-    :DARK     => 17,
-    :FAIRY    => 18,
-    :STELLAR  => 19
-  }
-  return positions[type] || 0
-end
-
-def pbMoveTypeShadowColor(type)
-  case type
-  when :NORMAL
-    return Color.new(99, 99, 64)
-  when :FIGHTING
-    return Color.new(82, 21, 18)
-  when :FLYING
-    return Color.new(57, 49, 82)
-  when :POISON
-    return Color.new(57, 49, 82)
-  when :GROUND
-    return Color.new(82, 70, 38)
-  when :ROCK
-    return Color.new(82, 70, 25)
-  when :GHOST
-    return Color.new(60, 47, 82)
-  when :STEEL
-    return Color.new(73, 73, 82)
-  when :QMARKS
-    return Color.new(53, 82, 73)
-  when :FIRE
-    return Color.new(82, 44, 16)
-  when :WATER
-    return Color.new(36, 50, 82)
-  when :GRASS
-    return Color.new(49, 82, 33)
-  when :ELECTRIC
-    return Color.new(82, 69, 16)
-  when :PSYCHIC
-    return Color.new(82, 29, 45)
-  when :ICE
-    return Color.new(59, 82, 82)
-  when :DRAGON
-    return Color.new(37, 19, 82)
-  when :DARK
-    return Color.new(82, 64, 53)
-  when :FAIRY
-    return Color.new(82, 57, 60)
-  when :STELLAR
-    return Color.new(128, 120, 112)
-  else
-    return Color.new(80, 80, 80)
+  def pbMoveTypeBoxPosition(type)
+    positions = {
+      :NORMAL   => 0,
+      :FIGHTING => 1,
+      :FLYING   => 2,
+      :POISON   => 3,
+      :GROUND   => 4,
+      :ROCK     => 5,
+      :BUG      => 6,
+      :GHOST    => 7,
+      :STEEL    => 8,
+      :QMARKS   => 9,
+      :FIRE     => 10,
+      :WATER    => 11,
+      :GRASS    => 12,
+      :ELECTRIC => 13,
+      :PSYCHIC  => 14,
+      :ICE      => 15,
+      :DRAGON   => 16,
+      :DARK     => 17,
+      :FAIRY    => 18,
+      :STELLAR  => 19
+    }
+    return positions[type] || 0
   end
-end
+
+  def pbMoveTypeShadowColor(type)
+    case type
+    when :NORMAL
+      return Color.new(99, 99, 64)
+    when :FIGHTING
+      return Color.new(82, 21, 18)
+    when :FLYING
+      return Color.new(57, 49, 82)
+    when :POISON
+      return Color.new(57, 49, 82)
+    when :GROUND
+      return Color.new(82, 70, 38)
+    when :ROCK
+      return Color.new(82, 70, 25)
+    when :GHOST
+      return Color.new(60, 47, 82)
+    when :STEEL
+      return Color.new(73, 73, 82)
+    when :QMARKS
+      return Color.new(53, 82, 73)
+    when :FIRE
+      return Color.new(82, 44, 16)
+    when :WATER
+      return Color.new(36, 50, 82)
+    when :GRASS
+      return Color.new(49, 82, 33)
+    when :ELECTRIC
+      return Color.new(82, 69, 16)
+    when :PSYCHIC
+      return Color.new(82, 29, 45)
+    when :ICE
+      return Color.new(59, 82, 82)
+    when :DRAGON
+      return Color.new(37, 19, 82)
+    when :DARK
+      return Color.new(82, 64, 53)
+    when :FAIRY
+      return Color.new(82, 57, 60)
+    when :STELLAR
+      return Color.new(128, 120, 112)
+    else
+      return Color.new(80, 80, 80)
+    end
+  end
 
   def pbUpdateOverlay(selection, party = nil)
     overlay = @sprites["overlay"].bitmap
@@ -1874,6 +1945,13 @@ end
   end
 
   def pbUpdate
+    if defined?(Keybinds)
+      Keybinds.update
+      if @last_input_device != Keybinds.last_device
+        @last_input_device = Keybinds.last_device
+        refresh_box_jump_prompts
+      end
+    end
     pbUpdateSpriteHash(@sprites)
 
     return if !IASummary::PANORAMA
