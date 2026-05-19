@@ -246,6 +246,39 @@ module Keybinds
     @consume_until_released.delete(action) if defined?(@consume_until_released)
   end
   
+  def self.wait_for_all_released
+    loop do
+      Graphics.update
+      Input.update
+
+      any_pressed = false
+
+      KEYBOARD_BUTTONS.each_key do |action|
+        any_pressed = true if press?(action)
+      end
+
+      GAMEPAD_BUTTONS.each_key do |action|
+        any_pressed = true if press?(action)
+      end
+
+      break if !any_pressed
+    end
+
+    @last_press_states.clear if defined?(@last_press_states)
+    @repeat_count.clear if defined?(@repeat_count)
+  end
+  
+  def self.keyboard_key_trigger?(key)
+    @raw_key_last ||= {}
+
+    current = keyboard_key_pressed?(key)
+    last = @raw_key_last[key] || false
+
+    @raw_key_last[key] = current
+
+    return current && !last
+  end
+  
   def self.controller_button_pressed?(button)
     states = Input::Controller.raw_button_states rescue []
     return true if states[button]

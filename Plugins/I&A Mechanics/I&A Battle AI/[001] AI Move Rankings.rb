@@ -496,3 +496,52 @@ Battle::AI::Handlers::GeneralMoveScore.add(:ignore_psychic_terrain_priority_fix,
 #===============================================================================
 Battle::AI::Handlers::MoveEffectScore.copy("LowerUserAtk1",
                                            "AddMoneyGainedFromBattleLowerUserAtk1")
+
+#===============================================================================
+# Troll Toll AI
+# Makes AI avoid switching / pivot moves if an opposing Pokémon has Troll Toll.
+#===============================================================================
+module IA_TrollTollAI
+  SWITCHING_MOVES = [
+    "SwitchOutUserStatusMove",          # Teleport-style
+    "SwitchOutUserDamagingMove",        # U-turn / Volt Switch / Flip Turn
+    "LowerTargetAtkSpAtk1SwitchOutUser",# Parting Shot
+    "SwitchOutUserPassOnEffects",       # Baton Pass
+    "UserMakeSubstituteSwitchOut",      # Shed Tail
+    "SwitchOutUserAirborne",            # Maglev Switch
+    "SwitchOutUserStartHailWeather"     # Chilly Reception-style
+  ]
+
+  def self.foe_has_troll_toll?(user, ai)
+    ai.each_foe_battler(user.side) do |b, i|
+      next true if b && !b.fainted? && b.has_active_ability?(:TROLLTOLL)
+    end
+    return false
+  end
+end
+
+# Avoid hard switching.
+Battle::AI::Handlers::ShouldNotSwitch.add(:troll_toll,
+  proc { |battler, reserves, ai, battle|
+    next false if !IA_TrollTollAI.foe_has_troll_toll?(battler, ai)
+    next false if battler.effects[PBEffects::PerishSong] == 1   # Emergency case
+
+    PBDebug.log_ai("#{battler.name} doesn't want to switch because of Troll Toll")
+    next true
+  }
+)
+
+# Avoid pivot/switching moves.
+IA_TrollTollAI::SWITCHING_MOVES.each do |code|
+  Battle::AI::Handlers::MoveEffectScore.add(code,
+    proc { |score, move, user, ai, battle|
+      next score if !IA_TrollTollAI.foe_has_troll_toll?(user, ai)
+      next score + 10 if user.effects[PBEffects::PerishSong] == 1 # Emergency case
+
+      score -= 35
+      score -= 15 if user.hp <= user.totalhp / 3
+
+      next score
+    }
+  )
+end

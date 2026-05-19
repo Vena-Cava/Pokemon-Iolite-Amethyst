@@ -695,7 +695,10 @@ class Window_InputNumberPokemon < SpriteWindow_Base
       refresh
     end
     if self.active
-      if Keybinds.repeat?(:up) || Keybinds.repeat?(:down)
+      up_pressed   = Keybinds.repeat?(:up)
+      down_pressed = Keybinds.repeat?(:down)
+
+      if up_pressed || down_pressed
         pbPlayCursorSE
         if @index == 0 && @sign
           @negative = !@negative
@@ -703,11 +706,13 @@ class Window_InputNumberPokemon < SpriteWindow_Base
           place = 10**(digits - 1 - @index)
           n = @number / place % 10
           @number -= n * place
-          if Keybinds.repeat?(:up)
+
+          if up_pressed
             n = (n + 1) % 10
-          elsif Keybinds.repeat?(:down)
+          elsif down_pressed
             n = (n + 9) % 10
           end
+
           @number += n * place
         end
         refresh
@@ -1244,8 +1249,36 @@ class Window_CommandPokemon < Window_DrawableCommand
   def drawItem(index, _count, rect)
     pbSetSystemFont(self.contents) if @starting
     rect = drawCursor(index, rect)
-    pbDrawShadowText(self.contents, rect.x, rect.y + (self.contents.text_offset_y || 0),
-                     rect.width, rect.height, @commands[index], self.baseColor, self.shadowColor)
+
+    text = @commands[index]
+
+    base   = self.baseColor
+    shadow = self.shadowColor
+
+    case text
+    when "Blue"
+      base   = Color.new(48, 80, 200)
+      shadow = Color.new(208, 208, 200)
+
+    when "Red"
+      base   = Color.new(224, 8, 8)
+      shadow = Color.new(208, 208, 200)
+
+    when "Green"
+      base   = Color.new(0, 123, 0)
+      shadow = Color.new(208, 208, 200)
+    end
+
+    pbDrawShadowText(
+      self.contents,
+      rect.x,
+      rect.y + (self.contents.text_offset_y || 0),
+      rect.width,
+      rect.height,
+      text,
+      base,
+      shadow
+    )
   end
 end
 

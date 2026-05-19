@@ -670,16 +670,16 @@ class PokemonEntryScene2
       Input.update
       pbUpdate
       next if pbMoveCursor
-      if Keybinds.press?(:special)
+      if Keybinds.trigger?(:special)
         pbChangeTab
-      elsif Keybinds.press?(:action)
+      elsif Keybinds.trigger?(:action)
         @cursorpos = OK
         @sprites["cursor"].setCursorPos(@cursorpos)
-      elsif Keybinds.press?(:back)
+      elsif Keybinds.trigger?(:back) || Input.triggerex?(:BACKSPACE)
         @helper.delete
         pbPlayCancelSE
         pbUpdateOverlay
-      elsif Keybinds.press?(:use)
+      elsif Keybinds.trigger?(:use)
         case @cursorpos
         when BACK   # Backspace
           @helper.delete

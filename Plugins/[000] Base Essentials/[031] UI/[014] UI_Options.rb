@@ -15,6 +15,7 @@ class PokemonSystem
   attr_accessor :bgmvolume
   attr_accessor :sevolume
   attr_accessor :textinput
+  attr_accessor :pronoun_settings
   attr_accessor :keyboard_bindings
   attr_accessor :controller_bindings
   attr_accessor :controller_layout
@@ -477,6 +478,22 @@ MenuHandlers.add(:options_menu, :se_volume, {
       $game_system.bgs_resume(playingBGS)
     end
     pbPlayCursorSE
+  }
+})
+
+MenuHandlers.add(:options_menu, :pronoun_settings, {
+  "name"        => _INTL("Pronoun Settings"),
+  "order"       => 21,
+  "type"        => ButtonOption,
+  "parameters"  => nil,
+  "description" => _INTL("Choose your pronouns."),
+  "get_proc"    => proc { next 0 },
+  "set_proc"    => proc { |_value, _scene| },
+  "on_select"   => proc { |_scene| },
+  "button_proc" => proc {
+    pbFadeOutIn {
+      pbChoosePronouns
+    }
   }
 })
 

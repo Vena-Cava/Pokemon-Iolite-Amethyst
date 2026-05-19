@@ -720,7 +720,7 @@ class PokemonStorageScene
     base   = Color.new(248, 248, 248)
     shadow = Color.new(40, 40, 40)
 
-    [["jumpup_prompt", :jumpup, "<", 228], ["jumpdown_prompt", :jumpdown, ">", 392]].each do |key, action, arrow, anchor_x|
+    [["jumpup_prompt", :jumpup, "<", 236], ["jumpdown_prompt", :jumpdown, ">", 392]].each do |key, action, arrow, anchor_x|
       sprite = @sprites[key]
       bitmap = sprite.bitmap
       bitmap.clear
@@ -756,11 +756,12 @@ class PokemonStorageScene
       end
 
       if Keybinds.gamepad?
-        width = 56
+        width = 68
       else
         key_text = Keybinds.button_name(action)
         text = (action == :jumpup) ? _INTL("{1} {2}", arrow, key_text) : _INTL("{1} {2}", key_text, arrow)
         width = bitmap.text_size(text).width
+        width += 16 if action == :jumpup
       end
 
       if action == :jumpup

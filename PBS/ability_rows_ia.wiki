@@ -134,7 +134,7 @@
 |-
 | rowspan="2" | ia20
 | rowspan="2" | {{a|Dirt Ball}}
-| class="l" | Lowers the power of moves make direct contact with the Pokémon and prevents it from being burned
+| class="l" | Lowers the power of moves make direct contact with the Pokémon and prevents it from being burned.
 {{Gentable|Fake|rowspan=2}}
 |-
 | class="l" | Halves the damage the Pokémon takes from contact moves and doubles the power of its Ground-type moves. The Pokémon cannot be burned.
@@ -369,314 +369,321 @@
 | class="l" | Boosts the power of the Pokémon's kicking moves by 20%.
 |-
 | rowspan="2" | ia54
+| rowspan="2" | {{a|Limit Break}}
+| class="l" | The Pokémon's Offensive and Speed stats are maxxed when a move runs out of PP.
+{{Gentable|Fake|rowspan=2}}
+|-
+| class="l" | When any of the Pokémon's moves have its PP reduced to 0, its Attack, Special Attack and Speed stats are boosted to their sixth stage.
+|-
+| rowspan="2" | ia55
 | rowspan="2" | {{a|Mach 5}}
 | class="l" | Boosts Speed when the Pokémon makes contact.
 {{Gentable|Fake|rowspan=2}}
 |-
 | class="l" | The Pokémon's supersonic engines allow it to raise its speed by 1 stage if it hits a target with a contact move.
 |-
-| rowspan="2" | ia55
+| rowspan="2" | ia56
 | rowspan="2" | {{a|Mind Over Matter}}
 | class="l" | Psychic-Type moves will break barriers and will deal double damage when resisted.
 {{Gentable|Fake|rowspan=2}}
 |-
 | class="l" | Psychic-Type moves will remove the effects of Light Screen, Reflect and Aurora Veil, and will deal double damage when not very effective.
 |-
-| rowspan="2" | ia56
+| rowspan="2" | ia57
 | rowspan="2" | {{a|Mind Veil}}
 | class="l" | Opponents are unable to use priority moves against the Pokémon or its allies.
 {{Gentable|Fake|rowspan=2}}
 |-
 | class="l" | Shrouded in an eerie aura, the Pokémon distorts the perception of time and space around it, making opponents unable to use priority moves against the Pokémon or its allies.
 |-
-| rowspan="2" | ia57
+| rowspan="2" | ia58
 | rowspan="2" | {{a|Mirage}}
 | class="l" | Gives priority to Dragon-type moves at full HP.
 {{Gentable|Fake|rowspan=2}}
 |-
 | class="l" | Increases the priority of the Pokémon's Dragon-type moves by 1 stage while its HP is full.
 |-
-| rowspan="2" | ia58
+| rowspan="2" | ia59
 | rowspan="2" | {{a|Muscle Stim}}
 | class="l" | Boosts Attack when hit by a Electric-type move.
 {{Gentable|Fake|rowspan=2}}
 |-
 | class="l" | Electric-type moves do not work on the Pokémon. Instead, they boost its Attack stat by 1 stage.
 |-
-| rowspan="2" | ia59
+| rowspan="2" | ia60
 | rowspan="2" | {{a|Nature's Savior}}
 | class="l" | Using Dragon attacks raises Sp. Atk, and using Grass attacks raises Sp. Def.
 {{Gentable|Fake|rowspan=2}}
 |-
 | class="l" | The Pokémon’s rekindled fury energises its body. Using Dragon-type attacks raises its Sp. Atk stat by 1 stage, while using Grass-type attacks raises its Sp. Def stat by 1 stage.
 |-
-| rowspan="2" | ia60
+| rowspan="2" | ia61
 | rowspan="2" | {{a|Nourishing Soul}}
 | class="l" | When the Pokémon knocks out another Pokémon, the Pokémon gains their stat boosts.
 {{Gentable|Fake|rowspan=2}}
 |-
 | class="l" | When the Pokémon knocks out another Pokémon, it will steal any stat boosts they had and add them to its own.
 |-
-| rowspan="2" | ia61
+| rowspan="2" | ia62
 | rowspan="2" | {{a|Odin's Memory}}
 | class="l" | The Pokémon regains half the damage it just took at the end of each turn.
 {{Gentable|Fake|rowspan=2}}
 |-
 | class="l" | After every turn, the Pokémon regains half of the HP taken from the last attack. Fails if HP is 0, only takes the final hit of a multi-hit move into account.
 |-
-| rowspan="2" | ia62
+| rowspan="2" | ia63
 | rowspan="2" | {{a|Odin's Thought}}
 | class="l" | The Pokémon regains some PP to a random move every other turn.
 {{Gentable|Fake|rowspan=2}}
 |-
 | class="l" | After every other turn, the Pokémon regains 1 PP for a random move. The Pokémon is also uneffected by moves or Abilities that accelerate PP usage.
 |-
-| rowspan="2" | ia63
+| rowspan="2" | ia64
 | rowspan="2" | {{a|Permafrost}}
 | class="l" | Is always frozen but can still act.
 {{Gentable|Fake|rowspan=2}}
 |-
 | class="l" | The Pokémon is always frozen and will never thaw, but it can still use moves.
 |-
-| rowspan="2" | ia64
+| rowspan="2" | ia65
 | rowspan="2" | {{a|Pile of Coins}}
 | class="l" | The Pokémon is immune to traps.
 {{Gentable|Fake|rowspan=2}}
 |-
 | class="l" | The Pokémon is used to living on gold coins, giving it immunity to all traps.
 |-
-| rowspan="2" | ia65
+| rowspan="2" | ia66
 | rowspan="2" | {{a|Poison Body}}
 | class="l" | The Pokémon has the resistances of the Poison-type.
 {{Gentable|Fake|rowspan=2}}
 |-
 | class="l" | The Pokémon takes 1/2 damage from Fighting-, Poison-, Grass-, Bug-, and Fairy-type attacks and also cannot be poisoned or badly poisoned.
 |-
-| rowspan="2" | ia66
+| rowspan="2" | ia67
 | rowspan="2" | {{a|Precognition}}
 | class="l" | The Pokémon's moves happen in a single turn.
 {{Gentable|Fake|rowspan=2}}
 |-
 | class="l" | The Pokémon skips charge-up and recharge turns, including the likes of Future Sight and Dig.
 |-
-| rowspan="2" | ia67
+| rowspan="2" | ia68
 | rowspan="2" | {{a|Puffed In}}
 | class="l" | When it has a lot of HP, the Pokémon inflates. It deflates when its HP is low.
 {{Gentable|Fake|rowspan=2}}
 |-
 | class="l" | When the Pokémon has above 1/2 of its max HP, it inflates into a defensive form. It deflates when its HP drops to 1/2 of its max or below.
 |-
-| rowspan="2" | ia68
+| rowspan="2" | ia69
 | rowspan="2" | {{a|Puffed Out}}
 | class="l" | The Pokémon inflates when HP is Half or less.
 {{Gentable|Fake|rowspan=2}}
 |-
 | class="l" | The Pokémon's cowardice causes it to inflate and become defensive for the rest of the battle if its HP drops below half or less without fainting.
 |-
-| rowspan="2" | ia69
+| rowspan="2" | ia70
 | rowspan="2" | {{a|Purifying Beast}}
 | class="l" | The Pokémon and resists poison and gradually regains HP in rain.
 {{Gentable|Fake|rowspan=2}}
 |-
 | class="l" | The Pokémon also takes 30% less damage from Poison-Type moves and cannot be poisoned or badly poisoned. The Pokémon also has 1/16 of its max HP restored at the end of every turn in rain.
 |-
-| rowspan="2" | ia70
+| rowspan="2" | ia71
 | rowspan="2" | {{a|Purifying Light}}
 | class="l" | The Pokémon is immune to Shadow moves and can hit targets regardless of Abilities.
 {{Gentable|Fake|rowspan=2}}
 |-
 | class="l" | The Pokémon is bathed in purifying light, making it immune to Shadow-type moves and allowing its moves to ignore the target’s Ability (with certain exceptions).
 |-
-| rowspan="2" | ia71
+| rowspan="2" | ia72
 | rowspan="2" | {{a|Radioactive Decay}}
 | class="l" | Lowers the opposing Pokémon's Sp. Def stats.
 {{Gentable|Fake|rowspan=2}}
 |-
 | class="l" | When the Pokémon enters a battle, it radiates dangerous waves towards opposing Pokémon, lowering their Sp. Def stats by 1 stage.
 |-
-| rowspan="2" | ia72
+| rowspan="2" | ia73
 | rowspan="2" | {{a|Rekindled Rage}}
 | class="l" | Grass-type attacks have an extra 10% chance to burn and have their power boosted a little.
 {{Gentable|Fake|rowspan=2}}
 |-
 | class="l" | All Grass-type attacks have an extra 10% chance to burn. The power of these moves is boosted. by 30%
 |-
-| rowspan="2" | ia73
+| rowspan="2" | ia74
 | rowspan="2" | {{a|Reteller}}
 | class="l" | Immediately copies sound-based moves used by other Pokémon.
 {{Gentable|Fake|rowspan=2}}
 |-
 | class="l" | When another Pokémon uses a sound-based move, this Pokémon immediately repeats the move regardless of speed and without replacing their own move. This effect does not trigger from other Reteller activations.
 |-
-| rowspan="2" | ia74
+| rowspan="2" | ia75
 | rowspan="2" | {{a|Reverberate}}
 | class="l" | The Pokémon's sound-based moves will repeat with less power.
 {{Gentable|Fake|rowspan=2}}
 |-
 | class="l" | When the Pokémon uses a sound-based attack, they will repeat the move again but at 1/3 of the power.
 |-
-| rowspan="2" | ia75
+| rowspan="2" | ia76
 | rowspan="2" | {{a|Ring Toss}}
 | class="l" | Boosts the power of Fling and may retrieve the item afterwards.
 {{Gentable|Fake|rowspan=2}}
 |-
 | class="l" | Boosts the power of Fling by 50%. The Pokémon also has a 50% chance to retrieve the flung item at the beginning of each turn unless it gains another item.
 |-
-| rowspan="2" | ia76
+| rowspan="2" | ia77
 | rowspan="2" | {{a|Rock Body}}
 | class="l" | The Pokémon gradually regains HP in a sandstorm.
 {{Gentable|Fake|rowspan=2}}
 |-
 | class="l" | The Pokémon has 1/16 of its max HP restored at the end of every turn in a sandstorm.
 |-
-| rowspan="2" | ia77
+| rowspan="2" | ia78
 | rowspan="2" | {{a|Rock Pass}}
 | class="l" | The Pokémon passes traps to the opposing sides.
 {{Gentable|Fake|rowspan=2}}
 |-
 | class="l" | If there is a trap placed on the Pokémon's side or the Pokémon switches into battle while a trap is on their side, the Pokémon will immediately pass all traps over to the opposing side of the field.
 |-
-| rowspan="2" | ia78
+| rowspan="2" | ia79
 | rowspan="2" | {{a|Sealed Tight}}
 | class="l" | Protects the Pokémon from item theft.
 {{Gentable|Fake|rowspan=2}}
 |-
 | class="l" | The Pokémon's held item is sealed tight within its packaging, preventing it from being stolen or removed by other Pokémon.
 |-
-| rowspan="2" | ia79
+| rowspan="2" | ia80
 | rowspan="2" | {{a|See No Evil}}
 | class="l" | Ignores visual moves, sharply raising Defense instead. Accuracy cannot be lowered.
 {{Gentable|Fake|rowspan=2}}
 |-
 | class="l" | The Pokémon shuts out all external distractions. If an opponent uses a move that causes infatuation, taunts, involves dancing, or is light-based, its Defense is raised by 2 stages instead. Its Accuracy also cannot be lowered.
 |-
-| rowspan="2" | ia80
+| rowspan="2" | ia81
 | rowspan="2" | {{a|Shocking Sting}}
 | class="l" | Damages and may paralyze attackers that make contact with it.
 {{Gentable|Fake|rowspan=2}}
 |-
 | class="l" | When the Pokémon is hit by a contact move, the attacker takes damage equal to 1/8 of its max HP and has a 30% chance of being paralyzed.
 |-
-| rowspan="2" | ia81
+| rowspan="2" | ia82
 | rowspan="2" | {{a|Smooth Stone}}
 | class="l" | Boosts the Pokémon's Speed in Rain or Sandstorms.
 {{Gentable|Fake|rowspan=2}}
 |-
 | class="l" | Boosts the Pokémon's Speed stat by 30% in Rain or Sandstorms. The Pokémon also takes 1/2 damage from Water-type Attacks.
 |-
-| rowspan="2" | ia82
+| rowspan="2" | ia83
 | rowspan="2" | {{a|Snow Strife}}
 | class="l" | Boosts the Pokémon's Attack stat in snow.
 {{Gentable|Fake|rowspan=2}}
 |-
 | class="l" | Boosts the Pokémon's Attack stat by 30% in snow.
 |-
-| rowspan="2" | ia83
+| rowspan="2" | ia84
 | rowspan="2" | {{a|Soggy}}
 | class="l" | The Pokémon resists Fire-type moves but is weak to Water-type moves.
 {{Gentable|Fake|rowspan=2}}
 |-
 | class="l" | The Pokémon is soaked with water, making it weak to Water-Type Moves but resistant to Fire-Type Moves, regardless of the Pokémon's type.
 |-
-| rowspan="2" | ia84
+| rowspan="2" | ia85
 | rowspan="2" | {{a|Speak No Evil}}
 | class="l" | Sound-based moves become Water-type, sharply raise Speed, and prevent Evasion loss.
 {{Gentable|Fake|rowspan=2}}
 |-
 | class="l" | Having forsaken speech, the Pokémon expresses itself through flowing movement. All sound-based moves become Water-type moves and are no longer treated as sound-based. These moves sharply raise its Speed, and its Evasion cannot be lowered.
 |-
-| rowspan="2" | ia85
+| rowspan="2" | ia86
 | rowspan="2" | {{a|Stability Rod}}
 | class="l" | The Pokémon has a meltdown when HP is half or less.
 {{Gentable|Fake|rowspan=2}}
 |-
 | class="l" | The rod that keeps the Pokémon stable falls out of place if its HP drops to 1/2 of its max, causing the Pokémon to have a meltdown for the rest of the battle.
 |-
-| rowspan="2" | ia86
+| rowspan="2" | ia87
 | rowspan="2" | {{a|Steel Stealer}}
 | class="l" | Restores HP if hit by a Steel-type move.
 {{Gentable|Fake|rowspan=2}}
 |-
 | class="l" | Steel-type moves do not work on the Pokémon. Instead, they restore 1/4 of its max HP.
 |-
-| rowspan="2" | ia87
+| rowspan="2" | ia88
 | rowspan="2" | {{a|Sting Like a Bee}}
 | class="l" | Boosts the Pokémon's Attack on first entry.
 {{Gentable|Fake|rowspan=2}}
 |-
 | class="l" | Boosts the Pokémon's Attack stat by 1 stage the first time the Pokémon enters a battle.
 |-
-| rowspan="2" | ia88
+| rowspan="2" | ia89
 | rowspan="2" | {{a|Stonehenge}}
 | class="l" | Rock-type moves do not miss, the power of these moves are boosted.
 {{Gentable|Fake|rowspan=2}}
 |-
 | class="l" | The Pokémon's mastery over rocks makes it to Rock-type moves will never miss and their power is boosted by 30%.
 |-
-| rowspan="2" | ia89
+| rowspan="2" | ia90
 | rowspan="2" | {{a|Storm Body}}
 | class="l" | The Pokémon's stats are boosted in weather and it doesn't take sandstorm damage.
 {{Gentable|Fake|rowspan=2}}
 |-
 | class="l" | The Pokémon’s stormy body shifts with the weather, boosting a different stat by 50% depending on the conditions: harsh sunlight raises its Sp. Atk, rain raises its Speed, sandstorms raise its Defense, and snow raises its Sp. Def. It also takes no damage from sandstorms.
 |-
-| rowspan="2" | ia90
+| rowspan="2" | ia91
 | rowspan="2" | {{a|Storming Beast}}
 | class="l" | Elecrtric-type moves never miss and cause paralysis more often.
 {{Gentable|Fake|rowspan=2}}
 |-
 | class="l" | The Pokémon and its allies Electric-type moves will never miss and their chance to cause paralysis is doubled.
 |-
-| rowspan="2" | ia91
+| rowspan="2" | ia92
 | rowspan="2" | {{a|Surtr's Wrath}}
 | class="l" | Powers up Fire-type moves.
 {{Gentable|Fake|rowspan=2}}
 |-
 | class="l" | Boosts the power of this Pokémon’s Fire-type moves by 50%.
 |-
-| rowspan="2" | ia92
+| rowspan="2" | ia93
 | rowspan="2" | {{a|Thermal Insulation}}
 | class="l" | Boosts the Sp. Def stat sharply when the Pokémon is hit by a Fire-type attack.
 {{Gentable|Fake|rowspan=2}}
 |-
 | class="l" | Boosts the Sp. Def stat by 2 stages when the Pokémon is hit by a Fire-type attack. The Pokémon also cannot be burned.
 |-
-| rowspan="2" | ia93
+| rowspan="2" | ia94
 | rowspan="2" | {{a|Ton of Bricks}}
 | class="l" | Scatters Plastic Toys when hit by physical moves.
 {{Gentable|Fake|rowspan=2}}
 |-
 | class="l" | When this Pokémon takes damage from a physical move, it spreads a Scattered Toys trap at the feet of the opposing team.
 |-
-| rowspan="2" | ia94
+| rowspan="2" | ia95
 | rowspan="2" | {{a|Toon Force}}
 | class="l" | Boosts Attack when hit by a Fairy-type move.
 {{Gentable|Fake|rowspan=2}}
 |-
 | class="l" | Fairy-type moves do not work on the Pokémon. Instead, they boost its Attack stat by 1 stage.
 |-
-| rowspan="2" | ia95
+| rowspan="2" | ia96
 | rowspan="2" | {{a|Toxicologist}}
 | class="l" | Powers up Poison-type moves.
 {{Gentable|Fake|rowspan=2}}
 |-
 | class="l" | Boosts the power of this Pokémon’s Poison-type moves by 50%.
 |-
-| rowspan="2" | ia96
+| rowspan="2" | ia97
 | rowspan="2" | {{a|Troll Toll}}
 | class="l" | Opponents lose HP when they switch out of battle.
 {{Gentable|Fake|rowspan=2}}
 |-
 | class="l" | Opposing Pokémon that switch out have to pay a hefty toll, losing 1/5 of their max HP.
 |-
-| rowspan="2" | ia97
+| rowspan="2" | ia98
 | rowspan="2" | {{a|True Wisdom}}
 | class="l" | Boosts the power of sound-based attacks if they are supereffective.
 {{Gentable|Fake|rowspan=2}}
 |-
 | class="l" | The Pokémon's ancient wisdom allows it to double the power of any sound-based attack if it is supereffective.
 |-
-| rowspan="2" | ia98
+| rowspan="2" | ia99
 | rowspan="2" | {{a|Vampyre}}
 | class="l" | Fire-type moves become Ghost-type moves. The power of those moves is boosted a little.
 {{Gentable|Fake|rowspan=2}}

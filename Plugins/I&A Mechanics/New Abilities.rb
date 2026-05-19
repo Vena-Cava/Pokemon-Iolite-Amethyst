@@ -90,26 +90,6 @@ Battle::AbilityEffects::ModifyMoveBaseType.add(:CORRUPTION,
   }
 )
 
-#===============================================================================
-# Scaliate
-#===============================================================================
-
-Battle::AbilityEffects::ModifyMoveBaseType.add(:SCALIATE,
-  proc { |ability, user, move, type|
-    next if type != :NORMAL || !GameData::Type.exists?(:DRAGON)
-    move.powerBoost = true
-    next :DRAGON
-  }
-)
-
-
-
-#===============================================================================
-# Type-Changing Abilities
-#===============================================================================
-
-Battle::AbilityEffects::DamageCalcFromUser.copy(:AERILATE, :PIXILATE, :REFRIGERATE, :GALVANIZE, :NORMALIZE, :CORRUPTION, :SCALIATE, :VAMPYRE)
-
 
 #===============================================================================
 # Ignition
@@ -338,8 +318,6 @@ Battle::AbilityEffects::ModifyMoveBaseType.add(:VAMPYRE,
 
 #===============================================================================
 # Boiling Point
-# Water-type damaging moves gain +10% burn chance.
-# They also thaw the user and the target.
 #===============================================================================
 
 Battle::AbilityEffects::OnDealingHit.add(:BOILINGPOINT,
@@ -402,9 +380,6 @@ end
 
 #===============================================================================
 # Dirt Ball
-# Contact moves deal 50% damage.
-# Ground moves power is doubled.
-# Immune to Burn.
 #===============================================================================
 
 Battle::AbilityEffects::DamageCalcFromTarget.add(:DIRTBALL,
@@ -428,9 +403,6 @@ Battle::AbilityEffects::StatusCure.copy(:WATERVEIL, :DIRTBALL)
 
 #===============================================================================
 # Limit Break
-# When one of this Pokémon's moves reaches 0 PP,
-# its Attack, Special Attack, and Speed rise to +6
-# AFTER the move is used.
 #===============================================================================
 
 class Battle::Battler
@@ -480,3 +452,207 @@ class Battle::Move
     user.battle.pbHideAbilitySplash(user)
   end
 end
+
+#===============================================================================
+# Rock Body
+#===============================================================================
+Battle::AbilityEffects::EndOfRoundWeather.add(:ROCKBODY,
+  proc { |ability, weather, battler, battle|
+    next unless weather == :Sandstorm
+    next if !battler.canHeal?
+    battle.pbShowAbilitySplash(battler)
+    battler.pbRecoverHP(battler.totalhp / 16)
+    if Battle::Scene::USE_ABILITY_SPLASH
+      battle.pbDisplay(_INTL("{1}'s HP was restored.", battler.pbThis))
+    else
+      battle.pbDisplay(_INTL("{1}'s {2} restored its HP.", battler.pbThis, battler.abilityName))
+    end
+    battle.pbHideAbilitySplash(battler)
+  }
+)
+
+#===============================================================================
+# Troll Toll
+#===============================================================================
+class Battle
+  alias ia_trolltoll_pbRecallAndReplace pbRecallAndReplace unless method_defined?(:ia_trolltoll_pbRecallAndReplace)
+
+  def pbRecallAndReplace(idxBattler, idxParty, randomReplacement = false, batonPass = false)
+    battler = @battlers[idxBattler]
+
+    if battler && !battler.fainted? && battler.takesIndirectDamage?
+      toll_users = allBattlers.select { |b|
+        b && !b.fainted? && b.opposes?(battler) && b.hasActiveAbility?(:TROLLTOLL)
+      }
+
+      if toll_users.length > 0
+        user = toll_users[0]
+        pbShowAbilitySplash(user)
+        battler.pbReduceHP([1, battler.totalhp / 5].max, false)
+        pbDisplay(_INTL("{1} paid the toll!", battler.pbThis))
+        pbHideAbilitySplash(user)
+        battler.pbItemHPHealCheck
+      end
+    end
+
+    ia_trolltoll_pbRecallAndReplace(idxBattler, idxParty, randomReplacement, batonPass)
+  end
+end
+
+#===============================================================================
+# Toxicologist
+#===============================================================================
+Battle::AbilityEffects::DamageCalcFromUser.add(:TOXICOLOGIST,
+  proc { |ability, user, target, move, mults, power, type|
+    mults[:attack_multiplier] *= 1.5 if type == :POISON
+  }
+)
+
+#===============================================================================
+# Toon Force
+#===============================================================================
+Battle::AbilityEffects::MoveImmunity.add(:TOONFORCE,
+  proc { |ability, user, target, move, type, battle, show_message|
+    next target.pbMoveImmunityStatRaisingAbility(user, move, type,
+       :FAIRY, :ATTACK, 1, show_message)
+  }
+)
+
+#===============================================================================
+# Thermal Insulation
+#===============================================================================
+Battle::AbilityEffects::OnBeingHit.add(:THERMALINSULATION,
+  proc { |ability, user, target, move, battle|
+    next if move.calcType != :FIRE
+    target.pbRaiseStatStageByAbility(:SPECIAL_DEFENSE, 2, target)
+  }
+)
+
+Battle::AbilityEffects::StatusImmunity.copy(:THERMALEXCHANGE, :THERMALINSULATION)
+
+Battle::AbilityEffects::StatusCure.copy(:WATERVEIL, :THERMALINSULATION)
+
+#===============================================================================
+# Surtr's Wrath
+#===============================================================================
+Battle::AbilityEffects::DamageCalcFromUser.add(:SURTRSWRATH,
+  proc { |ability, user, target, move, mults, power, type|
+    mults[:attack_multiplier] *= 1.5 if type == :FIRE
+  }
+)
+
+#===============================================================================
+# Storming Beast
+#===============================================================================
+
+Battle::AbilityEffects::AccuracyCalcFromUser.add(:STORMINGBEAST,
+  proc { |ability, mods, user, target, move, type|
+    next if type != :ELECTRIC
+    mods[:base_accuracy] = 0
+  }
+)
+
+Battle::AbilityEffects::AccuracyCalcFromAlly.add(:STORMINGBEAST,
+  proc { |ability, mods, user, target, move, type|
+    next if type != :ELECTRIC
+    mods[:base_accuracy] = 0
+  }
+)
+
+class Battle::Move
+  alias ia_stormingbeast_pbAdditionalEffectChance pbAdditionalEffectChance
+
+  def pbAdditionalEffectChance(user, target, effectChance = 0)
+    ret = ia_stormingbeast_pbAdditionalEffectChance(user, target, effectChance)
+
+    return ret if ret <= 0
+    return ret if ret > 100
+    return ret if pbCalcType(user) != :ELECTRIC
+
+    has_storming_beast = user.hasActiveAbility?(:STORMINGBEAST)
+    user.allAllies.each do |ally|
+      has_storming_beast = true if ally.hasActiveAbility?(:STORMINGBEAST)
+    end
+
+    return ret if !has_storming_beast
+
+    # Only double moves whose function is paralysis-related.
+    return ret if !self.class.name.include?("Paralyze")
+
+    return [ret * 2, 100].min
+  end
+end
+
+#===============================================================================
+# Storm Body
+# Sun: +50% Sp. Atk
+# Rain: +50% Speed
+# Sandstorm: +50% Defense and no sandstorm damage
+# Snow/Hail: +50% Sp. Def
+#===============================================================================
+
+Battle::AbilityEffects::DamageCalcFromUser.add(:STORMBODY,
+  proc { |ability, user, target, move, mults, power, type|
+    next if ![:Sun, :HarshSun].include?(user.effectiveWeather)
+    next if !move.specialMove?
+    mults[:attack_multiplier] *= 1.5
+  }
+)
+
+Battle::AbilityEffects::SpeedCalc.add(:STORMBODY,
+  proc { |ability, battler, mult|
+    next mult * 1.5 if [:Rain, :HeavyRain].include?(battler.effectiveWeather)
+    next mult
+  }
+)
+
+Battle::AbilityEffects::DamageCalcFromTarget.add(:STORMBODY,
+  proc { |ability, user, target, move, mults, power, type|
+    case target.effectiveWeather
+    when :Sandstorm
+      mults[:defense_multiplier] *= 1.5 if move.physicalMove?
+    when :Hail, :Snow
+      mults[:defense_multiplier] *= 1.5 if move.specialMove?
+    end
+  }
+)
+
+#===============================================================================
+# Erupting Beast
+#===============================================================================
+
+Battle::AbilityEffects::OnDealingHit.add(:ERUPTINGBEAST,
+  proc { |ability, user, target, move, battle|
+    next if !move.damagingMove?
+    next if move.pbCalcType(user) != :GROUND
+
+    showed_splash = false
+
+    # Burn chance
+    base_chance = 0
+    base_chance = move.instance_variable_get(:@addlEffect).to_i if move.is_a?(Battle::Move::BurnTarget)
+
+    extra_chance = 10
+
+    final_chance = 100 * (1 - ((100 - base_chance) / 100.0) *
+                               ((100 - extra_chance) / 100.0))
+
+    echoln("[Erupting Beast] #{move.name} burn chance = #{final_chance.round(1)} percent")
+
+    if target.status == :NONE &&
+       target.pbCanBurn?(user, false) &&
+       battle.pbRandom(100) < extra_chance
+      battle.pbShowAbilitySplash(user) unless showed_splash
+      showed_splash = true
+      target.pbBurn(user, _INTL("{1} was burned by {2}'s eruption!", target.pbThis, user.pbThis(true)))
+    end
+
+    battle.pbHideAbilitySplash(user) if showed_splash
+  }
+)
+
+Battle::AbilityEffects::DamageCalcFromUser.add(:ERUPTINGBEAST,
+  proc { |ability, user, target, move, mults, power, type|
+    mults[:attack_multiplier] *= 1.3 if type == :GROUND
+  }
+)

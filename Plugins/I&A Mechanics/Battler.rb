@@ -4,14 +4,14 @@
 class Battle::Battler
 
 #===============================================================================
-# Removes Sandstorm Damage if Pokémon has Rock Body
+# Removes Sandstorm Damage if Pokémon has Specific conditions
 #===============================================================================
   def takesSandstormDamage?
     return false if !takesIndirectDamage?
     return false if pbHasType?(:GROUND) || pbHasType?(:ROCK) || pbHasType?(:STEEL)
     return false if inTwoTurnAttack?("TwoTurnAttackInvulnerableUnderground",
                                      "TwoTurnAttackInvulnerableUnderwater")
-    return false if hasActiveAbility?([:OVERCOAT, :SANDFORCE, :SANDRUSH, :SANDVEIL, :ROCKBODY])
+    return false if hasActiveAbility?([:OVERCOAT, :SANDFORCE, :SANDRUSH, :SANDVEIL, :ROCKBODY, :STORMBODY, :CHITINOUSSHELL, :CATEGORYSIX])
     return false if hasActiveItem?(:SAFETYGOGGLES)
     return true
   end

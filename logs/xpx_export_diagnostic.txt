@@ -191,5 +191,5 @@ ts_list length: 51
   Map105 (Florola City): stored_id=1, slot_path='C:\\Users\\Vena\\Documents\\folders\\RPGMaker\\Pokemon IA XPX\\Graphics\\Tilesets\\Niphos Outside.png', slot_name='Niphos Outside.png', resolved_id=23 (matched 'niphos outside.png') *** MISMATCH ***
 
 === Summary ===
-Exported: 4 maps
-Skipped : 101 maps (rxdata up-to-date, no mismatch)
+Exported: 3 maps
+Skipped : 102 maps (rxdata up-to-date, no mismatch)

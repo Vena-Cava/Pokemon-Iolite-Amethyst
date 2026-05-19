@@ -854,6 +854,9 @@ def pbFreeText(msgwindow, currenttext, passwordbox, maxlength, width = 240)
   Input.text_input = false
   window.dispose
   Input.update
+
+  Keybinds.wait_for_all_released if defined?(Keybinds)
+
   return ret
 end
 
