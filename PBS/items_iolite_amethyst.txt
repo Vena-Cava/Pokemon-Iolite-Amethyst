@@ -242,4 +242,72 @@ Pocket = 1
 Price = 1000
 BPPrice = 25
 Flags = Fling_60
-Description = An ice-cold scoop, it adds one extra chance to hit to Multi-Strike Moves.
+Description = An item to be held by a Pokémon. An ice-cold scoop, it adds one extra hit to Multi-Strike Moves.
+#-------------------------------
+[EXTENDEDSTAY]
+Name = Extended Stay
+NamePlural = Extended Stays
+PortionName = voucher for an Extended Stay
+PortionNamePlural = vouchers for an Extended Stay
+Pocket = 1
+Price = 4000
+BPPrice = 15
+Flags = Fling_30
+Description = A luxurious room ticket. If Trick Room, Wonder Room or Magic Room take effect, this item extends the duration of the room.
+#-------------------------------
+[FLUFFYSWEATER]
+Name = Fluffy Sweater
+NamePlural = Fluffy Sweaters
+Pocket = 1
+Price = 1000
+BPPrice = 25
+Flags = Fling_30
+Description = An item to be held by a Pokémon. This comfy vest boosts the holder's Defense stat but prevents the use of status moves.
+#-------------------------------
+[RESETBUTTON]
+Name = Reset Button
+NamePlural = Reset Buttons
+Pocket = 1
+Price = 15000
+BPPrice = 20
+Flags = Fling_30
+Description = An item to be held by a Pokémon. If another Pokémon makes direct contact with the holder, the holder's ability is reactivated.
+#-------------------------------
+[HALLPASS]
+Name = Hall Pass
+NamePlural = Hall Passes
+Pocket = 1
+Price = 3000
+SellPrice = 2000
+Flags = Fling_10
+Description = An item to be held by a Pokémon. It prevents the holder from being trapped or punished for switching out of battle.
+#-------------------------------
+[PERISHBOMB]
+Name = Perish Bomb
+NamePlural = Perish Bombs
+Pocket = 1
+Price = 3000
+SellPrice = 2000
+BPPrice = 25
+Flags = Fling_30
+Description = An item to be held by a Pokémon. It explodes after being on the field for 3 consecutive turns.
+#-------------------------------
+[WHETSTONE]
+Name = Whetstone
+NamePlural = Whetstones
+Pocket = 1
+Price = 15000
+BPPrice = 25
+Flags = Fling_30
+Description = An item to be held by a Pokémon. This sharpening tool boosts the power of the holder's slicing moves.
+#-------------------------------
+[CLEATS]
+Name = Cleats
+NamePlural = Cleats
+PortionName = pair of Cleats
+PortionNamePlural = pairs of Cleats
+Pocket = 1
+Price = 15000
+BPPrice = 25
+Flags = Fling_80
+Description = An item to be held by a Pokémon. These protective boots boosts the power of the holder's kicking moves and prevents direct contact with targets.

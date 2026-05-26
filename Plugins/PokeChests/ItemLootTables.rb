@@ -87,9 +87,9 @@ PokeChestTMTable = {
     [:TM182,1,2],[:TM184,1,2],[:TM193,1,2],[:TM202,1,2],[:TM203,1,2],
     [:TM208,1,2],[:TM211,1,2],[:TM213,1,2],[:TM216,1,2],[:TM223,1,2],
     [:TM224,1,2],[:TM226,1,2],[:TM229,1,2],[:TM231,1,2],[:TM233,1,2],
-	[:TM245,1,2],[:TM246,1,2],[:TM252,1,2],[:TM253,1,2],[:TM254,1,2],
-	[:TM255,1,2],[:TM256,1,2],[:TM257,1,2],[:TM258,1,2],[:TM260,1,2],
-	[:TM262,1,2],[:TM271,1,2]
+    [:TM245,1,2],[:TM246,1,2],[:TM252,1,2],[:TM253,1,2],[:TM254,1,2],
+    [:TM255,1,2],[:TM256,1,2],[:TM257,1,2],[:TM258,1,2],[:TM260,1,2],
+    [:TM262,1,2],[:TM271,1,2]
   ],
 
   :uncommon => [
@@ -114,9 +114,9 @@ PokeChestTMTable = {
     [:TM210,1,2],[:TM214,1,2],[:TM215,1,2],[:TM217,1,2],[:TM219,1,2],
     [:TM221,1,2],[:TM222,1,2],[:TM225,1,2],[:TM227,1,2],[:TM228,1,2],
     [:TM230,1,2],[:TM234,1,2],[:TM235,1,2],[:TM236,1,2],[:TM237,1,2],
-	[:TM242,1,2],[:TM243,1,2],[:TM247,1,2],[:TM248,1,2],[:TM249,1,2],
-	[:TM251,1,2],[:TM259,1,2],[:TM261,1,2],[:TM263,1,2],[:TM264,1,2],
-	[:TM265,1,2],[:TM266,1,2],[:TM269,1,2],[:TM270,1,2]
+    [:TM242,1,2],[:TM243,1,2],[:TM247,1,2],[:TM248,1,2],[:TM249,1,2],
+    [:TM251,1,2],[:TM259,1,2],[:TM261,1,2],[:TM263,1,2],[:TM264,1,2],
+    [:TM265,1,2],[:TM266,1,2],[:TM269,1,2],[:TM270,1,2]
   ],
 
   :rare => [
@@ -144,6 +144,7 @@ PokeChestTMTable = {
 
   def self.has_boost_ability?(pokemon)
     return false if !pokemon || pokemon.egg?
+    return false if AdvancedNewGame.retired?(pokemon)
     BOOST_ABILITIES.any? { |ability| pokemon.hasAbility?(ability) }
   end
 
@@ -164,14 +165,6 @@ PokeChestTMTable = {
     return rarity if !index || index >= RARITY_ORDER.length - 1
     return RARITY_ORDER[index + 1]
   end
-end
-
-def pbPartyHasSuperLuck?
-  $player.party.each do |pkmn|
-    next if !pkmn || pkmn.egg?
-    return true if pkmn.hasAbility?(:SUPERLUCK)
-  end
-  return false
 end
 
 def pbLootTable(table, chance = 100, boost_mode = nil, pokemon = nil)

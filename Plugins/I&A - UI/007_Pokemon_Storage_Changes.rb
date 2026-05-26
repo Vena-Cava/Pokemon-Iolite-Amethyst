@@ -1,7 +1,7 @@
 #===============================================================================
 # Iolite & Amethyst Pokémon Storage Screen
 #===============================================================================
-class PokemonBoxIcon < IconSprite
+class PokemonBoxIcon < Sprite
   def initialize(pokemon, viewport = nil)
     super(0, 0, viewport)
     @pokemon = pokemon
@@ -22,9 +22,32 @@ class PokemonBoxIcon < IconSprite
   end
 
   def refresh
+    return if disposed?
     return if !@pokemon
-    self.setBitmap(GameData::Species.icon_filename_from_pokemon(@pokemon))
-    self.src_rect = Rect.new(0, 0, self.bitmap.height, self.bitmap.height)
+
+    path = GameData::Species.icon_filename_from_pokemon(@pokemon)
+    icon_bitmap = AnimatedBitmap.new(path)
+
+    icon_size = icon_bitmap.bitmap.height
+
+    final_bitmap = Bitmap.new(icon_size, icon_size)
+    final_bitmap.blt(
+      0,
+      0,
+      icon_bitmap.bitmap,
+      Rect.new(0, 0, icon_size, icon_size)
+    )
+
+    icon_bitmap.dispose
+
+    if @pokemon.respond_to?(:nuzlocke_retired?) &&
+       @pokemon.nuzlocke_retired?
+      final_bitmap.advanced_new_game_grayscale!
+    end
+
+    self.bitmap&.dispose
+    self.bitmap = final_bitmap
+    self.src_rect = Rect.new(0, 0, icon_size, icon_size)
   end
 
   def update
@@ -1399,11 +1422,37 @@ class PokemonStorageScene
   def pbSetMosaic(selection)
     return if @screen.pbHeldPokemon
     return if @boxForMosaic == @storage.currentBox && @selectionForMosaic == selection
-    @sprites["pokemon"].mosaic_duration = 0.25
-    4.times do |i|
-      glow = @sprites["pokemonglow#{i + 1}"]
-      glow.mosaic_duration = 0.25 if glow && !glow.disposed?
+
+    pokemon = nil
+
+    if selection >= 0
+      pokemon = @storage[@storage.currentBox, selection]
+    elsif selection.is_a?(Integer) && selection >= 0
+      pokemon = @storage[@storage.currentBox, selection]
     end
+
+    if pokemon &&
+       pokemon.respond_to?(:nuzlocke_retired?) &&
+       pokemon.nuzlocke_retired?
+
+      @sprites["pokemon"].mosaic = 0
+      @sprites["pokemon"].mosaic_duration = 0
+
+      4.times do |i|
+        glow = @sprites["pokemonglow#{i + 1}"]
+        next if !glow || glow.disposed?
+        glow.mosaic = 0
+        glow.mosaic_duration = 0
+      end
+    else
+      @sprites["pokemon"].mosaic_duration = 0.25
+
+      4.times do |i|
+        glow = @sprites["pokemonglow#{i + 1}"]
+        glow.mosaic_duration = 0.25 if glow && !glow.disposed?
+      end
+    end
+
     @boxForMosaic = @storage.currentBox
     @selectionForMosaic = selection
   end
@@ -1861,11 +1910,29 @@ class PokemonStorageScene
     elsif selection >= 0
       pokemon = (party) ? party[selection] : @storage[@storage.currentBox, selection]
     end
-	if !pokemon
-	  @sprites["pokemon"].visible = false
-	  pbSetPokemonGlow(nil)
-	  return
-	end
+    if !pokemon
+      @sprites["pokemon"].visible = false
+      @sprites["pokemon"].mosaic = 0
+      @sprites["pokemon"].mosaic_duration = 0
+
+      @sprites["pokemon"].instance_variable_set(:@advanced_new_game_retired_pokemon, nil)
+      @sprites["pokemon"].instance_variable_set(:@advanced_new_game_gray_sprite, nil)
+      @sprites["pokemon"].instance_variable_set(:@advanced_new_game_gray_source, nil)
+
+      4.times do |i|
+        glow = @sprites["pokemonglow#{i + 1}"]
+        next if !glow || glow.disposed?
+        glow.visible = false
+        glow.mosaic = 0
+        glow.mosaic_duration = 0
+        glow.instance_variable_set(:@advanced_new_game_retired_pokemon, nil)
+        glow.instance_variable_set(:@advanced_new_game_gray_sprite, nil)
+        glow.instance_variable_set(:@advanced_new_game_gray_source, nil)
+      end
+
+      pbSetPokemonGlow(nil)
+      return
+    end
 	@sprites["pokemon"].visible = true
     base   = Color.new(248, 248, 248)
     shadow = Color.new(104, 104, 104)
@@ -2531,5 +2598,61 @@ end
     @scene.pbCloseBox
     $game_temp.in_storage = false
     return retval
+  end
+end
+
+class PokemonStorageScreen
+  alias nuzlocke_retired_storage_pbAble? pbAble?
+  alias nuzlocke_retired_storage_pbWithdraw pbWithdraw
+  alias nuzlocke_retired_storage_pbPlace pbPlace
+  alias nuzlocke_retired_storage_pbSwap pbSwap
+
+  def pbAble?(pokemon)
+    return false if AdvancedNewGame.nuzlocke? && pokemon&.nuzlocke_retired?
+    return nuzlocke_retired_storage_pbAble?(pokemon)
+  end
+
+  def pbWithdraw(selected, heldpoke)
+    box = selected[0]
+    index = selected[1]
+    pokemon = heldpoke || @storage[box, index]
+
+    if AdvancedNewGame.nuzlocke? && pokemon&.nuzlocke_retired?
+      pbPlayBuzzerSE
+      pbDisplay(_INTL("{1} is Retired and cannot rejoin your party.", pokemon.name))
+      return false
+    end
+
+    return nuzlocke_retired_storage_pbWithdraw(selected, heldpoke)
+  end
+
+  def pbPlace(selected)
+    box = selected[0]
+
+    if box == -1 &&
+       AdvancedNewGame.nuzlocke? &&
+       @heldpkmn&.nuzlocke_retired?
+
+      pbPlayBuzzerSE
+      pbDisplay(_INTL("{1} is Retired and cannot rejoin your party.", @heldpkmn.name))
+      return false
+    end
+
+    return nuzlocke_retired_storage_pbPlace(selected)
+  end
+
+  def pbSwap(selected)
+    box = selected[0]
+
+    if box == -1 &&
+       AdvancedNewGame.nuzlocke? &&
+       @heldpkmn&.nuzlocke_retired?
+
+      pbPlayBuzzerSE
+      pbDisplay(_INTL("{1} is Retired and cannot rejoin your party.", @heldpkmn.name))
+      return false
+    end
+
+    return nuzlocke_retired_storage_pbSwap(selected)
   end
 end

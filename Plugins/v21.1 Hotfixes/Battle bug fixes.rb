@@ -159,8 +159,62 @@ module Battle::CatchAndStoreMixin
   def pbStorePokemon(pkmn)
     # Nickname the Pokémon (unless it's a Shadow Pokémon)
     if !pkmn.shadowPokemon?
-      if $PokemonSystem.givenicknames == 0 &&
-         pbDisplayConfirm(_INTL("Would you like to give a nickname to {1}?", pkmn.name))
+      if defined?(AdvancedNewGame) &&
+         AdvancedNewGame.nuzlocke? &&
+         AdvancedNewGame.nickname_clause?
+
+        loop do
+          nickname = @scene.pbNameEntry(_INTL("{1}'s nickname?", pkmn.speciesName), pkmn)
+          nickname = nickname.strip rescue ""
+
+          invalid = nickname.empty?
+          invalid = true if nickname.downcase == pkmn.speciesName.downcase
+
+          begin
+            blocked_names = []
+
+            species_queue = [pkmn.species]
+            checked_species = []
+
+            while species_queue.length > 0
+              species = species_queue.shift
+              next if checked_species.include?(species)
+
+              checked_species.push(species)
+
+              species_data = GameData::Species.get(species)
+              blocked_names.push(species_data.name.downcase)
+
+              # Forward evolutions
+              species_data.get_evolutions.each do |evo|
+                species_queue.push(evo[0])
+              end
+
+              # Pre-evolutions / branched relatives
+              GameData::Species.each do |other|
+                other.get_evolutions.each do |evo|
+                  species_queue.push(other.species) if evo[0] == species
+                end
+              end
+            end
+
+            invalid = true if blocked_names.include?(nickname.downcase)
+            invalid = true if AdvancedNewGame.nickname_already_used?(nickname)
+          rescue
+          end
+
+          if invalid
+            pbDisplay(_INTL("Nuzlocke rules require a unique nickname."))
+            next
+          end
+
+          pkmn.name = nickname
+          break
+        end
+
+      elsif $PokemonSystem.givenicknames == 0 &&
+            pbDisplayConfirm(_INTL("Would you like to give a nickname to {1}?", pkmn.name))
+
         nickname = @scene.pbNameEntry(_INTL("{1}'s nickname?", pkmn.speciesName), pkmn)
         pkmn.name = nickname
       end

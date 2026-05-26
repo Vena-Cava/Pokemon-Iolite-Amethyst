@@ -311,7 +311,7 @@ MenuHandlers.add(:pause_menu, :quit_game, {
       screen = PokemonSaveScreen.new(scene)
       screen.pbSaveScreen
       menu.pbEndScene
-      $scene = nil
+      $scene = pbCallTitle
       next true
     end
     menu.pbRefresh

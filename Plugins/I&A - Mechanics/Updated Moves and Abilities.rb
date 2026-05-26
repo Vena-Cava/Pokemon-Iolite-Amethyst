@@ -34,3 +34,12 @@ Battle::AbilityEffects::OnSwitchIn.add(:HONEYGATHER,
     battle.pbSetAbilityTrigger(battler)
   }
 )
+
+#===============================================================================
+# Run Away
+#===============================================================================
+Battle::AbilityEffects::CertainSwitching.add(:RUNAWAY,
+  proc { |ability, battler, battle|
+    next true
+  }
+)

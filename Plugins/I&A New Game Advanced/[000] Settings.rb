@@ -1,0 +1,139 @@
+module AdvancedNewGame
+
+  #=============================================================================
+  # Switch IDs
+  #=============================================================================
+
+  SWITCH_INVERSE_MODE         = 127
+  SWITCH_NUZLOCKE_MODE        = 128
+  SWITCH_LEVEL_CAPS           = 129
+  SWITCH_DUPES_CLAUSE         = 130
+  SWITCH_SHINY_CLAUSE         = 131
+  SWITCH_NICKNAME_CLAUSE      = 132
+  SWITCH_WIPE_DELETES_SAVE    = 133
+  SWITCH_NO_BAG_ITEMS_BATTLE  = 134
+  SWITCH_NUZLOCKE_STARTED     = 135
+
+  #=============================================================================
+  # Variable IDs
+  #=============================================================================
+
+  VARIABLE_DIFFICULTY         = 100
+  VARIABLE_LEVEL_CAP          = 101
+  VARIABLE_NEXT_BOSS          = 102
+  VARIABLE_FAINT_RULE         = 103
+  VARIABLE_POKECENTER_LIMIT   = 104 
+
+  #=============================================================================
+  # Text
+  #=============================================================================
+  DIFFICULTIES = {
+    easy: {
+      name: "Easy",
+      desc: "Lower-level trainers, weaker stats, more money, and easier AI."
+    },
+    normal: {
+      name: "Normal",
+      desc: "The game plays as originally designed."
+    },
+    hard: {
+      name: "Hard",
+      desc: "Stronger trainers, better stats, more held items, less money, and smarter AI."
+    },
+    ultra_hard: {
+      name: "Ultra Hard",
+      desc: "Experimental. Perfect teams, rare abilities, many items, very low money, and strongest AI."
+    }
+  }
+
+  MODES = {
+    nuzlocke: {
+      name: "Nuzlocke",
+      desc: "Fainted Pokémon cannot be used. Only first encounter per area can be caught."
+    },
+    inverse: {
+      name: "Inverse",
+      desc: "Type matchups are flipped. Weaknesses become resistances, and resistances become weaknesses."
+    },
+    level_caps: {
+      name: "Level Caps",
+      desc: "Your Pokémon cannot level past the next major boss's strongest Pokémon."
+    },
+    no_bag_items_battle: {
+      name: "No Battle Items",
+      desc: "Items from the Bag cannot be used during battle. Poké Balls and Held items still work."
+    }
+  }
+  
+  NUZLOCKE_OPTIONS = {
+    dupes_clause: {
+      name: "Dupes Clause",
+      desc: "If your first encounter is a Pokémon you already own, you may try again."
+    },
+    shiny_clause: {
+      name: "Shiny Clause",
+      desc: "Shiny Pokémon do not count towards your encounters and may be caught even after your encounter is used."
+    },
+    nickname_clause: {
+      name: "Nickname Clause",
+      desc: "All caught Pokémon must be given unique nicknames."
+    },
+    wipe_deletes_save: {
+      name: "Wipe Deletes Save",
+      desc: "Losing a battle deletes the save file."
+    },
+    pokecenter_limit: {
+      name: "PokéCentre Limit",
+      desc: "Limits how many times each town's Pokémon Centre can heal your party."
+    }
+  }
+  
+  NUZLOCKE_FAINT_RULES = {
+    box: {
+      name: "Perma-Box",
+      desc: "Fainted Pokémon are sent to the Box and cannot rejoin the party."
+    },
+    release: {
+      name: "Auto-Release",
+      desc: "Fainted Pokémon are automatically released."
+    }
+  }
+  
+  POKECENTER_LIMITS = {
+    infinite: {
+      name: "Infinite",
+      value: -1
+    },
+    three: {
+      name: "3",
+      value: 3
+    },
+    one: {
+      name: "1",
+      value: 1
+    },
+    zero: {
+      name: "0",
+      value: 0
+    }
+  }
+
+ #=============================================================================
+ # Defaults
+ #=============================================================================
+  DEFAULT_MODES = {
+    difficulty:          :normal,
+    nuzlocke:            false,
+    nuzlocke_options: {
+      faint_rule:        :box,
+      dupes_clause:      true,
+      shiny_clause:      true,
+      nickname_clause:   false,
+      wipe_deletes_save: false,
+      pokecenter_limit: :infinite
+    },
+    inverse:             false,
+    level_caps:          false,
+    no_bag_items_battle: false
+  }
+end

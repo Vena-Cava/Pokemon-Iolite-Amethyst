@@ -32,14 +32,30 @@ class Battle
   end
 
   def pbRegisterItem(idxBattler, item, idxTarget = nil, idxMove = nil)
-    # Register for use of item on a Pokémon in the party
+    #-----------------------------------------------------------------------------
+    # Nuzlocke - Block illegal Poké Ball usage
+    #-----------------------------------------------------------------------------
+    if GameData::Item.get(item).is_poke_ball? &&
+       defined?(AdvancedNewGame) &&
+       AdvancedNewGame.encounter_rules_active? &&
+       !AdvancedNewGame.current_battle_catch_allowed?(self)
+
+      pbDisplay(_INTL("Nuzlocke rules prevent catching another Pokémon here."))
+      return false
+    end
+
+    #-----------------------------------------------------------------------------
+    # Normal item registration
+    #-----------------------------------------------------------------------------
     @choices[idxBattler][0] = :UseItem
-    @choices[idxBattler][1] = item        # ID of item to be used
-    @choices[idxBattler][2] = idxTarget   # Party index of Pokémon to use item on
-    @choices[idxBattler][3] = idxMove     # Index of move to recharge (Ethers)
-    # Delete the item from the Bag. If it turns out it will have no effect, it
-    # will be re-added to the Bag later.
+    @choices[idxBattler][1] = item
+    @choices[idxBattler][2] = idxTarget
+    @choices[idxBattler][3] = idxMove
+
+    # Delete the item from the Bag. If it turns out it will have no effect,
+    # it will be re-added later.
     pbConsumeItemInBag(item, idxBattler)
+
     return true
   end
 

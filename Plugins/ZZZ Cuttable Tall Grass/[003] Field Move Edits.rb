@@ -75,9 +75,12 @@ end
 
 def pbCutBoostAbility?(pokemon)
   return false if !pokemon
+  return false if AdvancedNewGame.retired?(pokemon)
+
   CuttableTallGrass::CUTBOOSTABILITIES.each do |ability|
     return true if pokemon.hasAbility?(ability)
   end
+
   return false
 end
 

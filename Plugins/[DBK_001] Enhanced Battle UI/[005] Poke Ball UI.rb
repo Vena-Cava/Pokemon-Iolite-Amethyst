@@ -167,9 +167,17 @@ class Battle
     idxBattler = idxBattler.index if idxBattler.respond_to?("index")
     return false if !pbOwnedByPlayer?(idxBattler || 0)
     return false if pbOpposingBattlerCount(idxBattler || 0) > 1
+
     allSameSideBattlers(idxBattler || 0).each do |b|
       return false if @choices[b.index][0] != :None
     end
+
+    if defined?(AdvancedNewGame) &&
+       AdvancedNewGame.encounter_rules_active? &&
+       !AdvancedNewGame.current_battle_catch_allowed?(self)
+      return false
+    end
+
     return true
   end
   

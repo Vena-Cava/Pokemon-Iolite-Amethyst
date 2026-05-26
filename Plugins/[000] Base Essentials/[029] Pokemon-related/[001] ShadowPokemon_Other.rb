@@ -49,10 +49,80 @@ def pbPurify(pkmn, scene)
       pkmn.exp = newexp
     end
   end
-  if $PokemonSystem.givenicknames == 0 &&
-     scene.pbConfirm(_INTL("Would you like to give a nickname to {1}?", pkmn.speciesName))
-    newname = pbEnterPokemonName(_INTL("{1}'s nickname?", pkmn.speciesName),
-                                 0, Pokemon::MAX_NAME_SIZE, "", pkmn)
+  #-----------------------------------------------------------------------------
+  # Nickname after purification
+  #-----------------------------------------------------------------------------
+  if defined?(AdvancedNewGame) &&
+     AdvancedNewGame.nuzlocke? &&
+     AdvancedNewGame.nickname_clause?
+
+    loop do
+      newname = pbEnterPokemonName(
+        _INTL("{1}'s nickname?", pkmn.speciesName),
+        0,
+        Pokemon::MAX_NAME_SIZE,
+        "",
+        pkmn
+      )
+
+      newname = newname.strip rescue ""
+
+      invalid = newname.empty?
+      invalid = true if newname.downcase == pkmn.speciesName.downcase
+
+      begin
+        blocked_names = []
+
+        species_queue = [pkmn.species]
+        checked_species = []
+
+        while species_queue.length > 0
+          species = species_queue.shift
+          next if checked_species.include?(species)
+
+          checked_species.push(species)
+
+          species_data = GameData::Species.get(species)
+          blocked_names.push(species_data.name.downcase)
+
+          # Forward evolutions
+          species_data.get_evolutions.each do |evo|
+            species_queue.push(evo[0])
+          end
+
+          # Pre-evolutions / branched relatives
+          GameData::Species.each do |other|
+            other.get_evolutions.each do |evo|
+              species_queue.push(other.species) if evo[0] == species
+            end
+          end
+        end
+
+        invalid = true if blocked_names.include?(newname.downcase)
+        invalid = true if AdvancedNewGame.nickname_already_used?(nickname)
+      rescue
+      end
+
+      if invalid
+        scene.pbDisplay(_INTL("Nuzlocke rules require a unique nickname."))
+        next
+      end
+
+      pkmn.name = newname
+      break
+    end
+
+  elsif $PokemonSystem.givenicknames == 0 &&
+        scene.pbConfirm(_INTL("Would you like to give a nickname to {1}?", pkmn.speciesName))
+
+    newname = pbEnterPokemonName(
+      _INTL("{1}'s nickname?", pkmn.speciesName),
+      0,
+      Pokemon::MAX_NAME_SIZE,
+      "",
+      pkmn
+    )
+
     pkmn.name = newname
   end
 end

@@ -37,6 +37,14 @@ end
 #
 #===============================================================================
 def pbCanUseHiddenMove?(pkmn, move, showmsg = true)
+  if AdvancedNewGame.nuzlocke? &&
+     pkmn &&
+     pkmn.nuzlocke_retired?
+
+    pbMessage(_INTL("{1} is Retired and cannot use field moves.", pkmn.name)) if showmsg
+    return false
+  end
+
   return HiddenMoveHandlers.triggerCanUseMove(move, pkmn, showmsg)
 end
 

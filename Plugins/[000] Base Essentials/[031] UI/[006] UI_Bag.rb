@@ -372,12 +372,12 @@ class PokemonBag_Scene
           pbRefresh
         end
         if itemwindow.sorting
-          if Keybinds.press?(:action) ||
-             Keybinds.press?(:use)
+          if Keybinds.trigger?(:action) ||
+             Keybinds.trigger?(:use)
             itemwindow.sorting = false
             pbPlayDecisionSE
             pbRefresh
-          elsif Keybinds.press?(:back)
+          elsif Keybinds.trigger?(:back)
             thispocket.insert(swapinitialpos, thispocket.delete_at(itemwindow.index))
             itemwindow.index = swapinitialpos
             itemwindow.sorting = false
@@ -385,7 +385,7 @@ class PokemonBag_Scene
             pbRefresh
           end
         else   # Change pockets
-          if Keybinds.press?(:left)
+          if Keybinds.trigger?(:left)
             newpocket = itemwindow.pocket
             loop do
               newpocket = (newpocket == 1) ? PokemonBag.pocket_count : newpocket - 1
@@ -403,7 +403,7 @@ class PokemonBag_Scene
               pbPlayCursorSE
               pbRefresh
             end
-          elsif Keybinds.press?(:right)
+          elsif Keybinds.trigger?(:right)
             newpocket = itemwindow.pocket
             loop do
               newpocket = (newpocket == PokemonBag.pocket_count) ? 1 : newpocket + 1
@@ -421,7 +421,7 @@ class PokemonBag_Scene
               pbPlayCursorSE
               pbRefresh
             end
-#          elsif Keybinds.press?(:special)   # Register/unregister selected item
+#          elsif Keybinds.trigger?(:special)   # Register/unregister selected item
 #            if !@choosing && itemwindow.index<thispocket.length
 #              if @bag.registered?(itemwindow.item)
 #                @bag.unregister(itemwindow.item)
@@ -431,7 +431,7 @@ class PokemonBag_Scene
 #              pbPlayDecisionSE
 #              pbRefresh
 #            end
-          elsif Keybinds.press?(:action)   # Start switching the selected item
+          elsif Keybinds.trigger?(:action)   # Start switching the selected item
             if !@choosing && thispocket.length > 1 && itemwindow.index < thispocket.length &&
                !Settings::BAG_POCKET_AUTO_SORT[itemwindow.pocket - 1]
               itemwindow.sorting = true
@@ -439,10 +439,10 @@ class PokemonBag_Scene
               pbPlayDecisionSE
               pbRefresh
             end
-          elsif Keybinds.press?(:back)   # Cancel the item screen
+          elsif Keybinds.trigger?(:back)   # Cancel the item screen
             pbPlayCloseMenuSE
             return nil
-          elsif Keybinds.press?(:use)   # Choose selected item
+          elsif Keybinds.trigger?(:use)   # Choose selected item
             (itemwindow.item) ? pbPlayDecisionSE : pbPlayCloseMenuSE
             return itemwindow.item
           end

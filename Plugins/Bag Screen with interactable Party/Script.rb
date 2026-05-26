@@ -1797,7 +1797,16 @@ class Battle::Scene
     itemScene = PokemonBag_Scene.new
     itemScene.pbStartScene($bag, modParty, true,
                            proc { |item|
-                             useType = GameData::Item.get(item).battle_use
+                             item_data = GameData::Item.get(item)
+
+                             if defined?(AdvancedNewGame) &&
+                                AdvancedNewGame.encounter_rules_active? &&
+                                item_data.is_poke_ball? &&
+                                !AdvancedNewGame.current_battle_catch_allowed?(@battle)
+                               next false
+                             end
+
+                             useType = item_data.battle_use
                              next useType && useType > 0
                            }, false)
     # Loop while in Bag screen

@@ -1,0 +1,4 @@
+Name       = I&A New Game Advanced
+Version    = 1.0.0
+Essentials = 21.1
+Credits    = Vena Cava

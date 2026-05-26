@@ -475,12 +475,33 @@ Battle::AbilityEffects::EndOfRoundWeather.add(:ROCKBODY,
 # Troll Toll
 #===============================================================================
 class Battle
+  def pbTrollTollImmune?(battler)
+    # Ghost-types
+    return true if battler.pbHasType?(:GHOST)
+
+    # Shed Shell and similar items
+    return true if battler.itemActive? &&
+                   Battle::ItemEffects.triggerCertainSwitching(battler.item, battler, self)
+
+    # Run Away and similar abilities
+    return true if battler.abilityActive? &&
+                   Battle::AbilityEffects.triggerCertainSwitching(battler.ability, battler, self)
+
+    return false
+  end
+end
+
+class Battle
   alias ia_trolltoll_pbRecallAndReplace pbRecallAndReplace unless method_defined?(:ia_trolltoll_pbRecallAndReplace)
 
   def pbRecallAndReplace(idxBattler, idxParty, randomReplacement = false, batonPass = false)
     battler = @battlers[idxBattler]
 
-    if battler && !battler.fainted? && battler.takesIndirectDamage?
+  if battler &&
+     !battler.fainted? &&
+     !randomReplacement &&
+     battler.takesIndirectDamage? &&
+     !pbTrollTollImmune?(battler)
       toll_users = allBattlers.select { |b|
         b && !b.fainted? && b.opposes?(battler) && b.hasActiveAbility?(:TROLLTOLL)
       }

@@ -439,9 +439,13 @@ class PokemonSummary_Scene
 	@sprites["pokemon"].setPokemonBitmap(@pokemon)
 	@sprites["pokeicon"] = PokemonIconSprite.new(@pokemon, @viewport)
 	@sprites["pokeicon"].setOffset(PictureOrigin::CENTER)
-	@sprites["pokeicon"].x       = 46
-	@sprites["pokeicon"].y       = 92
+	@sprites["pokeicon"].x       = 274
+	@sprites["pokeicon"].y       = 282
 	@sprites["pokeicon"].visible = false
+  @sprites["retiredicon"] = IconSprite.new(274, 282, @viewport)
+  @sprites["retiredicon"].setBitmap("Graphics/UI/Summary/icon_retired")
+  @sprites["retiredicon"].visible = false
+  @sprites["retiredicon"].z = 99999
 	@sprites["itemicon"] = ItemIconSprite.new(242, 320, @pokemon.item_id, @viewport)
 	@sprites["itemicon"].blankzero = true
     # Stat Hexagons
@@ -669,6 +673,12 @@ class PokemonSummary_Scene
     if status >= 0
       imagepos.push(["Graphics/UI/statuses", 124, 100, 0, 16 * status, 44, 16])
     end
+    if @sprites["retiredicon"]
+      @sprites["retiredicon"].visible = (
+        @pokemon.respond_to?(:nuzlocke_retired?) &&
+        @pokemon.nuzlocke_retired?
+      )
+    end
     # Show Pokérus cured icon
     if @pokemon.pokerusStage == 2
       imagepos.push([sprintf("Graphics/UI/Summary/icon_pokerus"), 176, 100])
@@ -706,7 +716,7 @@ class PokemonSummary_Scene
     # Draw all text
     pbDrawTextPositions(overlay, textpos)
     # Draw the Pokémon's markings
-    drawMarkings(overlay, 276, 292)
+    drawMarkings(overlay, 276, 300)
     # Draw page-specific information
     case page
     when 1 then drawPageOne
