@@ -10,9 +10,10 @@ module AdvancedNewGame
   SWITCH_DUPES_CLAUSE         = 130
   SWITCH_SHINY_CLAUSE         = 131
   SWITCH_NICKNAME_CLAUSE      = 132
-  SWITCH_WIPE_DELETES_SAVE    = 133
+  SWITCH_PROF_OAK_CHALLENGE   = 133
   SWITCH_NO_BAG_ITEMS_BATTLE  = 134
   SWITCH_NUZLOCKE_STARTED     = 135
+  SWITCH_HM_CLAUSE            = 136
 
   #=============================================================================
   # Variable IDs
@@ -23,6 +24,8 @@ module AdvancedNewGame
   VARIABLE_NEXT_BOSS          = 102
   VARIABLE_FAINT_RULE         = 103
   VARIABLE_POKECENTER_LIMIT   = 104 
+  VARIABLE_LOSE_CONDITION     = 105
+  VARIABLE_LOSE_RESULT        = 106
 
   #=============================================================================
   # Text
@@ -51,6 +54,10 @@ module AdvancedNewGame
       name: "Nuzlocke",
       desc: "Fainted Pokémon cannot be used. Only first encounter per area can be caught."
     },
+    prof_oak_challenge: {
+      name: "Prof. Oak Challenge",
+      desc: "You must fill in every possible Pokédex Entry before challenging each Gym."
+    },
     inverse: {
       name: "Inverse",
       desc: "Type matchups are flipped. Weaknesses become resistances, and resistances become weaknesses."
@@ -78,9 +85,17 @@ module AdvancedNewGame
       name: "Nickname Clause",
       desc: "All caught Pokémon must be given unique nicknames."
     },
-    wipe_deletes_save: {
-      name: "Wipe Deletes Save",
-      desc: "Losing a battle deletes the save file."
+    hm_clause: {
+      name: "HM Clause",
+      desc: "Retired Pokémon can still use HM moves in the field. SOFTLOCK POSSIBLE IF OFF"
+    },
+    lose_condition: {
+      name: "Lose Condition",
+      desc: "Choose what counts as losing the run."
+    },
+    lose_result: {
+      name: "Lose Result",
+      desc: "Choose what happens when the run is lost."
     },
     pokecenter_limit: {
       name: "PokéCentre Limit",
@@ -89,13 +104,17 @@ module AdvancedNewGame
   }
   
   NUZLOCKE_FAINT_RULES = {
+    retired: {
+      name: "Retired",
+      desc: "Fainted Pokémon remain in the party, but cannot battle."
+    },
     box: {
       name: "Perma-Box",
-      desc: "Fainted Pokémon are sent to the Box and cannot rejoin the party."
+      desc: "Fainted Pokémon are sent to the Box and cannot rejoin the party. SOFTLOCK POSSIBLE"
     },
     release: {
       name: "Auto-Release",
-      desc: "Fainted Pokémon are automatically released."
+      desc: "Fainted Pokémon are automatically released. SOFTLOCK POSSIBLE"
     }
   }
   
@@ -117,6 +136,32 @@ module AdvancedNewGame
       value: 0
     }
   }
+  
+  LOSE_CONDITIONS = {
+    whiteout: {
+      name: "Whiteout",
+      desc: "The run is lost when you lose a battle."
+    },
+    full_wipe: {
+      name: "Full Wipe",
+      desc: "The run is lost only when all Pokémon are retired."
+    }
+  }
+
+  LOSE_RESULTS = {
+    reload: {
+      name: "Reload",
+      desc: "Return to your last saved game."
+    },
+    disable: {
+      name: "Disable",
+      desc: "Mark the save file as failed, making it unplayable."
+    },
+    delete: {
+      name: "Delete",
+      desc: "Delete the save file."
+    }
+  }
 
  #=============================================================================
  # Defaults
@@ -125,13 +170,16 @@ module AdvancedNewGame
     difficulty:          :normal,
     nuzlocke:            false,
     nuzlocke_options: {
-      faint_rule:        :box,
+      faint_rule:        :retired,
       dupes_clause:      true,
       shiny_clause:      true,
       nickname_clause:   false,
-      wipe_deletes_save: false,
+      hm_clause:         true,
+      lose_condition: :full_wipe,
+      lose_result: :disable,
       pokecenter_limit: :infinite
     },
+    prof_oak_challenge:  false,
     inverse:             false,
     level_caps:          false,
     no_bag_items_battle: false

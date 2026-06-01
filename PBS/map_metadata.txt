@@ -11,7 +11,7 @@ MapPosition = 0,13,12
 BattleBack = field
 #-------------------------------
 [003]   # \PN's house
-Name = Vena's house
+Name = My house
 HealingSpot = 2,8,8
 MapPosition = 0,13,12
 #-------------------------------

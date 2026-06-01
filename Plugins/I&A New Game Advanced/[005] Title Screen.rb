@@ -17,6 +17,25 @@ class PokemonLoadScreen
   alias advanced_new_game_pbStartLoadScreen pbStartLoadScreen
 
   def pbStartLoadScreen
+    auto_slot = AdvancedNewGame.instance_variable_get(:@advanced_new_game_auto_reload_slot)
+
+    if auto_slot
+      AdvancedNewGame.instance_variable_set(:@advanced_new_game_auto_reload_slot, nil)
+
+      path = AdvancedNewGame.save_slot_path(auto_slot)
+
+      if File.file?(path)
+        AdvancedNewGame.current_save_slot = auto_slot
+        save_data = SaveData.read_from_file(path)
+
+        SaveData.mark_values_as_unloaded
+        $game_temp.instance_variable_set(:@advanced_new_game_return_to_title, false) if $game_temp
+        $game_temp.instance_variable_set(:@advanced_new_game_loss_handled, false) if $game_temp
+        Game.load(save_data)
+        return
+      end
+    end
+
     commands = []
     cmd_continue          = -1
     cmd_new_game          = -1
@@ -27,11 +46,13 @@ class PokemonLoadScreen
     cmd_debug             = -1
     cmd_quit              = -1
 
-    show_continue = !@save_data.empty?
+    show_continue = AdvancedNewGame.slot_range.any? { |slot|
+      AdvancedNewGame.save_slot_exists?(slot)
+    }
 
     if show_continue
       commands[cmd_continue = commands.length] = _INTL("Continue")
-      if @save_data[:player].mystery_gift_unlocked
+      if @save_data[:player] && @save_data[:player].mystery_gift_unlocked
         commands[cmd_mystery_gift = commands.length] = _INTL("Mystery Gift")
       end
     end
@@ -43,10 +64,12 @@ class PokemonLoadScreen
     commands[cmd_debug = commands.length] = _INTL("Debug") if $DEBUG
     commands[cmd_quit = commands.length] = _INTL("Quit Game")
 
-    map_id = show_continue ? @save_data[:map_factory].map.map_id : 0
+    map_id = (@save_data[:map_factory]&.map&.map_id rescue 0)
 
-    @scene.pbStartScene(commands, show_continue, @save_data[:player], @save_data[:stats], map_id)
-    @scene.pbSetParty(@save_data[:player]) if show_continue
+    continue_player = @save_data[:player] rescue nil
+    continue_stats  = @save_data[:stats] rescue nil
+
+    @scene.pbStartScene(commands, false, continue_player, continue_stats, map_id)
     @scene.pbStartScene2
 
     loop do
@@ -72,6 +95,7 @@ class PokemonLoadScreen
         end
 
         @scene.pbEndScene
+        SaveData.mark_values_as_unloaded
         Game.load(save_data)
         return
 
@@ -84,23 +108,45 @@ class PokemonLoadScreen
         AdvancedNewGame.prepare_default_new_game
 
         @scene.pbEndScene
+        SaveData.mark_values_as_unloaded
         Game.start_new
         return
 
       when cmd_advanced_new_game
-        slot_screen = AdvancedNewGame_SaveSlotScreen.new(:advanced_new_game)
-        slot = slot_screen.pbStartScreen
-        next if !slot
+        $advanced_new_game_pending = nil
 
-        AdvancedNewGame.current_save_slot = slot
-        AdvancedNewGame.prepare_advanced_new_game
+        loop do 
+          AdvancedNewGame.prepare_advanced_new_game
 
-        # Player cancelled the Advanced New Game menu
-        next if !$advanced_new_game
+          # Player cancelled ANG menu
+          if !$advanced_new_game_pending
+            AdvancedNewGame.last_advanced_settings = AdvancedNewGame::DEFAULT_MODES
+            break
+          end
 
-        @scene.pbEndScene
-        Game.start_new
-        return
+          # Invalid settings: show message, then reopen ANG menu
+          if !AdvancedNewGame.valid_advanced_settings?($advanced_new_game_pending)
+            AdvancedNewGame.last_advanced_settings = $advanced_new_game_pending
+            $advanced_new_game_pending = nil
+            next
+          end
+
+          # Valid settings: now choose slot
+          slot_screen = AdvancedNewGame_SaveSlotScreen.new(:advanced_new_game)
+          slot = slot_screen.pbStartScreen
+
+          # Back out from slot screen -> return to title
+          break if !slot
+
+          AdvancedNewGame.current_save_slot = slot
+
+          @scene.pbEndScene
+          SaveData.mark_values_as_unloaded
+          Game.start_new
+          return
+        end
+
+        next
 
       when cmd_mystery_gift
         pbFadeOutIn { pbDownloadMysteryGift(@save_data[:player]) }
@@ -116,10 +162,7 @@ class PokemonLoadScreen
         @scene.pbEndScene
         $PokemonSystem.language = pbChooseLanguage
         MessageTypes.load_message_files(Settings::LANGUAGES[$PokemonSystem.language][1])
-        if show_continue
-          @save_data[:pokemon_system] = $PokemonSystem
-          File.open(SaveData::FILE_PATH, "wb") { |file| Marshal.dump(@save_data, file) }
-        end
+        AdvancedNewGame.save_global_options
         $scene = pbCallTitle
         return
 

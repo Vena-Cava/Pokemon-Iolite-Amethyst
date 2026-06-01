@@ -1628,6 +1628,24 @@ MenuHandlers.add(:party_menu_item, :move, {
   }
 })
 
+MenuHandlers.add(:party_menu, :retire, {
+  "name"      => _INTL("Retire"),
+  "order"     => 45,
+  "condition" => proc { |screen, party, party_idx|
+    pkmn = party[party_idx]
+
+    next AdvancedNewGame.nuzlocke? &&
+         AdvancedNewGame.nuzlocke_started? &&
+         !pkmn.egg? &&
+         !pkmn.nuzlocke_retired?
+  },
+  "effect"    => proc { |screen, party, party_idx|
+    if AdvancedNewGame.manually_retire_pokemon(party[party_idx])
+      screen.pbRefreshSingle(party_idx)
+    end
+  }
+})
+
 #===============================================================================
 # Open the party screen
 #===============================================================================

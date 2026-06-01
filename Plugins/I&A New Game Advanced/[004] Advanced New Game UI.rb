@@ -7,8 +7,7 @@ class AdvancedNewGame_Scene
 
   def pbStartScene
     @result = nil
-    @data = AdvancedNewGame::DEFAULT_MODES.clone
-    @data[:nuzlocke_options] = AdvancedNewGame::DEFAULT_MODES[:nuzlocke_options].clone
+    @data = Marshal.load(Marshal.dump(AdvancedNewGame.last_advanced_settings))
 
     @viewport = Viewport.new(0, 0, Graphics.width, Graphics.height)
     @viewport.z = 99999
@@ -76,6 +75,7 @@ class AdvancedNewGame_Scene
       @descriptions.push(_INTL("Open extra Nuzlocke rules, such as Dupes Clause and Shiny Clause."))
     end
 
+    add_bool_option(:prof_oak_challenge, "Prof. Oak Challenge", AdvancedNewGame::MODES[:prof_oak_challenge][:desc])
     add_bool_option(:inverse, "Inverse", AdvancedNewGame::MODES[:inverse][:desc])
     add_bool_option(:level_caps, "Level Caps", AdvancedNewGame::MODES[:level_caps][:desc])
     add_bool_option(:no_bag_items_battle,"No Battle Items",AdvancedNewGame::MODES[:no_bag_items_battle][:desc])
@@ -275,7 +275,13 @@ class NuzlockeOptions_Scene
       _INTL("Faint Rule"),
       rule_names,
       proc { next rules.index(@data[:nuzlocke_options][:faint_rule]) || 0 },
-      proc { |value, _scene| @data[:nuzlocke_options][:faint_rule] = rules[value] }
+      proc { |value, _scene|
+        @data[:nuzlocke_options][:faint_rule] = rules[value]
+
+        if @data[:nuzlocke_options][:faint_rule] != :retired
+          @data[:nuzlocke_options][:hm_clause] = true
+        end
+      }
     ))
     @descriptions.push(proc {
       rule = @data[:nuzlocke_options][:faint_rule]
@@ -295,7 +301,78 @@ class NuzlockeOptions_Scene
     add_bool_option(:dupes_clause)
     add_bool_option(:shiny_clause)
     add_bool_option(:nickname_clause)
-    add_bool_option(:wipe_deletes_save)
+    echoln "Current faint rule: #{@data[:nuzlocke_options][:faint_rule].inspect}" if $DEBUG
+    faint_rule = @data[:nuzlocke_options][:faint_rule]
+
+    if faint_rule == :retired || faint_rule == "retired"
+      add_bool_option(:hm_clause)
+    end
+    conditions = AdvancedNewGame::LOSE_CONDITIONS.keys
+    condition_names = conditions.map { |c| AdvancedNewGame::LOSE_CONDITIONS[c][:name] }
+
+    @options.push(EnumOption.new(
+      _INTL("Lose Condition"),
+      condition_names,
+      proc {
+        next conditions.index(@data[:nuzlocke_options][:lose_condition]) || 0
+      },
+      proc { |value, _scene|
+        @data[:nuzlocke_options][:lose_condition] = conditions[value]
+      }
+    ))
+
+    @descriptions.push(proc {
+      cond = @data[:nuzlocke_options][:lose_condition]
+      next AdvancedNewGame::LOSE_CONDITIONS[cond][:desc]
+    })
+    results = AdvancedNewGame::LOSE_RESULTS.keys
+
+    result_names = results.map { |r| AdvancedNewGame::LOSE_RESULTS[r][:name] }
+
+    @options.push(EnumOption.new(
+      _INTL("Lose Result"),
+      result_names,
+      proc {
+        current = @data[:nuzlocke_options][:lose_result]
+        next results.index(current) || 0
+      },
+      proc { |value, _scene|
+        @data[:nuzlocke_options][:lose_result] = results[value]
+      }
+    ))
+
+    @descriptions.push(proc {
+      result = @data[:nuzlocke_options][:lose_result]
+      next AdvancedNewGame::LOSE_RESULTS[result][:desc]
+    })
+  end
+
+  def rebuild_option_window
+    old_index = @sprites["option"].index
+
+    @sprites["option"].dispose if @sprites["option"]
+
+    build_options
+
+    @sprites["option"] = Window_PokemonOption.new(
+      @options,
+      0,
+      @sprites["title"].y + @sprites["title"].height - 16,
+      Graphics.width,
+      Graphics.height - (@sprites["title"].y + @sprites["title"].height - 16) - @sprites["textbox"].height
+    )
+
+    @sprites["option"].viewport = @viewport
+    @sprites["option"].visible = true
+    @sprites["option"].active = true
+
+    @options.length.times do |i|
+      @sprites["option"].setValueNoRefresh(i, @options[i].get || 0)
+    end
+
+    @sprites["option"].index = [old_index, @options.length - 1].min
+    @sprites["option"].refresh
+    pbChangeSelection
   end
 
   def add_bool_option(key)
@@ -337,7 +414,10 @@ class NuzlockeOptions_Scene
         if @sprites["option"].value_changed
           i = @sprites["option"].index
           @options[i].set(@sprites["option"][i], self)
-          pbChangeSelection
+
+          rebuild_option_window
+          old_index = @sprites["option"].index
+          next
         end
 
         if Keybinds.press?(:back)

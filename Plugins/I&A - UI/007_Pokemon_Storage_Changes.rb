@@ -2102,6 +2102,7 @@ class PokemonStorageScreen
             cmdWithdraw = -1
             cmdItem     = -1
             cmdMark     = -1
+            cmdRetire   = -1
             cmdRelease  = -1
             cmdDebug    = -1
             if heldpoke
@@ -2115,6 +2116,14 @@ class PokemonStorageScreen
             commands[cmdWithdraw = commands.length] = (selected[0] == -1) ? _INTL("Store") : _INTL("Withdraw")
             commands[cmdItem = commands.length]     = _INTL("Item")
             commands[cmdMark = commands.length]     = _INTL("Mark")
+            target = @heldpkmn || pokemon
+            if target &&
+               AdvancedNewGame.nuzlocke? &&
+               AdvancedNewGame.nuzlocke_started? &&
+               !target.egg? &&
+               !target.nuzlocke_retired?
+              commands[cmdRetire = commands.length] = _INTL("Retire")
+            end
             commands[cmdRelease = commands.length]  = _INTL("Release")
             commands[cmdDebug = commands.length]    = _INTL("Debug") if $DEBUG
             commands[commands.length]               = _INTL("Cancel")
@@ -2131,8 +2140,15 @@ class PokemonStorageScreen
               (selected[0] == -1) ? pbStore(selected, @heldpkmn) : pbWithdraw(selected, @heldpkmn)
             elsif cmdItem >= 0 && command == cmdItem   # Item
               pbItem(selected, @heldpkmn)
+            elsif cmdRetire >= 0 && command == cmdRetire
+              pbRetire(selected, @heldpkmn)
             elsif cmdMark >= 0 && command == cmdMark   # Mark
               pbMark(selected, @heldpkmn)
+            elsif cmdRetire >= 0 && command == cmdRetire   # Retire
+              target = @heldpkmn || pokemon
+              if AdvancedNewGame.manually_retire_pokemon(target)
+                @scene.pbHardRefresh
+              end
             elsif cmdRelease >= 0 && command == cmdRelease   # Release
               pbRelease(selected, @heldpkmn)
             elsif cmdDebug >= 0 && command == cmdDebug   # Debug
@@ -2170,13 +2186,15 @@ class PokemonStorageScreen
                                    [_INTL("Withdraw"),
                                     _INTL("Summary"),
                                     _INTL("Mark"),
+                                    _INTL("Retire"),
                                     _INTL("Release"),
                                     _INTL("Cancel")])
           case command
           when 0 then pbWithdraw(selected, nil)
           when 1 then pbSummary(selected, nil)
           when 2 then pbMark(selected, nil)
-          when 3 then pbRelease(selected, nil)
+          when 3 then pbRetire(selected, nil)
+          when 4 then pbRelease(selected, nil)
           end
         end
       end
@@ -2201,13 +2219,15 @@ class PokemonStorageScreen
                                    [_INTL("Store"),
                                     _INTL("Summary"),
                                     _INTL("Mark"),
+                                    _INTL("Retire"),
                                     _INTL("Release"),
                                     _INTL("Cancel")])
           case command
           when 0 then pbStore([-1, selected], nil)
           when 1 then pbSummary([-1, selected], nil)
           when 2 then pbMark([-1, selected], nil)
-          when 3 then pbRelease([-1, selected], nil)
+          when 3 then pbRetire([-1, selected], nil)
+          when 4 then pbRelease([-1, selected], nil)
           end
         end
       end
@@ -2328,67 +2348,67 @@ class PokemonStorageScreen
     end
   end
 
-def pbHold(selected)
-  box = selected[0]
-  index = selected[1]
+  def pbHold(selected)
+    box = selected[0]
+    index = selected[1]
 
-  if box == -1 && pbAble?(@storage[box, index]) && pbAbleCount <= 1
-    pbPlayBuzzerSE
-    pbDisplay(_INTL("That's your last Pokémon!"))
-    return
-  end
-
-  @heldFromParty = (box == -1)
-  @scene.pbHold(selected)
-  @heldpkmn = @storage[box, index]
-
-  if box == -1
-    @storage.party[index] = nil
-  else
-    @storage.pbDelete(box, index)
-  end
-
-  @scene.pbRefresh
-end
-
-def pbPlace(selected)
-  box = selected[0]
-  index = selected[1]
-
-  if @storage[box, index]
-    raise _INTL("Position {1},{2} is not empty...", box, index)
-  elsif box != -1
-    if index >= @storage.maxPokemon(box)
-      pbDisplay("Can't place that there.")
-      return
-    elsif @heldpkmn.mail
-      pbDisplay("Please remove the mail.")
-      return
-    elsif @heldpkmn.cannot_store
-      pbDisplay(_INTL("{1} refuses to go into storage!", @heldpkmn.name))
+    if box == -1 && pbAble?(@storage[box, index]) && pbAbleCount <= 1
+      pbPlayBuzzerSE
+      pbDisplay(_INTL("That's your last Pokémon!"))
       return
     end
-  end
 
-  if Settings::HEAL_STORED_POKEMON && box >= 0
-    old_ready_evo = @heldpkmn.ready_to_evolve
-    @heldpkmn.heal
-    @heldpkmn.ready_to_evolve = old_ready_evo
-  end
+    @heldFromParty = (box == -1)
+    @scene.pbHold(selected)
+    @heldpkmn = @storage[box, index]
 
-  @scene.pbPlace(selected, @heldpkmn)
-  @storage[box, index] = @heldpkmn
+    if box == -1
+      @storage.party[index] = nil
+    else
+      @storage.pbDelete(box, index)
+    end
 
-  if box == -1 || @heldFromParty
-    @storage.party.compact!
-    @scene.pbHardRefresh
-  else
     @scene.pbRefresh
   end
 
-  @heldpkmn = nil
-  @heldFromParty = false
-end
+  def pbPlace(selected)
+    box = selected[0]
+    index = selected[1]
+
+    if @storage[box, index]
+      raise _INTL("Position {1},{2} is not empty...", box, index)
+    elsif box != -1
+      if index >= @storage.maxPokemon(box)
+        pbDisplay("Can't place that there.")
+        return
+      elsif @heldpkmn.mail
+        pbDisplay("Please remove the mail.")
+        return
+      elsif @heldpkmn.cannot_store
+        pbDisplay(_INTL("{1} refuses to go into storage!", @heldpkmn.name))
+        return
+      end
+    end
+
+    if Settings::HEAL_STORED_POKEMON && box >= 0
+      old_ready_evo = @heldpkmn.ready_to_evolve
+      @heldpkmn.heal
+      @heldpkmn.ready_to_evolve = old_ready_evo
+    end
+
+    @scene.pbPlace(selected, @heldpkmn)
+    @storage[box, index] = @heldpkmn
+
+    if box == -1 || @heldFromParty
+      @storage.party.compact!
+      @scene.pbHardRefresh
+    else
+      @scene.pbRefresh
+    end
+
+    @heldpkmn = nil
+    @heldFromParty = false
+  end
 
   def pbSwap(selected)
     box = selected[0]
@@ -2457,6 +2477,18 @@ end
       @scene.pbRefresh
     end
     return
+  end
+  
+  def pbRetire(selected, heldpoke)
+    box = selected[0]
+    index = selected[1]
+    pokemon = heldpoke ? heldpoke : @storage[box, index]
+
+    return if !pokemon
+
+    if AdvancedNewGame.manually_retire_pokemon(pokemon)
+      @scene.pbHardRefresh
+    end
   end
 
   def pbChooseMove(pkmn, helptext, index = 0)

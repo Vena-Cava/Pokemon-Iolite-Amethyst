@@ -250,9 +250,9 @@ module PronounSystem
     text.gsub!(/\\R2Verb/i) { r2_verb(:proper) }
     text.gsub!(/\\R2VERB/i) { r2_verb(:upper) }
 
-    text.gsub!(/\\pc/i)     { p_color }
-    text.gsub!(/\\r1c/i)    { r1_color }
-    text.gsub!(/\\r2c/i)    { r2_color }
+    text.gsub!(/\\pc/i)     { "\\" + p_color }
+    text.gsub!(/\\r1c/i)    { "\\" + r1_color }
+    text.gsub!(/\\r2c/i)    { "\\" + r2_color }
 
     text.gsub!(/\\r1name/i) { r1_name(:proper) }
     text.gsub!(/\\R1NAME/i) { r1_name(:upper) }
@@ -293,12 +293,14 @@ def r2_color
   PronounSystem.rival_get(2, :color)
 end
 
-def r1_name
-  PronounSystem.rival_name(1)
+def r1_name(c = nil)
+  name = PronounSystem.rival_name(1).to_s
+  return c ? PronounSystem.apply_case(name, c) : name
 end
 
-def r2_name
-  PronounSystem.rival_name(2)
+def r2_name(c = nil)
+  name = PronounSystem.rival_name(2).to_s
+  return c ? PronounSystem.apply_case(name, c) : name
 end
 
 def pbChoosePronouns
@@ -374,4 +376,47 @@ alias pronounsystem_pbMessage pbMessage
 def pbMessage(message, commands = nil, cmdIfCancel = 0, skin = nil, defaultCmd = 0, &block)
   message = PronounSystem.convert_message_codes(message) if message.is_a?(String)
   return pronounsystem_pbMessage(message, commands, cmdIfCancel, skin, defaultCmd, &block)
+end
+
+module PronounSystem
+  def self.gender_from_player_id(id = nil)
+    return nil if !$player
+
+    id ||= $player.character_ID
+    meta = GameData::PlayerMetadata.get(id)
+    return nil if !meta
+
+    trainer_type = GameData::TrainerType.get(meta.trainer_type)
+    return nil if !trainer_type
+
+    case trainer_type.gender
+    when 0
+      return :male
+    when 1
+      return :female
+    else
+      return :nb
+    end
+  end
+
+  def self.apply_player_gender_from_id(id = nil)
+    gender = gender_from_player_id(id)
+    return if !gender
+
+    set_player_color(gender)
+    set_rival_pronouns(gender)
+    set_rival_names(gender)
+  end
+end
+
+class Player
+  alias pronounsystem_character_ID_set character_ID=
+
+  def character_ID=(value)
+    pronounsystem_character_ID_set(value)
+
+    if defined?(PronounSystem) && $PokemonSystem
+      PronounSystem.apply_player_gender_from_id(value)
+    end
+  end
 end

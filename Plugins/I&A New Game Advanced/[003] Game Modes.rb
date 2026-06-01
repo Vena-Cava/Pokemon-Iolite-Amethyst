@@ -15,6 +15,32 @@ module AdvancedNewGame
     $advanced_new_game = DEFAULT_MODES.clone
     $advanced_new_game_pending = $advanced_new_game
   end
+  
+  def self.valid_advanced_settings?(settings)
+    if settings[:nuzlocke] && settings[:prof_oak_challenge]
+      pbMessage(_INTL(
+        "Nuzlocke Mode and Prof. Oak's Challenge are mutually exclusive and cannot be used together."
+      ))
+      return false
+    end
+    
+    if settings[:level_caps] && settings[:prof_oak_challenge]
+      pbMessage(_INTL(
+        "Level Caps Mode and Prof. Oak's Challenge are mutually exclusive and cannot be used together."
+      ))
+      return false
+    end
+
+    return true
+  end
+  
+  def self.last_advanced_settings
+    return @last_advanced_settings || DEFAULT_MODES.clone
+  end
+
+  def self.last_advanced_settings=(settings)
+    @last_advanced_settings = Marshal.load(Marshal.dump(settings))
+  end
 
   def self.start_advanced_game
     settings = pbAdvancedNewGameMenu
@@ -64,8 +90,21 @@ module AdvancedNewGame
   }
 
   FAINT_RULE_VALUES = {
+    retired: 0,
     box: 0,
     release: 1
+  }
+
+  LOSE_CONDITION_VALUES = {
+    whiteout: 0,
+    full_wipe: 1
+  }
+
+  LOSE_RESULT_VALUES = {
+    centre: 0,
+    reload: 1,
+    disable: 2,
+    delete: 3
   }
   
   def self.no_bag_items_battle?
@@ -86,6 +125,7 @@ module AdvancedNewGame
     return if !$game_switches || !$game_variables
 
     $game_switches[SWITCH_INVERSE_MODE]      = enabled?(:inverse)
+    $game_switches[SWITCH_PROF_OAK_CHALLENGE]= enabled?(:prof_oak_challenge)
     $game_switches[SWITCH_NUZLOCKE_MODE]     = enabled?(:nuzlocke)
     $game_switches[SWITCH_LEVEL_CAPS]        = enabled?(:level_caps)
     $game_switches[SWITCH_NO_BAG_ITEMS_BATTLE] = enabled?(:no_bag_items_battle)
@@ -93,7 +133,14 @@ module AdvancedNewGame
     $game_switches[SWITCH_DUPES_CLAUSE]      = nuzlocke_option?(:dupes_clause)
     $game_switches[SWITCH_SHINY_CLAUSE]      = nuzlocke_option?(:shiny_clause)
     $game_switches[SWITCH_NICKNAME_CLAUSE]   = nuzlocke_option?(:nickname_clause)
-    $game_switches[SWITCH_WIPE_DELETES_SAVE] = nuzlocke_option?(:wipe_deletes_save)
+    $game_switches[SWITCH_HM_CLAUSE]         = nuzlocke_option?(:hm_clause)
+    options = current[:nuzlocke_options] || {}
+
+    $game_variables[VARIABLE_LOSE_CONDITION] =
+      LOSE_CONDITION_VALUES[options[:lose_condition] || :whiteout] || 0
+
+    $game_variables[VARIABLE_LOSE_RESULT] =
+      LOSE_RESULT_VALUES[options[:lose_result] || :disable] || 2
 
     $game_variables[VARIABLE_DIFFICULTY] = DIFFICULTY_VALUES[difficulty] || 1
     $game_variables[VARIABLE_FAINT_RULE] = FAINT_RULE_VALUES[nuzlocke_faint_rule] || 0
