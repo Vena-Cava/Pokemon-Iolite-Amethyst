@@ -134,7 +134,7 @@ ts_list length: 51
   Map048 (Pinella Fields): stored_id=23, slot_path='C:\\Users\\Vena\\Documents\\folders\\RPGMaker\\Pokemon IA XPX\\Graphics\\Tilesets\\Niphos Outside.png', slot_name='Niphos Outside', resolved_id=23 (matched 'niphos outside.png')
   Map049 (Rock Cave 1F): stored_id=6, slot_path='C:\\Users\\Vena\\Documents\\folders\\RPGMaker\\Pokemon IA XPX\\Graphics\\Tilesets\\Caves.png', slot_name='Caves', resolved_id=6 (matched 'caves.png')
   Map050 (Rock Cave B1F): stored_id=6, slot_path='C:\\Users\\Vena\\Documents\\folders\\RPGMaker\\Pokemon IA XPX\\Graphics\\Tilesets\\Caves.png', slot_name='Caves', resolved_id=6 (matched 'caves.png')
-  Map051 (Dungeon): stored_id=7, slot_path='C:\\Users\\Vena\\Documents\\folders\\RPGMaker\\Pokemon IA XPX\\Graphics\\Tilesets\\Caves.png', slot_name='Dungeon', resolved_id=6 (matched 'caves.png') *** MISMATCH ***
+  Map051 (Dungeon): stored_id=6, slot_path='C:\\Users\\Vena\\Documents\\folders\\RPGMaker\\Pokemon IA XPX\\Graphics\\Tilesets\\Caves.png', slot_name='Dungeon', resolved_id=6 (matched 'caves.png')
   Map052 (Battle Frontier): stored_id=1, slot_path='C:\\Users\\Vena\\Documents\\folders\\RPGMaker\\Pokemon IA XPX\\Graphics\\Tilesets\\Outside.png', slot_name='Outside', resolved_id=1 (matched 'outside.png')
   Map053 (Battle Frontier Poké Center): stored_id=4, slot_path='C:\\Users\\Vena\\Documents\\folders\\RPGMaker\\Pokemon IA XPX\\Graphics\\Tilesets\\Poke Centre interior.png', slot_name='Poké Center', resolved_id=4 (matched 'poke centre interior.png')
   Map054 (Battle Frontier Mart): stored_id=5, slot_path='C:\\Users\\Vena\\Documents\\folders\\RPGMaker\\Pokemon IA XPX\\Graphics\\Tilesets\\Mart interior.png', slot_name='Poké Mart', resolved_id=5 (matched 'mart interior.png')
@@ -152,7 +152,7 @@ ts_list length: 51
   Map066 (Safari Zone outside): stored_id=1, slot_path='C:\\Users\\Vena\\Documents\\folders\\RPGMaker\\Pokemon IA XPX\\Graphics\\Tilesets\\Outside.png', slot_name='Outside', resolved_id=1 (matched 'outside.png')
   Map067 (Safari Zone gate): stored_id=3, slot_path='C:\\Users\\Vena\\Documents\\folders\\RPGMaker\\Pokemon IA XPX\\Graphics\\Tilesets\\Interior general.png', slot_name='Inside', resolved_id=3 (matched 'interior general.png')
   Map068 (Safari Zone): stored_id=1, slot_path='C:\\Users\\Vena\\Documents\\folders\\RPGMaker\\Pokemon IA XPX\\Graphics\\Tilesets\\Outside.png', slot_name='Outside', resolved_id=1 (matched 'outside.png')
-  Map069 (Route 8): stored_id=2, slot_path='C:\\Users\\Vena\\Documents\\folders\\RPGMaker\\Pokemon IA XPX\\Graphics\\Tilesets\\Outside.png', slot_name='Outside waterfall', resolved_id=1 (matched 'outside.png') *** MISMATCH ***
+  Map069 (Route 8): stored_id=1, slot_path='C:\\Users\\Vena\\Documents\\folders\\RPGMaker\\Pokemon IA XPX\\Graphics\\Tilesets\\Outside.png', slot_name='Outside waterfall', resolved_id=1 (matched 'outside.png')
   Map070 (Route 8 underwater): stored_id=22, slot_path='C:\\Users\\Vena\\Documents\\folders\\RPGMaker\\Pokemon IA XPX\\Graphics\\Tilesets\\Underwater.png', slot_name='Underwater', resolved_id=22 (matched 'underwater.png')
   Map071 (Route 8 harbor): stored_id=15, slot_path='C:\\Users\\Vena\\Documents\\folders\\RPGMaker\\Pokemon IA XPX\\Graphics\\Tilesets\\Harbour interior.png', slot_name='Harbour', resolved_id=15 (matched 'harbour interior.png')
   Map072 (Berth Island): stored_id=1, slot_path='C:\\Users\\Vena\\Documents\\folders\\RPGMaker\\Pokemon IA XPX\\Graphics\\Tilesets\\Outside.png', slot_name='Outside', resolved_id=1 (matched 'outside.png')
@@ -188,8 +188,8 @@ ts_list length: 51
   Map102 (Abercorn Poké Center): stored_id=26, slot_path='C:\\Users\\Vena\\Documents\\folders\\RPGMaker\\Pokemon IA XPX\\Graphics\\Tilesets\\Pokemon-Center-Interior.png', slot_name='Pokémon Center/Mart', resolved_id=26 (matched 'pokemon-center-interior.png')
   Map103 (Abercorn Mart): stored_id=26, slot_path='C:\\Users\\Vena\\Documents\\folders\\RPGMaker\\Pokemon IA XPX\\Graphics\\Tilesets\\Pokemon-Center-Interior.png', slot_name='Pokémon Center/Mart', resolved_id=26 (matched 'pokemon-center-interior.png')
   Map104 (Windmill Forest): stored_id=23, slot_path='C:\\Users\\Vena\\Documents\\folders\\RPGMaker\\Pokemon IA XPX\\Graphics\\Tilesets\\Niphos Outside.png', slot_name='Niphos Outside', resolved_id=23 (matched 'niphos outside.png')
-  Map105 (Florola City): stored_id=1, slot_path='C:\\Users\\Vena\\Documents\\folders\\RPGMaker\\Pokemon IA XPX\\Graphics\\Tilesets\\Niphos Outside.png', slot_name='Niphos Outside.png', resolved_id=23 (matched 'niphos outside.png') *** MISMATCH ***
+  Map105 (Florola City): stored_id=23, slot_path='C:\\Users\\Vena\\Documents\\folders\\RPGMaker\\Pokemon IA XPX\\Graphics\\Tilesets\\Niphos Outside.png', slot_name='Niphos Outside.png', resolved_id=23 (matched 'niphos outside.png')
 
 === Summary ===
-Exported: 105 maps
-Skipped : 0 maps (rxdata up-to-date, no mismatch)
+Exported: 1 maps
+Skipped : 104 maps (rxdata up-to-date, no mismatch)

@@ -552,6 +552,36 @@ WildDropCommon = KAFFEANBEAN,3,5
 WildDropUncommon = KAFFEANBEAN,3,5
 WildDropRare = KAFFEANBEAN,3,5
 #-------------------------------
+[PALMON]
+Name = Palmon
+Types = WATER
+BaseStats = 20,55,20,10,20,75
+GenderRatio = Female50Percent
+GrowthRate = Parabolic
+BaseExp = 52
+EVs = ATTACK,1
+CatchRate = 255
+Happiness = 50
+Abilities = EMERGENCYEXIT
+HiddenAbilities = SWIFTSWIM
+Moves = 1,PECK,1,AQUAJET,6,FURYATTACK,12,BITE,18,AGILITY,24,DIVE,30,FOCUSENERGY,36,CRUNCH,42,LIQUIDATION,48,DOUBLEEDGE
+EggGroups = Water2
+HatchCycles = 20
+Height = 0.5
+Weight = 1.0
+Color = Red
+Shape = HeadLegs
+Habitat = Grassland
+Category = Slap Fish
+IoPokedex = ???
+AmPokedex = ???
+Evolutions = SLAMON,Level,30
+RaidRanks = 1,2
+WildDropCommon = PALMONSCALES,1,3
+WildDropUncommon = PALMONSCALES,1,3
+WildDropRare = PALMONSCALES,1,3
+#-------------------------------
+#-------------------------------
 [STACKEM]
 Name = Stackem
 Types = FAIRY

@@ -1,35 +1,35 @@
-=== XPX Debug Log 2026-06-01 15:25:44 +0100 ===
+=== XPX Debug Log 2026-06-02 08:36:53 +0100 ===
 Ruby: 3.1.3 Platform: x64-mingw32
 GAME_ROOT : C:/Users/Vena/Documents/folders/RPGMaker/Pokemon IA XPX
 MAPS_DIR  : C:/Users/Vena/Documents/folders/RPGMaker/Pokemon IA XPX/Data/maps
 LOG_PATH  : C:/Users/Vena/Documents/folders/RPGMaker/Pokemon IA XPX/logs/xpx_debug.log
 $0        : -e
-[15:25:44] Boot started. MAPS_DIR=C:/Users/Vena/Documents/folders/RPGMaker/Pokemon IA XPX/Data/maps
-[15:25:44] Ruby: 3.1.3, JSON available: YES
-[15:25:44] Platform: x64-mingw32, encoding default_external=UTF-8, default_internal=UTF-8
-[15:25:44] === Runtime file inventory ===
-[15:25:44]   Game.exe: 29105352 bytes, mtime=2026-05-17 21:11:20
-[15:25:44]   MapMaker.dll: 57477 bytes, mtime=2010-09-07 18:28:12
-[15:25:44]   MapMaker.exe: 131072 bytes, mtime=2008-07-09 11:18:56
-[15:25:44]   RGSS102E.dll: 778752 bytes, mtime=2020-09-04 18:25:56
-[15:25:44]   RGSS104E.dll: 758272 bytes, mtime=2024-03-07 16:17:40
-[15:25:44]   animmaker.exe: 10240 bytes, mtime=2023-08-01 20:11:26
-[15:25:44]   extendtext.exe: 4640 bytes, mtime=2023-08-01 20:11:26
-[15:25:44]   x64-msvcrt-ruby310.dll: 10240557 bytes, mtime=2026-05-17 21:11:20
-[15:25:44]   zlib1.dll: 128488 bytes, mtime=2026-05-17 15:30:22
-[15:25:44] System.rxdata: 4657 bytes, mtime=2026-05-13 16:26:41
-[15:25:44] System.rxdata @start_map_id=1 @start_x=9 @start_y=7
-[15:25:44] Indexed 105 maps
-[15:25:44] Map dict cache pre-warmed: 105 maps, 0 failed, 389ms
-[15:25:44] Autotile DB: 49 entries loaded from XPX_AutotileDatabase.xpxdata
-[15:25:45] load_data patched
-[15:25:45] data_maps guard installed
-[15:25:45] pbRgssExists? patched
-[15:25:45] compiler safety patched
-[15:25:45] Start map 1 has 4 events: 1:Intro(Action), 2:Quick start intro(Action), 3:EV003(Action), 4:Intro(Autorun)
-[15:25:45] Autorun events on start map: 4:Intro
-[15:25:45] Boot complete
-[15:25:45] TilesetBitmaps patched for XPX extras-shift remap
-[15:25:45] AutotileBitmaps patched for is_water_type override (true/false)
-[15:25:45] EXTRA_AUTOTILES populated for 0 tileset(s)
-[15:25:45] Extra slot translation table built for 105 tileset(s)
+[08:36:53] Boot started. MAPS_DIR=C:/Users/Vena/Documents/folders/RPGMaker/Pokemon IA XPX/Data/maps
+[08:36:53] Ruby: 3.1.3, JSON available: YES
+[08:36:53] Platform: x64-mingw32, encoding default_external=UTF-8, default_internal=UTF-8
+[08:36:53] === Runtime file inventory ===
+[08:36:53]   Game.exe: 29110999 bytes, mtime=2026-06-01 12:27:36
+[08:36:53]   MapMaker.dll: 57477 bytes, mtime=2010-09-07 18:28:12
+[08:36:53]   MapMaker.exe: 131072 bytes, mtime=2008-07-09 11:18:56
+[08:36:53]   RGSS102E.dll: 778752 bytes, mtime=2020-09-04 18:25:56
+[08:36:53]   RGSS104E.dll: 758272 bytes, mtime=2024-03-07 16:17:40
+[08:36:53]   animmaker.exe: 10240 bytes, mtime=2023-08-01 20:11:26
+[08:36:53]   extendtext.exe: 4640 bytes, mtime=2023-08-01 20:11:26
+[08:36:53]   x64-msvcrt-ruby310.dll: 10240557 bytes, mtime=2026-06-01 11:56:00
+[08:36:53]   zlib1.dll: 128488 bytes, mtime=2026-06-01 11:56:22
+[08:36:53] System.rxdata: 4657 bytes, mtime=2026-06-01 16:06:22
+[08:36:53] System.rxdata @start_map_id=1 @start_x=9 @start_y=7
+[08:36:53] Indexed 105 maps
+[08:36:53] Map dict cache pre-warmed: 105 maps, 0 failed, 397ms
+[08:36:53] Autotile DB: 49 entries loaded from XPX_AutotileDatabase.xpxdata
+[08:36:54] load_data patched
+[08:36:54] data_maps guard installed
+[08:36:54] pbRgssExists? patched
+[08:36:54] compiler safety patched
+[08:36:54] Start map 1 has 4 events: 1:Intro(Action), 2:Quick start intro(Action), 3:EV003(Action), 4:Intro(Autorun)
+[08:36:54] Autorun events on start map: 4:Intro
+[08:36:54] Boot complete
+[08:36:54] TilesetBitmaps patched for XPX extras-shift remap
+[08:36:54] AutotileBitmaps patched for is_water_type override (true/false)
+[08:36:54] EXTRA_AUTOTILES populated for 0 tileset(s)
+[08:36:54] Extra slot translation table built for 105 tileset(s)
