@@ -555,10 +555,10 @@ WildDropRare = KAFFEANBEAN,3,5
 [PALMON]
 Name = Palmon
 Types = WATER
-BaseStats = 20,55,20,10,20,75
+BaseStats = 47,75,50,80,25,43
 GenderRatio = Female50Percent
 GrowthRate = Parabolic
-BaseExp = 52
+BaseExp = 56
 EVs = ATTACK,1
 CatchRate = 255
 Happiness = 50
@@ -570,8 +570,8 @@ HatchCycles = 20
 Height = 0.5
 Weight = 1.0
 Color = Red
-Shape = HeadLegs
-Habitat = Grassland
+Shape = Finned
+Habitat = WatersEdge
 Category = Slap Fish
 IoPokedex = ???
 AmPokedex = ???
@@ -581,6 +581,33 @@ WildDropCommon = PALMONSCALES,1,3
 WildDropUncommon = PALMONSCALES,1,3
 WildDropRare = PALMONSCALES,1,3
 #-------------------------------
+[SLAMON]
+Name = Slamon
+Types = WATER,DARK
+BaseStats = 80,125,91,110,59,75
+GenderRatio = Female50Percent
+GrowthRate = Slow
+BaseExp = 172
+EVs = ATTACK,2
+CatchRate = 60
+Happiness = 50
+Abilities = RECKLESS
+HiddenAbilities = MOLDBREAKER
+Moves = 1,PECK,1,AQUAJET,6,FURYATTACK,12,BITE,18,AGILITY,24,DIVE,30,FOCUSENERGY,36,CRUNCH,42,LIQUIDATION,48,DOUBLEEDGE
+EggGroups = Water2
+HatchCycles = 20
+Height = 1.3
+Weight = 30.0
+Color = Red
+Shape = Finned
+Habitat = WatersEdge
+Category = Slam Fish
+IoPokedex = ???
+AmPokedex = ???
+RaidRanks = 3,5
+WildDropCommon = PALMONSCALES,2,4
+WildDropUncommon = PALMONSCALES,2,4
+WildDropRare = PALMONSCALES,2,4
 #-------------------------------
 [STACKEM]
 Name = Stackem

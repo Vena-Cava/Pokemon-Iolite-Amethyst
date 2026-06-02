@@ -1,35 +1,37 @@
-=== XPX Debug Log 2026-06-02 08:36:53 +0100 ===
+=== XPX Debug Log 2026-06-02 10:54:03 +0100 ===
 Ruby: 3.1.3 Platform: x64-mingw32
 GAME_ROOT : C:/Users/Vena/Documents/folders/RPGMaker/Pokemon IA XPX
 MAPS_DIR  : C:/Users/Vena/Documents/folders/RPGMaker/Pokemon IA XPX/Data/maps
 LOG_PATH  : C:/Users/Vena/Documents/folders/RPGMaker/Pokemon IA XPX/logs/xpx_debug.log
 $0        : -e
-[08:36:53] Boot started. MAPS_DIR=C:/Users/Vena/Documents/folders/RPGMaker/Pokemon IA XPX/Data/maps
-[08:36:53] Ruby: 3.1.3, JSON available: YES
-[08:36:53] Platform: x64-mingw32, encoding default_external=UTF-8, default_internal=UTF-8
-[08:36:53] === Runtime file inventory ===
-[08:36:53]   Game.exe: 29110999 bytes, mtime=2026-06-01 12:27:36
-[08:36:53]   MapMaker.dll: 57477 bytes, mtime=2010-09-07 18:28:12
-[08:36:53]   MapMaker.exe: 131072 bytes, mtime=2008-07-09 11:18:56
-[08:36:53]   RGSS102E.dll: 778752 bytes, mtime=2020-09-04 18:25:56
-[08:36:53]   RGSS104E.dll: 758272 bytes, mtime=2024-03-07 16:17:40
-[08:36:53]   animmaker.exe: 10240 bytes, mtime=2023-08-01 20:11:26
-[08:36:53]   extendtext.exe: 4640 bytes, mtime=2023-08-01 20:11:26
-[08:36:53]   x64-msvcrt-ruby310.dll: 10240557 bytes, mtime=2026-06-01 11:56:00
-[08:36:53]   zlib1.dll: 128488 bytes, mtime=2026-06-01 11:56:22
-[08:36:53] System.rxdata: 4657 bytes, mtime=2026-06-01 16:06:22
-[08:36:53] System.rxdata @start_map_id=1 @start_x=9 @start_y=7
-[08:36:53] Indexed 105 maps
-[08:36:53] Map dict cache pre-warmed: 105 maps, 0 failed, 397ms
-[08:36:53] Autotile DB: 49 entries loaded from XPX_AutotileDatabase.xpxdata
-[08:36:54] load_data patched
-[08:36:54] data_maps guard installed
-[08:36:54] pbRgssExists? patched
-[08:36:54] compiler safety patched
-[08:36:54] Start map 1 has 4 events: 1:Intro(Action), 2:Quick start intro(Action), 3:EV003(Action), 4:Intro(Autorun)
-[08:36:54] Autorun events on start map: 4:Intro
-[08:36:54] Boot complete
-[08:36:54] TilesetBitmaps patched for XPX extras-shift remap
-[08:36:54] AutotileBitmaps patched for is_water_type override (true/false)
-[08:36:54] EXTRA_AUTOTILES populated for 0 tileset(s)
-[08:36:54] Extra slot translation table built for 105 tileset(s)
+[10:54:03] Boot started. MAPS_DIR=C:/Users/Vena/Documents/folders/RPGMaker/Pokemon IA XPX/Data/maps
+[10:54:03] Ruby: 3.1.3, JSON available: YES
+[10:54:03] Platform: x64-mingw32, encoding default_external=UTF-8, default_internal=UTF-8
+[10:54:03] === Runtime file inventory ===
+[10:54:03]   Game.exe: 29110999 bytes, mtime=2026-06-01 12:27:36
+[10:54:03]   MapMaker.dll: 57477 bytes, mtime=2010-09-07 18:28:12
+[10:54:03]   MapMaker.exe: 131072 bytes, mtime=2008-07-09 11:18:56
+[10:54:03]   RGSS102E.dll: 778752 bytes, mtime=2020-09-04 18:25:56
+[10:54:03]   RGSS104E.dll: 758272 bytes, mtime=2024-03-07 16:17:40
+[10:54:03]   animmaker.exe: 10240 bytes, mtime=2023-08-01 20:11:26
+[10:54:03]   extendtext.exe: 4640 bytes, mtime=2023-08-01 20:11:26
+[10:54:03]   x64-msvcrt-ruby310.dll: 10240557 bytes, mtime=2026-06-01 11:56:00
+[10:54:03]   zlib1.dll: 128488 bytes, mtime=2026-06-01 11:56:22
+[10:54:03] System.rxdata: 4657 bytes, mtime=2026-06-01 16:06:22
+[10:54:03] System.rxdata @start_map_id=1 @start_x=9 @start_y=7
+[10:54:03] Indexed 105 maps
+[10:54:03] Map dict cache pre-warmed: 105 maps, 0 failed, 442ms
+[10:54:03] Autotile DB: 50 entries loaded from XPX_AutotileDatabase.xpxdata
+[10:54:04] load_data patched
+[10:54:04] data_maps guard installed
+[10:54:04] pbRgssExists? patched
+[10:54:04] compiler safety patched
+[10:54:04] Start map 1 has 4 events: 1:Intro(Action), 2:Quick start intro(Action), 3:EV003(Action), 4:Intro(Autorun)
+[10:54:04] Autorun events on start map: 4:Intro
+[10:54:04] Boot complete
+[10:54:04] TilesetBitmaps patched for XPX extras-shift remap
+[10:54:04] AutotileBitmaps patched for is_water_type override (true/false)
+[10:54:04] EXTRA_AUTOTILES populated for 0 tileset(s)
+[10:54:04] Extra slot translation table built for 105 tileset(s)
+[10:54:19] EXTRA_AUTOTILES populated for 0 tileset(s)
+[10:54:19] Extra slot translation table built for 105 tileset(s)
