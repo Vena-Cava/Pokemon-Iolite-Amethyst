@@ -189,7 +189,7 @@ ts_list length: 51
   Map103 (Abercorn Mart): stored_id=26, slot_path='C:\\Users\\Vena\\Documents\\folders\\RPGMaker\\Pokemon IA XPX\\Graphics\\Tilesets\\Pokemon-Center-Interior.png', slot_name='Pokémon Center/Mart', resolved_id=26 (matched 'pokemon-center-interior.png')
   Map104 (Windmill Forest): stored_id=23, slot_path='C:\\Users\\Vena\\Documents\\folders\\RPGMaker\\Pokemon IA XPX\\Graphics\\Tilesets\\Niphos Outside.png', slot_name='Niphos Outside', resolved_id=23 (matched 'niphos outside.png')
   Map105 (Florola City): stored_id=23, slot_path='C:\\Users\\Vena\\Documents\\folders\\RPGMaker\\Pokemon IA XPX\\Graphics\\Tilesets\\Niphos Outside.png', slot_name='Niphos Outside', resolved_id=23 (matched 'niphos outside.png')
-  Map106 (PWT Lobby): stored_id=1, slot_path='C:\\Users\\Vena\\Documents\\folders\\RPGMaker\\Pokemon IA XPX\\Graphics\\Tilesets\\Outside.png', slot_name='Outside', resolved_id=1 (matched 'outside.png')
+  Map106 (PWT Lobby): stored_id=20, slot_path='C:\\Users\\Vena\\Documents\\folders\\RPGMaker\\Pokemon IA XPX\\Graphics\\Tilesets\\Trainer Tower interior.png', slot_name='Trainer Tower', resolved_id=20 (matched 'trainer tower interior.png')
   Map107 (PWT Stadium): stored_id=1, slot_path='C:\\Users\\Vena\\Documents\\folders\\RPGMaker\\Pokemon IA XPX\\Graphics\\Tilesets\\Outside.png', slot_name='Outside', resolved_id=1 (matched 'outside.png')
 
 === Summary ===
