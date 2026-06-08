@@ -1,4 +1,4 @@
-﻿# See the documentation on the wiki to learn how to edit this file.
+# See the documentation on the wiki to learn how to edit this file.
 #-------------------------------
 [GROWLITHE,1]
 FormName = Hisuian
@@ -544,8 +544,8 @@ FormName = Mega Raichu X
 MegaStone = RAICHUNITEX
 BaseStats = 60,135,95,110,90,95
 BaseExp = 293
-Abilities = LEVITATE
-HiddenAbilities = LEVITATE
+Abilities = ELECTRICSURGE
+HiddenAbilities = ELECTRICSURGE
 Height = 1.2
 Weight = 38.0
 Pokedex = It resembles an X as it flies through the air with 50 million volts of electricity sparking from its ears and forked tail.
@@ -556,8 +556,8 @@ FormName = Mega Raichu Y
 MegaStone = RAICHUNITEY
 BaseStats = 60,100,55,130,160,80
 BaseExp = 293
-Abilities = ELECTRICSURGE
-HiddenAbilities = ELECTRICSURGE
+Abilities = NOGUARD
+HiddenAbilities = NOGUARD
 Height = 1.0
 Weight = 26.0
 Pokedex = It fires bolts of electricity from the tip of its tail and from the spiky tufts of fur growing out of its temples. This electricity forms the letter Y.

@@ -1,4 +1,4 @@
-﻿# See the documentation on the wiki to learn how to edit this file.
+# See the documentation on the wiki to learn how to edit this file.
 #-------------------------------
 [FLORAWNPETAL]
 Name = Florawn Petal
@@ -50,7 +50,7 @@ Description = Material accidentally dropped by a Pokémon. It can be used to syn
 #-------------------------------
 [SNOWLDOWN]
 Name = Snowl Down
-NamePlural = Snowl Down	
+NamePlural = Snowl Down
 Pocket = 10
 Price = 40
 Flags = TMMaterial
@@ -128,7 +128,7 @@ Price = 60
 Flags = TMMaterial
 Description = Material accidentally dropped by a Pokémon. It can be used to synthesize TMs.
 #-------------------------------
-[STACKEMPLASTC]
+[STACKEMPLASTIC]
 Name = Stackem Plastic
 NamePlural = Stackem Plastic
 Pocket = 10
@@ -390,4 +390,3 @@ Pocket = 10
 Price = 100
 Flags = TMMaterial
 Description = Material accidentally dropped by a Pokémon. It can be used to synthesize TMs.
-#-------------------------------

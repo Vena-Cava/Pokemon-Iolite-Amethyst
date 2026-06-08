@@ -37,7 +37,7 @@
       [
         {
           "autotile": 0,
-          "at_frame": 4,
+          "at_frame": 35,
           "tc": 0,
           "tr": 0,
           "tc2": 0,
@@ -45,7 +45,7 @@
         },
         {
           "autotile": 0,
-          "at_frame": 38,
+          "at_frame": 45,
           "tc": 0,
           "tr": 0,
           "tc2": 0,
@@ -143,7 +143,7 @@
         },
         {
           "autotile": 0,
-          "at_frame": 40,
+          "at_frame": 43,
           "tc": 0,
           "tr": 0,
           "tc2": 0,
@@ -151,7 +151,7 @@
         },
         {
           "autotile": 0,
-          "at_frame": 8,
+          "at_frame": 22,
           "tc": 0,
           "tr": 0,
           "tc2": 0,
@@ -159,7 +159,7 @@
         },
         {
           "autotile": 0,
-          "at_frame": 0,
+          "at_frame": 20,
           "tc": 0,
           "tr": 0,
           "tc2": 0,
@@ -167,7 +167,7 @@
         },
         {
           "autotile": 0,
-          "at_frame": 0,
+          "at_frame": 20,
           "tc": 0,
           "tr": 0,
           "tc2": 0,
@@ -175,7 +175,7 @@
         },
         {
           "autotile": 0,
-          "at_frame": 0,
+          "at_frame": 20,
           "tc": 0,
           "tr": 0,
           "tc2": 0,
@@ -183,7 +183,7 @@
         },
         {
           "autotile": 0,
-          "at_frame": 0,
+          "at_frame": 20,
           "tc": 0,
           "tr": 0,
           "tc2": 0,
@@ -191,7 +191,7 @@
         },
         {
           "autotile": 0,
-          "at_frame": 0,
+          "at_frame": 20,
           "tc": 0,
           "tr": 0,
           "tc2": 0,
@@ -199,7 +199,7 @@
         },
         {
           "autotile": 0,
-          "at_frame": 0,
+          "at_frame": 20,
           "tc": 0,
           "tr": 0,
           "tc2": 0,
@@ -207,7 +207,7 @@
         },
         {
           "autotile": 0,
-          "at_frame": 0,
+          "at_frame": 20,
           "tc": 0,
           "tr": 0,
           "tc2": 0,
@@ -215,7 +215,7 @@
         },
         {
           "autotile": 0,
-          "at_frame": 0,
+          "at_frame": 20,
           "tc": 0,
           "tr": 0,
           "tc2": 0,
@@ -223,7 +223,7 @@
         },
         {
           "autotile": 0,
-          "at_frame": 0,
+          "at_frame": 20,
           "tc": 0,
           "tr": 0,
           "tc2": 0,
@@ -231,7 +231,7 @@
         },
         {
           "autotile": 0,
-          "at_frame": 0,
+          "at_frame": 20,
           "tc": 0,
           "tr": 0,
           "tc2": 0,
@@ -239,7 +239,7 @@
         },
         {
           "autotile": 0,
-          "at_frame": 0,
+          "at_frame": 20,
           "tc": 0,
           "tr": 0,
           "tc2": 0,
@@ -247,7 +247,7 @@
         },
         {
           "autotile": 0,
-          "at_frame": 0,
+          "at_frame": 20,
           "tc": 0,
           "tr": 0,
           "tc2": 0,
@@ -255,7 +255,7 @@
         },
         {
           "autotile": 0,
-          "at_frame": 0,
+          "at_frame": 20,
           "tc": 0,
           "tr": 0,
           "tc2": 0,
@@ -263,7 +263,7 @@
         },
         {
           "autotile": 0,
-          "at_frame": 0,
+          "at_frame": 20,
           "tc": 0,
           "tr": 0,
           "tc2": 0,
@@ -271,7 +271,7 @@
         },
         {
           "autotile": 0,
-          "at_frame": 0,
+          "at_frame": 20,
           "tc": 0,
           "tr": 0,
           "tc2": 0,
@@ -279,7 +279,7 @@
         },
         {
           "autotile": 0,
-          "at_frame": 0,
+          "at_frame": 20,
           "tc": 0,
           "tr": 0,
           "tc2": 0,
@@ -287,7 +287,7 @@
         },
         {
           "autotile": 0,
-          "at_frame": 0,
+          "at_frame": 20,
           "tc": 0,
           "tr": 0,
           "tc2": 0,
@@ -295,7 +295,7 @@
         },
         {
           "autotile": 0,
-          "at_frame": 0,
+          "at_frame": 20,
           "tc": 0,
           "tr": 0,
           "tc2": 0,
@@ -303,7 +303,7 @@
         },
         {
           "autotile": 0,
-          "at_frame": 0,
+          "at_frame": 20,
           "tc": 0,
           "tr": 0,
           "tc2": 0,
@@ -311,7 +311,7 @@
         },
         {
           "autotile": 0,
-          "at_frame": 0,
+          "at_frame": 20,
           "tc": 0,
           "tr": 0,
           "tc2": 0,
@@ -319,7 +319,7 @@
         },
         {
           "autotile": 0,
-          "at_frame": 0,
+          "at_frame": 36,
           "tc": 0,
           "tr": 0,
           "tc2": 0,
@@ -329,7 +329,7 @@
       [
         {
           "autotile": 0,
-          "at_frame": 38,
+          "at_frame": 44,
           "tc": 0,
           "tr": 0,
           "tc2": 0,
@@ -607,7 +607,7 @@
         },
         {
           "autotile": 0,
-          "at_frame": 0,
+          "at_frame": 24,
           "tc": 0,
           "tr": 0,
           "tc2": 0,
@@ -891,7 +891,7 @@
         },
         {
           "autotile": 0,
-          "at_frame": 0,
+          "at_frame": 24,
           "tc": 0,
           "tr": 0,
           "tc2": 0,
@@ -1175,7 +1175,7 @@
         },
         {
           "autotile": 0,
-          "at_frame": 0,
+          "at_frame": 24,
           "tc": 0,
           "tr": 0,
           "tc2": 0,
@@ -1459,7 +1459,7 @@
         },
         {
           "autotile": 0,
-          "at_frame": 0,
+          "at_frame": 24,
           "tc": 0,
           "tr": 0,
           "tc2": 0,
@@ -1743,7 +1743,7 @@
         },
         {
           "autotile": 0,
-          "at_frame": 0,
+          "at_frame": 24,
           "tc": 0,
           "tr": 0,
           "tc2": 0,
@@ -2027,7 +2027,7 @@
         },
         {
           "autotile": 0,
-          "at_frame": 0,
+          "at_frame": 24,
           "tc": 0,
           "tr": 0,
           "tc2": 0,
@@ -2311,7 +2311,7 @@
         },
         {
           "autotile": 0,
-          "at_frame": 0,
+          "at_frame": 24,
           "tc": 0,
           "tr": 0,
           "tc2": 0,
@@ -2595,7 +2595,7 @@
         },
         {
           "autotile": 0,
-          "at_frame": 0,
+          "at_frame": 24,
           "tc": 0,
           "tr": 0,
           "tc2": 0,
@@ -2879,7 +2879,7 @@
         },
         {
           "autotile": 0,
-          "at_frame": 0,
+          "at_frame": 24,
           "tc": 0,
           "tr": 0,
           "tc2": 0,
@@ -3163,7 +3163,7 @@
         },
         {
           "autotile": 0,
-          "at_frame": 0,
+          "at_frame": 24,
           "tc": 0,
           "tr": 0,
           "tc2": 0,
@@ -3447,7 +3447,7 @@
         },
         {
           "autotile": 0,
-          "at_frame": 0,
+          "at_frame": 24,
           "tc": 0,
           "tr": 0,
           "tc2": 0,
@@ -3731,7 +3731,7 @@
         },
         {
           "autotile": 0,
-          "at_frame": 0,
+          "at_frame": 24,
           "tc": 0,
           "tr": 0,
           "tc2": 0,
@@ -4015,7 +4015,7 @@
         },
         {
           "autotile": 0,
-          "at_frame": 0,
+          "at_frame": 24,
           "tc": 0,
           "tr": 0,
           "tc2": 0,
@@ -4299,7 +4299,7 @@
         },
         {
           "autotile": 0,
-          "at_frame": 0,
+          "at_frame": 24,
           "tc": 0,
           "tr": 0,
           "tc2": 0,
@@ -4583,7 +4583,7 @@
         },
         {
           "autotile": 0,
-          "at_frame": 0,
+          "at_frame": 24,
           "tc": 0,
           "tr": 0,
           "tc2": 0,
@@ -4867,7 +4867,7 @@
         },
         {
           "autotile": 0,
-          "at_frame": 0,
+          "at_frame": 24,
           "tc": 0,
           "tr": 0,
           "tc2": 0,
@@ -5151,7 +5151,7 @@
         },
         {
           "autotile": 0,
-          "at_frame": 0,
+          "at_frame": 24,
           "tc": 0,
           "tr": 0,
           "tc2": 0,
@@ -5435,7 +5435,7 @@
         },
         {
           "autotile": 0,
-          "at_frame": 0,
+          "at_frame": 24,
           "tc": 0,
           "tr": 0,
           "tc2": 0,
@@ -5719,7 +5719,7 @@
         },
         {
           "autotile": 0,
-          "at_frame": 0,
+          "at_frame": 24,
           "tc": 0,
           "tr": 0,
           "tc2": 0,
@@ -5729,7 +5729,7 @@
       [
         {
           "autotile": 0,
-          "at_frame": 20,
+          "at_frame": 34,
           "tc": 0,
           "tr": 0,
           "tc2": 0,
@@ -6011,7 +6011,7 @@
         },
         {
           "autotile": 0,
-          "at_frame": 0,
+          "at_frame": 24,
           "tc": 0,
           "tr": 0,
           "tc2": 0,
@@ -6021,7 +6021,7 @@
       [
         {
           "autotile": 0,
-          "at_frame": 0,
+          "at_frame": 16,
           "tc": 0,
           "tr": 0,
           "tc2": 0,
@@ -6333,7 +6333,7 @@
         },
         {
           "autotile": 0,
-          "at_frame": 0,
+          "at_frame": 24,
           "tc": 0,
           "tr": 0,
           "tc2": 0,
@@ -6343,7 +6343,7 @@
       [
         {
           "autotile": 0,
-          "at_frame": 0,
+          "at_frame": 16,
           "tc": 0,
           "tr": 0,
           "tc2": 0,
@@ -6655,7 +6655,7 @@
         },
         {
           "autotile": 0,
-          "at_frame": 0,
+          "at_frame": 24,
           "tc": 0,
           "tr": 0,
           "tc2": 0,
@@ -6665,7 +6665,7 @@
       [
         {
           "autotile": 0,
-          "at_frame": 0,
+          "at_frame": 16,
           "tc": 0,
           "tr": 0,
           "tc2": 0,
@@ -6977,7 +6977,7 @@
         },
         {
           "autotile": 0,
-          "at_frame": 0,
+          "at_frame": 24,
           "tc": 0,
           "tr": 0,
           "tc2": 0,
@@ -6987,7 +6987,7 @@
       [
         {
           "autotile": 0,
-          "at_frame": 0,
+          "at_frame": 16,
           "tc": 0,
           "tr": 0,
           "tc2": 0,
@@ -7299,7 +7299,7 @@
         },
         {
           "autotile": 0,
-          "at_frame": 0,
+          "at_frame": 24,
           "tc": 0,
           "tr": 0,
           "tc2": 0,
@@ -7309,7 +7309,7 @@
       [
         {
           "autotile": 0,
-          "at_frame": 0,
+          "at_frame": 16,
           "tc": 0,
           "tr": 0,
           "tc2": 0,
@@ -7621,7 +7621,7 @@
         },
         {
           "autotile": 0,
-          "at_frame": 0,
+          "at_frame": 24,
           "tc": 0,
           "tr": 0,
           "tc2": 0,
@@ -7631,7 +7631,7 @@
       [
         {
           "autotile": 0,
-          "at_frame": 0,
+          "at_frame": 16,
           "tc": 0,
           "tr": 0,
           "tc2": 0,
@@ -7943,7 +7943,7 @@
         },
         {
           "autotile": 0,
-          "at_frame": 0,
+          "at_frame": 24,
           "tc": 0,
           "tr": 0,
           "tc2": 0,
@@ -7953,7 +7953,7 @@
       [
         {
           "autotile": 0,
-          "at_frame": 0,
+          "at_frame": 16,
           "tc": 0,
           "tr": 0,
           "tc2": 0,
@@ -8265,7 +8265,7 @@
         },
         {
           "autotile": 0,
-          "at_frame": 0,
+          "at_frame": 24,
           "tc": 0,
           "tr": 0,
           "tc2": 0,
@@ -8275,7 +8275,7 @@
       [
         {
           "autotile": 0,
-          "at_frame": 0,
+          "at_frame": 16,
           "tc": 0,
           "tr": 0,
           "tc2": 0,
@@ -8587,7 +8587,7 @@
         },
         {
           "autotile": 0,
-          "at_frame": 0,
+          "at_frame": 24,
           "tc": 0,
           "tr": 0,
           "tc2": 0,
@@ -8597,7 +8597,7 @@
       [
         {
           "autotile": 0,
-          "at_frame": 0,
+          "at_frame": 40,
           "tc": 0,
           "tr": 0,
           "tc2": 0,
@@ -8605,7 +8605,7 @@
         },
         {
           "autotile": 0,
-          "at_frame": 0,
+          "at_frame": 28,
           "tc": 0,
           "tr": 0,
           "tc2": 0,
@@ -8613,7 +8613,7 @@
         },
         {
           "autotile": 0,
-          "at_frame": 0,
+          "at_frame": 28,
           "tc": 0,
           "tr": 0,
           "tc2": 0,
@@ -8621,7 +8621,7 @@
         },
         {
           "autotile": 0,
-          "at_frame": 0,
+          "at_frame": 28,
           "tc": 0,
           "tr": 0,
           "tc2": 0,
@@ -8629,7 +8629,7 @@
         },
         {
           "autotile": 0,
-          "at_frame": 0,
+          "at_frame": 28,
           "tc": 0,
           "tr": 0,
           "tc2": 0,
@@ -8637,7 +8637,7 @@
         },
         {
           "autotile": 0,
-          "at_frame": 0,
+          "at_frame": 28,
           "tc": 0,
           "tr": 0,
           "tc2": 0,
@@ -8645,7 +8645,7 @@
         },
         {
           "autotile": 0,
-          "at_frame": 0,
+          "at_frame": 28,
           "tc": 0,
           "tr": 0,
           "tc2": 0,
@@ -8653,7 +8653,7 @@
         },
         {
           "autotile": 0,
-          "at_frame": 0,
+          "at_frame": 28,
           "tc": 0,
           "tr": 0,
           "tc2": 0,
@@ -8661,7 +8661,7 @@
         },
         {
           "autotile": 0,
-          "at_frame": 0,
+          "at_frame": 28,
           "tc": 0,
           "tr": 0,
           "tc2": 0,
@@ -8669,7 +8669,7 @@
         },
         {
           "autotile": 0,
-          "at_frame": 0,
+          "at_frame": 28,
           "tc": 0,
           "tr": 0,
           "tc2": 0,
@@ -8677,7 +8677,7 @@
         },
         {
           "autotile": 0,
-          "at_frame": 0,
+          "at_frame": 28,
           "tc": 0,
           "tr": 0,
           "tc2": 0,
@@ -8685,7 +8685,7 @@
         },
         {
           "autotile": 0,
-          "at_frame": 0,
+          "at_frame": 28,
           "tc": 0,
           "tr": 0,
           "tc2": 0,
@@ -8693,7 +8693,7 @@
         },
         {
           "autotile": 0,
-          "at_frame": 0,
+          "at_frame": 28,
           "tc": 0,
           "tr": 0,
           "tc2": 0,
@@ -8701,7 +8701,7 @@
         },
         {
           "autotile": 0,
-          "at_frame": 0,
+          "at_frame": 28,
           "tc": 0,
           "tr": 0,
           "tc2": 0,
@@ -8709,7 +8709,7 @@
         },
         {
           "autotile": 0,
-          "at_frame": 0,
+          "at_frame": 28,
           "tc": 0,
           "tr": 0,
           "tc2": 0,
@@ -8717,7 +8717,7 @@
         },
         {
           "autotile": 0,
-          "at_frame": 0,
+          "at_frame": 28,
           "tc": 0,
           "tr": 0,
           "tc2": 0,
@@ -8725,7 +8725,7 @@
         },
         {
           "autotile": 0,
-          "at_frame": 0,
+          "at_frame": 28,
           "tc": 0,
           "tr": 0,
           "tc2": 0,
@@ -8733,7 +8733,7 @@
         },
         {
           "autotile": 0,
-          "at_frame": 0,
+          "at_frame": 28,
           "tc": 0,
           "tr": 0,
           "tc2": 0,
@@ -8741,7 +8741,7 @@
         },
         {
           "autotile": 0,
-          "at_frame": 0,
+          "at_frame": 28,
           "tc": 0,
           "tr": 0,
           "tc2": 0,
@@ -8749,7 +8749,7 @@
         },
         {
           "autotile": 0,
-          "at_frame": 0,
+          "at_frame": 28,
           "tc": 0,
           "tr": 0,
           "tc2": 0,
@@ -8757,7 +8757,7 @@
         },
         {
           "autotile": 0,
-          "at_frame": 0,
+          "at_frame": 28,
           "tc": 0,
           "tr": 0,
           "tc2": 0,
@@ -8765,7 +8765,7 @@
         },
         {
           "autotile": 0,
-          "at_frame": 0,
+          "at_frame": 28,
           "tc": 0,
           "tr": 0,
           "tc2": 0,
@@ -8773,7 +8773,7 @@
         },
         {
           "autotile": 0,
-          "at_frame": 0,
+          "at_frame": 28,
           "tc": 0,
           "tr": 0,
           "tc2": 0,
@@ -8781,7 +8781,7 @@
         },
         {
           "autotile": 0,
-          "at_frame": 0,
+          "at_frame": 28,
           "tc": 0,
           "tr": 0,
           "tc2": 0,
@@ -8789,7 +8789,7 @@
         },
         {
           "autotile": 0,
-          "at_frame": 0,
+          "at_frame": 28,
           "tc": 0,
           "tr": 0,
           "tc2": 0,
@@ -8797,7 +8797,7 @@
         },
         {
           "autotile": 0,
-          "at_frame": 0,
+          "at_frame": 28,
           "tc": 0,
           "tr": 0,
           "tc2": 0,
@@ -8805,7 +8805,7 @@
         },
         {
           "autotile": 0,
-          "at_frame": 0,
+          "at_frame": 28,
           "tc": 0,
           "tr": 0,
           "tc2": 0,
@@ -8813,7 +8813,7 @@
         },
         {
           "autotile": 0,
-          "at_frame": 0,
+          "at_frame": 28,
           "tc": 0,
           "tr": 0,
           "tc2": 0,
@@ -8821,7 +8821,7 @@
         },
         {
           "autotile": 0,
-          "at_frame": 0,
+          "at_frame": 28,
           "tc": 0,
           "tr": 0,
           "tc2": 0,
@@ -8829,7 +8829,7 @@
         },
         {
           "autotile": 0,
-          "at_frame": 0,
+          "at_frame": 28,
           "tc": 0,
           "tr": 0,
           "tc2": 0,
@@ -8837,7 +8837,7 @@
         },
         {
           "autotile": 0,
-          "at_frame": 0,
+          "at_frame": 28,
           "tc": 0,
           "tr": 0,
           "tc2": 0,
@@ -8845,7 +8845,7 @@
         },
         {
           "autotile": 0,
-          "at_frame": 0,
+          "at_frame": 28,
           "tc": 0,
           "tr": 0,
           "tc2": 0,
@@ -8853,7 +8853,7 @@
         },
         {
           "autotile": 0,
-          "at_frame": 0,
+          "at_frame": 28,
           "tc": 0,
           "tr": 0,
           "tc2": 0,
@@ -8861,7 +8861,7 @@
         },
         {
           "autotile": 0,
-          "at_frame": 0,
+          "at_frame": 28,
           "tc": 0,
           "tr": 0,
           "tc2": 0,
@@ -8869,7 +8869,7 @@
         },
         {
           "autotile": 0,
-          "at_frame": 0,
+          "at_frame": 28,
           "tc": 0,
           "tr": 0,
           "tc2": 0,
@@ -8877,7 +8877,7 @@
         },
         {
           "autotile": 0,
-          "at_frame": 0,
+          "at_frame": 28,
           "tc": 0,
           "tr": 0,
           "tc2": 0,
@@ -8885,7 +8885,7 @@
         },
         {
           "autotile": 0,
-          "at_frame": 0,
+          "at_frame": 28,
           "tc": 0,
           "tr": 0,
           "tc2": 0,
@@ -8893,7 +8893,7 @@
         },
         {
           "autotile": 0,
-          "at_frame": 0,
+          "at_frame": 28,
           "tc": 0,
           "tr": 0,
           "tc2": 0,
@@ -8901,7 +8901,7 @@
         },
         {
           "autotile": 0,
-          "at_frame": 0,
+          "at_frame": 28,
           "tc": 0,
           "tr": 0,
           "tc2": 0,
@@ -8909,7 +8909,7 @@
         },
         {
           "autotile": 0,
-          "at_frame": 0,
+          "at_frame": 38,
           "tc": 0,
           "tr": 0,
           "tc2": 0,
@@ -13895,8 +13895,40 @@
             },
             {
               "rmxp_raw": true,
-              "code": 101,
+              "code": 111,
               "indent": 1,
+              "parameters": [
+                12,
+                "AdvancedNewGame.pokecenter_limit_reached?",
+                1
+              ]
+            },
+            {
+              "rmxp_raw": true,
+              "code": 355,
+              "indent": 2,
+              "parameters": [
+                "AdvancedNewGame.pokecenter_limit_message"
+              ]
+            },
+            {
+              "rmxp_raw": true,
+              "code": 101,
+              "indent": 2,
+              "parameters": [
+                "Show Message: \\rWe hope to see you again!"
+              ]
+            },
+            {
+              "rmxp_raw": true,
+              "code": 411,
+              "indent": 1,
+              "parameters": []
+            },
+            {
+              "rmxp_raw": true,
+              "code": 101,
+              "indent": 2,
               "parameters": [
                 "\\rOK, I'll take your Pok\u00e9mon for a few seconds."
               ]
@@ -13904,7 +13936,7 @@
             {
               "rmxp_raw": true,
               "code": 355,
-              "indent": 1,
+              "indent": 2,
               "parameters": [
                 "$stats.poke_center_count += 1"
               ]
@@ -13912,7 +13944,7 @@
             {
               "rmxp_raw": true,
               "code": 314,
-              "indent": 1,
+              "indent": 2,
               "parameters": [
                 0
               ]
@@ -13920,7 +13952,7 @@
             {
               "rmxp_raw": true,
               "code": 108,
-              "indent": 1,
+              "indent": 2,
               "parameters": [
                 "Nurse turns to face the healing machine."
               ]
@@ -13928,7 +13960,7 @@
             {
               "rmxp_raw": true,
               "code": 209,
-              "indent": 1,
+              "indent": 2,
               "parameters": [
                 0,
                 {
@@ -13956,7 +13988,7 @@
             {
               "rmxp_raw": true,
               "code": 509,
-              "indent": 1,
+              "indent": 2,
               "parameters": [
                 {
                   "code": 19,
@@ -13967,7 +13999,7 @@
             {
               "rmxp_raw": true,
               "code": 509,
-              "indent": 1,
+              "indent": 2,
               "parameters": [
                 {
                   "code": 15,
@@ -13980,13 +14012,13 @@
             {
               "rmxp_raw": true,
               "code": 210,
-              "indent": 1,
+              "indent": 2,
               "parameters": []
             },
             {
               "rmxp_raw": true,
               "code": 108,
-              "indent": 1,
+              "indent": 2,
               "parameters": [
                 "Nurse places Pok\u00e9 Balls on the healing machine one at "
               ]
@@ -13994,7 +14026,7 @@
             {
               "rmxp_raw": true,
               "code": 408,
-              "indent": 1,
+              "indent": 2,
               "parameters": [
                 "a time."
               ]
@@ -14002,7 +14034,7 @@
             {
               "rmxp_raw": true,
               "code": 122,
-              "indent": 1,
+              "indent": 2,
               "parameters": [
                 1,
                 1,
@@ -14014,7 +14046,7 @@
             {
               "rmxp_raw": true,
               "code": 122,
-              "indent": 1,
+              "indent": 2,
               "parameters": [
                 6,
                 6,
@@ -14026,7 +14058,7 @@
             {
               "rmxp_raw": true,
               "code": 118,
-              "indent": 1,
+              "indent": 2,
               "parameters": [
                 "Place ball"
               ]
@@ -14034,7 +14066,7 @@
             {
               "rmxp_raw": true,
               "code": 122,
-              "indent": 1,
+              "indent": 2,
               "parameters": [
                 6,
                 6,
@@ -14046,7 +14078,7 @@
             {
               "rmxp_raw": true,
               "code": 250,
-              "indent": 1,
+              "indent": 2,
               "parameters": [
                 {
                   "name": "Battle ball shake",
@@ -14058,7 +14090,7 @@
             {
               "rmxp_raw": true,
               "code": 106,
-              "indent": 1,
+              "indent": 2,
               "parameters": [
                 8
               ]
@@ -14066,7 +14098,7 @@
             {
               "rmxp_raw": true,
               "code": 111,
-              "indent": 1,
+              "indent": 2,
               "parameters": [
                 1,
                 6,
@@ -14078,7 +14110,7 @@
             {
               "rmxp_raw": true,
               "code": 119,
-              "indent": 2,
+              "indent": 3,
               "parameters": [
                 "Place ball"
               ]
@@ -14086,19 +14118,19 @@
             {
               "rmxp_raw": true,
               "code": 0,
-              "indent": 2,
+              "indent": 3,
               "parameters": []
             },
             {
               "rmxp_raw": true,
               "code": 412,
-              "indent": 1,
+              "indent": 2,
               "parameters": []
             },
             {
               "rmxp_raw": true,
               "code": 108,
-              "indent": 1,
+              "indent": 2,
               "parameters": [
                 "Healing animation and ME jingle."
               ]
@@ -14106,7 +14138,7 @@
             {
               "rmxp_raw": true,
               "code": 209,
-              "indent": 1,
+              "indent": 2,
               "parameters": [
                 4,
                 {
@@ -14128,7 +14160,7 @@
             {
               "rmxp_raw": true,
               "code": 509,
-              "indent": 1,
+              "indent": 2,
               "parameters": [
                 {
                   "code": 33,
@@ -14139,7 +14171,7 @@
             {
               "rmxp_raw": true,
               "code": 249,
-              "indent": 1,
+              "indent": 2,
               "parameters": [
                 {
                   "name": "Pkmn healing",
@@ -14151,7 +14183,7 @@
             {
               "rmxp_raw": true,
               "code": 106,
-              "indent": 1,
+              "indent": 2,
               "parameters": [
                 58
               ]
@@ -14159,7 +14191,7 @@
             {
               "rmxp_raw": true,
               "code": 108,
-              "indent": 1,
+              "indent": 2,
               "parameters": [
                 "Pok\u00e9 Balls are removed from healing machine, nurse "
               ]
@@ -14167,7 +14199,7 @@
             {
               "rmxp_raw": true,
               "code": 408,
-              "indent": 1,
+              "indent": 2,
               "parameters": [
                 "turns to face the player."
               ]
@@ -14175,7 +14207,7 @@
             {
               "rmxp_raw": true,
               "code": 122,
-              "indent": 1,
+              "indent": 2,
               "parameters": [
                 6,
                 6,
@@ -14187,7 +14219,7 @@
             {
               "rmxp_raw": true,
               "code": 355,
-              "indent": 1,
+              "indent": 2,
               "parameters": [
                 "get_character(4).pattern = 0"
               ]
@@ -14195,7 +14227,7 @@
             {
               "rmxp_raw": true,
               "code": 209,
-              "indent": 1,
+              "indent": 2,
               "parameters": [
                 4,
                 {
@@ -14217,7 +14249,7 @@
             {
               "rmxp_raw": true,
               "code": 509,
-              "indent": 1,
+              "indent": 2,
               "parameters": [
                 {
                   "code": 34,
@@ -14228,7 +14260,7 @@
             {
               "rmxp_raw": true,
               "code": 209,
-              "indent": 1,
+              "indent": 2,
               "parameters": [
                 0,
                 {
@@ -14256,7 +14288,7 @@
             {
               "rmxp_raw": true,
               "code": 509,
-              "indent": 1,
+              "indent": 2,
               "parameters": [
                 {
                   "code": 15,
@@ -14269,7 +14301,7 @@
             {
               "rmxp_raw": true,
               "code": 509,
-              "indent": 1,
+              "indent": 2,
               "parameters": [
                 {
                   "code": 16,
@@ -14280,13 +14312,13 @@
             {
               "rmxp_raw": true,
               "code": 210,
-              "indent": 1,
+              "indent": 2,
               "parameters": []
             },
             {
               "rmxp_raw": true,
               "code": 108,
-              "indent": 1,
+              "indent": 2,
               "parameters": [
                 "Pok\u00e9rus check."
               ]
@@ -14294,7 +14326,7 @@
             {
               "rmxp_raw": true,
               "code": 111,
-              "indent": 1,
+              "indent": 2,
               "parameters": [
                 12,
                 "pbPokerus?"
@@ -14303,7 +14335,7 @@
             {
               "rmxp_raw": true,
               "code": 101,
-              "indent": 2,
+              "indent": 3,
               "parameters": [
                 "\\rYour Pok\u00e9mon may be infected by Pok\u00e9rus."
               ]
@@ -14311,39 +14343,23 @@
             {
               "rmxp_raw": true,
               "code": 101,
-              "indent": 2,
+              "indent": 3,
               "parameters": [
-                "\\rLittle is known about the Pok\u00e9rus except that they "
-              ]
-            },
-            {
-              "rmxp_raw": true,
-              "code": 401,
-              "indent": 2,
-              "parameters": [
-                "are microscopic life-forms that attach to Pok\u00e9mon."
+                "\\rLittle is known about the Pok\u00e9rus except that they are microscopic life-forms that attach to Pok\u00e9mon."
               ]
             },
             {
               "rmxp_raw": true,
               "code": 101,
-              "indent": 2,
+              "indent": 3,
               "parameters": [
-                "\\rWhile infected, Pok\u00e9mon are said to grow "
-              ]
-            },
-            {
-              "rmxp_raw": true,
-              "code": 401,
-              "indent": 2,
-              "parameters": [
-                "exceptionally well."
+                "\\rWhile infected, Pok\u00e9mon are said to grow exceptionally well."
               ]
             },
             {
               "rmxp_raw": true,
               "code": 121,
-              "indent": 2,
+              "indent": 3,
               "parameters": [
                 2,
                 2,
@@ -14353,19 +14369,19 @@
             {
               "rmxp_raw": true,
               "code": 0,
-              "indent": 2,
+              "indent": 3,
               "parameters": []
             },
             {
               "rmxp_raw": true,
               "code": 411,
-              "indent": 1,
+              "indent": 2,
               "parameters": []
             },
             {
               "rmxp_raw": true,
               "code": 101,
-              "indent": 2,
+              "indent": 3,
               "parameters": [
                 "\\rThank you for waiting."
               ]
@@ -14373,7 +14389,7 @@
             {
               "rmxp_raw": true,
               "code": 101,
-              "indent": 2,
+              "indent": 3,
               "parameters": [
                 "\\rWe've restored your Pok\u00e9mon to full health."
               ]
@@ -14381,7 +14397,7 @@
             {
               "rmxp_raw": true,
               "code": 108,
-              "indent": 2,
+              "indent": 3,
               "parameters": [
                 "Nurse bows."
               ]
@@ -14389,7 +14405,7 @@
             {
               "rmxp_raw": true,
               "code": 209,
-              "indent": 2,
+              "indent": 3,
               "parameters": [
                 0,
                 {
@@ -14431,7 +14447,7 @@
             {
               "rmxp_raw": true,
               "code": 509,
-              "indent": 2,
+              "indent": 3,
               "parameters": [
                 {
                   "code": 41,
@@ -14447,7 +14463,7 @@
             {
               "rmxp_raw": true,
               "code": 509,
-              "indent": 2,
+              "indent": 3,
               "parameters": [
                 {
                   "code": 15,
@@ -14460,7 +14476,7 @@
             {
               "rmxp_raw": true,
               "code": 509,
-              "indent": 2,
+              "indent": 3,
               "parameters": [
                 {
                   "code": 41,
@@ -14476,13 +14492,13 @@
             {
               "rmxp_raw": true,
               "code": 210,
-              "indent": 2,
+              "indent": 3,
               "parameters": []
             },
             {
               "rmxp_raw": true,
               "code": 101,
-              "indent": 2,
+              "indent": 3,
               "parameters": [
                 "\\rWe hope to see you again!"
               ]
@@ -14490,25 +14506,25 @@
             {
               "rmxp_raw": true,
               "code": 0,
-              "indent": 2,
+              "indent": 3,
               "parameters": []
             },
             {
               "rmxp_raw": true,
               "code": 412,
-              "indent": 1,
+              "indent": 2,
               "parameters": []
             },
             {
               "rmxp_raw": true,
               "code": 0,
-              "indent": 1,
+              "indent": 2,
               "parameters": []
             },
             {
               "rmxp_raw": true,
               "code": 402,
-              "indent": 0,
+              "indent": 1,
               "parameters": [
                 1,
                 "No"
@@ -14517,7 +14533,7 @@
             {
               "rmxp_raw": true,
               "code": 101,
-              "indent": 1,
+              "indent": 2,
               "parameters": [
                 "\\rWe hope to see you again!"
               ]
@@ -14525,19 +14541,19 @@
             {
               "rmxp_raw": true,
               "code": 0,
-              "indent": 1,
+              "indent": 2,
               "parameters": []
             },
             {
               "rmxp_raw": true,
               "code": 404,
-              "indent": 0,
+              "indent": 1,
               "parameters": []
             },
             {
               "rmxp_raw": true,
               "code": 0,
-              "indent": 0,
+              "indent": 1,
               "parameters": []
             }
           ],

@@ -1,1708 +1,5 @@
 [log rotated]
-]   default str encoding : utf-8
-[2026-05-19 23:49:14]   win32 code pages: ACP=1252, OEM=850
-[2026-05-19 23:49:14]   ess path repr : 'C:\\Users\\Vena\\Documents\\folders\\RPGMaker\\Pokemon IA XPX'
-[2026-05-19 23:49:14]   settings: do_preload=True, do_rxdata=True, do_runtime=True
-[2026-05-19 23:49:14]   Game.ini script source: kind='rxdata', ini_value='Data\\Scripts.rxdata', custom_script=None, entry_rb=None
-[2026-05-19 23:49:15]   export_to_rxdata: 4 written, 101 skipped (rxdata up-to-date)
-[2026-05-19 23:49:15] === write_system invoked ===
-[2026-05-19 23:49:15]   ess_folder = 'C:\\Users\\Vena\\Documents\\folders\\RPGMaker\\Pokemon IA XPX'
-[2026-05-19 23:49:15]   project.essentials_settings.essentials_folder = None
-[2026-05-19 23:49:15]   project.project_root = 'C:/Users/Vena/Documents/folders/RPGMaker\\Pokemon IA XPX'
-[2026-05-19 23:49:15]   fast-path: System.rxdata cached as matching (smid=1, x=9, y=7)
-[2026-05-19 23:49:15] 
-[2026-05-19 23:49:15] === _deploy_xpx_runtime ===
-[2026-05-19 23:49:15]   source: C:\Users\Vena\AppData\Local\Programs\XPXENG~1\_internal\base_runtime
-[2026-05-19 23:49:15]   dest:   C:\Users\Vena\Documents\folders\RPGMaker\Pokemon IA XPX
-[2026-05-19 23:49:15]   XPX install integrity: OK (1922 file(s), cached)
-[2026-05-19 23:49:15]   manifest: 5 file(s), 1 folder(s)
-[2026-05-19 23:49:15]     BEFORE Game.exe: 29105352 bytes, mtime=2026-05-17 21:11:20
-[2026-05-19 23:49:15]     BEFORE MANIFEST.json: 336034 bytes, mtime=2026-05-17 22:23:00
-[2026-05-19 23:49:15]     BEFORE build_info.json: 274 bytes, mtime=2026-05-17 22:23:00
-[2026-05-19 23:49:15]     BEFORE x64-msvcrt-ruby310.dll: 10240557 bytes, mtime=2026-05-17 21:11:20
-[2026-05-19 23:49:15]     BEFORE zlib1.dll: 128488 bytes, mtime=2026-05-17 15:30:22
-[2026-05-19 23:49:15]     5 file(s) already in sync — byte copy skipped
-[2026-05-19 23:49:15]     1 folder(s) already in sync — rebuild skipped
-[2026-05-19 23:49:15]     AFTER  Game.exe: 29105352 bytes, mtime=2026-05-17 21:11:20
-[2026-05-19 23:49:15]     AFTER  MANIFEST.json: 336034 bytes, mtime=2026-05-17 22:23:00
-[2026-05-19 23:49:15]     AFTER  build_info.json: 274 bytes, mtime=2026-05-17 22:23:00
-[2026-05-19 23:49:15]     AFTER  x64-msvcrt-ruby310.dll: 10240557 bytes, mtime=2026-05-17 21:11:20
-[2026-05-19 23:49:15]     AFTER  zlib1.dll: 128488 bytes, mtime=2026-05-17 15:30:22
-[2026-05-19 23:49:15]   hash-verifying against MANIFEST.json (runtime v0.3.3, 1922 expected file(s))
-[2026-05-19 23:49:15]     ? build_info.json: not in MANIFEST (extra file in runtime folder)
-[2026-05-19 23:49:15]   manifest verified: 3/1922 file(s) match shipped hashes; 0 mismatch(es), 0 error(s)
-[2026-05-19 23:49:15]   result: copied 5 file(s), 1 folder(s); verified 5/5 sizes; 0 file failure(s), 0 folder failure(s)
-[2026-05-19 23:49:15]   integrate timings (total 1101ms):
-[2026-05-19 23:49:15]     deploy_runtime              609.9ms
-[2026-05-19 23:49:15]     export_to_rxdata            467.2ms
-[2026-05-19 23:49:15]     write_mkxp_json               9.6ms
-[2026-05-19 23:49:15]     write_tilesets                7.2ms
-[2026-05-19 23:49:15]     write_system                  4.5ms
-[2026-05-19 23:49:15]     write_preload_script          2.2ms
-[2026-05-19 23:49:15]     seed_terrain_tags             0.0ms
-[2026-05-20 00:07:08] 
-[2026-05-20 00:07:08] ================================================
-[2026-05-20 00:07:08] === integrate_essentials invoked ===
-[2026-05-20 00:07:08]   project_root = 'C:/Users/Vena/Documents/folders/RPGMaker\\Pokemon IA XPX'
-[2026-05-20 00:07:08]   ess_folder   = 'C:\\Users\\Vena\\Documents\\folders\\RPGMaker\\Pokemon IA XPX'
-[2026-05-20 00:07:08]   project.start_map_id = 1
-[2026-05-20 00:07:08] === environment ===
-[2026-05-20 00:07:08]   os       : Windows 11 (10.0.26100)
-[2026-05-20 00:07:08]   arch     : AMD64
-[2026-05-20 00:07:08]   python   : 3.12.7 (tags/v3.12.7:0b05ead, Oct  1 2024, 03:06:41) [MSC v.1941 64 bit (AMD64)]
-[2026-05-20 00:07:08]   pyqt6    : 6.7.1 (Qt 6.7.1)
-[2026-05-20 00:07:08]   locale   : ('English_United Kingdom', '1252')
-[2026-05-20 00:07:08]   preferred encoding   : cp1252
-[2026-05-20 00:07:08]   filesystem encoding  : utf-8
-[2026-05-20 00:07:08]   default str encoding : utf-8
-[2026-05-20 00:07:08]   win32 code pages: ACP=1252, OEM=850
-[2026-05-20 00:07:08]   ess path repr : 'C:\\Users\\Vena\\Documents\\folders\\RPGMaker\\Pokemon IA XPX'
-[2026-05-20 00:07:08]   settings: do_preload=True, do_rxdata=True, do_runtime=True
-[2026-05-20 00:07:08]   Game.ini script source: kind='rxdata', ini_value='Data\\Scripts.rxdata', custom_script=None, entry_rb=None
-[2026-05-20 00:07:09]   export_to_rxdata: 4 written, 101 skipped (rxdata up-to-date)
-[2026-05-20 00:07:09] === write_system invoked ===
-[2026-05-20 00:07:09]   ess_folder = 'C:\\Users\\Vena\\Documents\\folders\\RPGMaker\\Pokemon IA XPX'
-[2026-05-20 00:07:09]   project.essentials_settings.essentials_folder = None
-[2026-05-20 00:07:09]   project.project_root = 'C:/Users/Vena/Documents/folders/RPGMaker\\Pokemon IA XPX'
-[2026-05-20 00:07:09]   sys_path   = 'C:\\Users\\Vena\\Documents\\folders\\RPGMaker\\Pokemon IA XPX\\Data\\System.rxdata'
-[2026-05-20 00:07:09]   exists?    = True
-[2026-05-20 00:07:09]   existing System.rxdata: 4657 bytes, mtime=2026-05-13 16:26:41
-[2026-05-20 00:07:09]   System.rxdata* files found in tree: 1
-[2026-05-20 00:07:09]     - C:\Users\Vena\Documents\folders\RPGMaker\Pokemon IA XPX\Data\System.rxdata
-[2026-05-20 00:07:09]   current System.rxdata: @start_map_id=1, @start_x=9, @start_y=7
-[2026-05-20 00:07:09]   project state: start_map_id=1, start_x=9, start_y=7
-[2026-05-20 00:07:09]   target values: @start_map_id=1, @start_x=9, @start_y=7 (fallback=False)
-[2026-05-20 00:07:09]   no-op: System.rxdata already matches target
-[2026-05-20 00:07:09] 
-[2026-05-20 00:07:09] === _deploy_xpx_runtime ===
-[2026-05-20 00:07:09]   source: C:\Users\Vena\AppData\Local\Programs\XPXENG~1\_internal\base_runtime
-[2026-05-20 00:07:09]   dest:   C:\Users\Vena\Documents\folders\RPGMaker\Pokemon IA XPX
-[2026-05-20 00:07:09]   XPX install integrity: OK (1922 file(s), cached)
-[2026-05-20 00:07:09]   manifest: 5 file(s), 1 folder(s)
-[2026-05-20 00:07:09]     BEFORE Game.exe: 29105352 bytes, mtime=2026-05-17 21:11:20
-[2026-05-20 00:07:09]     BEFORE MANIFEST.json: 336034 bytes, mtime=2026-05-17 22:23:00
-[2026-05-20 00:07:09]     BEFORE build_info.json: 274 bytes, mtime=2026-05-17 22:23:00
-[2026-05-20 00:07:09]     BEFORE x64-msvcrt-ruby310.dll: 10240557 bytes, mtime=2026-05-17 21:11:20
-[2026-05-20 00:07:09]     BEFORE zlib1.dll: 128488 bytes, mtime=2026-05-17 15:30:22
-[2026-05-20 00:07:09]     5 file(s) already in sync — byte copy skipped
-[2026-05-20 00:07:10]     1 folder(s) already in sync — rebuild skipped
-[2026-05-20 00:07:10]     AFTER  Game.exe: 29105352 bytes, mtime=2026-05-17 21:11:20
-[2026-05-20 00:07:10]     AFTER  MANIFEST.json: 336034 bytes, mtime=2026-05-17 22:23:00
-[2026-05-20 00:07:10]     AFTER  build_info.json: 274 bytes, mtime=2026-05-17 22:23:00
-[2026-05-20 00:07:10]     AFTER  x64-msvcrt-ruby310.dll: 10240557 bytes, mtime=2026-05-17 21:11:20
-[2026-05-20 00:07:10]     AFTER  zlib1.dll: 128488 bytes, mtime=2026-05-17 15:30:22
-[2026-05-20 00:07:10]   hash-verifying against MANIFEST.json (runtime v0.3.3, 1922 expected file(s))
-[2026-05-20 00:07:10]     ? build_info.json: not in MANIFEST (extra file in runtime folder)
-[2026-05-20 00:07:10]   manifest verified: 3/1922 file(s) match shipped hashes; 0 mismatch(es), 0 error(s)
-[2026-05-20 00:07:10]   result: copied 5 file(s), 1 folder(s); verified 5/5 sizes; 0 file failure(s), 0 folder failure(s)
-[2026-05-20 00:07:10]   integrate timings (total 1830ms):
-[2026-05-20 00:07:10]     deploy_runtime              827.2ms
-[2026-05-20 00:07:10]     export_to_rxdata            489.6ms
-[2026-05-20 00:07:10]     write_system                486.2ms
-[2026-05-20 00:07:10]     write_mkxp_json              15.7ms
-[2026-05-20 00:07:10]     write_tilesets                8.0ms
-[2026-05-20 00:07:10]     write_preload_script          2.9ms
-[2026-05-20 00:07:10]     seed_terrain_tags             0.0ms
-[2026-05-20 00:10:54] 
-[2026-05-20 00:10:54] ================================================
-[2026-05-20 00:10:54] === integrate_essentials invoked ===
-[2026-05-20 00:10:54]   project_root = 'C:/Users/Vena/Documents/folders/RPGMaker\\Pokemon IA XPX'
-[2026-05-20 00:10:54]   ess_folder   = 'C:\\Users\\Vena\\Documents\\folders\\RPGMaker\\Pokemon IA XPX'
-[2026-05-20 00:10:54]   project.start_map_id = 1
-[2026-05-20 00:10:54] === environment ===
-[2026-05-20 00:10:54]   os       : Windows 11 (10.0.26100)
-[2026-05-20 00:10:54]   arch     : AMD64
-[2026-05-20 00:10:54]   python   : 3.12.7 (tags/v3.12.7:0b05ead, Oct  1 2024, 03:06:41) [MSC v.1941 64 bit (AMD64)]
-[2026-05-20 00:10:54]   pyqt6    : 6.7.1 (Qt 6.7.1)
-[2026-05-20 00:10:54]   locale   : ('English_United Kingdom', '1252')
-[2026-05-20 00:10:54]   preferred encoding   : cp1252
-[2026-05-20 00:10:54]   filesystem encoding  : utf-8
-[2026-05-20 00:10:54]   default str encoding : utf-8
-[2026-05-20 00:10:54]   win32 code pages: ACP=1252, OEM=850
-[2026-05-20 00:10:54]   ess path repr : 'C:\\Users\\Vena\\Documents\\folders\\RPGMaker\\Pokemon IA XPX'
-[2026-05-20 00:10:54]   settings: do_preload=True, do_rxdata=True, do_runtime=True
-[2026-05-20 00:10:54]   Game.ini script source: kind='rxdata', ini_value='Data\\Scripts.rxdata', custom_script=None, entry_rb=None
-[2026-05-20 00:10:55]   export_to_rxdata: 3 written, 102 skipped (rxdata up-to-date)
-[2026-05-20 00:10:55] === write_system invoked ===
-[2026-05-20 00:10:55]   ess_folder = 'C:\\Users\\Vena\\Documents\\folders\\RPGMaker\\Pokemon IA XPX'
-[2026-05-20 00:10:55]   project.essentials_settings.essentials_folder = None
-[2026-05-20 00:10:55]   project.project_root = 'C:/Users/Vena/Documents/folders/RPGMaker\\Pokemon IA XPX'
-[2026-05-20 00:10:55]   fast-path: System.rxdata cached as matching (smid=1, x=9, y=7)
-[2026-05-20 00:10:55] 
-[2026-05-20 00:10:55] === _deploy_xpx_runtime ===
-[2026-05-20 00:10:55]   source: C:\Users\Vena\AppData\Local\Programs\XPXENG~1\_internal\base_runtime
-[2026-05-20 00:10:55]   dest:   C:\Users\Vena\Documents\folders\RPGMaker\Pokemon IA XPX
-[2026-05-20 00:10:55]   XPX install integrity: OK (1922 file(s), cached)
-[2026-05-20 00:10:55]   manifest: 5 file(s), 1 folder(s)
-[2026-05-20 00:10:55]     BEFORE Game.exe: 29105352 bytes, mtime=2026-05-17 21:11:20
-[2026-05-20 00:10:55]     BEFORE MANIFEST.json: 336034 bytes, mtime=2026-05-17 22:23:00
-[2026-05-20 00:10:55]     BEFORE build_info.json: 274 bytes, mtime=2026-05-17 22:23:00
-[2026-05-20 00:10:55]     BEFORE x64-msvcrt-ruby310.dll: 10240557 bytes, mtime=2026-05-17 21:11:20
-[2026-05-20 00:10:55]     BEFORE zlib1.dll: 128488 bytes, mtime=2026-05-17 15:30:22
-[2026-05-20 00:10:55]     5 file(s) already in sync — byte copy skipped
-[2026-05-20 00:10:56]     1 folder(s) already in sync — rebuild skipped
-[2026-05-20 00:10:56]     AFTER  Game.exe: 29105352 bytes, mtime=2026-05-17 21:11:20
-[2026-05-20 00:10:56]     AFTER  MANIFEST.json: 336034 bytes, mtime=2026-05-17 22:23:00
-[2026-05-20 00:10:56]     AFTER  build_info.json: 274 bytes, mtime=2026-05-17 22:23:00
-[2026-05-20 00:10:56]     AFTER  x64-msvcrt-ruby310.dll: 10240557 bytes, mtime=2026-05-17 21:11:20
-[2026-05-20 00:10:56]     AFTER  zlib1.dll: 128488 bytes, mtime=2026-05-17 15:30:22
-[2026-05-20 00:10:56]   hash-verifying against MANIFEST.json (runtime v0.3.3, 1922 expected file(s))
-[2026-05-20 00:10:56]     ? build_info.json: not in MANIFEST (extra file in runtime folder)
-[2026-05-20 00:10:56]   manifest verified: 3/1922 file(s) match shipped hashes; 0 mismatch(es), 0 error(s)
-[2026-05-20 00:10:56]   result: copied 5 file(s), 1 folder(s); verified 5/5 sizes; 0 file failure(s), 0 folder failure(s)
-[2026-05-20 00:10:56]   integrate timings (total 2300ms):
-[2026-05-20 00:10:56]     deploy_runtime             1173.5ms
-[2026-05-20 00:10:56]     export_to_rxdata           1089.8ms
-[2026-05-20 00:10:56]     write_mkxp_json              16.7ms
-[2026-05-20 00:10:56]     write_tilesets                8.3ms
-[2026-05-20 00:10:56]     write_preload_script          6.3ms
-[2026-05-20 00:10:56]     write_system                  4.9ms
-[2026-05-20 00:10:56]     seed_terrain_tags             0.0ms
-[2026-05-20 00:11:41] 
-[2026-05-20 00:11:41] ================================================
-[2026-05-20 00:11:41] === integrate_essentials invoked ===
-[2026-05-20 00:11:41]   project_root = 'C:/Users/Vena/Documents/folders/RPGMaker\\Pokemon IA XPX'
-[2026-05-20 00:11:41]   ess_folder   = 'C:\\Users\\Vena\\Documents\\folders\\RPGMaker\\Pokemon IA XPX'
-[2026-05-20 00:11:41]   project.start_map_id = 1
-[2026-05-20 00:11:41] === environment ===
-[2026-05-20 00:11:41]   os       : Windows 11 (10.0.26100)
-[2026-05-20 00:11:41]   arch     : AMD64
-[2026-05-20 00:11:41]   python   : 3.12.7 (tags/v3.12.7:0b05ead, Oct  1 2024, 03:06:41) [MSC v.1941 64 bit (AMD64)]
-[2026-05-20 00:11:41]   pyqt6    : 6.7.1 (Qt 6.7.1)
-[2026-05-20 00:11:41]   locale   : ('English_United Kingdom', '1252')
-[2026-05-20 00:11:41]   preferred encoding   : cp1252
-[2026-05-20 00:11:41]   filesystem encoding  : utf-8
-[2026-05-20 00:11:41]   default str encoding : utf-8
-[2026-05-20 00:11:41]   win32 code pages: ACP=1252, OEM=850
-[2026-05-20 00:11:41]   ess path repr : 'C:\\Users\\Vena\\Documents\\folders\\RPGMaker\\Pokemon IA XPX'
-[2026-05-20 00:11:41]   settings: do_preload=True, do_rxdata=True, do_runtime=True
-[2026-05-20 00:11:41]   Game.ini script source: kind='rxdata', ini_value='Data\\Scripts.rxdata', custom_script=None, entry_rb=None
-[2026-05-20 00:11:42]   export_to_rxdata: 3 written, 102 skipped (rxdata up-to-date)
-[2026-05-20 00:11:42] === write_system invoked ===
-[2026-05-20 00:11:42]   ess_folder = 'C:\\Users\\Vena\\Documents\\folders\\RPGMaker\\Pokemon IA XPX'
-[2026-05-20 00:11:42]   project.essentials_settings.essentials_folder = None
-[2026-05-20 00:11:42]   project.project_root = 'C:/Users/Vena/Documents/folders/RPGMaker\\Pokemon IA XPX'
-[2026-05-20 00:11:42]   fast-path: System.rxdata cached as matching (smid=1, x=9, y=7)
-[2026-05-20 00:11:42] 
-[2026-05-20 00:11:42] === _deploy_xpx_runtime ===
-[2026-05-20 00:11:42]   source: C:\Users\Vena\AppData\Local\Programs\XPXENG~1\_internal\base_runtime
-[2026-05-20 00:11:42]   dest:   C:\Users\Vena\Documents\folders\RPGMaker\Pokemon IA XPX
-[2026-05-20 00:11:42]   XPX install integrity: OK (1922 file(s), cached)
-[2026-05-20 00:11:42]   manifest: 5 file(s), 1 folder(s)
-[2026-05-20 00:11:42]     BEFORE Game.exe: 29105352 bytes, mtime=2026-05-17 21:11:20
-[2026-05-20 00:11:42]     BEFORE MANIFEST.json: 336034 bytes, mtime=2026-05-17 22:23:00
-[2026-05-20 00:11:42]     BEFORE build_info.json: 274 bytes, mtime=2026-05-17 22:23:00
-[2026-05-20 00:11:42]     BEFORE x64-msvcrt-ruby310.dll: 10240557 bytes, mtime=2026-05-17 21:11:20
-[2026-05-20 00:11:42]     BEFORE zlib1.dll: 128488 bytes, mtime=2026-05-17 15:30:22
-[2026-05-20 00:11:42]     5 file(s) already in sync — byte copy skipped
-[2026-05-20 00:11:42]     1 folder(s) already in sync — rebuild skipped
-[2026-05-20 00:11:42]     AFTER  Game.exe: 29105352 bytes, mtime=2026-05-17 21:11:20
-[2026-05-20 00:11:42]     AFTER  MANIFEST.json: 336034 bytes, mtime=2026-05-17 22:23:00
-[2026-05-20 00:11:42]     AFTER  build_info.json: 274 bytes, mtime=2026-05-17 22:23:00
-[2026-05-20 00:11:42]     AFTER  x64-msvcrt-ruby310.dll: 10240557 bytes, mtime=2026-05-17 21:11:20
-[2026-05-20 00:11:42]     AFTER  zlib1.dll: 128488 bytes, mtime=2026-05-17 15:30:22
-[2026-05-20 00:11:42]   hash-verifying against MANIFEST.json (runtime v0.3.3, 1922 expected file(s))
-[2026-05-20 00:11:42]     ? build_info.json: not in MANIFEST (extra file in runtime folder)
-[2026-05-20 00:11:42]   manifest verified: 3/1922 file(s) match shipped hashes; 0 mismatch(es), 0 error(s)
-[2026-05-20 00:11:42]   result: copied 5 file(s), 1 folder(s); verified 5/5 sizes; 0 file failure(s), 0 folder failure(s)
-[2026-05-20 00:11:42]   integrate timings (total 964ms):
-[2026-05-20 00:11:42]     deploy_runtime              571.5ms
-[2026-05-20 00:11:42]     export_to_rxdata            373.9ms
-[2026-05-20 00:11:42]     write_tilesets                7.0ms
-[2026-05-20 00:11:42]     write_mkxp_json               6.5ms
-[2026-05-20 00:11:42]     write_system                  3.5ms
-[2026-05-20 00:11:42]     write_preload_script          1.3ms
-[2026-05-20 00:11:42]     seed_terrain_tags             0.0ms
-[2026-05-24 04:44:49] 
-[2026-05-24 04:44:49] ================================================
-[2026-05-24 04:44:49] === integrate_essentials invoked ===
-[2026-05-24 04:44:49]   project_root = 'C:/Users/Vena/Documents/folders/RPGMaker\\Pokemon IA XPX'
-[2026-05-24 04:44:49]   ess_folder   = 'C:\\Users\\Vena\\Documents\\folders\\RPGMaker\\Pokemon IA XPX'
-[2026-05-24 04:44:49]   project.start_map_id = 1
-[2026-05-24 04:44:49] === environment ===
-[2026-05-24 04:44:49]   os       : Windows 11 (10.0.26100)
-[2026-05-24 04:44:49]   arch     : AMD64
-[2026-05-24 04:44:49]   python   : 3.12.7 (tags/v3.12.7:0b05ead, Oct  1 2024, 03:06:41) [MSC v.1941 64 bit (AMD64)]
-[2026-05-24 04:44:49]   pyqt6    : 6.7.1 (Qt 6.7.1)
-[2026-05-24 04:44:49]   locale   : ('English_United Kingdom', '1252')
-[2026-05-24 04:44:49]   preferred encoding   : cp1252
-[2026-05-24 04:44:49]   filesystem encoding  : utf-8
-[2026-05-24 04:44:49]   default str encoding : utf-8
-[2026-05-24 04:44:49]   win32 code pages: ACP=1252, OEM=850
-[2026-05-24 04:44:49]   ess path repr : 'C:\\Users\\Vena\\Documents\\folders\\RPGMaker\\Pokemon IA XPX'
-[2026-05-24 04:44:49]   settings: do_preload=True, do_rxdata=True, do_runtime=True
-[2026-05-24 04:44:49]   Game.ini script source: kind='rxdata', ini_value='Data\\Scripts.rxdata', custom_script=None, entry_rb=None
-[2026-05-24 04:44:49]   export_to_rxdata: 5 written, 100 skipped (rxdata up-to-date)
-[2026-05-24 04:44:49] === write_system invoked ===
-[2026-05-24 04:44:49]   ess_folder = 'C:\\Users\\Vena\\Documents\\folders\\RPGMaker\\Pokemon IA XPX'
-[2026-05-24 04:44:49]   project.essentials_settings.essentials_folder = None
-[2026-05-24 04:44:49]   project.project_root = 'C:/Users/Vena/Documents/folders/RPGMaker\\Pokemon IA XPX'
-[2026-05-24 04:44:49]   sys_path   = 'C:\\Users\\Vena\\Documents\\folders\\RPGMaker\\Pokemon IA XPX\\Data\\System.rxdata'
-[2026-05-24 04:44:49]   exists?    = True
-[2026-05-24 04:44:49]   existing System.rxdata: 4657 bytes, mtime=2026-05-13 16:26:41
-[2026-05-24 04:44:49]   System.rxdata* files found in tree: 1
-[2026-05-24 04:44:49]     - C:\Users\Vena\Documents\folders\RPGMaker\Pokemon IA XPX\Data\System.rxdata
-[2026-05-24 04:44:49]   current System.rxdata: @start_map_id=1, @start_x=9, @start_y=7
-[2026-05-24 04:44:49]   project state: start_map_id=1, start_x=9, start_y=7
-[2026-05-24 04:44:49]   target values: @start_map_id=1, @start_x=9, @start_y=7 (fallback=False)
-[2026-05-24 04:44:49]   no-op: System.rxdata already matches target
-[2026-05-24 04:44:49] 
-[2026-05-24 04:44:49] === _deploy_xpx_runtime ===
-[2026-05-24 04:44:49]   source: C:\Users\Vena\AppData\Local\Programs\XPXENG~1\_internal\base_runtime
-[2026-05-24 04:44:49]   dest:   C:\Users\Vena\Documents\folders\RPGMaker\Pokemon IA XPX
-[2026-05-24 04:44:49]   XPX install integrity: OK (1922 file(s), cached)
-[2026-05-24 04:44:49]   manifest: 5 file(s), 1 folder(s)
-[2026-05-24 04:44:49]     BEFORE Game.exe: 29105352 bytes, mtime=2026-05-17 21:11:20
-[2026-05-24 04:44:50]     BEFORE MANIFEST.json: 336034 bytes, mtime=2026-05-17 22:23:00
-[2026-05-24 04:44:50]     BEFORE build_info.json: 274 bytes, mtime=2026-05-17 22:23:00
-[2026-05-24 04:44:50]     BEFORE x64-msvcrt-ruby310.dll: 10240557 bytes, mtime=2026-05-17 21:11:20
-[2026-05-24 04:44:50]     BEFORE zlib1.dll: 128488 bytes, mtime=2026-05-17 15:30:22
-[2026-05-24 04:44:50]     5 file(s) already in sync — byte copy skipped
-[2026-05-24 04:44:50]     1 folder(s) already in sync — rebuild skipped
-[2026-05-24 04:44:50]     AFTER  Game.exe: 29105352 bytes, mtime=2026-05-17 21:11:20
-[2026-05-24 04:44:50]     AFTER  MANIFEST.json: 336034 bytes, mtime=2026-05-17 22:23:00
-[2026-05-24 04:44:50]     AFTER  build_info.json: 274 bytes, mtime=2026-05-17 22:23:00
-[2026-05-24 04:44:50]     AFTER  x64-msvcrt-ruby310.dll: 10240557 bytes, mtime=2026-05-17 21:11:20
-[2026-05-24 04:44:50]     AFTER  zlib1.dll: 128488 bytes, mtime=2026-05-17 15:30:22
-[2026-05-24 04:44:50]   hash-verifying against MANIFEST.json (runtime v0.3.3, 1922 expected file(s))
-[2026-05-24 04:44:50]     ? build_info.json: not in MANIFEST (extra file in runtime folder)
-[2026-05-24 04:44:50]   manifest verified: 3/1922 file(s) match shipped hashes; 0 mismatch(es), 0 error(s)
-[2026-05-24 04:44:50]   result: copied 5 file(s), 1 folder(s); verified 5/5 sizes; 0 file failure(s), 0 folder failure(s)
-[2026-05-24 04:44:50]   integrate timings (total 1795ms):
-[2026-05-24 04:44:50]     deploy_runtime             1000.4ms
-[2026-05-24 04:44:50]     write_system                450.6ms
-[2026-05-24 04:44:50]     export_to_rxdata            307.0ms
-[2026-05-24 04:44:50]     write_tilesets               20.6ms
-[2026-05-24 04:44:50]     write_preload_script          8.6ms
-[2026-05-24 04:44:50]     write_mkxp_json               7.8ms
-[2026-05-24 04:44:50]     seed_terrain_tags             0.0ms
-[2026-05-24 07:13:25] 
-[2026-05-24 07:13:25] ================================================
-[2026-05-24 07:13:25] === integrate_essentials invoked ===
-[2026-05-24 07:13:25]   project_root = 'C:/Users/Vena/Documents/folders/RPGMaker\\Pokemon IA XPX'
-[2026-05-24 07:13:25]   ess_folder   = 'C:\\Users\\Vena\\Documents\\folders\\RPGMaker\\Pokemon IA XPX'
-[2026-05-24 07:13:25]   project.start_map_id = 1
-[2026-05-24 07:13:25] === environment ===
-[2026-05-24 07:13:25]   os       : Windows 11 (10.0.26100)
-[2026-05-24 07:13:25]   arch     : AMD64
-[2026-05-24 07:13:25]   python   : 3.12.7 (tags/v3.12.7:0b05ead, Oct  1 2024, 03:06:41) [MSC v.1941 64 bit (AMD64)]
-[2026-05-24 07:13:25]   pyqt6    : 6.7.1 (Qt 6.7.1)
-[2026-05-24 07:13:25]   locale   : ('English_United Kingdom', '1252')
-[2026-05-24 07:13:25]   preferred encoding   : cp1252
-[2026-05-24 07:13:25]   filesystem encoding  : utf-8
-[2026-05-24 07:13:25]   default str encoding : utf-8
-[2026-05-24 07:13:25]   win32 code pages: ACP=1252, OEM=850
-[2026-05-24 07:13:25]   ess path repr : 'C:\\Users\\Vena\\Documents\\folders\\RPGMaker\\Pokemon IA XPX'
-[2026-05-24 07:13:25]   settings: do_preload=True, do_rxdata=True, do_runtime=True
-[2026-05-24 07:13:25]   Game.ini script source: kind='rxdata', ini_value='Data\\Scripts.rxdata', custom_script=None, entry_rb=None
-[2026-05-24 07:13:25]   export_to_rxdata: 3 written, 102 skipped (rxdata up-to-date)
-[2026-05-24 07:13:25] === write_system invoked ===
-[2026-05-24 07:13:25]   ess_folder = 'C:\\Users\\Vena\\Documents\\folders\\RPGMaker\\Pokemon IA XPX'
-[2026-05-24 07:13:25]   project.essentials_settings.essentials_folder = None
-[2026-05-24 07:13:25]   project.project_root = 'C:/Users/Vena/Documents/folders/RPGMaker\\Pokemon IA XPX'
-[2026-05-24 07:13:25]   fast-path: System.rxdata cached as matching (smid=1, x=9, y=7)
-[2026-05-24 07:13:25] 
-[2026-05-24 07:13:25] === _deploy_xpx_runtime ===
-[2026-05-24 07:13:25]   source: C:\Users\Vena\AppData\Local\Programs\XPXENG~1\_internal\base_runtime
-[2026-05-24 07:13:25]   dest:   C:\Users\Vena\Documents\folders\RPGMaker\Pokemon IA XPX
-[2026-05-24 07:13:25]   XPX install integrity: OK (1922 file(s), cached)
-[2026-05-24 07:13:25]   manifest: 5 file(s), 1 folder(s)
-[2026-05-24 07:13:25]     BEFORE Game.exe: 29105352 bytes, mtime=2026-05-17 21:11:20
-[2026-05-24 07:13:25]     BEFORE MANIFEST.json: 336034 bytes, mtime=2026-05-17 22:23:00
-[2026-05-24 07:13:25]     BEFORE build_info.json: 274 bytes, mtime=2026-05-17 22:23:00
-[2026-05-24 07:13:25]     BEFORE x64-msvcrt-ruby310.dll: 10240557 bytes, mtime=2026-05-17 21:11:20
-[2026-05-24 07:13:25]     BEFORE zlib1.dll: 128488 bytes, mtime=2026-05-17 15:30:22
-[2026-05-24 07:13:25]     5 file(s) already in sync — byte copy skipped
-[2026-05-24 07:13:26]     1 folder(s) already in sync — rebuild skipped
-[2026-05-24 07:13:26]     AFTER  Game.exe: 29105352 bytes, mtime=2026-05-17 21:11:20
-[2026-05-24 07:13:26]     AFTER  MANIFEST.json: 336034 bytes, mtime=2026-05-17 22:23:00
-[2026-05-24 07:13:26]     AFTER  build_info.json: 274 bytes, mtime=2026-05-17 22:23:00
-[2026-05-24 07:13:26]     AFTER  x64-msvcrt-ruby310.dll: 10240557 bytes, mtime=2026-05-17 21:11:20
-[2026-05-24 07:13:26]     AFTER  zlib1.dll: 128488 bytes, mtime=2026-05-17 15:30:22
-[2026-05-24 07:13:26]   hash-verifying against MANIFEST.json (runtime v0.3.3, 1922 expected file(s))
-[2026-05-24 07:13:26]     ? build_info.json: not in MANIFEST (extra file in runtime folder)
-[2026-05-24 07:13:26]   manifest verified: 3/1922 file(s) match shipped hashes; 0 mismatch(es), 0 error(s)
-[2026-05-24 07:13:26]   result: copied 5 file(s), 1 folder(s); verified 5/5 sizes; 0 file failure(s), 0 folder failure(s)
-[2026-05-24 07:13:26]   integrate timings (total 1179ms):
-[2026-05-24 07:13:26]     deploy_runtime              865.4ms
-[2026-05-24 07:13:26]     export_to_rxdata            295.9ms
-[2026-05-24 07:13:26]     write_tilesets                7.4ms
-[2026-05-24 07:13:26]     write_mkxp_json               6.2ms
-[2026-05-24 07:13:26]     write_system                  2.9ms
-[2026-05-24 07:13:26]     write_preload_script          1.2ms
-[2026-05-24 07:13:26]     seed_terrain_tags             0.0ms
-[2026-05-25 00:43:32] 
-[2026-05-25 00:43:32] ================================================
-[2026-05-25 00:43:32] === integrate_essentials invoked ===
-[2026-05-25 00:43:32]   project_root = 'C:/Users/Vena/Documents/folders/RPGMaker\\Pokemon IA XPX'
-[2026-05-25 00:43:32]   ess_folder   = 'C:\\Users\\Vena\\Documents\\folders\\RPGMaker\\Pokemon IA XPX'
-[2026-05-25 00:43:32]   project.start_map_id = 1
-[2026-05-25 00:43:32] === environment ===
-[2026-05-25 00:43:32]   os       : Windows 11 (10.0.26100)
-[2026-05-25 00:43:32]   arch     : AMD64
-[2026-05-25 00:43:32]   python   : 3.12.7 (tags/v3.12.7:0b05ead, Oct  1 2024, 03:06:41) [MSC v.1941 64 bit (AMD64)]
-[2026-05-25 00:43:32]   pyqt6    : 6.7.1 (Qt 6.7.1)
-[2026-05-25 00:43:32]   locale   : ('English_United Kingdom', '1252')
-[2026-05-25 00:43:32]   preferred encoding   : cp1252
-[2026-05-25 00:43:32]   filesystem encoding  : utf-8
-[2026-05-25 00:43:32]   default str encoding : utf-8
-[2026-05-25 00:43:32]   win32 code pages: ACP=1252, OEM=850
-[2026-05-25 00:43:32]   ess path repr : 'C:\\Users\\Vena\\Documents\\folders\\RPGMaker\\Pokemon IA XPX'
-[2026-05-25 00:43:32]   settings: do_preload=True, do_rxdata=True, do_runtime=True
-[2026-05-25 00:43:32]   Game.ini script source: kind='rxdata', ini_value='Data\\Scripts.rxdata', custom_script=None, entry_rb=None
-[2026-05-25 00:43:32]   export_to_rxdata: 3 written, 102 skipped (rxdata up-to-date)
-[2026-05-25 00:43:32] === write_system invoked ===
-[2026-05-25 00:43:32]   ess_folder = 'C:\\Users\\Vena\\Documents\\folders\\RPGMaker\\Pokemon IA XPX'
-[2026-05-25 00:43:32]   project.essentials_settings.essentials_folder = None
-[2026-05-25 00:43:32]   project.project_root = 'C:/Users/Vena/Documents/folders/RPGMaker\\Pokemon IA XPX'
-[2026-05-25 00:43:32]   sys_path   = 'C:\\Users\\Vena\\Documents\\folders\\RPGMaker\\Pokemon IA XPX\\Data\\System.rxdata'
-[2026-05-25 00:43:32]   exists?    = True
-[2026-05-25 00:43:32]   existing System.rxdata: 4657 bytes, mtime=2026-05-13 16:26:41
-[2026-05-25 00:43:32]   System.rxdata* files found in tree: 1
-[2026-05-25 00:43:32]     - C:\Users\Vena\Documents\folders\RPGMaker\Pokemon IA XPX\Data\System.rxdata
-[2026-05-25 00:43:32]   current System.rxdata: @start_map_id=1, @start_x=9, @start_y=7
-[2026-05-25 00:43:32]   project state: start_map_id=1, start_x=9, start_y=7
-[2026-05-25 00:43:32]   target values: @start_map_id=1, @start_x=9, @start_y=7 (fallback=False)
-[2026-05-25 00:43:32]   no-op: System.rxdata already matches target
-[2026-05-25 00:43:32] 
-[2026-05-25 00:43:32] === _deploy_xpx_runtime ===
-[2026-05-25 00:43:32]   source: C:\Users\Vena\AppData\Local\Programs\XPXENG~1\_internal\base_runtime
-[2026-05-25 00:43:32]   dest:   C:\Users\Vena\Documents\folders\RPGMaker\Pokemon IA XPX
-[2026-05-25 00:43:32]   XPX install integrity: OK (1922 file(s), cached)
-[2026-05-25 00:43:32]   manifest: 5 file(s), 1 folder(s)
-[2026-05-25 00:43:32]     BEFORE Game.exe: 29105352 bytes, mtime=2026-05-17 21:11:20
-[2026-05-25 00:43:32]     BEFORE MANIFEST.json: 336034 bytes, mtime=2026-05-17 22:23:00
-[2026-05-25 00:43:32]     BEFORE build_info.json: 274 bytes, mtime=2026-05-17 22:23:00
-[2026-05-25 00:43:32]     BEFORE x64-msvcrt-ruby310.dll: 10240557 bytes, mtime=2026-05-17 21:11:20
-[2026-05-25 00:43:32]     BEFORE zlib1.dll: 128488 bytes, mtime=2026-05-17 15:30:22
-[2026-05-25 00:43:32]     5 file(s) already in sync — byte copy skipped
-[2026-05-25 00:43:33]     1 folder(s) already in sync — rebuild skipped
-[2026-05-25 00:43:33]     AFTER  Game.exe: 29105352 bytes, mtime=2026-05-17 21:11:20
-[2026-05-25 00:43:33]     AFTER  MANIFEST.json: 336034 bytes, mtime=2026-05-17 22:23:00
-[2026-05-25 00:43:33]     AFTER  build_info.json: 274 bytes, mtime=2026-05-17 22:23:00
-[2026-05-25 00:43:33]     AFTER  x64-msvcrt-ruby310.dll: 10240557 bytes, mtime=2026-05-17 21:11:20
-[2026-05-25 00:43:33]     AFTER  zlib1.dll: 128488 bytes, mtime=2026-05-17 15:30:22
-[2026-05-25 00:43:33]   hash-verifying against MANIFEST.json (runtime v0.3.3, 1922 expected file(s))
-[2026-05-25 00:43:33]     ? build_info.json: not in MANIFEST (extra file in runtime folder)
-[2026-05-25 00:43:33]   manifest verified: 3/1922 file(s) match shipped hashes; 0 mismatch(es), 0 error(s)
-[2026-05-25 00:43:33]   result: copied 5 file(s), 1 folder(s); verified 5/5 sizes; 0 file failure(s), 0 folder failure(s)
-[2026-05-25 00:43:33]   integrate timings (total 1423ms):
-[2026-05-25 00:43:33]     deploy_runtime              932.7ms
-[2026-05-25 00:43:33]     export_to_rxdata            371.2ms
-[2026-05-25 00:43:33]     write_system                 88.5ms
-[2026-05-25 00:43:33]     write_mkxp_json              14.4ms
-[2026-05-25 00:43:33]     write_preload_script          9.9ms
-[2026-05-25 00:43:33]     write_tilesets                6.4ms
-[2026-05-25 00:43:33]     seed_terrain_tags             0.0ms
-[2026-05-25 05:44:37] 
-[2026-05-25 05:44:37] ================================================
-[2026-05-25 05:44:37] === integrate_essentials invoked ===
-[2026-05-25 05:44:37]   project_root = 'C:/Users/Vena/Documents/folders/RPGMaker\\Pokemon IA XPX'
-[2026-05-25 05:44:37]   ess_folder   = 'C:\\Users\\Vena\\Documents\\folders\\RPGMaker\\Pokemon IA XPX'
-[2026-05-25 05:44:37]   project.start_map_id = 1
-[2026-05-25 05:44:37] === environment ===
-[2026-05-25 05:44:37]   os       : Windows 11 (10.0.26100)
-[2026-05-25 05:44:37]   arch     : AMD64
-[2026-05-25 05:44:37]   python   : 3.12.7 (tags/v3.12.7:0b05ead, Oct  1 2024, 03:06:41) [MSC v.1941 64 bit (AMD64)]
-[2026-05-25 05:44:37]   pyqt6    : 6.7.1 (Qt 6.7.1)
-[2026-05-25 05:44:37]   locale   : ('English_United Kingdom', '1252')
-[2026-05-25 05:44:37]   preferred encoding   : cp1252
-[2026-05-25 05:44:37]   filesystem encoding  : utf-8
-[2026-05-25 05:44:37]   default str encoding : utf-8
-[2026-05-25 05:44:37]   win32 code pages: ACP=1252, OEM=850
-[2026-05-25 05:44:37]   ess path repr : 'C:\\Users\\Vena\\Documents\\folders\\RPGMaker\\Pokemon IA XPX'
-[2026-05-25 05:44:37]   settings: do_preload=True, do_rxdata=True, do_runtime=True
-[2026-05-25 05:44:37]   Game.ini script source: kind='rxdata', ini_value='Data\\Scripts.rxdata', custom_script=None, entry_rb=None
-[2026-05-25 05:44:38]   export_to_rxdata: 3 written, 102 skipped (rxdata up-to-date)
-[2026-05-25 05:44:38] === write_system invoked ===
-[2026-05-25 05:44:38]   ess_folder = 'C:\\Users\\Vena\\Documents\\folders\\RPGMaker\\Pokemon IA XPX'
-[2026-05-25 05:44:38]   project.essentials_settings.essentials_folder = None
-[2026-05-25 05:44:38]   project.project_root = 'C:/Users/Vena/Documents/folders/RPGMaker\\Pokemon IA XPX'
-[2026-05-25 05:44:38]   fast-path: System.rxdata cached as matching (smid=1, x=9, y=7)
-[2026-05-25 05:44:38] 
-[2026-05-25 05:44:38] === _deploy_xpx_runtime ===
-[2026-05-25 05:44:38]   source: C:\Users\Vena\AppData\Local\Programs\XPXENG~1\_internal\base_runtime
-[2026-05-25 05:44:38]   dest:   C:\Users\Vena\Documents\folders\RPGMaker\Pokemon IA XPX
-[2026-05-25 05:44:38]   XPX install integrity: OK (1922 file(s), cached)
-[2026-05-25 05:44:38]   manifest: 5 file(s), 1 folder(s)
-[2026-05-25 05:44:38]     BEFORE Game.exe: 29105352 bytes, mtime=2026-05-17 21:11:20
-[2026-05-25 05:44:38]     BEFORE MANIFEST.json: 336034 bytes, mtime=2026-05-17 22:23:00
-[2026-05-25 05:44:38]     BEFORE build_info.json: 274 bytes, mtime=2026-05-17 22:23:00
-[2026-05-25 05:44:38]     BEFORE x64-msvcrt-ruby310.dll: 10240557 bytes, mtime=2026-05-17 21:11:20
-[2026-05-25 05:44:38]     BEFORE zlib1.dll: 128488 bytes, mtime=2026-05-17 15:30:22
-[2026-05-25 05:44:38]     5 file(s) already in sync — byte copy skipped
-[2026-05-25 05:44:39]     1 folder(s) already in sync — rebuild skipped
-[2026-05-25 05:44:39]     AFTER  Game.exe: 29105352 bytes, mtime=2026-05-17 21:11:20
-[2026-05-25 05:44:39]     AFTER  MANIFEST.json: 336034 bytes, mtime=2026-05-17 22:23:00
-[2026-05-25 05:44:39]     AFTER  build_info.json: 274 bytes, mtime=2026-05-17 22:23:00
-[2026-05-25 05:44:39]     AFTER  x64-msvcrt-ruby310.dll: 10240557 bytes, mtime=2026-05-17 21:11:20
-[2026-05-25 05:44:39]     AFTER  zlib1.dll: 128488 bytes, mtime=2026-05-17 15:30:22
-[2026-05-25 05:44:39]   hash-verifying against MANIFEST.json (runtime v0.3.3, 1922 expected file(s))
-[2026-05-25 05:44:39]     ? build_info.json: not in MANIFEST (extra file in runtime folder)
-[2026-05-25 05:44:39]   manifest verified: 3/1922 file(s) match shipped hashes; 0 mismatch(es), 0 error(s)
-[2026-05-25 05:44:39]   result: copied 5 file(s), 1 folder(s); verified 5/5 sizes; 0 file failure(s), 0 folder failure(s)
-[2026-05-25 05:44:39]   integrate timings (total 1650ms):
-[2026-05-25 05:44:39]     deploy_runtime             1248.3ms
-[2026-05-25 05:44:39]     export_to_rxdata            374.3ms
-[2026-05-25 05:44:39]     write_preload_script          9.3ms
-[2026-05-25 05:44:39]     write_mkxp_json               7.9ms
-[2026-05-25 05:44:39]     write_tilesets                7.2ms
-[2026-05-25 05:44:39]     write_system                  3.0ms
-[2026-05-25 05:44:39]     seed_terrain_tags             0.0ms
-[2026-05-25 06:40:21] 
-[2026-05-25 06:40:21] ================================================
-[2026-05-25 06:40:21] === integrate_essentials invoked ===
-[2026-05-25 06:40:21]   project_root = 'C:/Users/Vena/Documents/folders/RPGMaker\\Pokemon IA XPX'
-[2026-05-25 06:40:21]   ess_folder   = 'C:\\Users\\Vena\\Documents\\folders\\RPGMaker\\Pokemon IA XPX'
-[2026-05-25 06:40:21]   project.start_map_id = 1
-[2026-05-25 06:40:21] === environment ===
-[2026-05-25 06:40:21]   os       : Windows 11 (10.0.26100)
-[2026-05-25 06:40:21]   arch     : AMD64
-[2026-05-25 06:40:21]   python   : 3.12.7 (tags/v3.12.7:0b05ead, Oct  1 2024, 03:06:41) [MSC v.1941 64 bit (AMD64)]
-[2026-05-25 06:40:21]   pyqt6    : 6.7.1 (Qt 6.7.1)
-[2026-05-25 06:40:21]   locale   : ('English_United Kingdom', '1252')
-[2026-05-25 06:40:21]   preferred encoding   : cp1252
-[2026-05-25 06:40:21]   filesystem encoding  : utf-8
-[2026-05-25 06:40:21]   default str encoding : utf-8
-[2026-05-25 06:40:21]   win32 code pages: ACP=1252, OEM=850
-[2026-05-25 06:40:21]   ess path repr : 'C:\\Users\\Vena\\Documents\\folders\\RPGMaker\\Pokemon IA XPX'
-[2026-05-25 06:40:21]   settings: do_preload=True, do_rxdata=True, do_runtime=True
-[2026-05-25 06:40:21]   Game.ini script source: kind='rxdata', ini_value='Data\\Scripts.rxdata', custom_script=None, entry_rb=None
-[2026-05-25 06:40:21]   export_to_rxdata: 3 written, 102 skipped (rxdata up-to-date)
-[2026-05-25 06:40:21] === write_system invoked ===
-[2026-05-25 06:40:21]   ess_folder = 'C:\\Users\\Vena\\Documents\\folders\\RPGMaker\\Pokemon IA XPX'
-[2026-05-25 06:40:21]   project.essentials_settings.essentials_folder = None
-[2026-05-25 06:40:21]   project.project_root = 'C:/Users/Vena/Documents/folders/RPGMaker\\Pokemon IA XPX'
-[2026-05-25 06:40:21]   fast-path: System.rxdata cached as matching (smid=1, x=9, y=7)
-[2026-05-25 06:40:21] 
-[2026-05-25 06:40:21] === _deploy_xpx_runtime ===
-[2026-05-25 06:40:21]   source: C:\Users\Vena\AppData\Local\Programs\XPXENG~1\_internal\base_runtime
-[2026-05-25 06:40:21]   dest:   C:\Users\Vena\Documents\folders\RPGMaker\Pokemon IA XPX
-[2026-05-25 06:40:21]   XPX install integrity: OK (1922 file(s), cached)
-[2026-05-25 06:40:21]   manifest: 5 file(s), 1 folder(s)
-[2026-05-25 06:40:21]     BEFORE Game.exe: 29105352 bytes, mtime=2026-05-17 21:11:20
-[2026-05-25 06:40:21]     BEFORE MANIFEST.json: 336034 bytes, mtime=2026-05-17 22:23:00
-[2026-05-25 06:40:21]     BEFORE build_info.json: 274 bytes, mtime=2026-05-17 22:23:00
-[2026-05-25 06:40:21]     BEFORE x64-msvcrt-ruby310.dll: 10240557 bytes, mtime=2026-05-17 21:11:20
-[2026-05-25 06:40:21]     BEFORE zlib1.dll: 128488 bytes, mtime=2026-05-17 15:30:22
-[2026-05-25 06:40:21]     5 file(s) already in sync — byte copy skipped
-[2026-05-25 06:40:22]     1 folder(s) already in sync — rebuild skipped
-[2026-05-25 06:40:22]     AFTER  Game.exe: 29105352 bytes, mtime=2026-05-17 21:11:20
-[2026-05-25 06:40:22]     AFTER  MANIFEST.json: 336034 bytes, mtime=2026-05-17 22:23:00
-[2026-05-25 06:40:22]     AFTER  build_info.json: 274 bytes, mtime=2026-05-17 22:23:00
-[2026-05-25 06:40:22]     AFTER  x64-msvcrt-ruby310.dll: 10240557 bytes, mtime=2026-05-17 21:11:20
-[2026-05-25 06:40:22]     AFTER  zlib1.dll: 128488 bytes, mtime=2026-05-17 15:30:22
-[2026-05-25 06:40:22]   hash-verifying against MANIFEST.json (runtime v0.3.3, 1922 expected file(s))
-[2026-05-25 06:40:22]     ? build_info.json: not in MANIFEST (extra file in runtime folder)
-[2026-05-25 06:40:22]   manifest verified: 3/1922 file(s) match shipped hashes; 0 mismatch(es), 0 error(s)
-[2026-05-25 06:40:22]   result: copied 5 file(s), 1 folder(s); verified 5/5 sizes; 0 file failure(s), 0 folder failure(s)
-[2026-05-25 06:40:22]   integrate timings (total 854ms):
-[2026-05-25 06:40:22]     deploy_runtime              544.8ms
-[2026-05-25 06:40:22]     export_to_rxdata            295.0ms
-[2026-05-25 06:40:22]     write_tilesets                6.1ms
-[2026-05-25 06:40:22]     write_mkxp_json               4.8ms
-[2026-05-25 06:40:22]     write_system                  2.7ms
-[2026-05-25 06:40:22]     write_preload_script          1.0ms
-[2026-05-25 06:40:22]     seed_terrain_tags             0.0ms
-[2026-05-25 13:43:44] 
-[2026-05-25 13:43:44] ================================================
-[2026-05-25 13:43:44] === integrate_essentials invoked ===
-[2026-05-25 13:43:44]   project_root = 'C:/Users/Vena/Documents/folders/RPGMaker\\Pokemon IA XPX'
-[2026-05-25 13:43:44]   ess_folder   = 'C:\\Users\\Vena\\Documents\\folders\\RPGMaker\\Pokemon IA XPX'
-[2026-05-25 13:43:44]   project.start_map_id = 1
-[2026-05-25 13:43:44] === environment ===
-[2026-05-25 13:43:44]   os       : Windows 11 (10.0.26100)
-[2026-05-25 13:43:44]   arch     : AMD64
-[2026-05-25 13:43:44]   python   : 3.12.7 (tags/v3.12.7:0b05ead, Oct  1 2024, 03:06:41) [MSC v.1941 64 bit (AMD64)]
-[2026-05-25 13:43:44]   pyqt6    : 6.7.1 (Qt 6.7.1)
-[2026-05-25 13:43:44]   locale   : ('English_United Kingdom', '1252')
-[2026-05-25 13:43:44]   preferred encoding   : cp1252
-[2026-05-25 13:43:44]   filesystem encoding  : utf-8
-[2026-05-25 13:43:44]   default str encoding : utf-8
-[2026-05-25 13:43:44]   win32 code pages: ACP=1252, OEM=850
-[2026-05-25 13:43:44]   ess path repr : 'C:\\Users\\Vena\\Documents\\folders\\RPGMaker\\Pokemon IA XPX'
-[2026-05-25 13:43:44]   settings: do_preload=True, do_rxdata=True, do_runtime=True
-[2026-05-25 13:43:44]   Game.ini script source: kind='rxdata', ini_value='Data\\Scripts.rxdata', custom_script=None, entry_rb=None
-[2026-05-25 13:43:44]   export_to_rxdata: 3 written, 102 skipped (rxdata up-to-date)
-[2026-05-25 13:43:44] === write_system invoked ===
-[2026-05-25 13:43:44]   ess_folder = 'C:\\Users\\Vena\\Documents\\folders\\RPGMaker\\Pokemon IA XPX'
-[2026-05-25 13:43:44]   project.essentials_settings.essentials_folder = None
-[2026-05-25 13:43:44]   project.project_root = 'C:/Users/Vena/Documents/folders/RPGMaker\\Pokemon IA XPX'
-[2026-05-25 13:43:44]   sys_path   = 'C:\\Users\\Vena\\Documents\\folders\\RPGMaker\\Pokemon IA XPX\\Data\\System.rxdata'
-[2026-05-25 13:43:44]   exists?    = True
-[2026-05-25 13:43:44]   existing System.rxdata: 4657 bytes, mtime=2026-05-13 16:26:41
-[2026-05-25 13:43:45]   System.rxdata* files found in tree: 1
-[2026-05-25 13:43:45]     - C:\Users\Vena\Documents\folders\RPGMaker\Pokemon IA XPX\Data\System.rxdata
-[2026-05-25 13:43:45]   current System.rxdata: @start_map_id=1, @start_x=9, @start_y=7
-[2026-05-25 13:43:45]   project state: start_map_id=1, start_x=9, start_y=7
-[2026-05-25 13:43:45]   target values: @start_map_id=1, @start_x=9, @start_y=7 (fallback=False)
-[2026-05-25 13:43:45]   no-op: System.rxdata already matches target
-[2026-05-25 13:43:45] 
-[2026-05-25 13:43:45] === _deploy_xpx_runtime ===
-[2026-05-25 13:43:45]   source: C:\Users\Vena\AppData\Local\Programs\XPXENG~1\_internal\base_runtime
-[2026-05-25 13:43:45]   dest:   C:\Users\Vena\Documents\folders\RPGMaker\Pokemon IA XPX
-[2026-05-25 13:43:45]   XPX install integrity: OK (1922 file(s), cached)
-[2026-05-25 13:43:45]   manifest: 5 file(s), 1 folder(s)
-[2026-05-25 13:43:45]     BEFORE Game.exe: 29105352 bytes, mtime=2026-05-17 21:11:20
-[2026-05-25 13:43:45]     BEFORE MANIFEST.json: 336034 bytes, mtime=2026-05-17 22:23:00
-[2026-05-25 13:43:45]     BEFORE build_info.json: 274 bytes, mtime=2026-05-17 22:23:00
-[2026-05-25 13:43:45]     BEFORE x64-msvcrt-ruby310.dll: 10240557 bytes, mtime=2026-05-17 21:11:20
-[2026-05-25 13:43:45]     BEFORE zlib1.dll: 128488 bytes, mtime=2026-05-17 15:30:22
-[2026-05-25 13:43:45]     5 file(s) already in sync — byte copy skipped
-[2026-05-25 13:43:45]     1 folder(s) already in sync — rebuild skipped
-[2026-05-25 13:43:45]     AFTER  Game.exe: 29105352 bytes, mtime=2026-05-17 21:11:20
-[2026-05-25 13:43:45]     AFTER  MANIFEST.json: 336034 bytes, mtime=2026-05-17 22:23:00
-[2026-05-25 13:43:45]     AFTER  build_info.json: 274 bytes, mtime=2026-05-17 22:23:00
-[2026-05-25 13:43:45]     AFTER  x64-msvcrt-ruby310.dll: 10240557 bytes, mtime=2026-05-17 21:11:20
-[2026-05-25 13:43:45]     AFTER  zlib1.dll: 128488 bytes, mtime=2026-05-17 15:30:22
-[2026-05-25 13:43:45]   hash-verifying against MANIFEST.json (runtime v0.3.3, 1922 expected file(s))
-[2026-05-25 13:43:45]     ? build_info.json: not in MANIFEST (extra file in runtime folder)
-[2026-05-25 13:43:45]   manifest verified: 3/1922 file(s) match shipped hashes; 0 mismatch(es), 0 error(s)
-[2026-05-25 13:43:45]   result: copied 5 file(s), 1 folder(s); verified 5/5 sizes; 0 file failure(s), 0 folder failure(s)
-[2026-05-25 13:43:45]   integrate timings (total 1281ms):
-[2026-05-25 13:43:45]     deploy_runtime              602.8ms
-[2026-05-25 13:43:45]     export_to_rxdata            567.7ms
-[2026-05-25 13:43:45]     write_system                 79.9ms
-[2026-05-25 13:43:45]     write_mkxp_json              12.5ms
-[2026-05-25 13:43:45]     write_preload_script         11.2ms
-[2026-05-25 13:43:45]     write_tilesets                6.6ms
-[2026-05-25 13:43:45]     seed_terrain_tags             0.0ms
-[2026-05-26 00:43:39] 
-[2026-05-26 00:43:39] ================================================
-[2026-05-26 00:43:39] === integrate_essentials invoked ===
-[2026-05-26 00:43:39]   project_root = 'C:/Users/Vena/Documents/folders/RPGMaker\\Pokemon IA XPX'
-[2026-05-26 00:43:39]   ess_folder   = 'C:\\Users\\Vena\\Documents\\folders\\RPGMaker\\Pokemon IA XPX'
-[2026-05-26 00:43:39]   project.start_map_id = 1
-[2026-05-26 00:43:39] === environment ===
-[2026-05-26 00:43:39]   os       : Windows 11 (10.0.26100)
-[2026-05-26 00:43:39]   arch     : AMD64
-[2026-05-26 00:43:39]   python   : 3.12.7 (tags/v3.12.7:0b05ead, Oct  1 2024, 03:06:41) [MSC v.1941 64 bit (AMD64)]
-[2026-05-26 00:43:39]   pyqt6    : 6.7.1 (Qt 6.7.1)
-[2026-05-26 00:43:39]   locale   : ('English_United Kingdom', '1252')
-[2026-05-26 00:43:39]   preferred encoding   : cp1252
-[2026-05-26 00:43:39]   filesystem encoding  : utf-8
-[2026-05-26 00:43:39]   default str encoding : utf-8
-[2026-05-26 00:43:39]   win32 code pages: ACP=1252, OEM=850
-[2026-05-26 00:43:39]   ess path repr : 'C:\\Users\\Vena\\Documents\\folders\\RPGMaker\\Pokemon IA XPX'
-[2026-05-26 00:43:39]   settings: do_preload=True, do_rxdata=True, do_runtime=True
-[2026-05-26 00:43:39]   Game.ini script source: kind='rxdata', ini_value='Data\\Scripts.rxdata', custom_script=None, entry_rb=None
-[2026-05-26 00:43:39]   export_to_rxdata: 4 written, 101 skipped (rxdata up-to-date)
-[2026-05-26 00:43:39] === write_system invoked ===
-[2026-05-26 00:43:39]   ess_folder = 'C:\\Users\\Vena\\Documents\\folders\\RPGMaker\\Pokemon IA XPX'
-[2026-05-26 00:43:39]   project.essentials_settings.essentials_folder = None
-[2026-05-26 00:43:39]   project.project_root = 'C:/Users/Vena/Documents/folders/RPGMaker\\Pokemon IA XPX'
-[2026-05-26 00:43:39]   sys_path   = 'C:\\Users\\Vena\\Documents\\folders\\RPGMaker\\Pokemon IA XPX\\Data\\System.rxdata'
-[2026-05-26 00:43:39]   exists?    = True
-[2026-05-26 00:43:39]   existing System.rxdata: 4657 bytes, mtime=2026-05-13 16:26:41
-[2026-05-26 00:43:40]   System.rxdata* files found in tree: 1
-[2026-05-26 00:43:40]     - C:\Users\Vena\Documents\folders\RPGMaker\Pokemon IA XPX\Data\System.rxdata
-[2026-05-26 00:43:40]   current System.rxdata: @start_map_id=1, @start_x=9, @start_y=7
-[2026-05-26 00:43:40]   project state: start_map_id=1, start_x=9, start_y=7
-[2026-05-26 00:43:40]   target values: @start_map_id=1, @start_x=9, @start_y=7 (fallback=False)
-[2026-05-26 00:43:40]   no-op: System.rxdata already matches target
-[2026-05-26 00:43:40] 
-[2026-05-26 00:43:40] === _deploy_xpx_runtime ===
-[2026-05-26 00:43:40]   source: C:\Users\Vena\AppData\Local\Programs\XPXENG~1\_internal\base_runtime
-[2026-05-26 00:43:40]   dest:   C:\Users\Vena\Documents\folders\RPGMaker\Pokemon IA XPX
-[2026-05-26 00:43:40]   XPX install integrity: OK (1922 file(s), cached)
-[2026-05-26 00:43:40]   manifest: 5 file(s), 1 folder(s)
-[2026-05-26 00:43:40]     BEFORE Game.exe: 29105352 bytes, mtime=2026-05-17 21:11:20
-[2026-05-26 00:43:40]     BEFORE MANIFEST.json: 336034 bytes, mtime=2026-05-17 22:23:00
-[2026-05-26 00:43:40]     BEFORE build_info.json: 274 bytes, mtime=2026-05-17 22:23:00
-[2026-05-26 00:43:40]     BEFORE x64-msvcrt-ruby310.dll: 10240557 bytes, mtime=2026-05-17 21:11:20
-[2026-05-26 00:43:40]     BEFORE zlib1.dll: 128488 bytes, mtime=2026-05-17 15:30:22
-[2026-05-26 00:43:40]     5 file(s) already in sync — byte copy skipped
-[2026-05-26 00:43:41]     1 folder(s) already in sync — rebuild skipped
-[2026-05-26 00:43:41]     AFTER  Game.exe: 29105352 bytes, mtime=2026-05-17 21:11:20
-[2026-05-26 00:43:41]     AFTER  MANIFEST.json: 336034 bytes, mtime=2026-05-17 22:23:00
-[2026-05-26 00:43:41]     AFTER  build_info.json: 274 bytes, mtime=2026-05-17 22:23:00
-[2026-05-26 00:43:41]     AFTER  x64-msvcrt-ruby310.dll: 10240557 bytes, mtime=2026-05-17 21:11:20
-[2026-05-26 00:43:41]     AFTER  zlib1.dll: 128488 bytes, mtime=2026-05-17 15:30:22
-[2026-05-26 00:43:41]   hash-verifying against MANIFEST.json (runtime v0.3.3, 1922 expected file(s))
-[2026-05-26 00:43:41]     ? build_info.json: not in MANIFEST (extra file in runtime folder)
-[2026-05-26 00:43:41]   manifest verified: 3/1922 file(s) match shipped hashes; 0 mismatch(es), 0 error(s)
-[2026-05-26 00:43:41]   result: copied 5 file(s), 1 folder(s); verified 5/5 sizes; 0 file failure(s), 0 folder failure(s)
-[2026-05-26 00:43:41]   integrate timings (total 2156ms):
-[2026-05-26 00:43:41]     deploy_runtime              986.0ms
-[2026-05-26 00:43:41]     write_system                826.1ms
-[2026-05-26 00:43:41]     export_to_rxdata            314.0ms
-[2026-05-26 00:43:41]     write_mkxp_json              11.9ms
-[2026-05-26 00:43:41]     write_preload_script         11.1ms
-[2026-05-26 00:43:41]     write_tilesets                7.4ms
-[2026-05-26 00:43:41]     seed_terrain_tags             0.0ms
-[2026-05-26 03:22:44] 
-[2026-05-26 03:22:44] ================================================
-[2026-05-26 03:22:44] === integrate_essentials invoked ===
-[2026-05-26 03:22:44]   project_root = 'C:/Users/Vena/Documents/folders/RPGMaker\\Pokemon IA XPX'
-[2026-05-26 03:22:44]   ess_folder   = 'C:\\Users\\Vena\\Documents\\folders\\RPGMaker\\Pokemon IA XPX'
-[2026-05-26 03:22:44]   project.start_map_id = 1
-[2026-05-26 03:22:44] === environment ===
-[2026-05-26 03:22:44]   os       : Windows 11 (10.0.26100)
-[2026-05-26 03:22:44]   arch     : AMD64
-[2026-05-26 03:22:44]   python   : 3.12.7 (tags/v3.12.7:0b05ead, Oct  1 2024, 03:06:41) [MSC v.1941 64 bit (AMD64)]
-[2026-05-26 03:22:44]   pyqt6    : 6.7.1 (Qt 6.7.1)
-[2026-05-26 03:22:44]   locale   : ('English_United Kingdom', '1252')
-[2026-05-26 03:22:44]   preferred encoding   : cp1252
-[2026-05-26 03:22:44]   filesystem encoding  : utf-8
-[2026-05-26 03:22:44]   default str encoding : utf-8
-[2026-05-26 03:22:44]   win32 code pages: ACP=1252, OEM=850
-[2026-05-26 03:22:44]   ess path repr : 'C:\\Users\\Vena\\Documents\\folders\\RPGMaker\\Pokemon IA XPX'
-[2026-05-26 03:22:44]   settings: do_preload=True, do_rxdata=True, do_runtime=True
-[2026-05-26 03:22:44]   Game.ini script source: kind='rxdata', ini_value='Data\\Scripts.rxdata', custom_script=None, entry_rb=None
-[2026-05-26 03:22:44]   export_to_rxdata: 3 written, 102 skipped (rxdata up-to-date)
-[2026-05-26 03:22:44] === write_system invoked ===
-[2026-05-26 03:22:44]   ess_folder = 'C:\\Users\\Vena\\Documents\\folders\\RPGMaker\\Pokemon IA XPX'
-[2026-05-26 03:22:44]   project.essentials_settings.essentials_folder = None
-[2026-05-26 03:22:44]   project.project_root = 'C:/Users/Vena/Documents/folders/RPGMaker\\Pokemon IA XPX'
-[2026-05-26 03:22:44]   fast-path: System.rxdata cached as matching (smid=1, x=9, y=7)
-[2026-05-26 03:22:44] 
-[2026-05-26 03:22:44] === _deploy_xpx_runtime ===
-[2026-05-26 03:22:44]   source: C:\Users\Vena\AppData\Local\Programs\XPXENG~1\_internal\base_runtime
-[2026-05-26 03:22:44]   dest:   C:\Users\Vena\Documents\folders\RPGMaker\Pokemon IA XPX
-[2026-05-26 03:22:44]   XPX install integrity: OK (1922 file(s), cached)
-[2026-05-26 03:22:44]   manifest: 5 file(s), 1 folder(s)
-[2026-05-26 03:22:44]     BEFORE Game.exe: 29105352 bytes, mtime=2026-05-17 21:11:20
-[2026-05-26 03:22:44]     BEFORE MANIFEST.json: 336034 bytes, mtime=2026-05-17 22:23:00
-[2026-05-26 03:22:44]     BEFORE build_info.json: 274 bytes, mtime=2026-05-17 22:23:00
-[2026-05-26 03:22:44]     BEFORE x64-msvcrt-ruby310.dll: 10240557 bytes, mtime=2026-05-17 21:11:20
-[2026-05-26 03:22:44]     BEFORE zlib1.dll: 128488 bytes, mtime=2026-05-17 15:30:22
-[2026-05-26 03:22:44]     5 file(s) already in sync — byte copy skipped
-[2026-05-26 03:22:45]     1 folder(s) already in sync — rebuild skipped
-[2026-05-26 03:22:45]     AFTER  Game.exe: 29105352 bytes, mtime=2026-05-17 21:11:20
-[2026-05-26 03:22:45]     AFTER  MANIFEST.json: 336034 bytes, mtime=2026-05-17 22:23:00
-[2026-05-26 03:22:45]     AFTER  build_info.json: 274 bytes, mtime=2026-05-17 22:23:00
-[2026-05-26 03:22:45]     AFTER  x64-msvcrt-ruby310.dll: 10240557 bytes, mtime=2026-05-17 21:11:20
-[2026-05-26 03:22:45]     AFTER  zlib1.dll: 128488 bytes, mtime=2026-05-17 15:30:22
-[2026-05-26 03:22:45]   hash-verifying against MANIFEST.json (runtime v0.3.3, 1922 expected file(s))
-[2026-05-26 03:22:45]     ? build_info.json: not in MANIFEST (extra file in runtime folder)
-[2026-05-26 03:22:45]   manifest verified: 3/1922 file(s) match shipped hashes; 0 mismatch(es), 0 error(s)
-[2026-05-26 03:22:45]   result: copied 5 file(s), 1 folder(s); verified 5/5 sizes; 0 file failure(s), 0 folder failure(s)
-[2026-05-26 03:22:45]   integrate timings (total 1268ms):
-[2026-05-26 03:22:45]     deploy_runtime              973.9ms
-[2026-05-26 03:22:45]     export_to_rxdata            270.8ms
-[2026-05-26 03:22:45]     write_preload_script          8.0ms
-[2026-05-26 03:22:45]     write_tilesets                6.3ms
-[2026-05-26 03:22:45]     write_mkxp_json               6.1ms
-[2026-05-26 03:22:45]     write_system                  2.8ms
-[2026-05-26 03:22:45]     seed_terrain_tags             0.0ms
-[2026-05-26 04:21:50] 
-[2026-05-26 04:21:50] ================================================
-[2026-05-26 04:21:50] === integrate_essentials invoked ===
-[2026-05-26 04:21:50]   project_root = 'C:/Users/Vena/Documents/folders/RPGMaker\\Pokemon IA XPX'
-[2026-05-26 04:21:50]   ess_folder   = 'C:\\Users\\Vena\\Documents\\folders\\RPGMaker\\Pokemon IA XPX'
-[2026-05-26 04:21:50]   project.start_map_id = 1
-[2026-05-26 04:21:50] === environment ===
-[2026-05-26 04:21:50]   os       : Windows 11 (10.0.26100)
-[2026-05-26 04:21:50]   arch     : AMD64
-[2026-05-26 04:21:50]   python   : 3.12.7 (tags/v3.12.7:0b05ead, Oct  1 2024, 03:06:41) [MSC v.1941 64 bit (AMD64)]
-[2026-05-26 04:21:50]   pyqt6    : 6.7.1 (Qt 6.7.1)
-[2026-05-26 04:21:50]   locale   : ('English_United Kingdom', '1252')
-[2026-05-26 04:21:50]   preferred encoding   : cp1252
-[2026-05-26 04:21:50]   filesystem encoding  : utf-8
-[2026-05-26 04:21:50]   default str encoding : utf-8
-[2026-05-26 04:21:50]   win32 code pages: ACP=1252, OEM=850
-[2026-05-26 04:21:50]   ess path repr : 'C:\\Users\\Vena\\Documents\\folders\\RPGMaker\\Pokemon IA XPX'
-[2026-05-26 04:21:50]   settings: do_preload=True, do_rxdata=True, do_runtime=True
-[2026-05-26 04:21:50]   Game.ini script source: kind='rxdata', ini_value='Data\\Scripts.rxdata', custom_script=None, entry_rb=None
-[2026-05-26 04:21:51]   export_to_rxdata: 3 written, 102 skipped (rxdata up-to-date)
-[2026-05-26 04:21:51] === write_system invoked ===
-[2026-05-26 04:21:51]   ess_folder = 'C:\\Users\\Vena\\Documents\\folders\\RPGMaker\\Pokemon IA XPX'
-[2026-05-26 04:21:51]   project.essentials_settings.essentials_folder = None
-[2026-05-26 04:21:51]   project.project_root = 'C:/Users/Vena/Documents/folders/RPGMaker\\Pokemon IA XPX'
-[2026-05-26 04:21:51]   fast-path: System.rxdata cached as matching (smid=1, x=9, y=7)
-[2026-05-26 04:21:51] 
-[2026-05-26 04:21:51] === _deploy_xpx_runtime ===
-[2026-05-26 04:21:51]   source: C:\Users\Vena\AppData\Local\Programs\XPXENG~1\_internal\base_runtime
-[2026-05-26 04:21:51]   dest:   C:\Users\Vena\Documents\folders\RPGMaker\Pokemon IA XPX
-[2026-05-26 04:21:51]   XPX install integrity: OK (1922 file(s), cached)
-[2026-05-26 04:21:51]   manifest: 5 file(s), 1 folder(s)
-[2026-05-26 04:21:51]     BEFORE Game.exe: 29105352 bytes, mtime=2026-05-17 21:11:20
-[2026-05-26 04:21:51]     BEFORE MANIFEST.json: 336034 bytes, mtime=2026-05-17 22:23:00
-[2026-05-26 04:21:51]     BEFORE build_info.json: 274 bytes, mtime=2026-05-17 22:23:00
-[2026-05-26 04:21:51]     BEFORE x64-msvcrt-ruby310.dll: 10240557 bytes, mtime=2026-05-17 21:11:20
-[2026-05-26 04:21:51]     BEFORE zlib1.dll: 128488 bytes, mtime=2026-05-17 15:30:22
-[2026-05-26 04:21:51]     5 file(s) already in sync — byte copy skipped
-[2026-05-26 04:21:52]     1 folder(s) already in sync — rebuild skipped
-[2026-05-26 04:21:52]     AFTER  Game.exe: 29105352 bytes, mtime=2026-05-17 21:11:20
-[2026-05-26 04:21:52]     AFTER  MANIFEST.json: 336034 bytes, mtime=2026-05-17 22:23:00
-[2026-05-26 04:21:52]     AFTER  build_info.json: 274 bytes, mtime=2026-05-17 22:23:00
-[2026-05-26 04:21:52]     AFTER  x64-msvcrt-ruby310.dll: 10240557 bytes, mtime=2026-05-17 21:11:20
-[2026-05-26 04:21:52]     AFTER  zlib1.dll: 128488 bytes, mtime=2026-05-17 15:30:22
-[2026-05-26 04:21:52]   hash-verifying against MANIFEST.json (runtime v0.3.3, 1922 expected file(s))
-[2026-05-26 04:21:53]     ? build_info.json: not in MANIFEST (extra file in runtime folder)
-[2026-05-26 04:21:53]   manifest verified: 3/1922 file(s) match shipped hashes; 0 mismatch(es), 0 error(s)
-[2026-05-26 04:21:53]   result: copied 5 file(s), 1 folder(s); verified 5/5 sizes; 0 file failure(s), 0 folder failure(s)
-[2026-05-26 04:21:53]   integrate timings (total 2888ms):
-[2026-05-26 04:21:53]     deploy_runtime             2319.9ms
-[2026-05-26 04:21:53]     export_to_rxdata            525.5ms
-[2026-05-26 04:21:53]     write_mkxp_json              21.1ms
-[2026-05-26 04:21:53]     write_preload_script          9.7ms
-[2026-05-26 04:21:53]     write_tilesets                8.6ms
-[2026-05-26 04:21:53]     write_system                  3.6ms
-[2026-05-26 04:21:53]     seed_terrain_tags             0.0ms
-[2026-05-26 05:47:01] 
-[2026-05-26 05:47:01] ================================================
-[2026-05-26 05:47:01] === integrate_essentials invoked ===
-[2026-05-26 05:47:01]   project_root = 'C:/Users/Vena/Documents/folders/RPGMaker\\Pokemon IA XPX'
-[2026-05-26 05:47:01]   ess_folder   = 'C:\\Users\\Vena\\Documents\\folders\\RPGMaker\\Pokemon IA XPX'
-[2026-05-26 05:47:01]   project.start_map_id = 1
-[2026-05-26 05:47:01] === environment ===
-[2026-05-26 05:47:01]   os       : Windows 11 (10.0.26100)
-[2026-05-26 05:47:01]   arch     : AMD64
-[2026-05-26 05:47:01]   python   : 3.12.7 (tags/v3.12.7:0b05ead, Oct  1 2024, 03:06:41) [MSC v.1941 64 bit (AMD64)]
-[2026-05-26 05:47:01]   pyqt6    : 6.7.1 (Qt 6.7.1)
-[2026-05-26 05:47:01]   locale   : ('English_United Kingdom', '1252')
-[2026-05-26 05:47:01]   preferred encoding   : cp1252
-[2026-05-26 05:47:01]   filesystem encoding  : utf-8
-[2026-05-26 05:47:01]   default str encoding : utf-8
-[2026-05-26 05:47:01]   win32 code pages: ACP=1252, OEM=850
-[2026-05-26 05:47:01]   ess path repr : 'C:\\Users\\Vena\\Documents\\folders\\RPGMaker\\Pokemon IA XPX'
-[2026-05-26 05:47:01]   settings: do_preload=True, do_rxdata=True, do_runtime=True
-[2026-05-26 05:47:01]   Game.ini script source: kind='rxdata', ini_value='Data\\Scripts.rxdata', custom_script=None, entry_rb=None
-[2026-05-26 05:47:01]   export_to_rxdata: 3 written, 102 skipped (rxdata up-to-date)
-[2026-05-26 05:47:01] === write_system invoked ===
-[2026-05-26 05:47:01]   ess_folder = 'C:\\Users\\Vena\\Documents\\folders\\RPGMaker\\Pokemon IA XPX'
-[2026-05-26 05:47:01]   project.essentials_settings.essentials_folder = None
-[2026-05-26 05:47:01]   project.project_root = 'C:/Users/Vena/Documents/folders/RPGMaker\\Pokemon IA XPX'
-[2026-05-26 05:47:02]   fast-path: System.rxdata cached as matching (smid=1, x=9, y=7)
-[2026-05-26 05:47:02] 
-[2026-05-26 05:47:02] === _deploy_xpx_runtime ===
-[2026-05-26 05:47:02]   source: C:\Users\Vena\AppData\Local\Programs\XPXENG~1\_internal\base_runtime
-[2026-05-26 05:47:02]   dest:   C:\Users\Vena\Documents\folders\RPGMaker\Pokemon IA XPX
-[2026-05-26 05:47:02]   XPX install integrity: OK (1922 file(s), cached)
-[2026-05-26 05:47:02]   manifest: 5 file(s), 1 folder(s)
-[2026-05-26 05:47:02]     BEFORE Game.exe: 29105352 bytes, mtime=2026-05-17 21:11:20
-[2026-05-26 05:47:02]     BEFORE MANIFEST.json: 336034 bytes, mtime=2026-05-17 22:23:00
-[2026-05-26 05:47:02]     BEFORE build_info.json: 274 bytes, mtime=2026-05-17 22:23:00
-[2026-05-26 05:47:02]     BEFORE x64-msvcrt-ruby310.dll: 10240557 bytes, mtime=2026-05-17 21:11:20
-[2026-05-26 05:47:02]     BEFORE zlib1.dll: 128488 bytes, mtime=2026-05-17 15:30:22
-[2026-05-26 05:47:02]     5 file(s) already in sync — byte copy skipped
-[2026-05-26 05:47:03]     1 folder(s) already in sync — rebuild skipped
-[2026-05-26 05:47:03]     AFTER  Game.exe: 29105352 bytes, mtime=2026-05-17 21:11:20
-[2026-05-26 05:47:03]     AFTER  MANIFEST.json: 336034 bytes, mtime=2026-05-17 22:23:00
-[2026-05-26 05:47:03]     AFTER  build_info.json: 274 bytes, mtime=2026-05-17 22:23:00
-[2026-05-26 05:47:03]     AFTER  x64-msvcrt-ruby310.dll: 10240557 bytes, mtime=2026-05-17 21:11:20
-[2026-05-26 05:47:03]     AFTER  zlib1.dll: 128488 bytes, mtime=2026-05-17 15:30:22
-[2026-05-26 05:47:03]   hash-verifying against MANIFEST.json (runtime v0.3.3, 1922 expected file(s))
-[2026-05-26 05:47:04]     ? build_info.json: not in MANIFEST (extra file in runtime folder)
-[2026-05-26 05:47:04]   manifest verified: 3/1922 file(s) match shipped hashes; 0 mismatch(es), 0 error(s)
-[2026-05-26 05:47:04]   result: copied 5 file(s), 1 folder(s); verified 5/5 sizes; 0 file failure(s), 0 folder failure(s)
-[2026-05-26 05:47:04]   integrate timings (total 3159ms):
-[2026-05-26 05:47:04]     deploy_runtime             2533.4ms
-[2026-05-26 05:47:04]     export_to_rxdata            560.9ms
-[2026-05-26 05:47:04]     write_mkxp_json              33.6ms
-[2026-05-26 05:47:04]     write_preload_script         16.0ms
-[2026-05-26 05:47:04]     write_tilesets               10.4ms
-[2026-05-26 05:47:04]     write_system                  4.5ms
-[2026-05-26 05:47:04]     seed_terrain_tags             0.0ms
-[2026-05-28 03:45:59] 
-[2026-05-28 03:45:59] ================================================
-[2026-05-28 03:45:59] === integrate_essentials invoked ===
-[2026-05-28 03:45:59]   project_root = 'C:/Users/Vena/Documents/folders/RPGMaker\\Pokemon IA XPX'
-[2026-05-28 03:45:59]   ess_folder   = 'C:\\Users\\Vena\\Documents\\folders\\RPGMaker\\Pokemon IA XPX'
-[2026-05-28 03:45:59]   project.start_map_id = 1
-[2026-05-28 03:45:59] === environment ===
-[2026-05-28 03:45:59]   os       : Windows 11 (10.0.26100)
-[2026-05-28 03:45:59]   arch     : AMD64
-[2026-05-28 03:45:59]   python   : 3.12.7 (tags/v3.12.7:0b05ead, Oct  1 2024, 03:06:41) [MSC v.1941 64 bit (AMD64)]
-[2026-05-28 03:45:59]   pyqt6    : 6.7.1 (Qt 6.7.1)
-[2026-05-28 03:45:59]   locale   : ('English_United Kingdom', '1252')
-[2026-05-28 03:45:59]   preferred encoding   : cp1252
-[2026-05-28 03:45:59]   filesystem encoding  : utf-8
-[2026-05-28 03:45:59]   default str encoding : utf-8
-[2026-05-28 03:45:59]   win32 code pages: ACP=1252, OEM=850
-[2026-05-28 03:45:59]   ess path repr : 'C:\\Users\\Vena\\Documents\\folders\\RPGMaker\\Pokemon IA XPX'
-[2026-05-28 03:45:59]   settings: do_preload=True, do_rxdata=True, do_runtime=True
-[2026-05-28 03:45:59]   Game.ini script source: kind='rxdata', ini_value='Data\\Scripts.rxdata', custom_script=None, entry_rb=None
-[2026-05-28 03:46:00]   export_to_rxdata: 4 written, 101 skipped (rxdata up-to-date)
-[2026-05-28 03:46:00] === write_system invoked ===
-[2026-05-28 03:46:00]   ess_folder = 'C:\\Users\\Vena\\Documents\\folders\\RPGMaker\\Pokemon IA XPX'
-[2026-05-28 03:46:00]   project.essentials_settings.essentials_folder = None
-[2026-05-28 03:46:00]   project.project_root = 'C:/Users/Vena/Documents/folders/RPGMaker\\Pokemon IA XPX'
-[2026-05-28 03:46:00]   sys_path   = 'C:\\Users\\Vena\\Documents\\folders\\RPGMaker\\Pokemon IA XPX\\Data\\System.rxdata'
-[2026-05-28 03:46:00]   exists?    = True
-[2026-05-28 03:46:00]   existing System.rxdata: 4657 bytes, mtime=2026-05-13 16:26:41
-[2026-05-28 03:46:00]   System.rxdata* files found in tree: 1
-[2026-05-28 03:46:00]     - C:\Users\Vena\Documents\folders\RPGMaker\Pokemon IA XPX\Data\System.rxdata
-[2026-05-28 03:46:00]   current System.rxdata: @start_map_id=1, @start_x=9, @start_y=7
-[2026-05-28 03:46:00]   project state: start_map_id=1, start_x=9, start_y=7
-[2026-05-28 03:46:00]   target values: @start_map_id=1, @start_x=9, @start_y=7 (fallback=False)
-[2026-05-28 03:46:00]   no-op: System.rxdata already matches target
-[2026-05-28 03:46:00] 
-[2026-05-28 03:46:00] === _deploy_xpx_runtime ===
-[2026-05-28 03:46:00]   source: C:\Users\Vena\AppData\Local\Programs\XPXENG~1\_internal\base_runtime
-[2026-05-28 03:46:00]   dest:   C:\Users\Vena\Documents\folders\RPGMaker\Pokemon IA XPX
-[2026-05-28 03:46:00]   XPX install integrity: OK (1922 file(s), cached)
-[2026-05-28 03:46:00]   manifest: 5 file(s), 1 folder(s)
-[2026-05-28 03:46:00]     BEFORE Game.exe: 29105352 bytes, mtime=2026-05-17 21:11:20
-[2026-05-28 03:46:00]     BEFORE MANIFEST.json: 336034 bytes, mtime=2026-05-17 22:23:00
-[2026-05-28 03:46:00]     BEFORE build_info.json: 274 bytes, mtime=2026-05-17 22:23:00
-[2026-05-28 03:46:00]     BEFORE x64-msvcrt-ruby310.dll: 10240557 bytes, mtime=2026-05-17 21:11:20
-[2026-05-28 03:46:00]     BEFORE zlib1.dll: 128488 bytes, mtime=2026-05-17 15:30:22
-[2026-05-28 03:46:00]     5 file(s) already in sync — byte copy skipped
-[2026-05-28 03:46:01]     1 folder(s) already in sync — rebuild skipped
-[2026-05-28 03:46:01]     AFTER  Game.exe: 29105352 bytes, mtime=2026-05-17 21:11:20
-[2026-05-28 03:46:01]     AFTER  MANIFEST.json: 336034 bytes, mtime=2026-05-17 22:23:00
-[2026-05-28 03:46:01]     AFTER  build_info.json: 274 bytes, mtime=2026-05-17 22:23:00
-[2026-05-28 03:46:01]     AFTER  x64-msvcrt-ruby310.dll: 10240557 bytes, mtime=2026-05-17 21:11:20
-[2026-05-28 03:46:01]     AFTER  zlib1.dll: 128488 bytes, mtime=2026-05-17 15:30:22
-[2026-05-28 03:46:01]   hash-verifying against MANIFEST.json (runtime v0.3.3, 1922 expected file(s))
-[2026-05-28 03:46:01]     ? build_info.json: not in MANIFEST (extra file in runtime folder)
-[2026-05-28 03:46:01]   manifest verified: 3/1922 file(s) match shipped hashes; 0 mismatch(es), 0 error(s)
-[2026-05-28 03:46:01]   result: copied 5 file(s), 1 folder(s); verified 5/5 sizes; 0 file failure(s), 0 folder failure(s)
-[2026-05-28 03:46:01]   integrate timings (total 2404ms):
-[2026-05-28 03:46:01]     deploy_runtime             1511.7ms
-[2026-05-28 03:46:01]     export_to_rxdata            658.1ms
-[2026-05-28 03:46:01]     write_system                185.0ms
-[2026-05-28 03:46:01]     write_preload_script         19.7ms
-[2026-05-28 03:46:01]     write_mkxp_json              17.2ms
-[2026-05-28 03:46:01]     write_tilesets               11.8ms
-[2026-05-28 03:46:01]     seed_terrain_tags             0.0ms
-[2026-05-31 08:49:12] 
-[2026-05-31 08:49:12] ================================================
-[2026-05-31 08:49:12] === integrate_essentials invoked ===
-[2026-05-31 08:49:12]   project_root = 'C:/Users/Vena/Documents/folders/RPGMaker\\Pokemon IA XPX'
-[2026-05-31 08:49:12]   ess_folder   = 'C:\\Users\\Vena\\Documents\\folders\\RPGMaker\\Pokemon IA XPX'
-[2026-05-31 08:49:12]   project.start_map_id = 1
-[2026-05-31 08:49:12] === environment ===
-[2026-05-31 08:49:12]   os       : Windows 11 (10.0.26100)
-[2026-05-31 08:49:12]   arch     : AMD64
-[2026-05-31 08:49:12]   python   : 3.12.7 (tags/v3.12.7:0b05ead, Oct  1 2024, 03:06:41) [MSC v.1941 64 bit (AMD64)]
-[2026-05-31 08:49:12]   pyqt6    : 6.7.1 (Qt 6.7.1)
-[2026-05-31 08:49:12]   locale   : ('English_United Kingdom', '1252')
-[2026-05-31 08:49:12]   preferred encoding   : cp1252
-[2026-05-31 08:49:12]   filesystem encoding  : utf-8
-[2026-05-31 08:49:12]   default str encoding : utf-8
-[2026-05-31 08:49:12]   win32 code pages: ACP=1252, OEM=850
-[2026-05-31 08:49:12]   ess path repr : 'C:\\Users\\Vena\\Documents\\folders\\RPGMaker\\Pokemon IA XPX'
-[2026-05-31 08:49:12]   settings: do_preload=True, do_rxdata=True, do_runtime=True
-[2026-05-31 08:49:12]   Game.ini script source: kind='rxdata', ini_value='Data\\Scripts.rxdata', custom_script=None, entry_rb=None
-[2026-05-31 08:49:12]   export_to_rxdata: 3 written, 102 skipped (rxdata up-to-date)
-[2026-05-31 08:49:12] === write_system invoked ===
-[2026-05-31 08:49:12]   ess_folder = 'C:\\Users\\Vena\\Documents\\folders\\RPGMaker\\Pokemon IA XPX'
-[2026-05-31 08:49:12]   project.essentials_settings.essentials_folder = None
-[2026-05-31 08:49:12]   project.project_root = 'C:/Users/Vena/Documents/folders/RPGMaker\\Pokemon IA XPX'
-[2026-05-31 08:49:12]   sys_path   = 'C:\\Users\\Vena\\Documents\\folders\\RPGMaker\\Pokemon IA XPX\\Data\\System.rxdata'
-[2026-05-31 08:49:12]   exists?    = True
-[2026-05-31 08:49:12]   existing System.rxdata: 4657 bytes, mtime=2026-05-13 16:26:41
-[2026-05-31 08:49:12]   System.rxdata* files found in tree: 1
-[2026-05-31 08:49:12]     - C:\Users\Vena\Documents\folders\RPGMaker\Pokemon IA XPX\Data\System.rxdata
-[2026-05-31 08:49:12]   current System.rxdata: @start_map_id=1, @start_x=9, @start_y=7
-[2026-05-31 08:49:12]   project state: start_map_id=1, start_x=9, start_y=7
-[2026-05-31 08:49:12]   target values: @start_map_id=1, @start_x=9, @start_y=7 (fallback=False)
-[2026-05-31 08:49:12]   no-op: System.rxdata already matches target
-[2026-05-31 08:49:12] 
-[2026-05-31 08:49:12] === _deploy_xpx_runtime ===
-[2026-05-31 08:49:12]   source: C:\Users\Vena\AppData\Local\Programs\XPXENG~1\_internal\base_runtime
-[2026-05-31 08:49:12]   dest:   C:\Users\Vena\Documents\folders\RPGMaker\Pokemon IA XPX
-[2026-05-31 08:49:13]   XPX install integrity: OK (1922 file(s), cached)
-[2026-05-31 08:49:13]   manifest: 5 file(s), 1 folder(s)
-[2026-05-31 08:49:13]     BEFORE Game.exe: 29105352 bytes, mtime=2026-05-17 21:11:20
-[2026-05-31 08:49:13]     BEFORE MANIFEST.json: 336034 bytes, mtime=2026-05-17 22:23:00
-[2026-05-31 08:49:13]     BEFORE build_info.json: 274 bytes, mtime=2026-05-17 22:23:00
-[2026-05-31 08:49:13]     BEFORE x64-msvcrt-ruby310.dll: 10240557 bytes, mtime=2026-05-17 21:11:20
-[2026-05-31 08:49:13]     BEFORE zlib1.dll: 128488 bytes, mtime=2026-05-17 15:30:22
-[2026-05-31 08:49:13]     5 file(s) already in sync — byte copy skipped
-[2026-05-31 08:49:13]     1 folder(s) already in sync — rebuild skipped
-[2026-05-31 08:49:13]     AFTER  Game.exe: 29105352 bytes, mtime=2026-05-17 21:11:20
-[2026-05-31 08:49:13]     AFTER  MANIFEST.json: 336034 bytes, mtime=2026-05-17 22:23:00
-[2026-05-31 08:49:13]     AFTER  build_info.json: 274 bytes, mtime=2026-05-17 22:23:00
-[2026-05-31 08:49:13]     AFTER  x64-msvcrt-ruby310.dll: 10240557 bytes, mtime=2026-05-17 21:11:20
-[2026-05-31 08:49:13]     AFTER  zlib1.dll: 128488 bytes, mtime=2026-05-17 15:30:22
-[2026-05-31 08:49:13]   hash-verifying against MANIFEST.json (runtime v0.3.3, 1922 expected file(s))
-[2026-05-31 08:49:13]     ? build_info.json: not in MANIFEST (extra file in runtime folder)
-[2026-05-31 08:49:13]   manifest verified: 3/1922 file(s) match shipped hashes; 0 mismatch(es), 0 error(s)
-[2026-05-31 08:49:13]   result: copied 5 file(s), 1 folder(s); verified 5/5 sizes; 0 file failure(s), 0 folder failure(s)
-[2026-05-31 08:49:13]   integrate timings (total 1371ms):
-[2026-05-31 08:49:13]     deploy_runtime              930.7ms
-[2026-05-31 08:49:13]     export_to_rxdata            342.6ms
-[2026-05-31 08:49:13]     write_system                 68.4ms
-[2026-05-31 08:49:13]     write_mkxp_json              11.5ms
-[2026-05-31 08:49:13]     write_preload_script         11.0ms
-[2026-05-31 08:49:13]     write_tilesets                7.2ms
-[2026-05-31 08:49:13]     seed_terrain_tags             0.0ms
-[2026-05-31 09:14:57] 
-[2026-05-31 09:14:57] ================================================
-[2026-05-31 09:14:57] === integrate_essentials invoked ===
-[2026-05-31 09:14:57]   project_root = 'C:/Users/Vena/Documents/folders/RPGMaker\\Pokemon IA XPX'
-[2026-05-31 09:14:57]   ess_folder   = 'C:\\Users\\Vena\\Documents\\folders\\RPGMaker\\Pokemon IA XPX'
-[2026-05-31 09:14:57]   project.start_map_id = 1
-[2026-05-31 09:14:57] === environment ===
-[2026-05-31 09:14:57]   os       : Windows 11 (10.0.26100)
-[2026-05-31 09:14:57]   arch     : AMD64
-[2026-05-31 09:14:57]   python   : 3.12.7 (tags/v3.12.7:0b05ead, Oct  1 2024, 03:06:41) [MSC v.1941 64 bit (AMD64)]
-[2026-05-31 09:14:57]   pyqt6    : 6.7.1 (Qt 6.7.1)
-[2026-05-31 09:14:57]   locale   : ('English_United Kingdom', '1252')
-[2026-05-31 09:14:57]   preferred encoding   : cp1252
-[2026-05-31 09:14:57]   filesystem encoding  : utf-8
-[2026-05-31 09:14:57]   default str encoding : utf-8
-[2026-05-31 09:14:57]   win32 code pages: ACP=1252, OEM=850
-[2026-05-31 09:14:57]   ess path repr : 'C:\\Users\\Vena\\Documents\\folders\\RPGMaker\\Pokemon IA XPX'
-[2026-05-31 09:14:57]   settings: do_preload=True, do_rxdata=True, do_runtime=True
-[2026-05-31 09:14:57]   Game.ini script source: kind='rxdata', ini_value='Data\\Scripts.rxdata', custom_script=None, entry_rb=None
-[2026-05-31 09:14:57]   export_to_rxdata: 4 written, 101 skipped (rxdata up-to-date)
-[2026-05-31 09:14:57] === write_system invoked ===
-[2026-05-31 09:14:57]   ess_folder = 'C:\\Users\\Vena\\Documents\\folders\\RPGMaker\\Pokemon IA XPX'
-[2026-05-31 09:14:57]   project.essentials_settings.essentials_folder = None
-[2026-05-31 09:14:57]   project.project_root = 'C:/Users/Vena/Documents/folders/RPGMaker\\Pokemon IA XPX'
-[2026-05-31 09:14:57]   fast-path: System.rxdata cached as matching (smid=1, x=9, y=7)
-[2026-05-31 09:14:57] 
-[2026-05-31 09:14:57] === _deploy_xpx_runtime ===
-[2026-05-31 09:14:57]   source: C:\Users\Vena\AppData\Local\Programs\XPXENG~1\_internal\base_runtime
-[2026-05-31 09:14:57]   dest:   C:\Users\Vena\Documents\folders\RPGMaker\Pokemon IA XPX
-[2026-05-31 09:14:57]   XPX install integrity: OK (1922 file(s), cached)
-[2026-05-31 09:14:57]   manifest: 5 file(s), 1 folder(s)
-[2026-05-31 09:14:57]     BEFORE Game.exe: 29105352 bytes, mtime=2026-05-17 21:11:20
-[2026-05-31 09:14:57]     BEFORE MANIFEST.json: 336034 bytes, mtime=2026-05-17 22:23:00
-[2026-05-31 09:14:57]     BEFORE build_info.json: 274 bytes, mtime=2026-05-17 22:23:00
-[2026-05-31 09:14:57]     BEFORE x64-msvcrt-ruby310.dll: 10240557 bytes, mtime=2026-05-17 21:11:20
-[2026-05-31 09:14:57]     BEFORE zlib1.dll: 128488 bytes, mtime=2026-05-17 15:30:22
-[2026-05-31 09:14:57]     5 file(s) already in sync — byte copy skipped
-[2026-05-31 09:14:58]     1 folder(s) already in sync — rebuild skipped
-[2026-05-31 09:14:58]     AFTER  Game.exe: 29105352 bytes, mtime=2026-05-17 21:11:20
-[2026-05-31 09:14:58]     AFTER  MANIFEST.json: 336034 bytes, mtime=2026-05-17 22:23:00
-[2026-05-31 09:14:58]     AFTER  build_info.json: 274 bytes, mtime=2026-05-17 22:23:00
-[2026-05-31 09:14:58]     AFTER  x64-msvcrt-ruby310.dll: 10240557 bytes, mtime=2026-05-17 21:11:20
-[2026-05-31 09:14:58]     AFTER  zlib1.dll: 128488 bytes, mtime=2026-05-17 15:30:22
-[2026-05-31 09:14:58]   hash-verifying against MANIFEST.json (runtime v0.3.3, 1922 expected file(s))
-[2026-05-31 09:14:58]     ? build_info.json: not in MANIFEST (extra file in runtime folder)
-[2026-05-31 09:14:58]   manifest verified: 3/1922 file(s) match shipped hashes; 0 mismatch(es), 0 error(s)
-[2026-05-31 09:14:58]   result: copied 5 file(s), 1 folder(s); verified 5/5 sizes; 0 file failure(s), 0 folder failure(s)
-[2026-05-31 09:14:58]   integrate timings (total 1441ms):
-[2026-05-31 09:14:58]     deploy_runtime             1062.8ms
-[2026-05-31 09:14:58]     export_to_rxdata            359.6ms
-[2026-05-31 09:14:58]     write_tilesets                7.1ms
-[2026-05-31 09:14:58]     write_mkxp_json               6.8ms
-[2026-05-31 09:14:58]     write_system                  3.3ms
-[2026-05-31 09:14:58]     write_preload_script          1.3ms
-[2026-05-31 09:14:58]     seed_terrain_tags             0.0ms
-[2026-05-31 10:00:11] 
-[2026-05-31 10:00:11] ================================================
-[2026-05-31 10:00:11] === integrate_essentials invoked ===
-[2026-05-31 10:00:11]   project_root = 'C:/Users/Vena/Documents/folders/RPGMaker\\Pokemon IA XPX'
-[2026-05-31 10:00:11]   ess_folder   = 'C:\\Users\\Vena\\Documents\\folders\\RPGMaker\\Pokemon IA XPX'
-[2026-05-31 10:00:11]   project.start_map_id = 1
-[2026-05-31 10:00:11] === environment ===
-[2026-05-31 10:00:11]   os       : Windows 11 (10.0.26100)
-[2026-05-31 10:00:11]   arch     : AMD64
-[2026-05-31 10:00:11]   python   : 3.12.7 (tags/v3.12.7:0b05ead, Oct  1 2024, 03:06:41) [MSC v.1941 64 bit (AMD64)]
-[2026-05-31 10:00:11]   pyqt6    : 6.7.1 (Qt 6.7.1)
-[2026-05-31 10:00:11]   locale   : ('English_United Kingdom', '1252')
-[2026-05-31 10:00:11]   preferred encoding   : cp1252
-[2026-05-31 10:00:11]   filesystem encoding  : utf-8
-[2026-05-31 10:00:11]   default str encoding : utf-8
-[2026-05-31 10:00:11]   win32 code pages: ACP=1252, OEM=850
-[2026-05-31 10:00:11]   ess path repr : 'C:\\Users\\Vena\\Documents\\folders\\RPGMaker\\Pokemon IA XPX'
-[2026-05-31 10:00:11]   settings: do_preload=True, do_rxdata=True, do_runtime=True
-[2026-05-31 10:00:11]   Game.ini script source: kind='rxdata', ini_value='Data\\Scripts.rxdata', custom_script=None, entry_rb=None
-[2026-05-31 10:00:11]   export_to_rxdata: 4 written, 101 skipped (rxdata up-to-date)
-[2026-05-31 10:00:11] === write_system invoked ===
-[2026-05-31 10:00:11]   ess_folder = 'C:\\Users\\Vena\\Documents\\folders\\RPGMaker\\Pokemon IA XPX'
-[2026-05-31 10:00:11]   project.essentials_settings.essentials_folder = None
-[2026-05-31 10:00:11]   project.project_root = 'C:/Users/Vena/Documents/folders/RPGMaker\\Pokemon IA XPX'
-[2026-05-31 10:00:11]   fast-path: System.rxdata cached as matching (smid=1, x=9, y=7)
-[2026-05-31 10:00:11] 
-[2026-05-31 10:00:11] === _deploy_xpx_runtime ===
-[2026-05-31 10:00:11]   source: C:\Users\Vena\AppData\Local\Programs\XPXENG~1\_internal\base_runtime
-[2026-05-31 10:00:11]   dest:   C:\Users\Vena\Documents\folders\RPGMaker\Pokemon IA XPX
-[2026-05-31 10:00:11]   XPX install integrity: OK (1922 file(s), cached)
-[2026-05-31 10:00:11]   manifest: 5 file(s), 1 folder(s)
-[2026-05-31 10:00:11]     BEFORE Game.exe: 29105352 bytes, mtime=2026-05-17 21:11:20
-[2026-05-31 10:00:11]     BEFORE MANIFEST.json: 336034 bytes, mtime=2026-05-17 22:23:00
-[2026-05-31 10:00:11]     BEFORE build_info.json: 274 bytes, mtime=2026-05-17 22:23:00
-[2026-05-31 10:00:11]     BEFORE x64-msvcrt-ruby310.dll: 10240557 bytes, mtime=2026-05-17 21:11:20
-[2026-05-31 10:00:11]     BEFORE zlib1.dll: 128488 bytes, mtime=2026-05-17 15:30:22
-[2026-05-31 10:00:11]     5 file(s) already in sync — byte copy skipped
-[2026-05-31 10:00:12]     1 folder(s) already in sync — rebuild skipped
-[2026-05-31 10:00:12]     AFTER  Game.exe: 29105352 bytes, mtime=2026-05-17 21:11:20
-[2026-05-31 10:00:12]     AFTER  MANIFEST.json: 336034 bytes, mtime=2026-05-17 22:23:00
-[2026-05-31 10:00:12]     AFTER  build_info.json: 274 bytes, mtime=2026-05-17 22:23:00
-[2026-05-31 10:00:12]     AFTER  x64-msvcrt-ruby310.dll: 10240557 bytes, mtime=2026-05-17 21:11:20
-[2026-05-31 10:00:12]     AFTER  zlib1.dll: 128488 bytes, mtime=2026-05-17 15:30:22
-[2026-05-31 10:00:12]   hash-verifying against MANIFEST.json (runtime v0.3.3, 1922 expected file(s))
-[2026-05-31 10:00:12]     ? build_info.json: not in MANIFEST (extra file in runtime folder)
-[2026-05-31 10:00:12]   manifest verified: 3/1922 file(s) match shipped hashes; 0 mismatch(es), 0 error(s)
-[2026-05-31 10:00:12]   result: copied 5 file(s), 1 folder(s); verified 5/5 sizes; 0 file failure(s), 0 folder failure(s)
-[2026-05-31 10:00:12]   integrate timings (total 1199ms):
-[2026-05-31 10:00:12]     deploy_runtime              868.3ms
-[2026-05-31 10:00:12]     export_to_rxdata            306.9ms
-[2026-05-31 10:00:12]     write_tilesets                8.7ms
-[2026-05-31 10:00:12]     write_mkxp_json               8.5ms
-[2026-05-31 10:00:12]     write_system                  4.5ms
-[2026-05-31 10:00:12]     write_preload_script          1.7ms
-[2026-05-31 10:00:12]     seed_terrain_tags             0.0ms
-[2026-05-31 10:08:08] 
-[2026-05-31 10:08:08] ================================================
-[2026-05-31 10:08:08] === integrate_essentials invoked ===
-[2026-05-31 10:08:08]   project_root = 'C:/Users/Vena/Documents/folders/RPGMaker\\Pokemon IA XPX'
-[2026-05-31 10:08:08]   ess_folder   = 'C:\\Users\\Vena\\Documents\\folders\\RPGMaker\\Pokemon IA XPX'
-[2026-05-31 10:08:08]   project.start_map_id = 1
-[2026-05-31 10:08:08] === environment ===
-[2026-05-31 10:08:08]   os       : Windows 11 (10.0.26100)
-[2026-05-31 10:08:08]   arch     : AMD64
-[2026-05-31 10:08:08]   python   : 3.12.7 (tags/v3.12.7:0b05ead, Oct  1 2024, 03:06:41) [MSC v.1941 64 bit (AMD64)]
-[2026-05-31 10:08:08]   pyqt6    : 6.7.1 (Qt 6.7.1)
-[2026-05-31 10:08:08]   locale   : ('English_United Kingdom', '1252')
-[2026-05-31 10:08:08]   preferred encoding   : cp1252
-[2026-05-31 10:08:08]   filesystem encoding  : utf-8
-[2026-05-31 10:08:08]   default str encoding : utf-8
-[2026-05-31 10:08:08]   win32 code pages: ACP=1252, OEM=850
-[2026-05-31 10:08:08]   ess path repr : 'C:\\Users\\Vena\\Documents\\folders\\RPGMaker\\Pokemon IA XPX'
-[2026-05-31 10:08:08]   settings: do_preload=True, do_rxdata=True, do_runtime=True
-[2026-05-31 10:08:08]   Game.ini script source: kind='rxdata', ini_value='Data\\Scripts.rxdata', custom_script=None, entry_rb=None
-[2026-05-31 10:08:08]   export_to_rxdata: 3 written, 102 skipped (rxdata up-to-date)
-[2026-05-31 10:08:08] === write_system invoked ===
-[2026-05-31 10:08:08]   ess_folder = 'C:\\Users\\Vena\\Documents\\folders\\RPGMaker\\Pokemon IA XPX'
-[2026-05-31 10:08:08]   project.essentials_settings.essentials_folder = None
-[2026-05-31 10:08:08]   project.project_root = 'C:/Users/Vena/Documents/folders/RPGMaker\\Pokemon IA XPX'
-[2026-05-31 10:08:08]   fast-path: System.rxdata cached as matching (smid=1, x=9, y=7)
-[2026-05-31 10:08:08] 
-[2026-05-31 10:08:08] === _deploy_xpx_runtime ===
-[2026-05-31 10:08:08]   source: C:\Users\Vena\AppData\Local\Programs\XPXENG~1\_internal\base_runtime
-[2026-05-31 10:08:08]   dest:   C:\Users\Vena\Documents\folders\RPGMaker\Pokemon IA XPX
-[2026-05-31 10:08:08]   XPX install integrity: OK (1922 file(s), cached)
-[2026-05-31 10:08:08]   manifest: 5 file(s), 1 folder(s)
-[2026-05-31 10:08:08]     BEFORE Game.exe: 29105352 bytes, mtime=2026-05-17 21:11:20
-[2026-05-31 10:08:08]     BEFORE MANIFEST.json: 336034 bytes, mtime=2026-05-17 22:23:00
-[2026-05-31 10:08:08]     BEFORE build_info.json: 274 bytes, mtime=2026-05-17 22:23:00
-[2026-05-31 10:08:08]     BEFORE x64-msvcrt-ruby310.dll: 10240557 bytes, mtime=2026-05-17 21:11:20
-[2026-05-31 10:08:08]     BEFORE zlib1.dll: 128488 bytes, mtime=2026-05-17 15:30:22
-[2026-05-31 10:08:08]     5 file(s) already in sync — byte copy skipped
-[2026-05-31 10:08:09]     1 folder(s) already in sync — rebuild skipped
-[2026-05-31 10:08:09]     AFTER  Game.exe: 29105352 bytes, mtime=2026-05-17 21:11:20
-[2026-05-31 10:08:09]     AFTER  MANIFEST.json: 336034 bytes, mtime=2026-05-17 22:23:00
-[2026-05-31 10:08:09]     AFTER  build_info.json: 274 bytes, mtime=2026-05-17 22:23:00
-[2026-05-31 10:08:09]     AFTER  x64-msvcrt-ruby310.dll: 10240557 bytes, mtime=2026-05-17 21:11:20
-[2026-05-31 10:08:09]     AFTER  zlib1.dll: 128488 bytes, mtime=2026-05-17 15:30:22
-[2026-05-31 10:08:09]   hash-verifying against MANIFEST.json (runtime v0.3.3, 1922 expected file(s))
-[2026-05-31 10:08:09]     ? build_info.json: not in MANIFEST (extra file in runtime folder)
-[2026-05-31 10:08:09]   manifest verified: 3/1922 file(s) match shipped hashes; 0 mismatch(es), 0 error(s)
-[2026-05-31 10:08:09]   result: copied 5 file(s), 1 folder(s); verified 5/5 sizes; 0 file failure(s), 0 folder failure(s)
-[2026-05-31 10:08:09]   integrate timings (total 1040ms):
-[2026-05-31 10:08:09]     deploy_runtime              607.7ms
-[2026-05-31 10:08:09]     export_to_rxdata            306.6ms
-[2026-05-31 10:08:09]     write_tilesets              114.0ms
-[2026-05-31 10:08:09]     write_mkxp_json               7.9ms
-[2026-05-31 10:08:09]     write_system                  2.7ms
-[2026-05-31 10:08:09]     write_preload_script          0.9ms
-[2026-05-31 10:08:09]     seed_terrain_tags             0.0ms
-[2026-05-31 10:25:02] 
-[2026-05-31 10:25:02] ================================================
-[2026-05-31 10:25:02] === integrate_essentials invoked ===
-[2026-05-31 10:25:02]   project_root = 'C:/Users/Vena/Documents/folders/RPGMaker\\Pokemon IA XPX'
-[2026-05-31 10:25:02]   ess_folder   = 'C:\\Users\\Vena\\Documents\\folders\\RPGMaker\\Pokemon IA XPX'
-[2026-05-31 10:25:02]   project.start_map_id = 1
-[2026-05-31 10:25:02] === environment ===
-[2026-05-31 10:25:02]   os       : Windows 11 (10.0.26100)
-[2026-05-31 10:25:02]   arch     : AMD64
-[2026-05-31 10:25:02]   python   : 3.12.7 (tags/v3.12.7:0b05ead, Oct  1 2024, 03:06:41) [MSC v.1941 64 bit (AMD64)]
-[2026-05-31 10:25:02]   pyqt6    : 6.7.1 (Qt 6.7.1)
-[2026-05-31 10:25:02]   locale   : ('English_United Kingdom', '1252')
-[2026-05-31 10:25:02]   preferred encoding   : cp1252
-[2026-05-31 10:25:02]   filesystem encoding  : utf-8
-[2026-05-31 10:25:02]   default str encoding : utf-8
-[2026-05-31 10:25:02]   win32 code pages: ACP=1252, OEM=850
-[2026-05-31 10:25:02]   ess path repr : 'C:\\Users\\Vena\\Documents\\folders\\RPGMaker\\Pokemon IA XPX'
-[2026-05-31 10:25:02]   settings: do_preload=True, do_rxdata=True, do_runtime=True
-[2026-05-31 10:25:03]   Game.ini script source: kind='rxdata', ini_value='Data\\Scripts.rxdata', custom_script=None, entry_rb=None
-[2026-05-31 10:25:03]   export_to_rxdata: 4 written, 101 skipped (rxdata up-to-date)
-[2026-05-31 10:25:03] === write_system invoked ===
-[2026-05-31 10:25:03]   ess_folder = 'C:\\Users\\Vena\\Documents\\folders\\RPGMaker\\Pokemon IA XPX'
-[2026-05-31 10:25:03]   project.essentials_settings.essentials_folder = None
-[2026-05-31 10:25:03]   project.project_root = 'C:/Users/Vena/Documents/folders/RPGMaker\\Pokemon IA XPX'
-[2026-05-31 10:25:03]   fast-path: System.rxdata cached as matching (smid=1, x=9, y=7)
-[2026-05-31 10:25:03] 
-[2026-05-31 10:25:03] === _deploy_xpx_runtime ===
-[2026-05-31 10:25:03]   source: C:\Users\Vena\AppData\Local\Programs\XPXENG~1\_internal\base_runtime
-[2026-05-31 10:25:03]   dest:   C:\Users\Vena\Documents\folders\RPGMaker\Pokemon IA XPX
-[2026-05-31 10:25:03]   XPX install integrity: OK (1922 file(s), cached)
-[2026-05-31 10:25:03]   manifest: 5 file(s), 1 folder(s)
-[2026-05-31 10:25:03]     BEFORE Game.exe: 29105352 bytes, mtime=2026-05-17 21:11:20
-[2026-05-31 10:25:03]     BEFORE MANIFEST.json: 336034 bytes, mtime=2026-05-17 22:23:00
-[2026-05-31 10:25:03]     BEFORE build_info.json: 274 bytes, mtime=2026-05-17 22:23:00
-[2026-05-31 10:25:03]     BEFORE x64-msvcrt-ruby310.dll: 10240557 bytes, mtime=2026-05-17 21:11:20
-[2026-05-31 10:25:03]     BEFORE zlib1.dll: 128488 bytes, mtime=2026-05-17 15:30:22
-[2026-05-31 10:25:03]     5 file(s) already in sync — byte copy skipped
-[2026-05-31 10:25:04]     1 folder(s) already in sync — rebuild skipped
-[2026-05-31 10:25:04]     AFTER  Game.exe: 29105352 bytes, mtime=2026-05-17 21:11:20
-[2026-05-31 10:25:04]     AFTER  MANIFEST.json: 336034 bytes, mtime=2026-05-17 22:23:00
-[2026-05-31 10:25:04]     AFTER  build_info.json: 274 bytes, mtime=2026-05-17 22:23:00
-[2026-05-31 10:25:04]     AFTER  x64-msvcrt-ruby310.dll: 10240557 bytes, mtime=2026-05-17 21:11:20
-[2026-05-31 10:25:04]     AFTER  zlib1.dll: 128488 bytes, mtime=2026-05-17 15:30:22
-[2026-05-31 10:25:04]   hash-verifying against MANIFEST.json (runtime v0.3.3, 1922 expected file(s))
-[2026-05-31 10:25:04]     ? build_info.json: not in MANIFEST (extra file in runtime folder)
-[2026-05-31 10:25:04]   manifest verified: 3/1922 file(s) match shipped hashes; 0 mismatch(es), 0 error(s)
-[2026-05-31 10:25:04]   result: copied 5 file(s), 1 folder(s); verified 5/5 sizes; 0 file failure(s), 0 folder failure(s)
-[2026-05-31 10:25:04]   integrate timings (total 1309ms):
-[2026-05-31 10:25:04]     deploy_runtime              760.5ms
-[2026-05-31 10:25:04]     export_to_rxdata            423.0ms
-[2026-05-31 10:25:04]     write_preload_script         82.0ms
-[2026-05-31 10:25:04]     write_mkxp_json              32.1ms
-[2026-05-31 10:25:04]     write_tilesets                7.1ms
-[2026-05-31 10:25:04]     write_system                  4.1ms
-[2026-05-31 10:25:04]     seed_terrain_tags             0.0ms
-[2026-05-31 10:33:00] 
-[2026-05-31 10:33:00] ================================================
-[2026-05-31 10:33:00] === integrate_essentials invoked ===
-[2026-05-31 10:33:00]   project_root = 'C:/Users/Vena/Documents/folders/RPGMaker\\Pokemon IA XPX'
-[2026-05-31 10:33:00]   ess_folder   = 'C:\\Users\\Vena\\Documents\\folders\\RPGMaker\\Pokemon IA XPX'
-[2026-05-31 10:33:00]   project.start_map_id = 1
-[2026-05-31 10:33:00] === environment ===
-[2026-05-31 10:33:00]   os       : Windows 11 (10.0.26100)
-[2026-05-31 10:33:00]   arch     : AMD64
-[2026-05-31 10:33:00]   python   : 3.12.7 (tags/v3.12.7:0b05ead, Oct  1 2024, 03:06:41) [MSC v.1941 64 bit (AMD64)]
-[2026-05-31 10:33:00]   pyqt6    : 6.7.1 (Qt 6.7.1)
-[2026-05-31 10:33:00]   locale   : ('English_United Kingdom', '1252')
-[2026-05-31 10:33:00]   preferred encoding   : cp1252
-[2026-05-31 10:33:00]   filesystem encoding  : utf-8
-[2026-05-31 10:33:00]   default str encoding : utf-8
-[2026-05-31 10:33:00]   win32 code pages: ACP=1252, OEM=850
-[2026-05-31 10:33:00]   ess path repr : 'C:\\Users\\Vena\\Documents\\folders\\RPGMaker\\Pokemon IA XPX'
-[2026-05-31 10:33:00]   settings: do_preload=True, do_rxdata=True, do_runtime=True
-[2026-05-31 10:33:00]   Game.ini script source: kind='rxdata', ini_value='Data\\Scripts.rxdata', custom_script=None, entry_rb=None
-[2026-05-31 10:33:00]   export_to_rxdata: 4 written, 101 skipped (rxdata up-to-date)
-[2026-05-31 10:33:00] === write_system invoked ===
-[2026-05-31 10:33:00]   ess_folder = 'C:\\Users\\Vena\\Documents\\folders\\RPGMaker\\Pokemon IA XPX'
-[2026-05-31 10:33:00]   project.essentials_settings.essentials_folder = None
-[2026-05-31 10:33:00]   project.project_root = 'C:/Users/Vena/Documents/folders/RPGMaker\\Pokemon IA XPX'
-[2026-05-31 10:33:00]   fast-path: System.rxdata cached as matching (smid=1, x=9, y=7)
-[2026-05-31 10:33:00] 
-[2026-05-31 10:33:00] === _deploy_xpx_runtime ===
-[2026-05-31 10:33:00]   source: C:\Users\Vena\AppData\Local\Programs\XPXENG~1\_internal\base_runtime
-[2026-05-31 10:33:00]   dest:   C:\Users\Vena\Documents\folders\RPGMaker\Pokemon IA XPX
-[2026-05-31 10:33:00]   XPX install integrity: OK (1922 file(s), cached)
-[2026-05-31 10:33:00]   manifest: 5 file(s), 1 folder(s)
-[2026-05-31 10:33:00]     BEFORE Game.exe: 29105352 bytes, mtime=2026-05-17 21:11:20
-[2026-05-31 10:33:00]     BEFORE MANIFEST.json: 336034 bytes, mtime=2026-05-17 22:23:00
-[2026-05-31 10:33:00]     BEFORE build_info.json: 274 bytes, mtime=2026-05-17 22:23:00
-[2026-05-31 10:33:00]     BEFORE x64-msvcrt-ruby310.dll: 10240557 bytes, mtime=2026-05-17 21:11:20
-[2026-05-31 10:33:00]     BEFORE zlib1.dll: 128488 bytes, mtime=2026-05-17 15:30:22
-[2026-05-31 10:33:00]     5 file(s) already in sync — byte copy skipped
-[2026-05-31 10:33:00]     1 folder(s) already in sync — rebuild skipped
-[2026-05-31 10:33:00]     AFTER  Game.exe: 29105352 bytes, mtime=2026-05-17 21:11:20
-[2026-05-31 10:33:00]     AFTER  MANIFEST.json: 336034 bytes, mtime=2026-05-17 22:23:00
-[2026-05-31 10:33:00]     AFTER  build_info.json: 274 bytes, mtime=2026-05-17 22:23:00
-[2026-05-31 10:33:00]     AFTER  x64-msvcrt-ruby310.dll: 10240557 bytes, mtime=2026-05-17 21:11:20
-[2026-05-31 10:33:00]     AFTER  zlib1.dll: 128488 bytes, mtime=2026-05-17 15:30:22
-[2026-05-31 10:33:00]   hash-verifying against MANIFEST.json (runtime v0.3.3, 1922 expected file(s))
-[2026-05-31 10:33:00]     ? build_info.json: not in MANIFEST (extra file in runtime folder)
-[2026-05-31 10:33:00]   manifest verified: 3/1922 file(s) match shipped hashes; 0 mismatch(es), 0 error(s)
-[2026-05-31 10:33:00]   result: copied 5 file(s), 1 folder(s); verified 5/5 sizes; 0 file failure(s), 0 folder failure(s)
-[2026-05-31 10:33:00]   integrate timings (total 914ms):
-[2026-05-31 10:33:00]     deploy_runtime              588.2ms
-[2026-05-31 10:33:00]     export_to_rxdata            303.9ms
-[2026-05-31 10:33:00]     write_mkxp_json               8.1ms
-[2026-05-31 10:33:00]     write_tilesets                6.9ms
-[2026-05-31 10:33:00]     write_system                  5.6ms
-[2026-05-31 10:33:00]     write_preload_script          1.3ms
-[2026-05-31 10:33:00]     seed_terrain_tags             0.0ms
-[2026-05-31 10:39:38] 
-[2026-05-31 10:39:38] ================================================
-[2026-05-31 10:39:38] === integrate_essentials invoked ===
-[2026-05-31 10:39:38]   project_root = 'C:/Users/Vena/Documents/folders/RPGMaker\\Pokemon IA XPX'
-[2026-05-31 10:39:38]   ess_folder   = 'C:\\Users\\Vena\\Documents\\folders\\RPGMaker\\Pokemon IA XPX'
-[2026-05-31 10:39:38]   project.start_map_id = 1
-[2026-05-31 10:39:38] === environment ===
-[2026-05-31 10:39:38]   os       : Windows 11 (10.0.26100)
-[2026-05-31 10:39:38]   arch     : AMD64
-[2026-05-31 10:39:38]   python   : 3.12.7 (tags/v3.12.7:0b05ead, Oct  1 2024, 03:06:41) [MSC v.1941 64 bit (AMD64)]
-[2026-05-31 10:39:38]   pyqt6    : 6.7.1 (Qt 6.7.1)
-[2026-05-31 10:39:38]   locale   : ('English_United Kingdom', '1252')
-[2026-05-31 10:39:38]   preferred encoding   : cp1252
-[2026-05-31 10:39:38]   filesystem encoding  : utf-8
-[2026-05-31 10:39:38]   default str encoding : utf-8
-[2026-05-31 10:39:38]   win32 code pages: ACP=1252, OEM=850
-[2026-05-31 10:39:38]   ess path repr : 'C:\\Users\\Vena\\Documents\\folders\\RPGMaker\\Pokemon IA XPX'
-[2026-05-31 10:39:38]   settings: do_preload=True, do_rxdata=True, do_runtime=True
-[2026-05-31 10:39:38]   Game.ini script source: kind='rxdata', ini_value='Data\\Scripts.rxdata', custom_script=None, entry_rb=None
-[2026-05-31 10:39:39]   export_to_rxdata: 4 written, 101 skipped (rxdata up-to-date)
-[2026-05-31 10:39:39] === write_system invoked ===
-[2026-05-31 10:39:39]   ess_folder = 'C:\\Users\\Vena\\Documents\\folders\\RPGMaker\\Pokemon IA XPX'
-[2026-05-31 10:39:39]   project.essentials_settings.essentials_folder = None
-[2026-05-31 10:39:39]   project.project_root = 'C:/Users/Vena/Documents/folders/RPGMaker\\Pokemon IA XPX'
-[2026-05-31 10:39:39]   fast-path: System.rxdata cached as matching (smid=1, x=9, y=7)
-[2026-05-31 10:39:39] 
-[2026-05-31 10:39:39] === _deploy_xpx_runtime ===
-[2026-05-31 10:39:39]   source: C:\Users\Vena\AppData\Local\Programs\XPXENG~1\_internal\base_runtime
-[2026-05-31 10:39:39]   dest:   C:\Users\Vena\Documents\folders\RPGMaker\Pokemon IA XPX
-[2026-05-31 10:39:39]   XPX install integrity: OK (1922 file(s), cached)
-[2026-05-31 10:39:39]   manifest: 5 file(s), 1 folder(s)
-[2026-05-31 10:39:39]     BEFORE Game.exe: 29105352 bytes, mtime=2026-05-17 21:11:20
-[2026-05-31 10:39:39]     BEFORE MANIFEST.json: 336034 bytes, mtime=2026-05-17 22:23:00
-[2026-05-31 10:39:39]     BEFORE build_info.json: 274 bytes, mtime=2026-05-17 22:23:00
-[2026-05-31 10:39:39]     BEFORE x64-msvcrt-ruby310.dll: 10240557 bytes, mtime=2026-05-17 21:11:20
-[2026-05-31 10:39:39]     BEFORE zlib1.dll: 128488 bytes, mtime=2026-05-17 15:30:22
-[2026-05-31 10:39:39]     5 file(s) already in sync — byte copy skipped
-[2026-05-31 10:39:39]     1 folder(s) already in sync — rebuild skipped
-[2026-05-31 10:39:39]     AFTER  Game.exe: 29105352 bytes, mtime=2026-05-17 21:11:20
-[2026-05-31 10:39:39]     AFTER  MANIFEST.json: 336034 bytes, mtime=2026-05-17 22:23:00
-[2026-05-31 10:39:39]     AFTER  build_info.json: 274 bytes, mtime=2026-05-17 22:23:00
-[2026-05-31 10:39:39]     AFTER  x64-msvcrt-ruby310.dll: 10240557 bytes, mtime=2026-05-17 21:11:20
-[2026-05-31 10:39:39]     AFTER  zlib1.dll: 128488 bytes, mtime=2026-05-17 15:30:22
-[2026-05-31 10:39:39]   hash-verifying against MANIFEST.json (runtime v0.3.3, 1922 expected file(s))
-[2026-05-31 10:39:39]     ? build_info.json: not in MANIFEST (extra file in runtime folder)
-[2026-05-31 10:39:39]   manifest verified: 3/1922 file(s) match shipped hashes; 0 mismatch(es), 0 error(s)
-[2026-05-31 10:39:39]   result: copied 5 file(s), 1 folder(s); verified 5/5 sizes; 0 file failure(s), 0 folder failure(s)
-[2026-05-31 10:39:39]   integrate timings (total 1112ms):
-[2026-05-31 10:39:39]     deploy_runtime              621.7ms
-[2026-05-31 10:39:39]     export_to_rxdata            469.7ms
-[2026-05-31 10:39:39]     write_mkxp_json               8.5ms
-[2026-05-31 10:39:39]     write_tilesets                6.5ms
-[2026-05-31 10:39:39]     write_system                  4.7ms
-[2026-05-31 10:39:39]     write_preload_script          1.1ms
-[2026-05-31 10:39:39]     seed_terrain_tags             0.0ms
-[2026-05-31 12:01:14] 
-[2026-05-31 12:01:14] ================================================
-[2026-05-31 12:01:14] === integrate_essentials invoked ===
-[2026-05-31 12:01:14]   project_root = 'C:/Users/Vena/Documents/folders/RPGMaker\\Pokemon IA XPX'
-[2026-05-31 12:01:14]   ess_folder   = 'C:\\Users\\Vena\\Documents\\folders\\RPGMaker\\Pokemon IA XPX'
-[2026-05-31 12:01:14]   project.start_map_id = 1
-[2026-05-31 12:01:14] === environment ===
-[2026-05-31 12:01:14]   os       : Windows 11 (10.0.26100)
-[2026-05-31 12:01:14]   arch     : AMD64
-[2026-05-31 12:01:14]   python   : 3.12.7 (tags/v3.12.7:0b05ead, Oct  1 2024, 03:06:41) [MSC v.1941 64 bit (AMD64)]
-[2026-05-31 12:01:14]   pyqt6    : 6.7.1 (Qt 6.7.1)
-[2026-05-31 12:01:14]   locale   : ('English_United Kingdom', '1252')
-[2026-05-31 12:01:14]   preferred encoding   : cp1252
-[2026-05-31 12:01:14]   filesystem encoding  : utf-8
-[2026-05-31 12:01:14]   default str encoding : utf-8
-[2026-05-31 12:01:14]   win32 code pages: ACP=1252, OEM=850
-[2026-05-31 12:01:14]   ess path repr : 'C:\\Users\\Vena\\Documents\\folders\\RPGMaker\\Pokemon IA XPX'
-[2026-05-31 12:01:14]   settings: do_preload=True, do_rxdata=True, do_runtime=True
-[2026-05-31 12:01:14]   Game.ini script source: kind='rxdata', ini_value='Data\\Scripts.rxdata', custom_script=None, entry_rb=None
-[2026-05-31 12:01:14]   export_to_rxdata: 4 written, 101 skipped (rxdata up-to-date)
-[2026-05-31 12:01:14] === write_system invoked ===
-[2026-05-31 12:01:14]   ess_folder = 'C:\\Users\\Vena\\Documents\\folders\\RPGMaker\\Pokemon IA XPX'
-[2026-05-31 12:01:14]   project.essentials_settings.essentials_folder = None
-[2026-05-31 12:01:14]   project.project_root = 'C:/Users/Vena/Documents/folders/RPGMaker\\Pokemon IA XPX'
-[2026-05-31 12:01:14]   fast-path: System.rxdata cached as matching (smid=1, x=9, y=7)
-[2026-05-31 12:01:14] 
-[2026-05-31 12:01:14] === _deploy_xpx_runtime ===
-[2026-05-31 12:01:14]   source: C:\Users\Vena\AppData\Local\Programs\XPXENG~1\_internal\base_runtime
-[2026-05-31 12:01:14]   dest:   C:\Users\Vena\Documents\folders\RPGMaker\Pokemon IA XPX
-[2026-05-31 12:01:15]   XPX install integrity: OK (1922 file(s), cached)
-[2026-05-31 12:01:15]   manifest: 5 file(s), 1 folder(s)
-[2026-05-31 12:01:15]     BEFORE Game.exe: 29105352 bytes, mtime=2026-05-17 21:11:20
-[2026-05-31 12:01:15]     BEFORE MANIFEST.json: 336034 bytes, mtime=2026-05-17 22:23:00
-[2026-05-31 12:01:15]     BEFORE build_info.json: 274 bytes, mtime=2026-05-17 22:23:00
-[2026-05-31 12:01:15]     BEFORE x64-msvcrt-ruby310.dll: 10240557 bytes, mtime=2026-05-17 21:11:20
-[2026-05-31 12:01:15]     BEFORE zlib1.dll: 128488 bytes, mtime=2026-05-17 15:30:22
-[2026-05-31 12:01:15]     5 file(s) already in sync — byte copy skipped
-[2026-05-31 12:01:16]     1 folder(s) already in sync — rebuild skipped
-[2026-05-31 12:01:16]     AFTER  Game.exe: 29105352 bytes, mtime=2026-05-17 21:11:20
-[2026-05-31 12:01:16]     AFTER  MANIFEST.json: 336034 bytes, mtime=2026-05-17 22:23:00
-[2026-05-31 12:01:16]     AFTER  build_info.json: 274 bytes, mtime=2026-05-17 22:23:00
-[2026-05-31 12:01:16]     AFTER  x64-msvcrt-ruby310.dll: 10240557 bytes, mtime=2026-05-17 21:11:20
-[2026-05-31 12:01:16]     AFTER  zlib1.dll: 128488 bytes, mtime=2026-05-17 15:30:22
-[2026-05-31 12:01:16]   hash-verifying against MANIFEST.json (runtime v0.3.3, 1922 expected file(s))
-[2026-05-31 12:01:16]     ? build_info.json: not in MANIFEST (extra file in runtime folder)
-[2026-05-31 12:01:16]   manifest verified: 3/1922 file(s) match shipped hashes; 0 mismatch(es), 0 error(s)
-[2026-05-31 12:01:16]   result: copied 5 file(s), 1 folder(s); verified 5/5 sizes; 0 file failure(s), 0 folder failure(s)
-[2026-05-31 12:01:16]   integrate timings (total 1629ms):
-[2026-05-31 12:01:16]     deploy_runtime             1221.8ms
-[2026-05-31 12:01:16]     export_to_rxdata            386.6ms
-[2026-05-31 12:01:16]     write_mkxp_json               7.5ms
-[2026-05-31 12:01:16]     write_tilesets                6.0ms
-[2026-05-31 12:01:16]     write_system                  5.8ms
-[2026-05-31 12:01:16]     write_preload_script          1.3ms
-[2026-05-31 12:01:16]     seed_terrain_tags             0.0ms
-[2026-05-31 12:48:29] 
-[2026-05-31 12:48:29] ================================================
-[2026-05-31 12:48:29] === integrate_essentials invoked ===
-[2026-05-31 12:48:29]   project_root = 'C:/Users/Vena/Documents/folders/RPGMaker\\Pokemon IA XPX'
-[2026-05-31 12:48:29]   ess_folder   = 'C:\\Users\\Vena\\Documents\\folders\\RPGMaker\\Pokemon IA XPX'
-[2026-05-31 12:48:29]   project.start_map_id = 1
-[2026-05-31 12:48:29] === environment ===
-[2026-05-31 12:48:29]   os       : Windows 11 (10.0.26100)
-[2026-05-31 12:48:29]   arch     : AMD64
-[2026-05-31 12:48:29]   python   : 3.12.7 (tags/v3.12.7:0b05ead, Oct  1 2024, 03:06:41) [MSC v.1941 64 bit (AMD64)]
-[2026-05-31 12:48:29]   pyqt6    : 6.7.1 (Qt 6.7.1)
-[2026-05-31 12:48:29]   locale   : ('English_United Kingdom', '1252')
-[2026-05-31 12:48:29]   preferred encoding   : cp1252
-[2026-05-31 12:48:29]   filesystem encoding  : utf-8
-[2026-05-31 12:48:29]   default str encoding : utf-8
-[2026-05-31 12:48:29]   win32 code pages: ACP=1252, OEM=850
-[2026-05-31 12:48:29]   ess path repr : 'C:\\Users\\Vena\\Documents\\folders\\RPGMaker\\Pokemon IA XPX'
-[2026-05-31 12:48:29]   settings: do_preload=True, do_rxdata=True, do_runtime=True
-[2026-05-31 12:48:29]   Game.ini script source: kind='rxdata', ini_value='Data\\Scripts.rxdata', custom_script=None, entry_rb=None
-[2026-05-31 12:48:29]   export_to_rxdata: 4 written, 101 skipped (rxdata up-to-date)
-[2026-05-31 12:48:29] === write_system invoked ===
-[2026-05-31 12:48:29]   ess_folder = 'C:\\Users\\Vena\\Documents\\folders\\RPGMaker\\Pokemon IA XPX'
-[2026-05-31 12:48:29]   project.essentials_settings.essentials_folder = None
-[2026-05-31 12:48:29]   project.project_root = 'C:/Users/Vena/Documents/folders/RPGMaker\\Pokemon IA XPX'
-[2026-05-31 12:48:29]   fast-path: System.rxdata cached as matching (smid=1, x=9, y=7)
-[2026-05-31 12:48:29] 
-[2026-05-31 12:48:29] === _deploy_xpx_runtime ===
-[2026-05-31 12:48:29]   source: C:\Users\Vena\AppData\Local\Programs\XPXENG~1\_internal\base_runtime
-[2026-05-31 12:48:29]   dest:   C:\Users\Vena\Documents\folders\RPGMaker\Pokemon IA XPX
-[2026-05-31 12:48:29]   XPX install integrity: OK (1922 file(s), cached)
-[2026-05-31 12:48:29]   manifest: 5 file(s), 1 folder(s)
-[2026-05-31 12:48:29]     BEFORE Game.exe: 29105352 bytes, mtime=2026-05-17 21:11:20
-[2026-05-31 12:48:29]     BEFORE MANIFEST.json: 336034 bytes, mtime=2026-05-17 22:23:00
-[2026-05-31 12:48:29]     BEFORE build_info.json: 274 bytes, mtime=2026-05-17 22:23:00
-[2026-05-31 12:48:29]     BEFORE x64-msvcrt-ruby310.dll: 10240557 bytes, mtime=2026-05-17 21:11:20
-[2026-05-31 12:48:29]     BEFORE zlib1.dll: 128488 bytes, mtime=2026-05-17 15:30:22
-[2026-05-31 12:48:29]     5 file(s) already in sync — byte copy skipped
-[2026-05-31 12:48:30]     1 folder(s) already in sync — rebuild skipped
-[2026-05-31 12:48:30]     AFTER  Game.exe: 29105352 bytes, mtime=2026-05-17 21:11:20
-[2026-05-31 12:48:30]     AFTER  MANIFEST.json: 336034 bytes, mtime=2026-05-17 22:23:00
-[2026-05-31 12:48:30]     AFTER  build_info.json: 274 bytes, mtime=2026-05-17 22:23:00
-[2026-05-31 12:48:30]     AFTER  x64-msvcrt-ruby310.dll: 10240557 bytes, mtime=2026-05-17 21:11:20
-[2026-05-31 12:48:30]     AFTER  zlib1.dll: 128488 bytes, mtime=2026-05-17 15:30:22
-[2026-05-31 12:48:30]   hash-verifying against MANIFEST.json (runtime v0.3.3, 1922 expected file(s))
-[2026-05-31 12:48:30]     ? build_info.json: not in MANIFEST (extra file in runtime folder)
-[2026-05-31 12:48:30]   manifest verified: 3/1922 file(s) match shipped hashes; 0 mismatch(es), 0 error(s)
-[2026-05-31 12:48:30]   result: copied 5 file(s), 1 folder(s); verified 5/5 sizes; 0 file failure(s), 0 folder failure(s)
-[2026-05-31 12:48:30]   integrate timings (total 1373ms):
-[2026-05-31 12:48:30]     deploy_runtime             1037.8ms
-[2026-05-31 12:48:30]     export_to_rxdata            318.7ms
-[2026-05-31 12:48:30]     write_mkxp_json               6.0ms
-[2026-05-31 12:48:30]     write_tilesets                5.9ms
-[2026-05-31 12:48:30]     write_system                  2.9ms
-[2026-05-31 12:48:30]     write_preload_script          1.2ms
-[2026-05-31 12:48:30]     seed_terrain_tags             0.0ms
-[2026-05-31 12:52:00] 
-[2026-05-31 12:52:00] ================================================
-[2026-05-31 12:52:00] === integrate_essentials invoked ===
-[2026-05-31 12:52:00]   project_root = 'C:/Users/Vena/Documents/folders/RPGMaker\\Pokemon IA XPX'
-[2026-05-31 12:52:00]   ess_folder   = 'C:\\Users\\Vena\\Documents\\folders\\RPGMaker\\Pokemon IA XPX'
-[2026-05-31 12:52:00]   project.start_map_id = 1
-[2026-05-31 12:52:00] === environment ===
-[2026-05-31 12:52:00]   os       : Windows 11 (10.0.26100)
-[2026-05-31 12:52:00]   arch     : AMD64
-[2026-05-31 12:52:00]   python   : 3.12.7 (tags/v3.12.7:0b05ead, Oct  1 2024, 03:06:41) [MSC v.1941 64 bit (AMD64)]
-[2026-05-31 12:52:00]   pyqt6    : 6.7.1 (Qt 6.7.1)
-[2026-05-31 12:52:00]   locale   : ('English_United Kingdom', '1252')
-[2026-05-31 12:52:00]   preferred encoding   : cp1252
-[2026-05-31 12:52:00]   filesystem encoding  : utf-8
-[2026-05-31 12:52:00]   default str encoding : utf-8
-[2026-05-31 12:52:00]   win32 code pages: ACP=1252, OEM=850
-[2026-05-31 12:52:00]   ess path repr : 'C:\\Users\\Vena\\Documents\\folders\\RPGMaker\\Pokemon IA XPX'
-[2026-05-31 12:52:00]   settings: do_preload=True, do_rxdata=True, do_runtime=True
-[2026-05-31 12:52:00]   Game.ini script source: kind='rxdata', ini_value='Data\\Scripts.rxdata', custom_script=None, entry_rb=None
-[2026-05-31 12:52:01]   export_to_rxdata: 4 written, 101 skipped (rxdata up-to-date)
-[2026-05-31 12:52:01] === write_system invoked ===
-[2026-05-31 12:52:01]   ess_folder = 'C:\\Users\\Vena\\Documents\\folders\\RPGMaker\\Pokemon IA XPX'
-[2026-05-31 12:52:01]   project.essentials_settings.essentials_folder = None
-[2026-05-31 12:52:01]   project.project_root = 'C:/Users/Vena/Documents/folders/RPGMaker\\Pokemon IA XPX'
-[2026-05-31 12:52:01]   fast-path: System.rxdata cached as matching (smid=1, x=9, y=7)
-[2026-05-31 12:52:01] 
-[2026-05-31 12:52:01] === _deploy_xpx_runtime ===
-[2026-05-31 12:52:01]   source: C:\Users\Vena\AppData\Local\Programs\XPXENG~1\_internal\base_runtime
-[2026-05-31 12:52:01]   dest:   C:\Users\Vena\Documents\folders\RPGMaker\Pokemon IA XPX
-[2026-05-31 12:52:01]   XPX install integrity: OK (1922 file(s), cached)
-[2026-05-31 12:52:01]   manifest: 5 file(s), 1 folder(s)
-[2026-05-31 12:52:01]     BEFORE Game.exe: 29105352 bytes, mtime=2026-05-17 21:11:20
-[2026-05-31 12:52:01]     BEFORE MANIFEST.json: 336034 bytes, mtime=2026-05-17 22:23:00
-[2026-05-31 12:52:01]     BEFORE build_info.json: 274 bytes, mtime=2026-05-17 22:23:00
-[2026-05-31 12:52:01]     BEFORE x64-msvcrt-ruby310.dll: 10240557 bytes, mtime=2026-05-17 21:11:20
-[2026-05-31 12:52:01]     BEFORE zlib1.dll: 128488 bytes, mtime=2026-05-17 15:30:22
-[2026-05-31 12:52:01]     5 file(s) already in sync — byte copy skipped
-[2026-05-31 12:52:01]     1 folder(s) already in sync — rebuild skipped
-[2026-05-31 12:52:01]     AFTER  Game.exe: 29105352 bytes, mtime=2026-05-17 21:11:20
-[2026-05-31 12:52:01]     AFTER  MANIFEST.json: 336034 bytes, mtime=2026-05-17 22:23:00
-[2026-05-31 12:52:01]     AFTER  build_info.json: 274 bytes, mtime=2026-05-17 22:23:00
-[2026-05-31 12:52:01]     AFTER  x64-msvcrt-ruby310.dll: 10240557 bytes, mtime=2026-05-17 21:11:20
-[2026-05-31 12:52:01]     AFTER  zlib1.dll: 128488 bytes, mtime=2026-05-17 15:30:22
-[2026-05-31 12:52:01]   hash-verifying against MANIFEST.json (runtime v0.3.3, 1922 expected file(s))
-[2026-05-31 12:52:02]     ? build_info.json: not in MANIFEST (extra file in runtime folder)
-[2026-05-31 12:52:02]   manifest verified: 3/1922 file(s) match shipped hashes; 0 mismatch(es), 0 error(s)
-[2026-05-31 12:52:02]   result: copied 5 file(s), 1 folder(s); verified 5/5 sizes; 0 file failure(s), 0 folder failure(s)
-[2026-05-31 12:52:02]   integrate timings (total 1124ms):
-[2026-05-31 12:52:02]     deploy_runtime              840.9ms
-[2026-05-31 12:52:02]     export_to_rxdata            265.9ms
-[2026-05-31 12:52:02]     write_tilesets                7.8ms
-[2026-05-31 12:52:02]     write_mkxp_json               5.7ms
-[2026-05-31 12:52:02]     write_system                  2.7ms
-[2026-05-31 12:52:02]     write_preload_script          0.9ms
-[2026-05-31 12:52:02]     seed_terrain_tags             0.0ms
-[2026-05-31 13:36:04] 
-[2026-05-31 13:36:04] ================================================
-[2026-05-31 13:36:04] === integrate_essentials invoked ===
-[2026-05-31 13:36:04]   project_root = 'C:/Users/Vena/Documents/folders/RPGMaker\\Pokemon IA XPX'
-[2026-05-31 13:36:04]   ess_folder   = 'C:\\Users\\Vena\\Documents\\folders\\RPGMaker\\Pokemon IA XPX'
-[2026-05-31 13:36:04]   project.start_map_id = 1
-[2026-05-31 13:36:04] === environment ===
-[2026-05-31 13:36:04]   os       : Windows 11 (10.0.26100)
-[2026-05-31 13:36:04]   arch     : AMD64
-[2026-05-31 13:36:04]   python   : 3.12.7 (tags/v3.12.7:0b05ead, Oct  1 2024, 03:06:41) [MSC v.1941 64 bit (AMD64)]
-[2026-05-31 13:36:04]   pyqt6    : 6.7.1 (Qt 6.7.1)
-[2026-05-31 13:36:04]   locale   : ('English_United Kingdom', '1252')
-[2026-05-31 13:36:04]   preferred encoding   : cp1252
-[2026-05-31 13:36:04]   filesystem encoding  : utf-8
-[2026-05-31 13:36:04]   default str encoding : utf-8
-[2026-05-31 13:36:04]   win32 code pages: ACP=1252, OEM=850
-[2026-05-31 13:36:04]   ess path repr : 'C:\\Users\\Vena\\Documents\\folders\\RPGMaker\\Pokemon IA XPX'
-[2026-05-31 13:36:04]   settings: do_preload=True, do_rxdata=True, do_runtime=True
-[2026-05-31 13:36:04]   Game.ini script source: kind='rxdata', ini_value='Data\\Scripts.rxdata', custom_script=None, entry_rb=None
-[2026-05-31 13:36:04]   export_to_rxdata: 4 written, 101 skipped (rxdata up-to-date)
-[2026-05-31 13:36:04] === write_system invoked ===
-[2026-05-31 13:36:04]   ess_folder = 'C:\\Users\\Vena\\Documents\\folders\\RPGMaker\\Pokemon IA XPX'
-[2026-05-31 13:36:04]   project.essentials_settings.essentials_folder = None
-[2026-05-31 13:36:04]   project.project_root = 'C:/Users/Vena/Documents/folders/RPGMaker\\Pokemon IA XPX'
-[2026-05-31 13:36:04]   fast-path: System.rxdata cached as matching (smid=1, x=9, y=7)
-[2026-05-31 13:36:04] 
-[2026-05-31 13:36:04] === _deploy_xpx_runtime ===
-[2026-05-31 13:36:04]   source: C:\Users\Vena\AppData\Local\Programs\XPXENG~1\_internal\base_runtime
-[2026-05-31 13:36:04]   dest:   C:\Users\Vena\Documents\folders\RPGMaker\Pokemon IA XPX
-[2026-05-31 13:36:04]   XPX install integrity: OK (1922 file(s), cached)
-[2026-05-31 13:36:04]   manifest: 5 file(s), 1 folder(s)
-[2026-05-31 13:36:04]     BEFORE Game.exe: 29105352 bytes, mtime=2026-05-17 21:11:20
-[2026-05-31 13:36:04]     BEFORE MANIFEST.json: 336034 bytes, mtime=2026-05-17 22:23:00
-[2026-05-31 13:36:04]     BEFORE build_info.json: 274 bytes, mtime=2026-05-17 22:23:00
-[2026-05-31 13:36:04]     BEFORE x64-msvcrt-ruby310.dll: 10240557 bytes, mtime=2026-05-17 21:11:20
-[2026-05-31 13:36:04]     BEFORE zlib1.dll: 128488 bytes, mtime=2026-05-17 15:30:22
-[2026-05-31 13:36:04]     5 file(s) already in sync — byte copy skipped
-[2026-05-31 13:36:05]     1 folder(s) already in sync — rebuild skipped
-[2026-05-31 13:36:05]     AFTER  Game.exe: 29105352 bytes, mtime=2026-05-17 21:11:20
-[2026-05-31 13:36:05]     AFTER  MANIFEST.json: 336034 bytes, mtime=2026-05-17 22:23:00
-[2026-05-31 13:36:05]     AFTER  build_info.json: 274 bytes, mtime=2026-05-17 22:23:00
-[2026-05-31 13:36:05]     AFTER  x64-msvcrt-ruby310.dll: 10240557 bytes, mtime=2026-05-17 21:11:20
-[2026-05-31 13:36:05]     AFTER  zlib1.dll: 128488 bytes, mtime=2026-05-17 15:30:22
-[2026-05-31 13:36:05]   hash-verifying against MANIFEST.json (runtime v0.3.3, 1922 expected file(s))
-[2026-05-31 13:36:05]     ? build_info.json: not in MANIFEST (extra file in runtime folder)
-[2026-05-31 13:36:05]   manifest verified: 3/1922 file(s) match shipped hashes; 0 mismatch(es), 0 error(s)
-[2026-05-31 13:36:05]   result: copied 5 file(s), 1 folder(s); verified 5/5 sizes; 0 file failure(s), 0 folder failure(s)
-[2026-05-31 13:36:05]   integrate timings (total 1205ms):
-[2026-05-31 13:36:05]     deploy_runtime              834.9ms
-[2026-05-31 13:36:05]     export_to_rxdata            348.1ms
-[2026-05-31 13:36:05]     write_tilesets                9.0ms
-[2026-05-31 13:36:05]     write_mkxp_json               7.4ms
-[2026-05-31 13:36:05]     write_system                  4.2ms
-[2026-05-31 13:36:05]     write_preload_script          1.4ms
-[2026-05-31 13:36:05]     seed_terrain_tags             0.0ms
-[2026-05-31 13:37:27] 
-[2026-05-31 13:37:27] ================================================
-[2026-05-31 13:37:27] === integrate_essentials invoked ===
-[2026-05-31 13:37:27]   project_root = 'C:/Users/Vena/Documents/folders/RPGMaker\\Pokemon IA XPX'
-[2026-05-31 13:37:27]   ess_folder   = 'C:\\Users\\Vena\\Documents\\folders\\RPGMaker\\Pokemon IA XPX'
-[2026-05-31 13:37:27]   project.start_map_id = 1
-[2026-05-31 13:37:27] === environment ===
-[2026-05-31 13:37:27]   os       : Windows 11 (10.0.26100)
-[2026-05-31 13:37:27]   arch     : AMD64
-[2026-05-31 13:37:27]   python   : 3.12.7 (tags/v3.12.7:0b05ead, Oct  1 2024, 03:06:41) [MSC v.1941 64 bit (AMD64)]
-[2026-05-31 13:37:27]   pyqt6    : 6.7.1 (Qt 6.7.1)
-[2026-05-31 13:37:27]   locale   : ('English_United Kingdom', '1252')
-[2026-05-31 13:37:27]   preferred encoding   : cp1252
-[2026-05-31 13:37:27]   filesystem encoding  : utf-8
-[2026-05-31 13:37:27]   default str encoding : utf-8
-[2026-05-31 13:37:27]   win32 code pages: ACP=1252, OEM=850
-[2026-05-31 13:37:27]   ess path repr : 'C:\\Users\\Vena\\Documents\\folders\\RPGMaker\\Pokemon IA XPX'
-[2026-05-31 13:37:27]   settings: do_preload=True, do_rxdata=True, do_runtime=True
-[2026-05-31 13:37:27]   Game.ini script source: kind='rxdata', ini_value='Data\\Scripts.rxdata', custom_script=None, entry_rb=None
-[2026-05-31 13:37:27]   export_to_rxdata: 4 written, 101 skipped (rxdata up-to-date)
-[2026-05-31 13:37:27] === write_system invoked ===
-[2026-05-31 13:37:27]   ess_folder = 'C:\\Users\\Vena\\Documents\\folders\\RPGMaker\\Pokemon IA XPX'
-[2026-05-31 13:37:27]   project.essentials_settings.essentials_folder = None
-[2026-05-31 13:37:27]   project.project_root = 'C:/Users/Vena/Documents/folders/RPGMaker\\Pokemon IA XPX'
-[2026-05-31 13:37:27]   fast-path: System.rxdata cached as matching (smid=1, x=9, y=7)
-[2026-05-31 13:37:27] 
-[2026-05-31 13:37:27] === _deploy_xpx_runtime ===
-[2026-05-31 13:37:27]   source: C:\Users\Vena\AppData\Local\Programs\XPXENG~1\_internal\base_runtime
-[2026-05-31 13:37:27]   dest:   C:\Users\Vena\Documents\folders\RPGMaker\Pokemon IA XPX
-[2026-05-31 13:37:27]   XPX install integrity: OK (1922 file(s), cached)
-[2026-05-31 13:37:27]   manifest: 5 file(s), 1 folder(s)
-[2026-05-31 13:37:27]     BEFORE Game.exe: 29105352 bytes, mtime=2026-05-17 21:11:20
-[2026-05-31 13:37:27]     BEFORE MANIFEST.json: 336034 bytes, mtime=2026-05-17 22:23:00
-[2026-05-31 13:37:27]     BEFORE build_info.json: 274 bytes, mtime=2026-05-17 22:23:00
-[2026-05-31 13:37:27]     BEFORE x64-msvcrt-ruby310.dll: 10240557 bytes, mtime=2026-05-17 21:11:20
-[2026-05-31 13:37:27]     BEFORE zlib1.dll: 128488 bytes, mtime=2026-05-17 15:30:22
-[2026-05-31 13:37:27]     5 file(s) already in sync — byte copy skipped
-[2026-05-31 13:37:28]     1 folder(s) already in sync — rebuild skipped
-[2026-05-31 13:37:28]     AFTER  Game.exe: 29105352 bytes, mtime=2026-05-17 21:11:20
-[2026-05-31 13:37:28]     AFTER  MANIFEST.json: 336034 bytes, mtime=2026-05-17 22:23:00
-[2026-05-31 13:37:28]     AFTER  build_info.json: 274 bytes, mtime=2026-05-17 22:23:00
-[2026-05-31 13:37:28]     AFTER  x64-msvcrt-ruby310.dll: 10240557 bytes, mtime=2026-05-17 21:11:20
-[2026-05-31 13:37:28]     AFTER  zlib1.dll: 128488 bytes, mtime=2026-05-17 15:30:22
-[2026-05-31 13:37:28]   hash-verifying against MANIFEST.json (runtime v0.3.3, 1922 expected file(s))
-[2026-05-31 13:37:28]     ? build_info.json: not in MANIFEST (extra file in runtime folder)
-[2026-05-31 13:37:28]   manifest verified: 3/1922 file(s) match shipped hashes; 0 mismatch(es), 0 error(s)
-[2026-05-31 13:37:28]   result: copied 5 file(s), 1 folder(s); verified 5/5 sizes; 0 file failure(s), 0 folder failure(s)
-[2026-05-31 13:37:28]   integrate timings (total 912ms):
-[2026-05-31 13:37:28]     deploy_runtime              555.0ms
-[2026-05-31 13:37:28]     export_to_rxdata            342.1ms
-[2026-05-31 13:37:28]     write_tilesets                6.2ms
-[2026-05-31 13:37:28]     write_mkxp_json               5.6ms
-[2026-05-31 13:37:28]     write_system                  2.6ms
-[2026-05-31 13:37:28]     write_preload_script          1.0ms
-[2026-05-31 13:37:28]     seed_terrain_tags             0.0ms
-[2026-05-31 13:38:00] 
-[2026-05-31 13:38:00] ================================================
-[2026-05-31 13:38:00] === integrate_essentials invoked ===
-[2026-05-31 13:38:00]   project_root = 'C:/Users/Vena/Documents/folders/RPGMaker\\Pokemon IA XPX'
-[2026-05-31 13:38:00]   ess_folder   = 'C:\\Users\\Vena\\Documents\\folders\\RPGMaker\\Pokemon IA XPX'
-[2026-05-31 13:38:00]   project.start_map_id = 1
-[2026-05-31 13:38:00] === environment ===
-[2026-05-31 13:38:00]   os       : Windows 11 (10.0.26100)
-[2026-05-31 13:38:00]   arch     : AMD64
-[2026-05-31 13:38:00]   python   : 3.12.7 (tags/v3.12.7:0b05ead, Oct  1 2024, 03:06:41) [MSC v.1941 64 bit (AMD64)]
-[2026-05-31 13:38:00]   pyqt6    : 6.7.1 (Qt 6.7.1)
-[2026-05-31 13:38:00]   locale   : ('English_United Kingdom', '1252')
-[2026-05-31 13:38:00]   preferred encoding   : cp1252
-[2026-05-31 13:38:00]   filesystem encoding  : utf-8
-[2026-05-31 13:38:00]   default str encoding : utf-8
-[2026-05-31 13:38:00]   win32 code pages: ACP=1252, OEM=850
-[2026-05-31 13:38:00]   ess path repr : 'C:\\Users\\Vena\\Documents\\folders\\RPGMaker\\Pokemon IA XPX'
-[2026-05-31 13:38:00]   settings: do_preload=True, do_rxdata=True, do_runtime=True
-[2026-05-31 13:38:00]   Game.ini script source: kind='rxdata', ini_value='Data\\Scripts.rxdata', custom_script=None, entry_rb=None
-[2026-05-31 13:38:00]   export_to_rxdata: 4 written, 101 skipped (rxdata up-to-date)
-[2026-05-31 13:38:00] === write_system invoked ===
-[2026-05-31 13:38:00]   ess_folder = 'C:\\Users\\Vena\\Documents\\folders\\RPGMaker\\Pokemon IA XPX'
-[2026-05-31 13:38:00]   project.essentials_settings.essentials_folder = None
-[2026-05-31 13:38:00]   project.project_root = 'C:/Users/Vena/Documents/folders/RPGMaker\\Pokemon IA XPX'
-[2026-05-31 13:38:00]   fast-path: System.rxdata cached as matching (smid=1, x=9, y=7)
-[2026-05-31 13:38:00] 
-[2026-05-31 13:38:00] === _deploy_xpx_runtime ===
-[2026-05-31 13:38:00]   source: C:\Users\Vena\AppData\Local\Programs\XPXENG~1\_internal\base_runtime
-[2026-05-31 13:38:00]   dest:   C:\Users\Vena\Documents\folders\RPGMaker\Pokemon IA XPX
-[2026-05-31 13:38:00]   XPX install integrity: OK (1922 file(s), cached)
-[2026-05-31 13:38:00]   manifest: 5 file(s), 1 folder(s)
-[2026-05-31 13:38:00]     BEFORE Game.exe: 29105352 bytes, mtime=2026-05-17 21:11:20
-[2026-05-31 13:38:00]     BEFORE MANIFEST.json: 336034 bytes, mtime=2026-05-17 22:23:00
-[2026-05-31 13:38:00]     BEFORE build_info.json: 274 bytes, mtime=2026-05-17 22:23:00
-[2026-05-31 13:38:00]     BEFORE x64-msvcrt-ruby310.dll: 10240557 bytes, mtime=2026-05-17 21:11:20
-[2026-05-31 13:38:00]     BEFORE zlib1.dll: 128488 bytes, mtime=2026-05-17 15:30:22
-[2026-05-31 13:38:00]     5 file(s) already in sync — byte copy skipped
-[2026-05-31 13:38:01]     1 folder(s) already in sync — rebuild skipped
-[2026-05-31 13:38:01]     AFTER  Game.exe: 29105352 bytes, mtime=2026-05-17 21:11:20
-[2026-05-31 13:38:01]     AFTER  MANIFEST.json: 336034 bytes, mtime=2026-05-17 22:23:00
-[2026-05-31 13:38:01]     AFTER  build_info.json: 274 bytes, mtime=2026-05-17 22:23:00
-[2026-05-31 13:38:01]     AFTER  x64-msvcrt-ruby310.dll: 10240557 bytes, mtime=2026-05-17 21:11:20
-[2026-05-31 13:38:01]     AFTER  zlib1.dll: 128488 bytes, mtime=2026-05-17 15:30:22
-[2026-05-31 13:38:01]   hash-verifying against MANIFEST.json (runtime v0.3.3, 1922 expected file(s))
-[2026-05-31 13:38:01]     ? build_info.json: not in MANIFEST (extra file in runtime folder)
-[2026-05-31 13:38:01]   manifest verified: 3/1922 file(s) match shipped hashes; 0 mismatch(es), 0 error(s)
-[2026-05-31 13:38:01]   result: copied 5 file(s), 1 folder(s); verified 5/5 sizes; 0 file failure(s), 0 folder failure(s)
-[2026-05-31 13:38:01]   integrate timings (total 994ms):
-[2026-05-31 13:38:01]     deploy_runtime              603.8ms
-[2026-05-31 13:38:01]     export_to_rxdata            367.5ms
-[2026-05-31 13:38:01]     write_tilesets               10.2ms
-[2026-05-31 13:38:01]     write_system                  6.6ms
-[2026-05-31 13:38:01]     write_mkxp_json               5.5ms
-[2026-05-31 13:38:01]     write_preload_script          0.9ms
-[2026-05-31 13:38:01]     seed_terrain_tags             0.0ms
-[2026-05-31 13:48:44] 
-[2026-05-31 13:48:44] ================================================
-[2026-05-31 13:48:44] === integrate_essentials invoked ===
-[2026-05-31 13:48:44]   project_root = 'C:/Users/Vena/Documents/folders/RPGMaker\\Pokemon IA XPX'
-[2026-05-31 13:48:44]   ess_folder   = 'C:\\Users\\Vena\\Documents\\folders\\RPGMaker\\Pokemon IA XPX'
-[2026-05-31 13:48:44]   project.start_map_id = 1
-[2026-05-31 13:48:44] === environment ===
-[2026-05-31 13:48:44]   os       : Windows 11 (10.0.26100)
-[2026-05-31 13:48:44]   arch     : AMD64
-[2026-05-31 13:48:44]   python   : 3.12.7 (tags/v3.12.7:0b05ead, Oct  1 2024, 03:06:41) [MSC v.1941 64 bit (AMD64)]
-[2026-05-31 13:48:44]   pyqt6    : 6.7.1 (Qt 6.7.1)
-[2026-05-31 13:48:44]   locale   : ('English_United Kingdom', '1252')
-[2026-05-31 13:48:44]   preferred encoding   : cp1252
-[2026-05-31 13:48:44]   filesystem encoding  : utf-8
-[2026-05-31 13:48:44]   default str encoding : utf-8
-[2026-05-31 13:48:44]   win32 code pages: ACP=1252, OEM=850
-[2026-05-31 13:48:44]   ess path repr : 'C:\\Users\\Vena\\Documents\\folders\\RPGMaker\\Pokemon IA XPX'
-[2026-05-31 13:48:44]   settings: do_preload=True, do_rxdata=True, do_runtime=True
-[2026-05-31 13:48:44]   Game.ini script source: kind='rxdata', ini_value='Data\\Scripts.rxdata', custom_script=None, entry_rb=None
-[2026-05-31 13:48:44]   export_to_rxdata: 4 written, 101 skipped (rxdata up-to-date)
-[2026-05-31 13:48:44] === write_system invoked ===
-[2026-05-31 13:48:44]   ess_folder = 'C:\\Users\\Vena\\Documents\\folders\\RPGMaker\\Pokemon IA XPX'
-[2026-05-31 13:48:44]   project.essentials_settings.essentials_folder = None
-[2026-05-31 13:48:44]   project.project_root = 'C:/Users/Vena/Documents/folders/RPGMaker\\Pokemon IA XPX'
-[2026-05-31 13:48:44]   fast-path: System.rxdata cached as matching (smid=1, x=9, y=7)
-[2026-05-31 13:48:44] 
-[2026-05-31 13:48:44] === _deploy_xpx_runtime ===
-[2026-05-31 13:48:44]   source: C:\Users\Vena\AppData\Local\Programs\XPXENG~1\_internal\base_runtime
-[2026-05-31 13:48:44]   dest:   C:\Users\Vena\Documents\folders\RPGMaker\Pokemon IA XPX
-[2026-05-31 13:48:44]   XPX install integrity: OK (1922 file(s), cached)
-[2026-05-31 13:48:44]   manifest: 5 file(s), 1 folder(s)
-[2026-05-31 13:48:44]     BEFORE Game.exe: 29105352 bytes, mtime=2026-05-17 21:11:20
-[2026-05-31 13:48:44]     BEFORE MANIFEST.json: 336034 bytes, mtime=2026-05-17 22:23:00
-[2026-05-31 13:48:44]     BEFORE build_info.json: 274 bytes, mtime=2026-05-17 22:23:00
-[2026-05-31 13:48:44]     BEFORE x64-msvcrt-ruby310.dll: 10240557 bytes, mtime=2026-05-17 21:11:20
-[2026-05-31 13:48:44]     BEFORE zlib1.dll: 128488 bytes, mtime=2026-05-17 15:30:22
-[2026-05-31 13:48:44]     5 file(s) already in sync — byte copy skipped
-[2026-05-31 13:48:45]     1 folder(s) already in sync — rebuild skipped
-[2026-05-31 13:48:45]     AFTER  Game.exe: 29105352 bytes, mtime=2026-05-17 21:11:20
-[2026-05-31 13:48:45]     AFTER  MANIFEST.json: 336034 bytes, mtime=2026-05-17 22:23:00
-[2026-05-31 13:48:45]     AFTER  build_info.json: 274 bytes, mtime=2026-05-17 22:23:00
-[2026-05-31 13:48:45]     AFTER  x64-msvcrt-ruby310.dll: 10240557 bytes, mtime=2026-05-17 21:11:20
-[2026-05-31 13:48:45]     AFTER  zlib1.dll: 128488 bytes, mtime=2026-05-17 15:30:22
-[2026-05-31 13:48:45]   hash-verifying against MANIFEST.json (runtime v0.3.3, 1922 expected file(s))
-[2026-05-31 13:48:45]     ? build_info.json: not in MANIFEST (extra file in runtime folder)
-[2026-05-31 13:48:45]   manifest verified: 3/1922 file(s) match shipped hashes; 0 mismatch(es), 0 error(s)
-[2026-05-31 13:48:45]   result: copied 5 file(s), 1 folder(s); verified 5/5 sizes; 0 file failure(s), 0 folder failure(s)
-[2026-05-31 13:48:45]   integrate timings (total 892ms):
-[2026-05-31 13:48:45]     deploy_runtime              506.8ms
-[2026-05-31 13:48:45]     export_to_rxdata            367.6ms
-[2026-05-31 13:48:45]     write_mkxp_json               7.3ms
-[2026-05-31 13:48:45]     write_tilesets                6.0ms
-[2026-05-31 13:48:45]     write_system                  2.7ms
-[2026-05-31 13:48:45]     write_preload_script          1.3ms
-[2026-05-31 13:48:45]     seed_terrain_tags             0.0ms
-[2026-05-31 13:58:46] 
-[2026-05-31 13:58:46] ================================================
-[2026-05-31 13:58:46] === integrate_essentials invoked ===
-[2026-05-31 13:58:46]   project_root = 'C:/Users/Vena/Documents/folders/RPGMaker\\Pokemon IA XPX'
-[2026-05-31 13:58:46]   ess_folder   = 'C:\\Users\\Vena\\Documents\\folders\\RPGMaker\\Pokemon IA XPX'
-[2026-05-31 13:58:46]   project.start_map_id = 1
-[2026-05-31 13:58:46] === environment ===
-[2026-05-31 13:58:46]   os       : Windows 11 (10.0.26100)
-[2026-05-31 13:58:46]   arch     : AMD64
-[2026-05-31 13:58:46]   python   : 3.12.7 (tags/v3.12.7:0b05ead, Oct  1 2024, 03:06:41) [MSC v.1941 64 bit (AMD64)]
-[2026-05-31 13:58:46]   pyqt6    : 6.7.1 (Qt 6.7.1)
-[2026-05-31 13:58:46]   locale   : ('English_United Kingdom', '1252')
-[2026-05-31 13:58:46]   preferred encoding   : cp1252
-[2026-05-31 13:58:46]   filesystem encoding  : utf-8
-[2026-05-31 13:58:46]   default str encoding : utf-8
-[2026-05-31 13:58:46]   win32 code pages: ACP=1252, OEM=850
-[2026-05-31 13:58:46]   ess path repr : 'C:\\Users\\Vena\\Documents\\folders\\RPGMaker\\Pokemon IA XPX'
-[2026-05-31 13:58:46]   settings: do_preload=True, do_rxdata=True, do_runtime=True
-[2026-05-31 13:58:46]   Game.ini script source: kind='rxdata', ini_value='Data\\Scripts.rxdata', custom_script=None, entry_rb=None
-[2026-05-31 13:58:46]   export_to_rxdata: 4 written, 101 skipped (rxdata up-to-date)
-[2026-05-31 13:58:46] === write_system invoked ===
-[2026-05-31 13:58:46]   ess_folder = 'C:\\Users\\Vena\\Documents\\folders\\RPGMaker\\Pokemon IA XPX'
-[2026-05-31 13:58:46]   project.essentials_settings.essentials_folder = None
-[2026-05-31 13:58:46]   project.project_root = 'C:/Users/Vena/Documents/folders/RPGMaker\\Pokemon IA XPX'
-[2026-05-31 13:58:46]   fast-path: System.rxdata cached as matching (smid=1, x=9, y=7)
-[2026-05-31 13:58:46] 
-[2026-05-31 13:58:46] === _deploy_xpx_runtime ===
-[2026-05-31 13:58:46]   source: C:\Users\Vena\AppData\Local\Programs\XPXENG~1\_internal\base_runtime
-[2026-05-31 13:58:46]   dest:   C:\Users\Vena\Documents\folders\RPGMaker\Pokemon IA XPX
-[2026-05-31 13:58:46]   XPX install integrity: OK (1922 file(s), cached)
-[2026-05-31 13:58:46]   manifest: 5 file(s), 1 folder(s)
-[2026-05-31 13:58:46]     BEFORE Game.exe: 29105352 bytes, mtime=2026-05-17 21:11:20
-[2026-05-31 13:58:46]     BEFORE MANIFEST.json: 336034 bytes, mtime=2026-05-17 22:23:00
-[2026-05-31 13:58:46]     BEFORE build_info.json: 274 bytes, mtime=2026-05-17 22:23:00
-[2026-05-31 13:58:46]     BEFORE x64-msvcrt-ruby310.dll: 10240557 bytes, mtime=2026-05-17 21:11:20
-[2026-05-31 13:58:46]     BEFORE zlib1.dll: 128488 bytes, mtime=2026-05-17 15:30:22
-[2026-05-31 13:58:46]     5 file(s) already in sync — byte copy skipped
-[2026-05-31 13:58:47]     1 folder(s) already in sync — rebuild skipped
-[2026-05-31 13:58:47]     AFTER  Game.exe: 29105352 bytes, mtime=2026-05-17 21:11:20
-[2026-05-31 13:58:47]     AFTER  MANIFEST.json: 336034 bytes, mtime=2026-05-17 22:23:00
-[2026-05-31 13:58:47]     AFTER  build_info.json: 274 bytes, mtime=2026-05-17 22:23:00
-[2026-05-31 13:58:47]     AFTER  x64-msvcrt-ruby310.dll: 10240557 bytes, mtime=2026-05-17 21:11:20
-[2026-05-31 13:58:47]     AFTER  zlib1.dll: 128488 bytes, mtime=2026-05-17 15:30:22
-[2026-05-31 13:58:47]   hash-verifying against MANIFEST.json (runtime v0.3.3, 1922 expected file(s))
-[2026-05-31 13:58:47]     ? build_info.json: not in MANIFEST (extra file in runtime folder)
-[2026-05-31 13:58:47]   manifest verified: 3/1922 file(s) match shipped hashes; 0 mismatch(es), 0 error(s)
-[2026-05-31 13:58:47]   result: copied 5 file(s), 1 folder(s); verified 5/5 sizes; 0 file failure(s), 0 folder failure(s)
-[2026-05-31 13:58:47]   integrate timings (total 1031ms):
-[2026-05-31 13:58:47]     deploy_runtime              606.6ms
-[2026-05-31 13:58:47]     export_to_rxdata            406.3ms
-[2026-05-31 13:58:47]     write_mkxp_json               6.3ms
-[2026-05-31 13:58:47]     write_tilesets                6.1ms
-[2026-05-31 13:58:47]     write_system                  4.2ms
-[2026-05-31 13:58:47]     write_preload_script          1.7ms
-[2026-05-31 13:58:47]     seed_terrain_tags             0.0ms
-[2026-05-31 14:04:29] 
-[2026-05-31 14:04:29] ================================================
-[2026-05-31 14:04:29] === integrate_essentials invoked ===
-[2026-05-31 14:04:29]   project_root = 'C:/Users/Vena/Documents/folders/RPGMaker\\Pokemon IA XPX'
-[2026-05-31 14:04:29]   ess_folder   = 'C:\\Users\\Vena\\Documents\\folders\\RPGMaker\\Pokemon IA XPX'
-[2026-05-31 14:04:29]   project.start_map_id = 1
-[2026-05-31 14:04:29] === environment ===
-[2026-05-31 14:04:29]   os       : Windows 11 (10.0.26100)
-[2026-05-31 14:04:29]   arch     : AMD64
-[2026-05-31 14:04:29]   python   : 3.12.7 (tags/v3.12.7:0b05ead, Oct  1 2024, 03:06:41) [MSC v.1941 64 bit (AMD64)]
-[2026-05-31 14:04:29]   pyqt6    : 6.7.1 (Qt 6.7.1)
-[2026-05-31 14:04:29]   locale   : ('English_United Kingdom', '1252')
+05-31 14:04:29]   locale   : ('English_United Kingdom', '1252')
 [2026-05-31 14:04:29]   preferred encoding   : cp1252
 [2026-05-31 14:04:29]   filesystem encoding  : utf-8
 [2026-05-31 14:04:29]   default str encoding : utf-8
@@ -3127,3 +1424,715 @@
 [2026-06-02 11:23:11]     write_system                  2.7ms
 [2026-06-02 11:23:11]     write_preload_script          0.9ms
 [2026-06-02 11:23:11]     seed_terrain_tags             0.0ms
+[2026-06-02 13:45:05] 
+[2026-06-02 13:45:05] ================================================
+[2026-06-02 13:45:05] === integrate_essentials invoked ===
+[2026-06-02 13:45:05]   project_root = 'C:\\Users\\Vena\\Documents\\folders\\RPGMaker\\Pokemon IA XPX'
+[2026-06-02 13:45:05]   ess_folder   = 'C:\\Users\\Vena\\Documents\\folders\\RPGMaker\\Pokemon IA XPX'
+[2026-06-02 13:45:05]   project.start_map_id = 1
+[2026-06-02 13:45:05] === environment ===
+[2026-06-02 13:45:05]   os       : Windows 11 (10.0.26100)
+[2026-06-02 13:45:05]   arch     : AMD64
+[2026-06-02 13:45:05]   python   : 3.12.7 (tags/v3.12.7:0b05ead, Oct  1 2024, 03:06:41) [MSC v.1941 64 bit (AMD64)]
+[2026-06-02 13:45:05]   pyqt6    : 6.7.1 (Qt 6.7.1)
+[2026-06-02 13:45:05]   locale   : ('English_United Kingdom', '1252')
+[2026-06-02 13:45:05]   preferred encoding   : cp1252
+[2026-06-02 13:45:05]   filesystem encoding  : utf-8
+[2026-06-02 13:45:05]   default str encoding : utf-8
+[2026-06-02 13:45:05]   win32 code pages: ACP=1252, OEM=850
+[2026-06-02 13:45:05]   ess path repr : 'C:\\Users\\Vena\\Documents\\folders\\RPGMaker\\Pokemon IA XPX'
+[2026-06-02 13:45:05]   settings: do_preload=True, do_rxdata=True, do_runtime=True
+[2026-06-02 13:45:05]   Game.ini script source: kind='rxdata', ini_value='Data\\Scripts.rxdata', custom_script=None, entry_rb=None
+[2026-06-02 13:45:05]   export_to_rxdata: 0 written, 105 skipped (rxdata up-to-date)
+[2026-06-02 13:45:05] === write_system invoked ===
+[2026-06-02 13:45:05]   ess_folder = 'C:\\Users\\Vena\\Documents\\folders\\RPGMaker\\Pokemon IA XPX'
+[2026-06-02 13:45:05]   project.essentials_settings.essentials_folder = None
+[2026-06-02 13:45:05]   project.project_root = 'C:\\Users\\Vena\\Documents\\folders\\RPGMaker\\Pokemon IA XPX'
+[2026-06-02 13:45:05]   sys_path   = 'C:\\Users\\Vena\\Documents\\folders\\RPGMaker\\Pokemon IA XPX\\Data\\System.rxdata'
+[2026-06-02 13:45:05]   exists?    = True
+[2026-06-02 13:45:05]   existing System.rxdata: 4657 bytes, mtime=2026-06-01 16:06:22
+[2026-06-02 13:45:06]   System.rxdata* files found in tree: 1
+[2026-06-02 13:45:06]     - C:\Users\Vena\Documents\folders\RPGMaker\Pokemon IA XPX\Data\System.rxdata
+[2026-06-02 13:45:06]   current System.rxdata: @start_map_id=1, @start_x=9, @start_y=7
+[2026-06-02 13:45:06]   project state: start_map_id=1, start_x=9, start_y=7
+[2026-06-02 13:45:06]   target values: @start_map_id=1, @start_x=9, @start_y=7 (fallback=False)
+[2026-06-02 13:45:06]   no-op: System.rxdata already matches target
+[2026-06-02 13:45:06] 
+[2026-06-02 13:45:06] === _deploy_xpx_runtime ===
+[2026-06-02 13:45:06]   source: C:\Users\Vena\AppData\Local\Programs\XPXENG~1\_internal\base_runtime
+[2026-06-02 13:45:06]   dest:   C:\Users\Vena\Documents\folders\RPGMaker\Pokemon IA XPX
+[2026-06-02 13:45:06]   XPX install integrity: OK (1922 file(s), cached)
+[2026-06-02 13:45:06]   manifest: 5 file(s), 1 folder(s)
+[2026-06-02 13:45:06]     BEFORE Game.exe: 29110999 bytes, mtime=2026-06-01 12:27:36
+[2026-06-02 13:45:06]     BEFORE MANIFEST.json: 336030 bytes, mtime=2026-06-01 14:40:56
+[2026-06-02 13:45:06]     BEFORE build_info.json: 274 bytes, mtime=2026-06-01 14:40:56
+[2026-06-02 13:45:06]     BEFORE x64-msvcrt-ruby310.dll: 10240557 bytes, mtime=2026-06-01 11:56:00
+[2026-06-02 13:45:06]     BEFORE zlib1.dll: 128488 bytes, mtime=2026-06-01 11:56:22
+[2026-06-02 13:45:10]     AFTER  Game.exe: 29110999 bytes, mtime=2026-06-02 12:28:44
+[2026-06-02 13:45:10]     AFTER  MANIFEST.json: 336030 bytes, mtime=2026-06-02 12:52:54
+[2026-06-02 13:45:10]     AFTER  build_info.json: 274 bytes, mtime=2026-06-02 12:52:54
+[2026-06-02 13:45:10]     AFTER  x64-msvcrt-ruby310.dll: 10240557 bytes, mtime=2026-06-02 12:28:44
+[2026-06-02 13:45:10]     AFTER  zlib1.dll: 128488 bytes, mtime=2026-06-02 12:29:08
+[2026-06-02 13:45:10]   hash-verifying against MANIFEST.json (runtime v0.3.5, 1922 expected file(s))
+[2026-06-02 13:45:10]     ? build_info.json: not in MANIFEST (extra file in runtime folder)
+[2026-06-02 13:45:11]   manifest verified: 3/1922 file(s) match shipped hashes; 0 mismatch(es), 0 error(s)
+[2026-06-02 13:45:11]   result: copied 5 file(s), 1 folder(s); verified 5/5 sizes; 0 file failure(s), 0 folder failure(s)
+[2026-06-02 13:45:11]   integrate timings (total 5829ms):
+[2026-06-02 13:45:11]     deploy_runtime             5226.0ms
+[2026-06-02 13:45:11]     export_to_rxdata            306.5ms
+[2026-06-02 13:45:11]     write_system                277.8ms
+[2026-06-02 13:45:11]     write_mkxp_json               8.9ms
+[2026-06-02 13:45:11]     write_tilesets                8.4ms
+[2026-06-02 13:45:11]     write_preload_script          1.5ms
+[2026-06-02 13:45:11]     seed_terrain_tags             0.0ms
+[2026-06-02 13:57:06] 
+[2026-06-02 13:57:06] ================================================
+[2026-06-02 13:57:06] === integrate_essentials invoked ===
+[2026-06-02 13:57:06]   project_root = 'C:\\Users\\Vena\\Documents\\folders\\RPGMaker\\Pokemon IA XPX'
+[2026-06-02 13:57:06]   ess_folder   = 'C:\\Users\\Vena\\Documents\\folders\\RPGMaker\\Pokemon IA XPX'
+[2026-06-02 13:57:06]   project.start_map_id = 1
+[2026-06-02 13:57:06] === environment ===
+[2026-06-02 13:57:06]   os       : Windows 11 (10.0.26100)
+[2026-06-02 13:57:06]   arch     : AMD64
+[2026-06-02 13:57:06]   python   : 3.12.7 (tags/v3.12.7:0b05ead, Oct  1 2024, 03:06:41) [MSC v.1941 64 bit (AMD64)]
+[2026-06-02 13:57:06]   pyqt6    : 6.7.1 (Qt 6.7.1)
+[2026-06-02 13:57:06]   locale   : ('English_United Kingdom', '1252')
+[2026-06-02 13:57:06]   preferred encoding   : cp1252
+[2026-06-02 13:57:06]   filesystem encoding  : utf-8
+[2026-06-02 13:57:06]   default str encoding : utf-8
+[2026-06-02 13:57:06]   win32 code pages: ACP=1252, OEM=850
+[2026-06-02 13:57:06]   ess path repr : 'C:\\Users\\Vena\\Documents\\folders\\RPGMaker\\Pokemon IA XPX'
+[2026-06-02 13:57:06]   settings: do_preload=True, do_rxdata=True, do_runtime=True
+[2026-06-02 13:57:06]   Game.ini script source: kind='rxdata', ini_value='Data\\Scripts.rxdata', custom_script=None, entry_rb=None
+[2026-06-02 13:57:06]   export_to_rxdata: 0 written, 105 skipped (rxdata up-to-date)
+[2026-06-02 13:57:06] === write_system invoked ===
+[2026-06-02 13:57:06]   ess_folder = 'C:\\Users\\Vena\\Documents\\folders\\RPGMaker\\Pokemon IA XPX'
+[2026-06-02 13:57:06]   project.essentials_settings.essentials_folder = None
+[2026-06-02 13:57:06]   project.project_root = 'C:\\Users\\Vena\\Documents\\folders\\RPGMaker\\Pokemon IA XPX'
+[2026-06-02 13:57:06]   fast-path: System.rxdata cached as matching (smid=1, x=9, y=7)
+[2026-06-02 13:57:06] 
+[2026-06-02 13:57:06] === _deploy_xpx_runtime ===
+[2026-06-02 13:57:06]   source: C:\Users\Vena\AppData\Local\Programs\XPXENG~1\_internal\base_runtime
+[2026-06-02 13:57:06]   dest:   C:\Users\Vena\Documents\folders\RPGMaker\Pokemon IA XPX
+[2026-06-02 13:57:06]   XPX install integrity: OK (1922 file(s), cached)
+[2026-06-02 13:57:06]   manifest: 5 file(s), 1 folder(s)
+[2026-06-02 13:57:06]     BEFORE Game.exe: 29110999 bytes, mtime=2026-06-02 12:28:44
+[2026-06-02 13:57:06]     BEFORE MANIFEST.json: 336030 bytes, mtime=2026-06-02 12:52:54
+[2026-06-02 13:57:06]     BEFORE build_info.json: 274 bytes, mtime=2026-06-02 12:52:54
+[2026-06-02 13:57:06]     BEFORE x64-msvcrt-ruby310.dll: 10240557 bytes, mtime=2026-06-02 12:28:44
+[2026-06-02 13:57:06]     BEFORE zlib1.dll: 128488 bytes, mtime=2026-06-02 12:29:08
+[2026-06-02 13:57:06]     5 file(s) already in sync — byte copy skipped
+[2026-06-02 13:57:06]     1 folder(s) already in sync — rebuild skipped
+[2026-06-02 13:57:06]     AFTER  Game.exe: 29110999 bytes, mtime=2026-06-02 12:28:44
+[2026-06-02 13:57:06]     AFTER  MANIFEST.json: 336030 bytes, mtime=2026-06-02 12:52:54
+[2026-06-02 13:57:06]     AFTER  build_info.json: 274 bytes, mtime=2026-06-02 12:52:54
+[2026-06-02 13:57:06]     AFTER  x64-msvcrt-ruby310.dll: 10240557 bytes, mtime=2026-06-02 12:28:44
+[2026-06-02 13:57:06]     AFTER  zlib1.dll: 128488 bytes, mtime=2026-06-02 12:29:08
+[2026-06-02 13:57:06]   hash-verifying against MANIFEST.json (runtime v0.3.5, 1922 expected file(s))
+[2026-06-02 13:57:06]     ? build_info.json: not in MANIFEST (extra file in runtime folder)
+[2026-06-02 13:57:06]   manifest verified: 3/1922 file(s) match shipped hashes; 0 mismatch(es), 0 error(s)
+[2026-06-02 13:57:06]   result: copied 5 file(s), 1 folder(s); verified 5/5 sizes; 0 file failure(s), 0 folder failure(s)
+[2026-06-02 13:57:06]   integrate timings (total 728ms):
+[2026-06-02 13:57:06]     deploy_runtime              448.1ms
+[2026-06-02 13:57:06]     export_to_rxdata            248.9ms
+[2026-06-02 13:57:06]     write_tilesets               19.1ms
+[2026-06-02 13:57:06]     write_mkxp_json               7.8ms
+[2026-06-02 13:57:06]     write_system                  2.8ms
+[2026-06-02 13:57:06]     write_preload_script          0.9ms
+[2026-06-02 13:57:06]     seed_terrain_tags             0.0ms
+[2026-06-02 13:57:40] 
+[2026-06-02 13:57:40] ================================================
+[2026-06-02 13:57:40] === integrate_essentials invoked ===
+[2026-06-02 13:57:40]   project_root = 'C:\\Users\\Vena\\Documents\\folders\\RPGMaker\\Pokemon IA XPX'
+[2026-06-02 13:57:40]   ess_folder   = 'C:\\Users\\Vena\\Documents\\folders\\RPGMaker\\Pokemon IA XPX'
+[2026-06-02 13:57:40]   project.start_map_id = 1
+[2026-06-02 13:57:40] === environment ===
+[2026-06-02 13:57:40]   os       : Windows 11 (10.0.26100)
+[2026-06-02 13:57:40]   arch     : AMD64
+[2026-06-02 13:57:40]   python   : 3.12.7 (tags/v3.12.7:0b05ead, Oct  1 2024, 03:06:41) [MSC v.1941 64 bit (AMD64)]
+[2026-06-02 13:57:40]   pyqt6    : 6.7.1 (Qt 6.7.1)
+[2026-06-02 13:57:40]   locale   : ('English_United Kingdom', '1252')
+[2026-06-02 13:57:40]   preferred encoding   : cp1252
+[2026-06-02 13:57:40]   filesystem encoding  : utf-8
+[2026-06-02 13:57:40]   default str encoding : utf-8
+[2026-06-02 13:57:40]   win32 code pages: ACP=1252, OEM=850
+[2026-06-02 13:57:40]   ess path repr : 'C:\\Users\\Vena\\Documents\\folders\\RPGMaker\\Pokemon IA XPX'
+[2026-06-02 13:57:40]   settings: do_preload=True, do_rxdata=True, do_runtime=True
+[2026-06-02 13:57:40]   Game.ini script source: kind='rxdata', ini_value='Data\\Scripts.rxdata', custom_script=None, entry_rb=None
+[2026-06-02 13:57:40]   export_to_rxdata: 0 written, 105 skipped (rxdata up-to-date)
+[2026-06-02 13:57:40] === write_system invoked ===
+[2026-06-02 13:57:40]   ess_folder = 'C:\\Users\\Vena\\Documents\\folders\\RPGMaker\\Pokemon IA XPX'
+[2026-06-02 13:57:40]   project.essentials_settings.essentials_folder = None
+[2026-06-02 13:57:40]   project.project_root = 'C:\\Users\\Vena\\Documents\\folders\\RPGMaker\\Pokemon IA XPX'
+[2026-06-02 13:57:40]   fast-path: System.rxdata cached as matching (smid=1, x=9, y=7)
+[2026-06-02 13:57:40] 
+[2026-06-02 13:57:40] === _deploy_xpx_runtime ===
+[2026-06-02 13:57:40]   source: C:\Users\Vena\AppData\Local\Programs\XPXENG~1\_internal\base_runtime
+[2026-06-02 13:57:40]   dest:   C:\Users\Vena\Documents\folders\RPGMaker\Pokemon IA XPX
+[2026-06-02 13:57:40]   XPX install integrity: OK (1922 file(s), cached)
+[2026-06-02 13:57:40]   manifest: 5 file(s), 1 folder(s)
+[2026-06-02 13:57:40]     BEFORE Game.exe: 29110999 bytes, mtime=2026-06-02 12:28:44
+[2026-06-02 13:57:40]     BEFORE MANIFEST.json: 336030 bytes, mtime=2026-06-02 12:52:54
+[2026-06-02 13:57:40]     BEFORE build_info.json: 274 bytes, mtime=2026-06-02 12:52:54
+[2026-06-02 13:57:40]     BEFORE x64-msvcrt-ruby310.dll: 10240557 bytes, mtime=2026-06-02 12:28:44
+[2026-06-02 13:57:40]     BEFORE zlib1.dll: 128488 bytes, mtime=2026-06-02 12:29:08
+[2026-06-02 13:57:40]     5 file(s) already in sync — byte copy skipped
+[2026-06-02 13:57:41]     1 folder(s) already in sync — rebuild skipped
+[2026-06-02 13:57:41]     AFTER  Game.exe: 29110999 bytes, mtime=2026-06-02 12:28:44
+[2026-06-02 13:57:41]     AFTER  MANIFEST.json: 336030 bytes, mtime=2026-06-02 12:52:54
+[2026-06-02 13:57:41]     AFTER  build_info.json: 274 bytes, mtime=2026-06-02 12:52:54
+[2026-06-02 13:57:41]     AFTER  x64-msvcrt-ruby310.dll: 10240557 bytes, mtime=2026-06-02 12:28:44
+[2026-06-02 13:57:41]     AFTER  zlib1.dll: 128488 bytes, mtime=2026-06-02 12:29:08
+[2026-06-02 13:57:41]   hash-verifying against MANIFEST.json (runtime v0.3.5, 1922 expected file(s))
+[2026-06-02 13:57:41]     ? build_info.json: not in MANIFEST (extra file in runtime folder)
+[2026-06-02 13:57:41]   manifest verified: 3/1922 file(s) match shipped hashes; 0 mismatch(es), 0 error(s)
+[2026-06-02 13:57:41]   result: copied 5 file(s), 1 folder(s); verified 5/5 sizes; 0 file failure(s), 0 folder failure(s)
+[2026-06-02 13:57:41]   integrate timings (total 772ms):
+[2026-06-02 13:57:41]     deploy_runtime              455.1ms
+[2026-06-02 13:57:41]     export_to_rxdata            287.7ms
+[2026-06-02 13:57:41]     write_tilesets               20.2ms
+[2026-06-02 13:57:41]     write_mkxp_json               5.3ms
+[2026-06-02 13:57:41]     write_system                  2.6ms
+[2026-06-02 13:57:41]     write_preload_script          0.9ms
+[2026-06-02 13:57:41]     seed_terrain_tags             0.0ms
+[2026-06-02 14:07:39] 
+[2026-06-02 14:07:39] ================================================
+[2026-06-02 14:07:39] === integrate_essentials invoked ===
+[2026-06-02 14:07:39]   project_root = 'C:\\Users\\Vena\\Documents\\folders\\RPGMaker\\Pokemon IA XPX'
+[2026-06-02 14:07:39]   ess_folder   = 'C:\\Users\\Vena\\Documents\\folders\\RPGMaker\\Pokemon IA XPX'
+[2026-06-02 14:07:39]   project.start_map_id = 1
+[2026-06-02 14:07:39] === environment ===
+[2026-06-02 14:07:39]   os       : Windows 11 (10.0.26100)
+[2026-06-02 14:07:39]   arch     : AMD64
+[2026-06-02 14:07:39]   python   : 3.12.7 (tags/v3.12.7:0b05ead, Oct  1 2024, 03:06:41) [MSC v.1941 64 bit (AMD64)]
+[2026-06-02 14:07:39]   pyqt6    : 6.7.1 (Qt 6.7.1)
+[2026-06-02 14:07:39]   locale   : ('English_United Kingdom', '1252')
+[2026-06-02 14:07:39]   preferred encoding   : cp1252
+[2026-06-02 14:07:39]   filesystem encoding  : utf-8
+[2026-06-02 14:07:39]   default str encoding : utf-8
+[2026-06-02 14:07:39]   win32 code pages: ACP=1252, OEM=850
+[2026-06-02 14:07:39]   ess path repr : 'C:\\Users\\Vena\\Documents\\folders\\RPGMaker\\Pokemon IA XPX'
+[2026-06-02 14:07:39]   settings: do_preload=True, do_rxdata=True, do_runtime=True
+[2026-06-02 14:07:39]   Game.ini script source: kind='rxdata', ini_value='Data\\Scripts.rxdata', custom_script=None, entry_rb=None
+[2026-06-02 14:07:39]   export_to_rxdata: 1 written, 104 skipped (rxdata up-to-date)
+[2026-06-02 14:07:39] === write_system invoked ===
+[2026-06-02 14:07:39]   ess_folder = 'C:\\Users\\Vena\\Documents\\folders\\RPGMaker\\Pokemon IA XPX'
+[2026-06-02 14:07:39]   project.essentials_settings.essentials_folder = None
+[2026-06-02 14:07:39]   project.project_root = 'C:\\Users\\Vena\\Documents\\folders\\RPGMaker\\Pokemon IA XPX'
+[2026-06-02 14:07:39]   fast-path: System.rxdata cached as matching (smid=1, x=9, y=7)
+[2026-06-02 14:07:39] 
+[2026-06-02 14:07:39] === _deploy_xpx_runtime ===
+[2026-06-02 14:07:39]   source: C:\Users\Vena\AppData\Local\Programs\XPXENG~1\_internal\base_runtime
+[2026-06-02 14:07:39]   dest:   C:\Users\Vena\Documents\folders\RPGMaker\Pokemon IA XPX
+[2026-06-02 14:07:39]   XPX install integrity: OK (1922 file(s), cached)
+[2026-06-02 14:07:39]   manifest: 5 file(s), 1 folder(s)
+[2026-06-02 14:07:39]     BEFORE Game.exe: 29110999 bytes, mtime=2026-06-02 12:28:44
+[2026-06-02 14:07:39]     BEFORE MANIFEST.json: 336030 bytes, mtime=2026-06-02 12:52:54
+[2026-06-02 14:07:39]     BEFORE build_info.json: 274 bytes, mtime=2026-06-02 12:52:54
+[2026-06-02 14:07:39]     BEFORE x64-msvcrt-ruby310.dll: 10240557 bytes, mtime=2026-06-02 12:28:44
+[2026-06-02 14:07:39]     BEFORE zlib1.dll: 128488 bytes, mtime=2026-06-02 12:29:08
+[2026-06-02 14:07:39]     5 file(s) already in sync — byte copy skipped
+[2026-06-02 14:07:39]     1 folder(s) already in sync — rebuild skipped
+[2026-06-02 14:07:39]     AFTER  Game.exe: 29110999 bytes, mtime=2026-06-02 12:28:44
+[2026-06-02 14:07:39]     AFTER  MANIFEST.json: 336030 bytes, mtime=2026-06-02 12:52:54
+[2026-06-02 14:07:39]     AFTER  build_info.json: 274 bytes, mtime=2026-06-02 12:52:54
+[2026-06-02 14:07:39]     AFTER  x64-msvcrt-ruby310.dll: 10240557 bytes, mtime=2026-06-02 12:28:44
+[2026-06-02 14:07:39]     AFTER  zlib1.dll: 128488 bytes, mtime=2026-06-02 12:29:08
+[2026-06-02 14:07:39]   hash-verifying against MANIFEST.json (runtime v0.3.5, 1922 expected file(s))
+[2026-06-02 14:07:39]     ? build_info.json: not in MANIFEST (extra file in runtime folder)
+[2026-06-02 14:07:39]   manifest verified: 3/1922 file(s) match shipped hashes; 0 mismatch(es), 0 error(s)
+[2026-06-02 14:07:39]   result: copied 5 file(s), 1 folder(s); verified 5/5 sizes; 0 file failure(s), 0 folder failure(s)
+[2026-06-02 14:07:39]   integrate timings (total 817ms):
+[2026-06-02 14:07:39]     deploy_runtime              465.9ms
+[2026-06-02 14:07:39]     export_to_rxdata            330.6ms
+[2026-06-02 14:07:39]     write_tilesets                9.9ms
+[2026-06-02 14:07:39]     write_mkxp_json               6.0ms
+[2026-06-02 14:07:39]     write_system                  3.1ms
+[2026-06-02 14:07:39]     write_preload_script          1.3ms
+[2026-06-02 14:07:39]     seed_terrain_tags             0.0ms
+[2026-06-02 17:10:51] 
+[2026-06-02 17:10:51] ================================================
+[2026-06-02 17:10:51] === integrate_essentials invoked ===
+[2026-06-02 17:10:51]   project_root = 'C:\\Users\\Vena\\Documents\\folders\\RPGMaker\\Pokemon IA XPX'
+[2026-06-02 17:10:51]   ess_folder   = 'C:\\Users\\Vena\\Documents\\folders\\RPGMaker\\Pokemon IA XPX'
+[2026-06-02 17:10:51]   project.start_map_id = 1
+[2026-06-02 17:10:51] === environment ===
+[2026-06-02 17:10:51]   os       : Windows 11 (10.0.26100)
+[2026-06-02 17:10:51]   arch     : AMD64
+[2026-06-02 17:10:51]   python   : 3.12.7 (tags/v3.12.7:0b05ead, Oct  1 2024, 03:06:41) [MSC v.1941 64 bit (AMD64)]
+[2026-06-02 17:10:51]   pyqt6    : 6.7.1 (Qt 6.7.1)
+[2026-06-02 17:10:51]   locale   : ('English_United Kingdom', '1252')
+[2026-06-02 17:10:51]   preferred encoding   : cp1252
+[2026-06-02 17:10:51]   filesystem encoding  : utf-8
+[2026-06-02 17:10:51]   default str encoding : utf-8
+[2026-06-02 17:10:51]   win32 code pages: ACP=1252, OEM=850
+[2026-06-02 17:10:51]   ess path repr : 'C:\\Users\\Vena\\Documents\\folders\\RPGMaker\\Pokemon IA XPX'
+[2026-06-02 17:10:51]   settings: do_preload=True, do_rxdata=True, do_runtime=True
+[2026-06-02 17:10:51]   Game.ini script source: kind='rxdata', ini_value='Data\\Scripts.rxdata', custom_script=None, entry_rb=None
+[2026-06-02 17:10:51]   export_to_rxdata: 1 written, 104 skipped (rxdata up-to-date)
+[2026-06-02 17:10:51] === write_system invoked ===
+[2026-06-02 17:10:51]   ess_folder = 'C:\\Users\\Vena\\Documents\\folders\\RPGMaker\\Pokemon IA XPX'
+[2026-06-02 17:10:51]   project.essentials_settings.essentials_folder = None
+[2026-06-02 17:10:51]   project.project_root = 'C:\\Users\\Vena\\Documents\\folders\\RPGMaker\\Pokemon IA XPX'
+[2026-06-02 17:10:51]   fast-path: System.rxdata cached as matching (smid=1, x=9, y=7)
+[2026-06-02 17:10:51] 
+[2026-06-02 17:10:51] === _deploy_xpx_runtime ===
+[2026-06-02 17:10:51]   source: C:\Users\Vena\AppData\Local\Programs\XPXENG~1\_internal\base_runtime
+[2026-06-02 17:10:51]   dest:   C:\Users\Vena\Documents\folders\RPGMaker\Pokemon IA XPX
+[2026-06-02 17:10:51]   XPX install integrity: OK (1922 file(s), cached)
+[2026-06-02 17:10:51]   manifest: 5 file(s), 1 folder(s)
+[2026-06-02 17:10:51]     BEFORE Game.exe: 29110999 bytes, mtime=2026-06-02 12:28:44
+[2026-06-02 17:10:51]     BEFORE MANIFEST.json: 336030 bytes, mtime=2026-06-02 12:52:54
+[2026-06-02 17:10:51]     BEFORE build_info.json: 274 bytes, mtime=2026-06-02 12:52:54
+[2026-06-02 17:10:51]     BEFORE x64-msvcrt-ruby310.dll: 10240557 bytes, mtime=2026-06-02 12:28:44
+[2026-06-02 17:10:51]     BEFORE zlib1.dll: 128488 bytes, mtime=2026-06-02 12:29:08
+[2026-06-02 17:10:51]     5 file(s) already in sync — byte copy skipped
+[2026-06-02 17:10:52]     1 folder(s) already in sync — rebuild skipped
+[2026-06-02 17:10:52]     AFTER  Game.exe: 29110999 bytes, mtime=2026-06-02 12:28:44
+[2026-06-02 17:10:52]     AFTER  MANIFEST.json: 336030 bytes, mtime=2026-06-02 12:52:54
+[2026-06-02 17:10:52]     AFTER  build_info.json: 274 bytes, mtime=2026-06-02 12:52:54
+[2026-06-02 17:10:52]     AFTER  x64-msvcrt-ruby310.dll: 10240557 bytes, mtime=2026-06-02 12:28:44
+[2026-06-02 17:10:52]     AFTER  zlib1.dll: 128488 bytes, mtime=2026-06-02 12:29:08
+[2026-06-02 17:10:52]   hash-verifying against MANIFEST.json (runtime v0.3.5, 1922 expected file(s))
+[2026-06-02 17:10:52]     ? build_info.json: not in MANIFEST (extra file in runtime folder)
+[2026-06-02 17:10:52]   manifest verified: 3/1922 file(s) match shipped hashes; 0 mismatch(es), 0 error(s)
+[2026-06-02 17:10:52]   result: copied 5 file(s), 1 folder(s); verified 5/5 sizes; 0 file failure(s), 0 folder failure(s)
+[2026-06-02 17:10:52]   integrate timings (total 1410ms):
+[2026-06-02 17:10:52]     deploy_runtime             1012.7ms
+[2026-06-02 17:10:52]     export_to_rxdata            364.2ms
+[2026-06-02 17:10:52]     write_tilesets               20.0ms
+[2026-06-02 17:10:52]     write_mkxp_json               8.3ms
+[2026-06-02 17:10:52]     write_system                  3.2ms
+[2026-06-02 17:10:52]     write_preload_script          1.5ms
+[2026-06-02 17:10:52]     seed_terrain_tags             0.0ms
+[2026-06-02 17:13:09] 
+[2026-06-02 17:13:09] ================================================
+[2026-06-02 17:13:09] === integrate_essentials invoked ===
+[2026-06-02 17:13:09]   project_root = 'C:\\Users\\Vena\\Documents\\folders\\RPGMaker\\Pokemon IA XPX'
+[2026-06-02 17:13:09]   ess_folder   = 'C:\\Users\\Vena\\Documents\\folders\\RPGMaker\\Pokemon IA XPX'
+[2026-06-02 17:13:09]   project.start_map_id = 1
+[2026-06-02 17:13:09] === environment ===
+[2026-06-02 17:13:09]   os       : Windows 11 (10.0.26100)
+[2026-06-02 17:13:09]   arch     : AMD64
+[2026-06-02 17:13:09]   python   : 3.12.7 (tags/v3.12.7:0b05ead, Oct  1 2024, 03:06:41) [MSC v.1941 64 bit (AMD64)]
+[2026-06-02 17:13:09]   pyqt6    : 6.7.1 (Qt 6.7.1)
+[2026-06-02 17:13:09]   locale   : ('English_United Kingdom', '1252')
+[2026-06-02 17:13:09]   preferred encoding   : cp1252
+[2026-06-02 17:13:09]   filesystem encoding  : utf-8
+[2026-06-02 17:13:09]   default str encoding : utf-8
+[2026-06-02 17:13:09]   win32 code pages: ACP=1252, OEM=850
+[2026-06-02 17:13:09]   ess path repr : 'C:\\Users\\Vena\\Documents\\folders\\RPGMaker\\Pokemon IA XPX'
+[2026-06-02 17:13:09]   settings: do_preload=True, do_rxdata=True, do_runtime=True
+[2026-06-02 17:13:09]   Game.ini script source: kind='rxdata', ini_value='Data\\Scripts.rxdata', custom_script=None, entry_rb=None
+[2026-06-02 17:13:09]   export_to_rxdata: 0 written, 105 skipped (rxdata up-to-date)
+[2026-06-02 17:13:10] === write_system invoked ===
+[2026-06-02 17:13:10]   ess_folder = 'C:\\Users\\Vena\\Documents\\folders\\RPGMaker\\Pokemon IA XPX'
+[2026-06-02 17:13:10]   project.essentials_settings.essentials_folder = None
+[2026-06-02 17:13:10]   project.project_root = 'C:\\Users\\Vena\\Documents\\folders\\RPGMaker\\Pokemon IA XPX'
+[2026-06-02 17:13:10]   fast-path: System.rxdata cached as matching (smid=1, x=9, y=7)
+[2026-06-02 17:13:10] 
+[2026-06-02 17:13:10] === _deploy_xpx_runtime ===
+[2026-06-02 17:13:10]   source: C:\Users\Vena\AppData\Local\Programs\XPXENG~1\_internal\base_runtime
+[2026-06-02 17:13:10]   dest:   C:\Users\Vena\Documents\folders\RPGMaker\Pokemon IA XPX
+[2026-06-02 17:13:10]   XPX install integrity: OK (1922 file(s), cached)
+[2026-06-02 17:13:10]   manifest: 5 file(s), 1 folder(s)
+[2026-06-02 17:13:10]     BEFORE Game.exe: 29110999 bytes, mtime=2026-06-02 12:28:44
+[2026-06-02 17:13:10]     BEFORE MANIFEST.json: 336030 bytes, mtime=2026-06-02 12:52:54
+[2026-06-02 17:13:10]     BEFORE build_info.json: 274 bytes, mtime=2026-06-02 12:52:54
+[2026-06-02 17:13:10]     BEFORE x64-msvcrt-ruby310.dll: 10240557 bytes, mtime=2026-06-02 12:28:44
+[2026-06-02 17:13:10]     BEFORE zlib1.dll: 128488 bytes, mtime=2026-06-02 12:29:08
+[2026-06-02 17:13:10]     5 file(s) already in sync — byte copy skipped
+[2026-06-02 17:13:10]     1 folder(s) already in sync — rebuild skipped
+[2026-06-02 17:13:10]     AFTER  Game.exe: 29110999 bytes, mtime=2026-06-02 12:28:44
+[2026-06-02 17:13:10]     AFTER  MANIFEST.json: 336030 bytes, mtime=2026-06-02 12:52:54
+[2026-06-02 17:13:10]     AFTER  build_info.json: 274 bytes, mtime=2026-06-02 12:52:54
+[2026-06-02 17:13:10]     AFTER  x64-msvcrt-ruby310.dll: 10240557 bytes, mtime=2026-06-02 12:28:44
+[2026-06-02 17:13:10]     AFTER  zlib1.dll: 128488 bytes, mtime=2026-06-02 12:29:08
+[2026-06-02 17:13:10]   hash-verifying against MANIFEST.json (runtime v0.3.5, 1922 expected file(s))
+[2026-06-02 17:13:10]     ? build_info.json: not in MANIFEST (extra file in runtime folder)
+[2026-06-02 17:13:10]   manifest verified: 3/1922 file(s) match shipped hashes; 0 mismatch(es), 0 error(s)
+[2026-06-02 17:13:10]   result: copied 5 file(s), 1 folder(s); verified 5/5 sizes; 0 file failure(s), 0 folder failure(s)
+[2026-06-02 17:13:10]   integrate timings (total 972ms):
+[2026-06-02 17:13:10]     deploy_runtime              652.7ms
+[2026-06-02 17:13:10]     export_to_rxdata            301.8ms
+[2026-06-02 17:13:10]     write_mkxp_json               6.8ms
+[2026-06-02 17:13:10]     write_tilesets                6.0ms
+[2026-06-02 17:13:10]     write_system                  3.1ms
+[2026-06-02 17:13:10]     write_preload_script          1.5ms
+[2026-06-02 17:13:10]     seed_terrain_tags             0.0ms
+[2026-06-04 20:03:37] 
+[2026-06-04 20:03:37] ================================================
+[2026-06-04 20:03:37] === integrate_essentials invoked ===
+[2026-06-04 20:03:37]   project_root = 'C:\\Users\\Vena\\Documents\\folders\\RPGMaker\\Pokemon IA XPX'
+[2026-06-04 20:03:37]   ess_folder   = 'C:\\Users\\Vena\\Documents\\folders\\RPGMaker\\Pokemon IA XPX'
+[2026-06-04 20:03:37]   project.start_map_id = 1
+[2026-06-04 20:03:37] === environment ===
+[2026-06-04 20:03:37]   os       : Windows 11 (10.0.26100)
+[2026-06-04 20:03:37]   arch     : AMD64
+[2026-06-04 20:03:37]   python   : 3.12.7 (tags/v3.12.7:0b05ead, Oct  1 2024, 03:06:41) [MSC v.1941 64 bit (AMD64)]
+[2026-06-04 20:03:37]   pyqt6    : 6.7.1 (Qt 6.7.1)
+[2026-06-04 20:03:37]   locale   : ('English_United Kingdom', '1252')
+[2026-06-04 20:03:37]   preferred encoding   : cp1252
+[2026-06-04 20:03:37]   filesystem encoding  : utf-8
+[2026-06-04 20:03:37]   default str encoding : utf-8
+[2026-06-04 20:03:37]   win32 code pages: ACP=1252, OEM=850
+[2026-06-04 20:03:37]   ess path repr : 'C:\\Users\\Vena\\Documents\\folders\\RPGMaker\\Pokemon IA XPX'
+[2026-06-04 20:03:37]   settings: do_preload=True, do_rxdata=True, do_runtime=True
+[2026-06-04 20:03:37]   Game.ini script source: kind='rxdata', ini_value='Data\\Scripts.rxdata', custom_script=None, entry_rb=None
+[2026-06-04 20:03:38]   export_to_rxdata: 0 written, 105 skipped (rxdata up-to-date)
+[2026-06-04 20:03:38] === write_system invoked ===
+[2026-06-04 20:03:38]   ess_folder = 'C:\\Users\\Vena\\Documents\\folders\\RPGMaker\\Pokemon IA XPX'
+[2026-06-04 20:03:38]   project.essentials_settings.essentials_folder = None
+[2026-06-04 20:03:38]   project.project_root = 'C:\\Users\\Vena\\Documents\\folders\\RPGMaker\\Pokemon IA XPX'
+[2026-06-04 20:03:38]   sys_path   = 'C:\\Users\\Vena\\Documents\\folders\\RPGMaker\\Pokemon IA XPX\\Data\\System.rxdata'
+[2026-06-04 20:03:38]   exists?    = True
+[2026-06-04 20:03:38]   existing System.rxdata: 4657 bytes, mtime=2026-06-01 16:06:22
+[2026-06-04 20:03:38]   System.rxdata* files found in tree: 1
+[2026-06-04 20:03:38]     - C:\Users\Vena\Documents\folders\RPGMaker\Pokemon IA XPX\Data\System.rxdata
+[2026-06-04 20:03:38]   current System.rxdata: @start_map_id=1, @start_x=9, @start_y=7
+[2026-06-04 20:03:38]   project state: start_map_id=1, start_x=9, start_y=7
+[2026-06-04 20:03:38]   target values: @start_map_id=1, @start_x=9, @start_y=7 (fallback=False)
+[2026-06-04 20:03:38]   no-op: System.rxdata already matches target
+[2026-06-04 20:03:38] 
+[2026-06-04 20:03:38] === _deploy_xpx_runtime ===
+[2026-06-04 20:03:38]   source: C:\Users\Vena\AppData\Local\Programs\XPXENG~1\_internal\base_runtime
+[2026-06-04 20:03:38]   dest:   C:\Users\Vena\Documents\folders\RPGMaker\Pokemon IA XPX
+[2026-06-04 20:03:38]   XPX install integrity: OK (1922 file(s), cached)
+[2026-06-04 20:03:38]   manifest: 5 file(s), 1 folder(s)
+[2026-06-04 20:03:38]     BEFORE Game.exe: 29110999 bytes, mtime=2026-06-02 12:28:44
+[2026-06-04 20:03:38]     BEFORE MANIFEST.json: 336030 bytes, mtime=2026-06-02 12:52:54
+[2026-06-04 20:03:38]     BEFORE build_info.json: 274 bytes, mtime=2026-06-02 12:52:54
+[2026-06-04 20:03:38]     BEFORE x64-msvcrt-ruby310.dll: 10240557 bytes, mtime=2026-06-02 12:28:44
+[2026-06-04 20:03:38]     BEFORE zlib1.dll: 128488 bytes, mtime=2026-06-02 12:29:08
+[2026-06-04 20:03:38]     5 file(s) already in sync — byte copy skipped
+[2026-06-04 20:03:38]     1 folder(s) already in sync — rebuild skipped
+[2026-06-04 20:03:38]     AFTER  Game.exe: 29110999 bytes, mtime=2026-06-02 12:28:44
+[2026-06-04 20:03:38]     AFTER  MANIFEST.json: 336030 bytes, mtime=2026-06-02 12:52:54
+[2026-06-04 20:03:38]     AFTER  build_info.json: 274 bytes, mtime=2026-06-02 12:52:54
+[2026-06-04 20:03:38]     AFTER  x64-msvcrt-ruby310.dll: 10240557 bytes, mtime=2026-06-02 12:28:44
+[2026-06-04 20:03:38]     AFTER  zlib1.dll: 128488 bytes, mtime=2026-06-02 12:29:08
+[2026-06-04 20:03:38]   hash-verifying against MANIFEST.json (runtime v0.3.5, 1922 expected file(s))
+[2026-06-04 20:03:38]     ? build_info.json: not in MANIFEST (extra file in runtime folder)
+[2026-06-04 20:03:38]   manifest verified: 3/1922 file(s) match shipped hashes; 0 mismatch(es), 0 error(s)
+[2026-06-04 20:03:38]   result: copied 5 file(s), 1 folder(s); verified 5/5 sizes; 0 file failure(s), 0 folder failure(s)
+[2026-06-04 20:03:38]   integrate timings (total 924ms):
+[2026-06-04 20:03:38]     deploy_runtime              546.7ms
+[2026-06-04 20:03:38]     export_to_rxdata            260.1ms
+[2026-06-04 20:03:38]     write_system                 69.3ms
+[2026-06-04 20:03:38]     write_mkxp_json              34.3ms
+[2026-06-04 20:03:38]     write_preload_script          7.0ms
+[2026-06-04 20:03:38]     write_tilesets                6.5ms
+[2026-06-04 20:03:38]     seed_terrain_tags             0.0ms
+[2026-06-04 21:39:20] 
+[2026-06-04 21:39:20] ================================================
+[2026-06-04 21:39:20] === integrate_essentials invoked ===
+[2026-06-04 21:39:20]   project_root = 'C:\\Users\\Vena\\Documents\\folders\\RPGMaker\\Pokemon IA XPX'
+[2026-06-04 21:39:20]   ess_folder   = 'C:\\Users\\Vena\\Documents\\folders\\RPGMaker\\Pokemon IA XPX'
+[2026-06-04 21:39:20]   project.start_map_id = 1
+[2026-06-04 21:39:20] === environment ===
+[2026-06-04 21:39:20]   os       : Windows 11 (10.0.26100)
+[2026-06-04 21:39:20]   arch     : AMD64
+[2026-06-04 21:39:20]   python   : 3.12.7 (tags/v3.12.7:0b05ead, Oct  1 2024, 03:06:41) [MSC v.1941 64 bit (AMD64)]
+[2026-06-04 21:39:20]   pyqt6    : 6.7.1 (Qt 6.7.1)
+[2026-06-04 21:39:20]   locale   : ('English_United Kingdom', '1252')
+[2026-06-04 21:39:20]   preferred encoding   : cp1252
+[2026-06-04 21:39:20]   filesystem encoding  : utf-8
+[2026-06-04 21:39:20]   default str encoding : utf-8
+[2026-06-04 21:39:20]   win32 code pages: ACP=1252, OEM=850
+[2026-06-04 21:39:20]   ess path repr : 'C:\\Users\\Vena\\Documents\\folders\\RPGMaker\\Pokemon IA XPX'
+[2026-06-04 21:39:20]   settings: do_preload=True, do_rxdata=True, do_runtime=True
+[2026-06-04 21:39:20]   Game.ini script source: kind='rxdata', ini_value='Data\\Scripts.rxdata', custom_script=None, entry_rb=None
+[2026-06-04 21:39:21]   export_to_rxdata: 1 written, 104 skipped (rxdata up-to-date)
+[2026-06-04 21:39:21] === write_system invoked ===
+[2026-06-04 21:39:21]   ess_folder = 'C:\\Users\\Vena\\Documents\\folders\\RPGMaker\\Pokemon IA XPX'
+[2026-06-04 21:39:21]   project.essentials_settings.essentials_folder = None
+[2026-06-04 21:39:21]   project.project_root = 'C:\\Users\\Vena\\Documents\\folders\\RPGMaker\\Pokemon IA XPX'
+[2026-06-04 21:39:21]   fast-path: System.rxdata cached as matching (smid=1, x=9, y=7)
+[2026-06-04 21:39:21] 
+[2026-06-04 21:39:21] === _deploy_xpx_runtime ===
+[2026-06-04 21:39:21]   source: C:\Users\Vena\AppData\Local\Programs\XPXENG~1\_internal\base_runtime
+[2026-06-04 21:39:21]   dest:   C:\Users\Vena\Documents\folders\RPGMaker\Pokemon IA XPX
+[2026-06-04 21:39:21]   XPX install integrity: OK (1922 file(s), cached)
+[2026-06-04 21:39:21]   manifest: 5 file(s), 1 folder(s)
+[2026-06-04 21:39:21]     BEFORE Game.exe: 29110999 bytes, mtime=2026-06-02 12:28:44
+[2026-06-04 21:39:21]     BEFORE MANIFEST.json: 336030 bytes, mtime=2026-06-02 12:52:54
+[2026-06-04 21:39:21]     BEFORE build_info.json: 274 bytes, mtime=2026-06-02 12:52:54
+[2026-06-04 21:39:21]     BEFORE x64-msvcrt-ruby310.dll: 10240557 bytes, mtime=2026-06-02 12:28:44
+[2026-06-04 21:39:21]     BEFORE zlib1.dll: 128488 bytes, mtime=2026-06-02 12:29:08
+[2026-06-04 21:39:21]     5 file(s) already in sync — byte copy skipped
+[2026-06-04 21:39:22]     1 folder(s) already in sync — rebuild skipped
+[2026-06-04 21:39:22]     AFTER  Game.exe: 29110999 bytes, mtime=2026-06-02 12:28:44
+[2026-06-04 21:39:22]     AFTER  MANIFEST.json: 336030 bytes, mtime=2026-06-02 12:52:54
+[2026-06-04 21:39:22]     AFTER  build_info.json: 274 bytes, mtime=2026-06-02 12:52:54
+[2026-06-04 21:39:22]     AFTER  x64-msvcrt-ruby310.dll: 10240557 bytes, mtime=2026-06-02 12:28:44
+[2026-06-04 21:39:22]     AFTER  zlib1.dll: 128488 bytes, mtime=2026-06-02 12:29:08
+[2026-06-04 21:39:22]   hash-verifying against MANIFEST.json (runtime v0.3.5, 1922 expected file(s))
+[2026-06-04 21:39:22]     ? build_info.json: not in MANIFEST (extra file in runtime folder)
+[2026-06-04 21:39:22]   manifest verified: 3/1922 file(s) match shipped hashes; 0 mismatch(es), 0 error(s)
+[2026-06-04 21:39:22]   result: copied 5 file(s), 1 folder(s); verified 5/5 sizes; 0 file failure(s), 0 folder failure(s)
+[2026-06-04 21:39:22]   integrate timings (total 2042ms):
+[2026-06-04 21:39:22]     deploy_runtime             1716.9ms
+[2026-06-04 21:39:22]     export_to_rxdata            287.9ms
+[2026-06-04 21:39:22]     write_mkxp_json              18.5ms
+[2026-06-04 21:39:22]     write_preload_script          8.9ms
+[2026-06-04 21:39:22]     write_tilesets                6.9ms
+[2026-06-04 21:39:22]     write_system                  2.8ms
+[2026-06-04 21:39:22]     seed_terrain_tags             0.0ms
+[2026-06-05 13:30:29] 
+[2026-06-05 13:30:29] ================================================
+[2026-06-05 13:30:29] === integrate_essentials invoked ===
+[2026-06-05 13:30:29]   project_root = 'C:\\Users\\Vena\\Documents\\folders\\RPGMaker\\Pokemon IA XPX'
+[2026-06-05 13:30:29]   ess_folder   = 'C:\\Users\\Vena\\Documents\\folders\\RPGMaker\\Pokemon IA XPX'
+[2026-06-05 13:30:29]   project.start_map_id = 1
+[2026-06-05 13:30:29] === environment ===
+[2026-06-05 13:30:29]   os       : Windows 11 (10.0.26100)
+[2026-06-05 13:30:29]   arch     : AMD64
+[2026-06-05 13:30:29]   python   : 3.12.7 (tags/v3.12.7:0b05ead, Oct  1 2024, 03:06:41) [MSC v.1941 64 bit (AMD64)]
+[2026-06-05 13:30:29]   pyqt6    : 6.7.1 (Qt 6.7.1)
+[2026-06-05 13:30:29]   locale   : ('English_United Kingdom', '1252')
+[2026-06-05 13:30:29]   preferred encoding   : cp1252
+[2026-06-05 13:30:29]   filesystem encoding  : utf-8
+[2026-06-05 13:30:29]   default str encoding : utf-8
+[2026-06-05 13:30:29]   win32 code pages: ACP=1252, OEM=850
+[2026-06-05 13:30:29]   ess path repr : 'C:\\Users\\Vena\\Documents\\folders\\RPGMaker\\Pokemon IA XPX'
+[2026-06-05 13:30:29]   settings: do_preload=True, do_rxdata=True, do_runtime=True
+[2026-06-05 13:30:29]   Game.ini script source: kind='rxdata', ini_value='Data\\Scripts.rxdata', custom_script=None, entry_rb=None
+[2026-06-05 13:30:30]   export_to_rxdata: 1 written, 104 skipped (rxdata up-to-date)
+[2026-06-05 13:30:30] === write_system invoked ===
+[2026-06-05 13:30:30]   ess_folder = 'C:\\Users\\Vena\\Documents\\folders\\RPGMaker\\Pokemon IA XPX'
+[2026-06-05 13:30:30]   project.essentials_settings.essentials_folder = None
+[2026-06-05 13:30:30]   project.project_root = 'C:\\Users\\Vena\\Documents\\folders\\RPGMaker\\Pokemon IA XPX'
+[2026-06-05 13:30:30]   sys_path   = 'C:\\Users\\Vena\\Documents\\folders\\RPGMaker\\Pokemon IA XPX\\Data\\System.rxdata'
+[2026-06-05 13:30:30]   exists?    = True
+[2026-06-05 13:30:30]   existing System.rxdata: 4657 bytes, mtime=2026-06-01 16:06:22
+[2026-06-05 13:30:30]   System.rxdata* files found in tree: 1
+[2026-06-05 13:30:30]     - C:\Users\Vena\Documents\folders\RPGMaker\Pokemon IA XPX\Data\System.rxdata
+[2026-06-05 13:30:30]   current System.rxdata: @start_map_id=1, @start_x=9, @start_y=7
+[2026-06-05 13:30:30]   project state: start_map_id=1, start_x=9, start_y=7
+[2026-06-05 13:30:30]   target values: @start_map_id=1, @start_x=9, @start_y=7 (fallback=False)
+[2026-06-05 13:30:30]   no-op: System.rxdata already matches target
+[2026-06-05 13:30:30] 
+[2026-06-05 13:30:30] === _deploy_xpx_runtime ===
+[2026-06-05 13:30:30]   source: C:\Users\Vena\AppData\Local\Programs\XPXENG~1\_internal\base_runtime
+[2026-06-05 13:30:30]   dest:   C:\Users\Vena\Documents\folders\RPGMaker\Pokemon IA XPX
+[2026-06-05 13:30:30]   XPX install integrity: OK (1922 file(s), cached)
+[2026-06-05 13:30:30]   manifest: 5 file(s), 1 folder(s)
+[2026-06-05 13:30:30]     BEFORE Game.exe: 29110999 bytes, mtime=2026-06-02 12:28:44
+[2026-06-05 13:30:30]     BEFORE MANIFEST.json: 336030 bytes, mtime=2026-06-02 12:52:54
+[2026-06-05 13:30:30]     BEFORE build_info.json: 274 bytes, mtime=2026-06-02 12:52:54
+[2026-06-05 13:30:30]     BEFORE x64-msvcrt-ruby310.dll: 10240557 bytes, mtime=2026-06-02 12:28:44
+[2026-06-05 13:30:30]     BEFORE zlib1.dll: 128488 bytes, mtime=2026-06-02 12:29:08
+[2026-06-05 13:30:30]     5 file(s) already in sync — byte copy skipped
+[2026-06-05 13:30:31]     1 folder(s) already in sync — rebuild skipped
+[2026-06-05 13:30:31]     AFTER  Game.exe: 29110999 bytes, mtime=2026-06-02 12:28:44
+[2026-06-05 13:30:31]     AFTER  MANIFEST.json: 336030 bytes, mtime=2026-06-02 12:52:54
+[2026-06-05 13:30:31]     AFTER  build_info.json: 274 bytes, mtime=2026-06-02 12:52:54
+[2026-06-05 13:30:31]     AFTER  x64-msvcrt-ruby310.dll: 10240557 bytes, mtime=2026-06-02 12:28:44
+[2026-06-05 13:30:31]     AFTER  zlib1.dll: 128488 bytes, mtime=2026-06-02 12:29:08
+[2026-06-05 13:30:31]   hash-verifying against MANIFEST.json (runtime v0.3.5, 1922 expected file(s))
+[2026-06-05 13:30:31]     ? build_info.json: not in MANIFEST (extra file in runtime folder)
+[2026-06-05 13:30:32]   manifest verified: 3/1922 file(s) match shipped hashes; 0 mismatch(es), 0 error(s)
+[2026-06-05 13:30:32]   result: copied 5 file(s), 1 folder(s); verified 5/5 sizes; 0 file failure(s), 0 folder failure(s)
+[2026-06-05 13:30:32]   integrate timings (total 2546ms):
+[2026-06-05 13:30:32]     deploy_runtime             2083.4ms
+[2026-06-05 13:30:32]     export_to_rxdata            290.9ms
+[2026-06-05 13:30:32]     write_system                150.6ms
+[2026-06-05 13:30:32]     write_preload_script          8.0ms
+[2026-06-05 13:30:32]     write_tilesets                7.3ms
+[2026-06-05 13:30:32]     write_mkxp_json               6.3ms
+[2026-06-05 13:30:32]     seed_terrain_tags             0.0ms
+[2026-06-08 14:04:42] 
+[2026-06-08 14:04:42] ================================================
+[2026-06-08 14:04:42] === integrate_essentials invoked ===
+[2026-06-08 14:04:42]   project_root = 'C:\\Users\\Vena\\Documents\\folders\\RPGMaker\\Pokemon IA XPX'
+[2026-06-08 14:04:42]   ess_folder   = 'C:\\Users\\Vena\\Documents\\folders\\RPGMaker\\Pokemon IA XPX'
+[2026-06-08 14:04:42]   project.start_map_id = 1
+[2026-06-08 14:04:42] === environment ===
+[2026-06-08 14:04:42]   os       : Windows 11 (10.0.26100)
+[2026-06-08 14:04:42]   arch     : AMD64
+[2026-06-08 14:04:42]   python   : 3.12.7 (tags/v3.12.7:0b05ead, Oct  1 2024, 03:06:41) [MSC v.1941 64 bit (AMD64)]
+[2026-06-08 14:04:42]   pyqt6    : 6.7.1 (Qt 6.7.1)
+[2026-06-08 14:04:42]   locale   : ('English_United Kingdom', '1252')
+[2026-06-08 14:04:42]   preferred encoding   : cp1252
+[2026-06-08 14:04:42]   filesystem encoding  : utf-8
+[2026-06-08 14:04:42]   default str encoding : utf-8
+[2026-06-08 14:04:42]   win32 code pages: ACP=1252, OEM=850
+[2026-06-08 14:04:42]   ess path repr : 'C:\\Users\\Vena\\Documents\\folders\\RPGMaker\\Pokemon IA XPX'
+[2026-06-08 14:04:42]   settings: do_preload=True, do_rxdata=True, do_runtime=True
+[2026-06-08 14:04:42]   Game.ini script source: kind='rxdata', ini_value='Data\\Scripts.rxdata', custom_script=None, entry_rb=None
+[2026-06-08 14:04:42]   export_to_rxdata: 2 written, 105 skipped (rxdata up-to-date)
+[2026-06-08 14:04:42] === write_system invoked ===
+[2026-06-08 14:04:42]   ess_folder = 'C:\\Users\\Vena\\Documents\\folders\\RPGMaker\\Pokemon IA XPX'
+[2026-06-08 14:04:42]   project.essentials_settings.essentials_folder = None
+[2026-06-08 14:04:42]   project.project_root = 'C:\\Users\\Vena\\Documents\\folders\\RPGMaker\\Pokemon IA XPX'
+[2026-06-08 14:04:42]   sys_path   = 'C:\\Users\\Vena\\Documents\\folders\\RPGMaker\\Pokemon IA XPX\\Data\\System.rxdata'
+[2026-06-08 14:04:42]   exists?    = True
+[2026-06-08 14:04:42]   existing System.rxdata: 4657 bytes, mtime=2026-06-01 16:06:22
+[2026-06-08 14:04:42]   System.rxdata* files found in tree: 1
+[2026-06-08 14:04:42]     - C:\Users\Vena\Documents\folders\RPGMaker\Pokemon IA XPX\Data\System.rxdata
+[2026-06-08 14:04:42]   current System.rxdata: @start_map_id=1, @start_x=9, @start_y=7
+[2026-06-08 14:04:42]   project state: start_map_id=1, start_x=9, start_y=7
+[2026-06-08 14:04:42]   target values: @start_map_id=1, @start_x=9, @start_y=7 (fallback=False)
+[2026-06-08 14:04:42]   no-op: System.rxdata already matches target
+[2026-06-08 14:04:42] 
+[2026-06-08 14:04:42] === _deploy_xpx_runtime ===
+[2026-06-08 14:04:42]   source: C:\Users\Vena\AppData\Local\Programs\XPXENG~1\_internal\base_runtime
+[2026-06-08 14:04:42]   dest:   C:\Users\Vena\Documents\folders\RPGMaker\Pokemon IA XPX
+[2026-06-08 14:04:42]   XPX install integrity: OK (1922 file(s), cached)
+[2026-06-08 14:04:42]   manifest: 5 file(s), 1 folder(s)
+[2026-06-08 14:04:42]     BEFORE Game.exe: 29110999 bytes, mtime=2026-06-02 12:28:44
+[2026-06-08 14:04:42]     BEFORE MANIFEST.json: 336030 bytes, mtime=2026-06-02 12:52:54
+[2026-06-08 14:04:42]     BEFORE build_info.json: 274 bytes, mtime=2026-06-02 12:52:54
+[2026-06-08 14:04:42]     BEFORE x64-msvcrt-ruby310.dll: 10240557 bytes, mtime=2026-06-02 12:28:44
+[2026-06-08 14:04:42]     BEFORE zlib1.dll: 128488 bytes, mtime=2026-06-02 12:29:08
+[2026-06-08 14:04:42]     3 file(s) already in sync — byte copy skipped
+[2026-06-08 14:04:43]     1 folder(s) already in sync — rebuild skipped
+[2026-06-08 14:04:43]     AFTER  Game.exe: 29110999 bytes, mtime=2026-06-02 12:28:44
+[2026-06-08 14:04:43]     AFTER  MANIFEST.json: 336030 bytes, mtime=2026-06-05 13:13:16
+[2026-06-08 14:04:43]     AFTER  build_info.json: 274 bytes, mtime=2026-06-05 13:13:16
+[2026-06-08 14:04:43]     AFTER  x64-msvcrt-ruby310.dll: 10240557 bytes, mtime=2026-06-02 12:28:44
+[2026-06-08 14:04:43]     AFTER  zlib1.dll: 128488 bytes, mtime=2026-06-02 12:29:08
+[2026-06-08 14:04:43]   hash-verifying against MANIFEST.json (runtime v0.3.6, 1922 expected file(s))
+[2026-06-08 14:04:44]     ? build_info.json: not in MANIFEST (extra file in runtime folder)
+[2026-06-08 14:04:44]   manifest verified: 3/1922 file(s) match shipped hashes; 0 mismatch(es), 0 error(s)
+[2026-06-08 14:04:44]   result: copied 5 file(s), 1 folder(s); verified 5/5 sizes; 0 file failure(s), 0 folder failure(s)
+[2026-06-08 14:04:44]   integrate timings (total 2954ms):
+[2026-06-08 14:04:44]     deploy_runtime             2021.8ms
+[2026-06-08 14:04:44]     write_system                626.5ms
+[2026-06-08 14:04:44]     export_to_rxdata            275.8ms
+[2026-06-08 14:04:44]     write_mkxp_json              10.9ms
+[2026-06-08 14:04:44]     write_tilesets                9.9ms
+[2026-06-08 14:04:44]     write_preload_script          8.5ms
+[2026-06-08 14:04:44]     seed_terrain_tags             0.0ms
+[2026-06-08 14:10:46] 
+[2026-06-08 14:10:46] ================================================
+[2026-06-08 14:10:46] === integrate_essentials invoked ===
+[2026-06-08 14:10:46]   project_root = 'C:\\Users\\Vena\\Documents\\folders\\RPGMaker\\Pokemon IA XPX'
+[2026-06-08 14:10:46]   ess_folder   = 'C:\\Users\\Vena\\Documents\\folders\\RPGMaker\\Pokemon IA XPX'
+[2026-06-08 14:10:46]   project.start_map_id = 1
+[2026-06-08 14:10:46] === environment ===
+[2026-06-08 14:10:46]   os       : Windows 11 (10.0.26100)
+[2026-06-08 14:10:46]   arch     : AMD64
+[2026-06-08 14:10:46]   python   : 3.12.7 (tags/v3.12.7:0b05ead, Oct  1 2024, 03:06:41) [MSC v.1941 64 bit (AMD64)]
+[2026-06-08 14:10:46]   pyqt6    : 6.7.1 (Qt 6.7.1)
+[2026-06-08 14:10:46]   locale   : ('English_United Kingdom', '1252')
+[2026-06-08 14:10:46]   preferred encoding   : cp1252
+[2026-06-08 14:10:46]   filesystem encoding  : utf-8
+[2026-06-08 14:10:46]   default str encoding : utf-8
+[2026-06-08 14:10:46]   win32 code pages: ACP=1252, OEM=850
+[2026-06-08 14:10:46]   ess path repr : 'C:\\Users\\Vena\\Documents\\folders\\RPGMaker\\Pokemon IA XPX'
+[2026-06-08 14:10:46]   settings: do_preload=True, do_rxdata=True, do_runtime=True
+[2026-06-08 14:10:46]   Game.ini script source: kind='rxdata', ini_value='Data\\Scripts.rxdata', custom_script=None, entry_rb=None
+[2026-06-08 14:10:47]   export_to_rxdata: 2 written, 105 skipped (rxdata up-to-date)
+[2026-06-08 14:10:47] === write_system invoked ===
+[2026-06-08 14:10:47]   ess_folder = 'C:\\Users\\Vena\\Documents\\folders\\RPGMaker\\Pokemon IA XPX'
+[2026-06-08 14:10:47]   project.essentials_settings.essentials_folder = None
+[2026-06-08 14:10:47]   project.project_root = 'C:\\Users\\Vena\\Documents\\folders\\RPGMaker\\Pokemon IA XPX'
+[2026-06-08 14:10:47]   sys_path   = 'C:\\Users\\Vena\\Documents\\folders\\RPGMaker\\Pokemon IA XPX\\Data\\System.rxdata'
+[2026-06-08 14:10:47]   exists?    = True
+[2026-06-08 14:10:47]   existing System.rxdata: 4657 bytes, mtime=2026-06-01 16:06:22
+[2026-06-08 14:10:47]   System.rxdata* files found in tree: 1
+[2026-06-08 14:10:47]     - C:\Users\Vena\Documents\folders\RPGMaker\Pokemon IA XPX\Data\System.rxdata
+[2026-06-08 14:10:47]   current System.rxdata: @start_map_id=1, @start_x=9, @start_y=7
+[2026-06-08 14:10:47]   project state: start_map_id=1, start_x=9, start_y=7
+[2026-06-08 14:10:47]   target values: @start_map_id=1, @start_x=9, @start_y=7 (fallback=False)
+[2026-06-08 14:10:47]   no-op: System.rxdata already matches target
+[2026-06-08 14:10:47] 
+[2026-06-08 14:10:47] === _deploy_xpx_runtime ===
+[2026-06-08 14:10:47]   source: C:\Users\Vena\AppData\Local\Programs\XPXENG~1\_internal\base_runtime
+[2026-06-08 14:10:47]   dest:   C:\Users\Vena\Documents\folders\RPGMaker\Pokemon IA XPX
+[2026-06-08 14:10:47]   XPX install integrity: OK (1922 file(s), cached)
+[2026-06-08 14:10:47]   manifest: 5 file(s), 1 folder(s)
+[2026-06-08 14:10:47]     BEFORE Game.exe: 29110999 bytes, mtime=2026-06-02 12:28:44
+[2026-06-08 14:10:47]     BEFORE MANIFEST.json: 336030 bytes, mtime=2026-06-05 13:13:16
+[2026-06-08 14:10:47]     BEFORE build_info.json: 274 bytes, mtime=2026-06-05 13:13:16
+[2026-06-08 14:10:47]     BEFORE x64-msvcrt-ruby310.dll: 10240557 bytes, mtime=2026-06-02 12:28:44
+[2026-06-08 14:10:47]     BEFORE zlib1.dll: 128488 bytes, mtime=2026-06-02 12:29:08
+[2026-06-08 14:10:47]     5 file(s) already in sync — byte copy skipped
+[2026-06-08 14:10:47]     1 folder(s) already in sync — rebuild skipped
+[2026-06-08 14:10:47]     AFTER  Game.exe: 29110999 bytes, mtime=2026-06-02 12:28:44
+[2026-06-08 14:10:47]     AFTER  MANIFEST.json: 336030 bytes, mtime=2026-06-05 13:13:16
+[2026-06-08 14:10:47]     AFTER  build_info.json: 274 bytes, mtime=2026-06-05 13:13:16
+[2026-06-08 14:10:47]     AFTER  x64-msvcrt-ruby310.dll: 10240557 bytes, mtime=2026-06-02 12:28:44
+[2026-06-08 14:10:47]     AFTER  zlib1.dll: 128488 bytes, mtime=2026-06-02 12:29:08
+[2026-06-08 14:10:47]   hash-verifying against MANIFEST.json (runtime v0.3.6, 1922 expected file(s))
+[2026-06-08 14:10:47]     ? build_info.json: not in MANIFEST (extra file in runtime folder)
+[2026-06-08 14:10:47]   manifest verified: 3/1922 file(s) match shipped hashes; 0 mismatch(es), 0 error(s)
+[2026-06-08 14:10:47]   result: copied 5 file(s), 1 folder(s); verified 5/5 sizes; 0 file failure(s), 0 folder failure(s)
+[2026-06-08 14:10:47]   integrate timings (total 742ms):
+[2026-06-08 14:10:47]     deploy_runtime              422.6ms
+[2026-06-08 14:10:47]     export_to_rxdata            237.8ms
+[2026-06-08 14:10:47]     write_system                 68.3ms
+[2026-06-08 14:10:47]     write_tilesets                6.1ms
+[2026-06-08 14:10:47]     write_mkxp_json               5.8ms
+[2026-06-08 14:10:47]     write_preload_script          1.0ms
+[2026-06-08 14:10:47]     seed_terrain_tags             0.0ms
+[2026-06-08 14:12:44]   Game.ini script source: kind='rxdata', ini_value='Data\\Scripts.rxdata', custom_script=None, entry_rb=None
+[2026-06-08 14:12:44] === write_system invoked ===
+[2026-06-08 14:12:44]   ess_folder = 'C:\\Users\\Vena\\Documents\\folders\\RPGMaker\\Pokemon IA XPX'
+[2026-06-08 14:12:44]   project.essentials_settings.essentials_folder = None
+[2026-06-08 14:12:44]   project.project_root = 'C:\\Users\\Vena\\Documents\\folders\\RPGMaker\\Pokemon IA XPX'
+[2026-06-08 14:12:44]   sys_path   = 'C:\\Users\\Vena\\Documents\\folders\\RPGMaker\\Pokemon IA XPX\\Data\\System.rxdata'
+[2026-06-08 14:12:44]   exists?    = True
+[2026-06-08 14:12:44]   existing System.rxdata: 4657 bytes, mtime=2026-06-01 16:06:22
+[2026-06-08 14:12:44]   System.rxdata* files found in tree: 1
+[2026-06-08 14:12:44]     - C:\Users\Vena\Documents\folders\RPGMaker\Pokemon IA XPX\Data\System.rxdata
+[2026-06-08 14:12:44]   current System.rxdata: @start_map_id=1, @start_x=9, @start_y=7
+[2026-06-08 14:12:44]   project state: start_map_id=1, start_x=9, start_y=7
+[2026-06-08 14:12:44]   target values: @start_map_id=1, @start_x=9, @start_y=7 (fallback=False)
+[2026-06-08 14:12:44]   no-op: System.rxdata already matches target
+[2026-06-08 14:12:50] 
+[2026-06-08 14:12:50] ================================================
+[2026-06-08 14:12:50] === integrate_essentials invoked ===
+[2026-06-08 14:12:50]   project_root = 'C:\\Users\\Vena\\Documents\\folders\\RPGMaker\\Pokemon IA XPX'
+[2026-06-08 14:12:50]   ess_folder   = 'C:\\Users\\Vena\\Documents\\folders\\RPGMaker\\Pokemon IA XPX'
+[2026-06-08 14:12:50]   project.start_map_id = 1
+[2026-06-08 14:12:50] === environment ===
+[2026-06-08 14:12:50]   os       : Windows 11 (10.0.26100)
+[2026-06-08 14:12:50]   arch     : AMD64
+[2026-06-08 14:12:50]   python   : 3.12.7 (tags/v3.12.7:0b05ead, Oct  1 2024, 03:06:41) [MSC v.1941 64 bit (AMD64)]
+[2026-06-08 14:12:50]   pyqt6    : 6.7.1 (Qt 6.7.1)
+[2026-06-08 14:12:50]   locale   : ('English_United Kingdom', '1252')
+[2026-06-08 14:12:50]   preferred encoding   : cp1252
+[2026-06-08 14:12:50]   filesystem encoding  : utf-8
+[2026-06-08 14:12:50]   default str encoding : utf-8
+[2026-06-08 14:12:50]   win32 code pages: ACP=1252, OEM=850
+[2026-06-08 14:12:50]   ess path repr : 'C:\\Users\\Vena\\Documents\\folders\\RPGMaker\\Pokemon IA XPX'
+[2026-06-08 14:12:50]   settings: do_preload=True, do_rxdata=True, do_runtime=True
+[2026-06-08 14:12:50]   Game.ini script source: kind='rxdata', ini_value='Data\\Scripts.rxdata', custom_script=None, entry_rb=None
+[2026-06-08 14:12:50]   export_to_rxdata: 1 written, 106 skipped (rxdata up-to-date)
+[2026-06-08 14:12:50] === write_system invoked ===
+[2026-06-08 14:12:50]   ess_folder = 'C:\\Users\\Vena\\Documents\\folders\\RPGMaker\\Pokemon IA XPX'
+[2026-06-08 14:12:50]   project.essentials_settings.essentials_folder = None
+[2026-06-08 14:12:50]   project.project_root = 'C:\\Users\\Vena\\Documents\\folders\\RPGMaker\\Pokemon IA XPX'
+[2026-06-08 14:12:50]   fast-path: System.rxdata cached as matching (smid=1, x=9, y=7)
+[2026-06-08 14:12:50] 
+[2026-06-08 14:12:50] === _deploy_xpx_runtime ===
+[2026-06-08 14:12:50]   source: C:\Users\Vena\AppData\Local\Programs\XPXENG~1\_internal\base_runtime
+[2026-06-08 14:12:50]   dest:   C:\Users\Vena\Documents\folders\RPGMaker\Pokemon IA XPX
+[2026-06-08 14:12:50]   XPX install integrity: OK (1922 file(s), cached)
+[2026-06-08 14:12:50]   manifest: 5 file(s), 1 folder(s)
+[2026-06-08 14:12:50]     BEFORE Game.exe: 29110999 bytes, mtime=2026-06-02 12:28:44
+[2026-06-08 14:12:50]     BEFORE MANIFEST.json: 336030 bytes, mtime=2026-06-05 13:13:16
+[2026-06-08 14:12:50]     BEFORE build_info.json: 274 bytes, mtime=2026-06-05 13:13:16
+[2026-06-08 14:12:50]     BEFORE x64-msvcrt-ruby310.dll: 10240557 bytes, mtime=2026-06-02 12:28:44
+[2026-06-08 14:12:50]     BEFORE zlib1.dll: 128488 bytes, mtime=2026-06-02 12:29:08
+[2026-06-08 14:12:50]     5 file(s) already in sync — byte copy skipped
+[2026-06-08 14:12:51]     1 folder(s) already in sync — rebuild skipped
+[2026-06-08 14:12:51]     AFTER  Game.exe: 29110999 bytes, mtime=2026-06-02 12:28:44
+[2026-06-08 14:12:51]     AFTER  MANIFEST.json: 336030 bytes, mtime=2026-06-05 13:13:16
+[2026-06-08 14:12:51]     AFTER  build_info.json: 274 bytes, mtime=2026-06-05 13:13:16
+[2026-06-08 14:12:51]     AFTER  x64-msvcrt-ruby310.dll: 10240557 bytes, mtime=2026-06-02 12:28:44
+[2026-06-08 14:12:51]     AFTER  zlib1.dll: 128488 bytes, mtime=2026-06-02 12:29:08
+[2026-06-08 14:12:51]   hash-verifying against MANIFEST.json (runtime v0.3.6, 1922 expected file(s))
+[2026-06-08 14:12:51]     ? build_info.json: not in MANIFEST (extra file in runtime folder)
+[2026-06-08 14:12:51]   manifest verified: 3/1922 file(s) match shipped hashes; 0 mismatch(es), 0 error(s)
+[2026-06-08 14:12:51]   result: copied 5 file(s), 1 folder(s); verified 5/5 sizes; 0 file failure(s), 0 folder failure(s)
+[2026-06-08 14:12:51]   integrate timings (total 755ms):
+[2026-06-08 14:12:51]     deploy_runtime              422.4ms
+[2026-06-08 14:12:51]     export_to_rxdata            299.4ms
+[2026-06-08 14:12:51]     write_tilesets               23.7ms
+[2026-06-08 14:12:51]     write_mkxp_json               5.2ms
+[2026-06-08 14:12:51]     write_system                  3.6ms
+[2026-06-08 14:12:51]     write_preload_script          0.9ms
+[2026-06-08 14:12:51]     seed_terrain_tags             0.0ms

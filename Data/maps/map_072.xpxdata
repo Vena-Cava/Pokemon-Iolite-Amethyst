@@ -3909,7 +3909,7 @@
       [
         {
           "autotile": 0,
-          "at_frame": 2,
+          "at_frame": 34,
           "tc": 0,
           "tr": 0,
           "tc2": 0,
@@ -3917,7 +3917,7 @@
         },
         {
           "autotile": 0,
-          "at_frame": 20,
+          "at_frame": 36,
           "tc": 0,
           "tr": 0,
           "tc2": 0,
@@ -4075,6 +4075,190 @@
         },
         {
           "autotile": 0,
+          "at_frame": 34,
+          "tc": 0,
+          "tr": 0,
+          "tc2": 0,
+          "tr2": 0
+        },
+        {
+          "autotile": 0,
+          "at_frame": 36,
+          "tc": 0,
+          "tr": 0,
+          "tc2": 0,
+          "tr2": 0
+        }
+      ],
+      [
+        {
+          "autotile": 0,
+          "at_frame": 16,
+          "tc": 0,
+          "tr": 0,
+          "tc2": 0,
+          "tr2": 0
+        },
+        {
+          "autotile": 0,
+          "at_frame": 2,
+          "tc": 0,
+          "tr": 0,
+          "tc2": 0,
+          "tr2": 0
+        },
+        {
+          "autotile": 0,
+          "at_frame": 20,
+          "tc": 0,
+          "tr": 0,
+          "tc2": 0,
+          "tr2": 0
+        },
+        {
+          "autotile": 0,
+          "at_frame": 36,
+          "tc": 0,
+          "tr": 0,
+          "tc2": 0,
+          "tr2": 0
+        },
+        {
+          "tc": 1,
+          "tr": 99,
+          "tc2": 1,
+          "tr2": 99
+        },
+        {
+          "tc": 1,
+          "tr": 99,
+          "tc2": 1,
+          "tr2": 99
+        },
+        {
+          "tc": 1,
+          "tr": 99,
+          "tc2": 1,
+          "tr2": 99
+        },
+        {
+          "tc": 1,
+          "tr": 99,
+          "tc2": 1,
+          "tr2": 99
+        },
+        {
+          "tc": 1,
+          "tr": 99,
+          "tc2": 1,
+          "tr2": 99
+        },
+        {
+          "tc": 1,
+          "tr": 99,
+          "tc2": 1,
+          "tr2": 99
+        },
+        {
+          "tc": 1,
+          "tr": 99,
+          "tc2": 1,
+          "tr2": 99
+        },
+        {
+          "tc": 1,
+          "tr": 99,
+          "tc2": 1,
+          "tr2": 99
+        },
+        {
+          "tc": 1,
+          "tr": 99,
+          "tc2": 1,
+          "tr2": 99
+        },
+        {
+          "tc": 1,
+          "tr": 99,
+          "tc2": 1,
+          "tr2": 99
+        },
+        {
+          "tc": 1,
+          "tr": 99,
+          "tc2": 1,
+          "tr2": 99
+        },
+        {
+          "tc": 1,
+          "tr": 99,
+          "tc2": 1,
+          "tr2": 99
+        },
+        {
+          "tc": 1,
+          "tr": 99,
+          "tc2": 1,
+          "tr2": 99
+        },
+        {
+          "tc": 1,
+          "tr": 99,
+          "tc2": 1,
+          "tr2": 99
+        },
+        {
+          "tc": 1,
+          "tr": 99,
+          "tc2": 1,
+          "tr2": 99
+        },
+        {
+          "tc": 1,
+          "tr": 99,
+          "tc2": 1,
+          "tr2": 99
+        },
+        {
+          "tc": 1,
+          "tr": 99,
+          "tc2": 1,
+          "tr2": 99
+        },
+        {
+          "tc": 1,
+          "tr": 99,
+          "tc2": 1,
+          "tr2": 99
+        },
+        {
+          "tc": 1,
+          "tr": 99,
+          "tc2": 1,
+          "tr2": 99
+        },
+        {
+          "tc": 1,
+          "tr": 99,
+          "tc2": 1,
+          "tr2": 99
+        },
+        {
+          "tc": 1,
+          "tr": 99,
+          "tc2": 1,
+          "tr2": 99
+        },
+        {
+          "autotile": 0,
+          "at_frame": 34,
+          "tc": 0,
+          "tr": 0,
+          "tc2": 0,
+          "tr2": 0
+        },
+        {
+          "autotile": 0,
           "at_frame": 20,
           "tc": 0,
           "tr": 0,
@@ -4088,9 +4272,25 @@
           "tr": 0,
           "tc2": 0,
           "tr2": 0
+        },
+        {
+          "autotile": 0,
+          "at_frame": 24,
+          "tc": 0,
+          "tr": 0,
+          "tc2": 0,
+          "tr2": 0
         }
       ],
       [
+        {
+          "autotile": 0,
+          "at_frame": 16,
+          "tc": 0,
+          "tr": 0,
+          "tc2": 0,
+          "tr2": 0
+        },
         {
           "autotile": 0,
           "at_frame": 0,
@@ -4124,130 +4324,156 @@
           "tr2": 0
         },
         {
-          "tc": 1,
-          "tr": 99,
-          "tc2": 1,
-          "tr2": 99
+          "autotile": 0,
+          "at_frame": 20,
+          "tc": 0,
+          "tr": 0,
+          "tc2": 0,
+          "tr2": 0
         },
         {
-          "tc": 1,
-          "tr": 99,
-          "tc2": 1,
-          "tr2": 99
+          "autotile": 0,
+          "at_frame": 20,
+          "tc": 0,
+          "tr": 0,
+          "tc2": 0,
+          "tr2": 0
         },
         {
-          "tc": 1,
-          "tr": 99,
-          "tc2": 1,
-          "tr2": 99
+          "autotile": 0,
+          "at_frame": 20,
+          "tc": 0,
+          "tr": 0,
+          "tc2": 0,
+          "tr2": 0
         },
         {
-          "tc": 1,
-          "tr": 99,
-          "tc2": 1,
-          "tr2": 99
+          "autotile": 0,
+          "at_frame": 20,
+          "tc": 0,
+          "tr": 0,
+          "tc2": 0,
+          "tr2": 0
         },
         {
-          "tc": 1,
-          "tr": 99,
-          "tc2": 1,
-          "tr2": 99
+          "autotile": 0,
+          "at_frame": 20,
+          "tc": 0,
+          "tr": 0,
+          "tc2": 0,
+          "tr2": 0
         },
         {
-          "tc": 1,
-          "tr": 99,
-          "tc2": 1,
-          "tr2": 99
+          "autotile": 0,
+          "at_frame": 20,
+          "tc": 0,
+          "tr": 0,
+          "tc2": 0,
+          "tr2": 0
         },
         {
-          "tc": 1,
-          "tr": 99,
-          "tc2": 1,
-          "tr2": 99
+          "autotile": 0,
+          "at_frame": 20,
+          "tc": 0,
+          "tr": 0,
+          "tc2": 0,
+          "tr2": 0
         },
         {
-          "tc": 1,
-          "tr": 99,
-          "tc2": 1,
-          "tr2": 99
+          "autotile": 0,
+          "at_frame": 20,
+          "tc": 0,
+          "tr": 0,
+          "tc2": 0,
+          "tr2": 0
         },
         {
-          "tc": 1,
-          "tr": 99,
-          "tc2": 1,
-          "tr2": 99
+          "autotile": 0,
+          "at_frame": 20,
+          "tc": 0,
+          "tr": 0,
+          "tc2": 0,
+          "tr2": 0
         },
         {
-          "tc": 1,
-          "tr": 99,
-          "tc2": 1,
-          "tr2": 99
+          "autotile": 0,
+          "at_frame": 20,
+          "tc": 0,
+          "tr": 0,
+          "tc2": 0,
+          "tr2": 0
         },
         {
-          "tc": 1,
-          "tr": 99,
-          "tc2": 1,
-          "tr2": 99
+          "autotile": 0,
+          "at_frame": 20,
+          "tc": 0,
+          "tr": 0,
+          "tc2": 0,
+          "tr2": 0
         },
         {
-          "tc": 1,
-          "tr": 99,
-          "tc2": 1,
-          "tr2": 99
+          "autotile": 0,
+          "at_frame": 20,
+          "tc": 0,
+          "tr": 0,
+          "tc2": 0,
+          "tr2": 0
         },
         {
-          "tc": 1,
-          "tr": 99,
-          "tc2": 1,
-          "tr2": 99
+          "autotile": 0,
+          "at_frame": 20,
+          "tc": 0,
+          "tr": 0,
+          "tc2": 0,
+          "tr2": 0
         },
         {
-          "tc": 1,
-          "tr": 99,
-          "tc2": 1,
-          "tr2": 99
+          "autotile": 0,
+          "at_frame": 20,
+          "tc": 0,
+          "tr": 0,
+          "tc2": 0,
+          "tr2": 0
         },
         {
-          "tc": 1,
-          "tr": 99,
-          "tc2": 1,
-          "tr2": 99
+          "autotile": 0,
+          "at_frame": 20,
+          "tc": 0,
+          "tr": 0,
+          "tc2": 0,
+          "tr2": 0
         },
         {
-          "tc": 1,
-          "tr": 99,
-          "tc2": 1,
-          "tr2": 99
+          "autotile": 0,
+          "at_frame": 20,
+          "tc": 0,
+          "tr": 0,
+          "tc2": 0,
+          "tr2": 0
         },
         {
-          "tc": 1,
-          "tr": 99,
-          "tc2": 1,
-          "tr2": 99
+          "autotile": 0,
+          "at_frame": 20,
+          "tc": 0,
+          "tr": 0,
+          "tc2": 0,
+          "tr2": 0
         },
         {
-          "tc": 1,
-          "tr": 99,
-          "tc2": 1,
-          "tr2": 99
+          "autotile": 0,
+          "at_frame": 20,
+          "tc": 0,
+          "tr": 0,
+          "tc2": 0,
+          "tr2": 0
         },
         {
-          "tc": 1,
-          "tr": 99,
-          "tc2": 1,
-          "tr2": 99
-        },
-        {
-          "tc": 1,
-          "tr": 99,
-          "tc2": 1,
-          "tr2": 99
-        },
-        {
-          "tc": 1,
-          "tr": 99,
-          "tc2": 1,
-          "tr2": 99
+          "autotile": 0,
+          "at_frame": 20,
+          "tc": 0,
+          "tr": 0,
+          "tc2": 0,
+          "tr2": 0
         },
         {
           "autotile": 0,
@@ -4280,11 +4506,59 @@
           "tr": 0,
           "tc2": 0,
           "tr2": 0
+        },
+        {
+          "autotile": 0,
+          "at_frame": 24,
+          "tc": 0,
+          "tr": 0,
+          "tc2": 0,
+          "tr2": 0
         }
       ],
       [
         {
           "autotile": 0,
+          "at_frame": 18,
+          "tc": 0,
+          "tr": 0,
+          "tc2": 0,
+          "tr2": 0
+        },
+        {
+          "autotile": 0,
+          "at_frame": 28,
+          "tc": 0,
+          "tr": 0,
+          "tc2": 0,
+          "tr2": 0
+        },
+        {
+          "autotile": 0,
+          "at_frame": 28,
+          "tc": 0,
+          "tr": 0,
+          "tc2": 0,
+          "tr2": 0
+        },
+        {
+          "autotile": 0,
+          "at_frame": 8,
+          "tc": 0,
+          "tr": 0,
+          "tc2": 0,
+          "tr2": 0
+        },
+        {
+          "autotile": 0,
+          "at_frame": 0,
+          "tc": 0,
+          "tr": 0,
+          "tc2": 0,
+          "tr2": 0
+        },
+        {
+          "autotile": 0,
           "at_frame": 0,
           "tc": 0,
           "tr": 0,
@@ -4302,6 +4576,836 @@
         {
           "autotile": 0,
           "at_frame": 0,
+          "tc": 0,
+          "tr": 0,
+          "tc2": 0,
+          "tr2": 0
+        },
+        {
+          "autotile": 0,
+          "at_frame": 0,
+          "tc": 0,
+          "tr": 0,
+          "tc2": 0,
+          "tr2": 0
+        },
+        {
+          "autotile": 0,
+          "at_frame": 0,
+          "tc": 0,
+          "tr": 0,
+          "tc2": 0,
+          "tr2": 0
+        },
+        {
+          "autotile": 0,
+          "at_frame": 0,
+          "tc": 0,
+          "tr": 0,
+          "tc2": 0,
+          "tr2": 0
+        },
+        {
+          "autotile": 0,
+          "at_frame": 0,
+          "tc": 0,
+          "tr": 0,
+          "tc2": 0,
+          "tr2": 0
+        },
+        {
+          "autotile": 0,
+          "at_frame": 0,
+          "tc": 0,
+          "tr": 0,
+          "tc2": 0,
+          "tr2": 0
+        },
+        {
+          "autotile": 0,
+          "at_frame": 0,
+          "tc": 0,
+          "tr": 0,
+          "tc2": 0,
+          "tr2": 0
+        },
+        {
+          "autotile": 0,
+          "at_frame": 0,
+          "tc": 0,
+          "tr": 0,
+          "tc2": 0,
+          "tr2": 0
+        },
+        {
+          "autotile": 0,
+          "at_frame": 0,
+          "tc": 0,
+          "tr": 0,
+          "tc2": 0,
+          "tr2": 0
+        },
+        {
+          "autotile": 0,
+          "at_frame": 0,
+          "tc": 0,
+          "tr": 0,
+          "tc2": 0,
+          "tr2": 0
+        },
+        {
+          "autotile": 0,
+          "at_frame": 0,
+          "tc": 0,
+          "tr": 0,
+          "tc2": 0,
+          "tr2": 0
+        },
+        {
+          "autotile": 0,
+          "at_frame": 0,
+          "tc": 0,
+          "tr": 0,
+          "tc2": 0,
+          "tr2": 0
+        },
+        {
+          "autotile": 0,
+          "at_frame": 0,
+          "tc": 0,
+          "tr": 0,
+          "tc2": 0,
+          "tr2": 0
+        },
+        {
+          "autotile": 0,
+          "at_frame": 0,
+          "tc": 0,
+          "tr": 0,
+          "tc2": 0,
+          "tr2": 0
+        },
+        {
+          "autotile": 0,
+          "at_frame": 0,
+          "tc": 0,
+          "tr": 0,
+          "tc2": 0,
+          "tr2": 0
+        },
+        {
+          "autotile": 0,
+          "at_frame": 0,
+          "tc": 0,
+          "tr": 0,
+          "tc2": 0,
+          "tr2": 0
+        },
+        {
+          "autotile": 0,
+          "at_frame": 0,
+          "tc": 0,
+          "tr": 0,
+          "tc2": 0,
+          "tr2": 0
+        },
+        {
+          "autotile": 0,
+          "at_frame": 0,
+          "tc": 0,
+          "tr": 0,
+          "tc2": 0,
+          "tr2": 0
+        },
+        {
+          "autotile": 0,
+          "at_frame": 4,
+          "tc": 0,
+          "tr": 0,
+          "tc2": 0,
+          "tr2": 0
+        },
+        {
+          "autotile": 0,
+          "at_frame": 28,
+          "tc": 0,
+          "tr": 0,
+          "tc2": 0,
+          "tr2": 0
+        },
+        {
+          "autotile": 0,
+          "at_frame": 28,
+          "tc": 0,
+          "tr": 0,
+          "tc2": 0,
+          "tr2": 0
+        },
+        {
+          "autotile": 0,
+          "at_frame": 25,
+          "tc": 0,
+          "tr": 0,
+          "tc2": 0,
+          "tr2": 0
+        }
+      ],
+      [
+        {
+          "autotile": 0,
+          "at_frame": 32,
+          "tc": 0,
+          "tr": 0,
+          "tc2": 0,
+          "tr2": 0
+        },
+        {
+          "autotile": 2,
+          "at_frame": 34,
+          "tc": 0,
+          "tr": 0,
+          "tc2": 0,
+          "tr2": 0
+        },
+        {
+          "autotile": 2,
+          "at_frame": 36,
+          "tc": 0,
+          "tr": 0,
+          "tc2": 0,
+          "tr2": 0
+        },
+        {
+          "autotile": 0,
+          "at_frame": 16,
+          "tc": 0,
+          "tr": 0,
+          "tc2": 0,
+          "tr2": 0
+        },
+        {
+          "autotile": 0,
+          "at_frame": 0,
+          "tc": 0,
+          "tr": 0,
+          "tc2": 0,
+          "tr2": 0
+        },
+        {
+          "autotile": 0,
+          "at_frame": 0,
+          "tc": 0,
+          "tr": 0,
+          "tc2": 0,
+          "tr2": 0
+        },
+        {
+          "autotile": 0,
+          "at_frame": 0,
+          "tc": 0,
+          "tr": 0,
+          "tc2": 0,
+          "tr2": 0
+        },
+        {
+          "autotile": 0,
+          "at_frame": 0,
+          "tc": 0,
+          "tr": 0,
+          "tc2": 0,
+          "tr2": 0
+        },
+        {
+          "autotile": 0,
+          "at_frame": 0,
+          "tc": 0,
+          "tr": 0,
+          "tc2": 0,
+          "tr2": 0
+        },
+        {
+          "autotile": 0,
+          "at_frame": 0,
+          "tc": 0,
+          "tr": 0,
+          "tc2": 0,
+          "tr2": 0
+        },
+        {
+          "autotile": 0,
+          "at_frame": 0,
+          "tc": 0,
+          "tr": 0,
+          "tc2": 0,
+          "tr2": 0
+        },
+        {
+          "autotile": 0,
+          "at_frame": 0,
+          "tc": 0,
+          "tr": 0,
+          "tc2": 0,
+          "tr2": 0
+        },
+        {
+          "autotile": 0,
+          "at_frame": 0,
+          "tc": 0,
+          "tr": 0,
+          "tc2": 0,
+          "tr2": 0
+        },
+        {
+          "autotile": 0,
+          "at_frame": 0,
+          "tc": 0,
+          "tr": 0,
+          "tc2": 0,
+          "tr2": 0
+        },
+        {
+          "autotile": 0,
+          "at_frame": 0,
+          "tc": 0,
+          "tr": 0,
+          "tc2": 0,
+          "tr2": 0
+        },
+        {
+          "autotile": 0,
+          "at_frame": 0,
+          "tc": 0,
+          "tr": 0,
+          "tc2": 0,
+          "tr2": 0
+        },
+        {
+          "autotile": 0,
+          "at_frame": 0,
+          "tc": 0,
+          "tr": 0,
+          "tc2": 0,
+          "tr2": 0
+        },
+        {
+          "autotile": 0,
+          "at_frame": 0,
+          "tc": 0,
+          "tr": 0,
+          "tc2": 0,
+          "tr2": 0
+        },
+        {
+          "autotile": 0,
+          "at_frame": 0,
+          "tc": 0,
+          "tr": 0,
+          "tc2": 0,
+          "tr2": 0
+        },
+        {
+          "autotile": 0,
+          "at_frame": 0,
+          "tc": 0,
+          "tr": 0,
+          "tc2": 0,
+          "tr2": 0
+        },
+        {
+          "autotile": 0,
+          "at_frame": 0,
+          "tc": 0,
+          "tr": 0,
+          "tc2": 0,
+          "tr2": 0
+        },
+        {
+          "autotile": 0,
+          "at_frame": 0,
+          "tc": 0,
+          "tr": 0,
+          "tc2": 0,
+          "tr2": 0
+        },
+        {
+          "autotile": 0,
+          "at_frame": 0,
+          "tc": 0,
+          "tr": 0,
+          "tc2": 0,
+          "tr2": 0
+        },
+        {
+          "autotile": 0,
+          "at_frame": 0,
+          "tc": 0,
+          "tr": 0,
+          "tc2": 0,
+          "tr2": 0
+        },
+        {
+          "autotile": 0,
+          "at_frame": 0,
+          "tc": 0,
+          "tr": 0,
+          "tc2": 0,
+          "tr2": 0
+        },
+        {
+          "autotile": 0,
+          "at_frame": 24,
+          "tc": 0,
+          "tr": 0,
+          "tc2": 0,
+          "tr2": 0
+        },
+        {
+          "autotile": 2,
+          "at_frame": 34,
+          "tc": 0,
+          "tr": 0,
+          "tc2": 0,
+          "tr2": 0
+        },
+        {
+          "autotile": 2,
+          "at_frame": 36,
+          "tc": 0,
+          "tr": 0,
+          "tc2": 0,
+          "tr2": 0
+        },
+        {
+          "autotile": 0,
+          "at_frame": 32,
+          "tc": 0,
+          "tr": 0,
+          "tc2": 0,
+          "tr2": 0
+        }
+      ],
+      [
+        {
+          "autotile": 0,
+          "at_frame": 32,
+          "tc": 0,
+          "tr": 0,
+          "tc2": 0,
+          "tr2": 0
+        },
+        {
+          "autotile": 2,
+          "at_frame": 40,
+          "tc": 0,
+          "tr": 0,
+          "tc2": 0,
+          "tr2": 0
+        },
+        {
+          "autotile": 2,
+          "at_frame": 38,
+          "tc": 0,
+          "tr": 0,
+          "tc2": 0,
+          "tr2": 0
+        },
+        {
+          "autotile": 0,
+          "at_frame": 16,
+          "tc": 0,
+          "tr": 0,
+          "tc2": 0,
+          "tr2": 0
+        },
+        {
+          "autotile": 0,
+          "at_frame": 0,
+          "tc": 0,
+          "tr": 0,
+          "tc2": 0,
+          "tr2": 0
+        },
+        {
+          "autotile": 0,
+          "at_frame": 4,
+          "tc": 0,
+          "tr": 0,
+          "tc2": 0,
+          "tr2": 0
+        },
+        {
+          "autotile": 0,
+          "at_frame": 28,
+          "tc": 0,
+          "tr": 0,
+          "tc2": 0,
+          "tr2": 0
+        },
+        {
+          "autotile": 0,
+          "at_frame": 28,
+          "tc": 0,
+          "tr": 0,
+          "tc2": 0,
+          "tr2": 0
+        },
+        {
+          "autotile": 0,
+          "at_frame": 8,
+          "tc": 0,
+          "tr": 0,
+          "tc2": 0,
+          "tr2": 0
+        },
+        {
+          "autotile": 0,
+          "at_frame": 0,
+          "tc": 0,
+          "tr": 0,
+          "tc2": 0,
+          "tr2": 0
+        },
+        {
+          "autotile": 0,
+          "at_frame": 0,
+          "tc": 0,
+          "tr": 0,
+          "tc2": 0,
+          "tr2": 0
+        },
+        {
+          "autotile": 0,
+          "at_frame": 0,
+          "tc": 0,
+          "tr": 0,
+          "tc2": 0,
+          "tr2": 0
+        },
+        {
+          "autotile": 0,
+          "at_frame": 0,
+          "tc": 0,
+          "tr": 0,
+          "tc2": 0,
+          "tr2": 0
+        },
+        {
+          "autotile": 0,
+          "at_frame": 0,
+          "tc": 0,
+          "tr": 0,
+          "tc2": 0,
+          "tr2": 0
+        },
+        {
+          "autotile": 0,
+          "at_frame": 0,
+          "tc": 0,
+          "tr": 0,
+          "tc2": 0,
+          "tr2": 0
+        },
+        {
+          "autotile": 0,
+          "at_frame": 0,
+          "tc": 0,
+          "tr": 0,
+          "tc2": 0,
+          "tr2": 0
+        },
+        {
+          "autotile": 0,
+          "at_frame": 0,
+          "tc": 0,
+          "tr": 0,
+          "tc2": 0,
+          "tr2": 0
+        },
+        {
+          "autotile": 0,
+          "at_frame": 0,
+          "tc": 0,
+          "tr": 0,
+          "tc2": 0,
+          "tr2": 0
+        },
+        {
+          "autotile": 0,
+          "at_frame": 0,
+          "tc": 0,
+          "tr": 0,
+          "tc2": 0,
+          "tr2": 0
+        },
+        {
+          "autotile": 0,
+          "at_frame": 0,
+          "tc": 0,
+          "tr": 0,
+          "tc2": 0,
+          "tr2": 0
+        },
+        {
+          "autotile": 0,
+          "at_frame": 4,
+          "tc": 0,
+          "tr": 0,
+          "tc2": 0,
+          "tr2": 0
+        },
+        {
+          "autotile": 0,
+          "at_frame": 28,
+          "tc": 0,
+          "tr": 0,
+          "tc2": 0,
+          "tr2": 0
+        },
+        {
+          "autotile": 0,
+          "at_frame": 28,
+          "tc": 0,
+          "tr": 0,
+          "tc2": 0,
+          "tr2": 0
+        },
+        {
+          "autotile": 0,
+          "at_frame": 8,
+          "tc": 0,
+          "tr": 0,
+          "tc2": 0,
+          "tr2": 0
+        },
+        {
+          "autotile": 0,
+          "at_frame": 0,
+          "tc": 0,
+          "tr": 0,
+          "tc2": 0,
+          "tr2": 0
+        },
+        {
+          "autotile": 0,
+          "at_frame": 24,
+          "tc": 0,
+          "tr": 0,
+          "tc2": 0,
+          "tr2": 0
+        },
+        {
+          "autotile": 2,
+          "at_frame": 40,
+          "tc": 0,
+          "tr": 0,
+          "tc2": 0,
+          "tr2": 0
+        },
+        {
+          "autotile": 2,
+          "at_frame": 38,
+          "tc": 0,
+          "tr": 0,
+          "tc2": 0,
+          "tr2": 0
+        },
+        {
+          "autotile": 0,
+          "at_frame": 32,
+          "tc": 0,
+          "tr": 0,
+          "tc2": 0,
+          "tr2": 0
+        }
+      ],
+      [
+        {
+          "autotile": 0,
+          "at_frame": 17,
+          "tc": 0,
+          "tr": 0,
+          "tc2": 0,
+          "tr2": 0
+        },
+        {
+          "autotile": 0,
+          "at_frame": 20,
+          "tc": 0,
+          "tr": 0,
+          "tc2": 0,
+          "tr2": 0
+        },
+        {
+          "autotile": 0,
+          "at_frame": 20,
+          "tc": 0,
+          "tr": 0,
+          "tc2": 0,
+          "tr2": 0
+        },
+        {
+          "autotile": 0,
+          "at_frame": 1,
+          "tc": 0,
+          "tr": 0,
+          "tc2": 0,
+          "tr2": 0
+        },
+        {
+          "autotile": 0,
+          "at_frame": 0,
+          "tc": 0,
+          "tr": 0,
+          "tc2": 0,
+          "tr2": 0
+        },
+        {
+          "autotile": 0,
+          "at_frame": 24,
+          "tc": 0,
+          "tr": 0,
+          "tc2": 0,
+          "tr2": 0
+        },
+        {
+          "autotile": 2,
+          "at_frame": 34,
+          "tc": 0,
+          "tr": 0,
+          "tc2": 0,
+          "tr2": 0
+        },
+        {
+          "autotile": 2,
+          "at_frame": 36,
+          "tc": 0,
+          "tr": 0,
+          "tc2": 0,
+          "tr2": 0
+        },
+        {
+          "autotile": 0,
+          "at_frame": 16,
+          "tc": 0,
+          "tr": 0,
+          "tc2": 0,
+          "tr2": 0
+        },
+        {
+          "autotile": 0,
+          "at_frame": 0,
+          "tc": 0,
+          "tr": 0,
+          "tc2": 0,
+          "tr2": 0
+        },
+        {
+          "autotile": 0,
+          "at_frame": 0,
+          "tc": 0,
+          "tr": 0,
+          "tc2": 0,
+          "tr2": 0
+        },
+        {
+          "autotile": 0,
+          "at_frame": 0,
+          "tc": 0,
+          "tr": 0,
+          "tc2": 0,
+          "tr2": 0
+        },
+        {
+          "autotile": 0,
+          "at_frame": 0,
+          "tc": 0,
+          "tr": 0,
+          "tc2": 0,
+          "tr2": 0
+        },
+        {
+          "autotile": 0,
+          "at_frame": 0,
+          "tc": 0,
+          "tr": 0,
+          "tc2": 0,
+          "tr2": 0
+        },
+        {
+          "autotile": 0,
+          "at_frame": 0,
+          "tc": 0,
+          "tr": 0,
+          "tc2": 0,
+          "tr2": 0
+        },
+        {
+          "autotile": 0,
+          "at_frame": 0,
+          "tc": 0,
+          "tr": 0,
+          "tc2": 0,
+          "tr2": 0
+        },
+        {
+          "autotile": 0,
+          "at_frame": 0,
+          "tc": 0,
+          "tr": 0,
+          "tc2": 0,
+          "tr2": 0
+        },
+        {
+          "autotile": 0,
+          "at_frame": 0,
+          "tc": 0,
+          "tr": 0,
+          "tc2": 0,
+          "tr2": 0
+        },
+        {
+          "autotile": 0,
+          "at_frame": 0,
+          "tc": 0,
+          "tr": 0,
+          "tc2": 0,
+          "tr2": 0
+        },
+        {
+          "autotile": 0,
+          "at_frame": 0,
+          "tc": 0,
+          "tr": 0,
+          "tc2": 0,
+          "tr2": 0
+        },
+        {
+          "autotile": 0,
+          "at_frame": 24,
+          "tc": 0,
+          "tr": 0,
+          "tc2": 0,
+          "tr2": 0
+        },
+        {
+          "autotile": 2,
+          "at_frame": 34,
+          "tc": 0,
+          "tr": 0,
+          "tc2": 0,
+          "tr2": 0
+        },
+        {
+          "autotile": 2,
+          "at_frame": 36,
+          "tc": 0,
+          "tr": 0,
+          "tc2": 0,
+          "tr2": 0
+        },
+        {
+          "autotile": 0,
+          "at_frame": 16,
           "tc": 0,
           "tr": 0,
           "tc2": 0,
@@ -4341,175 +5445,7 @@
         },
         {
           "autotile": 0,
-          "at_frame": 20,
-          "tc": 0,
-          "tr": 0,
-          "tc2": 0,
-          "tr2": 0
-        },
-        {
-          "autotile": 0,
-          "at_frame": 20,
-          "tc": 0,
-          "tr": 0,
-          "tc2": 0,
-          "tr2": 0
-        },
-        {
-          "autotile": 0,
-          "at_frame": 20,
-          "tc": 0,
-          "tr": 0,
-          "tc2": 0,
-          "tr2": 0
-        },
-        {
-          "autotile": 0,
-          "at_frame": 20,
-          "tc": 0,
-          "tr": 0,
-          "tc2": 0,
-          "tr2": 0
-        },
-        {
-          "autotile": 0,
-          "at_frame": 20,
-          "tc": 0,
-          "tr": 0,
-          "tc2": 0,
-          "tr2": 0
-        },
-        {
-          "autotile": 0,
-          "at_frame": 20,
-          "tc": 0,
-          "tr": 0,
-          "tc2": 0,
-          "tr2": 0
-        },
-        {
-          "autotile": 0,
-          "at_frame": 20,
-          "tc": 0,
-          "tr": 0,
-          "tc2": 0,
-          "tr2": 0
-        },
-        {
-          "autotile": 0,
-          "at_frame": 20,
-          "tc": 0,
-          "tr": 0,
-          "tc2": 0,
-          "tr2": 0
-        },
-        {
-          "autotile": 0,
-          "at_frame": 20,
-          "tc": 0,
-          "tr": 0,
-          "tc2": 0,
-          "tr2": 0
-        },
-        {
-          "autotile": 0,
-          "at_frame": 20,
-          "tc": 0,
-          "tr": 0,
-          "tc2": 0,
-          "tr2": 0
-        },
-        {
-          "autotile": 0,
-          "at_frame": 20,
-          "tc": 0,
-          "tr": 0,
-          "tc2": 0,
-          "tr2": 0
-        },
-        {
-          "autotile": 0,
-          "at_frame": 20,
-          "tc": 0,
-          "tr": 0,
-          "tc2": 0,
-          "tr2": 0
-        },
-        {
-          "autotile": 0,
-          "at_frame": 20,
-          "tc": 0,
-          "tr": 0,
-          "tc2": 0,
-          "tr2": 0
-        },
-        {
-          "autotile": 0,
-          "at_frame": 20,
-          "tc": 0,
-          "tr": 0,
-          "tc2": 0,
-          "tr2": 0
-        },
-        {
-          "autotile": 0,
-          "at_frame": 20,
-          "tc": 0,
-          "tr": 0,
-          "tc2": 0,
-          "tr2": 0
-        },
-        {
-          "autotile": 0,
-          "at_frame": 20,
-          "tc": 0,
-          "tr": 0,
-          "tc2": 0,
-          "tr2": 0
-        },
-        {
-          "autotile": 0,
-          "at_frame": 20,
-          "tc": 0,
-          "tr": 0,
-          "tc2": 0,
-          "tr2": 0
-        },
-        {
-          "autotile": 0,
-          "at_frame": 1,
-          "tc": 0,
-          "tr": 0,
-          "tc2": 0,
-          "tr2": 0
-        },
-        {
-          "autotile": 0,
-          "at_frame": 0,
-          "tc": 0,
-          "tr": 0,
-          "tc2": 0,
-          "tr2": 0
-        },
-        {
-          "autotile": 0,
-          "at_frame": 0,
-          "tc": 0,
-          "tr": 0,
-          "tc2": 0,
-          "tr2": 0
-        },
-        {
-          "autotile": 0,
-          "at_frame": 0,
-          "tc": 0,
-          "tr": 0,
-          "tc2": 0,
-          "tr2": 0
-        },
-        {
-          "autotile": 0,
-          "at_frame": 0,
+          "at_frame": 26,
           "tc": 0,
           "tr": 0,
           "tc2": 0,
@@ -4519,7 +5455,7 @@
       [
         {
           "autotile": 0,
-          "at_frame": 0,
+          "at_frame": 16,
           "tc": 0,
           "tr": 0,
           "tc2": 0,
@@ -4559,435 +5495,7 @@
         },
         {
           "autotile": 0,
-          "at_frame": 0,
-          "tc": 0,
-          "tr": 0,
-          "tc2": 0,
-          "tr2": 0
-        },
-        {
-          "autotile": 0,
-          "at_frame": 0,
-          "tc": 0,
-          "tr": 0,
-          "tc2": 0,
-          "tr2": 0
-        },
-        {
-          "autotile": 0,
-          "at_frame": 0,
-          "tc": 0,
-          "tr": 0,
-          "tc2": 0,
-          "tr2": 0
-        },
-        {
-          "autotile": 0,
-          "at_frame": 0,
-          "tc": 0,
-          "tr": 0,
-          "tc2": 0,
-          "tr2": 0
-        },
-        {
-          "autotile": 0,
-          "at_frame": 0,
-          "tc": 0,
-          "tr": 0,
-          "tc2": 0,
-          "tr2": 0
-        },
-        {
-          "autotile": 0,
-          "at_frame": 0,
-          "tc": 0,
-          "tr": 0,
-          "tc2": 0,
-          "tr2": 0
-        },
-        {
-          "autotile": 0,
-          "at_frame": 0,
-          "tc": 0,
-          "tr": 0,
-          "tc2": 0,
-          "tr2": 0
-        },
-        {
-          "autotile": 0,
-          "at_frame": 0,
-          "tc": 0,
-          "tr": 0,
-          "tc2": 0,
-          "tr2": 0
-        },
-        {
-          "autotile": 0,
-          "at_frame": 0,
-          "tc": 0,
-          "tr": 0,
-          "tc2": 0,
-          "tr2": 0
-        },
-        {
-          "autotile": 0,
-          "at_frame": 0,
-          "tc": 0,
-          "tr": 0,
-          "tc2": 0,
-          "tr2": 0
-        },
-        {
-          "autotile": 0,
-          "at_frame": 0,
-          "tc": 0,
-          "tr": 0,
-          "tc2": 0,
-          "tr2": 0
-        },
-        {
-          "autotile": 0,
-          "at_frame": 0,
-          "tc": 0,
-          "tr": 0,
-          "tc2": 0,
-          "tr2": 0
-        },
-        {
-          "autotile": 0,
-          "at_frame": 0,
-          "tc": 0,
-          "tr": 0,
-          "tc2": 0,
-          "tr2": 0
-        },
-        {
-          "autotile": 0,
-          "at_frame": 0,
-          "tc": 0,
-          "tr": 0,
-          "tc2": 0,
-          "tr2": 0
-        },
-        {
-          "autotile": 0,
-          "at_frame": 0,
-          "tc": 0,
-          "tr": 0,
-          "tc2": 0,
-          "tr2": 0
-        },
-        {
-          "autotile": 0,
-          "at_frame": 0,
-          "tc": 0,
-          "tr": 0,
-          "tc2": 0,
-          "tr2": 0
-        },
-        {
-          "autotile": 0,
-          "at_frame": 0,
-          "tc": 0,
-          "tr": 0,
-          "tc2": 0,
-          "tr2": 0
-        },
-        {
-          "autotile": 0,
-          "at_frame": 0,
-          "tc": 0,
-          "tr": 0,
-          "tc2": 0,
-          "tr2": 0
-        },
-        {
-          "autotile": 0,
-          "at_frame": 0,
-          "tc": 0,
-          "tr": 0,
-          "tc2": 0,
-          "tr2": 0
-        },
-        {
-          "autotile": 0,
-          "at_frame": 0,
-          "tc": 0,
-          "tr": 0,
-          "tc2": 0,
-          "tr2": 0
-        },
-        {
-          "autotile": 0,
-          "at_frame": 0,
-          "tc": 0,
-          "tr": 0,
-          "tc2": 0,
-          "tr2": 0
-        },
-        {
-          "autotile": 0,
-          "at_frame": 0,
-          "tc": 0,
-          "tr": 0,
-          "tc2": 0,
-          "tr2": 0
-        },
-        {
-          "autotile": 0,
-          "at_frame": 0,
-          "tc": 0,
-          "tr": 0,
-          "tc2": 0,
-          "tr2": 0
-        },
-        {
-          "autotile": 0,
-          "at_frame": 0,
-          "tc": 0,
-          "tr": 0,
-          "tc2": 0,
-          "tr2": 0
-        }
-      ],
-      [
-        {
-          "autotile": 0,
-          "at_frame": 0,
-          "tc": 0,
-          "tr": 0,
-          "tc2": 0,
-          "tr2": 0
-        },
-        {
-          "autotile": 2,
-          "at_frame": 34,
-          "tc": 0,
-          "tr": 0,
-          "tc2": 0,
-          "tr2": 0
-        },
-        {
-          "autotile": 2,
-          "at_frame": 36,
-          "tc": 0,
-          "tr": 0,
-          "tc2": 0,
-          "tr2": 0
-        },
-        {
-          "autotile": 0,
-          "at_frame": 0,
-          "tc": 0,
-          "tr": 0,
-          "tc2": 0,
-          "tr2": 0
-        },
-        {
-          "autotile": 0,
-          "at_frame": 0,
-          "tc": 0,
-          "tr": 0,
-          "tc2": 0,
-          "tr2": 0
-        },
-        {
-          "autotile": 0,
-          "at_frame": 0,
-          "tc": 0,
-          "tr": 0,
-          "tc2": 0,
-          "tr2": 0
-        },
-        {
-          "autotile": 0,
-          "at_frame": 0,
-          "tc": 0,
-          "tr": 0,
-          "tc2": 0,
-          "tr2": 0
-        },
-        {
-          "autotile": 0,
-          "at_frame": 0,
-          "tc": 0,
-          "tr": 0,
-          "tc2": 0,
-          "tr2": 0
-        },
-        {
-          "autotile": 0,
-          "at_frame": 0,
-          "tc": 0,
-          "tr": 0,
-          "tc2": 0,
-          "tr2": 0
-        },
-        {
-          "autotile": 0,
-          "at_frame": 0,
-          "tc": 0,
-          "tr": 0,
-          "tc2": 0,
-          "tr2": 0
-        },
-        {
-          "autotile": 0,
-          "at_frame": 0,
-          "tc": 0,
-          "tr": 0,
-          "tc2": 0,
-          "tr2": 0
-        },
-        {
-          "autotile": 0,
-          "at_frame": 0,
-          "tc": 0,
-          "tr": 0,
-          "tc2": 0,
-          "tr2": 0
-        },
-        {
-          "autotile": 0,
-          "at_frame": 0,
-          "tc": 0,
-          "tr": 0,
-          "tc2": 0,
-          "tr2": 0
-        },
-        {
-          "autotile": 0,
-          "at_frame": 0,
-          "tc": 0,
-          "tr": 0,
-          "tc2": 0,
-          "tr2": 0
-        },
-        {
-          "autotile": 0,
-          "at_frame": 0,
-          "tc": 0,
-          "tr": 0,
-          "tc2": 0,
-          "tr2": 0
-        },
-        {
-          "autotile": 0,
-          "at_frame": 0,
-          "tc": 0,
-          "tr": 0,
-          "tc2": 0,
-          "tr2": 0
-        },
-        {
-          "autotile": 0,
-          "at_frame": 0,
-          "tc": 0,
-          "tr": 0,
-          "tc2": 0,
-          "tr2": 0
-        },
-        {
-          "autotile": 0,
-          "at_frame": 0,
-          "tc": 0,
-          "tr": 0,
-          "tc2": 0,
-          "tr2": 0
-        },
-        {
-          "autotile": 0,
-          "at_frame": 0,
-          "tc": 0,
-          "tr": 0,
-          "tc2": 0,
-          "tr2": 0
-        },
-        {
-          "autotile": 0,
-          "at_frame": 0,
-          "tc": 0,
-          "tr": 0,
-          "tc2": 0,
-          "tr2": 0
-        },
-        {
-          "autotile": 0,
-          "at_frame": 0,
-          "tc": 0,
-          "tr": 0,
-          "tc2": 0,
-          "tr2": 0
-        },
-        {
-          "autotile": 0,
-          "at_frame": 0,
-          "tc": 0,
-          "tr": 0,
-          "tc2": 0,
-          "tr2": 0
-        },
-        {
-          "autotile": 0,
-          "at_frame": 0,
-          "tc": 0,
-          "tr": 0,
-          "tc2": 0,
-          "tr2": 0
-        },
-        {
-          "autotile": 0,
-          "at_frame": 0,
-          "tc": 0,
-          "tr": 0,
-          "tc2": 0,
-          "tr2": 0
-        },
-        {
-          "autotile": 0,
-          "at_frame": 0,
-          "tc": 0,
-          "tr": 0,
-          "tc2": 0,
-          "tr2": 0
-        },
-        {
-          "autotile": 0,
-          "at_frame": 0,
-          "tc": 0,
-          "tr": 0,
-          "tc2": 0,
-          "tr2": 0
-        },
-        {
-          "autotile": 2,
-          "at_frame": 34,
-          "tc": 0,
-          "tr": 0,
-          "tc2": 0,
-          "tr2": 0
-        },
-        {
-          "autotile": 2,
-          "at_frame": 36,
-          "tc": 0,
-          "tr": 0,
-          "tc2": 0,
-          "tr2": 0
-        },
-        {
-          "autotile": 0,
-          "at_frame": 0,
-          "tc": 0,
-          "tr": 0,
-          "tc2": 0,
-          "tr2": 0
-        }
-      ],
-      [
-        {
-          "autotile": 0,
-          "at_frame": 0,
+          "at_frame": 24,
           "tc": 0,
           "tr": 0,
           "tc2": 0,
@@ -5011,7 +5519,7 @@
         },
         {
           "autotile": 0,
-          "at_frame": 0,
+          "at_frame": 16,
           "tc": 0,
           "tr": 0,
           "tc2": 0,
@@ -5107,87 +5615,7 @@
         },
         {
           "autotile": 0,
-          "at_frame": 0,
-          "tc": 0,
-          "tr": 0,
-          "tc2": 0,
-          "tr2": 0
-        },
-        {
-          "autotile": 0,
-          "at_frame": 0,
-          "tc": 0,
-          "tr": 0,
-          "tc2": 0,
-          "tr2": 0
-        },
-        {
-          "autotile": 0,
-          "at_frame": 0,
-          "tc": 0,
-          "tr": 0,
-          "tc2": 0,
-          "tr2": 0
-        },
-        {
-          "autotile": 0,
-          "at_frame": 0,
-          "tc": 0,
-          "tr": 0,
-          "tc2": 0,
-          "tr2": 0
-        },
-        {
-          "autotile": 0,
-          "at_frame": 0,
-          "tc": 0,
-          "tr": 0,
-          "tc2": 0,
-          "tr2": 0
-        },
-        {
-          "autotile": 0,
-          "at_frame": 0,
-          "tc": 0,
-          "tr": 0,
-          "tc2": 0,
-          "tr2": 0
-        },
-        {
-          "autotile": 0,
-          "at_frame": 0,
-          "tc": 0,
-          "tr": 0,
-          "tc2": 0,
-          "tr2": 0
-        },
-        {
-          "autotile": 0,
-          "at_frame": 0,
-          "tc": 0,
-          "tr": 0,
-          "tc2": 0,
-          "tr2": 0
-        },
-        {
-          "autotile": 0,
-          "at_frame": 0,
-          "tc": 0,
-          "tr": 0,
-          "tc2": 0,
-          "tr2": 0
-        },
-        {
-          "autotile": 0,
-          "at_frame": 0,
-          "tc": 0,
-          "tr": 0,
-          "tc2": 0,
-          "tr2": 0
-        },
-        {
-          "autotile": 0,
-          "at_frame": 0,
+          "at_frame": 24,
           "tc": 0,
           "tr": 0,
           "tc2": 0,
@@ -5211,7 +5639,47 @@
         },
         {
           "autotile": 0,
+          "at_frame": 16,
+          "tc": 0,
+          "tr": 0,
+          "tc2": 0,
+          "tr2": 0
+        },
+        {
+          "autotile": 0,
           "at_frame": 0,
+          "tc": 0,
+          "tr": 0,
+          "tc2": 0,
+          "tr2": 0
+        },
+        {
+          "autotile": 0,
+          "at_frame": 0,
+          "tc": 0,
+          "tr": 0,
+          "tc2": 0,
+          "tr2": 0
+        },
+        {
+          "autotile": 0,
+          "at_frame": 0,
+          "tc": 0,
+          "tr": 0,
+          "tc2": 0,
+          "tr2": 0
+        },
+        {
+          "autotile": 0,
+          "at_frame": 0,
+          "tc": 0,
+          "tr": 0,
+          "tc2": 0,
+          "tr2": 0
+        },
+        {
+          "autotile": 0,
+          "at_frame": 24,
           "tc": 0,
           "tr": 0,
           "tc2": 0,
@@ -5221,288 +5689,6 @@
       [
         {
           "autotile": 0,
-          "at_frame": 0,
-          "tc": 0,
-          "tr": 0,
-          "tc2": 0,
-          "tr2": 0
-        },
-        {
-          "autotile": 0,
-          "at_frame": 0,
-          "tc": 0,
-          "tr": 0,
-          "tc2": 0,
-          "tr2": 0
-        },
-        {
-          "autotile": 0,
-          "at_frame": 0,
-          "tc": 0,
-          "tr": 0,
-          "tc2": 0,
-          "tr2": 0
-        },
-        {
-          "autotile": 0,
-          "at_frame": 0,
-          "tc": 0,
-          "tr": 0,
-          "tc2": 0,
-          "tr2": 0
-        },
-        {
-          "autotile": 0,
-          "at_frame": 0,
-          "tc": 0,
-          "tr": 0,
-          "tc2": 0,
-          "tr2": 0
-        },
-        {
-          "autotile": 0,
-          "at_frame": 0,
-          "tc": 0,
-          "tr": 0,
-          "tc2": 0,
-          "tr2": 0
-        },
-        {
-          "autotile": 2,
-          "at_frame": 34,
-          "tc": 0,
-          "tr": 0,
-          "tc2": 0,
-          "tr2": 0
-        },
-        {
-          "autotile": 2,
-          "at_frame": 36,
-          "tc": 0,
-          "tr": 0,
-          "tc2": 0,
-          "tr2": 0
-        },
-        {
-          "autotile": 0,
-          "at_frame": 0,
-          "tc": 0,
-          "tr": 0,
-          "tc2": 0,
-          "tr2": 0
-        },
-        {
-          "autotile": 0,
-          "at_frame": 0,
-          "tc": 0,
-          "tr": 0,
-          "tc2": 0,
-          "tr2": 0
-        },
-        {
-          "autotile": 0,
-          "at_frame": 0,
-          "tc": 0,
-          "tr": 0,
-          "tc2": 0,
-          "tr2": 0
-        },
-        {
-          "autotile": 0,
-          "at_frame": 0,
-          "tc": 0,
-          "tr": 0,
-          "tc2": 0,
-          "tr2": 0
-        },
-        {
-          "autotile": 0,
-          "at_frame": 0,
-          "tc": 0,
-          "tr": 0,
-          "tc2": 0,
-          "tr2": 0
-        },
-        {
-          "autotile": 0,
-          "at_frame": 0,
-          "tc": 0,
-          "tr": 0,
-          "tc2": 0,
-          "tr2": 0
-        },
-        {
-          "autotile": 0,
-          "at_frame": 0,
-          "tc": 0,
-          "tr": 0,
-          "tc2": 0,
-          "tr2": 0
-        },
-        {
-          "autotile": 0,
-          "at_frame": 0,
-          "tc": 0,
-          "tr": 0,
-          "tc2": 0,
-          "tr2": 0
-        },
-        {
-          "autotile": 0,
-          "at_frame": 0,
-          "tc": 0,
-          "tr": 0,
-          "tc2": 0,
-          "tr2": 0
-        },
-        {
-          "autotile": 0,
-          "at_frame": 0,
-          "tc": 0,
-          "tr": 0,
-          "tc2": 0,
-          "tr2": 0
-        },
-        {
-          "autotile": 0,
-          "at_frame": 0,
-          "tc": 0,
-          "tr": 0,
-          "tc2": 0,
-          "tr2": 0
-        },
-        {
-          "autotile": 0,
-          "at_frame": 0,
-          "tc": 0,
-          "tr": 0,
-          "tc2": 0,
-          "tr2": 0
-        },
-        {
-          "autotile": 0,
-          "at_frame": 0,
-          "tc": 0,
-          "tr": 0,
-          "tc2": 0,
-          "tr2": 0
-        },
-        {
-          "autotile": 2,
-          "at_frame": 34,
-          "tc": 0,
-          "tr": 0,
-          "tc2": 0,
-          "tr2": 0
-        },
-        {
-          "autotile": 2,
-          "at_frame": 36,
-          "tc": 0,
-          "tr": 0,
-          "tc2": 0,
-          "tr2": 0
-        },
-        {
-          "autotile": 0,
-          "at_frame": 0,
-          "tc": 0,
-          "tr": 0,
-          "tc2": 0,
-          "tr2": 0
-        },
-        {
-          "autotile": 0,
-          "at_frame": 0,
-          "tc": 0,
-          "tr": 0,
-          "tc2": 0,
-          "tr2": 0
-        },
-        {
-          "autotile": 0,
-          "at_frame": 0,
-          "tc": 0,
-          "tr": 0,
-          "tc2": 0,
-          "tr2": 0
-        },
-        {
-          "autotile": 0,
-          "at_frame": 0,
-          "tc": 0,
-          "tr": 0,
-          "tc2": 0,
-          "tr2": 0
-        },
-        {
-          "autotile": 0,
-          "at_frame": 0,
-          "tc": 0,
-          "tr": 0,
-          "tc2": 0,
-          "tr2": 0
-        },
-        {
-          "autotile": 0,
-          "at_frame": 0,
-          "tc": 0,
-          "tr": 0,
-          "tc2": 0,
-          "tr2": 0
-        }
-      ],
-      [
-        {
-          "autotile": 0,
-          "at_frame": 0,
-          "tc": 0,
-          "tr": 0,
-          "tc2": 0,
-          "tr2": 0
-        },
-        {
-          "autotile": 0,
-          "at_frame": 0,
-          "tc": 0,
-          "tr": 0,
-          "tc2": 0,
-          "tr2": 0
-        },
-        {
-          "autotile": 0,
-          "at_frame": 0,
-          "tc": 0,
-          "tr": 0,
-          "tc2": 0,
-          "tr2": 0
-        },
-        {
-          "autotile": 0,
-          "at_frame": 0,
-          "tc": 0,
-          "tr": 0,
-          "tc2": 0,
-          "tr2": 0
-        },
-        {
-          "autotile": 0,
-          "at_frame": 0,
-          "tc": 0,
-          "tr": 0,
-          "tc2": 0,
-          "tr2": 0
-        },
-        {
-          "autotile": 0,
-          "at_frame": 0,
-          "tc": 0,
-          "tr": 0,
-          "tc2": 0,
-          "tr2": 0
-        },
-        {
-          "autotile": 2,
           "at_frame": 40,
           "tc": 0,
           "tr": 0,
@@ -5510,410 +5696,224 @@
           "tr2": 0
         },
         {
-          "autotile": 2,
+          "autotile": 0,
+          "at_frame": 28,
+          "tc": 0,
+          "tr": 0,
+          "tc2": 0,
+          "tr2": 0
+        },
+        {
+          "autotile": 0,
+          "at_frame": 28,
+          "tc": 0,
+          "tr": 0,
+          "tc2": 0,
+          "tr2": 0
+        },
+        {
+          "autotile": 0,
+          "at_frame": 28,
+          "tc": 0,
+          "tr": 0,
+          "tc2": 0,
+          "tr2": 0
+        },
+        {
+          "autotile": 0,
+          "at_frame": 28,
+          "tc": 0,
+          "tr": 0,
+          "tc2": 0,
+          "tr2": 0
+        },
+        {
+          "autotile": 0,
+          "at_frame": 30,
+          "tc": 0,
+          "tr": 0,
+          "tc2": 0,
+          "tr2": 0
+        },
+        {
+          "autotile": 0,
+          "at_frame": 33,
+          "tc": 0,
+          "tr": 0,
+          "tc2": 0,
+          "tr2": 0
+        },
+        {
+          "autotile": 0,
+          "at_frame": 33,
+          "tc": 0,
+          "tr": 0,
+          "tc2": 0,
+          "tr2": 0
+        },
+        {
+          "autotile": 0,
+          "at_frame": 29,
+          "tc": 0,
+          "tr": 0,
+          "tc2": 0,
+          "tr2": 0
+        },
+        {
+          "autotile": 0,
+          "at_frame": 28,
+          "tc": 0,
+          "tr": 0,
+          "tc2": 0,
+          "tr2": 0
+        },
+        {
+          "autotile": 0,
+          "at_frame": 28,
+          "tc": 0,
+          "tr": 0,
+          "tc2": 0,
+          "tr2": 0
+        },
+        {
+          "autotile": 0,
+          "at_frame": 28,
+          "tc": 0,
+          "tr": 0,
+          "tc2": 0,
+          "tr2": 0
+        },
+        {
+          "autotile": 0,
+          "at_frame": 28,
+          "tc": 0,
+          "tr": 0,
+          "tc2": 0,
+          "tr2": 0
+        },
+        {
+          "autotile": 0,
+          "at_frame": 28,
+          "tc": 0,
+          "tr": 0,
+          "tc2": 0,
+          "tr2": 0
+        },
+        {
+          "autotile": 0,
+          "at_frame": 28,
+          "tc": 0,
+          "tr": 0,
+          "tc2": 0,
+          "tr2": 0
+        },
+        {
+          "autotile": 0,
+          "at_frame": 28,
+          "tc": 0,
+          "tr": 0,
+          "tc2": 0,
+          "tr2": 0
+        },
+        {
+          "autotile": 0,
+          "at_frame": 28,
+          "tc": 0,
+          "tr": 0,
+          "tc2": 0,
+          "tr2": 0
+        },
+        {
+          "autotile": 0,
+          "at_frame": 28,
+          "tc": 0,
+          "tr": 0,
+          "tc2": 0,
+          "tr2": 0
+        },
+        {
+          "autotile": 0,
+          "at_frame": 28,
+          "tc": 0,
+          "tr": 0,
+          "tc2": 0,
+          "tr2": 0
+        },
+        {
+          "autotile": 0,
+          "at_frame": 28,
+          "tc": 0,
+          "tr": 0,
+          "tc2": 0,
+          "tr2": 0
+        },
+        {
+          "autotile": 0,
+          "at_frame": 30,
+          "tc": 0,
+          "tr": 0,
+          "tc2": 0,
+          "tr2": 0
+        },
+        {
+          "autotile": 0,
+          "at_frame": 33,
+          "tc": 0,
+          "tr": 0,
+          "tc2": 0,
+          "tr2": 0
+        },
+        {
+          "autotile": 0,
+          "at_frame": 33,
+          "tc": 0,
+          "tr": 0,
+          "tc2": 0,
+          "tr2": 0
+        },
+        {
+          "autotile": 0,
+          "at_frame": 29,
+          "tc": 0,
+          "tr": 0,
+          "tc2": 0,
+          "tr2": 0
+        },
+        {
+          "autotile": 0,
+          "at_frame": 28,
+          "tc": 0,
+          "tr": 0,
+          "tc2": 0,
+          "tr2": 0
+        },
+        {
+          "autotile": 0,
+          "at_frame": 28,
+          "tc": 0,
+          "tr": 0,
+          "tc2": 0,
+          "tr2": 0
+        },
+        {
+          "autotile": 0,
+          "at_frame": 28,
+          "tc": 0,
+          "tr": 0,
+          "tc2": 0,
+          "tr2": 0
+        },
+        {
+          "autotile": 0,
+          "at_frame": 28,
+          "tc": 0,
+          "tr": 0,
+          "tc2": 0,
+          "tr2": 0
+        },
+        {
+          "autotile": 0,
           "at_frame": 38,
-          "tc": 0,
-          "tr": 0,
-          "tc2": 0,
-          "tr2": 0
-        },
-        {
-          "autotile": 0,
-          "at_frame": 0,
-          "tc": 0,
-          "tr": 0,
-          "tc2": 0,
-          "tr2": 0
-        },
-        {
-          "autotile": 0,
-          "at_frame": 0,
-          "tc": 0,
-          "tr": 0,
-          "tc2": 0,
-          "tr2": 0
-        },
-        {
-          "autotile": 0,
-          "at_frame": 0,
-          "tc": 0,
-          "tr": 0,
-          "tc2": 0,
-          "tr2": 0
-        },
-        {
-          "autotile": 0,
-          "at_frame": 0,
-          "tc": 0,
-          "tr": 0,
-          "tc2": 0,
-          "tr2": 0
-        },
-        {
-          "autotile": 0,
-          "at_frame": 0,
-          "tc": 0,
-          "tr": 0,
-          "tc2": 0,
-          "tr2": 0
-        },
-        {
-          "autotile": 0,
-          "at_frame": 0,
-          "tc": 0,
-          "tr": 0,
-          "tc2": 0,
-          "tr2": 0
-        },
-        {
-          "autotile": 0,
-          "at_frame": 0,
-          "tc": 0,
-          "tr": 0,
-          "tc2": 0,
-          "tr2": 0
-        },
-        {
-          "autotile": 0,
-          "at_frame": 0,
-          "tc": 0,
-          "tr": 0,
-          "tc2": 0,
-          "tr2": 0
-        },
-        {
-          "autotile": 0,
-          "at_frame": 0,
-          "tc": 0,
-          "tr": 0,
-          "tc2": 0,
-          "tr2": 0
-        },
-        {
-          "autotile": 0,
-          "at_frame": 0,
-          "tc": 0,
-          "tr": 0,
-          "tc2": 0,
-          "tr2": 0
-        },
-        {
-          "autotile": 0,
-          "at_frame": 0,
-          "tc": 0,
-          "tr": 0,
-          "tc2": 0,
-          "tr2": 0
-        },
-        {
-          "autotile": 0,
-          "at_frame": 0,
-          "tc": 0,
-          "tr": 0,
-          "tc2": 0,
-          "tr2": 0
-        },
-        {
-          "autotile": 0,
-          "at_frame": 0,
-          "tc": 0,
-          "tr": 0,
-          "tc2": 0,
-          "tr2": 0
-        },
-        {
-          "autotile": 2,
-          "at_frame": 40,
-          "tc": 0,
-          "tr": 0,
-          "tc2": 0,
-          "tr2": 0
-        },
-        {
-          "autotile": 2,
-          "at_frame": 38,
-          "tc": 0,
-          "tr": 0,
-          "tc2": 0,
-          "tr2": 0
-        },
-        {
-          "autotile": 0,
-          "at_frame": 0,
-          "tc": 0,
-          "tr": 0,
-          "tc2": 0,
-          "tr2": 0
-        },
-        {
-          "autotile": 0,
-          "at_frame": 0,
-          "tc": 0,
-          "tr": 0,
-          "tc2": 0,
-          "tr2": 0
-        },
-        {
-          "autotile": 0,
-          "at_frame": 0,
-          "tc": 0,
-          "tr": 0,
-          "tc2": 0,
-          "tr2": 0
-        },
-        {
-          "autotile": 0,
-          "at_frame": 0,
-          "tc": 0,
-          "tr": 0,
-          "tc2": 0,
-          "tr2": 0
-        },
-        {
-          "autotile": 0,
-          "at_frame": 0,
-          "tc": 0,
-          "tr": 0,
-          "tc2": 0,
-          "tr2": 0
-        },
-        {
-          "autotile": 0,
-          "at_frame": 0,
-          "tc": 0,
-          "tr": 0,
-          "tc2": 0,
-          "tr2": 0
-        }
-      ],
-      [
-        {
-          "autotile": 0,
-          "at_frame": 0,
-          "tc": 0,
-          "tr": 0,
-          "tc2": 0,
-          "tr2": 0
-        },
-        {
-          "autotile": 0,
-          "at_frame": 0,
-          "tc": 0,
-          "tr": 0,
-          "tc2": 0,
-          "tr2": 0
-        },
-        {
-          "autotile": 0,
-          "at_frame": 0,
-          "tc": 0,
-          "tr": 0,
-          "tc2": 0,
-          "tr2": 0
-        },
-        {
-          "autotile": 0,
-          "at_frame": 0,
-          "tc": 0,
-          "tr": 0,
-          "tc2": 0,
-          "tr2": 0
-        },
-        {
-          "autotile": 0,
-          "at_frame": 0,
-          "tc": 0,
-          "tr": 0,
-          "tc2": 0,
-          "tr2": 0
-        },
-        {
-          "autotile": 0,
-          "at_frame": 0,
-          "tc": 0,
-          "tr": 0,
-          "tc2": 0,
-          "tr2": 0
-        },
-        {
-          "autotile": 0,
-          "at_frame": 0,
-          "tc": 0,
-          "tr": 0,
-          "tc2": 0,
-          "tr2": 0
-        },
-        {
-          "autotile": 0,
-          "at_frame": 0,
-          "tc": 0,
-          "tr": 0,
-          "tc2": 0,
-          "tr2": 0
-        },
-        {
-          "autotile": 0,
-          "at_frame": 0,
-          "tc": 0,
-          "tr": 0,
-          "tc2": 0,
-          "tr2": 0
-        },
-        {
-          "autotile": 0,
-          "at_frame": 0,
-          "tc": 0,
-          "tr": 0,
-          "tc2": 0,
-          "tr2": 0
-        },
-        {
-          "autotile": 0,
-          "at_frame": 0,
-          "tc": 0,
-          "tr": 0,
-          "tc2": 0,
-          "tr2": 0
-        },
-        {
-          "autotile": 0,
-          "at_frame": 0,
-          "tc": 0,
-          "tr": 0,
-          "tc2": 0,
-          "tr2": 0
-        },
-        {
-          "autotile": 0,
-          "at_frame": 0,
-          "tc": 0,
-          "tr": 0,
-          "tc2": 0,
-          "tr2": 0
-        },
-        {
-          "autotile": 0,
-          "at_frame": 0,
-          "tc": 0,
-          "tr": 0,
-          "tc2": 0,
-          "tr2": 0
-        },
-        {
-          "autotile": 0,
-          "at_frame": 0,
-          "tc": 0,
-          "tr": 0,
-          "tc2": 0,
-          "tr2": 0
-        },
-        {
-          "autotile": 0,
-          "at_frame": 0,
-          "tc": 0,
-          "tr": 0,
-          "tc2": 0,
-          "tr2": 0
-        },
-        {
-          "autotile": 0,
-          "at_frame": 0,
-          "tc": 0,
-          "tr": 0,
-          "tc2": 0,
-          "tr2": 0
-        },
-        {
-          "autotile": 0,
-          "at_frame": 0,
-          "tc": 0,
-          "tr": 0,
-          "tc2": 0,
-          "tr2": 0
-        },
-        {
-          "autotile": 0,
-          "at_frame": 0,
-          "tc": 0,
-          "tr": 0,
-          "tc2": 0,
-          "tr2": 0
-        },
-        {
-          "autotile": 0,
-          "at_frame": 0,
-          "tc": 0,
-          "tr": 0,
-          "tc2": 0,
-          "tr2": 0
-        },
-        {
-          "autotile": 0,
-          "at_frame": 0,
-          "tc": 0,
-          "tr": 0,
-          "tc2": 0,
-          "tr2": 0
-        },
-        {
-          "autotile": 0,
-          "at_frame": 0,
-          "tc": 0,
-          "tr": 0,
-          "tc2": 0,
-          "tr2": 0
-        },
-        {
-          "autotile": 0,
-          "at_frame": 0,
-          "tc": 0,
-          "tr": 0,
-          "tc2": 0,
-          "tr2": 0
-        },
-        {
-          "autotile": 0,
-          "at_frame": 0,
-          "tc": 0,
-          "tr": 0,
-          "tc2": 0,
-          "tr2": 0
-        },
-        {
-          "autotile": 0,
-          "at_frame": 0,
-          "tc": 0,
-          "tr": 0,
-          "tc2": 0,
-          "tr2": 0
-        },
-        {
-          "autotile": 0,
-          "at_frame": 0,
-          "tc": 0,
-          "tr": 0,
-          "tc2": 0,
-          "tr2": 0
-        },
-        {
-          "autotile": 0,
-          "at_frame": 0,
-          "tc": 0,
-          "tr": 0,
-          "tc2": 0,
-          "tr2": 0
-        },
-        {
-          "autotile": 0,
-          "at_frame": 0,
-          "tc": 0,
-          "tr": 0,
-          "tc2": 0,
-          "tr2": 0
-        },
-        {
-          "autotile": 0,
-          "at_frame": 0,
           "tc": 0,
           "tr": 0,
           "tc2": 0,
@@ -6701,7 +6701,7 @@
       [
         {
           "autotile": 0,
-          "at_frame": 36,
+          "at_frame": 46,
           "tc": 0,
           "tr": 0,
           "tc2": 0,
@@ -6766,7 +6766,7 @@
         },
         {
           "autotile": 0,
-          "at_frame": 34,
+          "at_frame": 46,
           "tc": 0,
           "tr": 0,
           "tc2": 0,
@@ -6778,7 +6778,7 @@
         null,
         {
           "autotile": 0,
-          "at_frame": 36,
+          "at_frame": 46,
           "tc": 0,
           "tr": 0,
           "tc2": 0,
@@ -6854,7 +6854,7 @@
         },
         {
           "autotile": 0,
-          "at_frame": 34,
+          "at_frame": 46,
           "tc": 0,
           "tr": 0,
           "tc2": 0,
@@ -6870,7 +6870,7 @@
         null,
         {
           "autotile": 0,
-          "at_frame": 36,
+          "at_frame": 46,
           "tc": 0,
           "tr": 0,
           "tc2": 0,
@@ -6992,7 +6992,7 @@
         },
         {
           "autotile": 0,
-          "at_frame": 34,
+          "at_frame": 46,
           "tc": 0,
           "tr": 0,
           "tc2": 0,

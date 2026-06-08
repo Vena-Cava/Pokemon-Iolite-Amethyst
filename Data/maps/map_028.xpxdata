@@ -5857,7 +5857,7 @@
       [
         {
           "autotile": 4,
-          "at_frame": 45,
+          "at_frame": 46,
           "tc": 0,
           "tr": 0,
           "tc2": 0,
@@ -6473,7 +6473,7 @@
       [
         {
           "autotile": 4,
-          "at_frame": 45,
+          "at_frame": 46,
           "tc": 0,
           "tr": 0,
           "tc2": 0,
@@ -10779,7 +10779,7 @@
       [
         {
           "autotile": 4,
-          "at_frame": 33,
+          "at_frame": 43,
           "tc": 0,
           "tr": 0,
           "tc2": 0,

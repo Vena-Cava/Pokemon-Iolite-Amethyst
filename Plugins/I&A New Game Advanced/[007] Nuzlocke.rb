@@ -171,6 +171,50 @@ module AdvancedNewGame
     return nuzlocke_option?(:nickname_clause)
   end
   
+  def self.no_bag_items_in_battle?
+    return false if !$game_switches
+    return $game_switches[SWITCH_NO_BAG_ITEMS_BATTLE]
+  end
+  
+  def self.pokecenter_limit
+    return nuzlocke_option?(:pokecenter_limit) || -1
+  end
+
+  def self.pokecenter_limited?
+    return nuzlocke? && nuzlocke_started? && pokecenter_limit >= 0
+  end
+
+  def self.pokecenter_heal_counts
+    $PokemonGlobal.instance_variable_get(:@advanced_new_game_pokecenter_heal_counts) || {}
+  end
+
+  def self.pokecenter_heal_count(map_id = $game_map.map_id)
+    return pokecenter_heal_counts[map_id] || 0
+  end
+
+  def self.can_use_pokecenter?(map_id = $game_map.map_id)
+    return true if !pokecenter_limited?
+    return pokecenter_heal_count(map_id) < pokecenter_limit
+  end
+
+  def self.register_pokecenter_heal(map_id = $game_map.map_id)
+    counts = pokecenter_heal_counts
+    counts[map_id] = pokecenter_heal_count(map_id) + 1
+    $PokemonGlobal.instance_variable_set(:@advanced_new_game_pokecenter_heal_counts, counts)
+  end
+  
+  def self.pokecenter_limit_reached?
+    return false if !pokecenter_limited?
+    return pokecenter_heal_count >= pokecenter_limit
+  end
+
+  def self.pokecenter_limit_message
+    used  = pokecenter_heal_count
+    limit = pokecenter_limit
+    pbMessage(_INTL("You have already used this PokéCenter {1}/{2} time(s).", used, limit))
+    pbMessage(_INTL("Your challenge rules do not allow you to heal here again."))
+  end
+  
 #===============================================================================
 # Nuzlocke - Delete Save File if Battle Lost
 #===============================================================================

@@ -1,3 +1,19 @@
+module IANoBattleItemsBagUI
+  ALLOWED_BATTLE_POCKET = 3   # Poké Balls
+
+  def self.only_pokeballs?
+    return false if !$game_temp || !$game_temp.in_battle
+    return false if !defined?(AdvancedNewGame)
+    return false if !AdvancedNewGame.no_bag_items_battle?
+    return true
+  end
+
+  def self.allowed_pocket?(pocket)
+    return true if !only_pokeballs?
+    return pocket == ALLOWED_BATTLE_POCKET
+  end
+end
+
 #===============================================================================
 # Creating specific Bag and Party functionalities
 #===============================================================================
@@ -562,7 +578,17 @@ class PokemonBag_Scene
     @party      = party
     
     pbRefreshFilter
+    if IANoBattleItemsBagUI.only_pokeballs? && @filterlist
+      (1...@bag.pockets.length).each do |i|
+        next if IANoBattleItemsBagUI.allowed_pocket?(i)
+        @filterlist[i] = []
+      end
+    end
     lastpocket = @bag.last_viewed_pocket
+    if IANoBattleItemsBagUI.only_pokeballs?
+      lastpocket = IANoBattleItemsBagUI::ALLOWED_BATTLE_POCKET
+      @bag.last_viewed_pocket = lastpocket
+    end
     numfilledpockets = @bag.pockets.length - 1
     if @choosing
       numfilledpockets = 0
@@ -800,20 +826,25 @@ class PokemonBag_Scene
     end
     pocketAcc = @sprites["itemlist"].pocket - 1 # Current pocket
     @sprites["pocketicon"].bitmap.clear
+
     (1...@bag.pockets.length).each do |i|
       pocketValue = i - 1
+
+      blocked = false
+      blocked = true if @choosing && @filterlist && @filterlist[i].length == 0
+      blocked = true if IANoBattleItemsBagUI.only_pokeballs? &&
+                        !IANoBattleItemsBagUI.allowed_pocket?(i)
+
+      next if pocketValue == pocketAcc && !blocked
+
+      src_y = blocked ? 56 : 0
+
       @sprites["pocketicon"].bitmap.blt(
-        (i - 1) * 14 + pocketX[pocketValue], (i % 2) * 26, @pocketbitmap.bitmap,
-        Rect.new((i - 1) * 28, 0, 28, 28)) if pocketValue != pocketAcc # Unblocked icons
-    end
-    if @choosing && @filterlist
-      (1...@bag.pockets.length).each do |i|
-        next if @filterlist[i].length > 0
-        pocketValue = i - 1
-        @sprites["pocketicon"].bitmap.blt(
-          (i - 1) * 14 + pocketX[pocketValue], (i % 2) * 26, @pocketbitmap.bitmap,
-          Rect.new((i - 1) * 28, 56, 28, 28)) # Blocked icons
-      end
+        (i - 1) * 14 + pocketX[pocketValue],
+        (i % 2) * 26,
+        @pocketbitmap.bitmap,
+        Rect.new((i - 1) * 28, src_y, 28, 28)
+      )
     end
     @sprites["currentpocket"].x = 372 + ((pocketAcc) * 14) + pocketX[pocketAcc]
     @sprites["currentpocket"].y = 26 - (((pocketAcc) % 2) * 26)
@@ -1036,6 +1067,7 @@ class PokemonBag_Scene
             newpocket = itemwindow.pocket
             loop do
               newpocket = (newpocket == 1) ? PokemonBag.pocket_count : newpocket - 1
+              next if !IANoBattleItemsBagUI.allowed_pocket?(newpocket)
               break if !@choosing || newpocket == itemwindow.pocket
               if @filterlist
                 break if @filterlist[newpocket].length > 0
@@ -1057,6 +1089,7 @@ class PokemonBag_Scene
             newpocket = itemwindow.pocket
             loop do
               newpocket = (newpocket == PokemonBag.pocket_count) ? 1 : newpocket + 1
+              next if !IANoBattleItemsBagUI.allowed_pocket?(newpocket)
               break if !@choosing || newpocket == itemwindow.pocket
               if @filterlist
                 break if @filterlist[newpocket].length > 0

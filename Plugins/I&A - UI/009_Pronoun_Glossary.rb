@@ -3,25 +3,25 @@
 #===============================================================================
 #
 # PLAYER
-#   \psub   = player subject pronoun        # they
-#   \PSub   = player subject, proper case   # They
-#   \PSUB   = player subject, full caps     # THEY
+#   \psub   = player subject pronoun        # he, she, they
+#   \PSub   = player subject, proper case   # He, She, They
+#   \PSUB   = player subject, full caps     # HE, SHE, THEY
 #
-#   \pobj   = player object pronoun         # them
-#   \PObj   = player object, proper case    # Them
-#   \POBJ   = player object, full caps      # THEM
+#   \pobj   = player object pronoun         # him, her, them
+#   \PObj   = player object, proper case    # Him, Her, Them
+#   \POBJ   = player object, full caps      # HIM, HER, THEM
 #
-#   \ppos   = player possessive pronoun     # their
-#   \PPos   = player possessive, proper     # Their
-#   \PPOS   = player possessive, full caps  # THEIR
+#   \ppos   = player possessive pronoun     # his, her, their
+#   \PPos   = player possessive, proper     # His, Her, Their
+#   \PPOS   = player possessive, full caps  # HIS, HER, THEIR
 #
-#   \pcon   = player contraction            # they're
-#   \PCon   = player contraction, proper    # They're
-#   \PCON   = player contraction, full caps # THEY'RE
+#   \pcon   = player contraction            # he's, she's, they're
+#   \PCon   = player contraction, proper    # He's, She's, They're
+#   \PCON   = player contraction, full caps # HE'S, SHE'S, THEY'RE
 #
-#   \pverb  = player verb                   # are
-#   \PVerb  = player verb, proper           # Are
-#   \PVERB  = player verb, full caps        # ARE
+#   \pverb  = player verb                   # is, are
+#   \PVerb  = player verb, proper           # Is, Are
+#   \PVERB  = player verb, full caps        # IS, ARE
 #
 #   \pc     = player name colour code       # b/r/g
 #

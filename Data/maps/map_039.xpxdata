@@ -37,7 +37,7 @@
       [
         {
           "autotile": 2,
-          "at_frame": 0,
+          "at_frame": 34,
           "tc": 0,
           "tr": 0,
           "tc2": 0,
@@ -45,7 +45,7 @@
         },
         {
           "autotile": 2,
-          "at_frame": 0,
+          "at_frame": 20,
           "tc": 0,
           "tr": 0,
           "tc2": 0,
@@ -53,7 +53,7 @@
         },
         {
           "autotile": 2,
-          "at_frame": 0,
+          "at_frame": 20,
           "tc": 0,
           "tr": 0,
           "tc2": 0,
@@ -61,7 +61,7 @@
         },
         {
           "autotile": 2,
-          "at_frame": 0,
+          "at_frame": 20,
           "tc": 0,
           "tr": 0,
           "tc2": 0,
@@ -69,7 +69,7 @@
         },
         {
           "autotile": 2,
-          "at_frame": 0,
+          "at_frame": 20,
           "tc": 0,
           "tr": 0,
           "tc2": 0,
@@ -77,7 +77,7 @@
         },
         {
           "autotile": 2,
-          "at_frame": 0,
+          "at_frame": 20,
           "tc": 0,
           "tr": 0,
           "tc2": 0,
@@ -85,7 +85,7 @@
         },
         {
           "autotile": 2,
-          "at_frame": 24,
+          "at_frame": 36,
           "tc": 0,
           "tr": 0,
           "tc2": 0,
@@ -93,7 +93,7 @@
         },
         {
           "autotile": 0,
-          "at_frame": 24,
+          "at_frame": 42,
           "tc": 0,
           "tr": 0,
           "tc2": 0,
@@ -319,7 +319,7 @@
       [
         {
           "autotile": 2,
-          "at_frame": 0,
+          "at_frame": 16,
           "tc": 0,
           "tr": 0,
           "tc2": 0,
@@ -375,7 +375,7 @@
         },
         {
           "autotile": 0,
-          "at_frame": 24,
+          "at_frame": 32,
           "tc": 0,
           "tr": 0,
           "tc2": 0,
@@ -601,7 +601,7 @@
       [
         {
           "autotile": 2,
-          "at_frame": 0,
+          "at_frame": 16,
           "tc": 0,
           "tr": 0,
           "tc2": 0,
@@ -657,7 +657,7 @@
         },
         {
           "autotile": 0,
-          "at_frame": 24,
+          "at_frame": 32,
           "tc": 0,
           "tr": 0,
           "tc2": 0,
@@ -883,7 +883,7 @@
       [
         {
           "autotile": 2,
-          "at_frame": 0,
+          "at_frame": 16,
           "tc": 0,
           "tr": 0,
           "tc2": 0,
@@ -931,7 +931,7 @@
         },
         {
           "autotile": 0,
-          "at_frame": 4,
+          "at_frame": 43,
           "tc": 0,
           "tr": 0,
           "tc2": 0,
@@ -939,7 +939,7 @@
         },
         {
           "autotile": 0,
-          "at_frame": 38,
+          "at_frame": 39,
           "tc": 0,
           "tr": 0,
           "tc2": 0,
@@ -1165,7 +1165,7 @@
       [
         {
           "autotile": 2,
-          "at_frame": 0,
+          "at_frame": 16,
           "tc": 0,
           "tr": 0,
           "tc2": 0,
@@ -1213,7 +1213,7 @@
         },
         {
           "autotile": 1,
-          "at_frame": 24,
+          "at_frame": 46,
           "tc": 0,
           "tr": 0,
           "tc2": 0,
@@ -1445,7 +1445,7 @@
       [
         {
           "autotile": 2,
-          "at_frame": 0,
+          "at_frame": 16,
           "tc": 0,
           "tr": 0,
           "tc2": 0,
@@ -1493,7 +1493,7 @@
         },
         {
           "autotile": 0,
-          "at_frame": 24,
+          "at_frame": 42,
           "tc": 0,
           "tr": 0,
           "tc2": 0,
@@ -1725,7 +1725,7 @@
       [
         {
           "autotile": 2,
-          "at_frame": 0,
+          "at_frame": 16,
           "tc": 0,
           "tr": 0,
           "tc2": 0,
@@ -1773,7 +1773,7 @@
         },
         {
           "autotile": 0,
-          "at_frame": 24,
+          "at_frame": 32,
           "tc": 0,
           "tr": 0,
           "tc2": 0,
@@ -2005,7 +2005,7 @@
       [
         {
           "autotile": 2,
-          "at_frame": 0,
+          "at_frame": 16,
           "tc": 0,
           "tr": 0,
           "tc2": 0,
@@ -2053,7 +2053,7 @@
         },
         {
           "autotile": 0,
-          "at_frame": 24,
+          "at_frame": 32,
           "tc": 0,
           "tr": 0,
           "tc2": 0,
@@ -2285,7 +2285,7 @@
       [
         {
           "autotile": 2,
-          "at_frame": 0,
+          "at_frame": 16,
           "tc": 0,
           "tr": 0,
           "tc2": 0,
@@ -2333,7 +2333,7 @@
         },
         {
           "autotile": 0,
-          "at_frame": 24,
+          "at_frame": 32,
           "tc": 0,
           "tr": 0,
           "tc2": 0,
@@ -2565,7 +2565,7 @@
       [
         {
           "autotile": 2,
-          "at_frame": 0,
+          "at_frame": 16,
           "tc": 0,
           "tr": 0,
           "tc2": 0,
@@ -2613,7 +2613,7 @@
         },
         {
           "autotile": 0,
-          "at_frame": 24,
+          "at_frame": 32,
           "tc": 0,
           "tr": 0,
           "tc2": 0,
@@ -2845,7 +2845,7 @@
       [
         {
           "autotile": 2,
-          "at_frame": 0,
+          "at_frame": 16,
           "tc": 0,
           "tr": 0,
           "tc2": 0,
@@ -2893,7 +2893,7 @@
         },
         {
           "autotile": 0,
-          "at_frame": 24,
+          "at_frame": 32,
           "tc": 0,
           "tr": 0,
           "tc2": 0,
@@ -3125,7 +3125,7 @@
       [
         {
           "autotile": 2,
-          "at_frame": 0,
+          "at_frame": 16,
           "tc": 0,
           "tr": 0,
           "tc2": 0,
@@ -3173,7 +3173,7 @@
         },
         {
           "autotile": 0,
-          "at_frame": 24,
+          "at_frame": 32,
           "tc": 0,
           "tr": 0,
           "tc2": 0,
@@ -3405,7 +3405,7 @@
       [
         {
           "autotile": 2,
-          "at_frame": 0,
+          "at_frame": 16,
           "tc": 0,
           "tr": 0,
           "tc2": 0,
@@ -3453,7 +3453,7 @@
         },
         {
           "autotile": 0,
-          "at_frame": 24,
+          "at_frame": 32,
           "tc": 0,
           "tr": 0,
           "tc2": 0,
@@ -3685,7 +3685,7 @@
       [
         {
           "autotile": 2,
-          "at_frame": 0,
+          "at_frame": 16,
           "tc": 0,
           "tr": 0,
           "tc2": 0,
@@ -3733,7 +3733,7 @@
         },
         {
           "autotile": 0,
-          "at_frame": 24,
+          "at_frame": 32,
           "tc": 0,
           "tr": 0,
           "tc2": 0,
@@ -3965,7 +3965,7 @@
       [
         {
           "autotile": 2,
-          "at_frame": 0,
+          "at_frame": 16,
           "tc": 0,
           "tr": 0,
           "tc2": 0,
@@ -4013,7 +4013,7 @@
         },
         {
           "autotile": 0,
-          "at_frame": 24,
+          "at_frame": 32,
           "tc": 0,
           "tr": 0,
           "tc2": 0,
@@ -4245,7 +4245,7 @@
       [
         {
           "autotile": 2,
-          "at_frame": 0,
+          "at_frame": 16,
           "tc": 0,
           "tr": 0,
           "tc2": 0,
@@ -4293,7 +4293,7 @@
         },
         {
           "autotile": 0,
-          "at_frame": 24,
+          "at_frame": 32,
           "tc": 0,
           "tr": 0,
           "tc2": 0,
@@ -4525,7 +4525,7 @@
       [
         {
           "autotile": 2,
-          "at_frame": 0,
+          "at_frame": 16,
           "tc": 0,
           "tr": 0,
           "tc2": 0,
@@ -4573,7 +4573,7 @@
         },
         {
           "autotile": 0,
-          "at_frame": 24,
+          "at_frame": 32,
           "tc": 0,
           "tr": 0,
           "tc2": 0,
@@ -4805,7 +4805,7 @@
       [
         {
           "autotile": 2,
-          "at_frame": 0,
+          "at_frame": 16,
           "tc": 0,
           "tr": 0,
           "tc2": 0,
@@ -4853,7 +4853,7 @@
         },
         {
           "autotile": 0,
-          "at_frame": 24,
+          "at_frame": 32,
           "tc": 0,
           "tr": 0,
           "tc2": 0,
@@ -5085,7 +5085,7 @@
       [
         {
           "autotile": 2,
-          "at_frame": 0,
+          "at_frame": 16,
           "tc": 0,
           "tr": 0,
           "tc2": 0,
@@ -5133,7 +5133,7 @@
         },
         {
           "autotile": 0,
-          "at_frame": 24,
+          "at_frame": 32,
           "tc": 0,
           "tr": 0,
           "tc2": 0,
@@ -5365,7 +5365,7 @@
       [
         {
           "autotile": 2,
-          "at_frame": 0,
+          "at_frame": 16,
           "tc": 0,
           "tr": 0,
           "tc2": 0,
@@ -5413,7 +5413,7 @@
         },
         {
           "autotile": 0,
-          "at_frame": 24,
+          "at_frame": 32,
           "tc": 0,
           "tr": 0,
           "tc2": 0,
@@ -5645,7 +5645,7 @@
       [
         {
           "autotile": 2,
-          "at_frame": 0,
+          "at_frame": 16,
           "tc": 0,
           "tr": 0,
           "tc2": 0,
@@ -5693,7 +5693,7 @@
         },
         {
           "autotile": 0,
-          "at_frame": 24,
+          "at_frame": 32,
           "tc": 0,
           "tr": 0,
           "tc2": 0,
@@ -5925,7 +5925,7 @@
       [
         {
           "autotile": 2,
-          "at_frame": 0,
+          "at_frame": 16,
           "tc": 0,
           "tr": 0,
           "tc2": 0,
@@ -5973,7 +5973,7 @@
         },
         {
           "autotile": 0,
-          "at_frame": 24,
+          "at_frame": 32,
           "tc": 0,
           "tr": 0,
           "tc2": 0,
@@ -6205,7 +6205,7 @@
       [
         {
           "autotile": 2,
-          "at_frame": 0,
+          "at_frame": 40,
           "tc": 0,
           "tr": 0,
           "tc2": 0,
@@ -6213,7 +6213,7 @@
         },
         {
           "autotile": 2,
-          "at_frame": 0,
+          "at_frame": 28,
           "tc": 0,
           "tr": 0,
           "tc2": 0,
@@ -6221,7 +6221,7 @@
         },
         {
           "autotile": 2,
-          "at_frame": 0,
+          "at_frame": 28,
           "tc": 0,
           "tr": 0,
           "tc2": 0,
@@ -6229,7 +6229,7 @@
         },
         {
           "autotile": 2,
-          "at_frame": 0,
+          "at_frame": 28,
           "tc": 0,
           "tr": 0,
           "tc2": 0,
@@ -6237,7 +6237,7 @@
         },
         {
           "autotile": 2,
-          "at_frame": 0,
+          "at_frame": 28,
           "tc": 0,
           "tr": 0,
           "tc2": 0,
@@ -6245,7 +6245,7 @@
         },
         {
           "autotile": 2,
-          "at_frame": 24,
+          "at_frame": 38,
           "tc": 0,
           "tr": 0,
           "tc2": 0,
@@ -6253,7 +6253,7 @@
         },
         {
           "autotile": 0,
-          "at_frame": 24,
+          "at_frame": 44,
           "tc": 0,
           "tr": 0,
           "tc2": 0,

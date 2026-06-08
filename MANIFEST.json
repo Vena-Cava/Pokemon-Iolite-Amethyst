@@ -1,7 +1,7 @@
 {
   "files": {
     "Game.exe": {
-      "sha256": "da36aa07d20dcfe2907af83d6ed4b923ed613b2e8fc1991a196da2ac052aa089",
+      "sha256": "fbb13e3757f69351acb00dc3e60b066d49aca9ca3d6808e50c10673f1eb76d61",
       "size": 29110999
     },
     "lib/ruby/3.1.0/English.rb": {
@@ -7690,5 +7690,5 @@
     }
   },
   "version": 1,
-  "xpx_runtime_version": "0.3.4"
+  "xpx_runtime_version": "0.3.6"
 }
