@@ -20,7 +20,15 @@ XPX_DEV_MODE = false
 # exists). Ruby promotes top-level defs to private Object methods,
 # so it works in any context that `puts` does.
 def xpx_puts(msg)
-  puts "[XPX] #{msg}" if XPX_DEV_MODE
+  return unless XPX_DEV_MODE
+  # $stdout is an invalid file descriptor in windowed mkXPX builds (no console
+  # attached), so a bare `puts` raises Errno::EBADF and takes the whole preload
+  # down. Swallow any IO error — console breadcrumbs are best-effort; the file
+  # log (XPX.log) is the durable channel.
+  begin
+    puts "[XPX] #{msg}"
+  rescue StandardError
+  end
 end
 
 # JSON is required — XPX prefers .xpxdata over .rxdata when both exist,
@@ -31,6 +39,34 @@ begin
   require 'json'
 rescue LoadError
   # json gem unavailable; xpxdata fallback disabled (rxdata files are used)
+end
+
+# ── Old-project compat: stub failed Win32API loads (e.g. v17's gif.dll) ─────
+# Pre-v18 Essentials binds native helper DLLs through Win32API — most notably
+# gif.dll for animated GIFs (SpriteWindow_sprites' GifLibrary). Those 32-bit
+# RMXP-era DLLs cannot load in mkXPX's 64-bit process, so Win32API.new raises
+# and crashes boot ("Failed loading gif.dll"). mkxp-z decodes GIFs natively, so
+# the DLL path is obsolete anyway. Wrap Win32API.new to return a harmless stub
+# (whose #call returns 0) whenever the real load fails, so old projects boot
+# instead of dying. Defined at preload time, before Scripts.rxdata runs.
+begin
+  if defined?(Win32API)
+    class XPX_Win32Stub
+      def call(*); 0; end
+    end
+    class << Win32API
+      alias_method :_xpx_w32_orig_new, :new unless method_defined?(:_xpx_w32_orig_new)
+      def new(*a)
+        _xpx_w32_orig_new(*a)
+      rescue StandardError, ScriptError => e
+        (XPX.console_file("[XPX] Win32API stubbed (#{a[0]} / #{a[1]}): #{e.message}\n") rescue nil)
+        XPX_Win32Stub.new
+      end
+    end
+    xpx_puts "Win32API stub installed for unsupported native DLLs (old-project compat)."
+  end
+rescue => _w32e
+  xpx_puts "Win32API stub failed: #{_w32e.message}"
 end
 # (No Scripts/ plugin uses Rails-style starts_with? / ends_with? — polyfill omitted.)
 
@@ -94,6 +130,47 @@ module XPX
   # user split.
   def self.console_log(msg)
     xpx_puts msg
+  end
+
+  # Capture Essentials' echo/echoln output to logs/xpx_console.log. On windowed
+  # mkXPX builds Ruby's $stdout isn't writable, so the in-game debug console
+  # never shows anything — without this, any echoln (PBS compile logs, plugin
+  # debug output, the F9 menu) is lost. We append the RAW fragments (no
+  # timestamp/prefix) so the file reads exactly like the console would have.
+  # echo is only called in $DEBUG / Play Test, so release builds never hit this.
+  # Append echo/echoln output to logs/xpx_console.log (always — survives even
+  # with no console attached).
+  def self.console_file(s)
+    return if s.nil?
+    str = s.is_a?(String) ? s : s.inspect
+    begin
+      @console_log ||= (File.open(File.join(LOGS_DIR, "xpx_console.log"), "a") rescue nil)
+      if @console_log
+        @console_log.write(str)
+        @console_log.flush
+      end
+    rescue
+      @console_log = nil
+    end
+  end
+
+  # Write to the on-screen console WINDOW. Ruby's $stdout isn't wired to the
+  # mkXPX console, but the Windows console device CONOUT$ is — so opening it and
+  # writing there makes echo/echoln appear in the console that loads with the
+  # game. Used only as a fallback when the normal console write fails, so output
+  # is never doubled. Opened once; skipped when no console is attached.
+  def self.console_window(s)
+    return if s.nil?
+    unless defined?(@console_out)
+      @console_out = (File.open("CONOUT$", "w") rescue nil)
+    end
+    return unless @console_out
+    begin
+      @console_out.write(s.is_a?(String) ? s : s.inspect)
+      @console_out.flush
+    rescue
+      @console_out = nil
+    end
   end
 
   def self.boot
@@ -195,7 +272,11 @@ module XPX
     # ── Event ID audit: verify start map events loaded with correct IDs ──────
     begin
       sys_start_id = ($data_system&.start_map_id rescue nil)
-      audit_id = sys_start_id || ($xpx_map_index||{}).keys.min
+      # Only integer ids — the index also holds composite STRING keys for
+      # variants ("7_2"), and Integer#<=> String raises, so a bare
+      # .keys.min would blow up on any project that has a variant.
+      audit_id = sys_start_id ||
+                 ($xpx_map_index||{}).keys.select { |k| k.is_a?(Integer) }.min
       if audit_id
         audit_map = XPX.get_map(audit_id)
         if audit_map
@@ -229,20 +310,35 @@ module XPX
 
   # ── Fast index: only reads first 512 bytes per file ───────────────────────
   def self.index_maps
-    $xpx_map_index ||= {}  # id => path
-    $xpx_map_cache ||= {}  # id => RPG::Map (lazy)
-    $xpx_map_infos ||= {}
+    $xpx_map_index   ||= {}  # id => path
+    $xpx_map_cache   ||= {}  # id => RPG::Map (lazy)
+    $xpx_map_infos   ||= {}
+    $xpx_variant_ids ||= {}
     Dir.glob(File.join(MAPS_DIR, "*.xpxdata")).sort.each do |path|
       begin
         snippet = File.read(path, 512, encoding: "utf-8") rescue ""
-        next unless (m = snippet.match(/"map_id"\s*:\s*(\d+)/))
-        id = m[1].to_i
-        $xpx_map_index[id] = path
-        nm = (snippet.match(/"name"\s*:\s*"([^"]*)"/) rescue nil)
-        info = RPG::MapInfo.new
-        info.name = nm ? nm[1] : "Map#{id}"
-        info.parent_id = 0; info.order = id
-        $xpx_map_infos[id] = info
+        # map_id is an INTEGER for real maps ("map_id":7) and a composite
+        # STRING for variants ("map_id":"7_2") — a variant is an alternate
+        # version of map 7 stored in map_007_2.xpxdata, sharing map 7's
+        # logical id. Match both the bare-int and quoted-composite forms.
+        next unless (m = snippet.match(/"map_id"\s*:\s*"?(\d+(?:_\d+)?)"?/))
+        id_str = m[1]
+        if id_str.include?("_")
+          # Variant: key the index by the composite STRING id so
+          # resolve_variant_id / get_map can load it. Mark it a variant
+          # (kept out of the warp menu / map tree) and register NO MapInfo
+          # — it has no identity of its own, it IS its parent's id.
+          $xpx_map_index[id_str]   = path
+          $xpx_variant_ids[id_str] = true
+        else
+          id = id_str.to_i
+          $xpx_map_index[id] = path
+          nm = (snippet.match(/"name"\s*:\s*"([^"]*)"/) rescue nil)
+          info = RPG::MapInfo.new
+          info.name = nm ? nm[1] : "Map#{id}"
+          info.parent_id = 0; info.order = id
+          $xpx_map_infos[id] = info
+        end
       rescue => e
         # skip bad files silently
       end
@@ -275,6 +371,7 @@ module XPX
   # next get_map call and surface the error there.
   def self.prewarm_map_dict_cache
     $xpx_map_dict_cache ||= {}
+    $xpx_variant_ids    ||= {}
     return if $xpx_map_dict_cache.size > 0  # already warm (e.g. relaunch)
     return unless defined?(JSON)
     t0 = Time.now
@@ -286,6 +383,17 @@ module XPX
         data = JSON.parse(raw) rescue nil
         if data
           $xpx_map_dict_cache[id] = data
+          # Variant maps are alternate data for their PARENT's id — they're
+          # never independently warp-able (only reachable when their
+          # condition is active, under the parent's id). Record them and keep
+          # them OUT of the warp menu / map tree ($xpx_map_infos), while
+          # leaving them in $xpx_map_index so the runtime variant swap can
+          # still load them. Also stops them feeding the debug warp list,
+          # which is where listing one was freezing the menu.
+          if data["is_variant"]
+            $xpx_variant_ids[id] = true
+            ($xpx_map_infos||{}).delete(id)
+          end
           warmed += 1
         else
           failed += 1
@@ -464,8 +572,15 @@ module XPX
     rules["variants"].each do |v|
       next unless v.is_a?(Hash)
       next unless variant_condition_matches?(v)
-      vid = (v["variant_map_id"]||0).to_i
-      next if vid <= 0
+      vid = v["variant_map_id"]
+      # New scheme: vid is the composite STRING "P_N" (e.g. "7_2") keying
+      # map_007_2.xpxdata. Legacy projects stored an INTEGER id. Keep
+      # strings verbatim (to_i would turn "7_2" into 7 — wrong file); only
+      # coerce genuine numerics. Skip blanks / non-positive legacy ids.
+      next if vid.nil?
+      vid = vid.to_i if vid.is_a?(Numeric)
+      next if vid.is_a?(Integer) && vid <= 0
+      next if vid.is_a?(String) && vid.strip.empty?
       next unless _variant_size_ok?(parent_id, vid, pcols, prows)
       return vid
     end
@@ -820,12 +935,57 @@ module XPX
       e = RPG::Event.new(ex, ey)
       e.id = eid; e.name = (ev["name"]||"EV").to_s.strip
       e.pages = pages
+      fix_door_walkout_switch(e)
       m.events[eid] = e
     end
     if missing_id_count > 0
       log "Map id=#{(d['map_id']||'?')}: WARNING #{missing_id_count} event(s) had no preserved ID — auto-assigned. "           "Self-switches / trainer lookups / get_character(N) calls referencing those events may behave unpredictably across reloads. "           "Re-save the map in the editor (the editor now enforces ID preservation) to fix permanently."
     end
     m
+  end
+
+  # ── Door walk-out switch fix (replicates Compiler's update_door_event) ──
+  # Imported door events carry their PRE-COMPILE walkout-page switch
+  # reference: switch 22, named s:tsOn?("A"). Essentials' update_door_event
+  # repoints that to s:tsOff?("A") at COMPILE time so the autorun walk-out
+  # page is active on ARRIVAL (the event's temp self-switch A is off, so
+  # tsOff?("A") is true → page selected → invisible player, door SE, walk
+  # out). XPX loads events straight from xpxdata and never runs that compile
+  # step, so doors transferred the player on top of the door fully visible
+  # with no animation. The walk-out COMMANDS are already present in the page
+  # (208 transparent, move routes, etc.) — only the switch reference is the
+  # stale pre-compile value, so we just re-point it here. Detection mirrors
+  # update_door_event: >=2 pages; last page has a Switch condition + a charset
+  # graphic + >5 commands whose first is a Conditional Branch (code 111).
+  def self.fix_door_walkout_switch(e)
+    return unless e && e.pages.is_a?(Array) && e.pages.size >= 2
+    lp = e.pages[e.pages.size - 1]
+    return unless lp && lp.condition && lp.condition.switch1_valid
+    g = lp.graphic
+    return unless g && g.character_name.to_s != ""
+    lst = lp.list
+    return unless lst.is_a?(Array) && lst.size > 5 && lst[0] && lst[0].code == 111
+    return unless $data_system && $data_system.switches.is_a?(Array)
+    cur_name = $data_system.switches[lp.condition.switch1_id].to_s
+    return if cur_name == 's:tsOff?("A")'   # already correct (compiled project)
+    # Only touch the door-template switch (s:tsOn?("A"), id 22 in stock v21) —
+    # never disturb an unrelated switch-gated last page that happens to match
+    # the structural shape.
+    return unless cur_name == 's:tsOn?("A")' || lp.condition.switch1_id == 22
+    tsoff_id = $data_system.switches.index('s:tsOff?("A")')
+    return unless tsoff_id
+    lp.condition.switch1_id = tsoff_id
+    lp.condition.instance_variable_set(:@xpx_switch1_state, true)  # require ON
+    $xpx_door_fixed ||= {}
+    key = "#{e.id}:#{e.name}"
+    unless $xpx_door_fixed[key]
+      $xpx_door_fixed[key] = true
+      XPX.log "DOOR FIX: #{e.name.inspect} walk-out page repointed to " \
+              "s:tsOff (id #{tsoff_id}); was #{cur_name.inspect} — " \
+              "walk-out animation will now play on arrival" rescue nil
+    end
+  rescue => _de
+    XPX.log "fix_door_walkout_switch error: #{_de.message}" rescue nil
   end
 
   # ── Ensure every page field is non-nil ───────────────────────────────────
@@ -1280,6 +1440,7 @@ module XPX
       next unless info.is_a?(Hash)
       id = key.to_i
       next if id <= 0
+      next if ($xpx_variant_ids||{})[id]   # variants aren't warp targets
       mi = RPG::MapInfo.new
       mi.name      = (info["name"]||"Map#{id}").to_s
       mi.parent_id = (info["parent_id"]||0).to_i
@@ -1288,6 +1449,36 @@ module XPX
       mi.scroll_x  = (info["scroll_x"]||0).to_i
       mi.scroll_y  = (info["scroll_y"]||0).to_i
       out[id] = mi
+    end
+    # ── Parent-id integrity pass (HARD FREEZE GUARD) ─────────────────────
+    # PE v21's pbMapTree walks each map's parent chain with
+    # `while info; info = mapinfos[info.parent_id]; end`. A self-reference
+    # (parent_id == id) or any cycle (A->B->A) never terminates → the
+    # "Warp to map" debug menu (and the visual map editor) hang the game
+    # with no error. Bad data has reached here before (e.g. map 75 saved
+    # with parent_map_id == 75 from older variant handling). Defang it:
+    # walk each map's chain with a visited-set and a depth cap, and if the
+    # chain self-references, cycles, or points at a non-existent map, drop
+    # the parent to 0 (root). Roots are always safe for pbMapTree.
+    out.each do |id, mi|
+      seen = {}
+      cur  = mi.parent_id
+      steps = 0
+      bad = false
+      while cur != 0
+        if cur == id || seen[cur] || !out.key?(cur) || steps > 10000
+          bad = true
+          break
+        end
+        seen[cur] = true
+        steps += 1
+        cur = out[cur].parent_id
+      end
+      if bad
+        xpx_puts "MapInfos: map #{id} had an unwalkable parent_id " \
+                 "(#{mi.parent_id}) — reset to 0 to prevent a pbMapTree freeze"
+        mi.parent_id = 0
+      end
     end
     out.empty? ? nil : out
   end
@@ -1442,64 +1633,77 @@ module XPX
       by_name[tn_norm] ||= entry
     end
     if rxdata_array.is_a?(Array) && !rxdata_array.empty?
-      # Overlay mode: apply xpxdata to existing entries.
-      # Match priority: tileset_name first (file identity), @id second.
-      out = rxdata_array.map do |rt|
-        next rt unless rt
-        match_entry = nil
-        rt_tn = (rt.tileset_name.to_s rescue "")
-        unless rt_tn.empty?
-          rt_tn_norm = rt_tn.sub(/\.\w+$/, "").downcase
-          match_entry = by_name[rt_tn_norm]
-        end
-        if match_entry.nil?
-          eid = (rt.id rescue nil)
-          match_entry = by_id[eid] if eid
-        end
-        if match_entry
-          _apply_tileset_overlay(rt, match_entry)
-        else
-          rt
-        end
-      end
-      # Append xpxdata tilesets the rxdata array doesn't already
-      # contain — tilesets added in the XPX editor that were never
-      # written back into Tilesets.rxdata. Identity is by
-      # tileset_name (the image file), which can't drift.
+      # Index the output by xpxdata @id — the SAME id scheme the xpxdata
+      # maps reference. (Full-build mode below already indexes this way.)
       #
-      # v0.3.4: dropped the old `eid <= max_existing` numeric gate. It
-      # only appended a tileset whose @id was ABOVE the highest rxdata
-      # id — so an editor-added tileset whose id landed INSIDE the
-      # rxdata id range was silently skipped. A map built on it then
-      # found nothing in $data_tilesets and fell back to tileset 1
-      # (Mizzy's "new map uses the wrong tileset" bug). Identity by
-      # tileset_name is the reliable test for "already present".
-      seen_names = {}
-      out.compact.each do |t|
-        tn = (t.tileset_name.to_s rescue "")
-        next if tn.empty?
-        seen_names[tn.sub(/\.\w+$/, "").downcase] = true
+      # Overlay mode used to keep the rxdata array's OWN positions, which
+      # broke any project whose editor tileset ids drifted from the
+      # original Tilesets.rxdata order. Phantombass: the rxdata array had
+      # "Outside waterfall" at position 2 and "Inside" at position 3,
+      # while the editor (and every xpxdata map) numbered "Inside" as
+      # id 2. A "Player's House" interior with tileset_id=2 then resolved
+      # to "Outside waterfall" at runtime — whose graphic (Outside2) was
+      # missing — so the whole map rendered black, even though the editor
+      # showed the correct "Inside" tileset. Every interior map sharing
+      # id 2 (houses, Silph Co., gates...) went black the same way.
+      #
+      # Fix: match each xpxdata tileset to its rxdata twin by IMAGE FILE
+      # NAME only (file identity can't drift; @id is exactly what drifted,
+      # so matching by id is what caused this). Inherit that rxdata
+      # entry's RMXP passage / priority / autotile data, then place the
+      # merged tileset at the xpxdata @id the maps actually index.
+      rx_by_name = {}
+      rxdata_array.each do |rt|
+        next unless rt
+        rt_tn = (rt.tileset_name.to_s rescue "")
+        next if rt_tn.empty?
+        rx_by_name[rt_tn.sub(/\.\w+$/, "").downcase] ||= rt
       end
-      by_id.each do |eid, entry|
+      out = [nil]
+      consumed = {}     # rxdata twins pulled into an xpxdata slot (by name)
+      data.each do |entry|
+        next unless entry.is_a?(Hash)
+        eid = (entry["id"]||0).to_i
+        next unless eid > 0
         en_tn = entry["tileset_name"].to_s
         en_tn_norm = en_tn.empty? ? nil : en_tn.sub(/\.\w+$/, "").downcase
-        # Already present by file identity → don't duplicate it.
-        next if en_tn_norm && seen_names[en_tn_norm]
-        new_ts = _build_tileset_from_scratch(entry)
-        next unless new_ts
+        base = en_tn_norm ? rx_by_name[en_tn_norm] : nil
+        if base
+          _apply_tileset_overlay(base, entry)
+          ts = base
+          consumed[en_tn_norm] = true
+        else
+          # No rxdata twin (editor-only tileset, or one whose xpxdata
+          # entry has no image yet) — fabricate from the xpxdata entry.
+          ts = _build_tileset_from_scratch(entry)
+        end
+        next unless ts
         while out.length <= eid
           out << nil
         end
-        # Place at the tileset's own @id — exactly what a map's
-        # tileset_id indexes. If that slot is somehow already taken by
-        # a different tileset, append instead so the data still exists
-        # rather than clobbering an unrelated tileset.
-        if out[eid].nil?
-          out[eid] = new_ts
-        else
-          out << new_ts
+        out[eid] = ts
+      end
+      # Preserve any rxdata tileset that NO xpxdata entry claimed (present
+      # in Tilesets.rxdata but absent from XPX_Tilesets.xpxdata) so its
+      # data isn't silently dropped. Keep it at its own @id when free,
+      # else append.
+      rxdata_array.each do |rt|
+        next unless rt
+        rt_tn = (rt.tileset_name.to_s rescue "")
+        next if rt_tn.empty?
+        key = rt_tn.sub(/\.\w+$/, "").downcase
+        next if consumed[key]
+        rid = (rt.id rescue nil)
+        rid = out.length unless rid.is_a?(Integer) && rid > 0
+        while out.length <= rid
+          out << nil
         end
-        seen_names[en_tn_norm] = true if en_tn_norm
+        if out[rid].nil?
+          out[rid] = rt
+        else
+          out << rt
+        end
+        consumed[key] = true
       end
       return out
     end
@@ -1526,6 +1730,9 @@ module XPX
     mr.repeat    = mr_data["repeat"] != false
     mr.skippable = !!mr_data["skippable"]
     mc_list = (mr_data["list"]||[]).is_a?(Array) ? mr_data["list"] : []
+    # Code 46 (Move to Location) is carried through with its [x, y] params; the
+    # XPX_MoveToLocation hook expands it to stock moves at EXECUTION time, on a
+    # PRIVATE route copy (so the shared command route is never mutated).
     mc_cmds = mc_list.filter_map do |mc|
       next nil unless mc.is_a?(Hash)
       m2 = RPG::MoveCommand.new
@@ -1758,15 +1965,20 @@ module XPX
                # Numeric or "Event #N" string
                (target.to_s.match(/(\d+)/)[1].to_i rescue 0)
              end
-        # If the editor stored a full MoveRoute we'd build it here, but
-        # the current editor stores Move Route Step commands separately
-        # (each Move Route Step adds a 509 command after the 209). To
-        # keep behavior consistent with how RGSS::Interpreter walks the
-        # 509s, emit an empty MoveRoute here.
-        mr = RPG::MoveRoute.new
-        terminator = RPG::MoveCommand.new
-        terminator.code = 0
-        mr.list = [terminator]
+        # The editor stores the WHOLE move route inline under
+        # p["move_route"] (repeat / skippable / list of step hashes). Build it
+        # here so the forced route actually has steps — an earlier revision
+        # emitted an EMPTY route (it assumed separate 509 "Move Route Step"
+        # commands), which is exactly why "Set Move Route" did nothing in-game.
+        # Code 46 (Move to Location) rides along and is pathfound at execution
+        # time by the XPX_MoveToLocation hook.
+        mr_data = p["move_route"]
+        mr = mr_data.is_a?(Hash) ? XPX.build_move_route(mr_data) : RPG::MoveRoute.new
+        if mr.list.nil? || mr.list.empty?
+          terminator = RPG::MoveCommand.new
+          terminator.code = 0
+          mr.list = [terminator]
+        end
         [209, [ch, mr]]
 
       when "Move Route Step"
@@ -2094,6 +2306,7 @@ module XPX
     # We must fill it now so all map event pages are non-nil.
     $data_maps ||= {}
     ($xpx_map_index||{}).each_key do |id|
+      next unless id.is_a?(Integer)  # skip variant composite keys ("7_2")
       next if $data_maps[id]   # already loaded
       map = XPX.get_map(id)
       $data_maps[id] = map if map
@@ -2513,6 +2726,7 @@ end rescue nil
 # for all subsequent echoln traffic (debug logs, console messages).
 $xpx_banner_rebranded = false
 $xpx_echoln_wrapped   = false
+$xpx_echo_guarded     = false
 
 
 # ── Patch TilemapRenderer for N-layer support ────────────────────────────────
@@ -2555,6 +2769,16 @@ $xpx_echoln_wrapped   = false
 # Both directions set @need_refresh so any tiles that already had bitmaps
 # get re-rendered for the new layer/data layout.
 $xpx_tilemap_wrapped = false
+# Verbose tilemap state logging (map-change / grow / shrink / post-grow tile
+# census). Was on to chase the oversized-tileset transparency bug, which is
+# fixed — off by default so it doesn't flood the console. Flip to true if a
+# tilemap-render issue resurfaces and you want the per-frame state dump.
+$xpx_tile_diag = false
+# Door walk-out diagnostic: logs once per door event (on map load) which page
+# is active + the tsOn?("A") temp-switch state, to pin down why the
+# transfer-to-door walk-out animation doesn't play. ON while we debug doors;
+# deduped per (map,event) so it's a handful of lines, not spam.
+$xpx_door_diag = true
 
 def _xpx_install_tilemap_update_wrap(klass)
   return if $xpx_tilemap_wrapped
@@ -2582,14 +2806,15 @@ def _xpx_install_tilemap_update_wrap(klass)
         # touching 006_MKXP_Tileset.rb / VWrap, and it's
         # layer-count-agnostic so it works for any zsize 1-9.
         if $game_map && $game_map.map_id != (@xpx_last_map_id || 0)
-          XPX.log "TilemapRenderer map change: #{@xpx_last_map_id || 0} -> #{$game_map.map_id}; forcing @need_refresh"
+          XPX.log "TilemapRenderer map change: #{@xpx_last_map_id || 0} -> #{$game_map.map_id}; forcing @need_refresh" if $xpx_tile_diag
           @xpx_last_map_id = $game_map.map_id
           @need_refresh = true
-          # Arm the post-grow diagnostic so we get a few frames of
-          # state logging right at the moment the renderer would
-          # otherwise go transparent. This is how we'll catch the
-          # warp-back-then-empty bug in flight without a live repro.
-          @xpx_post_grow_check = 6
+          # Arm the post-grow diagnostic (only when tile-diag is on) so a few
+          # frames of state get logged at the moment the renderer would
+          # otherwise go transparent. The oversized-tileset transparency bug
+          # this chased is fixed, so it's off by default — flip $xpx_tile_diag
+          # to re-enable if a related issue resurfaces.
+          @xpx_post_grow_check = 6 if $xpx_tile_diag
         end
         if $game_map && $game_map.data
           needed = $game_map.data.zsize rescue 0
@@ -2631,8 +2856,8 @@ def _xpx_install_tilemap_update_wrap(klass)
             @old_tone  = nil
             @old_color = nil
             @need_refresh = true
-            @xpx_post_grow_check = 4
-            XPX.log "Grew TilemapRenderer tiles: #{current} -> #{needed} layers"
+            @xpx_post_grow_check = 4 if $xpx_tile_diag
+            XPX.log "Grew TilemapRenderer tiles: #{current} -> #{needed} layers" if $xpx_tile_diag
           elsif needed < current && needed > 0 && current > 0
             # SHRINK: pop and dispose excess TileSprites.
             disposed = 0
@@ -2655,7 +2880,7 @@ def _xpx_install_tilemap_update_wrap(klass)
               end
             end
             @need_refresh = true
-            XPX.log "Shrunk TilemapRenderer tiles: #{current} -> #{needed} layers (disposed #{disposed} sprites)"
+            XPX.log "Shrunk TilemapRenderer tiles: #{current} -> #{needed} layers (disposed #{disposed} sprites)" if $xpx_tile_diag
           end
         end
         # Time the underlying TilemapRenderer.update so the slow-frame
@@ -3575,6 +3800,43 @@ def _xpx_install_game_map_setup_wrap(klass)
         # be triaged from the log without a fresh repro session.
         XPX.vlog "Game_Map#setup(#{map_id}): caches evicted, rebuilding" rescue nil
         _xpx_orig_setup(map_id)
+        # ── Door walk-out diagnostic (gated by $xpx_door_diag) ────────
+        # Right after setup, the events exist and have chosen their active
+        # page. For each door event (a page whose switch1 condition names a
+        # temp switch, e.g. s:tsOn?("A")), log which page is live and the
+        # tsOn?("A") state — that tells us whether the autorun walk-out page
+        # is being selected on arrival, and if not, whether the temp switch
+        # is the reason.
+        if $xpx_door_diag
+          begin
+            $xpx_door_logged ||= {}
+            (@events || {}).each do |eid, ev|
+              rev = (ev.instance_variable_get(:@event) rescue nil)
+              next unless rev && rev.pages
+              door_pg = rev.pages.find do |p|
+                (p.condition.switch1_valid rescue false) &&
+                ($data_system.switches[p.condition.switch1_id].to_s =~ /^s:ts/)
+              end
+              next unless door_pg
+              key = "#{map_id}:#{eid}"
+              next if $xpx_door_logged[key]
+              $xpx_door_logged[key] = true
+              cur     = (ev.instance_variable_get(:@page) rescue nil)
+              cur_idx = (rev.pages.index(cur) rescue nil)
+              sw_id   = door_pg.condition.switch1_id
+              ts      = (ev.instance_variable_get(:@tempSwitches) rescue nil)
+              XPX.log "DOOR name=#{rev.name.inspect} id=#{eid} " \
+                      "active_page=#{cur_idx.inspect}/#{rev.pages.size} " \
+                      "walkout_trigger=#{door_pg.trigger} " \
+                      "sw1=#{sw_id}(#{$data_system.switches[sw_id].inspect}) " \
+                      "switchIsOn=#{(ev.send(:switchIsOn?, sw_id) rescue 'err')} " \
+                      "tsA=#{(ev.tsOn?('A') rescue 'err')} " \
+                      "onEvent=#{(ev.onEvent? rescue 'err')} tempSwitches=#{ts.inspect}"
+            end
+          rescue => _de
+            XPX.log "door diag error: #{_de.message}" rescue nil
+          end
+        end
         # ── Per-map EXTRA_AUTOTILES injection ────────────────────────
         # XPX assigns autotiles per-MAP, not per-tileset. v21's
         # EXTRA_AUTOTILES is keyed by tileset_id, so we mirror the
@@ -5070,6 +5332,43 @@ class Module
       _xpx_install_scene_map_update_wrap(self)
     end
 
+    # ── Harden Kernel#echo against an unwritable $stdout ──────────────
+    # Essentials' DebugConsole defines `echo` as a bare `printf(...)`. When
+    # the game runs in debug mode ($DEBUG, which Play Test sets) on a windowed
+    # mkXPX build, Ruby's $stdout is NOT a writable descriptor (it's not a
+    # console-enabled build), so that printf raises Errno::EBADF and CRASHES
+    # the game. echoln delegates to echo, so this hits any debug logging — e.g.
+    # a plugin that echoes PBS compile progress (Vena's tournament scripts).
+    # Vanilla mkxp-z console builds keep stdout writable, which is why it only
+    # bites under XPX. Wrap echo so a failed debug write is silently dropped
+    # instead of taking down the game (debug output is non-essential, same
+    # rationale as xpx_puts' own EBADF guard).
+    if meth == :echo && !$xpx_echo_guarded && self == ::Kernel
+      $xpx_echo_guarded = true
+      begin
+        ::Kernel.module_eval do
+          alias_method :_xpx_orig_echo, :echo
+          define_method(:echo) { |*args|
+            # Always capture to logs/xpx_console.log so debug output is never
+            # lost even when the on-screen console can't be written.
+            (XPX.console_file(args[0]) rescue nil) if defined?(XPX)
+            begin
+              _xpx_orig_echo(*args)
+            rescue SystemCallError, IOError
+              # $stdout isn't wired to the mkXPX console — write straight to the
+              # console window (CONOUT$) so the message still shows on screen,
+              # and never crash the game.
+              (XPX.console_window(args[0]) rescue nil) if defined?(XPX)
+            end
+          }
+        end
+        xpx_puts "Kernel#echo hardened + captured to logs/xpx_console.log."
+      rescue => _ee
+        xpx_puts "echo harden failed: #{_ee.message}"
+        $xpx_echo_guarded = false
+      end
+    end
+
     # ── echoln rebrand patch detection ───────────────────────────────
     # Kernel#echoln is defined in Scripts.rxdata (PE's Compiler.rb).
     # When PE defines it, Kernel.method_added(:echoln) fires here.
@@ -5530,3 +5829,155 @@ begin
 rescue => e
   xpx_puts "Page-condition operator patch failed: #{e.message}"
 end
+
+# ── XPX: Move to Location ──────────────────────────────────────────────────
+# The editor authors "Move to Location" as one step; build_move_route emits it
+# as a STOCK code-45 Script move command:  xpx_move_to(x, y).  When the move
+# route reaches that step, xpx_move_to BFS-pathfinds from the character's
+# CURRENT tile and splices the stock move commands (1=down 2=left 3=right 4=up)
+# right after itself, so the character walks the rest of the path one tile per
+# frame. Game_Character#passable? checks tile passages, events AND the player,
+# so the route routes around all of them at their LIVE positions.
+#
+# We never ship a non-standard move code to the engine (Essentials extends move
+# routes past RMXP's 0-45, so a custom code can collide). Code 45 is universal.
+#
+# Game_Character is an Essentials script class loaded from Scripts.rxdata AFTER
+# this preload runs, so the methods are added on first sight via a
+# TracePoint(:end) (same pattern as the TilesetBitmaps patch).
+begin
+  module XPX_MoveToLocation
+    # BFS shortest 4-dir path from (sx,sy) to (tx,ty). Returns stock move codes
+    # (1=down 2=left 3=right 4=up). Tracks the closest reachable tile so a
+    # blocked target still walks AS CLOSE AS POSSIBLE (stops adjacent).
+    def xpx_find_path(sx, sy, tx, ty, max_nodes = 4000)
+      return [] if sx == tx && sy == ty
+      visited = {}
+      visited[[sx, sy]] = true
+      queue = [[sx, sy, []]]
+      dirs = [[2, 0, 1, 1], [4, -1, 0, 2], [6, 1, 0, 3], [8, 0, -1, 4]]
+      best_path = []
+      best_dist = (sx - tx).abs + (sy - ty).abs
+      count = 0
+      until queue.empty?
+        node = queue.shift
+        x = node[0]; y = node[1]; path = node[2]
+        return path if x == tx && y == ty
+        dist = (x - tx).abs + (y - ty).abs
+        if dist < best_dist
+          best_dist = dist
+          best_path = path
+        end
+        count += 1
+        break if count > max_nodes
+        dirs.each do |d|
+          nx = x + d[1]; ny = y + d[2]
+          key = [nx, ny]
+          next if visited[key]
+          next unless passable?(x, y, d[0])
+          visited[key] = true
+          queue.push([nx, ny, path + [d[3]]])
+        end
+      end
+      best_path
+    end
+
+    # Replace each code-46 step with the BFS path's stock moves, tracking a
+    # virtual cursor so a later code-46 pathfinds from the right tile.
+    def xpx_expand_move_list(list)
+      vx = @x; vy = @y
+      out = []
+      (list || []).each do |c|
+        next unless c
+        if c.code == 46
+          tx = (c.parameters[0] || 0).to_i
+          ty = (c.parameters[1] || 0).to_i
+          path = xpx_find_path(vx, vy, tx, ty)
+          XPX.log("xpx_move_to: from (#{vx},#{vy}) to (#{tx},#{ty}) -> #{path.size} steps #{path.inspect}") rescue nil
+          path.each do |mc|
+            cmd = RPG::MoveCommand.new; cmd.code = mc; cmd.parameters = []
+            out << cmd
+            case mc
+            when 1 then vy += 1
+            when 2 then vx -= 1
+            when 3 then vx += 1
+            when 4 then vy -= 1
+            end
+          end
+        else
+          out << c
+          case c.code
+          when 1 then vy += 1
+          when 2 then vx -= 1
+          when 3 then vx += 1
+          when 4 then vy -= 1
+          end
+        end
+      end
+      term = RPG::MoveCommand.new; term.code = 0
+      out << term unless out.last && out.last.code == 0
+      out
+    end
+
+    # PRIVATE RPG::MoveRoute copy with code-46 expanded. Never mutates the
+    # shared command route (command_209 passes parameters[1] by reference).
+    def xpx_norm_route(mr)
+      return mr unless mr && mr.list && mr.list.any? { |c| c && c.code == 46 }
+      nr = RPG::MoveRoute.new
+      nr.repeat    = mr.repeat
+      nr.skippable = mr.skippable
+      nr.list      = xpx_expand_move_list(mr.list)
+      nr
+    end
+
+    # Forced route entry (Set Move Route event command → command_209). Expand
+    # from the character's CURRENT tile so the path routes around the player +
+    # events at their live positions, then hand the private route to the engine.
+    def force_move_route(move_route)
+      if move_route && move_route.list && move_route.list.any? { |c| c && c.code == 46 }
+        XPX.log("force_move_route: code-46 route on #{self.class} at (#{@x},#{@y})") rescue nil
+        nr = xpx_norm_route(move_route)
+        @xpx_mr_done = nr
+        super(nr)
+      else
+        super
+      end
+    end
+
+    # Page "Custom" move type. Normalise once per route (object-identity guard).
+    def move_type_custom
+      mr = @move_route
+      if mr && !mr.equal?(@xpx_mr_done) && mr.list &&
+         mr.list.any? { |c| c && c.code == 46 }
+        XPX.log("move_type_custom: code-46 route on #{self.class} at (#{@x},#{@y})") rescue nil
+        @move_route       = xpx_norm_route(mr)
+        @move_route_index = 0
+        @xpx_mr_done      = @move_route
+      end
+      super
+    end
+  end
+
+  _xpx_install_moveto = proc do
+    if defined?(Game_Character) &&
+       !Game_Character.ancestors.include?(XPX_MoveToLocation)
+      Game_Character.prepend(XPX_MoveToLocation)
+      XPX.log("XPX Move to Location installed.") rescue nil
+    end
+  end
+
+  if defined?(Game_Character)
+    _xpx_install_moveto.call
+  else
+    _xpx_moveto_tp = TracePoint.new(:end) do |tp|
+      if tp.self.is_a?(Class) && tp.self.name == "Game_Character"
+        _xpx_moveto_tp.disable
+        _xpx_install_moveto.call
+      end
+    end
+    _xpx_moveto_tp.enable
+  end
+rescue => e
+  xpx_puts "XPX Move to Location failed: #{e.message}"
+end
+

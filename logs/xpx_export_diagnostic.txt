@@ -198,5 +198,5 @@ ts_list length: 51
   Map112 (Lilicorn Underpass): stored_id=23, slot_path='C:\\Users\\Vena\\Documents\\folders\\RPGMaker\\Pokemon IA XPX\\Graphics\\Tilesets\\Niphos Outside.png', slot_name='Niphos Outside.png', resolved_id=23 (matched 'niphos outside.png')
 
 === Summary ===
-Exported: 0 maps
-Skipped : 112 maps (rxdata up-to-date, no mismatch)
+Exported: 102 maps
+Skipped : 10 maps (rxdata up-to-date, no mismatch)
