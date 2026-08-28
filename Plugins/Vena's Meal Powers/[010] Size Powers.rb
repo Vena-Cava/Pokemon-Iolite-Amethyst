@@ -13,7 +13,7 @@ module MealPowers
 
   TEENSY_SCALE_MAX = {
     0 => nil,
-    1 => 128,
+    1 => 127,
     2 => 95,
     3 => 63
   }
