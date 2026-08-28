@@ -64,22 +64,6 @@ EventHandlers.add(:on_player_step_taken, :meal_power_daycare_power,
       next
     end
 
-    if MealPowers::DEBUG
-      progress = day_care.instance_variable_get(:@meal_power_daycare_progress) || 0
-
-      puts "========================================"
-      puts "DAYCARE POWER STEP DEBUG"
-      puts "Map ID: #{$game_map.map_id}"
-      puts "Map Name: #{$game_map.name}"
-      puts "Daycare Power Lv: #{level}"
-      puts "Multiplier: x#{MealPowers.daycare_multiplier}"
-      puts "Deposited Pokemon: #{day_care.count}"
-      puts "Egg Already Generated?: #{day_care.egg_generated}"
-      puts "Normal Daycare Step Counter: #{day_care.step_counter}"
-      puts "Bonus Progress Before This Step: #{progress}"
-      puts "========================================"
-    end
-
     multiplier = MealPowers.daycare_multiplier
 
     # Essentials already supplies x1 generation speed itself.
