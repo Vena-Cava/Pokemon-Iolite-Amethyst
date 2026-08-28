@@ -765,7 +765,11 @@ def chooseMapPoint(map, rgnmap = false)
       ret = xy
       break
     end
+<<<<<<< Updated upstream
     if Keybinds.trigger?(:back)
+=======
+    if Input.trigger?(Input::BACK)
+>>>>>>> Stashed changes
       ret = nil
       break
     end
@@ -1654,7 +1658,11 @@ def pbPropertyList(title, data, properties, saveprompt = false)
         desc.text = properties[list.index][2]
         selectedmap = list.index
       end
+<<<<<<< Updated upstream
       if Keybinds.trigger?(:action)
+=======
+      if Input.trigger?(Input::ACTION)
+>>>>>>> Stashed changes
         propobj = properties[selectedmap][1]
         if propobj != ReadOnlyProperty && !propobj.is_a?(ReadOnlyProperty) &&
            pbConfirmMessage(_INTL("Reset the setting {1}?", properties[selectedmap][0]))
@@ -1670,10 +1678,17 @@ def pbPropertyList(title, data, properties, saveprompt = false)
           commands.push(sprintf("%s=%s", properties[i][0], propobj.format(data[i])))
         end
         list.commands = commands
+<<<<<<< Updated upstream
       elsif Keybinds.trigger?(:back)
         selectedmap = -1
         break
       elsif Keybinds.trigger?(:use)
+=======
+      elsif Input.trigger?(Input::BACK)
+        selectedmap = -1
+        break
+      elsif Input.trigger?(Input::USE)
+>>>>>>> Stashed changes
         propobj = properties[selectedmap][1]
         oldsetting = data[selectedmap]
         newsetting = propobj.set(properties[selectedmap][0], oldsetting)

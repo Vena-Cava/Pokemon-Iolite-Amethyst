@@ -202,16 +202,28 @@ class SpritePositioner
         pbChangeSpecies(@species, @form)
         refresh
       end
+<<<<<<< Updated upstream
       if Keybinds.press?(:action)   # Cycle to next option
+=======
+      if Input.trigger?(Input::ACTION)   # Cycle to next option
+>>>>>>> Stashed changes
         pbPlayDecisionSE
         @metricsChanged = true if metrics_data.shadow_size != oldval
         ret = true
         break
+<<<<<<< Updated upstream
       elsif Keybinds.press?(:back)
         metrics_data.shadow_size = oldval
         pbPlayCancelSE
         break
       elsif Keybinds.press?(:use)
+=======
+      elsif Input.trigger?(Input::BACK)
+        metrics_data.shadow_size = oldval
+        pbPlayCancelSE
+        break
+      elsif Input.trigger?(Input::USE)
+>>>>>>> Stashed changes
         pbPlayDecisionSE
         @metricsChanged = true if metrics_data.shadow_size != oldval
         break
@@ -322,11 +334,19 @@ class SpritePositioner
       Input.update
       cw.update
       self.update
+<<<<<<< Updated upstream
       if Keybinds.press?(:use)
         pbPlayDecisionSE
         ret = cw.index
         break
       elsif Keybinds.press?(:back)
+=======
+      if Input.trigger?(Input::USE)
+        pbPlayDecisionSE
+        ret = cw.index
+        break
+      elsif Input.trigger?(Input::BACK)
+>>>>>>> Stashed changes
         pbPlayCancelSE
         break
       end
@@ -367,11 +387,19 @@ class SpritePositioner
         refresh
       end
       self.update
+<<<<<<< Updated upstream
       if Keybinds.press?(:back)
         pbChangeSpecies(nil, nil)
         refresh
         break
       elsif Keybinds.press?(:use)
+=======
+      if Input.trigger?(Input::BACK)
+        pbChangeSpecies(nil, nil)
+        refresh
+        break
+      elsif Input.trigger?(Input::USE)
+>>>>>>> Stashed changes
         pbChangeSpecies(allspecies[cw.index][1], allspecies[cw.index][2])
         ret = true
         break

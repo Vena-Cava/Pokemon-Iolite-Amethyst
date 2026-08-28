@@ -277,7 +277,11 @@ class Game_System
   end
 
   def update
+<<<<<<< Updated upstream
     if Keybinds.press?(:special) && pbCurrentEventCommentInput(1, "Cut Scene")
+=======
+    if Input.trigger?(Input::SPECIAL) && pbCurrentEventCommentInput(1, "Cut Scene")
+>>>>>>> Stashed changes
       event = @map_interpreter.get_self
       @map_interpreter.pbSetSelfSwitch(event.id, "A", true)
       @map_interpreter.command_end

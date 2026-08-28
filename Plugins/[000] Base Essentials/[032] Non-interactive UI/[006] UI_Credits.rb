@@ -208,7 +208,11 @@ class Scene_Credits
 
   # Check if the credits should be cancelled
   def cancel?
+<<<<<<< Updated upstream
     @quit = true if Keybinds.press?(:use) && $PokemonGlobal.creditsPlayed
+=======
+    @quit = true if Input.trigger?(Input::USE) && $PokemonGlobal.creditsPlayed
+>>>>>>> Stashed changes
     return @quit
   end
 

@@ -306,11 +306,19 @@ class Battle::DebugSetEffects
   end
 
   def update_input_for_boolean(effect, variable_data)
+<<<<<<< Updated upstream
     if Keybinds.trigger?(:use)
       pbPlayDecisionSE
       @variables[effect] = !@variables[effect]
       return true
     elsif Keybinds.trigger?(:action) && @variables[effect]
+=======
+    if Input.trigger?(Input::USE)
+      pbPlayDecisionSE
+      @variables[effect] = !@variables[effect]
+      return true
+    elsif Input.trigger?(Input::ACTION) && @variables[effect]
+>>>>>>> Stashed changes
       pbPlayDecisionSE
       @variables[effect] = false
       return true
@@ -330,14 +338,22 @@ class Battle::DebugSetEffects
     true_default = (default == -2) ? -1 : default
     min = variable_data[:min] || true_default
     max = variable_data[:max] || 99
+<<<<<<< Updated upstream
     if Keybinds.trigger?(:use)
+=======
+    if Input.trigger?(Input::USE)
+>>>>>>> Stashed changes
       pbPlayDecisionSE
       new_value = choose_number(@variables[effect], min, max)
       if new_value != @variables[effect]
         @variables[effect] = new_value
         return true
       end
+<<<<<<< Updated upstream
     elsif Keybinds.trigger?(:action) && @variables[effect] != true_default
+=======
+    elsif Input.trigger?(Input::ACTION) && @variables[effect] != true_default
+>>>>>>> Stashed changes
       pbPlayDecisionSE
       @variables[effect] = true_default
       return true
@@ -354,14 +370,22 @@ class Battle::DebugSetEffects
   end
 
   def update_input_for_battler_index(effect, variable_data)
+<<<<<<< Updated upstream
     if Keybinds.trigger?(:use)
+=======
+    if Input.trigger?(Input::USE)
+>>>>>>> Stashed changes
       pbPlayDecisionSE
       new_value = choose_battler(@variables[effect])
       if new_value != @variables[effect]
         @variables[effect] = new_value
         return true
       end
+<<<<<<< Updated upstream
     elsif Keybinds.trigger?(:action) && @variables[effect] != -1
+=======
+    elsif Input.trigger?(Input::ACTION) && @variables[effect] != -1
+>>>>>>> Stashed changes
       pbPlayDecisionSE
       @variables[effect] = -1
       return true
@@ -388,14 +412,22 @@ class Battle::DebugSetEffects
   end
 
   def update_input_for_move(effect, variable_data)
+<<<<<<< Updated upstream
     if Keybinds.trigger?(:use)
+=======
+    if Input.trigger?(Input::USE)
+>>>>>>> Stashed changes
       pbPlayDecisionSE
       new_value = pbChooseMoveList(@variables[effect])
       if new_value && new_value != @variables[effect]
         @variables[effect] = new_value
         return true
       end
+<<<<<<< Updated upstream
     elsif Keybinds.trigger?(:action) && @variables[effect]
+=======
+    elsif Input.trigger?(Input::ACTION) && @variables[effect]
+>>>>>>> Stashed changes
       pbPlayDecisionSE
       @variables[effect] = nil
       return true
@@ -404,14 +436,22 @@ class Battle::DebugSetEffects
   end
 
   def update_input_for_item(effect, variable_data)
+<<<<<<< Updated upstream
     if Keybinds.trigger?(:use)
+=======
+    if Input.trigger?(Input::USE)
+>>>>>>> Stashed changes
       pbPlayDecisionSE
       new_value = pbChooseItemList(@variables[effect])
       if new_value && new_value != @variables[effect]
         @variables[effect] = new_value
         return true
       end
+<<<<<<< Updated upstream
     elsif Keybinds.trigger?(:action) && @variables[effect]
+=======
+    elsif Input.trigger?(Input::ACTION) && @variables[effect]
+>>>>>>> Stashed changes
       pbPlayDecisionSE
       @variables[effect] = nil
       return true
@@ -424,7 +464,11 @@ class Battle::DebugSetEffects
       Graphics.update
       Input.update
       @window.update
+<<<<<<< Updated upstream
       if Keybinds.trigger?(:back)
+=======
+      if Input.trigger?(Input::BACK)
+>>>>>>> Stashed changes
         pbPlayCancelSE
         break
       end

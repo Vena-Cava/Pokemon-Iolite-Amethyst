@@ -225,7 +225,11 @@ Pokemon = SLOWBRO,100
 Items = POTION
 LoseText = ...
 Pokemon = FERROTHORN,100
+<<<<<<< Updated upstream
     Moves = TACKLE,SCATTEREDTOYS
+=======
+    Moves = STEALTHROCK,STEALTHROCK,STEALTHROCK,STEALTHROCK
+>>>>>>> Stashed changes
     Ability = PRANKSTER
     Gender = male
     Ball = NETBALL

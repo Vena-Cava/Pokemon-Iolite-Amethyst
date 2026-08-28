@@ -323,6 +323,7 @@ class HallOfFame_Scene
       Input.update
       pbUpdate
       continueScene = true
+<<<<<<< Updated upstream
       break if Keybinds.press?(:back)   # Exits
       if Keybinds.press?(:use)   # Moves the selection one entry backward
         @battlerIndex += 10
@@ -333,6 +334,18 @@ class HallOfFame_Scene
         continueScene = pbUpdatePC
       end
       if Keybinds.press?(:right)   # Moves the selection one pokémon backward
+=======
+      break if Input.trigger?(Input::BACK)   # Exits
+      if Input.trigger?(Input::USE)   # Moves the selection one entry backward
+        @battlerIndex += 10
+        continueScene = pbUpdatePC
+      end
+      if Input.trigger?(Input::LEFT)   # Moves the selection one pokémon forward
+        @battlerIndex -= 1
+        continueScene = pbUpdatePC
+      end
+      if Input.trigger?(Input::RIGHT)   # Moves the selection one pokémon backward
+>>>>>>> Stashed changes
         @battlerIndex += 1
         continueScene = pbUpdatePC
       end

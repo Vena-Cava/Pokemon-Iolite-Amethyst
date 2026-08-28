@@ -107,7 +107,11 @@ def pbDebugMenu(show_all = true)
       end
       Graphics.update
       Input.update
+<<<<<<< Updated upstream
       if Keybinds.trigger?(:back)
+=======
+      if Input.trigger?(Input::BACK)
+>>>>>>> Stashed changes
         parent = commands.getParent
         if parent
           pbPlayCancelSE
@@ -119,7 +123,11 @@ def pbDebugMenu(show_all = true)
           ret = -1
           break
         end
+<<<<<<< Updated upstream
       elsif Keybinds.trigger?(:use)
+=======
+      elsif Input.trigger?(Input::USE)
+>>>>>>> Stashed changes
         ret = cmdwindow.index
         break
       end
@@ -222,7 +230,11 @@ module Battle::DebugMixin
         end
         Graphics.update
         Input.update
+<<<<<<< Updated upstream
         if Keybinds.trigger?(:back)
+=======
+        if Input.trigger?(Input::BACK)
+>>>>>>> Stashed changes
           parent = commands.getParent
           if parent
             pbPlayCancelSE
@@ -234,7 +246,11 @@ module Battle::DebugMixin
             ret = -1
             break
           end
+<<<<<<< Updated upstream
         elsif Keybinds.trigger?(:use)
+=======
+        elsif Input.trigger?(Input::USE)
+>>>>>>> Stashed changes
           ret = cmdwindow.index
           break
         end

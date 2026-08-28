@@ -88,7 +88,11 @@ def pbDisplayMail(mail, _bearer = nil)
     Graphics.update
     Input.update
     pbUpdateSpriteHash(sprites)
+<<<<<<< Updated upstream
     if Keybinds.press?(:back) || Keybinds.press?(:use)
+=======
+    if Input.trigger?(Input::BACK) || Input.trigger?(Input::USE)
+>>>>>>> Stashed changes
       break
     end
   end

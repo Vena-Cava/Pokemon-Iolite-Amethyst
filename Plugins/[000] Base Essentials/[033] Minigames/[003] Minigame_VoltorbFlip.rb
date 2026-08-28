@@ -212,7 +212,11 @@ class VoltorbFlip
   end
 
   def getInput
+<<<<<<< Updated upstream
     if Keybinds.press?(:up)
+=======
+    if Input.trigger?(Input::UP)
+>>>>>>> Stashed changes
       pbPlayCursorSE
       if @index[1] > 0
         @index[1] -= 1
@@ -221,7 +225,11 @@ class VoltorbFlip
         @index[1] = 4
         @sprites["cursor"].y = 256
       end
+<<<<<<< Updated upstream
     elsif Keybinds.press?(:down)
+=======
+    elsif Input.trigger?(Input::DOWN)
+>>>>>>> Stashed changes
       pbPlayCursorSE
       if @index[1] < 4
         @index[1] += 1
@@ -230,7 +238,11 @@ class VoltorbFlip
         @index[1] = 0
         @sprites["cursor"].y = 0
       end
+<<<<<<< Updated upstream
     elsif Keybinds.press?(:left)
+=======
+    elsif Input.trigger?(Input::LEFT)
+>>>>>>> Stashed changes
       pbPlayCursorSE
       if @index[0] > 0
         @index[0] -= 1
@@ -239,7 +251,11 @@ class VoltorbFlip
         @index[0] = 4
         @sprites["cursor"].x = 256
       end
+<<<<<<< Updated upstream
     elsif Keybinds.press?(:right)
+=======
+    elsif Input.trigger?(Input::RIGHT)
+>>>>>>> Stashed changes
       pbPlayCursorSE
       if @index[0] < 4
         @index[0] += 1
@@ -248,7 +264,11 @@ class VoltorbFlip
         @index[0] = 0
         @sprites["cursor"].x = 0
       end
+<<<<<<< Updated upstream
     elsif Keybinds.press?(:use)
+=======
+    elsif Input.trigger?(Input::USE)
+>>>>>>> Stashed changes
       if @cursor[0][3] == 64   # If in mark mode
         @squares.length.times do |i|
           if (@index[0] * 64) + 128 == @squares[i][0] && @index[1] * 64 == @squares[i][1] && @squares[i][3] == false
@@ -392,7 +412,11 @@ class VoltorbFlip
         pbDisposeSpriteHash(@sprites)
         pbNewGame
       end
+<<<<<<< Updated upstream
     elsif Keybinds.press?(:action)
+=======
+    elsif Input.trigger?(Input::ACTION)
+>>>>>>> Stashed changes
       pbPlayDecisionSE
       @sprites["cursor"].bitmap.clear
       if @cursor[0][3] == 0 # If in normal mode
@@ -402,7 +426,11 @@ class VoltorbFlip
         @cursor[0] = [@directory + "cursor", 128, 0, 0, 0, 64, 64]
         @sprites["memo"].visible = false
       end
+<<<<<<< Updated upstream
     elsif Keybinds.press?(:back)
+=======
+    elsif Input.trigger?(Input::BACK)
+>>>>>>> Stashed changes
       @sprites["curtain"].opacity = 100
       if @points == 0
         if pbConfirmMessage("You haven't found any Coins! Are you sure you want to quit?")
@@ -499,7 +527,11 @@ class VoltorbFlip
       Graphics.update
       Input.update
       update
+<<<<<<< Updated upstream
       if Keybinds.press?(:use) || Keybinds.press?(:back)
+=======
+      if Input.trigger?(Input::USE) || Input.trigger?(Input::BACK)
+>>>>>>> Stashed changes
         break
       end
     end

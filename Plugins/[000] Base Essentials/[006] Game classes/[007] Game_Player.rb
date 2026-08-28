@@ -427,7 +427,11 @@ class Game_Player < Game_Character
   end
 
   def update_command_new
+<<<<<<< Updated upstream
     dir = Keybinds.dir4
+=======
+    dir = Input.dir4
+>>>>>>> Stashed changes
     if $PokemonGlobal.forced_movement?
       move_forward
     elsif !pbMapInterpreterRunning? && !$game_temp.message_window_showing &&

@@ -19,24 +19,37 @@ class Battle::AI
       :DREAMENGINE,
       :CONTAMINATE,
       :CORRUPTION,
+<<<<<<< Updated upstream
       :PRECOGNITION,
 	  :LIMITBREAK,
 	  :TRUEWISDOM
+=======
+      :PRECOGNITION
+>>>>>>> Stashed changes
     ],
   
     7 => [
       :FORCEOFNATURE,
       :ENGINEOFINDUSTRY,
+<<<<<<< Updated upstream
       :GALVANICGUARDIAN,
       :GUARDIANGLADIATOR,
       :HEARTOFFLAME,
       :NATURESSAVIOR,
+=======
+      :GALVANICGLADIATOR,
+      :GUARDIANGLADIATOR,
+      :HEARTOFFLAME,
+      :NATURESSAVIOR,
+  
+>>>>>>> Stashed changes
       :GUMMYBODY,
       :RADIOACTIVEDECAY,
       :GFORCE,
       :STEELSTEALER,
       :MUSCLESTIM,
       :THERMALINSULATION,
+<<<<<<< Updated upstream
       :BOTANIST,
       :FISHMONGER,
       :SURTRSWRATH,
@@ -50,6 +63,13 @@ class Battle::AI
 	  :STORMINGBEAST,
 	  :VAMPYRE,
 	  :COLDASICE
+=======
+  
+      :BOTANIST,
+      :FISHMONGER,
+      :SURTRSWRATH,
+      :TOXICOLOGIST
+>>>>>>> Stashed changes
     ],
   
     6 => [
@@ -60,6 +80,7 @@ class Battle::AI
       :IGNITION,
       :MIRAGE,
       :CATEGORYSIX,
+<<<<<<< Updated upstream
       :NOURISHINGSOUL,
 	  :ARCHANGELSFLIGHT,
 	  :COLDASICE,
@@ -68,12 +89,16 @@ class Battle::AI
 	  :FIERYPASSION,
 	  :GROUNDED,
 	  :RINGTOSS
+=======
+      :NOURISHINGSOUL
+>>>>>>> Stashed changes
     ],
   
     5 => [
       :MINDVEIL,
       :REVERBERATE,
       :DUBSTEP,
+<<<<<<< Updated upstream
       :BOILINGPOINT,
       :ERUPTINGBEAST,
       :REKINDLEDRAGE,
@@ -98,6 +123,25 @@ class Battle::AI
 	  :SEENOEVIL,
 	  :SPEAKNOEVIL,
 	  :TROLLTOLL
+=======
+  
+      :BOILINGPOINT,
+      :ERUPTINGBEAST,
+      :REKINDLEDRAGE,
+  
+      :CHIPPEDSTONE,
+      :GLASSSPLINTERS,
+      :TONOFBRICKS,
+  
+      :GROUNDWIRE,
+      :SHOCKINGSTING,
+      :ELDRITCHSKIN,
+  
+      :BULWARK,
+      :ROCKBODY,
+      :SNOWSTRIFE,
+      :FROSTBLIGHT
+>>>>>>> Stashed changes
     ],
   
     4 => [
@@ -140,12 +184,20 @@ class Battle::AI
 
   HP_HEAL_ITEMS[:HEARTYGYRO] = 100
   
+<<<<<<< Updated upstream
+=======
+  IA_ALL_STATUS_CURE_ITEMS = [
+    :STUFFEDGYRO
+  ]
+  
+>>>>>>> Stashed changes
   ONE_STAT_RAISE_ITEMS[:LEANGYRO]    = [:ATTACK, 3]
   ONE_STAT_RAISE_ITEMS[:TOUGHGYRO]   = [:DEFENSE, 3]
   ONE_STAT_RAISE_ITEMS[:CHEESYGYRO]  = [:SPECIAL_ATTACK, 3]
   ONE_STAT_RAISE_ITEMS[:SEAFOODGYRO] = [:SPECIAL_DEFENSE, 3]
   ONE_STAT_RAISE_ITEMS[:LOWFATGYRO]  = [:SPEED, 3]
   
+<<<<<<< Updated upstream
   IA_BASE_ABILITY_RATINGS.each_pair do |val, abilities|
     BASE_ABILITY_RATINGS[val] ||= []
     abilities.each { |a| BASE_ABILITY_RATINGS[val].push(a) if !BASE_ABILITY_RATINGS[val].include?(a) }
@@ -157,6 +209,8 @@ class Battle::AI
   end
 
   ALL_STATUS_CURE_ITEMS.push(:STUFFEDGYRO) if !ALL_STATUS_CURE_ITEMS.include?(:STUFFEDGYRO)
+=======
+>>>>>>> Stashed changes
 
   #===============================================================================
   # AI_ChooseMove
@@ -187,6 +241,7 @@ class Battle::AI
   
 end
 
+<<<<<<< Updated upstream
 Battle::AI::Handlers::GeneralMoveScore.add(:limit_break_prefer_1pp_move,
   proc { |score, move, user, ai, battle|
     next score if !user.has_active_ability?(:LIMITBREAK)
@@ -222,4 +277,51 @@ class Battle::AI::AIBattler
 
     return ret
   end
+=======
+################################################################################
+# 
+# Battle::AI::AIBattler class changes.
+# 
+################################################################################
+class Battle::AI::AIBattler
+  # Added IA base item ratings
+  alias ioam_wants_item? wants_item?
+  def wants_item?(item)
+    Battle::AI::IA_BASE_ITEM_RATINGS.each_pair do |val, items|
+      next if Battle::AI::BASE_ITEM_RATINGS[val] && Battle::AI::BASE_ITEM_RATINGS[val].include?(item)
+      Battle::AI::BASE_ITEM_RATINGS[val] = [] if !Battle::AI::BASE_ITEM_RATINGS[val]
+      items.each{|itm|
+        Battle::AI::BASE_ITEM_RATINGS[val].push(itm)
+      }
+    end
+    return ioam_wants_item?(item)
+  end
+  
+  # Added IA all status cure item ratings
+  alias ioam_wants_all_status_cure_item? wants_item?
+  def wants_item?(item)
+    Battle::AI::IA_ALL_STATUS_CURE_ITEMS.each_pair do |val, items|
+      next if Battle::AI::ALL_STATUS_CURE_ITEMS[val] && Battle::AI::ALL_STATUS_CURE_ITEMS[val].include?(item)
+      Battle::AI::ALL_STATUS_CURE_ITEMS[val] = [] if !Battle::AI::ALL_STATUS_CURE_ITEMS[val]
+      items.each{|itm|
+        Battle::AI::ALL_STATUS_CURE_ITEMS[val].push(itm)
+      }
+    end
+    return ioam_wants_all_status_cure_item?(item)
+  end
+
+  # Added IA base ability ratings
+  alias ioam_wants_ability? wants_ability?
+  def wants_ability?(ability = :NONE)
+    Battle::AI::IA_BASE_ABILITY_RATINGS.each_pair do |val, abilities|
+      next if Battle::AI::BASE_ABILITY_RATINGS[val] && Battle::AI::BASE_ABILITY_RATINGS[val].include?(ability)
+      Battle::AI::BASE_ABILITY_RATINGS[val] = [] if !Battle::AI::BASE_ABILITY_RATINGS[val]
+      abilities.each{|ab|
+        Battle::AI::BASE_ABILITY_RATINGS[val].push(ab)
+      }
+    end
+    return ioam_wants_ability?(ability)
+  end
+
+>>>>>>> Stashed changes
 end
