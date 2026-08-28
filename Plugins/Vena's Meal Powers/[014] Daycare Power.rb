@@ -17,6 +17,13 @@ module MealPowers
 end
 
 class DayCare
+  alias mealpowers_reset_egg_counters reset_egg_counters
+
+  def reset_egg_counters
+    mealpowers_reset_egg_counters
+    @meal_power_daycare_progress = 0
+  end
+
   #-------------------------------------------------------------------------
   # Performs one normal Egg availability roll without affecting the Day
   # Care's normal step counter, Exp gain or Egg Move sharing.
