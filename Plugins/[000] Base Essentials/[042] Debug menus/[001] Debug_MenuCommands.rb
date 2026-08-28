@@ -815,11 +815,7 @@ MenuHandlers.add(:debug_menu, :add_item, {
   "description" => _INTL("Choose an item and a quantity of it to add to the Bag."),
   "effect"      => proc {
     pbListScreenBlock(_INTL("ADD ITEM"), ItemLister.new) do |button, item|
-<<<<<<< Updated upstream
       if button == :use && item
-=======
-      if button == Input::USE && item
->>>>>>> Stashed changes
         params = ChooseNumberParams.new
         params.setRange(1, Settings::BAG_MAX_PER_SLOT)
         params.setInitialValue(1)

@@ -181,7 +181,7 @@ Battle::PokeBallEffects::ModifyCatchRate.add(:BEASTBALL, proc { |ball, catchRate
   if battler.pokemon.species_data.has_flag?("UltraBeast")
     catchRate *= 5
   else
-    catchRate /= 10
+    catchRate /= 10.0
   end
   next catchRate
 })

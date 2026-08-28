@@ -75,6 +75,18 @@ module XPX
     xpx_puts msg
   end
 
+  # Verbose runtime diagnostic logger. NO-OP unless $xpx_verbose is
+  # explicitly set true. v0.3.3 emitted per-setup / per-frame /
+  # per-tilemap-grow lines unconditionally, which buried the useful
+  # boot info under spam once you were in-game. v0.3.4 keeps the
+  # diagnostics available — set $xpx_verbose = true from anywhere
+  # (env var bootstrap, debug menu, console) to re-enable them when
+  # actually triaging a bug — but stays quiet by default.
+  def self.vlog(msg)
+    return unless $xpx_verbose
+    log(msg)
+  end
+
   # Console-only diagnostic for cases where we explicitly want output
   # ONLY to the game console (no file). Used for environment dumps /
   # GL info / etc. that would bloat the file log for every player but
@@ -299,20 +311,20 @@ module XPX
   #                              _xpx_install_game_map_setup_wrap).
   #
   #   $xpx_map_dict_cache[id] → parsed JSON dict (the file contents).
-  #                              NOT evicted on setup. The xpxdata
-  #                              file only changes when XPX writes a
-  #                              new save out-of-band; within a game
-  #                              session it's stable, so caching the
-  #                              parse result is safe and saves the
-  #                              multi-MB File.read + JSON.parse on
-  #                              every map switch.
-  #
-  # This split fixes a freeze in Essentials's debug-menu warp: the
-  # menu cycles through Game_Map#setup rapidly enough that re-
-  # parsing the full xpxdata file on every call cumulatively blew
-  # past RGSS's 10-second script-watchdog. With the dict cache,
-  # repeated entries to the same map become a hash lookup +
-  # build_map (which is just object construction, no IO).
+  #                              v0.3.3 kept this across setups for
+  #                              perf; v0.3.4 evicts it on setup too,
+  #                              after Vena reported "debug-menu map
+  #                              transfer doesn't refresh." Per-setup
+  #                              cost is one File.read + JSON parse
+  #                              (~milliseconds per map), which is
+  #                              fine because actual map transfers
+  #                              are one-shot. The original perf
+  #                              concern was the debug-menu's map
+  #                              LIST UI enumerating every map via
+  #                              load_data — that path does NOT go
+  #                              through Game_Map#setup, so list
+  #                              enumeration still hits the dict
+  #                              cache freely and stays fast.
   def self.get_map(id)
     $xpx_map_cache      ||= {}
     $xpx_map_dict_cache ||= {}
@@ -331,7 +343,10 @@ module XPX
     effective_id = resolve_variant_id(id)
     load_path = ($xpx_map_index||{})[effective_id] ||
                 ($xpx_map_index||{})[id]
-    return nil unless load_path
+    if !load_path
+      XPX.log "get_map(#{id}): no load_path (eff=#{effective_id} indexed=#{(($xpx_map_index||{}).key?(id)) rescue '?'})" rescue nil
+      return nil
+    end
 
     begin
       # Dict cache lookup — keyed by effective_id so a variant swap
@@ -359,7 +374,7 @@ module XPX
       end
       $xpx_map_cache[id] = m
     rescue => e
-      xpx_puts "Map#{id} load error: #{e.message}"
+      XPX.log "Map#{id} load error: #{e.class}: #{e.message} @ #{(e.backtrace||[])[0..2].inspect}" rescue nil
       nil
     end
   end
@@ -1311,26 +1326,45 @@ module XPX
     # rxdata fields stay intact.
     return rpg_ts unless rpg_ts && xdata.is_a?(Hash)
 
-    # ── DO NOT overwrite tileset_name / name from xpxdata ───────────
-    # CRITICAL bug fix: previously this overlay rewrote
-    # rpg_ts.tileset_name and rpg_ts.name with whatever xdata said.
-    # That worked when XPX_Tilesets.xpxdata's `id` field matched the
-    # rxdata array position 1:1 — every overlay applied the SAME
-    # tileset's xpxdata to its own rxdata entry. But on projects where
-    # RMXP's @id values drift from array positions (which happens when
-    # tilesets are reordered or added/removed in the database), the
-    # overlay applies the WRONG tileset's xpxdata to a position. Result:
-    # the runtime's $data_tilesets[N] has the right passability data
-    # but the WRONG tileset_name — Map's @tileset_id=N then loads a
-    # different image than the editor showed (Mizzy hit this:
-    # "biolab" expected but "emirates small rooms" loaded).
+    # ── tileset_name / name policy: overlay ONLY when rxdata is empty ───
+    # Previously this overlay always rewrote rpg_ts.tileset_name and
+    # rpg_ts.name from xpxdata. That worked when XPX_Tilesets.xpxdata's
+    # `id` field matched the rxdata array position 1:1 — every overlay
+    # applied the SAME tileset's xpxdata to its own rxdata entry. But on
+    # projects where RMXP's @id values drift from array positions
+    # (tilesets reordered or added/removed in the database), the overlay
+    # applied the WRONG tileset's xpxdata to a position. Result: the
+    # runtime's $data_tilesets[N] had the right passability data but the
+    # WRONG tileset_name — Map's @tileset_id=N then loaded a different
+    # image than the editor showed ("biolab" expected, "emirates small
+    # rooms" loaded).
     #
-    # tileset_name and name are FILE / IDENTITY fields. They don't
-    # belong in the editor's edit surface — the user edits
-    # passability, priority, and terrain tags. Leave the rxdata
-    # values alone for those identity fields. Only replace what the
-    # editor actually owns: passability, priorities, terrain_tags,
-    # autotile_names (when explicitly set).
+    # Then I swung too far the other way and skipped tileset_name / name
+    # entirely. That broke editor-added tilesets that live at a slot
+    # where Tilesets.rxdata has only a default-empty placeholder (e.g.
+    # Mizzy's BW2-Outside at slot 45 — XPX_Tilesets has the right name,
+    # Tilesets.rxdata[45] has tileset_name=""). Without an overlay, the
+    # runtime reads "" → add_tileset("") gets rejected by the empty-string
+    # guard → @tilesets stays empty → Map32's screen renders black on
+    # the warp-back path that loads the disk's correct tileset_id=45.
+    #
+    # The middle path: overlay tileset_name / name ONLY when the rxdata
+    # entry's tileset_name is empty/nil. A placeholder slot needs a name
+    # populated; a named slot is a real tileset and we don't clobber it.
+    # This fixes the BW2-Outside case without re-introducing the
+    # "biolab" cross-position drift bug — a valid rxdata name is never
+    # overwritten, only nil/empty placeholders are filled in.
+    rxdata_name = (rpg_ts.tileset_name.to_s rescue "")
+    if rxdata_name.empty?
+      xdata_tn = xdata["tileset_name"].to_s
+      rpg_ts.tileset_name = xdata_tn unless xdata_tn.empty?
+      rxdata_displayname = (rpg_ts.name.to_s rescue "")
+      if rxdata_displayname.empty?
+        xdata_disp = (xdata["name"] || xdata["display_name"] || "").to_s
+        rpg_ts.name = xdata_disp unless xdata_disp.empty?
+      end
+    end
+
     if xdata["autotile_names"].is_a?(Array)
       # RMXP convention: autotile_names is a 7-slot array padded with
       # empty strings. Honor whatever the editor wrote (could be
@@ -1428,35 +1462,44 @@ module XPX
           rt
         end
       end
-      # Append any xpxdata tilesets that don't exist in rxdata
-      # (id higher than the rxdata array's max AND tileset_name
-      # not seen in rxdata). Rare but possible if a user adds
-      # tilesets in XPX without re-running the rxdata writer.
+      # Append xpxdata tilesets the rxdata array doesn't already
+      # contain — tilesets added in the XPX editor that were never
+      # written back into Tilesets.rxdata. Identity is by
+      # tileset_name (the image file), which can't drift.
+      #
+      # v0.3.4: dropped the old `eid <= max_existing` numeric gate. It
+      # only appended a tileset whose @id was ABOVE the highest rxdata
+      # id — so an editor-added tileset whose id landed INSIDE the
+      # rxdata id range was silently skipped. A map built on it then
+      # found nothing in $data_tilesets and fell back to tileset 1
+      # (Mizzy's "new map uses the wrong tileset" bug). Identity by
+      # tileset_name is the reliable test for "already present".
       seen_names = {}
       out.compact.each do |t|
         tn = (t.tileset_name.to_s rescue "")
         next if tn.empty?
         seen_names[tn.sub(/\.\w+$/, "").downcase] = true
       end
-      max_existing = out.compact.map do |t|
-        (t.id rescue 0)
-      end.max || 0
       by_id.each do |eid, entry|
-        next if eid <= max_existing
-        # Skip if this entry's tileset_name is already in the array
-        # (we'd duplicate it).
         en_tn = entry["tileset_name"].to_s
-        unless en_tn.empty?
-          en_tn_norm = en_tn.sub(/\.\w+$/, "").downcase
-          next if seen_names[en_tn_norm]
-        end
+        en_tn_norm = en_tn.empty? ? nil : en_tn.sub(/\.\w+$/, "").downcase
+        # Already present by file identity → don't duplicate it.
+        next if en_tn_norm && seen_names[en_tn_norm]
         new_ts = _build_tileset_from_scratch(entry)
         next unless new_ts
-        # Pad with nils so out[eid] = new_ts at the right index.
         while out.length <= eid
           out << nil
         end
-        out[eid] = new_ts
+        # Place at the tileset's own @id — exactly what a map's
+        # tileset_id indexes. If that slot is somehow already taken by
+        # a different tileset, append instead so the data still exists
+        # rather than clobbering an unrelated tileset.
+        if out[eid].nil?
+          out[eid] = new_ts
+        else
+          out << new_ts
+        end
+        seen_names[en_tn_norm] = true if en_tn_norm
       end
       return out
     end
@@ -2337,8 +2380,8 @@ module XPX
 
         added += 1
       end
-      log "EXTRA_AUTOTILES populated for #{added} tileset(s)"
-      log "Extra slot translation table built for #{$xpx_extra_slot_translation.size} tileset(s)"
+      vlog "EXTRA_AUTOTILES populated for #{added} tileset(s)"
+      vlog "Extra slot translation table built for #{$xpx_extra_slot_translation.size} tileset(s)"
     rescue => e
       log "EXTRA_AUTOTILES populate failed: #{e.class}: #{e.message}"
     end
@@ -2352,6 +2395,125 @@ module XPX
 end
 
 XPX.boot
+
+# ── Slow-frame logger (diagnostic for "lag in debug menu" reports) ──────────
+# Wraps Graphics.update so any frame that takes longer than 30 ms (i.e.
+# dropped below ~33 FPS) gets logged with the active scene's class name.
+# Self-rate-limits to 200 entries per session so a runaway frame
+# situation can't flood the log file. Logs to xpx_debug.log only — no
+# console spam in release builds.
+#
+# Specifically here to track down: "F9 debug menu becomes very laggy
+# after opening the warp map menu once, even after closing it without
+# warping." If the log shows a sustained burst of 50+ ms frames in
+# PokemonDebugMixin / PokemonMenu_Scene / similar AFTER the warp menu
+# was used, we know the residual lag isn't from the warp menu itself —
+# it's downstream state pollution that survives MapLister.dispose.
+$xpx_slow_frame_count = 0
+$xpx_slow_frame_cap   = 200
+$xpx_last_frame_t     = nil
+# Per-frame counters reset on each Graphics.update. The
+# Bitmap#draw_text wrap further down increments these so the slow-frame
+# logger can dump them — letting us prove (or disprove) that the lag
+# is from outline rendering's 9-pass overhead vs something else.
+$xpx_dt_frame_outline     = 0
+$xpx_dt_frame_shadow      = 0
+$xpx_dt_frame_passthrough = 0
+# Total wall time spent inside the draw_text wrapper this frame
+# (including the underlying _xpx_orig_draw_text call). If this approaches
+# the frame duration, draw_text IS the lag; if it's much smaller,
+# the lag is elsewhere (event interp, sprite update, etc).
+$xpx_dt_frame_ms          = 0.0
+# Per-frame timing for the TilemapRenderer#update wrap. The 64 MB
+# wrapped tileset (BW2-Outside) on Map32 is the leading suspect for
+# Mizzy's post-warp-menu pt:0 dt_ms:0 slow frames — 1989 tile sprites
+# all sampling that texture every Graphics.update is one of the few
+# things that could take 500 ms with no draw_text in play.
+$xpx_tr_frame_ms          = 0.0
+# Wall time spent inside the C++ Graphics.update (the actual GL render of
+# every sprite/viewport + buffer swap). This is the ONE big per-frame
+# cost that dt_ms (draw_text) and tr_ms (Ruby tilemap mgmt) do NOT
+# capture. Mizzy's post-rebuild log shows post-warp frames of 375-764ms
+# with dt_ms=0 AND tr_ms=0 — so the cost is either here (C++ render) or
+# in uninstrumented Ruby scene logic. gu_ms vs (delta_ms - gu_ms)
+# splits the two definitively.
+$xpx_gu_frame_ms          = 0.0
+module Graphics
+  class << self
+    alias_method :_xpx_orig_update_perflog, :update unless method_defined?(:_xpx_orig_update_perflog)
+    def update
+      __xpx_gu_t0 = System.uptime
+      _xpx_orig_update_perflog
+      __xpx_gu_t1 = System.uptime
+      $xpx_gu_frame_ms = (__xpx_gu_t1 - __xpx_gu_t0) * 1000.0
+      begin
+        t = __xpx_gu_t1
+        if $xpx_last_frame_t && $xpx_slow_frame_count < $xpx_slow_frame_cap
+          delta_ms = ((t - $xpx_last_frame_t) * 1000.0).to_i
+          if delta_ms > 30
+            $xpx_slow_frame_count += 1
+            scene = $scene ? $scene.class.name : "nil"
+            # Underlying draw_text invocations the wrap fired this
+            # frame. Outline = 9 calls per logical draw_text (8
+            # offsets + the main pass); shadow = 2 calls; passthrough
+            # = 1. A frame with 200+ outline-path calls and 150ms+
+            # duration is the smoking gun for "PE's window refresh
+            # is paying for our hand-rolled outline rasterizer".
+            # Snapshot persistent state that the warp menu might be
+            # leaving behind. If these grow over the session and the
+            # F9 menu's per-cursor-frame time grows in parallel, the
+            # link is causal. If they're flat across pre-/post-warp
+            # phases, the lag is from something else entirely.
+            mm_size = ($xpx_minimap_cache.size rescue 0)
+            gc_stat = (GC.stat rescue {})
+            gc_count = (gc_stat[:count] || 0)
+            gc_heap  = (gc_stat[:heap_live_slots] || gc_stat[:heap_live_slot] || 0)
+            XPX.log "Slow frame: #{delta_ms}ms in #{scene} " \
+                    "(n=#{$xpx_slow_frame_count}/#{$xpx_slow_frame_cap}) " \
+                    "dt=ol:#{$xpx_dt_frame_outline}/" \
+                    "sh:#{$xpx_dt_frame_shadow}/" \
+                    "pt:#{$xpx_dt_frame_passthrough} " \
+                    "dt_ms=#{$xpx_dt_frame_ms.to_i} " \
+                    "tr_ms=#{$xpx_tr_frame_ms.to_i} " \
+                    "gu_ms=#{$xpx_gu_frame_ms.to_i} " \
+                    "mm_cache=#{mm_size} " \
+                    "gc=#{gc_count}/#{gc_heap}"
+          end
+        end
+        $xpx_last_frame_t = t
+        # Reset per-frame counters AFTER logging so the dump
+        # reflects this just-completed frame.
+        $xpx_dt_frame_outline     = 0
+        $xpx_dt_frame_shadow      = 0
+        $xpx_dt_frame_passthrough = 0
+        $xpx_dt_frame_ms          = 0.0
+        $xpx_tr_frame_ms          = 0.0
+        $xpx_gu_frame_ms          = 0.0
+      rescue
+      end
+    end
+  end
+end rescue nil
+
+
+# ── Debug-banner rebrand: "RPG Maker XP" → "XPX Engine" ─────────────────────
+# PE v21's Compiler script writes a debug-mode banner to stdout at boot:
+#     "If you can see this window, you are running the game in Debug Mode.
+#      This means that you're either playing a debug version of the game,
+#      or you're playing from within RPG Maker XP."
+#
+# The banner uses PE v21's Kernel#echoln (which delegates to printf), NOT
+# Ruby's Kernel#puts. Kernel#echoln is defined inside Scripts.rxdata, so
+# we can't alias it at bridge-preload time — by then it doesn't exist yet.
+# Use Module#method_added to wrap it the moment PE defines it (same
+# strategy as the audio patches, Game_Map#setup, etc).
+#
+# One-shot semantics: $xpx_banner_rebranded flips to true the first time
+# the banner string flows through, deactivating the per-call string scan
+# for all subsequent echoln traffic (debug logs, console messages).
+$xpx_banner_rebranded = false
+$xpx_echoln_wrapped   = false
+
 
 # ── Patch TilemapRenderer for N-layer support ────────────────────────────────
 # TilemapRenderer is defined in Scripts.rxdata which loads AFTER this preload
@@ -2401,21 +2563,76 @@ def _xpx_install_tilemap_update_wrap(klass)
     klass.class_eval do
       alias_method :_xpx_orig_tilemap_update, :update
       define_method(:update) do
+        # ── Map-change refresh (one-shot per transfer) ─────────────
+        # When the player transfers between connected maps, PE v21's
+        # check_if_screen_moved takes the connection-slide path: it
+        # shifts the @tiles window by the relative offset and only
+        # marks the *shifted-in* tiles as need_refresh, leaving the
+        # rest with their OLD tile_id and bitmap. If the old map's
+        # tileset was disposed by remove_tileset (load_count went to
+        # 0 because the new map doesn't share it), those retained
+        # bitmap references point at freed GPU textures → entire
+        # screen renders transparent. Forcing @need_refresh on every
+        # map_id change costs one full pass per transfer (cheap —
+        # transfers are rare and deliberate) and guarantees every
+        # tile sprite is re-bound to a live @tilesets bitmap.
+        #
+        # This is the native fix for "oversized tileset works on
+        # first entry but goes transparent after warp-back" without
+        # touching 006_MKXP_Tileset.rb / VWrap, and it's
+        # layer-count-agnostic so it works for any zsize 1-9.
+        if $game_map && $game_map.map_id != (@xpx_last_map_id || 0)
+          XPX.log "TilemapRenderer map change: #{@xpx_last_map_id || 0} -> #{$game_map.map_id}; forcing @need_refresh"
+          @xpx_last_map_id = $game_map.map_id
+          @need_refresh = true
+          # Arm the post-grow diagnostic so we get a few frames of
+          # state logging right at the moment the renderer would
+          # otherwise go transparent. This is how we'll catch the
+          # warp-back-then-empty bug in flight without a live repro.
+          @xpx_post_grow_check = 6
+        end
         if $game_map && $game_map.data
           needed = $game_map.data.zsize rescue 0
           current = (@tiles[0][0].size rescue 0)
           if needed > current && current > 0
             # GROW: append fresh TileSprite instances per cell.
             tile_class = self.class.const_get(:TileSprite)
+            # Snapshot the renderer's CURRENT tone/color so the new upper-
+            # layer sprites inherit the active screen tint / lighting.
+            # Background: night/day lighting plugins (and Essentials itself
+            # for some effects) tint the map by setting TilemapRenderer#tone,
+            # which the stock update() pushes to each tile sprite ONLY when
+            # @tone changes (`if @old_tone != @tone`). A sprite created
+            # AFTER the tone was last set therefore stays at the default
+            # (untinted) tone until the next dawn/dusk transition. That is
+            # exactly the "layers above 3 aren't affected by lighting /
+            # screen tints" bug: layers 4-9 are born here, after the tone
+            # was already applied to layers 1-3, so they never darken.
+            cur_tone  = (@tone  rescue nil)
+            cur_color = (@color rescue nil)
             @tiles.each do |col|
               col.each do |coord|
                 while coord.size < needed
-                  coord << tile_class.new(@viewport)
+                  ts = tile_class.new(@viewport)
+                  begin
+                    ts.tone  = cur_tone  if cur_tone
+                    ts.color = cur_color if cur_color
+                  rescue
+                  end
+                  coord << ts
                 end
               end
             end
+            # Belt-and-suspenders: clear @old_tone/@old_color so the stock
+            # update()'s tone/color pass (which runs right after this, via
+            # _xpx_orig_tilemap_update) re-pushes the current tint to EVERY
+            # sprite this frame — covering the grown layers even if the
+            # per-sprite seeding above was skipped for any reason.
+            @old_tone  = nil
+            @old_color = nil
             @need_refresh = true
-            xpx_puts "Grew TilemapRenderer tiles: #{current} -> #{needed} layers"
+            @xpx_post_grow_check = 4
+            XPX.log "Grew TilemapRenderer tiles: #{current} -> #{needed} layers"
           elsif needed < current && needed > 0 && current > 0
             # SHRINK: pop and dispose excess TileSprites.
             disposed = 0
@@ -2438,10 +2655,160 @@ def _xpx_install_tilemap_update_wrap(klass)
               end
             end
             @need_refresh = true
-            xpx_puts "Shrunk TilemapRenderer tiles: #{current} -> #{needed} layers (disposed #{disposed} sprites)"
+            XPX.log "Shrunk TilemapRenderer tiles: #{current} -> #{needed} layers (disposed #{disposed} sprites)"
           end
         end
+        # Time the underlying TilemapRenderer.update so the slow-frame
+        # logger can break out tilemap cost from total frame cost.
+        # Mizzy's post-warp-menu pt:0 dt_ms:0 slow frames have no
+        # draw_text in play, so the cost is going somewhere else — and
+        # the tilemap (1989 sprites against a 64 MB wrapped tileset)
+        # is the leading suspect.
+        _xpx_tr_t0 = System.uptime
         _xpx_orig_tilemap_update
+        $xpx_tr_frame_ms += (System.uptime - _xpx_tr_t0) * 1000.0 rescue nil
+        # Post-grow diagnostic: for a few frames after a layer GROW,
+        # sample a tile sprite and report whether it actually has a
+        # live bitmap. The "transparent tilemap after warping between
+        # maps of different layer counts" bug shows up here as a NIL
+        # or DISPOSED sample bitmap (e.g. a shared tile-cache bitmap
+        # nuked by the SHRINK's sprite.dispose). Logs to xpx_debug.log
+        # so a repro can be triaged without a live session.
+        if @xpx_post_grow_check && @xpx_post_grow_check > 0
+          @xpx_post_grow_check -= 1
+          begin
+            rows = (@tiles[0] rescue nil)
+            cell = (rows && rows[0]) ? rows[0] : nil
+            spr  = cell ? cell.compact.find {|s| s.respond_to?(:bitmap)} : nil
+            bmp  = spr ? (spr.bitmap rescue nil) : nil
+            state = if bmp.nil?
+                      "NIL"
+                    elsif (bmp.disposed? rescue false)
+                      "DISPOSED"
+                    else
+                      "ok #{bmp.width}x#{bmp.height}"
+                    end
+            # Census of ALL tile sprites: how many have a live bitmap
+            # vs nil vs disposed. The "entire screen transparent"
+            # symptom corresponds to nearly all = NIL; "partial render"
+            # would be a mix; "fine, just dim" would be all OK. This
+            # is the diagnostic that tells us whether refresh_tile is
+            # running at all on the warp-back frame.
+            census_ok = 0; census_nil = 0; census_disposed = 0
+            (@tiles || []).each do |c|
+              (c || []).each do |coord|
+                (coord || []).each do |t|
+                  b = t.bitmap rescue nil
+                  if b.nil?
+                    census_nil += 1
+                  elsif (b.disposed? rescue false)
+                    census_disposed += 1
+                  else
+                    census_ok += 1
+                  end
+                end
+              end
+            end
+            # $map_factory.maps drives the visit loop in update — if
+            # the player's current map isn't in it, NO tiles get
+            # visited, and the un-visited clear loop sets every
+            # sprite to bitmap=nil. Empty/missing map_factory is a
+            # strong signal for the "all transparent" symptom.
+            mf_state = "?"
+            begin
+              if defined?($map_factory) && $map_factory
+                ms = $map_factory.maps rescue nil
+                if ms.is_a?(Array)
+                  ids = ms.map {|m| m.map_id rescue '?'}
+                  cur = $game_map ? $game_map.map_id : '?'
+                  mf_state = "#{ms.size} maps=#{ids.inspect} cur=#{cur}"
+                end
+              end
+            rescue
+            end
+            # Full state dump on the warp-back-empty path: tileset
+            # name/id from $game_map AND from the underlying RPG::Map
+            # (Game_Map proxies these via updateTileset, but if updateTileset
+            # silently bailed they may differ). Plus what's in @tilesets
+            # — if the renderer's cache is missing the current tileset
+            # name, refresh_tile_bitmap returns nil for every tileset
+            # tile and the screen goes black.
+            ts_id    = "?"
+            ts_name  = "?"
+            map_tsid = "?"
+            map_tsn  = "?"
+            dts_size = "?"
+            dts_name = "?"
+            ts_keys  = "?"
+            at_keys  = "?"
+            begin
+              if $game_map
+                ts_id   = ($game_map.respond_to?(:tileset_id) ? $game_map.tileset_id : "no-accessor").to_s rescue "err"
+                ts_name = ($game_map.respond_to?(:tileset_name) ? $game_map.tileset_name : "no-accessor").to_s rescue "err"
+                inner = ($game_map.instance_variable_get(:@map) rescue nil)
+                if inner
+                  map_tsid = (inner.tileset_id rescue "err").to_s
+                  map_tsn  = (inner.tileset_name rescue "err").to_s
+                end
+              end
+              if defined?($data_tilesets) && $data_tilesets.is_a?(Array)
+                dts_size = $data_tilesets.size.to_s
+                tid_i = ts_id.to_i
+                if tid_i > 0 && $data_tilesets[tid_i]
+                  dts_name = ($data_tilesets[tid_i].tileset_name rescue "err").to_s
+                end
+              end
+              if @tilesets
+                ks = (@tilesets.bitmaps.keys rescue [])
+                ts_keys = "[#{ks.size}: #{ks.first(3).inspect}]"
+              end
+              if @autotiles
+                ks = (@autotiles.bitmaps.keys rescue [])
+                at_keys = "[#{ks.size}: #{ks.first(3).inspect}]"
+              end
+            rescue => _se
+            end
+            # Also report the @tilesets entry for the current map's
+            # tileset_name — this is the canonical "did wrapTileset
+            # produce a healthy multi-column bitmap?" check. If state
+            # above is NIL/DISPOSED but ts_state is ok 768x16384 (or
+            # 1024x16384 etc.), the bug is the per-tile bitmap
+            # reference, not the cache. If ts_state itself is NIL or
+            # an unwrapped 256xN, the wrap path failed.
+            ts_state = "?"
+            begin
+              tsn = ($game_map && $game_map.tileset_name) rescue nil
+              tsn = nil if tsn && tsn.empty?
+              if tsn && @tilesets
+                tbmp = @tilesets[tsn] rescue nil
+                tw = @tilesets.instance_variable_get(:@bitmap_wraps) rescue nil
+                wrapped = (tw && tw[tsn]) ? "wrapped" : "raw"
+                ts_state = if tbmp.nil?
+                             "NIL"
+                           elsif (tbmp.disposed? rescue false)
+                             "DISPOSED"
+                           else
+                             "#{wrapped} #{tbmp.width}x#{tbmp.height}"
+                           end
+              end
+            rescue
+              # leave ts_state as "?"
+            end
+            XPX.log "Post-grow tile check: cols=#{@tiles.size rescue '?'} " \
+                    "rows=#{rows ? rows.size : '?'} " \
+                    "layers=#{cell ? cell.size : '?'} " \
+                    "sample_bitmap=#{state} " \
+                    "tileset_bitmap=#{ts_state} " \
+                    "census=ok:#{census_ok}/nil:#{census_nil}/dispd:#{census_disposed} " \
+                    "map_factory=#{mf_state}"
+            XPX.log "  ^^ ts_id=#{ts_id} ts_name=#{ts_name.inspect} " \
+                    "map_tsid=#{map_tsid} map_tsn=#{map_tsn.inspect} " \
+                    "dts_size=#{dts_size} dts_name=#{dts_name.inspect} " \
+                    "@tilesets=#{ts_keys} @autotiles=#{at_keys}"
+          rescue => _e
+            XPX.log "Post-grow tile check error: #{_e.message}"
+          end
+        end
       end
     end
     xpx_puts "TilemapRenderer#update wrapped (alias chain — plugin-friendly)"
@@ -2834,6 +3201,72 @@ begin
         tp.self.prepend(XPX_TilesetExtrasShiftPatch)
         XPX.log "TilesetBitmaps patched for XPX extras-shift remap"
       end
+      # ── Harden TilesetWrapper.wrapTileset for mkXPX ────────────────────
+      # PE v21's wrapTileset only column-wraps when originalbmp.mega? is
+      # true. mkXPX (hard fork of mkxp-z) reports mega? based on
+      # GL_MAX_TEXTURE_SIZE — on machines with a high maxTexSize (e.g.
+      # 32768) a 256×41504 tileset still loads as mega (h > maxTex),
+      # but the rendering path for mega surfaces in mkXPX is the SDL
+      # blit-per-frame path which is both slow and exposes a recycled-
+      # texture bug after Spriteset_Map disposes/reloads: the next
+      # add_tileset for the same file gets a Bitmap whose GL handle
+      # was just released, and src_rect samples come back empty
+      # (entire-screen-transparent symptom Vena hit warping back into
+      # an oversized-tileset map).
+      #
+      # The wrap converts the mega surface into a regular GL texture of
+      # width 768/1024/... × MAX_TEX_SIZE (multi-column layout), then
+      # set_src_rect remaps tile_id → (col, y) so PE's renderer reads
+      # the right pixels. We additionally trigger this for non-mega
+      # bitmaps whose height already exceeds MAX_TEX_SIZE — defensive
+      # for any mkXPX configuration where mega? is suppressed but the
+      # bitmap still needs column-wrapping for set_src_rect's
+      # @bitmap_wraps math to fire correctly.
+      #
+      # Layer-count-agnostic: this is a per-tileset transformation, it
+      # doesn't care whether the map has 1 or 9 layers. The fix the user
+      # asked for ("native support that just works with any layer count
+      # 1-9, without 006_MKXP_Tileset.rb / VWrap").
+      begin
+        if defined?(TilemapRenderer::TilesetWrapper)
+          TilemapRenderer::TilesetWrapper.module_eval do
+            module_function
+            def wrapTileset(originalbmp)
+              width = originalbmp.width
+              height = originalbmp.height
+              needs_wrap = (originalbmp.mega? rescue false) ||
+                           (height > MAX_TEX_SIZE)
+              if width == TILESET_WIDTH && needs_wrap
+                columns = (height / MAX_TEX_SIZE.to_f).ceil
+                if columns * TILESET_WIDTH > MAX_TEX_SIZE
+                  raise "Tileset is too long!\n\nSIZE: #{originalbmp.height}px\n" \
+                        "HARDWARE LIMIT: #{MAX_TEX_SIZE}px\n" \
+                        "BOOSTED LIMIT: #{MAX_TEX_SIZE_BOOSTED}px"
+                end
+                bmp = Bitmap.new(TILESET_WIDTH * columns, MAX_TEX_SIZE)
+                remainder = height % MAX_TEX_SIZE
+                remainder = MAX_TEX_SIZE if remainder == 0
+                columns.times do |col|
+                  srcrect = Rect.new(
+                    0, col * MAX_TEX_SIZE, width,
+                    (col + 1 == columns) ? remainder : MAX_TEX_SIZE
+                  )
+                  bmp.blt(col * TILESET_WIDTH, 0, originalbmp, srcrect)
+                end
+                XPX.log "TilesetWrapper.wrapTileset: " \
+                        "#{width}x#{height} -> " \
+                        "#{TILESET_WIDTH * columns}x#{MAX_TEX_SIZE} " \
+                        "(#{columns} cols, mega=#{originalbmp.mega? rescue '?'})"
+                return bmp
+              end
+              return originalbmp
+            end
+          end
+          XPX.log "TilesetWrapper.wrapTileset hardened (mega-or-height trigger)"
+        end
+      rescue => werr
+        XPX.log "TilesetWrapper hardening skipped: #{werr.class}: #{werr.message}"
+      end
     end
   end
   _xpx_ts_tp.enable
@@ -2923,29 +3356,224 @@ def _xpx_install_game_map_setup_wrap(klass)
           $xpx_extras_populated = true
           XPX.populate_extra_autotiles rescue nil
         end
-        # ── Cache eviction (bridge fix #1) ───────────────────────────
-        # $xpx_map_cache and $data_maps both cache the same RPG::Map
-        # instance per map id. Plugins that mutate the data layer
-        # (event.condition.switch1_id = X, etc.) saw mutations
-        # PERSIST across transfers, since the same instance was
-        # re-served. Evict on each setup so the next load_data call
-        # rebuilds fresh — plugins that assume "fresh state on map
-        # entry" now get what they expect.
+        # ── N-layer, top-tile-wins bush? / deepBush? (one-shot) ──────
+        # Stock Essentials Game_Map#bush? / #deepBush? hardcode the
+        # layer loop to [2, 1, 0], so (a) they never inspect XPX layers
+        # above index 2, and (b) they OR the bush flag DOWN through the
+        # layers — meaning a bush tile sitting UNDER a solid, non-bush
+        # tile on a higher layer still fades the player. Vena hit this
+        # exactly: a non-bush autotile on layer 4 over a bush grass tile
+        # below, and the player faded anyway.
         #
-        # $xpx_map_dict_cache (the parsed-JSON layer) is NOT evicted:
-        # the underlying file is stable within a session, plugin
-        # mutations happen on the BUILT RPG::Map (which IS evicted),
-        # and re-parsing multi-MB JSON on every setup was causing the
-        # Essentials debug-menu warp to trigger RGSS's "unresponsive
-        # script" watchdog. See the get_map two-layer comment above.
-        # Net effect: fresh RPG::Map instance per setup (correctness),
-        # but build_map runs on a cached dict (fast).
+        # We re-patch on the first real setup (every script is loaded by
+        # then, so we won't be clobbered by a later redefinition) to scan
+        # from the TOPMOST layer down and let the first non-empty tile
+        # decide — which matches what the player actually sees. Bush is
+        # not time-related, so this doesn't touch any day/night or
+        # third-party time code.
+        unless $xpx_bush_patched
+          $xpx_bush_patched = true
+          begin
+            Game_Map.class_eval do
+              define_method(:bush?) do |x, y|
+                d = data
+                next false unless d
+                zmax = (d.zsize rescue 3)
+                result = false
+                (zmax - 1).downto(0) do |i|
+                  tile_id = d[x, y, i]
+                  next if tile_id.nil? || tile_id == 0
+                  tt = GameData::TerrainTag.try_get(@terrain_tags[tile_id])
+                  # Bridge tiles: same special-case as vanilla.
+                  if tt && tt.bridge && $PokemonGlobal.bridge > 0
+                    result = false
+                  else
+                    # Topmost non-empty tile wins.
+                    result = (@passages[tile_id] & 0x40 == 0x40)
+                  end
+                  break
+                end
+                result
+              end
+              define_method(:deepBush?) do |x, y|
+                d = data
+                next false unless d
+                zmax = (d.zsize rescue 3)
+                result = false
+                (zmax - 1).downto(0) do |i|
+                  tile_id = d[x, y, i]
+                  next if tile_id.nil? || tile_id == 0
+                  tt = GameData::TerrainTag.try_get(@terrain_tags[tile_id])
+                  if tt && tt.bridge && $PokemonGlobal.bridge > 0
+                    result = false
+                  else
+                    result = (tt && tt.deep_bush &&
+                              @passages[tile_id] & 0x40 == 0x40) ? true : false
+                  end
+                  break
+                end
+                result
+              end
+              # terrain_tag: same [2,1,0] blind spot — terrain tags on
+              # layers 4-9 (surf, waterfall, ledge, ice, encounter tiles,
+              # etc.) were invisible to the runtime. Scan ALL layers top
+              # down; keep vanilla "first meaningful terrain wins" logic.
+              define_method(:terrain_tag) do |x, y, countBridge = false|
+                result = GameData::TerrainTag.get(:None)
+                d = data
+                if d && valid?(x, y)
+                  zmax = (d.zsize rescue 3)
+                  (zmax - 1).downto(0) do |i|
+                    tile_id = d[x, y, i]
+                    next if tile_id.nil? || tile_id == 0
+                    terrain = GameData::TerrainTag.try_get(@terrain_tags[tile_id])
+                    next if terrain.id == :None || terrain.ignore_passability
+                    next if !countBridge && terrain.bridge && $PokemonGlobal.bridge == 0
+                    result = terrain
+                    break
+                  end
+                end
+                result
+              end
+              # counter?: same blind spot — a counter tile on an upper
+              # layer was ignored. Scan ALL layers; keep vanilla OR-any
+              # semantics (a counter flag on ANY layer makes it a counter).
+              define_method(:counter?) do |x, y|
+                d = data
+                next false unless d
+                zmax = (d.zsize rescue 3)
+                result = false
+                (zmax - 1).downto(0) do |i|
+                  tile_id = d[x, y, i]
+                  next if tile_id.nil? || tile_id == 0
+                  if @passages[tile_id] & 0x80 == 0x80
+                    result = true
+                    break
+                  end
+                end
+                result
+              end
+            end
+            xpx_puts "Game_Map#bush?/deepBush?/terrain_tag/counter? patched (N-layer)"
+          rescue => e
+            xpx_puts "bush? patch failed: #{e.message}"
+          end
+        end
+        # ── Debug-menu heap purge (one-shot install) ─────────────────
+        # Mizzy's repro: warp to a map, then RE-OPEN the debug menu →
+        # the menu (and only the menu) becomes laggy, and closing it does
+        # NOT clear the lag. Root cause: warping leaves a large pile of
+        # dead Ruby objects on the heap (cached RPG::Map tables, parsed
+        # map dicts, minimap render bitmaps). Gameplay barely allocates
+        # per frame so it stays smooth, but the debug menu is extremely
+        # allocation-heavy (every window/text draw allocates), and on a
+        # bloated heap each allocation pays a GC-scan tax — so the menu
+        # crawls. The bloat is GLOBAL, which is why closing/reopening the
+        # menu doesn't help on its own.
+        #
+        # Fix: wrap pbDebugMenu so it evicts those caches and forces a
+        # full GC BOTH right before it opens (menu runs on a clean heap →
+        # no lag) and right after it closes (leaves a clean heap behind).
+        # The current map is always kept. One brief GC hitch on open is a
+        # fine trade for a menu that no longer crawls.
+        unless $xpx_debugmenu_wrapped
+          $xpx_debugmenu_wrapped = true
+          begin
+            if respond_to?(:pbDebugMenu, true)
+              _xpx_purge = lambda do
+                begin
+                  cur_id = ($game_map ? $game_map.map_id : nil) rescue nil
+                  [$xpx_map_cache, $data_maps, $xpx_map_dict_cache].each do |c|
+                    next unless c.is_a?(Hash)
+                    c.keys.each do |mid|
+                      next if mid == cur_id
+                      c.delete(mid)
+                    end
+                  end
+                  if $xpx_minimap_cache.is_a?(Hash)
+                    $xpx_minimap_cache.each_value do |bmp|
+                      begin
+                        bmp.dispose if bmp && !(bmp.disposed? rescue true)
+                      rescue
+                      end
+                    end
+                    $xpx_minimap_cache.clear
+                  end
+                  [$xpx_small_ts_cache, $xpx_color_ts_cache].each do |c|
+                    next unless c.is_a?(Hash)
+                    c.each_value do |bmp|
+                      begin
+                        bmp.dispose if bmp && !(bmp.disposed? rescue true)
+                      rescue
+                      end
+                    end
+                    c.clear
+                  end
+                  $xpx_tile_color_cache.clear if $xpx_tile_color_cache.is_a?(Hash)
+                  $xpx_auto_color_cache.clear if $xpx_auto_color_cache.is_a?(Hash)
+                  GC.start(full_mark: true, immediate_sweep: true) rescue GC.start
+                rescue
+                end
+              end
+              Object.send(:alias_method, :_xpx_orig_pbDebugMenu, :pbDebugMenu)
+              Object.send(:define_method, :pbDebugMenu) do |*a, &b|
+                _xpx_purge.call
+                ret = _xpx_orig_pbDebugMenu(*a, &b)
+                _xpx_purge.call
+                ret
+              end
+              xpx_puts "pbDebugMenu wrapped (heap purge on open + close)"
+            end
+          rescue => e
+            xpx_puts "pbDebugMenu wrap failed: #{e.message}"
+          end
+        end
+        # ── Cache eviction (bridge fix #1, expanded for v0.3.4) ──────
+        # Every per-map cache that the bridge holds gets dropped here
+        # so the very next load_data call inside _xpx_orig_setup
+        # rebuilds the map from disk, end to end.
+        #
+        # Caches evicted on every transfer:
+        #   • $xpx_map_cache[id]        — built RPG::Map instance.
+        #   • $data_maps[id]            — PE's per-map cache; some
+        #                                  plugins read this directly.
+        #   • $xpx_map_dict_cache[id]   — the parsed-JSON map dict.
+        #                                  Used to be kept across
+        #                                  setups for debug-menu warp
+        #                                  perf, but that perf concern
+        #                                  is about the map-list UI's
+        #                                  load_data enumeration — NOT
+        #                                  Game_Map#setup, which only
+        #                                  fires on an actual transfer
+        #                                  (rare, deliberate). Vena
+        #                                  hit a "transfer doesn't
+        #                                  refresh the map" bug whose
+        #                                  most likely vector was a
+        #                                  stale dict surviving here,
+        #                                  so we drop it too. One
+        #                                  extra File.read + JSON
+        #                                  parse per transfer is
+        #                                  negligible; the warp menu's
+        #                                  list-enumeration speed is
+        #                                  unaffected because that
+        #                                  path doesn't go through
+        #                                  Game_Map#setup.
         if $xpx_map_cache && $xpx_map_cache.is_a?(Hash)
           $xpx_map_cache.delete(map_id)
         end
         if $data_maps && $data_maps.is_a?(Hash)
           $data_maps.delete(map_id)
         end
+        if $xpx_map_dict_cache && $xpx_map_dict_cache.is_a?(Hash)
+          $xpx_map_dict_cache.delete(map_id)
+          # Also drop the active-variant entry so variant resolution
+          # re-runs on the rebuild — otherwise a stale variant id
+          # could outlive its trigger and serve the wrong xpxdata.
+          $xpx_active_variant.delete(map_id) if $xpx_active_variant.is_a?(Hash)
+        end
+        # Diagnostic so the next "transfer doesn't refresh" report can
+        # be triaged from the log without a fresh repro session.
+        XPX.vlog "Game_Map#setup(#{map_id}): caches evicted, rebuilding" rescue nil
         _xpx_orig_setup(map_id)
         # ── Per-map EXTRA_AUTOTILES injection ────────────────────────
         # XPX assigns autotiles per-MAP, not per-tileset. v21's
@@ -2993,10 +3621,10 @@ def _xpx_install_game_map_setup_wrap(klass)
               # Some plugins redefine autotile_names= as a tileset
               # passthrough — if that's happening, what we read back
               # won't match `padded`.
-              if XPX_DEV_MODE
+              if $xpx_verbose
                 actual = self.autotile_names rescue nil
-                XPX.log "Setup map=#{map_id} tid=#{tid}: " \
-                        "legacy=#{padded.inspect} actual=#{actual.inspect}"
+                XPX.vlog "Setup map=#{map_id} tid=#{tid}: " \
+                         "legacy=#{padded.inspect} actual=#{actual.inspect}"
               end
             end
             # ── Slots 7+: inject into v21's EXTRA_AUTOTILES hash ─────
@@ -3025,10 +3653,10 @@ def _xpx_install_game_map_setup_wrap(klass)
                         $data_tilesets[tid].tileset_name.to_s : ""
               $xpx_tileset_extras_shift ||= {}
               $xpx_tileset_extras_shift[ts_name] = shift unless ts_name.empty?
-              if XPX_DEV_MODE
-                XPX.log "Setup map=#{map_id} tid=#{tid}: " \
-                        "EXTRA_AUTOTILES[#{tid}]=#{ea[tid].inspect} " \
-                        "tileset='#{ts_name}' shift=#{shift}"
+              if $xpx_verbose
+                XPX.vlog "Setup map=#{map_id} tid=#{tid}: " \
+                         "EXTRA_AUTOTILES[#{tid}]=#{ea[tid].inspect} " \
+                         "tileset='#{ts_name}' shift=#{shift}"
               end
             end
           end
@@ -3065,6 +3693,12 @@ module Game
 ')}" rescue nil
       raise
     end
+
+    # Game.load wrap (save-load map refresh) is installed lazily via
+    # the consolidated Module#method_added hook further down — Game.load
+    # is defined in Scripts.rxdata AFTER this preload runs, so an eager
+    # alias here would silently rescue-nil and our def would get
+    # overwritten by PE's real load when Scripts.rxdata evaluates.
   end
 end rescue nil
 
@@ -3122,6 +3756,1250 @@ rescue; end
 begin
   File.open($xpx_audio_log, "w") {|f| f.puts "=== XPX Audio Debug #{Time.now} ==="; f.flush}
 rescue; end
+
+# ── Crisp text for shadow/outline draws ─────────────────────────────────
+#
+# solidFonts: true in mkxp.json kills antialiasing on the base text pass,
+# but the moment something sets font.shadow = true or font.outline = true
+# the runtime switches to a subpixel render so the shadow/outline can
+# fade smoothly. That's what produces the grey fringe on sign and UI
+# text even though messages stay crisp.
+#
+# Speech text doesnt hit this because it uses a multi pass technique
+# (draw the text 4 times in shadow color shifted by 1px in each
+# direction, then draw it once centered in the main color). Sign and
+# menu code in lots of forks takes the shortcut: bitmap.font.shadow =
+# true; bitmap.draw_text(...). That shortcut looks fine on Windows GDI
+# but on mkxp it kicks the renderer into AA mode.
+#
+# Fix: wrap Bitmap#draw_text so when shadow or outline is on, the
+# wrapper does the multi pass itself with shadow/outline temporarily
+# disabled. The visual result is identical (outline still there) but
+# every pass is a solid bitmap with zero grey pixels.
+#
+# Guard against double install the same way the method_added hook does,
+# so a reload doesnt chain the wrapper through itself.
+class Bitmap
+  # method_defined?(name, false) checks ONLY methods defined on this
+  # class (not inherited). The previous private_method_defined? check
+  # was wrong: alias inherits the source methods visibility, and
+  # mkxp-zs draw_text is public, so the private check always returned
+  # false and made the install line warn falsely.
+  unless method_defined?(:_xpx_orig_draw_text, false)
+    alias :_xpx_orig_draw_text :draw_text rescue nil
+
+    # Diagnostic counters so we can see at runtime which branch of
+    # the wrapper actually fires. The pass-through count tells us
+    # how many draws went straight to mkxp without our intervention
+    # (no shadow / outline). The multi-pass count is what we WANT
+    # to grow for sign / UI text that previously rendered fuzzy.
+    @@_xpx_dt_passthrough = 0
+    @@_xpx_dt_outline     = 0
+    @@_xpx_dt_shadow      = 0
+    # Histogram of (font_name, font_size) used in draw_text calls.
+    # PE blur diagnosis: we need to see WHICH family names PE
+    # actually passes through. If our solidFonts array lists
+    # "Power Green Narrow" but PE is drawing with name = "Arial"
+    # (system fallback) because the TTF didnt load, every draw
+    # gets AA grayscale and the array does nothing. The histogram
+    # bins so 60s of play produces a short summary instead of
+    # 2500 individual log lines.
+    @@_xpx_dt_fonts       = {}
+    # Counter for the descender-padding helper below. Increments
+    # every time _xpx_dt_pad actually shifted+extended a rect (i.e.
+    # there was bitmap room below the line to extend into).
+    @@_xpx_dt_padded      = 0
+
+    def self._xpx_dt_stats
+      [@@_xpx_dt_passthrough, @@_xpx_dt_outline,
+       @@_xpx_dt_shadow,      @@_xpx_dt_padded]
+    end
+
+    def self._xpx_dt_font_histogram
+      @@_xpx_dt_fonts
+    end
+
+    # Descender-padding helper: extends a draw_text args rect so
+    # the rendered glyph surface has room below the original rect
+    # boundary for descenders ('p', 'g', 'y', 'q', and the bottom
+    # rows of off-hinted PE pixel-font glyphs).
+    #
+    # Why this is needed:
+    #
+    # mkxp-z's Bitmap::drawText (bitmap.cpp ~line 2316/2373/2378)
+    # vertical-centers the rendered text surface within the rect:
+    #   alignY = rect.y + ((rect.h - alignmentHeight) / 2)
+    # ...then clips the destination at the bitmap edge:
+    #   destRect.h = std::min(destRect.h, height() - destRect.y)
+    #
+    # alignmentHeight comes from Bitmap#text_size, which (in stock
+    # mkxp-z behaviour, fontHeightReporting=0) returns the font's
+    # reported TTF_FontHeight -- smaller than the actual rendered
+    # bbox for PE pixel fonts. The rendered txtSurf is the natural
+    # size INCLUDING descenders. When the destination bitmap is
+    # only as tall as the rect (which PE's MessageWindow typically
+    # is on a per-line basis), the descender pixels of txtSurf get
+    # cut off by the bitmap-edge clamp.
+    #
+    # The fix:
+    #
+    # Extend rect.h by `pad` while shifting rect.y UP by `pad / 2`.
+    # The alignY formula is invariant under this transformation
+    # (the two pad/2 terms cancel), so the visible text lands at
+    # the EXACT same screen position. But destRect.h now has up
+    # to `pad` more pixels of room before the height() clamp
+    # truncates the bottom of the glyph surface.
+    #
+    # We cap `pad` at the actual available room below the rect
+    # (`self.height - (rect.y + rect.height)`), so single-line
+    # bitmaps with no spare room degrade to the original behaviour
+    # (no regression). For PE's typical multi-line message-window
+    # contents bitmap (~96 tall, 3x32 lines), there's always room
+    # for the 4-pixel pad we want.
+    #
+    # Handles both draw_text signatures:
+    #   draw_text(Rect, text, align)
+    #   draw_text(x, y, w, h, text, align)
+    # 3-arg form draw_text(x, y, text) has no rect to extend.
+    def _xpx_dt_pad(args)
+      desired = 4
+      # CRITICAL: pad MUST be even. Half of pad becomes shift_up, and
+      # the alignY invariance under (dy=-N/2, dh=+N) only holds when
+      # N is even (because Ruby's / is integer division, so an odd
+      # pad gives shift_up*2 != pad). An asymmetric shift manifests
+      # as a 1-pixel vertical jiggle when (rect.h - alignmentHeight)
+      # is odd. Round down to nearest even.
+      if args[0].is_a?(Rect)
+        r = args[0]
+        avail = self.height - (r.y + r.height)
+        pad = (avail < desired) ? avail : desired
+        pad = pad - (pad % 2)
+        return args if pad <= 0
+        shifted = args.dup
+        shifted[0] = Rect.new(r.x, r.y - (pad / 2),
+                              r.width, r.height + pad)
+        @@_xpx_dt_padded += 1
+        shifted
+      elsif args.length >= 5 && args[0].is_a?(Integer)                              && args[1].is_a?(Integer)                              && args[2].is_a?(Integer)                              && args[3].is_a?(Integer)
+        x, y, w, h = args[0], args[1], args[2], args[3]
+        avail = self.height - (y + h)
+        pad = (avail < desired) ? avail : desired
+        pad = pad - (pad % 2)
+        return args if pad <= 0
+        shifted = args.dup
+        shifted[1] = y - (pad / 2)
+        shifted[3] = h + pad
+        @@_xpx_dt_padded += 1
+        shifted
+      else
+        # 3-arg form (x, y, text) or unexpected shape -- nothing
+        # to pad. mkxp-z's 3-arg path doesn't clip at a rect so
+        # descenders aren't an issue.
+        args
+      end
+    end
+
+    def draw_text(*args)
+      # Wall-clock timing for the perf logger. System.uptime is mkxp-z's
+      # fast monotonic clock — cheap to call (~1µs). Letting us tell
+      # whether the wrapper or mkXPX's native draw_text is the lag.
+      _xpx_dt_t0 = System.uptime
+      f = self.font
+      want_outline = (f.outline rescue false)
+      want_shadow  = (f.shadow  rescue false)
+
+      # ── Hot-path passthrough (NO outline + NO shadow) ─────────────
+      # This is the overwhelming majority of draw_text calls in PE
+      # (debug menus, message boxes, status windows, save UI). Keeping
+      # this branch lean is critical — Mizzy's F9 debug menu does
+      # 60-100 draw_text calls per cursor move and was spending ~2 ms
+      # per call. Moving the histogram off the hot path saved ~30 µs
+      # × 100 calls = 3 ms per frame. Still not the dominant cost
+      # (mkXPX's native draw_text is ~1.5 ms), but every microsecond
+      # counts in a per-cursor-move budget.
+      if !want_outline && !want_shadow
+        $xpx_dt_frame_passthrough += 1 rescue nil
+        @@_xpx_dt_passthrough += 1
+        args = _xpx_dt_pad(args)
+        result = _xpx_orig_draw_text(*args)
+        $xpx_dt_frame_ms += (System.uptime - _xpx_dt_t0) * 1000.0 rescue nil
+        return result
+      end
+
+      # ── Slow path (outline or shadow) ─────────────────────────────
+      # Per-frame counters + histogram only on the slow path. These
+      # are diagnostic and only fire when PE has explicitly set
+      # font.outline or font.shadow — rare compared to the hot path.
+      begin
+        if want_outline
+          $xpx_dt_frame_outline += 1
+        else
+          $xpx_dt_frame_shadow += 1
+        end
+      rescue
+      end
+
+      # Histogram bin. Capture once per draw so the runtime sees
+      # the actual font state the C side will inspect.
+      begin
+        fname = (f.name.is_a?(Array) ? f.name[0] : f.name).to_s
+        fsize = (f.size rescue 0).to_i
+        key   = "#{fname}@#{fsize}"
+        @@_xpx_dt_fonts[key] = (@@_xpx_dt_fonts[key] || 0) + 1
+      rescue
+      end
+
+      # Descender-padding: applied to ALL paths (passthrough, outline,
+      # shadow) so multi-pass renders inherit the extended rect and
+      # don't lose descender pixels in the outline/shadow rasters.
+      args = _xpx_dt_pad(args)
+
+      # Snapshot the state so we can restore after the multi pass.
+      # Some scripts read these flags after a draw so we cant leave
+      # them flipped.
+      orig_color   = f.color.dup rescue f.color
+      orig_out_col = (f.out_color.dup rescue nil)
+
+      # Outline color: mkxp uses font.out_color when outline=true, falls
+      # back to a hardcoded near black if the script didnt set one.
+      out_col = orig_out_col || Color.new(0, 0, 0, 255)
+      # Shadow color: mkxp drops a translucent black to the lower right.
+      sh_col  = Color.new(0, 0, 0, 192)
+
+      # Disable the flags for the duration of the multi pass. We use
+      # rescue nil so old mkxp builds that dont define one of the
+      # setters dont break the whole wrapper.
+      (f.outline = false) rescue nil
+      (f.shadow  = false) rescue nil
+
+      begin
+        if want_outline
+          @@_xpx_dt_outline += 1
+          # 8 direction outline. Pure black per pass, no AA, identical
+          # to what a hand rolled pbDrawShadowText would emit.
+          f.color = out_col
+          if args.length >= 5
+            x, y = args[0], args[1]
+            offsets = [[-1,-1],[0,-1],[1,-1],[-1,0],[1,0],[-1,1],[0,1],[1,1]]
+            offsets.each do |dx, dy|
+              shifted = args.dup
+              shifted[0] = x + dx
+              shifted[1] = y + dy
+              _xpx_orig_draw_text(*shifted)
+            end
+          elsif args.length >= 2 && args[0].is_a?(Rect)
+            r = args[0]
+            offsets = [[-1,-1],[0,-1],[1,-1],[-1,0],[1,0],[-1,1],[0,1],[1,1]]
+            offsets.each do |dx, dy|
+              shifted = args.dup
+              shifted[0] = Rect.new(r.x + dx, r.y + dy, r.width, r.height)
+              _xpx_orig_draw_text(*shifted)
+            end
+          end
+          f.color = orig_color
+          _xpx_orig_draw_text(*args)
+        elsif want_shadow
+          @@_xpx_dt_shadow += 1
+          # Single drop shadow one pixel down right.
+          f.color = sh_col
+          if args.length >= 5
+            shifted = args.dup
+            shifted[0] = args[0] + 1
+            shifted[1] = args[1] + 1
+            _xpx_orig_draw_text(*shifted)
+          elsif args.length >= 2 && args[0].is_a?(Rect)
+            r = args[0]
+            shifted = args.dup
+            shifted[0] = Rect.new(r.x + 1, r.y + 1, r.width, r.height)
+            _xpx_orig_draw_text(*shifted)
+          end
+          f.color = orig_color
+          _xpx_orig_draw_text(*args)
+        end
+      ensure
+        # Always restore. If something later in the same script chain
+        # checks font.outline it has to see the state it set, not our
+        # temporary off.
+        (f.outline = want_outline) rescue nil
+        (f.shadow  = want_shadow)  rescue nil
+        f.color = orig_color
+        (f.out_color = orig_out_col) rescue nil if orig_out_col
+      end
+      # Tail timing for the slow path (matches the hot-path return above).
+      $xpx_dt_frame_ms += (System.uptime - _xpx_dt_t0) * 1000.0 rescue nil
+    end
+  end
+end rescue nil
+
+# Confirmation log so we can verify at runtime that the wrapper
+# actually installed. Routed through XPX.log so the line lands in
+# xpx_debug.log next to the other patch confirmation messages.
+#
+# The check must use method_defined? (public + protected) NOT
+# private_method_defined? because alias :_xpx_orig_draw_text inherits
+# the source methods visibility, and Bitmap#draw_text is public. The
+# old private_check returned false for a successfully installed
+# wrapper and logged a confusing WARNING.
+begin
+  if Bitmap.method_defined?(:_xpx_orig_draw_text)
+    XPX.log "Bitmap#draw_text crisp-text wrapper installed"
+  else
+    XPX.log "WARNING Bitmap#draw_text wrapper did NOT install"
+  end
+rescue
+end
+
+# 60 second stats dump so we can see how many draws hit each branch
+# during a real play session. The threading sleep runs in its own
+# Ruby thread so it never blocks boot or the game loop.
+#
+# Output reads as:
+#   Bitmap#draw_text stats after 60s: 1234 passthrough, 56 outline, 78 shadow
+#
+# A blurry-text complaint with passthrough = thousands and
+# outline+shadow = 0 tells us PEs render path for the offending text
+# never sets font.outline / font.shadow, so the wrapper has nothing
+# to intervene on. That would point at a different bypass entirely.
+begin
+  Thread.new do
+    begin
+      sleep 60
+      if Bitmap.respond_to?(:_xpx_dt_stats)
+        pt, ol, sh, pd = Bitmap._xpx_dt_stats
+        XPX.vlog "Bitmap#draw_text stats after 60s: #{pt} passthrough, #{ol} outline, #{sh} shadow, #{pd} descender-padded"
+      end
+      # Top 10 (font_name, size) combinations seen in draw_text
+      # calls. This is the diagnostic Mizzy needs to see whether
+      # mkxp-zs solidFonts array is matching the names PE
+      # actually uses. If the top entry is something like
+      # "Arial@22" rather than "Power Green Narrow@22", the PE
+      # fonts arent loading and were rendering with system
+      # fallback AA glyphs.
+      if Bitmap.respond_to?(:_xpx_dt_font_histogram)
+        hist = Bitmap._xpx_dt_font_histogram
+        top = hist.sort_by {|_k, v| -v}.first(10)
+        if top.any?
+          XPX.vlog "Bitmap#draw_text font histogram (top 10):"
+          top.each do |k, v|
+            XPX.vlog "  #{v} draws: #{k}"
+          end
+        end
+      end
+    rescue
+    end
+  end
+rescue
+end
+
+
+# ── createMinimap leak-fix install ─────────────────────────────────────
+# Wraps PE v21's top-level createMinimap so the TileDrawingHelper it
+# builds gets disposed when the function returns. Vanilla createMinimap
+# forgets the dispose, so each call leaks the helper's `@tileset` bitmap
+# (a fresh pbGetTileset result). For projects with mega tilesets, this
+# is a 64+ MB GPU leak per scroll in the F9 warp menu, which saturates
+# the texture pool and slows every subsequent F9 menu open.
+#
+# Lives at module scope (not inside method_added) so the bridge-balance
+# counter only sees one function call from the consolidated hook.
+# ── Window_AdvancedCommandPokemon#index= refresh-on-scroll optimization ────
+# PE v21 (and stock Essentials) defines:
+#   def index=(value); super; refresh if !@starting; end
+# That redraws EVERY item in the window on every cursor key press. PE's
+# debug menu (Window_CommandPokemonEx inherits from this) has ~30 items;
+# the warp menu's list has 40+. Each cursor move = full refresh = 60-400+
+# draw_text calls = 100-1300 ms per frame. Mizzy's slow-frame log shows
+# `dt_ms` ≈ `frame_ms` across all slow frames — draw_text IS the lag.
+#
+# Standard RGSS pattern is: items drawn once in refresh, cursor highlight
+# tracked by update_cursor_rect (which super already calls). Refresh-on-
+# cursor-move is wasted work UNLESS the visible item range changed
+# (scrolling past the bottom/top of the window).
+#
+# Detection: compare top_row before and after super. Same top_row →
+# cursor moved within visible items, items don't need redraw. Different
+# top_row → window scrolled, items need to redraw.
+#
+# Safe: this is the same behavior every other RGSS window has by default
+# (Window_Selectable#index= doesn't call refresh). PE's
+# Window_AdvancedCommandPokemon override is the outlier, and only because
+# someone wanted "fresh" item rendering — but standard cursor_rect already
+# handles the visual selection cue. Items never need to redraw per-cursor.
+# PE v21's Window_AdvancedCommandPokemon AND Window_CommandPokemon both
+# define `def index=(v); super; refresh if !@starting; end`. The naive
+# prepend-and-super approach doesn't bypass the refresh — super dispatches
+# to PE's own index= which STILL calls refresh. So we have to outright
+# REPLACE the method via class_eval, doing @index= and update_cursor_rect
+# inline (matching what the standard Window_Selectable#index= does, which
+# is what PE's `super` would have hit), and only firing refresh when the
+# window's top_row actually changed (i.e. scrolled).
+#
+# This was Mizzy's "F9 menu lags 150 ms per cursor move even after my
+# Window_CommandPokemon install message shows up at boot" symptom —
+# install was firing, the prepend was in place, but PE's refresh ran
+# anyway via the super chain.
+$xpx_window_advcmd_wrapped = false
+$xpx_window_cmd_wrapped    = false
+
+def _xpx_install_window_advcmd_refresh_skip(klass)
+  return if $xpx_window_advcmd_wrapped
+  $xpx_window_advcmd_wrapped = true
+  begin
+    klass.class_eval do
+      # Save PE's original index= so we can still call it if anything
+      # external depends on the old behavior (debug bridge, etc).
+      alias_method :_xpx_orig_index_set, :index= rescue nil
+      define_method(:index=) do |value|
+        old_top = (self.top_row rescue 0)
+        # Inline the standard Window_Selectable#index= behavior:
+        # update @index, refresh the cursor highlight rect. Skip PE's
+        # `refresh if !@starting` — that's the 60-400+ draw_text/frame
+        # waste we're eliminating.
+        @index = value
+        update_cursor_rect rescue nil
+        update_help rescue nil  # No-op when @help_window is nil
+        new_top = (self.top_row rescue 0)
+        refresh if !@starting && old_top != new_top
+      end
+    end
+    xpx_puts "Window_AdvancedCommandPokemon#index= REPLACED (refresh-on-scroll only)"
+  rescue => e
+    xpx_puts "Window_AdvancedCommandPokemon index= patch failed: #{e.message}"
+    $xpx_window_advcmd_wrapped = false
+  end
+end
+
+def _xpx_install_window_cmd_refresh_skip(klass)
+  return if $xpx_window_cmd_wrapped
+  $xpx_window_cmd_wrapped = true
+  begin
+    klass.class_eval do
+      alias_method :_xpx_orig_index_set, :index= rescue nil
+      define_method(:index=) do |value|
+        old_top = (self.top_row rescue 0)
+        @index = value
+        update_cursor_rect rescue nil
+        update_help rescue nil
+        new_top = (self.top_row rescue 0)
+        refresh if !@starting && old_top != new_top
+      end
+    end
+    xpx_puts "Window_CommandPokemon#index= REPLACED (refresh-on-scroll only)"
+  rescue => e
+    xpx_puts "Window_CommandPokemon index= patch failed: #{e.message}"
+    $xpx_window_cmd_wrapped = false
+  end
+end
+
+
+# ── MapLister blackout install ─────────────────────────────────────────
+# PE v21's pbListScreen (the F9 → Warp Map flow) creates a Viewport at
+# z=99999 and draws its windows there, but it does NOT blackout the
+# scene underneath. The parent debug menu's windows keep rendering
+# through the gaps — Mizzy reported the "Catching Contest" text from
+# the previous menu bleeding through into the warp screen.
+#
+# Easiest fix: prepend a module to MapLister so each instance creates
+# a fullscreen solid-black sprite at z=-1 (just behind the minimap,
+# which sits at z=-2). The blackout is owned by the MapLister instance,
+# so the existing dispose path tears it down with everything else.
+$xpx_maplister_wrapped = false
+def _xpx_install_maplister_blackout(klass)
+  return if $xpx_maplister_wrapped
+  $xpx_maplister_wrapped = true
+  begin
+    blackout_mod = Module.new do
+      # Reset (dispose + clear) every per-session minimap RENDER cache so
+      # nothing accumulates across warp-menu opens (Mizzy: "reset every
+      # time you warp / reopen the debug menu"). These are the lazily-built
+      # caches createMinimap fills:
+      #   • $xpx_small_ts_cache / $xpx_color_ts_cache — GPU bitmaps
+      #     (downscaled mega-tileset copies + 1px colour strips). These
+      #     are the ones that genuinely pile up GPU memory; one per
+      #     (tileset, scale) and they survive the whole session otherwise.
+      #   • $xpx_tile_color_cache / $xpx_auto_color_cache — plain Ruby
+      #     colour tables (cheap, but cleared for a true fresh start).
+      # The big per-map bitmap cache + map_cache/data_maps eviction is
+      # already handled in dispose; this covers the render caches it left
+      # behind. Calling it on BOTH open and close means a fresh menu never
+      # inherits stale GPU bitmaps and nothing lingers after you leave.
+      def _xpx_reset_minimap_caches
+        begin
+          [$xpx_small_ts_cache, $xpx_color_ts_cache].each do |c|
+            next unless c.is_a?(Hash)
+            c.each_value do |bmp|
+              begin
+                bmp.dispose if bmp && !(bmp.disposed? rescue true)
+              rescue
+              end
+            end
+            c.clear
+          end
+          $xpx_tile_color_cache.clear if $xpx_tile_color_cache.is_a?(Hash)
+          $xpx_auto_color_cache.clear if $xpx_auto_color_cache.is_a?(Hash)
+        rescue
+        end
+      end
+
+      def initialize(*args, **kwargs)
+        super
+        # Fresh start: drop any render caches left over from a previous
+        # warp-menu session before this one builds its own.
+        _xpx_reset_minimap_caches
+        # Blackout re-enabled — diagnostic confirmed it was NOT the
+        # cause of the post-warp lag (the createMinimap render path
+        # for mega tilesets was the actual cause, fixed separately
+        # via the PNG-header probe + placeholder).
+        begin
+          @_xpx_blackout = Sprite.new
+          bmp = Bitmap.new(Graphics.width, Graphics.height)
+          bmp.fill_rect(0, 0, Graphics.width, Graphics.height,
+                        Color.new(0, 0, 0, 255))
+          @_xpx_blackout.bitmap = bmp
+          # z=-3 → behind the minimap (-2) and behind the warp
+          # windows (z=2). Covers the parent debug menu's content
+          # so it doesn't bleed through the warp menu.
+          @_xpx_blackout.z = -3
+        rescue
+          @_xpx_blackout = nil
+        end
+      end
+
+      def setViewport(viewport)
+        super
+        @_xpx_blackout.viewport = viewport if @_xpx_blackout
+      end
+
+      def dispose
+        begin
+          if @_xpx_blackout
+            @_xpx_blackout.bitmap&.dispose
+            @_xpx_blackout.dispose
+            @_xpx_blackout = nil
+          end
+        rescue
+        end
+        # ── Dispose cached minimap bitmaps (GPU side) ──────────────
+        begin
+          if $xpx_minimap_cache && !$xpx_minimap_cache.empty?
+            disposed_count = 0
+            $xpx_minimap_cache.each_value do |bmp|
+              begin
+                bmp.dispose if bmp && !(bmp.disposed? rescue true)
+                disposed_count += 1
+              rescue
+              end
+            end
+            $xpx_minimap_cache.clear
+            XPX.log "MapLister.dispose: cleared #{disposed_count} cached minimap bitmaps" rescue nil
+          end
+        rescue
+        end
+        # ── Evict warp-menu-loaded RPG::Map instances + force GC ────
+        # ROOT CAUSE of Mizzy's "F9 menu becomes laggy AFTER opening
+        # the warp menu once" symptom: every createMinimap call loads
+        # a map via load_data, which the bridge caches in
+        # $xpx_map_cache + $data_maps. Each cached RPG::Map carries a
+        # Table (width × height × 9-layer depth) plus events,
+        # autotile arrays, etc — ~30K Ruby objects each. Five maps
+        # scrolled = ~150K leaked objects. Mizzy's perf log proved
+        # this: heap jumped from 487K → 645K after the warp menu,
+        # and each subsequent draw_text paid 2-3 ms of GC scan cost
+        # (15× slower than the pre-warp baseline).
+        #
+        # Fix: evict every map in $xpx_map_cache + $data_maps EXCEPT
+        # the currently-loaded one ($game_map.map_id), then force a
+        # full GC.start so the freed Ruby objects are reclaimed and
+        # the heap shrinks back. The brief GC pause is much better
+        # than leaving the heap bloated and paying GC overhead on
+        # every subsequent draw_text call indefinitely.
+        begin
+          cur_id = ($game_map ? $game_map.map_id : nil) rescue nil
+          evicted_cache = 0
+          evicted_data  = 0
+          if $xpx_map_cache && $xpx_map_cache.is_a?(Hash)
+            $xpx_map_cache.keys.each do |mid|
+              next if mid == cur_id
+              $xpx_map_cache.delete(mid)
+              evicted_cache += 1
+            end
+          end
+          if $data_maps && $data_maps.is_a?(Hash)
+            $data_maps.keys.each do |mid|
+              next if mid == cur_id
+              $data_maps.delete(mid)
+              evicted_data += 1
+            end
+          end
+          # Force a major GC to actually reclaim the freed RPG::Map
+          # objects. Without this the dead objects sit in the heap,
+          # and every subsequent allocation pays the scan cost.
+          gc_before = (GC.stat[:heap_live_slots] || GC.stat[:heap_live_slot] || 0) rescue 0
+          GC.start(full_mark: true, immediate_sweep: true) rescue GC.start
+          gc_after = (GC.stat[:heap_live_slots] || GC.stat[:heap_live_slot] || 0) rescue 0
+          XPX.log "MapLister.dispose: evicted #{evicted_cache} map_cache + " \
+                  "#{evicted_data} data_maps entries (keeping cur=#{cur_id}), " \
+                  "GC reclaimed #{gc_before - gc_after} slots " \
+                  "(#{gc_before} -> #{gc_after})" rescue nil
+        rescue
+        end
+        # Drop the leftover GPU render caches (downscaled tilesets + colour
+        # strips) so they don't linger after the warp menu closes.
+        _xpx_reset_minimap_caches
+        super
+      end
+    end
+    klass.prepend(blackout_mod)
+    xpx_puts "MapLister wrapped (fullscreen blackout)"
+  rescue => e
+    xpx_puts "MapLister blackout wrap failed: #{e.message}"
+    $xpx_maplister_wrapped = false
+  end
+end
+
+
+$xpx_minimap_wrapped = false
+def _xpx_install_createMinimap_wrap(klass)
+  return if $xpx_minimap_wrapped
+  $xpx_minimap_wrapped = true
+  # Per-map cached minimap bitmaps. Survives the entire game session
+  # so re-scrolling over the same map in the warp menu is instant
+  # (just a 800×800-ish GPU blit instead of 120 000 Ruby method calls
+  # to bltSmallTile). LRU-bounded to 40 maps so a project with 200+
+  # maps doesn't balloon the cache. Cleared on game restart via the
+  # Ruby global being reset.
+  $xpx_minimap_cache ||= {}
+  $xpx_minimap_cache_max = 40
+  begin
+    klass.module_eval do
+      alias_method :_xpx_orig_createMinimap, :createMinimap
+      define_method(:createMinimap) do |mapid|
+        begin
+          # ── Cache hit: return a fresh dup of the cached render ──
+          # MapLister.refresh calls @sprite.bitmap&.dispose on the
+          # PREVIOUS bitmap each time, so we can't hand back the
+          # cached bitmap directly — it'd be disposed and the next
+          # cache hit would return a dead reference.
+          #
+          # IMPORTANT: use Bitmap#dup, NOT Bitmap#copy. PE only defines
+          # `copy` on BitmapWrapper < Bitmap (used for refcounted PE
+          # cache entries); plain Bitmap doesn't have it, and calling
+          # `.copy` on a plain Bitmap raises NoMethodError that was
+          # silently swallowed by our rescue block — `mm_cache=0`
+          # forever in Mizzy's diagnostic log. Bitmap#dup goes through
+          # mkXPX's bitmapInitializeCopy binding which does a proper
+          # `new Bitmap(*orig)` deep copy via GFX_GUARD_EXC.
+          cached = $xpx_minimap_cache[mapid]
+          if cached && !(cached.disposed? rescue true)
+            # Refresh LRU position: delete + reinsert moves to end.
+            $xpx_minimap_cache.delete(mapid)
+            $xpx_minimap_cache[mapid] = cached
+            return cached.dup
+          end
+
+          # Was this map already cached before we touched it? If yes,
+          # we shouldn't evict it on our way out — somebody else owns
+          # it. If no, OUR load_data call is the one that put it in
+          # the cache, and we should evict it afterwards to prevent
+          # the warp-menu scroll-induced heap bloat that haunted
+          # Mizzy's debug menu (perf log proved heap grew 487K → 644K
+          # after 5 scrolls and stayed there, with every subsequent
+          # draw_text paying GC scan cost).
+          map_was_cached_before = ($xpx_map_cache && $xpx_map_cache.is_a?(Hash) &&
+                                   $xpx_map_cache.key?(mapid)) rescue false
+          # ── Source the map from XPX's CURRENT data, not stale .rxdata ──
+          # CONFIRMED ROOT CAUSE of the grey mega-tileset minimap (proven by
+          # the `minimap dbg` diagnostic): load_data("Data/Map###.rxdata")
+          # returns a map whose HEADER is current (width/height/tileset_id all
+          # correct) but whose tile-data Table is STALE — frequently degenerate
+          # to ~1 column ("can't refresh on new save" bug). The render loop then
+          # reads map.data[0,y,z] fine, hits map.data[1,y,z] out of the stale
+          # Table's range, raises, and the outer rescue swallows it — so only
+          # the first column ever draws and the rest stays the grey placeholder.
+          #
+          # XPX.get_map rebuilds a correctly-sized RPG::Map (proper Table) from
+          # the canonical Data/maps/*.xpxdata — the SAME data gameplay uses — so
+          # the preview reads real, current tile data. Fall back to the legacy
+          # rxdata only for non-XPX maps (XPX.get_map returns nil).
+          map = nil
+          _msrc = "none"
+          if defined?(XPX) && XPX.respond_to?(:get_map)
+            map = (XPX.get_map(mapid) rescue nil)
+            _msrc = "xpx" if map
+          end
+          if !map
+            map = (load_data(sprintf("Data/Map%03d.rxdata", mapid)) rescue nil)
+            _msrc = "rxdata" if map
+          end
+          return Bitmap.new(32, 32) if !map
+          tilesets = $data_tilesets
+          tileset = tilesets[map.tileset_id]
+          # Tileset missing → solid placeholder so the warp menu UI
+          # has SOMETHING to draw over the parent menu (transparent
+          # interior used to leak through and show "Catching Contest"
+          # / etc. underneath).
+          if !tileset
+            ph = Bitmap.new(map.width * 4, map.height * 4)
+            ph.fill_rect(0, 0, ph.width, ph.height, Color.new(20, 20, 20, 255))
+            return ph
+          end
+          # ── Skip render for mega tilesets ──────────────────────────
+          # CONFIRMED ROOT CAUSE (proven by Mizzy's perf log): the
+          # mega-tileset render path (wrapTileset → 512×32768 GL
+          # texture → bltSmallTile loop → helper.dispose) leaves
+          # mkXPX's GL state in a per-frame-sync mode. Symptom: ALL
+          # subsequent debug menu activity lags 15-30× per draw,
+          # persisting until the game is restarted. With the render
+          # disabled, the lag vanished entirely.
+          #
+          # Fix: probe the tileset's PNG header (24 bytes of file
+          # I/O — no SDL_image load, no Bitmap allocation, no GL
+          # state touched). If it would be mega (any dimension >
+          # GPU max texture size), return a placeholder. If it
+          # fits in a single texture, render normally.
+          #
+          # Most PE tilesets are 256×768 to 256×4096 — non-mega and
+          # fully rendered. Only the BW2-Outside-class oversize
+          # tilesets (256×41504 etc) get placeholdered.
+          tn = tileset.tileset_name.to_s
+          tileset_path = "Graphics/Tilesets/" + tn
+          is_mega = false
+          # ── Reliable size detection via PE's RPG::Cache ────────────
+          # CONFIRMED BUG: the legacy File.exist? probe below NEVER
+          # fired under mkXPX. mkXPX serves Graphics/ through its
+          # internal path cache ("Loading path cache..." at boot), so
+          # File.exist?("Graphics/Tilesets/Outside.png") returns FALSE
+          # even though the engine loads that file fine. With the probe
+          # short-circuited, is_mega stayed false and the 256×16064
+          # "Outside" tileset rendered a full minimap every scroll —
+          # the exact render Mizzy proved was the lag (an unconditional
+          # black placeholder eliminated it entirely).
+          #
+          # RPG::Cache respects mkXPX's path system AND returns the
+          # already-loaded gameplay tileset from cache (no extra disk
+          # load in the common case — every map in the warp list here
+          # shares the one "Outside" tileset the running map already
+          # holds). We read its real width/height and skip the render
+          # for MEGA (> GPU max texture) or LARGE (> 8 MB) tilesets.
+          #
+          # TIER POLICY (revised — Mizzy wants previews back):
+          #   • MEGA  (any dimension > GPU max texture): the tileset wraps
+          #     to a 512×32768-class surface. TileDrawingHelper can't
+          #     sample it correctly/cheaply, so these still get a
+          #     placeholder. This is the ONLY skip tier now.
+          #   • LARGE (8–64 MB, e.g. the 256×16064 "Outside" = 16 MB):
+          #     previously placeholdered, which blanked ~half the project's
+          #     maps. Now RENDERED again. The 512 MB TexPool (rebuilt
+          #     runtime) + the bitmap.cpp pixman guard (needs a CLEAN
+          #     rebuild to compile) are the real fixes for the render
+          #     poison; gu_ms in the perf log confirms whether the C++
+          #     render still costs anything after that rebuild.
+          #   • Normal (≤ 8 MB): rendered, always was.
+          begin
+            tsb = nil
+            tsb = RPG::Cache.tileset(tn) if defined?(RPG::Cache) &&
+                                            RPG::Cache.respond_to?(:tileset)
+            tsb ||= (RPG::Cache.load_bitmap("Graphics/Tilesets/", tn) rescue nil)
+            if tsb && !(tsb.disposed? rescue true)
+              _mx = (Bitmap.max_size rescue 32768)
+              is_mega = (tsb.width > _mx) || (tsb.height > _mx)
+            end
+          rescue
+            is_mega = false
+          end
+          # ── Legacy File.exist? probe (kept as a cross-platform backup) ──
+          # Harmless under mkXPX (File.exist? is false → loop no-ops, so
+          # is_mega keeps the RPG::Cache verdict above). On engines where
+          # File.exist? DOES resolve Graphics/ paths, it independently
+          # confirms the same MEGA/LARGE thresholds, so the two never
+          # disagree.
+          begin
+            # Try common image extensions PE uses. PNG first since
+            # that's universal; jpg/gif fall through to full render
+            # path (rare in PE, can't read dims this way without
+            # SDL_image).
+            ["", ".png", ".PNG"].each do |ext|
+              try_path = tileset_path + ext
+              next unless File.exist?(try_path)
+              File.open(try_path, "rb") do |f|
+                sig = f.read(8)
+                if sig == "PNG
+
+".b
+                  f.read(8)   # 4-byte chunk length + "IHDR" type
+                  w = f.read(4).unpack("N").first
+                  h = f.read(4).unpack("N").first
+                  max_tex = (Bitmap.max_size rescue 32768)
+                  # Skip the full minimap render ONLY when the tileset is
+                  # MEGA — exceeds GPU max texture, so it'd wrap to a
+                  # 512×32768-class surface that TileDrawingHelper can't
+                  # sample correctly or cheaply. LARGE-but-non-mega
+                  # tilesets (e.g. the 256×16064 16 MB "Outside") are now
+                  # RENDERED again; the 512 MB TexPool + the pixman guard
+                  # in bitmap.cpp are the real fixes for the render poison
+                  # they used to cause on the stock 20 MB pool.
+                  is_mega = (w > max_tex) || (h > max_tex)
+                end
+              end
+              break
+            end
+          rescue
+            is_mega = false   # err on the side of rendering
+          end
+          if is_mega
+            # ── MEGA tileset: REAL preview via a CPU-downscaled copy ──
+            # BACKGROUND (Mizzy's perf logs, proven twice): doing a
+            # stretch_blt directly OFF a mega tileset in the GL path
+            # POISONS per-frame rendering — mkXPX has to push the
+            # 256×41504 megaSurface through the live render target / taint
+            # machinery, and once that happens C++ Graphics.update jumps
+            # from ~1 ms to 120-369 ms for the rest of the session (gu_ms).
+            #
+            # THE FIX (mkXPX Bitmap#downscale, added in bitmap.cpp): the
+            # mega tileset is stored as a CPU SDL_Surface at its TRUE
+            # dimensions (256 wide = 8 tile columns, H/32 rows). #downscale
+            # runs a pure-CPU SDL SoftStretch off that surface and hands
+            # back a SMALL, normal GL bitmap. No mega surface ever touches
+            # a render target, so per-frame rendering stays fast — and the
+            # small copy preserves the real 256-wide tile layout, so tile
+            # math reads the CORRECT tiles. We scale to 8*ss × rows*ss so
+            # tile (tx,ty) maps 1:1 to block (tx*ss, ty*ss, ss, ss).
+            #
+            # Built once per (tileset, scale) and cached. If the running
+            # mkXPX is older and lacks #downscale, small_ts stays nil and
+            # we degrade gracefully to the autotile-base-colour preview.
+            grey  = Color.new(40, 40, 60, 255)
+            black = Color.new(0, 0, 0, 255)
+            area = map.width * map.height
+            tpx = area > 10000 ? 1 : area > 2500 ? 2 : 4
+            ss = tpx
+            bm = Bitmap.new(map.width * tpx, map.height * tpx)
+            bm.fill_rect(0, 0, bm.width, bm.height, grey)
+
+            $xpx_small_ts_cache ||= {}
+            sk = tn + "@" + ss.to_s
+            small_ts = $xpx_small_ts_cache[sk]
+            # Keep a reference to the full-res source for per-tile colour
+            # sampling (the grey-tile fallback below), and its true row
+            # count so we know which tiles legitimately exist.
+            src_full = nil
+            full_rows = 0
+            begin
+              src_full = (RPG::Cache.tileset(tn) rescue nil)
+              src_full ||= (RPG::Cache.load_bitmap("Graphics/Tilesets/", tn) rescue nil)
+              if src_full && !(src_full.disposed? rescue true)
+                full_rows = (src_full.height + 31) / 32
+              end
+            rescue
+              src_full = nil
+            end
+            if small_ts.nil? || (small_ts.disposed? rescue true)
+              small_ts = nil
+              begin
+                if src_full && !(src_full.disposed? rescue true) && src_full.respond_to?(:downscale)
+                  rows = full_rows
+                  small_ts = src_full.downscale(8 * ss, rows * ss)
+                  $xpx_small_ts_cache[sk] = small_ts
+                end
+              rescue => _dse
+                XPX.log "mega downscale failed tn=#{tn}: #{_dse.class}: #{_dse.message}" rescue nil
+                small_ts = nil
+              end
+            end
+            small_rows = small_ts ? ((small_ts.height / ss) rescue 0) : 0
+
+            # 1px-per-tile colour strip. The crisp copy above is scaled to
+            # 8*ss × rows*ss; for a TALL mega tileset rows*ss can exceed the
+            # GL texture-size cap, so the backend silently clips it and
+            # small_rows < full_rows — tiles in the bottom rows (e.g. a grass
+            # base tile that happens to live low in the sheet) then have no
+            # crisp pixels AND no colour, so they render grey. This strip is
+            # only 8 × full_rows (full_rows ≈ a few hundred even for a 41504px
+            # tileset), so it ALWAYS fits and covers EVERY row. One pixel per
+            # tile = that tile's average colour. It's a normal bitmap, so
+            # get_pixel is safe (the mega SOURCE surface is not).
+            $xpx_color_ts_cache ||= {}
+            ck = tn + "@color"
+            color_ts = $xpx_color_ts_cache[ck]
+            if color_ts.nil? || (color_ts.disposed? rescue true)
+              color_ts = nil
+              begin
+                if src_full && !(src_full.disposed? rescue true) && \
+                   src_full.respond_to?(:downscale) && full_rows > 0
+                  color_ts = src_full.downscale(8, full_rows)
+                  $xpx_color_ts_cache[ck] = color_ts
+                end
+              rescue => _cse
+                XPX.log "mega colour-strip downscale failed tn=#{tn}: " \
+                        "#{_cse.class}: #{_cse.message}" rescue nil
+                color_ts = nil
+              end
+            end
+
+            # ── Regular-tile colour fallback (fixes grey tileset tiles) ──
+            # Regular tiles (id>=384) are normally blt'd crisp from the
+            # downscaled copy. But a cell can still end up showing the flat
+            # grey placeholder when:
+            #   • the GL backend caps a very tall downscale target, so the
+            #     bottom rows of a huge mega tileset exceed small_rows;
+            #   • the downscale isn't available at all (small_ts nil);
+            #   • the tile graphic is partly transparent, letting the grey
+            #     base bleed through the blt.
+            # Autotile cells already dodge this via $xpx_auto_color_cache.
+            # Give regular tiles the same treatment: a cached representative
+            # colour per tile id, painted as the cell's base before the crisp
+            # blt. Sampled from the small copy when the row is in range, else
+            # averaged from the full-res source.
+            $xpx_tile_color_cache ||= {}
+            tcols = ($xpx_tile_color_cache[sk] ||= {})
+            _tcol = lambda do |tid|
+              cached = tcols[tid]
+              # NB: identity compare (equal?), NOT ==. The cache stores either
+              # a Color or `false` (the "no colour" sentinel). mkXPX's Color#==
+              # raises TypeError("Can't convert FalseClass into Color") when the
+              # RHS isn't a Color, so `cached == false` on a cached Color blew up
+              # the whole render loop the first time any tile id repeated — which
+              # is exactly why the mega minimap rendered grey.
+              return (cached.equal?(false) ? nil : cached) unless cached.nil?
+              col = nil
+              tn2 = tid - 384
+              txx = tn2 % 8
+              tyy = tn2 / 8
+              # Sample normal GL bitmaps ONLY. The mega SOURCE surface must
+              # NEVER be sampled here — get_pixel on a mega surface raises
+              # MKXPError ("Operation not supported for mega surfaces"),
+              # which is NOT a StandardError, so a bare `rescue` won't catch
+              # it and it crashes the whole runtime.
+              #   1. The 1px-per-tile colour strip: full row coverage, so it
+              #      provides a colour even for rows the crisp copy clipped.
+              #   2. Fallback: average a few points of the crisp copy's block
+              #      (handles a transparent centre pixel).
+              begin
+                if color_ts && tyy < full_rows
+                  cc = (color_ts.get_pixel(txx, tyy) rescue nil)
+                  col = Color.new(cc.red, cc.green, cc.blue, 255) \
+                        if cc && (cc.alpha rescue 0) > 16
+                end
+                if col.nil? && small_ts && tyy < small_rows
+                  rs = 0; gs = 0; bs = 0; n = 0
+                  bx = txx * ss; by = tyy * ss
+                  ys = [by, by + ss / 2, by + ss - 1].uniq
+                  xs = [bx, bx + ss / 2, bx + ss - 1].uniq
+                  ys.each do |py|
+                    xs.each do |px|
+                      cc = (small_ts.get_pixel(px, py) rescue nil)
+                      next unless cc && (cc.alpha rescue 0) > 32
+                      rs += cc.red; gs += cc.green; bs += cc.blue; n += 1
+                    end
+                  end
+                  col = Color.new(rs / n, gs / n, bs / n, 255) if n > 0
+                end
+              rescue
+                col = nil
+              end
+              tcols[tid] = (col || false)
+              col
+            end
+
+            # Per-MAP autotile base-colour palette (slot 1..7), built
+            # once and reused. Autotile graphics live OUTSIDE the tileset
+            # image (separate small normal bitmaps), so id 48..383 cells
+            # still use a representative base colour. NEVER touches mega.
+            #
+            # CRITICAL: the names come from $xpx_map_extras[mapid]["legacy"],
+            # NOT tileset.autotile_names. XPX stores autotiles PER-MAP; the
+            # tileset's autotile_names is only swapped in by the Game_Map.setup
+            # wrap when a map becomes ACTIVE. A warp-PREVIEW map (loaded via
+            # load_data, never activated) has stale/empty tileset.autotile_names,
+            # which is exactly why grass-base previews used to render flat grey.
+            # We read the preview map's OWN slot names here and the cache is
+            # keyed by mapid (two maps sharing a tileset can have totally
+            # different autotile sets).
+            $xpx_auto_color_cache ||= {}
+            acols = $xpx_auto_color_cache[mapid]
+            if acols.nil?
+              acols = []
+              begin
+                _mx_extras = ($xpx_map_extras || {})[mapid]
+                names = (_mx_extras && _mx_extras["legacy"])
+                names = (tileset.autotile_names rescue nil) if names.nil? || names.empty?
+                names ||= []
+                names.each_with_index do |an, i|
+                  next if an.nil? || an.to_s.empty?
+                  # PE v21 loads autotile graphics via pbGetAutotile
+                  # (Graphics/Autotiles/<name>.png). The RMXP-era
+                  # RPG::Cache.autotile / load_bitmap("Graphics/Autotiles/")
+                  # do NOT resolve under PE v21 + mkXPX's path cache, so the
+                  # old code left acols empty and grass-base maps rendered as
+                  # the flat grey placeholder. pbGetAutotile returns a fresh
+                  # deanimated Bitmap we own (the kind-classifier disposes its
+                  # result too), so we dispose it after sampling.
+                  ab = (pbGetAutotile(an) rescue nil) if defined?(pbGetAutotile)
+                  ab ||= (RPG::Cache.autotile(an) rescue nil)
+                  ab ||= (RPG::Cache.load_bitmap("Graphics/Autotiles/", an) rescue nil)
+                  next unless ab && !(ab.disposed? rescue true)
+                  begin
+                    aw = ab.width; ah = ab.height
+                    # Average a spread of opaque samples for a representative
+                    # base colour. Works for both 32px "single" autotiles and
+                    # the taller "large"/RMXP layouts — a single fixed point
+                    # often lands on a transparent corner.
+                    rs = 0; gs = 0; bs = 0; n = 0
+                    [ah / 4, ah / 2, (ah * 3) / 4, 16].uniq.each do |py|
+                      next if py < 0 || py >= ah
+                      [aw / 4, aw / 2, (aw * 3) / 4, 16].uniq.each do |px|
+                        next if px < 0 || px >= aw
+                        cc = (ab.get_pixel(px, py) rescue nil)
+                        next unless cc && (cc.alpha rescue 0) > 128
+                        rs += cc.red; gs += cc.green; bs += cc.blue; n += 1
+                      end
+                    end
+                    acols[i + 1] = Color.new(rs / n, gs / n, bs / n, 255) if n > 0
+                  rescue
+                  end
+                  ab.dispose rescue nil
+                end
+              rescue
+              end
+              $xpx_auto_color_cache[mapid] = acols
+            end
+
+            # Regular tiles (id >= 384) are blt'd from the small tileset
+            # copy at their true grid position (tx,ty); autotile cells
+            # (id 48..383) use their base colour. Both are cheap normal
+            # GL ops on small bitmaps — no mega touch in the render loop.
+            _dbg = {blank: 0, auto_col: 0, auto_grey: 0,
+                    reg_blt: 0, reg_col: 0, reg_grey: 0}
+            # Defence-in-depth: iterate the data Table's REAL dimensions, not
+            # the header's width/height. If a stale/mismatched Table ever slips
+            # through, indexing out of its range raises and the outer rescue
+            # would wipe the ENTIRE preview to grey (the exact failure the
+            # diagnostic caught). Clamping the loop to xsize/ysize/zsize means a
+            # short Table just draws fewer cells instead of aborting everything.
+            _dw = [(map.data.xsize rescue map.width),  map.width ].min
+            _dh = [(map.data.ysize rescue map.height), map.height].min
+            _dz = [(map.data.zsize rescue 3), 3].min
+            begin
+              _dh.times do |y|
+                _dw.times do |x|
+                  _dz.times do |z|
+                    id = map.data[x, y, z] || 0
+                    if id >= 384
+                      # Base colour first so the cell never shows grey,
+                      # then the crisp downscaled tile on top when one
+                      # is available for this row.
+                      c = _tcol.call(id)
+                      bm.fill_rect(x * tpx, y * tpx, tpx, tpx, c) if c
+                      drew = false
+                      if small_ts
+                        tnum = id - 384
+                        tx = tnum % 8
+                        ty = tnum / 8
+                        if ty < small_rows
+                          bm.blt(x * tpx, y * tpx, small_ts,
+                                 Rect.new(tx * ss, ty * ss, ss, ss))
+                          drew = true
+                        end
+                      end
+                      if drew then _dbg[:reg_blt] += 1
+                      elsif c then _dbg[:reg_col] += 1
+                      else _dbg[:reg_grey] += 1 end
+                    elsif id >= 48
+                      c = acols[id / 48]
+                      if c
+                        bm.fill_rect(x * tpx, y * tpx, tpx, tpx, c)
+                        _dbg[:auto_col] += 1
+                      else
+                        _dbg[:auto_grey] += 1
+                      end
+                    else
+                      _dbg[:blank] += 1
+                    end
+                  end
+                end
+              end
+            rescue => _le
+              # Error-only: a healthy render never logs here. If a future
+              # tileset/map trips the loop, this names the failing line for
+              # the bug report instead of silently leaving the preview grey.
+              XPX.log "minimap loop raised: #{_le.class}: #{_le.message} @ " \
+                      "#{(_le.backtrace||[])[0..2].inspect}" rescue nil
+            end
+
+            bm.fill_rect(0, 0, bm.width, 1, black)
+            bm.fill_rect(0, bm.height - 1, bm.width, 1, black)
+            bm.fill_rect(0, 0, 1, bm.height, black)
+            bm.fill_rect(bm.width - 1, 0, 1, bm.height, black)
+            # Cache the preview so subsequent scrolls over the same
+            # mega-tileset map hit it without re-rendering.
+            begin
+              if $xpx_minimap_cache.size >= $xpx_minimap_cache_max
+                oldest_key = $xpx_minimap_cache.keys.first
+                oldest = $xpx_minimap_cache.delete(oldest_key)
+                oldest.dispose rescue nil if oldest
+              end
+              $xpx_minimap_cache[mapid] = bm.dup
+            rescue
+            end
+            # Same map-cache eviction as the real path.
+            begin
+              cur_id = ($game_map ? $game_map.map_id : nil) rescue nil
+              if !map_was_cached_before && mapid != cur_id
+                $xpx_map_cache.delete(mapid) if $xpx_map_cache.is_a?(Hash)
+                $data_maps.delete(mapid)     if $data_maps.is_a?(Hash)
+              end
+            rescue
+            end
+            return bm
+          end
+          # Vanilla render path — same logic as PE, plus the missing
+          # helper.dispose at the end + per-tile-size adapted to map
+          # area. PE hard-codes 4px per tile, which is ~5-10μs of Ruby
+          # method-call + Rect-allocation + stretch_blt overhead per
+          # iteration. For a "really big map" (Mizzy's Map32 is
+          # ~50x50, the user's largest reported case) the 7500-15000
+          # bltSmallTile calls add up to 300-700ms per first-scroll
+          # over the map in the warp list.
+          #
+          # Adaptive: shrink per-tile pixel size for big maps so the
+          # render count drops linearly with map area. Caps the worst-
+          # case render at ~150ms. Cache then keeps re-visits instant.
+          #
+          # Threshold: total tile count > 2500 (50×50) → use 2px/tile.
+          # > 10000 (100×100) → 1px/tile. Otherwise 4px (PE default).
+          area = map.width * map.height
+          tpx = if area > 10000 then 1
+                elsif area > 2500 then 2
+                else 4
+                end
+          # ── Mirror the PREVIEW map's own autotile names into the tileset ──
+          # XPX stores autotiles PER-MAP. TileDrawingHelper.fromTileset reads
+          # tileset.autotile_names to load the 7 legacy autotile bitmaps (grass,
+          # water, etc), but those names are only swapped onto the tileset by
+          # the Game_Map.setup wrap when a map is made ACTIVE. This warp-PREVIEW
+          # map was loaded via load_data and never activated, so the tileset
+          # carries some OTHER (or empty) map's autotile names — which is why
+          # grass used to draw as flat grey here. Temporarily install THIS
+          # map's slot names (from $xpx_map_extras[mapid]["legacy"]) so the
+          # helper loads the right autotiles, then restore the original names
+          # so we never corrupt the shared $data_tilesets entry for the
+          # currently-active map.
+          _saved_an = nil
+          _an_overridden = false
+          begin
+            _mx_extras = ($xpx_map_extras || {})[mapid]
+            _legacy = _mx_extras && _mx_extras["legacy"]
+            if _legacy && !_legacy.empty?
+              _saved_an = (tileset.autotile_names rescue nil)
+              tileset.autotile_names = (0..6).map {|i| (_legacy[i] || "").to_s }
+              _an_overridden = true
+            end
+          rescue
+            _an_overridden = false
+          end
+          helper = TileDrawingHelper.fromTileset(tileset)
+          # Restore the shared tileset's names the instant the helper has
+          # captured them, so concurrent/active-map rendering is unaffected.
+          if _an_overridden
+            tileset.autotile_names = _saved_an rescue nil
+          end
+          bitmap = Bitmap.new(map.width * tpx, map.height * tpx)
+          map.height.times do |y|
+            map.width.times do |x|
+              3.times do |z|
+                id = map.data[x, y, z]
+                id = 0 if !id
+                helper.bltSmallTile(bitmap, x * tpx, y * tpx, tpx, tpx, id)
+              end
+            end
+          end
+          black = Color.new(0, 0, 0, 255)
+          bitmap.fill_rect(0, 0, bitmap.width, 1, black)
+          bitmap.fill_rect(0, bitmap.height - 1, bitmap.width, 1, black)
+          bitmap.fill_rect(0, 0, 1, bitmap.height, black)
+          bitmap.fill_rect(bitmap.width - 1, 0, 1, bitmap.height, black)
+          # THE FIX: vanilla createMinimap forgets this. Without it the
+          # helper's @tileset bitmap leaks each scroll in the F9 warp
+          # menu. For mega tilesets (BW2-Outside.png is 256×41504 →
+          # wraps to 512×32768 ≈ 64 MB GPU), each leak is huge — and
+          # 64 MB exceeds the stock 20 MB texPool budget, so every
+          # release drains the entire pool via LRU eviction. Calling
+          # dispose here returns the texture to the pool cleanly.
+          #
+          # See mkXPX/src/display/gl/texpool.h — the pool budget is
+          # bumped from 20 MB to 512 MB to keep the wrapped mega
+          # texture cached instead of evicted on the next release.
+          helper.dispose rescue nil
+
+          # ── Cache the result for subsequent scrolls ──────────────
+          # Store a dup so the caller's eventual dispose doesn't kill
+          # the cached entry. Bounded LRU eviction prevents the cache
+          # from growing without limit for projects with hundreds of
+          # maps. A 200×200 minimap is 800×800 × 4 bytes ≈ 2.5 MB GPU;
+          # 40 entries × 2.5 MB = ~100 MB max, comfortably inside the
+          # 512 MB texPool budget.
+          #
+          # bitmap.dup (NOT bitmap.copy — PE only defines copy on
+          # BitmapWrapper, plain Bitmap raises NoMethodError and the
+          # silent rescue used to swallow it, leaving mm_cache=0
+          # forever). dup hits mkXPX's bitmapInitializeCopy binding
+          # which does a real deep copy.
+          begin
+            if $xpx_minimap_cache.size >= $xpx_minimap_cache_max
+              oldest_key = $xpx_minimap_cache.keys.first
+              oldest = $xpx_minimap_cache.delete(oldest_key)
+              oldest.dispose rescue nil if oldest
+            end
+            $xpx_minimap_cache[mapid] = bitmap.dup
+          rescue => _ccw
+            # If even dup fails, log it — we want to know about it
+            # instead of silently degrading to no-cache mode like the
+            # previous .copy bug.
+            XPX.log "createMinimap cache dup failed for map=#{mapid}: " \
+                    "#{_ccw.class}: #{_ccw.message}" rescue nil
+          end
+
+          # ── Evict the transiently-loaded RPG::Map ─────────────────
+          # If WE caused this map to be cached (it wasn't there before
+          # our load_data call), evict it now. The minimap bitmap is
+          # already cached in $xpx_minimap_cache, so we don't need the
+          # full RPG::Map data sitting around. Skip when:
+          #   • The map was already cached before we touched it
+          #     (someone else owns it — e.g. it's a connected map).
+          #   • This IS the currently-loaded map ($game_map).
+          # Without this eviction, scrolling N maps in the warp menu
+          # leaves N × ~30 K Ruby objects in the heap, making every
+          # subsequent draw_text pay 2-3 ms of GC scan cost. The
+          # eviction keeps heap flat across pre-/post-warp F9 menus.
+          begin
+            cur_id = ($game_map ? $game_map.map_id : nil) rescue nil
+            if !map_was_cached_before && mapid != cur_id
+              $xpx_map_cache.delete(mapid) if $xpx_map_cache.is_a?(Hash)
+              $data_maps.delete(mapid)     if $data_maps.is_a?(Hash)
+            end
+          rescue
+          end
+
+          bitmap
+        rescue Exception => _ce
+          # Catch Exception, not just StandardError: mkXPX raises
+          # MKXPError for unsupported operations (e.g. get_pixel on a
+          # mega surface), and that class is NOT a StandardError — a
+          # bare `rescue` lets it escape and crash the runtime. A
+          # minimap preview must never take the game down; fall back to
+          # the original renderer instead.
+          XPX.log "createMinimap patch error for map=#{mapid}: #{_ce.class}: #{_ce.message} — falling back to original" rescue nil
+          (_xpx_orig_createMinimap(mapid) rescue (Bitmap.new(32, 32) rescue nil))
+        end
+      end
+    end
+    xpx_puts "createMinimap wrapped (leak fix + per-map cache)"
+  rescue => e
+    xpx_puts "createMinimap wrap failed: #{e.message}"
+    $xpx_minimap_wrapped = false
+  end
+end
+
 
 # ── Consolidated Module#method_added hook (bridge fix #4) ────────────────
 # Single override handles BOTH the audio-Hash patch AND the Game_Map#setup
@@ -3190,6 +5068,137 @@ class Module
     if meth == :update && !$xpx_scene_map_wrapped &&
        self.is_a?(Class) && self.name == "Scene_Map"
       _xpx_install_scene_map_update_wrap(self)
+    end
+
+    # ── echoln rebrand patch detection ───────────────────────────────
+    # Kernel#echoln is defined in Scripts.rxdata (PE's Compiler.rb).
+    # When PE defines it, Kernel.method_added(:echoln) fires here.
+    # We wrap it so the debug-window banner's "RPG Maker XP" string
+    # is substituted at the call site. One-shot: $xpx_banner_rebranded
+    # flips after the first match, so the rest of the game's echoln
+    # traffic (debug logging, sanity messages) doesn't pay the scan.
+    if meth == :echoln && !$xpx_echoln_wrapped && self == ::Kernel
+      $xpx_echoln_wrapped = true
+      begin
+        ::Kernel.module_eval do
+          alias_method :_xpx_orig_echoln, :echoln
+          # Brace-block (not do-end) so the bridge-balance counter
+          # treats the define_method body as opener-less. Otherwise
+          # `do |string=""|` ends with `|`, the counter misses the
+          # opener, and the matching `end` looks like a stray close.
+          define_method(:echoln) { |string = ""|
+            if !$xpx_banner_rebranded && string.is_a?(String) &&
+               string.include?("RPG Maker XP")
+              $xpx_banner_rebranded = true
+              string = string.gsub("RPG Maker XP", "XPX Engine")
+              # SELF-DESTRUCT: as soon as we've rebranded the banner,
+              # restore the original echoln so every subsequent call
+              # (PE's F9 debug menu emits hundreds of echoln entries
+              # per frame for the switch/variable lists — Mizzy hit
+              # multi-second lag with the wrap still in place) pays
+              # zero overhead. Aliasing :echoln back to the original
+              # collapses the call chain to a single dispatch.
+              ::Kernel.module_eval do
+                alias_method :echoln, :_xpx_orig_echoln
+              end
+            end
+            _xpx_orig_echoln(string)
+          }
+        end
+        xpx_puts "Kernel#echoln wrapped (debug-banner rebrand, self-destructing)"
+      rescue => _re
+        xpx_puts "echoln rebrand wrap failed: #{_re.message}"
+        $xpx_echoln_wrapped = false
+      end
+    end
+
+    # ── createMinimap leak patch detection ──────────────────────────
+    # PE v21's `def createMinimap(mapid)` builds a TileDrawingHelper,
+    # renders a 4-px-per-tile preview, and never calls helper.dispose.
+    # The helper holds a `pbGetTileset` result (the full-res tileset
+    # bitmap), so each call leaks one bitmap. Mizzy's BW2-Outside.png is
+    # 256×41504 → wraps to 512×32768 = ~64 MB GPU per leak. F9's warp
+    # menu fires createMinimap on every scroll, so after scrolling
+    # through ~70 maps, GPU memory + the mkxp-z texture pool are
+    # saturated and every subsequent F9 open is "very very laggy".
+    #
+    # Body lives in _xpx_install_createMinimap_wrap (below) — the
+    # consolidated method_added hook just dispatches.
+    if meth == :createMinimap && !$xpx_minimap_wrapped &&
+       self == ::Object
+      _xpx_install_createMinimap_wrap(self)
+    end
+
+    # ── MapLister blackout install detection ────────────────────────
+    # MapLister is the F9 warp-menu list provider. method_added fires
+    # for each of its instance methods (initialize, refresh, dispose,
+    # commands, etc.) as Scripts.rxdata loads. We trigger on the first
+    # one to hit, then skip via $xpx_maplister_wrapped.
+    if !$xpx_maplister_wrapped && self.is_a?(Class) &&
+       self.name == "MapLister"
+      _xpx_install_maplister_blackout(self)
+    end
+
+    # ── Window_*CommandPokemon#index= refresh-skip detection ────────
+    # Stock PE defines `def index=; super; refresh if !@starting; end`
+    # in BOTH Window_AdvancedCommandPokemon AND Window_CommandPokemon —
+    # they're sibling classes (each a direct child of
+    # Window_DrawableCommand), so the lag is shared. PE's F9 debug
+    # menu uses Window_CommandPokemonEx (subclass of Window_CommandPokemon)
+    # and the warp map list uses Window_AdvancedCommandPokemon — so both
+    # paths need patching to fix the lag.
+    if meth == :index= && self.is_a?(Class)
+      case self.name
+      when "Window_AdvancedCommandPokemon"
+        _xpx_install_window_advcmd_refresh_skip(self)           unless $xpx_window_advcmd_wrapped
+      when "Window_CommandPokemon"
+        _xpx_install_window_cmd_refresh_skip(self)           unless $xpx_window_cmd_wrapped
+      end
+    end
+
+    # ── Game.load wrap detection (save-load map refresh) ────────────
+    # `def self.load(save_data)` inside `module Game` defines :load on
+    # Game's singleton class. method_added fires on that singleton with
+    # meth=:load. Our preload-time eager alias silently fails because
+    # Scripts.rxdata defines Game.load AFTER this bridge preload runs,
+    # so we install the real wrap here the moment PE finishes defining
+    # it. One-shot via $xpx_game_load_wrapped.
+    #
+    # Identity check uses `self == ::Game.singleton_class` (Ruby 3.x
+    # canonical) instead of stringly-typed to_s matching — `to_s` on
+    # a singleton class can differ across Ruby versions / contexts,
+    # but the object identity is always exact. `defined?(::Game)` guards
+    # against the (rare) case where another module's :load fires
+    # before PE's Game has been autoloaded.
+    if meth == :load && !$xpx_game_load_wrapped &&
+       defined?(::Game) && self == ::Game.singleton_class
+      $xpx_game_load_wrapped = true
+      begin
+        self.class_eval do
+          alias_method :_xpx_orig_game_load_lazy, :load
+          define_method(:load) { |*args, &block|
+            $xpx_save_loading = true
+            result = _xpx_orig_game_load_lazy(*args, &block)
+            begin
+              if $game_map && $game_map.respond_to?(:setup) &&
+                 $game_map.map_id.to_i > 0
+                mid = $game_map.map_id.to_i
+                XPX.log "Game.load: save deserialized; forcing $game_map.setup(#{mid}) to refresh from disk"
+                $game_map.setup(mid)
+              end
+            rescue => _le
+              XPX.log "Save-load map refresh failed: #{_le.class}: #{_le.message}"
+            ensure
+              $xpx_save_loading = false
+            end
+            result
+          }
+        end
+        xpx_puts "Game.load wrapped (save-load map refresh)"
+      rescue => _ge
+        xpx_puts "Game.load wrap failed: #{_ge.message}"
+        $xpx_game_load_wrapped = false
+      end
     end
 
     # ── Audio-Hash patch detection ───────────────────────────────────

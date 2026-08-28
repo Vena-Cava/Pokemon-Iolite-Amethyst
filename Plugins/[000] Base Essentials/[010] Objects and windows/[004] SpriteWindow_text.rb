@@ -695,14 +695,10 @@ class Window_InputNumberPokemon < SpriteWindow_Base
       refresh
     end
     if self.active
-<<<<<<< Updated upstream
       up_pressed   = Keybinds.repeat?(:up)
       down_pressed = Keybinds.repeat?(:down)
 
       if up_pressed || down_pressed
-=======
-      if Keybinds.repeat?(:up) || Keybinds.repeat?(:down)
->>>>>>> Stashed changes
         pbPlayCursorSE
         if @index == 0 && @sign
           @negative = !@negative
@@ -710,7 +706,6 @@ class Window_InputNumberPokemon < SpriteWindow_Base
           place = 10**(digits - 1 - @index)
           n = @number / place % 10
           @number -= n * place
-<<<<<<< Updated upstream
 
           if up_pressed
             n = (n + 1) % 10
@@ -718,13 +713,6 @@ class Window_InputNumberPokemon < SpriteWindow_Base
             n = (n + 9) % 10
           end
 
-=======
-          if Keybinds.repeat?(:up)
-            n = (n + 1) % 10
-          elsif Keybinds.repeat?(:down)
-            n = (n + 9) % 10
-          end
->>>>>>> Stashed changes
           @number += n * place
         end
         refresh
@@ -883,11 +871,7 @@ class SpriteWindow_Selectable < SpriteWindow_Base
     if self.active && @item_max > 0 && @index >= 0 && !@ignore_input
       if Keybinds.repeat?(:up)
         if @index >= @column_max ||
-<<<<<<< Updated upstream
-           (Keybinds.press?(:up) && (@item_max % @column_max) == 0)
-=======
-           (Input.trigger?(Input::UP) && (@item_max % @column_max) == 0)
->>>>>>> Stashed changes
+           (Keybinds.trigger(:up) && (@item_max % @column_max) == 0)
           oldindex = @index
           @index = (@index - @column_max + @item_max) % @item_max
           if @index != oldindex
@@ -897,11 +881,7 @@ class SpriteWindow_Selectable < SpriteWindow_Base
         end
       elsif Keybinds.repeat?(:down)
         if @index < @item_max - @column_max ||
-<<<<<<< Updated upstream
-           (Keybinds.press?(:down) && (@item_max % @column_max) == 0)
-=======
-           (Input.trigger?(Input::DOWN) && (@item_max % @column_max) == 0)
->>>>>>> Stashed changes
+           (Keybinds.trigger(:down) && (@item_max % @column_max) == 0)
           oldindex = @index
           @index = (@index + @column_max) % @item_max
           if @index != oldindex
@@ -1269,7 +1249,6 @@ class Window_CommandPokemon < Window_DrawableCommand
   def drawItem(index, _count, rect)
     pbSetSystemFont(self.contents) if @starting
     rect = drawCursor(index, rect)
-<<<<<<< Updated upstream
 
     text = @commands[index]
 
@@ -1300,10 +1279,6 @@ class Window_CommandPokemon < Window_DrawableCommand
       base,
       shadow
     )
-=======
-    pbDrawShadowText(self.contents, rect.x, rect.y + (self.contents.text_offset_y || 0),
-                     rect.width, rect.height, @commands[index], self.baseColor, self.shadowColor)
->>>>>>> Stashed changes
   end
 end
 

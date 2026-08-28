@@ -6,11 +6,56 @@ def pbBoxesFull?
 end
 
 def pbNickname(pkmn)
+  echoln "Nuzlocke: #{AdvancedNewGame.nuzlocke?}" if $DEBUG
+  echoln "Nickname Clause: #{AdvancedNewGame.nickname_clause?}" if $DEBUG
   return if $PokemonSystem.givenicknames != 0
+
   species_name = pkmn.speciesName
+
+  #-----------------------------------------------------------------------------
+  # Nuzlocke Nickname Clause
+  #-----------------------------------------------------------------------------
+  if defined?(AdvancedNewGame) &&
+     AdvancedNewGame.nuzlocke? &&
+     AdvancedNewGame.nickname_clause?
+
+    loop do
+      nickname = pbEnterPokemonName(
+        _INTL("{1}'s nickname?", species_name),
+        0,
+        Pokemon::MAX_NAME_SIZE,
+        "",
+        pkmn
+      )
+
+      nickname = nickname.strip rescue ""
+
+      invalid = nickname.empty?
+      invalid = true if nickname.downcase == species_name.downcase
+
+      if invalid
+        pbMessage(_INTL("Nuzlocke rules require a unique nickname."))
+        next
+      end
+
+      pkmn.name = nickname
+      break
+    end
+
+    return
+  end
+
+  #-----------------------------------------------------------------------------
+  # Normal nickname behavior
+  #-----------------------------------------------------------------------------
   if pbConfirmMessage(_INTL("Would you like to give a nickname to {1}?", species_name))
-    pkmn.name = pbEnterPokemonName(_INTL("{1}'s nickname?", species_name),
-                                   0, Pokemon::MAX_NAME_SIZE, "", pkmn)
+    pkmn.name = pbEnterPokemonName(
+      _INTL("{1}'s nickname?", species_name),
+      0,
+      Pokemon::MAX_NAME_SIZE,
+      "",
+      pkmn
+    )
   end
 end
 

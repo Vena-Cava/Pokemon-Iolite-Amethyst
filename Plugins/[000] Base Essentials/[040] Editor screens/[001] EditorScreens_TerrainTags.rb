@@ -204,11 +204,7 @@ class PokemonTilesetScene
         update_cursor_position(0, -@visible_height / 2)
       elsif Keybinds.repeat?(:jumpdown)
         update_cursor_position(0, @visible_height / 2)
-<<<<<<< Updated upstream
-      elsif Keybinds.press?(:action)
-=======
-      elsif Input.trigger?(Input::ACTION)
->>>>>>> Stashed changes
+      elsif Keybinds.trigger?(:action)
         commands = [
           _INTL("Go to bottom"),
           _INTL("Go to top"),
@@ -223,22 +219,14 @@ class PokemonTilesetScene
         when 2
           choose_tileset
         end
-<<<<<<< Updated upstream
-      elsif Keybinds.press?(:back)
-=======
-      elsif Input.trigger?(Input::BACK)
->>>>>>> Stashed changes
+      elsif Keybinds.trigger?(:back)
         if pbConfirmMessage(_INTL("Save changes?"))
           save_data(@tilesets_data, "Data/Tilesets.rxdata")
           $data_tilesets = @tilesets_data
           pbMessage(_INTL("To ensure that the changes remain, close and reopen RPG Maker XP."))
         end
         break if pbConfirmMessage(_INTL("Exit from the editor?"))
-<<<<<<< Updated upstream
-      elsif Keybinds.press?(:use)
-=======
-      elsif Input.trigger?(Input::USE)
->>>>>>> Stashed changes
+      elsif Keybinds.trigger?(:use)
         selected = tile_ID_from_coordinates(@x, @y)
         old_tag = @tileset.terrain_tags[selected]
         cmds = []

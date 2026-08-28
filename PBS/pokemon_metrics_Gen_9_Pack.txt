@@ -5,114 +5,152 @@ BackSprite = 0,56
 FrontSprite = 0,33
 ShadowX = 0
 ShadowSize = 2
+DmaxBackSprite = 0,0
+DmaxFrontSprite = 3,28
 #-------------------------------
 [ARCANINE,1]
 BackSprite = 0,42
 FrontSprite = 2,18
 ShadowX = 0
 ShadowSize = 2
+DmaxBackSprite = 0,0
+DmaxFrontSprite = 0,14
 #-------------------------------
 [VOLTORB,1]
 BackSprite = 0,54
 FrontSprite = -2,25
 ShadowX = 0
 ShadowSize = 2
+DmaxBackSprite = 0,0
+DmaxFrontSprite = -1,40
 #-------------------------------
 [TAUROS,1]
 BackSprite = -4,54
 FrontSprite = -2,23
 ShadowX = 0
 ShadowSize = 2
+DmaxBackSprite = 0,0
+DmaxFrontSprite = 0,21
 #-------------------------------
 [TAUROS,2]
 BackSprite = -4,54
 FrontSprite = -3,21
 ShadowX = 0
 ShadowSize = 2
+DmaxBackSprite = 0,0
+DmaxFrontSprite = 0,21
 #-------------------------------
 [TAUROS,3]
 BackSprite = -4,54
 FrontSprite = -4,24
 ShadowX = 0
 ShadowSize = 2
+DmaxBackSprite = 0,0
+DmaxFrontSprite = 0,21
 #-------------------------------
 [TYPHLOSION,1]
 BackSprite = 0,44
 FrontSprite = -2,15
 ShadowX = 0
 ShadowSize = 2
+DmaxBackSprite = 0,0
+DmaxFrontSprite = -5,6
 #-------------------------------
 [WOOPER,1]
 BackSprite = 0,50
 FrontSprite = -1,33
 ShadowX = 0
 ShadowSize = 1
+DmaxBackSprite = 8,78
+DmaxFrontSprite = -4,49
 #-------------------------------
 [QWILFISH,1]
 BackSprite = 0,43
 FrontSprite = 0,11
 ShadowX = 0
 ShadowSize = 1
+DmaxBackSprite = 0,9
+DmaxFrontSprite = 3,21
 #-------------------------------
 [DIALGA,1]
 BackSprite = 0,24
 FrontSprite = 1,3
 ShadowX = 0
 ShadowSize = 2
+DmaxBackSprite = 0,0
+DmaxFrontSprite = -8,9
 #-------------------------------
 [PALKIA,1]
 BackSprite = 0,41
 FrontSprite = 3,4
 ShadowX = 0
 ShadowSize = 3
+DmaxBackSprite = 0,0
+DmaxFrontSprite = 2,11
 #-------------------------------
 [SAMUROTT,1]
 BackSprite = -6,45
 FrontSprite = 2,13
 ShadowX = 0
 ShadowSize = 3
+DmaxBackSprite = 0,0
+DmaxFrontSprite = 0,18
 #-------------------------------
 [LILLIGANT,1]
 BackSprite = 0,48
 FrontSprite = 2,17
 ShadowX = 0
 ShadowSize = 1
+DmaxBackSprite = 0,0
+DmaxFrontSprite = 3,27
 #-------------------------------
 [ZOROARK,1]
 BackSprite = 0,47
 FrontSprite = -4,19
 ShadowX = 0
 ShadowSize = 2
+DmaxBackSprite = 0,38
+DmaxFrontSprite = 0,27
 #-------------------------------
 [BRAVIARY,1]
 BackSprite = -5,38
 FrontSprite = 0,1
 ShadowX = 0
 ShadowSize = 2
+DmaxBackSprite = 0,0
+DmaxFrontSprite = 0,17
 #-------------------------------
 [SLIGGOO,1]
 BackSprite = 0,52
 FrontSprite = -1,22
 ShadowX = 0
 ShadowSize = 2
+DmaxBackSprite = 0,0
+DmaxFrontSprite = 0,30
 #-------------------------------
 [GOODRA,1]
 BackSprite = 1,38
 FrontSprite = -7,11
 ShadowX = 0
 ShadowSize = 2
+DmaxBackSprite = 0,0
+DmaxFrontSprite = 4,17
 #-------------------------------
 [AVALUGG,1]
 BackSprite = 0,64
 FrontSprite = -6,31
 ShadowX = 0
 ShadowSize = 3
+DmaxBackSprite = 0,0
+DmaxFrontSprite = 0,46
 #-------------------------------
 [DECIDUEYE,1]
 BackSprite = 0,48
 FrontSprite = 1,15
 ShadowX = 0
 ShadowSize = 2
+DmaxBackSprite = 0,0
+DmaxFrontSprite = 0,21
 #-------------------------------
 [WYRDEER]
 BackSprite = 0,44
@@ -137,6 +175,8 @@ BackSprite = 0,59
 FrontSprite = -6,14
 ShadowX = 2
 ShadowSize = 3
+DmaxBackSprite = 0,46
+DmaxFrontSprite = 1,20
 #-------------------------------
 [BASCULEGION]
 BackSprite = 0,38
@@ -167,6 +207,8 @@ BackSprite = 0,54
 FrontSprite = -4,14
 ShadowX = 0
 ShadowSize = 2
+DmaxBackSprite = 0,42
+DmaxFrontSprite = 1,7
 #-------------------------------
 [SPRIGATITO]
 BackSprite = 0,52
@@ -209,18 +251,25 @@ BackSprite = 0,45
 FrontSprite = 2,26
 ShadowX = 0
 ShadowSize = 1
+AllyScaleAnchor = 1,-36
+EnemyScaleAnchor = -3,-27
 #-------------------------------
 [QUAXWELL]
 BackSprite = 0,35
 FrontSprite = 1,21
 ShadowX = 0
 ShadowSize = 1
+AllyScaleAnchor = -1,-31
+EnemyScaleAnchor = -3,-23
 #-------------------------------
 [QUAQUAVAL]
-BackSprite = 0,54
+BackSprite = 6,24
 FrontSprite = 1,12
 ShadowX = 0
 ShadowSize = 2
+DmaxBackSprite = 0,54
+AllyScaleAnchor = -4,-22
+EnemyScaleAnchor = -4,-15
 #-------------------------------
 [LECHONK]
 BackSprite = 0,55
@@ -239,6 +288,8 @@ BackSprite = 6,58
 FrontSprite = -8,24
 ShadowX = 0
 ShadowSize = 2
+DmaxBackSprite = -2,58
+DmaxFrontSprite = -2,26
 #-------------------------------
 [TAROUNTULA]
 BackSprite = 0,46
@@ -287,18 +338,23 @@ BackSprite = 3,55
 FrontSprite = -3,28
 ShadowX = 0
 ShadowSize = 2
+AllyScaleAnchor = -4,-43
+EnemyScaleAnchor = 0,-29
 #-------------------------------
 [MAUSHOLD]
 BackSprite = 0,49
 FrontSprite = -2,29
 ShadowX = 0
 ShadowSize = 2
+AllyScaleAnchor = 0,-43
+EnemyScaleAnchor = 0,-29
 #-------------------------------
 [MAUSHOLD,1]
 BackSprite = 0,49
 FrontSprite = 0,29
 ShadowX = 0
 ShadowSize = 2
+DmaxFrontSprite = -2,29
 #-------------------------------
 [FIDOUGH]
 BackSprite = 0,55
@@ -539,6 +595,8 @@ BackSprite = -4,52
 FrontSprite = 4,6
 ShadowX = 0
 ShadowSize = 1
+DmaxBackSprite = 0,48
+DmaxFrontSprite = -4,14
 #-------------------------------
 [VAROOM]
 BackSprite = 0,56
@@ -629,12 +687,16 @@ BackSprite = 0,59
 FrontSprite = 1,38
 ShadowX = 0
 ShadowSize = 1
+DmaxBackSprite = 0,58
+DmaxFrontSprite = -1,31
 #-------------------------------
 [TATSUGIRI,2]
 BackSprite = 0,54
 FrontSprite = 2,38
 ShadowX = 0
 ShadowSize = 1
+DmaxBackSprite = 0,58
+DmaxFrontSprite = -1,31
 #-------------------------------
 [ANNIHILAPE]
 BackSprite = 0,42
@@ -665,6 +727,8 @@ BackSprite = -4,58
 FrontSprite = -4,29
 ShadowX = 0
 ShadowSize = 3
+DmaxBackSprite = 0,57
+DmaxFrontSprite = 0,33
 #-------------------------------
 [KINGAMBIT]
 BackSprite = 0,40
@@ -773,6 +837,8 @@ BackSprite = 0,58
 FrontSprite = -5,30
 ShadowX = 0
 ShadowSize = 1
+DmaxBackSprite = 0,37
+DmaxFrontSprite = 0,3
 #-------------------------------
 [GHOLDENGO]
 BackSprite = 0,46
@@ -887,24 +953,32 @@ BackSprite = 0,55
 FrontSprite = 0,10
 ShadowX = 0
 ShadowSize = 2
+DmaxBackSprite = 0,66
+DmaxFrontSprite = 6,15
 #-------------------------------
 [OGERPON,9]
 BackSprite = 2,62
 FrontSprite = 0,12
 ShadowX = 0
 ShadowSize = 2
+DmaxBackSprite = 0,66
+DmaxFrontSprite = 6,15
 #-------------------------------
 [OGERPON,10]
 BackSprite = -3,55
 FrontSprite = -1,4
 ShadowX = 0
 ShadowSize = 2
+DmaxBackSprite = 0,66
+DmaxFrontSprite = 6,15
 #-------------------------------
 [OGERPON,11]
 BackSprite = 0,58
 FrontSprite = 0,7
 ShadowX = 0
 ShadowSize = 2
+DmaxBackSprite = 0,66
+DmaxFrontSprite = 6,15
 #-------------------------------
 [ARCHALUDON]
 BackSprite = 0,58
@@ -953,12 +1027,16 @@ BackSprite = -9,91
 FrontSprite = 1,13
 ShadowX = 0
 ShadowSize = 3
+DmaxBackSprite = 0,58
+DmaxFrontSprite = 0,16
 #-------------------------------
 [TERAPAGOS,2]
 BackSprite = 0,53
 FrontSprite = 0,4
 ShadowX = 0
 ShadowSize = 3
+DmaxBackSprite = 0,58
+DmaxFrontSprite = 0,16
 #-------------------------------
 [PECHARUNT]
 BackSprite = 0,50
@@ -966,304 +1044,395 @@ FrontSprite = 0,7
 ShadowX = 0
 ShadowSize = 2
 #-------------------------------
-# PLZA
-#-------------------------------
 [RAICHU,2]
 BackSprite = 2,50
 FrontSprite = 0,18
 ShadowX = 0
 ShadowSize = 2
+DmaxBackSprite = 0,0
+DmaxFrontSprite = 15,16
 #-------------------------------
 [RAICHU,3]
 BackSprite = -12,42
 FrontSprite = 5,14
 ShadowX = 0
 ShadowSize = 2
+DmaxBackSprite = 0,0
+DmaxFrontSprite = 15,16
 #-------------------------------
 [CLEFABLE,1]
 BackSprite = 0,48
 FrontSprite = 0,6
 ShadowX = 0
 ShadowSize = 1
+DmaxBackSprite = 0,0
+DmaxFrontSprite = 3,29
 #-------------------------------
 [VICTREEBEL,1]
 BackSprite = 0,48
 FrontSprite = 4,7
 ShadowX = 0
 ShadowSize = 2
+DmaxBackSprite = 0,0
+DmaxFrontSprite = 0,20
 #-------------------------------
 [STARMIE,1]
 BackSprite = 0,58
 FrontSprite = 2,14
 ShadowX = 0
 ShadowSize = 2
+DmaxBackSprite = 0,0
+DmaxFrontSprite = 0,26
 #-------------------------------
 [DRAGONITE,1]
 BackSprite = -14,48
 FrontSprite = -6,2
 ShadowX = 0
 ShadowSize = 2
+DmaxBackSprite = 0,0
+DmaxFrontSprite = 9,9
 #-------------------------------
 [MEGANIUM,1]
 BackSprite = -4,48
 FrontSprite = -2,9
 ShadowX = 0
 ShadowSize = 2
+DmaxBackSprite = 0,0
+DmaxFrontSprite = 0,9
 #-------------------------------
 [FERALIGATR,1]
 BackSprite = 3,48
 FrontSprite = -3,16
 ShadowX = 0
 ShadowSize = 2
+DmaxBackSprite = 0,0
+DmaxFrontSprite = -6,14
+DmaxShadowX = 3
 #-------------------------------
 [SKARMORY,1]
 BackSprite = 0,50
 FrontSprite = 0,10
 ShadowX = 0
 ShadowSize = 2
+DmaxBackSprite = 0,0
+DmaxFrontSprite = 0,15
 #-------------------------------
 [CHIMECHO,1]
 BackSprite = 4,54
 FrontSprite = -3,-4
 ShadowX = 0
 ShadowSize = 2
+DmaxBackSprite = 0,0
+DmaxFrontSprite = 0,12
 #-------------------------------
 [ABSOL,2]
 BackSprite = 0,50
 FrontSprite = -2,16
 ShadowX = 0
 ShadowSize = 2
+DmaxBackSprite = 17,47
+DmaxFrontSprite = -2,38
 #-------------------------------
 [STARAPTOR,1]
 BackSprite = -1,51
 FrontSprite = 4,14
 ShadowX = 0
 ShadowSize = 2
+DmaxBackSprite = 0,0
+DmaxFrontSprite = 0,16
 #-------------------------------
 [GARCHOMP,2]
 BackSprite = 0,46
 FrontSprite = 10,4
 ShadowX = 0
 ShadowSize = 1
+DmaxBackSprite = 0,0
+DmaxFrontSprite = -8,9
 #-------------------------------
 [LUCARIO,2]
 BackSprite = 0,51
 FrontSprite = 1,16
 ShadowX = 0
 ShadowSize = 1
+DmaxBackSprite = 0,0
+DmaxFrontSprite = 0,16
 #-------------------------------
 [FROSLASS,1]
 BackSprite = 0,50
 FrontSprite = 0,6
 ShadowX = 0
 ShadowSize = 0
+DmaxBackSprite = 0,0
+DmaxFrontSprite = 6,19
 #-------------------------------
 [HEATRAN,1]
 BackSprite = 3,56
 FrontSprite = -1,20
 ShadowX = 0
 ShadowSize = 3
+DmaxBackSprite = 0,0
+DmaxFrontSprite = -2,32
 #-------------------------------
 [DARKRAI,1]
 BackSprite = 0,44
 FrontSprite = -10,3
 ShadowX = 0
 ShadowSize = 2
+DmaxBackSprite = 0,0
+DmaxFrontSprite = -7,15
 #-------------------------------
 [EMBOAR,1]
 BackSprite = 0,44
 FrontSprite = 0,12
 ShadowX = 0
 ShadowSize = 2
+DmaxBackSprite = 0,0
+DmaxFrontSprite = 0,23
 #-------------------------------
 [EXCADRILL,1]
 BackSprite = 4,50
 FrontSprite = -2,19
 ShadowX = 0
 ShadowSize = 2
+DmaxBackSprite = 0,0
+DmaxFrontSprite = -1,33
 #-------------------------------
 [SCOLIPEDE,1]
 BackSprite = 0,48
 FrontSprite = -10,4
 ShadowX = 0
 ShadowSize = 2
+DmaxBackSprite = 0,0
+DmaxFrontSprite = -7,17
 #-------------------------------
 [SCRAFTY,1]
 BackSprite = 0,56
 FrontSprite = -3,20
 ShadowX = 0
 ShadowSize = 1
+DmaxBackSprite = 0,0
+DmaxFrontSprite = 0,30
 #-------------------------------
 [EELEKTROSS,1]
 BackSprite = -4,45
 FrontSprite = -5,11
 ShadowX = 0
 ShadowSize = 2
+DmaxBackSprite = 0,0
+DmaxFrontSprite = -2,30
 #-------------------------------
 [CHANDELURE,1]
 BackSprite = 0,50
 FrontSprite = 0,7
 ShadowX = 0
 ShadowSize = 2
+DmaxBackSprite = 0,0
+DmaxFrontSprite = 0,21
 #-------------------------------
 [GOLURK,1]
 BackSprite = 2,42
 FrontSprite = 0,6
 ShadowX = 0
 ShadowSize = 2
+DmaxBackSprite = 0,0
+DmaxFrontSprite = 2,18
 #-------------------------------
 [CHESNAUGHT,1]
 BackSprite = 9,52
 FrontSprite = -4,15
 ShadowX = 0
 ShadowSize = 2
+DmaxBackSprite = 0,0
+DmaxFrontSprite = -4,20
 #-------------------------------
 [DELPHOX,1]
 BackSprite = 0,50
 FrontSprite = 0,2
 ShadowX = 0
 ShadowSize = 2
+DmaxBackSprite = 0,0
+DmaxFrontSprite = -6,14
 #-------------------------------
 [GRENINJA,3]
 BackSprite = 2,54
 FrontSprite = 2,2
 ShadowX = 0
 ShadowSize = 1
+DmaxBackSprite = 0,0
+DmaxFrontSprite = 3,31
 #-------------------------------
 [PYROAR,1]
 BackSprite = 0,37
 FrontSprite = 1,10
 ShadowX = 0
 ShadowSize = 2
+DmaxBackSprite = 0,0
+DmaxFrontSprite = 3,24
 #-------------------------------
 [FLOETTE,6]
 BackSprite = 0,20
 FrontSprite = 0,-10
 ShadowX = 0
 ShadowSize = 1
+DmaxBackSprite = 0,0
+DmaxFrontSprite = 5,32
 #-------------------------------
 [MEOWSTIC,2]
-BackSprite = 6,52
+BackSprite = 8,29
 FrontSprite = 0,12
 ShadowX = 0
 ShadowSize = 2
+DmaxBackSprite = 0,0
+DmaxFrontSprite = 0,32
+AllyScaleAnchor = -1,-30
+EnemyScaleAnchor = -2,-16
 #-------------------------------
 [MEOWSTIC,3]
-BackSprite = 6,52
+BackSprite = 8,29
 FrontSprite = 0,12
 ShadowX = 0
-ShadowSize = 1
+ShadowSize = 2
+DmaxBackSprite = 0,0
+DmaxFrontSprite = 0,32
+AllyScaleAnchor = -1,-30
+EnemyScaleAnchor = -2,-16
 #-------------------------------
 [MALAMAR,1]
 BackSprite = 0,66
 FrontSprite = 0,1
 ShadowX = 0
 ShadowSize = 1
+DmaxBackSprite = 0,0
+DmaxFrontSprite = 0,10
 #-------------------------------
 [BARBARACLE,1]
 BackSprite = 0,50
 FrontSprite = -1,5
 ShadowX = 0
 ShadowSize = 1
-#-------------------------------
-[DRAGALGE,1]
-BackSprite = 8,54
-FrontSprite = 0,6
-ShadowX = 0
-ShadowSize = 2
+DmaxBackSprite = 0,0
+DmaxFrontSprite = -2,18
 #-------------------------------
 [HAWLUCHA,1]
 BackSprite = 0,48
 FrontSprite = -4,20
 ShadowX = 0
 ShadowSize = 2
+DmaxBackSprite = 0,0
+DmaxFrontSprite = -3,29
 #-------------------------------
 [ZYGARDE,4]
 BackSprite = 0,52
 FrontSprite = -7,-4
 ShadowX = 0
 ShadowSize = 1
+DmaxBackSprite = 0,46
+DmaxFrontSprite = -1,9
 #-------------------------------
 [ZYGARDE,5]
 BackSprite = 0,52
 FrontSprite = -7,-4
 ShadowX = 0
 ShadowSize = 1
+DmaxBackSprite = 0,46
+DmaxFrontSprite = -1,9
 #-------------------------------
 [CRABOMINABLE,1]
 BackSprite = 8,44
 FrontSprite = 2,2
 ShadowX = 0
 ShadowSize = 2
+DmaxBackSprite = 0,0
+DmaxFrontSprite = -3,12
+DmaxShadowX = 1
 #-------------------------------
 [GOLISOPOD,1]
 BackSprite = -3,44
 FrontSprite = 2,10
 ShadowX = 0
 ShadowSize = 3
+DmaxBackSprite = 0,0
+DmaxFrontSprite = 0,17
 #-------------------------------
 [DRAMPA,1]
 BackSprite = 0,30
 FrontSprite = -2,12
 ShadowX = 0
 ShadowSize = 2
+DmaxBackSprite = 0,0
+DmaxFrontSprite = -3,27
 #-------------------------------
 [MAGEARNA,2]
 BackSprite = 0,48
 FrontSprite = 0,8
 ShadowX = 0
 ShadowSize = 2
+DmaxBackSprite = 0,0
+DmaxFrontSprite = 0,24
 #-------------------------------
 [MAGEARNA,3]
 BackSprite = 0,48
 FrontSprite = 0,8
 ShadowX = 0
 ShadowSize = 2
+DmaxBackSprite = 0,0
+DmaxFrontSprite = 0,24
 #-------------------------------
 [ZERAORA,1]
 BackSprite = 0,53
 FrontSprite = 1,12
 ShadowX = 0
 ShadowSize = 3
+DmaxBackSprite = 0,45
+DmaxFrontSprite = 10,27
 #-------------------------------
 [FALINKS,1]
 BackSprite = 4,54
 FrontSprite = -4,12
 ShadowX = 0
 ShadowSize = 2
+DmaxBackSprite = 0,0
+DmaxFrontSprite = -1,44
 #-------------------------------
 [SCOVILLAIN,1]
 BackSprite = 0,51
 FrontSprite = -2,19
 ShadowX = 0
 ShadowSize = 2
+DmaxFrontSprite = -7,18
 #-------------------------------
 [GLIMMORA,1]
 BackSprite = 0,50
 FrontSprite = 0,6
 ShadowX = 0
 ShadowSize = 1
+DmaxBackSprite = 0,51
 #-------------------------------
 [TATSUGIRI,3]
 BackSprite = 11,47
 FrontSprite = -1,31
 ShadowX = 0
 ShadowSize = 2
+DmaxBackSprite = 0,58
 #-------------------------------
 [TATSUGIRI,4]
 BackSprite = 11,47
 FrontSprite = -1,31
 ShadowX = 0
 ShadowSize = 2
+DmaxBackSprite = 0,58
 #-------------------------------
 [TATSUGIRI,5]
 BackSprite = 11,47
 FrontSprite = -1,31
 ShadowX = 0
 ShadowSize = 2
+DmaxBackSprite = 0,58
 #-------------------------------
 [BAXCALIBUR,1]
 BackSprite = -7,47
 FrontSprite = 2,6
 ShadowX = 0
 ShadowSize = 2
+DmaxBackSprite = 0,54
+DmaxFrontSprite = 5,13

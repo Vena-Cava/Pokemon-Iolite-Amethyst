@@ -347,22 +347,14 @@ def pbTrainerTypeEditor
   pbListScreenBlock(_INTL("Trainer Types"), TrainerTypeLister.new(0, true)) do |button, tr_type|
     if tr_type
       case button
-<<<<<<< Updated upstream
       when :action
-=======
-      when Input::ACTION
->>>>>>> Stashed changes
         if tr_type.is_a?(Symbol) && pbConfirmMessageSerious("Delete this trainer type?")
           GameData::TrainerType::DATA.delete(tr_type)
           GameData::TrainerType.save
           pbConvertTrainerData
           pbMessage(_INTL("The Trainer type was deleted."))
         end
-<<<<<<< Updated upstream
       when :use
-=======
-      when Input::USE
->>>>>>> Stashed changes
         if tr_type.is_a?(Symbol)
           t_data = GameData::TrainerType.get(tr_type)
           data = []
@@ -488,22 +480,14 @@ def pbTrainerBattleEditor
   pbListScreenBlock(_INTL("Trainer Battles"), TrainerBattleLister.new(0, true)) do |button, trainer_id|
     if trainer_id
       case button
-<<<<<<< Updated upstream
       when :action
-=======
-      when Input::ACTION
->>>>>>> Stashed changes
         if trainer_id.is_a?(Array) && pbConfirmMessageSerious("Delete this trainer battle?")
           tr_data = GameData::Trainer::DATA[trainer_id]
           GameData::Trainer::DATA.delete(trainer_id)
           modified = true
           pbMessage(_INTL("The Trainer battle was deleted."))
         end
-<<<<<<< Updated upstream
       when :use
-=======
-      when Input::USE
->>>>>>> Stashed changes
         if trainer_id.is_a?(Array)   # Edit existing trainer
           tr_data = GameData::Trainer::DATA[trainer_id]
           old_type = tr_data.trainer_type
@@ -840,22 +824,14 @@ def pbItemEditor
   pbListScreenBlock(_INTL("Items"), ItemLister.new(0, true)) do |button, item|
     if item
       case button
-<<<<<<< Updated upstream
       when :action
-=======
-      when Input::ACTION
->>>>>>> Stashed changes
         if item.is_a?(Symbol) && pbConfirmMessageSerious("Delete this item?")
           GameData::Item::DATA.delete(item)
           GameData::Item.save
           Compiler.write_items
           pbMessage(_INTL("The item was deleted."))
         end
-<<<<<<< Updated upstream
       when :use
-=======
-      when Input::USE
->>>>>>> Stashed changes
         if item.is_a?(Symbol)
           itm = GameData::Item.get(item)
           data = []
@@ -952,22 +928,14 @@ def pbPokemonEditor
   pbListScreenBlock(_INTL("Pokémon species"), SpeciesLister.new(0, false)) do |button, species|
     if species
       case button
-<<<<<<< Updated upstream
       when :action
-=======
-      when Input::ACTION
->>>>>>> Stashed changes
         if species.is_a?(Symbol) && pbConfirmMessageSerious("Delete this species?")
           GameData::Species::DATA.delete(species)
           GameData::Species.save
           Compiler.write_pokemon
           pbMessage(_INTL("The species was deleted."))
         end
-<<<<<<< Updated upstream
       when :use
-=======
-      when Input::USE
->>>>>>> Stashed changes
         if species.is_a?(Symbol)
           spec = GameData::Species.get(species)
           data = []

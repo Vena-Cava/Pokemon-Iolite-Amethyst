@@ -1297,11 +1297,12 @@ module Compiler
   #=============================================================================
   def compile_animations
     Console.echo_li(_INTL("Compiling animations..."))
-    begin
-      pbanims = load_data("Data/PkmnAnimations.rxdata")
-    rescue
-      pbanims = PBAnimations.new
-    end
+  begin
+    pbanims = load_data("Data/PkmnAnimations.rxdata")
+  rescue
+    pbanims = PBAnimations.new
+  end
+  pbanims = PBAnimations.new if !pbanims
     changed = false
     move2anim = [{}, {}]
 #    anims = load_data("Data/Animations.rxdata")

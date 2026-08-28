@@ -1,0 +1,156 @@
+X Encounter Power - Type-Based
+- Forces a specific type of Pokémon to spawn, if possible. 
+- - Level 1: 50% to force spawn. 
+- - Level 2: 75% to force spawn. 
+- - Level 3: 100% to force spawn.
+"All Types" instead boosts the encounter rate by that percentage instead of forcing the encounter to be that type.
+
+X Repel Power - Type-Based 
+- Forces a specific type of Pokémon to not spawn, if possible. 
+- - Level 1: 50% to force to not spawn. 
+- - Level 2: 75% to force to not spawn. 
+- - Level 3: 100% to force to not spawn.
+"All Types" instead lowers the encounter rate by that percentage instead of forcing the encounter to not be that type.
+
+X Catching Power
+- Increases the catch rate in battle. 
+- - Level 1: ×1.1 bonus 
+- - Level 2: ×1.25 bonus 
+- - Level 3: ×2 bonus
+
+X Exp. Point Power - Type-Based
+- Increases the Experience received for defeating a specific type of Pokémon.
+- - Level 1: ×1.1 bonus 
+- - Level 2: ×1.3 bonus 
+- - Level 3: ×1.5 bonus
+
+X Base Point Power - Stat-Based
+- Increases the EV Points received for defeating Pokémon for specific stats. This stacks with the Power Items, such as 
+- - Level 1: +1 bonus
+- - Level 2: +2 bonus
+- - Level 3: +3 bonus
+This has an "All Stats" option.
+
+X Strength Power - Stat-Based
+- Increases the IVs of wild Pokémon in a specific stat.
+- - Level 1: Scale 15-31 
+- - Level 2: Scale 20-31 
+- - Level 3: Scale 25-31
+This has an "All Stats" option.
+
+X Ability Power
+- Increases the chances of wild Pokémon to be found with their Hidden Ability.
+- - Level 1: +10% Chance
+- - Level 2: +25% Chance
+- - Level 3: +50% Chance
+
+X Friendship Power
+- Increases the rate at which Pokémon gain happiness and how much friendship wild Pokémon start with. This stacks with the Soothe Bell.
+- - Level 1: ×1.1 Wild Starting Happiness, +1 Gain
+- - Level 2: ×1.3 Wild Starting Happiness, +2 Gain
+- - Level 3: ×1.5 Wild Starting Happiness, +3 Gain
+
+Hatching Power
+- Decreases the number of Hatch Cycles required for eggs to hatch.
+- - Level 1: -10% Cycles
+- - Level 2: -25% Cycles
+- - Level 3: -50% Cycles
+
+Daycare Power
+- Increases the rate at which Eggs are generated at the Daycare.
+- - Level 1: ×5 Egg generation rate
+- - Level 2: ×7 Egg generation rate
+- - Level 3: ×10 Egg generation rate
+
+Luck Power
+- Increases the Rarity Tier for Random Item Loot Tables, stacks with boosting abilities such as Super Luck.
+- - Level 1: +1 Tier
+- - Level 2: +2 Tiers
+- - Level 3: +3 Tiers
+
+Big Haul Power
+- Increases the chance for Item Loot Tables to drop 1 additional item.
+- - Level 1: 25% increase
+- - Level 2: 50% increase
+- - Level 3: 100% increase
+
+Item Drop Power - Type-Based
+- Increases the chance for a specific type of Pokémon to drop 1 additional item.
+- - Level 1: 25% increase
+- - Level 2: 50% increase
+- - Level 3: 100% increase
+This has no effect on specific species and forms.
+
+X Humungo Power - Type-Based
+- Increases the chance of large size Pokémon to appear in the wild.
+- - Level 1: Scale 128-255
+- - Level 2: Scale 160-255
+- - Level 3: Scale 192-255
+
+X Teensy Power - Type-Based
+- Increases the chance of small size Pokémon to appear in the wild.
+- - Level 1: Scale 0-127
+- - Level 2: Scale 0-95
+- - Level 3: Scale 0-63
+
+Sparkling Power - Type-Based
+- Increases the chance for Shiny Pokémon to appear in the wild.
+- - Level 1: 1 additional Shiny roll
+- - Level 2: 2 additional Shiny rolls
+- - Level 3: 3 additional Shiny rolls
+
+Title Power
+- Increases the chances of wild Pokémon to generate with a mark.
+- - Level 1: 1 additional Mark roll
+- - Level 2: 2 additional Mark rolls
+- - Level 3: 3 additional Mark rolls
+
+Raid Reward Power
+- Increases the item rewards from Raid Battles.
+- - Level 1: 1 extra item
+- - Level 2: 2 extra items
+- - Level 3: 3 extra items
+
+Raid Offense Power
+- Boosts the Physical and Special Attack Stats of your Team while in Raid Battles.
+- - Level 1: 25% increase
+- - Level 2: 50% increase
+- - Level 3: 100% increase
+
+Raid Defense Power
+- Boosts the Physical and Special Defense Stats of your Team while in Raid Battles.
+- - Level 1: 25% increase
+- - Level 2: 50% increase
+- - Level 3: 100% increase
+
+Raid Speed Power
+- Boosts the Speed Stat of your Team while in Raid Battles.
+- - Level 1: 25% increase
+- - Level 2: 50% increase
+- - Level 3: 100% increase
+
+X Fishing Power
+- Increases chances of reeling in a Pokémon or Item while fishing.
+- - Level 1: ×1.2 Chance
+- - Level 2: ×1.5 Chance
+- - Level 3: ×2 Chance
+
+X Fishing Item Power
+- Increases chances of reeling in an item instead of a Pokémon while fishing.
+- - Level 1: ×1.5 Chance
+- - Level 2: ×3 Chance
+- - Level 3: ×5 Chance
+Fishing up an item would use a Loot Table, similar to Rock Smash Rocks or PokéChests.
+
+X Money Power
+- Increases the amount of money won at the end of a Trainer Battle. This stacks with moves like Pay Day, Make it Rain, and items like the Amulet Coin.
+- - Level 1: 25% Bonus
+- - Level 2: 50% Bonus
+- - Level 3: 100% Bonus
+This does not effect Battle Points won at the end of Battle Facility battles.
+
+Bargaining Power
+- Decreases the cost of items at stores.
+- - Level 1: 10% Discount
+- - Level 2: 25% Discount
+- - Level 3: 50% Discount

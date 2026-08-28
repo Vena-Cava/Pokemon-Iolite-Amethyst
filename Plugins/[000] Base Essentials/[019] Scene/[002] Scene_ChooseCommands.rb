@@ -34,41 +34,23 @@ class Battle::Scene
       oldIndex = cw.index
       pbUpdate(cw)
       # Update selected command
-<<<<<<< Updated upstream
-      if Keybinds.press?(:left)
+      if Keybinds.trigger(:left)
         cw.index -= 1 if (cw.index & 1) == 1
-      elsif Keybinds.press?(:right)
+      elsif Keybinds.trigger(:right)
         cw.index += 1 if (cw.index & 1) == 0
-      elsif Keybinds.press?(:up)
+      elsif Keybinds.trigger(:up)
         cw.index -= 2 if (cw.index & 2) == 2
-      elsif Keybinds.press?(:down)
-=======
-      if Input.trigger?(Input::LEFT)
-        cw.index -= 1 if (cw.index & 1) == 1
-      elsif Input.trigger?(Input::RIGHT)
-        cw.index += 1 if (cw.index & 1) == 0
-      elsif Input.trigger?(Input::UP)
-        cw.index -= 2 if (cw.index & 2) == 2
-      elsif Input.trigger?(Input::DOWN)
->>>>>>> Stashed changes
+      elsif Keybinds.trigger(:down)
         cw.index += 2 if (cw.index & 2) == 0
       end
       pbPlayCursorSE if cw.index != oldIndex
       # Actions
-<<<<<<< Updated upstream
-      if Keybinds.press?(:use)                 # Confirm choice
-=======
-      if Input.trigger?(Input::USE)                 # Confirm choice
->>>>>>> Stashed changes
+      if Keybinds.trigger(:use)                 # Confirm choice
         pbPlayDecisionSE
         ret = cw.index
         @lastCmd[idxBattler] = ret
         break
-<<<<<<< Updated upstream
-      elsif Keybinds.press?(:back) && mode == 1   # Cancel
-=======
-      elsif Input.trigger?(Input::BACK) && mode == 1   # Cancel
->>>>>>> Stashed changes
+      elsif Keybinds.trigger(:back) && mode == 1   # Cancel
         pbPlayCancelSE
         break
       elsif Input.trigger?(Input::F9) && $DEBUG    # Debug menu
@@ -113,59 +95,33 @@ class Battle::Scene
       # General update
       pbUpdate(cw)
       # Update selected command
-<<<<<<< Updated upstream
-      if Keybinds.press?(:left)
+      if Keybinds.trigger(:left)
         cw.index -= 1 if (cw.index & 1) == 1
-      elsif Keybinds.press?(:right)
+      elsif Keybinds.trigger(:right)
         cw.index += 1 if battler.moves[cw.index + 1]&.id && (cw.index & 1) == 0
-      elsif Keybinds.press?(:up)
+      elsif Keybinds.trigger(:up)
         cw.index -= 2 if (cw.index & 2) == 2
-      elsif Keybinds.press?(:down)
-=======
-      if Input.trigger?(Input::LEFT)
-        cw.index -= 1 if (cw.index & 1) == 1
-      elsif Input.trigger?(Input::RIGHT)
-        cw.index += 1 if battler.moves[cw.index + 1]&.id && (cw.index & 1) == 0
-      elsif Input.trigger?(Input::UP)
-        cw.index -= 2 if (cw.index & 2) == 2
-      elsif Input.trigger?(Input::DOWN)
->>>>>>> Stashed changes
+      elsif Keybinds.trigger(:down)
         cw.index += 2 if battler.moves[cw.index + 2]&.id && (cw.index & 2) == 0
       end
       pbPlayCursorSE if cw.index != oldIndex
       # Actions
-<<<<<<< Updated upstream
-      if Keybinds.press?(:use)      # Confirm choice
-=======
-      if Input.trigger?(Input::USE)      # Confirm choice
->>>>>>> Stashed changes
+      if Keybinds.trigger(:use)      # Confirm choice
         pbPlayDecisionSE
         break if yield cw.index
         needFullRefresh = true
         needRefresh = true
-<<<<<<< Updated upstream
-      elsif Keybinds.press?(:back)   # Cancel fight menu
+      elsif Keybinds.trigger(:back)   # Cancel fight menu
         pbPlayCancelSE
         break if yield -1
         needRefresh = true
-      elsif Keybinds.press?(:action)   # Toggle Mega Evolution
-=======
-      elsif Input.trigger?(Input::BACK)   # Cancel fight menu
-        pbPlayCancelSE
-        break if yield -1
-        needRefresh = true
-      elsif Input.trigger?(Input::ACTION)   # Toggle Mega Evolution
->>>>>>> Stashed changes
+      elsif Keybinds.trigger(:action)   # Toggle Mega Evolution
         if megaEvoPossible
           pbPlayDecisionSE
           break if yield -2
           needRefresh = true
         end
-<<<<<<< Updated upstream
-      elsif Keybinds.press?(:special)   # Shift
-=======
-      elsif Input.trigger?(Input::SPECIAL)   # Shift
->>>>>>> Stashed changes
+      elsif Keybinds.trigger(:special)   # Shift
         if cw.shiftMode > 0
           pbPlayDecisionSE
           break if yield -3
@@ -442,15 +398,9 @@ class Battle::Scene
       pbUpdate(cw)
       # Update selected command
       if mode == 0   # Choosing just one target, can change index
-<<<<<<< Updated upstream
-        if Keybinds.press?(:left) || Keybinds.press?(:right)
+        if Keybinds.trigger(:left) || Keybinds.trigger(:right)
           inc = (cw.index.even?) ? -2 : 2
-          inc *= -1 if Keybinds.press?(:right)
-=======
-        if Input.trigger?(Input::LEFT) || Input.trigger?(Input::RIGHT)
-          inc = (cw.index.even?) ? -2 : 2
-          inc *= -1 if Input.trigger?(Input::RIGHT)
->>>>>>> Stashed changes
+          inc *= -1 if Keybinds.trigger(:right)
           indexLength = @battle.sideSizes[cw.index % 2] * 2
           newIndex = cw.index
           loop do
@@ -460,13 +410,8 @@ class Battle::Scene
             cw.index = newIndex
             break
           end
-<<<<<<< Updated upstream
-        elsif (Keybinds.press?(:up) && cw.index.even?) ||
-              (Keybinds.press?(:down) && cw.index.odd?)
-=======
-        elsif (Input.trigger?(Input::UP) && cw.index.even?) ||
-              (Input.trigger?(Input::DOWN) && cw.index.odd?)
->>>>>>> Stashed changes
+        elsif (Keybinds.trigger(:up) && cw.index.even?) ||
+              (Keybinds.trigger(:down) && cw.index.odd?)
           tryIndex = @battle.pbGetOpposingIndicesInOrder(cw.index)
           tryIndex.each do |idxBattlerTry|
             next if texts[idxBattlerTry].nil?
@@ -479,19 +424,11 @@ class Battle::Scene
           pbSelectBattler(cw.index, 2)   # Select the new battler/data box
         end
       end
-<<<<<<< Updated upstream
-      if Keybinds.press?(:use)   # Confirm
+      if Keybinds.trigger(:use)   # Confirm
         ret = cw.index
         pbPlayDecisionSE
         break
-      elsif Keybinds.press?(:back)   # Cancel
-=======
-      if Input.trigger?(Input::USE)   # Confirm
-        ret = cw.index
-        pbPlayDecisionSE
-        break
-      elsif Input.trigger?(Input::BACK)   # Cancel
->>>>>>> Stashed changes
+      elsif Keybinds.trigger(:back)   # Cancel
         ret = -1
         pbPlayCancelSE
         break

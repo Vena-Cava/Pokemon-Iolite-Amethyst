@@ -1,0 +1,82 @@
+﻿# See the documentation on the wiki to learn how to edit this file.
+#-------------------------------
+[LEADER_Blaine]
+Name = Gym Leader
+Gender = Male
+BaseMoney = 100
+SkillLevel = 100
+BattleBGM = Pokemon Iolite and Amethyst - Battle! Vs Gym Leader
+VictoryBGM = Battle victory leader
+#-------------------------------
+[LEADER_Blue]
+Name = Gym Leader
+Gender = Male
+BaseMoney = 100
+SkillLevel = 100
+BattleBGM = Pokemon Iolite and Amethyst - Battle! Vs Gym Leader
+VictoryBGM = Battle victory leader
+#-------------------------------
+[LEADER_Brock]
+Name = Gym Leader
+Gender = Male
+BaseMoney = 100
+SkillLevel = 100
+BattleBGM = Pokemon Iolite and Amethyst - Battle! Vs Gym Leader
+VictoryBGM = Battle victory leader
+#-------------------------------
+[LEADER_Erika]
+Name = Gym Leader
+Gender = Female
+BaseMoney = 100
+SkillLevel = 100
+BattleBGM = Pokemon Iolite and Amethyst - Battle! Vs Gym Leader
+VictoryBGM = Battle victory leader
+#-------------------------------
+[LEADER_Giovanni]
+Name = Gym Leader
+Gender = Male
+BaseMoney = 100
+SkillLevel = 100
+BattleBGM = Pokemon Iolite and Amethyst - Battle! Vs Gym Leader
+VictoryBGM = Battle victory leader
+#-------------------------------
+[LEADER_Janine]
+Name = Gym Leader
+Gender = Female
+BaseMoney = 100
+SkillLevel = 100
+BattleBGM = Pokemon Iolite and Amethyst - Battle! Vs Gym Leader
+VictoryBGM = Battle victory leader
+#-------------------------------
+[LEADER_Koga]
+Name = Gym Leader
+Gender = Male
+BaseMoney = 100
+SkillLevel = 100
+BattleBGM = Pokemon Iolite and Amethyst - Battle! Vs Gym Leader
+VictoryBGM = Battle victory leader
+#-------------------------------
+[LEADER_Misty]
+Name = Gym Leader
+Gender = Female
+BaseMoney = 100
+SkillLevel = 100
+BattleBGM = Pokemon Iolite and Amethyst - Battle! Vs Gym Leader
+VictoryBGM = Battle victory leader
+#-------------------------------
+[LEADER_Sabrina]
+Name = Gym Leader
+Gender = Female
+BaseMoney = 100
+SkillLevel = 100
+BattleBGM = Pokemon Iolite and Amethyst - Battle! Vs Gym Leader
+VictoryBGM = Battle victory leader
+#-------------------------------
+[LEADER_Surge]
+Name = Gym Leader
+Gender = Male
+BaseMoney = 100
+SkillLevel = 100
+BattleBGM = Pokemon Iolite and Amethyst - Battle! Vs Gym Leader
+VictoryBGM = Battle victory leader
+#-------------------------------

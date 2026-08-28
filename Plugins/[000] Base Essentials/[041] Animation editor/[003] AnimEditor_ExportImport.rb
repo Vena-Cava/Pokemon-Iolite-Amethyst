@@ -48,9 +48,9 @@ class SpritePositioner
     @sprites = {}
     @viewport = Viewport.new(0, 0, Graphics.width, Graphics.height)
     @viewport.z = 99999
-    battlebg   = "Graphics/Battlebacks/indoor1_bg"
-    playerbase = "Graphics/Battlebacks/indoor1_base0"
-    enemybase  = "Graphics/Battlebacks/indoor1_base1"
+    battlebg   = "Graphics/Battlebacks/wheat_bg"
+    playerbase = "Graphics/Battlebacks/wheat_base0"
+    enemybase  = "Graphics/Battlebacks/wheat_base1"
     @sprites["battle_bg"] = AnimatedPlane.new(@viewport)
     @sprites["battle_bg"].setBitmap(battlebg)
     @sprites["battle_bg"].z = 0
@@ -58,7 +58,7 @@ class SpritePositioner
     @sprites["base_0"] = IconSprite.new(baseX, baseY, @viewport)
     @sprites["base_0"].setBitmap(playerbase)
     @sprites["base_0"].x -= @sprites["base_0"].bitmap.width / 2 if @sprites["base_0"].bitmap
-    @sprites["base_0"].y -= @sprites["base_0"].bitmap.height if @sprites["base_0"].bitmap
+    @sprites["base_0"].y -= (@sprites["base_0"].bitmap.height - 72) if @sprites["base_0"].bitmap
     @sprites["base_0"].z = 1
     baseX, baseY = Battle::Scene.pbBattlerPosition(1)
     @sprites["base_1"] = IconSprite.new(baseX, baseY, @viewport)
@@ -202,28 +202,16 @@ class SpritePositioner
         pbChangeSpecies(@species, @form)
         refresh
       end
-<<<<<<< Updated upstream
-      if Keybinds.press?(:action)   # Cycle to next option
-=======
-      if Input.trigger?(Input::ACTION)   # Cycle to next option
->>>>>>> Stashed changes
+      if Keybinds.trigger(:action)   # Cycle to next option
         pbPlayDecisionSE
         @metricsChanged = true if metrics_data.shadow_size != oldval
         ret = true
         break
-<<<<<<< Updated upstream
-      elsif Keybinds.press?(:back)
+      elsif Keybinds.trigger(:back)
         metrics_data.shadow_size = oldval
         pbPlayCancelSE
         break
-      elsif Keybinds.press?(:use)
-=======
-      elsif Input.trigger?(Input::BACK)
-        metrics_data.shadow_size = oldval
-        pbPlayCancelSE
-        break
-      elsif Input.trigger?(Input::USE)
->>>>>>> Stashed changes
+      elsif Keybinds.trigger(:use)
         pbPlayDecisionSE
         @metricsChanged = true if metrics_data.shadow_size != oldval
         break
@@ -334,19 +322,11 @@ class SpritePositioner
       Input.update
       cw.update
       self.update
-<<<<<<< Updated upstream
-      if Keybinds.press?(:use)
+      if Keybinds.trigger(:use)
         pbPlayDecisionSE
         ret = cw.index
         break
-      elsif Keybinds.press?(:back)
-=======
-      if Input.trigger?(Input::USE)
-        pbPlayDecisionSE
-        ret = cw.index
-        break
-      elsif Input.trigger?(Input::BACK)
->>>>>>> Stashed changes
+      elsif Keybinds.trigger(:back)
         pbPlayCancelSE
         break
       end
@@ -387,19 +367,11 @@ class SpritePositioner
         refresh
       end
       self.update
-<<<<<<< Updated upstream
-      if Keybinds.press?(:back)
+      if Keybinds.trigger(:back)
         pbChangeSpecies(nil, nil)
         refresh
         break
-      elsif Keybinds.press?(:use)
-=======
-      if Input.trigger?(Input::BACK)
-        pbChangeSpecies(nil, nil)
-        refresh
-        break
-      elsif Input.trigger?(Input::USE)
->>>>>>> Stashed changes
+      elsif Keybinds.trigger(:use)
         pbChangeSpecies(allspecies[cw.index][1], allspecies[cw.index][2])
         ret = true
         break

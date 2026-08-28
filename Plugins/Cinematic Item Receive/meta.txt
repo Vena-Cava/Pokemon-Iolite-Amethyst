@@ -1,0 +1,4 @@
+﻿Name       = Cinematic Item Receive
+Version    = 1.0.
+Essentials = 21.1
+Credits    = LackDeJurane, Luka-SJ, TheSpritersResource

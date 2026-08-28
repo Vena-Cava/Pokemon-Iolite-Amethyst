@@ -163,15 +163,9 @@ class EventScene
       sprite.update
     end
     @onUpdate.trigger(self)
-<<<<<<< Updated upstream
-    if Keybinds.press?(:back)
+    if Keybinds.trigger(:back)
       @onBTrigger.trigger(self)
-    elsif Keybinds.press?(:use)
-=======
-    if Input.trigger?(Input::BACK)
-      @onBTrigger.trigger(self)
-    elsif Input.trigger?(Input::USE)
->>>>>>> Stashed changes
+    elsif Keybinds.trigger(:use)
       @onCTrigger.trigger(self)
     end
   end

@@ -1,4 +1,3 @@
-<<<<<<< Updated upstream
 #===============================================================================
 #
 #===============================================================================
@@ -243,35 +242,11 @@ class PokedexSearchSelectionSprite < Sprite
           self.y = @ystart + (@ygap * ((@minmax + 1) % 2))
         end
       end
-=======
-module GameData
-  class EggGroup
-    attr_reader :id
-    attr_reader :real_name
-
-    DATA = {}
-
-    extend ClassMethodsSymbols
-    include InstanceMethods
-
-    def self.load; end
-    def self.save; end
-
-    def initialize(hash)
-      @id        = hash[:id]
-      @real_name = hash[:name] || "Unnamed"
-    end
-
-    # @return [String] the translated name of this egg group
-    def name
-      return _INTL(@real_name)
->>>>>>> Stashed changes
     end
   end
 end
 
 #===============================================================================
-<<<<<<< Updated upstream
 # Pokédex main screen
 #===============================================================================
 class PokemonPokedex_Scene
@@ -962,7 +937,7 @@ class PokemonPokedex_Scene
       Graphics.update
       Input.update
       if [3, 4].include?(mode)
-        if Keybinds.press?(:up)
+        if Keybinds.trigger(:up)
           if index < -1   # From OK/Cancel
             minmax = 0
             index = selindex[minmax]
@@ -974,7 +949,7 @@ class PokemonPokedex_Scene
             pbPlayCursorSE
             pbRefreshDexSearchParam(mode, cmds, selindex, index)
           end
-        elsif Keybinds.press?(:down)
+        elsif Keybinds.trigger(:down)
           case minmax
           when 1
             minmax = 0
@@ -1024,7 +999,7 @@ class PokemonPokedex_Scene
           end
         end
       else
-        if Keybinds.press?(:up)
+        if Keybinds.trigger(:up)
           if index == -1   # From blank
             index = cmds.length - 1 - ((cmds.length - 1) % cols) - 1
           elsif index == -2   # From OK
@@ -1037,7 +1012,7 @@ class PokemonPokedex_Scene
             index -= cols
           end
           pbPlayCursorSE if index != oldindex
-        elsif Keybinds.press?(:down)
+        elsif Keybinds.trigger(:down)
           if index == -1   # From blank
             index = -3
           elsif index >= 0
@@ -1050,7 +1025,7 @@ class PokemonPokedex_Scene
             end
           end
           pbPlayCursorSE if index != oldindex
-        elsif Keybinds.press?(:left)
+        elsif Keybinds.trigger(:left)
           if index == -3
             index = -2
           elsif index == -1
@@ -1059,7 +1034,7 @@ class PokemonPokedex_Scene
             index -= 1
           end
           pbPlayCursorSE if index != oldindex
-        elsif Keybinds.press?(:right)
+        elsif Keybinds.trigger(:right)
           if index == -2
             index = -3
           elsif index == cmds.length - 1 && mode != 0
@@ -1070,14 +1045,14 @@ class PokemonPokedex_Scene
           pbPlayCursorSE if index != oldindex
         end
       end
-      if Keybinds.press?(:action)
+      if Keybinds.trigger(:action)
         index = -2
         pbPlayCursorSE if index != oldindex
-      elsif Keybinds.press?(:back)
+      elsif Keybinds.trigger(:back)
         pbPlayCloseMenuSE
         ret = nil
         break
-      elsif Keybinds.press?(:use)
+      elsif Keybinds.trigger(:use)
         if index == -2      # OK
           pbSEPlay("GUI pokedex open")
           ret = selindex
@@ -1161,7 +1136,7 @@ class PokemonPokedex_Scene
         @sprites["searchcursor"].index = index
         oldindex = index
       end
-      if Keybinds.press?(:up)
+      if Keybinds.trigger(:up)
         if index >= 7
           index = 4
         elsif index == 5
@@ -1170,14 +1145,14 @@ class PokemonPokedex_Scene
           index -= 1
         end
         pbPlayCursorSE if index != oldindex
-      elsif Keybinds.press?(:down)
+      elsif Keybinds.trigger(:down)
         if [4, 6].include?(index)
           index = 8
         elsif index < 7
           index += 1
         end
         pbPlayCursorSE if index != oldindex
-      elsif Keybinds.press?(:left)
+      elsif Keybinds.trigger(:left)
         if index == 5
           index = 1
         elsif index == 6
@@ -1186,7 +1161,7 @@ class PokemonPokedex_Scene
           index -= 1
         end
         pbPlayCursorSE if index != oldindex
-      elsif Keybinds.press?(:right)
+      elsif Keybinds.trigger(:right)
         if index == 1
           index = 5
         elsif index >= 2 && index <= 4
@@ -1195,13 +1170,13 @@ class PokemonPokedex_Scene
           index += 1
         end
         pbPlayCursorSE if index != oldindex
-      elsif Keybinds.press?(:action)
+      elsif Keybinds.trigger(:action)
         index = 8
         pbPlayCursorSE if index != oldindex
-      elsif Keybinds.press?(:back)
+      elsif Keybinds.trigger(:back)
         pbPlayCloseMenuSE
         break
-      elsif Keybinds.press?(:use)
+      elsif Keybinds.trigger(:use)
         pbSEPlay("GUI pokedex open") if index != 9
         case index
         when 0   # Choose sort order
@@ -1288,19 +1263,19 @@ class PokemonPokedex_Scene
           $PokemonGlobal.pokedexIndex[pbGetSavePositionIndex] = @sprites["pokedex"].index if !@searchResults
           pbRefresh
         end
-        if Keybinds.press?(:action)
+        if Keybinds.trigger(:action)
           pbSEPlay("GUI pokedex open")
           @sprites["pokedex"].active = false
           pbDexSearch
           @sprites["pokedex"].active = true
-        elsif Keybinds.press?(:back)
+        elsif Keybinds.trigger(:back)
           pbPlayCloseMenuSE
           if @searchResults
             pbCloseSearch
           else
             break
           end
-        elsif Keybinds.press?(:use)
+        elsif Keybinds.trigger(:use)
           if $player.seen?(@sprites["pokedex"].species)
             pbSEPlay("GUI pokedex open")
             pbDexEntry(@sprites["pokedex"].index)
@@ -1325,80 +1300,3 @@ class PokemonPokedexScreen
     @scene.pbEndScene
   end
 end
-=======
-
-GameData::EggGroup.register({
-  :id   => :Undiscovered,
-  :name => _INTL("Undiscovered")
-})
-
-GameData::EggGroup.register({
-  :id   => :Monster,
-  :name => _INTL("Monster")
-})
-
-GameData::EggGroup.register({
-  :id   => :Water1,
-  :name => _INTL("Water 1")
-})
-
-GameData::EggGroup.register({
-  :id   => :Bug,
-  :name => _INTL("Bug")
-})
-
-GameData::EggGroup.register({
-  :id   => :Flying,
-  :name => _INTL("Flying")
-})
-
-GameData::EggGroup.register({
-  :id   => :Field,
-  :name => _INTL("Field")
-})
-
-GameData::EggGroup.register({
-  :id   => :Fairy,
-  :name => _INTL("Fairy")
-})
-
-GameData::EggGroup.register({
-  :id   => :Grass,
-  :name => _INTL("Grass")
-})
-
-GameData::EggGroup.register({
-  :id   => :Humanlike,
-  :name => _INTL("Humanlike")
-})
-
-GameData::EggGroup.register({
-  :id   => :Water3,
-  :name => _INTL("Water 3")
-})
-
-GameData::EggGroup.register({
-  :id   => :Mineral,
-  :name => _INTL("Mineral")
-})
-
-GameData::EggGroup.register({
-  :id   => :Amorphous,
-  :name => _INTL("Amorphous")
-})
-
-GameData::EggGroup.register({
-  :id   => :Water2,
-  :name => _INTL("Water 2")
-})
-
-GameData::EggGroup.register({
-  :id   => :Ditto,
-  :name => _INTL("Ditto")
-})
-
-GameData::EggGroup.register({
-  :id   => :Dragon,
-  :name => _INTL("Dragon")
-})
->>>>>>> Stashed changes

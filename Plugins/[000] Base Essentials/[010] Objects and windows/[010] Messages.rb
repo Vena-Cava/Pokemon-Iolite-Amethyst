@@ -184,11 +184,7 @@ def pbChooseNumber(msgwindow, params)
     cmdwindow.update
     msgwindow&.update
     yield if block_given?
-<<<<<<< Updated upstream
     if Keybinds.trigger?(:use)
-=======
-    if Input.trigger?(Input::USE)
->>>>>>> Stashed changes
       ret = cmdwindow.number
       if ret > maximum
         pbPlayBuzzerSE
@@ -198,11 +194,7 @@ def pbChooseNumber(msgwindow, params)
         pbPlayDecisionSE
         break
       end
-<<<<<<< Updated upstream
     elsif Keybinds.trigger?(:back)
-=======
-    elsif Input.trigger?(Input::BACK)
->>>>>>> Stashed changes
       pbPlayCancelSE
       ret = cancelNumber
       break
@@ -655,11 +647,7 @@ def pbMessageDisplay(msgwindow, message, letterbyletter = true, commandProc = ni
       msgwindow.resume if msgwindow.busy?
       break if !msgwindow.busy?
     end
-<<<<<<< Updated upstream
     if Keybinds.trigger?(:use) || Keybinds.trigger?(:back)
-=======
-    if Input.trigger?(Input::USE) || Input.trigger?(Input::BACK)
->>>>>>> Stashed changes
       if msgwindow.busy?
         pbPlayDecisionSE if msgwindow.pausing?
         msgwindow.resume
@@ -754,11 +742,7 @@ def pbShowCommands(msgwindow, commands = nil, cmdIfCancel = 0, defaultCmd = 0)
     cmdwindow.update
     msgwindow&.update
     yield if block_given?
-<<<<<<< Updated upstream
     if Keybinds.trigger?(:back)
-=======
-    if Input.trigger?(Input::BACK)
->>>>>>> Stashed changes
       if cmdIfCancel > 0
         command = cmdIfCancel - 1
         break
@@ -767,11 +751,7 @@ def pbShowCommands(msgwindow, commands = nil, cmdIfCancel = 0, defaultCmd = 0)
         break
       end
     end
-<<<<<<< Updated upstream
     if Keybinds.trigger?(:use)
-=======
-    if Input.trigger?(Input::USE)
->>>>>>> Stashed changes
       command = cmdwindow.index
       break
     end
@@ -806,11 +786,7 @@ def pbShowCommandsWithHelp(msgwindow, commands, help, cmdIfCancel = 0, defaultCm
       msgwin.text = help[cmdwindow.index] if oldindex != cmdwindow.index
       msgwin.update
       yield if block_given?
-<<<<<<< Updated upstream
       if Keybinds.trigger?(:back)
-=======
-      if Input.trigger?(Input::BACK)
->>>>>>> Stashed changes
         if cmdIfCancel > 0
           command = cmdIfCancel - 1
           break
@@ -819,11 +795,7 @@ def pbShowCommandsWithHelp(msgwindow, commands, help, cmdIfCancel = 0, defaultCm
           break
         end
       end
-<<<<<<< Updated upstream
       if Keybinds.trigger?(:use)
-=======
-      if Input.trigger?(Input::USE)
->>>>>>> Stashed changes
         command = cmdwindow.index
         break
       end
@@ -849,11 +821,7 @@ def pbMessageWaitForInput(msgwindow, frames, showPause = false)
     msgwindow&.update
     pbUpdateSceneMap
     yield if block_given?
-<<<<<<< Updated upstream
     break if Keybinds.trigger?(:use) || Keybinds.trigger?(:back)
-=======
-    break if Input.trigger?(Input::USE) || Input.trigger?(Input::BACK)
->>>>>>> Stashed changes
     break if System.uptime - timer_start >= frames / 20.0
   end
   msgwindow.stopPause if msgwindow && showPause
@@ -886,12 +854,9 @@ def pbFreeText(msgwindow, currenttext, passwordbox, maxlength, width = 240)
   Input.text_input = false
   window.dispose
   Input.update
-<<<<<<< Updated upstream
 
   Keybinds.wait_for_all_released if defined?(Keybinds)
 
-=======
->>>>>>> Stashed changes
   return ret
 end
 

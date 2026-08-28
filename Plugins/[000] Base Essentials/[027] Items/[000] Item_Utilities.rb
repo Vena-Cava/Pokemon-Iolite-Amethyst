@@ -215,11 +215,7 @@ def pbTopRightWindow(text, scene = nil)
     Input.update
     window.update
     scene&.pbUpdate
-<<<<<<< Updated upstream
-    break if Keybinds.press?(:use)
-=======
-    break if Input.trigger?(Input::USE)
->>>>>>> Stashed changes
+    break if Keybinds.trigger(:use)
   end
   window.dispose
 end

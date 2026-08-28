@@ -258,3 +258,82 @@ class TrainerBattleLister
         return tdw_debug_search_commands_tb
     end
 end
+
+#===============================================================================
+# TDW Debug List Search - Pokémon Metrics Editor Support
+# Press F while choosing a species in Edit pokemon_metrics.txt
+#===============================================================================
+
+class SpritePositioner
+  def pbChooseSpecies
+    if @starting
+      pbFadeInAndShow(@sprites) { update }
+      @starting = false
+    end
+
+    cw = Window_CommandPokemonEx.newEmpty(0, 0, 260, 176, @viewport)
+    cw.rowHeight = 24
+    pbSetSmallFont(cw.contents)
+    cw.x = Graphics.width - cw.width
+    cw.y = Graphics.height - cw.height
+
+    allspecies = []
+    GameData::Species.each do |sp|
+      name = (sp.form == 0) ? sp.name : _INTL("{1} (form {2})", sp.real_name, sp.form)
+      allspecies.push([sp.id, sp.species, sp.form, name]) if name && !name.empty?
+    end
+    allspecies.sort! { |a, b| a[3] <=> b[3] }
+
+    fullspecies = allspecies.clone
+    commands = allspecies.map { |sp| sp[3] }
+
+    cw.commands = commands
+    cw.index = @oldSpeciesIndex || 0
+
+    ret = false
+    oldindex = -1
+
+    loop do
+      Graphics.update
+      Input.update
+      cw.update
+
+      if cw.index != oldindex
+        oldindex = cw.index
+        pbChangeSpecies(allspecies[cw.index][1], allspecies[cw.index][2])
+        refresh
+      end
+
+      self.update
+
+      if Input.triggerex?(:F)
+        search_commands = fullspecies.map { |sp| sp[3] }
+        results = pbOpenGenericListSearch(search_commands, 0)
+
+        if results && results.length > 0
+          allspecies = []
+          results.each { |i| allspecies.push(fullspecies[i]) }
+
+          commands = allspecies.map { |sp| sp[3] }
+          cw.commands = commands
+          cw.index = 0
+          oldindex = -1
+        end
+
+      elsif Keybinds.trigger?(:back)
+        pbChangeSpecies(nil, nil)
+        refresh
+        break
+
+      elsif Keybinds.trigger?(:use)
+        pbChangeSpecies(allspecies[cw.index][1], allspecies[cw.index][2])
+        ret = true
+        break
+      end
+    end
+
+    @oldSpeciesIndex = cw.index
+    cw.dispose
+    return ret
+  end
+end

@@ -102,11 +102,7 @@ class Battle::Scene
 
   def pbInputUpdate
     Input.update
-<<<<<<< Updated upstream
-    if Keybinds.press?(:back) && @abortable && !@aborted
-=======
-    if Input.trigger?(Input::BACK) && @abortable && !@aborted
->>>>>>> Stashed changes
+    if Keybinds.trigger(:back) && @abortable && !@aborted
       @aborted = true
       @battle.pbAbort
     end
@@ -212,11 +208,7 @@ class Battle::Scene
           break
         end
       end
-<<<<<<< Updated upstream
-      if Keybinds.press?(:back) || Keybinds.press?(:use) || @abortable
-=======
-      if Input.trigger?(Input::BACK) || Input.trigger?(Input::USE) || @abortable
->>>>>>> Stashed changes
+      if Keybinds.trigger(:back) || Keybinds.trigger(:use) || @abortable
         if cw.busy?
           pbPlayDecisionSE if cw.pausing? && !@abortable
           cw.skipAhead
@@ -257,11 +249,7 @@ class Battle::Scene
           end
         end
       end
-<<<<<<< Updated upstream
-      if Keybinds.press?(:back) || Keybinds.press?(:use) || @abortable
-=======
-      if Input.trigger?(Input::BACK) || Input.trigger?(Input::USE) || @abortable
->>>>>>> Stashed changes
+      if Keybinds.trigger(:back) || Keybinds.trigger(:use) || @abortable
         if cw.busy?
           pbPlayDecisionSE if cw.pausing? && !@abortable
           cw.skipAhead
@@ -295,11 +283,7 @@ class Battle::Scene
       cw.visible = (!dw.busy?)
       pbUpdate(cw)
       dw.update
-<<<<<<< Updated upstream
-      if Keybinds.press?(:back) && defaultValue >= 0
-=======
-      if Input.trigger?(Input::BACK) && defaultValue >= 0
->>>>>>> Stashed changes
+      if Keybinds.trigger(:back) && defaultValue >= 0
         if dw.busy?
           pbPlayDecisionSE if dw.pausing?
           dw.resume
@@ -308,11 +292,7 @@ class Battle::Scene
           dw.text = ""
           return defaultValue
         end
-<<<<<<< Updated upstream
-      elsif Keybinds.press?(:use)
-=======
-      elsif Input.trigger?(Input::USE)
->>>>>>> Stashed changes
+      elsif Keybinds.trigger(:use)
         if dw.busy?
           pbPlayDecisionSE if dw.pausing?
           dw.resume

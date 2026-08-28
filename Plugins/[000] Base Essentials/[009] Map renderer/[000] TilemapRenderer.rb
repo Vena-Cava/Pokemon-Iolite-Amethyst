@@ -588,22 +588,13 @@ class TilemapRenderer
           tile_y = j + map_display_y_tile
           @tiles[i][j].each_with_index do |tile, layer|
             tile_id = map.data[tile_x, tile_y, layer]
-<<<<<<< Updated upstream
-            tile_id = 0 if tile_id.nil?
-
-=======
->>>>>>> Stashed changes
             if do_full_refresh || tile.need_refresh || tile.tile_id != tile_id
               refresh_tile(tile, i, j, map, layer, tile_id)
             else
               refresh_tile_frame(tile, tile_id) if tile.animated && @autotiles.changed
-<<<<<<< Updated upstream
-              refresh_tile_coordinates(tile, i, j) if @screen_moved
-=======
               # Update tile's x/y coordinates
               refresh_tile_coordinates(tile, i, j) if @screen_moved
               # Update tile's z value
->>>>>>> Stashed changes
               refresh_tile_z(tile, map, j, layer, tile_id) if @screen_moved_vertically
             end
           end

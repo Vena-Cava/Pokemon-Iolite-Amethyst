@@ -1,4 +1,3 @@
-<<<<<<< Updated upstream
 #===============================================================================
 # Pokémon party buttons and menu
 #===============================================================================
@@ -71,37 +70,11 @@ class PokemonPartyConfirmCancelSprite < Sprite
       @overlaysprite.x     = self.x
       @overlaysprite.y     = self.y
       @overlaysprite.color = self.color
-=======
-# NOTE: The order these colors are registered are the order they are listed in
-#       the Pokédex search screen.
-module GameData
-  class BodyColor
-    attr_reader :id
-    attr_reader :real_name
-
-    DATA = {}
-
-    extend ClassMethodsSymbols
-    include InstanceMethods
-
-    def self.load; end
-    def self.save; end
-
-    def initialize(hash)
-      @id        = hash[:id]
-      @real_name = hash[:name] || "Unnamed"
-    end
-
-    # @return [String] the translated name of this body color
-    def name
-      return _INTL(@real_name)
->>>>>>> Stashed changes
     end
   end
 end
 
 #===============================================================================
-<<<<<<< Updated upstream
 #
 #===============================================================================
 class PokemonPartyCancelSprite < PokemonPartyConfirmCancelSprite
@@ -570,11 +543,11 @@ class PokemonParty_Scene
       Input.update
       self.update
       if @sprites["messagebox"].busy?
-        if Keybinds.press?(:use)
+        if Keybinds.trigger(:use)
           pbPlayDecisionSE if @sprites["messagebox"].pausing?
           @sprites["messagebox"].resume
         end
-      elsif Keybinds.press?(:back) || Keybinds.press?(:use)
+      elsif Keybinds.trigger(:back) || Keybinds.trigger(:use)
         break
       end
     end
@@ -599,10 +572,10 @@ class PokemonParty_Scene
         cmdwindow.update
         self.update
         if !@sprites["messagebox"].busy?
-          if Keybinds.press?(:back)
+          if Keybinds.trigger(:back)
             ret = false
             break
-          elsif Keybinds.press?(:use) && @sprites["messagebox"].resume
+          elsif Keybinds.trigger(:use) && @sprites["messagebox"].resume
             ret = (cmdwindow.index == 0)
             break
           end
@@ -630,11 +603,11 @@ class PokemonParty_Scene
         Input.update
         cmdwindow.update
         self.update
-        if Keybinds.press?(:back)
+        if Keybinds.trigger(:back)
           pbPlayCancelSE
           ret = -1
           break
-        elsif Keybinds.press?(:use)
+        elsif Keybinds.trigger(:use)
           pbPlayDecisionSE
           ret = cmdwindow.index
           break
@@ -799,7 +772,7 @@ class PokemonParty_Scene
         end
       end
       cancelsprite = Settings::MAX_PARTY_SIZE + ((@multiselect) ? 1 : 0)
-      if Keybinds.press?(:special) && @can_access_storage && canswitch != 2
+      if Keybinds.trigger(:special) && @can_access_storage && canswitch != 2
         pbPlayDecisionSE
         pbFadeOutIn do
           scene = PokemonStorageScene.new
@@ -807,15 +780,15 @@ class PokemonParty_Scene
           screen.pbStartScreen(0)
           pbHardRefresh
         end
-      elsif Keybinds.press?(:action) && canswitch == 1 && @activecmd != cancelsprite
+      elsif Keybinds.trigger(:action) && canswitch == 1 && @activecmd != cancelsprite
         pbPlayDecisionSE
         return [1, @activecmd]
-      elsif Keybinds.press?(:action) && canswitch == 2
+      elsif Keybinds.trigger(:action) && canswitch == 2
         return -1
-      elsif Keybinds.press?(:back)
+      elsif Keybinds.trigger(:back)
         pbPlayCloseMenuSE if !switching
         return -1
-      elsif Keybinds.press?(:use)
+      elsif Keybinds.trigger(:use)
         if @activecmd == cancelsprite
           (switching) ? pbPlayDecisionSE : pbPlayCloseMenuSE
           return -1
@@ -1586,55 +1559,3 @@ def pbChoosePokemonForTrade(variableNumber, nameVarNumber, wanted)
     next pkmn.species == wanted
   })
 end
-=======
-
-GameData::BodyColor.register({
-  :id   => :Red,
-  :name => _INTL("Red")
-})
-
-GameData::BodyColor.register({
-  :id   => :Blue,
-  :name => _INTL("Blue")
-})
-
-GameData::BodyColor.register({
-  :id   => :Yellow,
-  :name => _INTL("Yellow")
-})
-
-GameData::BodyColor.register({
-  :id   => :Green,
-  :name => _INTL("Green")
-})
-
-GameData::BodyColor.register({
-  :id   => :Black,
-  :name => _INTL("Black")
-})
-
-GameData::BodyColor.register({
-  :id   => :Brown,
-  :name => _INTL("Brown")
-})
-
-GameData::BodyColor.register({
-  :id   => :Purple,
-  :name => _INTL("Purple")
-})
-
-GameData::BodyColor.register({
-  :id   => :Gray,
-  :name => _INTL("Gray")
-})
-
-GameData::BodyColor.register({
-  :id   => :White,
-  :name => _INTL("White")
-})
-
-GameData::BodyColor.register({
-  :id   => :Pink,
-  :name => _INTL("Pink")
-})
->>>>>>> Stashed changes

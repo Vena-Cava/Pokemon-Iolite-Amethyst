@@ -242,11 +242,7 @@ class SlotMachineScene
           @sprites["credit"].score += 1
           this_tick = last_paid_tick
         end
-<<<<<<< Updated upstream
-        if Keybinds.press?(:use) || @sprites["credit"].score == Settings::MAX_COINS
-=======
-        if Input.trigger?(Input::USE) || @sprites["credit"].score == Settings::MAX_COINS
->>>>>>> Stashed changes
+        if Keybinds.trigger(:use) || @sprites["credit"].score == Settings::MAX_COINS
           @sprites["credit"].score += @sprites["payout"].score
           @sprites["payout"].score = 0
         end
@@ -336,11 +332,7 @@ class SlotMachineScene
           Graphics.update
           Input.update
           update
-<<<<<<< Updated upstream
-          if Keybinds.press?(:use)
-=======
-          if Input.trigger?(Input::USE)
->>>>>>> Stashed changes
+          if Keybinds.trigger(:use)
             pbSEPlay("Slots stop")
             if @sprites["reel1"].spinning?
               @sprites["reel1"].stopSpinning(@replay)
@@ -382,11 +374,7 @@ class SlotMachineScene
           Graphics.update
           Input.update
           update
-<<<<<<< Updated upstream
-          if Keybinds.press?(:down) && @wager < 3 && @sprites["credit"].score > 0
-=======
-          if Input.trigger?(Input::DOWN) && @wager < 3 && @sprites["credit"].score > 0
->>>>>>> Stashed changes
+          if Keybinds.trigger(:down) && @wager < 3 && @sprites["credit"].score > 0
             pbSEPlay("Slots coin")
             @wager += 1
             @sprites["credit"].score -= 1
@@ -400,11 +388,7 @@ class SlotMachineScene
               @sprites["row1"].visible = true
             end
           elsif @wager >= 3 || (@wager > 0 && @sprites["credit"].score == 0) ||
-<<<<<<< Updated upstream
-                (Keybinds.press?(:use) && @wager > 0) || @replay
-=======
-                (Input.trigger?(Input::USE) && @wager > 0) || @replay
->>>>>>> Stashed changes
+                (Keybinds.trigger(:use) && @wager > 0) || @replay
             if @replay
               @wager = 3
               (1..5).each { |i| @sprites["row#{i}"].visible = true }
@@ -413,11 +397,7 @@ class SlotMachineScene
             @sprites["reel2"].startSpinning
             @sprites["reel3"].startSpinning
             @gameRunning = true
-<<<<<<< Updated upstream
-          elsif Keybinds.press?(:back) && @wager == 0
-=======
-          elsif Input.trigger?(Input::BACK) && @wager == 0
->>>>>>> Stashed changes
+          elsif Keybinds.trigger(:back) && @wager == 0
             break
           end
           break if @gameRunning

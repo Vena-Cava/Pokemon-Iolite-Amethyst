@@ -1,4 +1,3 @@
-<<<<<<< Updated upstream
 #===============================================================================
 # Phone list of contacts
 #===============================================================================
@@ -23,45 +22,10 @@ class Window_PhoneList < Window_CommandPokemon
       super
     end
     drawCursor(index - 1, itemRect(index - 1))
-=======
-# NOTE: "Graphics/UI/statuses.png" also contains icons for being fainted and for
-#       having Pokérus, in that order, at the bottom of the graphic.
-#       "Graphics/UI/Battle/icon_statuses.png" also contains an icon for bad
-#       poisoning (toxic), at the bottom of the graphic.
-#       Both graphics automatically handle varying numbers of defined statuses,
-#       as long as their extra icons remain at the bottom of them.
-module GameData
-  class Status
-    attr_reader :id
-    attr_reader :real_name
-    attr_reader :animation
-    attr_reader :icon_position   # Where this status's icon is within statuses.png
-
-    DATA = {}
-
-    extend ClassMethodsSymbols
-    include InstanceMethods
-
-    def self.load; end
-    def self.save; end
-
-    def initialize(hash)
-      @id            = hash[:id]
-      @real_name     = hash[:name]          || "Unnamed"
-      @animation     = hash[:animation]
-      @icon_position = hash[:icon_position] || 0
-    end
-
-    # @return [String] the translated name of this status condition
-    def name
-      return _INTL(@real_name)
-    end
->>>>>>> Stashed changes
   end
 end
 
 #===============================================================================
-<<<<<<< Updated upstream
 #
 #===============================================================================
 class PokemonPhone_Scene
@@ -193,13 +157,13 @@ class PokemonPhone_Scene
         index = @sprites["list"].index
         # Get inputs
         if switch_index >= 0
-          if Keybinds.press?(:action) ||
-             Keybinds.press?(:use)
+          if Keybinds.trigger(:action) ||
+             Keybinds.trigger(:use)
             pbPlayDecisionSE
             @sprites["list"].switching = false
             switch_index = -1
             pbRefreshScreen
-          elsif Keybinds.press?(:back)
+          elsif Keybinds.trigger(:back)
             pbPlayCancelSE
             real_contacts = $PokemonGlobal.phone.contacts
             real_contacts.insert(switch_index, real_contacts.delete_at(@sprites["list"].index))
@@ -209,14 +173,14 @@ class PokemonPhone_Scene
             pbRefreshList
           end
         else
-          if Keybinds.press?(:action)
+          if Keybinds.trigger(:action)
             switch_index = @sprites["list"].index
             @sprites["list"].switching = true
             pbRefreshScreen
-          elsif Keybinds.press?(:back)
+          elsif Keybinds.trigger(:back)
             pbPlayCloseMenuSE
             return nil
-          elsif Keybinds.press?(:use)
+          elsif Keybinds.trigger(:use)
             return @contacts[index] if index >= 0
           end
         end
@@ -305,45 +269,3 @@ class PokemonPhoneScreen
     @scene.pbEndScene
   end
 end
-=======
-
-GameData::Status.register({
-  :id            => :NONE,
-  :name          => _INTL("None")
-})
-
-GameData::Status.register({
-  :id            => :SLEEP,
-  :name          => _INTL("Sleep"),
-  :animation     => "Sleep",
-  :icon_position => 0
-})
-
-GameData::Status.register({
-  :id            => :POISON,
-  :name          => _INTL("Poison"),
-  :animation     => "Poison",
-  :icon_position => 1
-})
-
-GameData::Status.register({
-  :id            => :BURN,
-  :name          => _INTL("Burn"),
-  :animation     => "Burn",
-  :icon_position => 2
-})
-
-GameData::Status.register({
-  :id            => :PARALYSIS,
-  :name          => _INTL("Paralysis"),
-  :animation     => "Paralysis",
-  :icon_position => 3
-})
-
-GameData::Status.register({
-  :id            => :FROZEN,
-  :name          => _INTL("Frozen"),
-  :animation     => "Frozen",
-  :icon_position => 4
-})
->>>>>>> Stashed changes

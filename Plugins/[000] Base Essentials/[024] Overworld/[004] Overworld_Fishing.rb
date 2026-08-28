@@ -77,11 +77,7 @@ def pbWaitMessage(msgWindow, time)
     message += ".   " if i > 0
     pbMessageDisplay(msgWindow, message, false)
     pbWait(0.4) do |delta_t|
-<<<<<<< Updated upstream
-      return true if Keybinds.press?(:use) || Keybinds.press?(:back)
-=======
-      return true if Input.trigger?(Input::USE) || Input.trigger?(Input::BACK)
->>>>>>> Stashed changes
+      return true if Keybinds.trigger(:use) || Keybinds.trigger(:back)
     end
   end
   return false
@@ -104,11 +100,7 @@ def pbWaitForInput(msgWindow, message, duration)
     else
       $game_player.pattern = 0
     end
-<<<<<<< Updated upstream
-    if Keybinds.press?(:use) || Keybinds.press?(:back)
-=======
-    if Input.trigger?(Input::USE) || Input.trigger?(Input::BACK)
->>>>>>> Stashed changes
+    if Keybinds.trigger(:use) || Keybinds.trigger(:back)
       $game_player.pattern = 0
       return true
     end

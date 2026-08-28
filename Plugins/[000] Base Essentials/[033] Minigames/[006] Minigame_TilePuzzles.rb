@@ -536,28 +536,17 @@ class TilePuzzleScene
         loop do
           Graphics.update
           Input.update
-<<<<<<< Updated upstream
-          break if Keybinds.press?(:use) || Keybinds.press?(:back)
-=======
-          break if Input.trigger?(Input::USE) || Input.trigger?(Input::BACK)
->>>>>>> Stashed changes
+          break if Keybinds.trigger(:use) || Keybinds.trigger(:back)
         end
         return true
       end
       # Input
-      @sprites["cursor"].selected = (Keybinds.press?(:use) && @game >= 3 && @game <= 6)
+      @sprites["cursor"].selected = (Keybinds.trigger(:use) && @game >= 3 && @game <= 6)
       dir = 0
-<<<<<<< Updated upstream
-      dir = 2 if Keybinds.press?(:down) || Keybinds.repeat?(:down)
-      dir = 4 if Keybinds.press?(:left) || Keybinds.repeat?(:left)
-      dir = 6 if Keybinds.press?(:right) || Keybinds.repeat?(:right)
-      dir = 8 if Keybinds.press?(:up) || Keybinds.repeat?(:up)
-=======
-      dir = 2 if Input.trigger?(Input::DOWN) || Keybinds.repeat?(:down)
-      dir = 4 if Input.trigger?(Input::LEFT) || Keybinds.repeat?(:left)
-      dir = 6 if Input.trigger?(Input::RIGHT) || Keybinds.repeat?(:right)
-      dir = 8 if Input.trigger?(Input::UP) || Keybinds.repeat?(:up)
->>>>>>> Stashed changes
+      dir = 2 if Keybinds.trigger(:down) || Keybinds.repeat?(:down)
+      dir = 4 if Keybinds.trigger(:left) || Keybinds.repeat?(:left)
+      dir = 6 if Keybinds.trigger(:right) || Keybinds.repeat?(:right)
+      dir = 8 if Keybinds.trigger(:up) || Keybinds.repeat?(:up)
       if dir > 0
         if @game == 3 || (@game != 3 && @sprites["cursor"].selected)
           if pbCanMoveInDir?(@sprites["cursor"].position, dir, true)
@@ -570,23 +559,13 @@ class TilePuzzleScene
             @sprites["cursor"].position = pbMoveCursor(@sprites["cursor"].position, dir)
           end
         end
-<<<<<<< Updated upstream
-      elsif (@game == 1 || @game == 2) && Keybinds.press?(:use)
+      elsif (@game == 1 || @game == 2) && Keybinds.trigger(:use)
         pbGrabTile(@sprites["cursor"].position)
-      elsif (@game == 2 && Keybinds.press?(:action)) ||
-            (@game == 5 && Keybinds.press?(:action)) ||
-            (@game == 7 && Keybinds.press?(:use))
+      elsif (@game == 2 && Keybinds.trigger(:action)) ||
+            (@game == 5 && Keybinds.trigger(:action)) ||
+            (@game == 7 && Keybinds.trigger(:use))
         pbRotateTile(@sprites["cursor"].position)
-      elsif Keybinds.press?(:back)
-=======
-      elsif (@game == 1 || @game == 2) && Input.trigger?(Input::USE)
-        pbGrabTile(@sprites["cursor"].position)
-      elsif (@game == 2 && Input.trigger?(Input::ACTION)) ||
-            (@game == 5 && Input.trigger?(Input::ACTION)) ||
-            (@game == 7 && Input.trigger?(Input::USE))
-        pbRotateTile(@sprites["cursor"].position)
-      elsif Input.trigger?(Input::BACK)
->>>>>>> Stashed changes
+      elsif Keybinds.trigger(:back)
         return false
       end
     end

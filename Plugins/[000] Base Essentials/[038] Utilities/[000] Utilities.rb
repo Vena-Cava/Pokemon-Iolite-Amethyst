@@ -611,7 +611,95 @@ end
 def pbScreenCapture
   t = Time.now
   filestart = t.strftime("[%Y-%m-%d] %H_%M_%S.%L")
-  capturefile = RTP.getSaveFileName(sprintf("%s.png", filestart))
+
+  screenshot_dir = sprintf("%s/Screenshots", AdvancedNewGame.save_directory)
+  Dir.mkdir(screenshot_dir) if !Dir.safe?(screenshot_dir)
+
+  filename = sprintf("%s.png", filestart)
+  capturefile = sprintf("%s/%s", screenshot_dir, filename)
+
   Graphics.screenshot(capturefile)
   pbSEPlay("Pkmn exp full") if FileTest.audio_exist?("Audio/SE/Pkmn exp full")
+
+  AdvancedNewGame.queue_screenshot_notice(filename)
+end
+
+module AdvancedNewGame
+  def self.queue_screenshot_notice(filename)
+    @screenshot_notices ||= []
+
+    @screenshot_notices.push({
+      text: _INTL("Saved Screenshot as {1}", filename),
+      timer: 150,
+      y: 12 + (@screenshot_notices.length * 28)
+    })
+  end
+
+  def self.update_screenshot_notices
+    return if !@screenshot_notices || @screenshot_notices.empty?
+
+    @screenshot_viewport ||= Viewport.new(0, 0, Graphics.width, Graphics.height)
+    @screenshot_viewport.z = 999999
+
+    @screenshot_sprite ||= BitmapSprite.new(Graphics.width, Graphics.height, @screenshot_viewport)
+    @screenshot_sprite.z = 999999
+
+    bitmap = @screenshot_sprite.bitmap
+    bitmap.clear
+    pbSetSystemFont(bitmap)
+
+    base_color = if defined?(LOCATION_TEXTCOLOR)
+      $PokemonSystem.from_current_menu_theme(LOCATION_TEXTCOLOR, Color.new(248, 248, 248))
+    else
+      Color.new(248, 248, 248)
+    end
+
+    outline_color = if defined?(LOCATION_TEXTOUTLINE)
+      $PokemonSystem.from_current_menu_theme(LOCATION_TEXTOUTLINE, Color.new(64, 64, 64))
+    else
+      Color.new(64, 64, 64)
+    end
+
+    @screenshot_notices.each_with_index do |notice, i|
+      target_y = 12 + (i * 28)
+      notice[:y] += (target_y - notice[:y]) * 0.25
+      notice[:timer] -= 1
+
+      opacity = [notice[:timer] * 8, 255].min
+      opacity = 0 if opacity < 0
+
+      base    = Color.new(base_color.red, base_color.green, base_color.blue, opacity)
+      outline = Color.new(outline_color.red, outline_color.green, outline_color.blue, opacity)
+
+      pbDrawTextPositions(bitmap, [[
+        notice[:text],
+        12,
+        notice[:y].round,
+        :left,
+        base,
+        outline,
+        true
+      ]])
+    end
+
+    @screenshot_notices.delete_if { |n| n[:timer] <= 0 }
+
+    if @screenshot_notices.empty?
+      @screenshot_sprite.dispose
+      @screenshot_sprite = nil
+      @screenshot_viewport.dispose
+      @screenshot_viewport = nil
+    end
+  end
+end
+
+module Graphics
+  class << self
+    alias advanced_new_game_screenshot_notice_update update
+
+    def update
+      AdvancedNewGame.update_screenshot_notices
+      advanced_new_game_screenshot_notice_update
+    end
+  end
 end

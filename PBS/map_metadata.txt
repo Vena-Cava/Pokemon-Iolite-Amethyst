@@ -11,7 +11,7 @@ MapPosition = 0,13,12
 BattleBack = field
 #-------------------------------
 [003]   # \PN's house
-Name = Vena's house
+Name = My house
 HealingSpot = 2,8,8
 MapPosition = 0,13,12
 #-------------------------------
@@ -445,7 +445,7 @@ MapPosition = 1,8,10
 SnapEdges = true
 BattleBack = forest
 MapSize = 1,1
-Environment = ForestGrass
+Environment = None
 #-------------------------------
 [077]   # Hidden Grotto
 Name = Hidden Grotto
@@ -556,6 +556,7 @@ Name = Daiseye Bay
 Outdoor = true
 ShowArea = true
 MapPosition = 0,18,16
+BattleBack = forest_snow
 MapSize = 1,111
 #-------------------------------
 [100]   # Daiseye Bay
@@ -580,5 +581,10 @@ Name = Windmill Forest
 Outdoor = true
 Bicycle = true
 MapPosition = 0,19,18
-BattleBack = forest
-Environment = ForestGrass
+BattleBack = forest_snow
+Environment = None
+#-------------------------------
+[110]   # Maisla Grand Arena Stadium
+Name = Maisla Grand Arena Stadium
+MapPosition = 3,17,10
+Flags = PowerSpot

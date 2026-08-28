@@ -1,0 +1,2 @@
+# Base tournament trainers file.
+# Add shared trainers here, or use extension files like tournament_trainers_kanto.txt.

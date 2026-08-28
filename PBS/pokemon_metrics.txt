@@ -121,28 +121,34 @@ DmaxBackSprite = 0,0
 DmaxFrontSprite = 0,18
 #-------------------------------
 [CATERPIE]
-BackSprite = 0,52
+BackSprite = 8,59
 FrontSprite = -1,30
 ShadowX = 0
 ShadowSize = 1
 DmaxBackSprite = 18,65
 DmaxFrontSprite = -4,44
+AllyScaleAnchor = -3,-53
+EnemyScaleAnchor = 0,-30
 #-------------------------------
 [METAPOD]
-BackSprite = 0,50
+BackSprite = 4,55
 FrontSprite = -2,32
 ShadowX = 0
 ShadowSize = 1
 DmaxBackSprite = 0,0
 DmaxFrontSprite = 0,38
+AllyScaleAnchor = -5,-48
+EnemyScaleAnchor = 0,-32
 #-------------------------------
 [BUTTERFREE]
-BackSprite = 0,48
-FrontSprite = 0,13
+BackSprite = 6,26
+FrontSprite = 0,6
 ShadowX = 0
 ShadowSize = 2
 DmaxBackSprite = 10,44
 DmaxFrontSprite = -1,29
+AllyScaleAnchor = -4,-50
+EnemyScaleAnchor = -2,-32
 #-------------------------------
 [WEEDLE]
 BackSprite = 0,52
@@ -279,6 +285,7 @@ ShadowX = 0
 ShadowSize = 1
 DmaxBackSprite = 0,0
 DmaxFrontSprite = 5,24
+EnemyScaleAnchor = -6,-28
 #-------------------------------
 [PIKACHU,9]
 BackSprite = 2,54
@@ -714,11 +721,13 @@ DmaxFrontSprite = 0,26
 #-------------------------------
 [ABRA]
 BackSprite = 0,54
-FrontSprite = 0,31
+FrontSprite = -4,33
 ShadowX = 0
 ShadowSize = 2
-DmaxBackSprite = 17,55
-DmaxFrontSprite = 0,36
+DmaxBackSprite = 8,79
+DmaxFrontSprite = -5,49
+AllyScaleAnchor = -1,-50
+EnemyScaleAnchor = -2,-35
 #-------------------------------
 [KADABRA]
 BackSprite = 0,48
@@ -3946,8 +3955,10 @@ BackSprite = 0,48
 FrontSprite = -2,22
 ShadowX = 0
 ShadowSize = 1
-DmaxBackSprite = 0,0
-DmaxFrontSprite = 0,20
+DmaxBackSprite = 3,56
+DmaxFrontSprite = -4,33
+AllyScaleAnchor = -5,-31
+EnemyScaleAnchor = 1,-21
 #-------------------------------
 [CRANIDOS]
 BackSprite = 0,45
@@ -4402,14 +4413,18 @@ ShadowX = 0
 ShadowSize = 2
 DmaxBackSprite = 5,52
 DmaxFrontSprite = 0,29
+AllyScaleAnchor = 0,-30
+EnemyScaleAnchor = -1,-20
 #-------------------------------
 [ABOMASNOW,1]
-BackSprite = 0,45
-FrontSprite = 3,15
+BackSprite = -7,38
+FrontSprite = -3,16
 ShadowX = 0
 ShadowSize = 3
-DmaxBackSprite = 0,0
-DmaxFrontSprite = 0,14
+DmaxBackSprite = -6,48
+DmaxFrontSprite = -5,22
+AllyScaleAnchor = 9,-30
+EnemyScaleAnchor = -4,-16
 #-------------------------------
 [WEAVILE]
 BackSprite = 0,48
@@ -4839,22 +4854,28 @@ ShadowX = 0
 ShadowSize = 1
 DmaxBackSprite = 0,0
 DmaxFrontSprite = -3,42
+AllyScaleAnchor = -8,-44
+EnemyScaleAnchor = 3,-30
 #-------------------------------
 [HERDIER]
-BackSprite = 0,52
+BackSprite = 0,42
 FrontSprite = -2,26
 ShadowX = 0
 ShadowSize = 2
 DmaxBackSprite = 0,0
 DmaxFrontSprite = -3,36
+AllyScaleAnchor = -5,-35
+EnemyScaleAnchor = 3,-25
 #-------------------------------
 [STOUTLAND]
-BackSprite = 0,54
+BackSprite = 0,44
 FrontSprite = 0,18
 ShadowX = 0
 ShadowSize = 2
 DmaxBackSprite = 0,0
 DmaxFrontSprite = 0,27
+AllyScaleAnchor = -2,-35
+EnemyScaleAnchor = 2,-20
 #-------------------------------
 [PURRLOIN]
 BackSprite = 0,54
@@ -6343,22 +6364,28 @@ ShadowX = 0
 ShadowSize = 1
 DmaxBackSprite = 0,0
 DmaxFrontSprite = 0,42
+AllyScaleAnchor = -2,-43
+EnemyScaleAnchor = -1,-28
 #-------------------------------
 [MEOWSTIC]
-BackSprite = 0,52
+BackSprite = 0,39
 FrontSprite = 4,22
 ShadowX = 0
 ShadowSize = 1
 DmaxBackSprite = 0,0
 DmaxFrontSprite = 0,32
+AllyScaleAnchor = 7,-34
+EnemyScaleAnchor = -6,-21
 #-------------------------------
 [MEOWSTIC,1]
-BackSprite = 0,48
+BackSprite = 0,41
 FrontSprite = 4,23
 ShadowX = 0
 ShadowSize = 1
 DmaxBackSprite = 0,0
 DmaxFrontSprite = 0,34
+AllyScaleAnchor = 8,-33
+EnemyScaleAnchor = -8,-22
 #-------------------------------
 [HONEDGE]
 BackSprite = 0,48
@@ -8324,3 +8351,54 @@ ShadowSize = 3
 DmaxBackSprite = 0,0
 DmaxFrontSprite = -7,13
 #-------------------------------
+[AFTIKOS]
+BackSprite = 0,0
+FrontSprite = 0,0
+ShadowX = 0
+ShadowSize = 2
+#-------------------------------
+[CIVOWL]
+BackSprite = 0,0
+FrontSprite = 0,0
+ShadowX = 0
+ShadowSize = 2
+#-------------------------------
+[JOLTLING]
+BackSprite = 0,0
+FrontSprite = 0,0
+ShadowX = 0
+ShadowSize = 2
+#-------------------------------
+[SAUCERER]
+BackSprite = 0,0
+FrontSprite = 0,0
+ShadowX = 0
+ShadowSize = 2
+#-------------------------------
+[RATTOSSK]
+BackSprite = 0,0
+FrontSprite = 0,0
+ShadowX = 0
+ShadowSize = 2
+#-------------------------------
+[TWREXX]
+BackSprite = 0,0
+FrontSprite = 0,0
+ShadowX = 0
+ShadowSize = 2
+#-------------------------------
+[SCRAPTILE]
+BackSprite = 0,0
+FrontSprite = 0,0
+ShadowX = 0
+ShadowSize = 2
+#-------------------------------
+[ABRA,1]
+BackSprite = 0,54
+FrontSprite = 0,29
+ShadowX = 0
+ShadowSize = 2
+DmaxBackSprite = 17,55
+DmaxFrontSprite = 0,36
+AllyScaleAnchor = -1,-50
+EnemyScaleAnchor = -2,-29

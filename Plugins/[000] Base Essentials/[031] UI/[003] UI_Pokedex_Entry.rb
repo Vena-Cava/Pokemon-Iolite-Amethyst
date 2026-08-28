@@ -1,4 +1,3 @@
-<<<<<<< Updated upstream
 #===============================================================================
 # Iolite & Amethyst Pokédex Screen
 #===============================================================================
@@ -874,16 +873,16 @@ class PokemonPokedexInfo_Scene
       Input.update
       pbUpdate
   
-      if Keybinds.press?(:up)
+      if Keybinds.trigger(:up)
         pbPlayCursorSE
         idx = (idx + @area_locations.length - 1) % @area_locations.length
-      elsif Keybinds.press?(:down)
+      elsif Keybinds.trigger(:down)
         pbPlayCursorSE
         idx = (idx + 1) % @area_locations.length
-      elsif Keybinds.press?(:back)
+      elsif Keybinds.trigger(:back)
         pbPlayCancelSE
         break
-      elsif Keybinds.press?(:use)
+      elsif Keybinds.trigger(:use)
         pbPlayDecisionSE
         break
       end
@@ -908,16 +907,16 @@ class PokemonPokedexInfo_Scene
       Input.update
       pbUpdate
   
-      if Keybinds.press?(:up)
+      if Keybinds.trigger(:up)
         pbPlayCursorSE
         idx = (idx + @area_encounters.length - 1) % @area_encounters.length
-      elsif Keybinds.press?(:down)
+      elsif Keybinds.trigger(:down)
         pbPlayCursorSE
         idx = (idx + 1) % @area_encounters.length
-      elsif Keybinds.press?(:back)
+      elsif Keybinds.trigger(:back)
         pbPlayCancelSE
         break
-      elsif Keybinds.press?(:use)
+      elsif Keybinds.trigger(:use)
         pbPlayDecisionSE
         break
       end
@@ -1076,16 +1075,16 @@ class PokemonPokedexInfo_Scene
       Graphics.update
       Input.update
       pbUpdate
-      if Keybinds.press?(:up)
+      if Keybinds.trigger(:up)
         pbPlayCursorSE
         index = (index + @available.length - 1) % @available.length
-      elsif Keybinds.press?(:down)
+      elsif Keybinds.trigger(:down)
         pbPlayCursorSE
         index = (index + 1) % @available.length
-      elsif Keybinds.press?(:back)
+      elsif Keybinds.trigger(:back)
         pbPlayCancelSE
         break
-      elsif Keybinds.press?(:use)
+      elsif Keybinds.trigger(:use)
         pbPlayDecisionSE
         break
       end
@@ -1101,13 +1100,13 @@ class PokemonPokedexInfo_Scene
       Input.update
       pbUpdate
       dorefresh = false
-      if Keybinds.press?(:action)
+      if Keybinds.trigger(:action)
         pbSEStop
         Pokemon.play_cry(@species, @form) if @page == 1
-      elsif Keybinds.press?(:back)
+      elsif Keybinds.trigger(:back)
         pbPlayCloseMenuSE
         break
-      elsif Keybinds.press?(:use)
+      elsif Keybinds.trigger(:use)
         pbSEPlay("GUI sel decision", 100, 100) rescue nil
         p [:USE, @page, defined?(@page_id) ? @page_id : nil]
         case @page
@@ -1127,7 +1126,7 @@ class PokemonPokedexInfo_Scene
             dorefresh = true
           end
         end
-      elsif Keybinds.press?(:up)
+      elsif Keybinds.trigger(:up)
         oldindex = @index
         pbGoToPrevious
         if @index != oldindex
@@ -1137,7 +1136,7 @@ class PokemonPokedexInfo_Scene
           (@page == 1) ? Pokemon.play_cry(@species, @form) : pbPlayCursorSE
           dorefresh = true
         end
-      elsif Keybinds.press?(:down)
+      elsif Keybinds.trigger(:down)
         oldindex = @index
         pbGoToNext
         if @index != oldindex
@@ -1147,7 +1146,7 @@ class PokemonPokedexInfo_Scene
           (@page == 1) ? Pokemon.play_cry(@species, @form) : pbPlayCursorSE
           dorefresh = true
         end
-      elsif Keybinds.press?(:left)
+      elsif Keybinds.trigger(:left)
         oldpage = @page
         @page -= 1
         @page = 1 if @page < 1
@@ -1156,7 +1155,7 @@ class PokemonPokedexInfo_Scene
           pbPlayCursorSE
           dorefresh = true
         end
-      elsif Keybinds.press?(:right)
+      elsif Keybinds.trigger(:right)
         oldpage = @page
         @page += 1
         @page = 1 if @page < 1
@@ -1177,48 +1176,18 @@ class PokemonPokedexInfo_Scene
       Graphics.update
       Input.update
       pbUpdate
-      if Keybinds.press?(:action)
+      if Keybinds.trigger(:action)
         pbSEStop
         Pokemon.play_cry(@species, @form)
-      elsif Keybinds.press?(:back) || Keybinds.press?(:use)
+      elsif Keybinds.trigger(:back) || Keybinds.trigger(:use)
         pbPlayCloseMenuSE
         break
       end
-=======
-# NOTE: The order these shapes are registered are the order they are listed in
-#       the Pokédex search screen.
-#       "Graphics/UI/Pokedex/icon_shapes.png" contains icons for these
-#       shapes.
-module GameData
-  class BodyShape
-    attr_reader :id
-    attr_reader :real_name
-    attr_reader :icon_position   # Where this shape's icon is within icon_shapes.png
-
-    DATA = {}
-
-    extend ClassMethodsSymbols
-    include InstanceMethods
-
-    def self.load; end
-    def self.save; end
-
-    def initialize(hash)
-      @id            = hash[:id]
-      @real_name     = hash[:name]          || "Unnamed"
-      @icon_position = hash[:icon_position] || 0
-    end
-
-    # @return [String] the translated name of this body shape
-    def name
-      return _INTL(@real_name)
->>>>>>> Stashed changes
     end
   end
 end
 
 #===============================================================================
-<<<<<<< Updated upstream
 #
 #===============================================================================
 class PokemonPokedexInfoScreen
@@ -1264,89 +1233,3 @@ class PokemonPokedexInfoScreen
     @scene.pbEndScene
   end
 end
-=======
-
-GameData::BodyShape.register({
-  :id            => :Head,
-  :name          => _INTL("Head"),
-  :icon_position => 0
-})
-
-GameData::BodyShape.register({
-  :id            => :Serpentine,
-  :name          => _INTL("Serpentine"),
-  :icon_position => 1
-})
-
-GameData::BodyShape.register({
-  :id            => :Finned,
-  :name          => _INTL("Finned"),
-  :icon_position => 2
-})
-
-GameData::BodyShape.register({
-  :id            => :HeadArms,
-  :name          => _INTL("Head and arms"),
-  :icon_position => 3
-})
-
-GameData::BodyShape.register({
-  :id            => :HeadBase,
-  :name          => _INTL("Head and base"),
-  :icon_position => 4
-})
-
-GameData::BodyShape.register({
-  :id            => :BipedalTail,
-  :name          => _INTL("Bipedal with tail"),
-  :icon_position => 5
-})
-
-GameData::BodyShape.register({
-  :id            => :HeadLegs,
-  :name          => _INTL("Head and legs"),
-  :icon_position => 6
-})
-
-GameData::BodyShape.register({
-  :id            => :Quadruped,
-  :name          => _INTL("Quadruped"),
-  :icon_position => 7
-})
-
-GameData::BodyShape.register({
-  :id            => :Winged,
-  :name          => _INTL("Winged"),
-  :icon_position => 8
-})
-
-GameData::BodyShape.register({
-  :id            => :Multiped,
-  :name          => _INTL("Multiped"),
-  :icon_position => 9
-})
-
-GameData::BodyShape.register({
-  :id            => :MultiBody,
-  :name          => _INTL("Multi Body"),
-  :icon_position => 10
-})
-
-GameData::BodyShape.register({
-  :id            => :Bipedal,
-  :name          => _INTL("Bipedal"),
-  :icon_position => 11
-})
-
-GameData::BodyShape.register({
-  :id            => :MultiWinged,
-  :name          => _INTL("Multi Winged"),
-  :icon_position => 12
-})
-
-GameData::BodyShape.register({
-  :id            => :Insectoid,
-  :name          => _INTL("Insectoid"),
-  :icon_position => 13
-})
->>>>>>> Stashed changes

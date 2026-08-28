@@ -58,7 +58,7 @@ class Game_Player < Game_Character
                     !$PokemonGlobal.surfing && !$PokemonGlobal.bicycle
     return false if jumping?
     return false if pbTerrainTag.must_walk
-    return ($PokemonSystem.runstyle == 1) ^ Keybinds.press?(:back)
+    return ($PokemonSystem.runstyle == 1) ^ Keybinds.trigger(:back)
   end
 
   def set_movement_type(type)
@@ -427,11 +427,7 @@ class Game_Player < Game_Character
   end
 
   def update_command_new
-<<<<<<< Updated upstream
     dir = Keybinds.dir4
-=======
-    dir = Input.dir4
->>>>>>> Stashed changes
     if $PokemonGlobal.forced_movement?
       move_forward
     elsif !pbMapInterpreterRunning? && !$game_temp.message_window_showing &&

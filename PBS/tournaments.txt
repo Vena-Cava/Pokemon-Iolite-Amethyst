@@ -1,0 +1,45 @@
+#===============================================================================
+# Tournament definitions
+#===============================================================================
+
+[KANTO_LEADERS]
+Name = Kanto Leaders Tournament
+Formats = QUICK_SINGLE,SINGLE,QUICK_DOUBLE,DOUBLE,QUICK_MULTI,MULTI,SUPER_MULTI
+Participants = 8
+Level = 50
+BPMode = FIXED
+BP_QUICK_SINGLE = 1
+BP_SINGLE = 2
+BP_QUICK_DOUBLE = 1
+BP_DOUBLE = 2
+BP_QUICK_MULTI = 2
+BP_MULTI = 3
+BP_SUPER_MULTI = 4
+Pool = LEADER_Brock,Brock,1
+Pool = LEADER_Misty,Misty,1
+Pool = LEADER_Surge,Lt. Surge,1
+Pool = LEADER_Erika,Erika,1
+Pool = LEADER_Koga,Koga,1
+Pool = LEADER_Sabrina,Sabrina,1
+Pool = LEADER_Blaine,Blaine,1
+Pool = LEADER_Giovanni,Giovanni,1
+Pool = LEADER_Janine,Janine,1
+Pool = LEADER_Blue,Blue,1
+
+[WORLD_LEADERS]
+Name = World Leaders Tournament
+RequiresWin = KANTO_LEADERS,1
+Formats = QUICK_SINGLE,SINGLE,QUICK_DOUBLE,DOUBLE,QUICK_MULTI,MULTI,SUPER_MULTI
+Participants = 64
+Level = 50
+BPMode = SURVIVORS
+Pool = LEADER_Brock,Brock,1
+Pool = LEADER_Misty,Misty,1
+Pool = LEADER_Surge,Lt. Surge,1
+Pool = LEADER_Erika,Erika,1
+Pool = LEADER_Koga,Koga,1
+Pool = LEADER_Sabrina,Sabrina,1
+Pool = LEADER_Blaine,Blaine,1
+Pool = LEADER_Giovanni,Giovanni,1
+Pool = LEADER_Janine,Janine,1
+Pool = LEADER_Blue,Blue,1

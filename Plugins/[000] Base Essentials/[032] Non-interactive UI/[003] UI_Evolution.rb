@@ -115,11 +115,7 @@ class PokemonEvolutionScene
       Graphics.update
       Input.update
       pbUpdate(true)
-<<<<<<< Updated upstream
-      if Keybinds.press?(:back) && cancancel
-=======
-      if Input.trigger?(Input::BACK) && cancancel
->>>>>>> Stashed changes
+      if Keybinds.trigger(:back) && cancancel
         pbBGMStop
         pbPlayCancelSE
         canceled = true

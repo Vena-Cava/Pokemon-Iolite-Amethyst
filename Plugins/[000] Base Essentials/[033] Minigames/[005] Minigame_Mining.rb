@@ -563,61 +563,35 @@ class MiningGameScene
         break
       end
       # Input
-<<<<<<< Updated upstream
-      if Keybinds.press?(:up) || Keybinds.repeat?(:up)
-=======
-      if Input.trigger?(Input::UP) || Keybinds.repeat?(:up)
->>>>>>> Stashed changes
+      if Keybinds.trigger(:up) || Keybinds.repeat?(:up)
         if @sprites["cursor"].position >= BOARD_WIDTH
           pbSEPlay("Mining cursor")
           @sprites["cursor"].position -= BOARD_WIDTH
         end
-<<<<<<< Updated upstream
-      elsif Keybinds.press?(:down) || Keybinds.repeat?(:down)
-=======
-      elsif Input.trigger?(Input::DOWN) || Keybinds.repeat?(:down)
->>>>>>> Stashed changes
+      elsif Keybinds.trigger(:down) || Keybinds.repeat?(:down)
         if @sprites["cursor"].position < (BOARD_WIDTH * (BOARD_HEIGHT - 1))
           pbSEPlay("Mining cursor")
           @sprites["cursor"].position += BOARD_WIDTH
         end
-<<<<<<< Updated upstream
-      elsif Keybinds.press?(:left) || Keybinds.repeat?(:left)
-=======
-      elsif Input.trigger?(Input::LEFT) || Keybinds.repeat?(:left)
->>>>>>> Stashed changes
+      elsif Keybinds.trigger(:left) || Keybinds.repeat?(:left)
         if @sprites["cursor"].position % BOARD_WIDTH > 0
           pbSEPlay("Mining cursor")
           @sprites["cursor"].position -= 1
         end
-<<<<<<< Updated upstream
-      elsif Keybinds.press?(:right) || Keybinds.repeat?(:right)
-=======
-      elsif Input.trigger?(Input::RIGHT) || Keybinds.repeat?(:right)
->>>>>>> Stashed changes
+      elsif Keybinds.trigger(:right) || Keybinds.repeat?(:right)
         if @sprites["cursor"].position % BOARD_WIDTH < (BOARD_WIDTH - 1)
           pbSEPlay("Mining cursor")
           @sprites["cursor"].position += 1
         end
-<<<<<<< Updated upstream
-      elsif Keybinds.press?(:action)   # Change tool mode
-=======
-      elsif Input.trigger?(Input::ACTION)   # Change tool mode
->>>>>>> Stashed changes
+      elsif Keybinds.trigger(:action)   # Change tool mode
         pbSEPlay("Mining tool change")
         newmode = (@sprites["cursor"].mode + 1) % 2
         @sprites["cursor"].mode = newmode
         @sprites["tool"].src_rect.set(newmode * 68, 0, 68, 100)
         @sprites["tool"].y = 254 - (144 * newmode)
-<<<<<<< Updated upstream
-      elsif Keybinds.press?(:use)   # Hit
+      elsif Keybinds.trigger(:use)   # Hit
         pbHit
-      elsif Keybinds.press?(:back)   # Quit
-=======
-      elsif Input.trigger?(Input::USE)   # Hit
-        pbHit
-      elsif Input.trigger?(Input::BACK)   # Quit
->>>>>>> Stashed changes
+      elsif Keybinds.trigger(:back)   # Quit
         break if pbConfirmMessage(_INTL("Are you sure you want to give up?"))
       end
     end

@@ -45,6 +45,11 @@ Name = Bulwark
 ShortDesc = Prevents recoil damage and halves damage from Rock-type moves.
 Description = Protects the Pokémon from recoil damage and halves the damage it takes from Rock-type moves.
 #-------------------------------
+[BUNNYHOP]
+Name = Bunny Hop
+ShortDesc = The Pokémon is immune to Ground-type moves. It also powers up moves of the same type as the Pokémon.
+Description = The Pokémon floats off the ground, making it immune to Ground-type moves, as well as the Spikes, Toxic Spikes, and Sticky Web statuses. It also boosts the power of moves of the same type as the Pokémon by 100% instead of 50%.
+#-------------------------------
 [CAFFEINERUSH]
 Name = Caffeine Rush
 ShortDesc = Prevents Pokémon on the field from falling asleep.
@@ -54,6 +59,11 @@ Description = Prevents all Pokémon on the field from becoming drowsy or falling
 Name = Category 6
 ShortDesc = In weather, Flying moves gain priority and the Pokémon is immune to sandstorm damage.
 Description = If weather is active, this Pokémon’s Flying-type moves have their priority increased by 1 stage. It is also immune to damage from sandstorms.
+#-------------------------------
+[CHIMELEVATE]
+Name = Chimelevate
+ShortDesc = The Pokémon is immune to Ground-type moves. It also boosts sound-based moves and reduces their damage taken.
+Description = The Pokémon floats off the ground, making it immune to Ground-type moves, as well as the Spikes, Toxic Spikes, and Sticky Web statuses. It also boosts the power of sound-based moves by 30%. The Pokémon also takes half damage from these kinds of moves.
 #-------------------------------
 [CHIPPEDSTONE]
 Name = Chipped Stone
@@ -276,6 +286,11 @@ Name = Mach 5
 ShortDesc = Boosts Speed when the Pokémon makes contact.
 Description = The Pokémon's supersonic engines allow it to raise its speed by 1 stage if it hits a target with a contact move.
 #-------------------------------
+[MAGICBROOM]
+Name = Magic Broom
+ShortDesc = The Pokémon is immune to Ground-type moves. It also boosts its highest stat each time it knocks out a Pokémon.
+Description = The Pokémon floats off the ground, making it immune to Ground-type moves, as well as the Spikes, Toxic Spikes, and Sticky Web statuses. When the Pokémon knocks out a target with an attack, its highest stat is boosted by 1 stage.
+#-------------------------------
 [MINDOVERMATTER]
 Name = Mind Over Matter
 ShortDesc = Psychic-Type moves will break barriers and will deal double damage when resisted.
@@ -400,6 +415,11 @@ Description = The Pokémon's held item is sealed tight within its packaging, pre
 Name = See No Evil
 ShortDesc = Ignores visual moves, sharply raising Defense instead. Accuracy cannot be lowered.
 Description = The Pokémon shuts out all external distractions. If an opponent uses a move that causes infatuation, taunts, involves dancing, or is light-based, its Defense is raised by 2 stages instead. Its Accuracy also cannot be lowered.
+#-------------------------------
+[SERRATEDEDGE]
+Name = Serrated Edge
+ShortDesc = Slicing moves gain an extra weaker hit.
+Description = The Pokémon's slicing moves will hit once more. The power of this extra hit is 1/4 of its usual power.
 #-------------------------------
 [SHOCKINGSTING]
 Name = Shocking Sting

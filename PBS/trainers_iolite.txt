@@ -13,6 +13,10 @@ Pokemon = QUILTOX,4
 LoseText = What's wrong with my bugs?
 Pokemon = MAGGLO,3
 #-------------------------------
+[ROUGHNECK2,Zeke]
+LoseText = ...
+Pokemon = MUDKIP,7
+#-------------------------------
 [TEACHER,Carrie]
 Items = POTION
 LoseText = ...

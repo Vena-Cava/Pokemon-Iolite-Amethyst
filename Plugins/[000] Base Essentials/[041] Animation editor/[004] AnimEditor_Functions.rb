@@ -46,11 +46,7 @@ module BattleAnimationEditor
       bmpwin.update
       ctlwin.update
       bmpwin.hue = ctlwin.value(0) if ctlwin.changed?(0)
-<<<<<<< Updated upstream
-      if Keybinds.press?(:use) && animfiles.length > 0
-=======
-      if Input.trigger?(Input::USE) && animfiles.length > 0
->>>>>>> Stashed changes
+      if Keybinds.trigger(:use) && animfiles.length > 0
         filename = cmdwin.commands[cmdwin.index]
         bitmap = AnimatedBitmap.new("Graphics/Animations/" + filename, ctlwin.value(0)).deanimate
         canvas.animation.graphic = File.basename(filename, ".*")
@@ -59,11 +55,7 @@ module BattleAnimationEditor
         animwin.animbitmap = bitmap
         break
       end
-<<<<<<< Updated upstream
-      if Keybinds.press?(:back)
-=======
-      if Input.trigger?(Input::BACK)
->>>>>>> Stashed changes
+      if Keybinds.trigger(:back)
         break
       end
     end
@@ -88,11 +80,7 @@ module BattleAnimationEditor
         canvas.animation.resize(sliderwin2.value(0))
         break
       end
-<<<<<<< Updated upstream
-      if sliderwin2.changed?(cancelbutton) || Keybinds.press?(:back)
-=======
-      if sliderwin2.changed?(cancelbutton) || Input.trigger?(Input::BACK)
->>>>>>> Stashed changes
+      if sliderwin2.changed?(cancelbutton) || Keybinds.trigger(:back)
         break
       end
     end
@@ -163,11 +151,7 @@ module BattleAnimationEditor
         cmdwin.index = animations.selected
         next
       end
-<<<<<<< Updated upstream
-      if Keybinds.press?(:use) && animations.length > 0
-=======
-      if Input.trigger?(Input::USE) && animations.length > 0
->>>>>>> Stashed changes
+      if Keybinds.trigger(:use) && animations.length > 0
         cmd2 = pbShowCommands(helpwindow,
                               [_INTL("Load Animation"),
                                _INTL("Rename"),
@@ -189,11 +173,7 @@ module BattleAnimationEditor
           end
         end
       end
-<<<<<<< Updated upstream
-      if Keybinds.press?(:back)
-=======
-      if Input.trigger?(Input::BACK)
->>>>>>> Stashed changes
+      if Keybinds.trigger(:back)
         break
       end
     end
@@ -221,11 +201,7 @@ module BattleAnimationEditor
         ret = sliderwin2.value(1)
         break
       end
-<<<<<<< Updated upstream
-      if sliderwin2.changed?(cancelbutton) || Keybinds.press?(:back)
-=======
-      if sliderwin2.changed?(cancelbutton) || Input.trigger?(Input::BACK)
->>>>>>> Stashed changes
+      if sliderwin2.changed?(cancelbutton) || Keybinds.trigger(:back)
         ret = -1
         break
       end
@@ -256,11 +232,7 @@ module BattleAnimationEditor
         cel[AnimFrame::TONEGRAY] = sliderwin2.value(3)
         break
       end
-<<<<<<< Updated upstream
-      if sliderwin2.changed?(cancelbutton) || Keybinds.press?(:back)
-=======
-      if sliderwin2.changed?(cancelbutton) || Input.trigger?(Input::BACK)
->>>>>>> Stashed changes
+      if sliderwin2.changed?(cancelbutton) || Keybinds.trigger(:back)
         break
       end
     end
@@ -290,11 +262,7 @@ module BattleAnimationEditor
         cel[AnimFrame::COLORALPHA] = sliderwin2.value(3)
         break
       end
-<<<<<<< Updated upstream
-      if sliderwin2.changed?(cancelbutton) || Keybinds.press?(:back)
-=======
-      if sliderwin2.changed?(cancelbutton) || Input.trigger?(Input::BACK)
->>>>>>> Stashed changes
+      if sliderwin2.changed?(cancelbutton) || Keybinds.trigger(:back)
         break
       end
     end
@@ -392,11 +360,7 @@ module BattleAnimationEditor
         thiscel[0, thiscel.length] = cel
         break
       end
-<<<<<<< Updated upstream
-      if sliderwin2.changed?(cancelbutton) || Keybinds.press?(:back)
-=======
-      if sliderwin2.changed?(cancelbutton) || Input.trigger?(Input::BACK)
->>>>>>> Stashed changes
+      if sliderwin2.changed?(cancelbutton) || Keybinds.trigger(:back)
         break
       end
     end
@@ -463,11 +427,7 @@ module BattleAnimationEditor
           next
         end
       end
-<<<<<<< Updated upstream
-      if Keybinds.press?(:use)
-=======
-      if Input.trigger?(Input::USE)
->>>>>>> Stashed changes
+      if Keybinds.trigger(:use)
         redrawcmds = false
         if cmdwin.index == cmdNewSound   # Add new sound
           newaudio = PBAnimTiming.new(0)
@@ -532,11 +492,7 @@ module BattleAnimationEditor
           cmdwin.commands[cmdEditFO = cmdwin.commands.length] = _INTL("Add: Edit Foreground Color/Location...")
           cmdwin.refresh
         end
-<<<<<<< Updated upstream
-      elsif Keybinds.press?(:back)
-=======
-      elsif Input.trigger?(Input::BACK)
->>>>>>> Stashed changes
+      elsif Keybinds.trigger(:back)
         break
       end
     end
@@ -590,19 +546,11 @@ module BattleAnimationEditor
         break
       end
       break if maxsizewindow.changed?(6)   # Cancel
-<<<<<<< Updated upstream
-      if Keybinds.press?(:use) && animfiles.length > 0
+      if Keybinds.trigger(:use) && animfiles.length > 0
         filename = (cmdwin.index == 0) ? "" : cmdwin.commands[cmdwin.index]
         displayname = (filename != "") ? filename : _INTL("<user's cry>")
         maxsizewindow.controls[0].text = _INTL("File: \"{1}\"", displayname)
-      elsif Keybinds.press?(:back)
-=======
-      if Input.trigger?(Input::USE) && animfiles.length > 0
-        filename = (cmdwin.index == 0) ? "" : cmdwin.commands[cmdwin.index]
-        displayname = (filename != "") ? filename : _INTL("<user's cry>")
-        maxsizewindow.controls[0].text = _INTL("File: \"{1}\"", displayname)
-      elsif Input.trigger?(Input::BACK)
->>>>>>> Stashed changes
+      elsif Keybinds.trigger(:back)
         break
       end
     end
@@ -661,17 +609,10 @@ module BattleAnimationEditor
         break
       end
       break if maxsizewindow.changed?(9)   # Cancel
-<<<<<<< Updated upstream
-      if Keybinds.press?(:use) && animfiles.length > 0
+      if Keybinds.trigger(:use) && animfiles.length > 0
         filename = (cmdwin.index == cmdErase) ? "" : cmdwin.commands[cmdwin.index]
         maxsizewindow.controls[0].text = _INTL("File: \"{1}\"", filename)
-      elsif Keybinds.press?(:back)
-=======
-      if Input.trigger?(Input::USE) && animfiles.length > 0
-        filename = (cmdwin.index == cmdErase) ? "" : cmdwin.commands[cmdwin.index]
-        maxsizewindow.controls[0].text = _INTL("File: \"{1}\"", filename)
-      elsif Input.trigger?(Input::BACK)
->>>>>>> Stashed changes
+      elsif Keybinds.trigger(:back)
         break
       end
     end
@@ -727,11 +668,7 @@ module BattleAnimationEditor
         break
       end
       break if maxsizewindow.changed?(9)   # Cancel
-<<<<<<< Updated upstream
-      if Keybinds.press?(:back)
-=======
-      if Input.trigger?(Input::BACK)
->>>>>>> Stashed changes
+      if Keybinds.trigger(:back)
         break
       end
     end
@@ -778,11 +715,7 @@ module BattleAnimationEditor
         end
         break
       end
-<<<<<<< Updated upstream
-      if sliderwin2.changed?(cancelbutton) || Keybinds.press?(:back)
-=======
-      if sliderwin2.changed?(cancelbutton) || Input.trigger?(Input::BACK)
->>>>>>> Stashed changes
+      if sliderwin2.changed?(cancelbutton) || Keybinds.trigger(:back)
         break
       end
     end
@@ -810,11 +743,7 @@ module BattleAnimationEditor
         end
         break
       end
-<<<<<<< Updated upstream
-      if sliderwin2.changed?(cancelbutton) || Keybinds.press?(:back)
-=======
-      if sliderwin2.changed?(cancelbutton) || Input.trigger?(Input::BACK)
->>>>>>> Stashed changes
+      if sliderwin2.changed?(cancelbutton) || Keybinds.trigger(:back)
         break
       end
     end
@@ -839,11 +768,7 @@ module BattleAnimationEditor
       Graphics.update
       Input.update
       sliderwin2.update
-<<<<<<< Updated upstream
-      if sliderwin2.changed?(okbutton) || Keybinds.press?(:use)
-=======
-      if sliderwin2.changed?(okbutton) || Input.trigger?(Input::USE)
->>>>>>> Stashed changes
+      if sliderwin2.changed?(okbutton) || Keybinds.trigger(:use)
         startframe = sliderwin2.value(s1set0) - 1
         endframe = sliderwin2.value(s1set1) - 1
         break if startframe >= endframe
@@ -896,11 +821,7 @@ module BattleAnimationEditor
         canvas.invalidate
         break
       end
-<<<<<<< Updated upstream
-      if sliderwin2.changed?(cancelbutton) || Keybinds.press?(:back)
-=======
-      if sliderwin2.changed?(cancelbutton) || Input.trigger?(Input::BACK)
->>>>>>> Stashed changes
+      if sliderwin2.changed?(cancelbutton) || Keybinds.trigger(:back)
         break
       end
     end
@@ -939,11 +860,7 @@ module BattleAnimationEditor
       Input.update
       sliderwin1.update
       sliderwin2.update
-<<<<<<< Updated upstream
-      if sliderwin2.changed?(okbutton) || Keybinds.press?(:use)
-=======
-      if sliderwin2.changed?(okbutton) || Input.trigger?(Input::USE)
->>>>>>> Stashed changes
+      if sliderwin2.changed?(okbutton) || Keybinds.trigger(:use)
         startframe = sliderwin1.value(s1set0) - 1
         endframe = sliderwin1.value(s1set1) - 1
         startcel = sliderwin1.value(s1set2)
@@ -968,11 +885,7 @@ module BattleAnimationEditor
         canvas.invalidate
         break
       end
-<<<<<<< Updated upstream
-      if sliderwin2.changed?(cancelbutton) || Keybinds.press?(:back)
-=======
-      if sliderwin2.changed?(cancelbutton) || Input.trigger?(Input::BACK)
->>>>>>> Stashed changes
+      if sliderwin2.changed?(cancelbutton) || Keybinds.trigger(:back)
         break
       end
     end
@@ -1004,11 +917,7 @@ module BattleAnimationEditor
         end
         break
       end
-<<<<<<< Updated upstream
-      if sliderwin2.changed?(cancelbutton) || Keybinds.press?(:back)
-=======
-      if sliderwin2.changed?(cancelbutton) || Input.trigger?(Input::BACK)
->>>>>>> Stashed changes
+      if sliderwin2.changed?(cancelbutton) || Keybinds.trigger(:back)
         break
       end
     end
@@ -1031,11 +940,7 @@ module BattleAnimationEditor
       Graphics.update
       Input.update
       cmdwin.update
-<<<<<<< Updated upstream
-      break if Keybinds.press?(:back) || Keybinds.press?(:use)
-=======
-      break if Input.trigger?(Input::BACK) || Input.trigger?(Input::USE)
->>>>>>> Stashed changes
+      break if Keybinds.trigger(:back) || Keybinds.trigger(:use)
     end
     cmdwin.dispose
   end
@@ -1086,11 +991,7 @@ module BattleAnimationEditor
       animwin.update
       bottomwindow.update
       canvas.pattern = animwin.selected if animwin.changed?
-<<<<<<< Updated upstream
-      if Keybinds.press?(:back)
-=======
-      if Input.trigger?(Input::BACK)
->>>>>>> Stashed changes
+      if Keybinds.trigger(:back)
         if pbConfirmMessage(_INTL("Save changes?"))
           save_data(animation, "Data/PkmnAnimations.rxdata")
         end

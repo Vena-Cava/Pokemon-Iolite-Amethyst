@@ -1,4 +1,3 @@
-<<<<<<< Updated upstream
 #===============================================================================
 #
 #===============================================================================
@@ -53,35 +52,10 @@ class MoveSelectionSprite < Sprite
     @movesel.update
     @updating = false
     refresh
-=======
-module GameData
-  class Habitat
-    attr_reader :id
-    attr_reader :real_name
-
-    DATA = {}
-
-    extend ClassMethodsSymbols
-    include InstanceMethods
-
-    def self.load; end
-    def self.save; end
-
-    def initialize(hash)
-      @id        = hash[:id]
-      @real_name = hash[:name] || "Unnamed"
-    end
-
-    # @return [String] the translated name of this habitat
-    def name
-      return _INTL(@real_name)
-    end
->>>>>>> Stashed changes
   end
 end
 
 #===============================================================================
-<<<<<<< Updated upstream
 #
 #===============================================================================
 class RibbonSelectionSprite < MoveSelectionSprite
@@ -249,11 +223,11 @@ class PokemonSummary_Scene
       Input.update
       pbUpdate
       if @sprites["messagebox"].busy?
-        if Keybinds.press?(:use)
+        if Keybinds.trigger(:use)
           pbPlayDecisionSE if @sprites["messagebox"].pausing?
           @sprites["messagebox"].resume
         end
-      elsif Keybinds.press?(:use) || Keybinds.press?(:back)
+      elsif Keybinds.trigger(:use) || Keybinds.trigger(:back)
         break
       end
     end
@@ -276,10 +250,10 @@ class PokemonSummary_Scene
         cmdwindow.update
         pbUpdate
         if !@sprites["messagebox"].busy?
-          if Keybinds.press?(:back)
+          if Keybinds.trigger(:back)
             ret = false
             break
-          elsif Keybinds.press?(:use) && @sprites["messagebox"].resume
+          elsif Keybinds.trigger(:use) && @sprites["messagebox"].resume
             ret = (cmdwindow.index == 0)
             break
           end
@@ -301,11 +275,11 @@ class PokemonSummary_Scene
         Input.update
         cmdwindow.update
         pbUpdate
-        if Keybinds.press?(:back)
+        if Keybinds.trigger(:back)
           pbPlayCancelSE
           ret = -1
           break
-        elsif Keybinds.press?(:use)
+        elsif Keybinds.trigger(:use)
           pbPlayDecisionSE
           ret = cmdwindow.index
           break
@@ -968,12 +942,12 @@ class PokemonSummary_Scene
       else
         @sprites["movepresel"].z = @sprites["movesel"].z
       end
-      if Keybinds.press?(:back)
+      if Keybinds.trigger(:back)
         (switching) ? pbPlayCancelSE : pbPlayCloseMenuSE
         break if !switching
         @sprites["movepresel"].visible = false
         switching = false
-      elsif Keybinds.press?(:use)
+      elsif Keybinds.trigger(:use)
         pbPlayDecisionSE
         if selmove == Pokemon::MAX_MOVES
           break if !switching
@@ -994,7 +968,7 @@ class PokemonSummary_Scene
             switching = true
           end
         end
-      elsif Keybinds.press?(:up)
+      elsif Keybinds.trigger(:up)
         selmove -= 1
         if selmove < Pokemon::MAX_MOVES && selmove >= @pokemon.numMoves
           selmove = @pokemon.numMoves - 1
@@ -1004,7 +978,7 @@ class PokemonSummary_Scene
         @sprites["movesel"].index = selmove
         pbPlayCursorSE
         drawSelectedMove(nil, @pokemon.moves[selmove])
-      elsif Keybinds.press?(:down)
+      elsif Keybinds.trigger(:down)
         selmove += 1
         selmove = 0 if selmove < Pokemon::MAX_MOVES && selmove >= @pokemon.numMoves
         selmove = 0 if selmove >= Pokemon::MAX_MOVES
@@ -1038,12 +1012,12 @@ class PokemonSummary_Scene
         @sprites["ribbonpresel"].z = @sprites["ribbonsel"].z
       end
       hasMovedCursor = false
-      if Keybinds.press?(:back)
+      if Keybinds.trigger(:back)
         (switching) ? pbPlayCancelSE : pbPlayCloseMenuSE
         break if !switching
         @sprites["ribbonpresel"].visible = false
         switching = false
-      elsif Keybinds.press?(:use)
+      elsif Keybinds.trigger(:use)
         if switching
           pbPlayDecisionSE
           tmpribbon                      = @pokemon.ribbons[oldselribbon]
@@ -1068,22 +1042,22 @@ class PokemonSummary_Scene
             switching = true
           end
         end
-      elsif Keybinds.press?(:up)
+      elsif Keybinds.trigger(:up)
         selribbon -= 4
         selribbon += numRows * 4 if selribbon < 0
         hasMovedCursor = true
         pbPlayCursorSE
-      elsif Keybinds.press?(:down)
+      elsif Keybinds.trigger(:down)
         selribbon += 4
         selribbon -= numRows * 4 if selribbon >= numRows * 4
         hasMovedCursor = true
         pbPlayCursorSE
-      elsif Keybinds.press?(:left)
+      elsif Keybinds.trigger(:left)
         selribbon -= 1
         selribbon += 4 if selribbon % 4 == 3
         hasMovedCursor = true
         pbPlayCursorSE
-      elsif Keybinds.press?(:right)
+      elsif Keybinds.trigger(:right)
         selribbon += 1
         selribbon -= 4 if selribbon % 4 == 0
         hasMovedCursor = true
@@ -1149,10 +1123,10 @@ class PokemonSummary_Scene
       Graphics.update
       Input.update
       pbUpdate
-      if Keybinds.press?(:back)
+      if Keybinds.trigger(:back)
         pbPlayCloseMenuSE
         break
-      elsif Keybinds.press?(:use)
+      elsif Keybinds.trigger(:use)
         pbPlayDecisionSE
         case index
         when 6   # OK
@@ -1164,13 +1138,13 @@ class PokemonSummary_Scene
           markings[index] = ((markings[index] || 0) + 1) % mark_variants
           redraw = true
         end
-      elsif Keybinds.press?(:action)
+      elsif Keybinds.trigger(:action)
         if index < 6 && markings[index] > 0
           pbPlayDecisionSE
           markings[index] = 0
           redraw = true
         end
-      elsif Keybinds.press?(:up)
+      elsif Keybinds.trigger(:up)
         if index == 7
           index = 6
         elsif index == 6
@@ -1181,7 +1155,7 @@ class PokemonSummary_Scene
           index -= 3
         end
         pbPlayCursorSE
-      elsif Keybinds.press?(:down)
+      elsif Keybinds.trigger(:down)
         if index == 7
           index = 1
         elsif index == 6
@@ -1192,13 +1166,13 @@ class PokemonSummary_Scene
           index += 3
         end
         pbPlayCursorSE
-      elsif Keybinds.press?(:left)
+      elsif Keybinds.trigger(:left)
         if index < 6
           index -= 1
           index += 3 if index % 3 == 2
           pbPlayCursorSE
         end
-      elsif Keybinds.press?(:right)
+      elsif Keybinds.trigger(:right)
         if index < 6
           index += 1
           index -= 3 if index % 3 == 0
@@ -1263,14 +1237,14 @@ class PokemonSummary_Scene
       Graphics.update
       Input.update
       pbUpdate
-      if Keybinds.press?(:back)
+      if Keybinds.trigger(:back)
         selmove = Pokemon::MAX_MOVES
         pbPlayCloseMenuSE if new_move
         break
-      elsif Keybinds.press?(:use)
+      elsif Keybinds.trigger(:use)
         pbPlayDecisionSE
         break
-      elsif Keybinds.press?(:up)
+      elsif Keybinds.trigger(:up)
         selmove -= 1
         selmove = maxmove if selmove < 0
         if selmove < Pokemon::MAX_MOVES && selmove >= @pokemon.numMoves
@@ -1279,7 +1253,7 @@ class PokemonSummary_Scene
         @sprites["movesel"].index = selmove
         selected_move = (selmove == Pokemon::MAX_MOVES) ? new_move : @pokemon.moves[selmove]
         drawSelectedMove(new_move, selected_move)
-      elsif Keybinds.press?(:down)
+      elsif Keybinds.trigger(:down)
         selmove += 1
         selmove = 0 if selmove > maxmove
         if selmove < Pokemon::MAX_MOVES && selmove >= @pokemon.numMoves
@@ -1300,13 +1274,13 @@ class PokemonSummary_Scene
       Input.update
       pbUpdate
       dorefresh = false
-      if Keybinds.press?(:action)
+      if Keybinds.trigger(:action)
         pbSEStop
         @pokemon.play_cry
-      elsif Keybinds.press?(:back)
+      elsif Keybinds.trigger(:back)
         pbPlayCloseMenuSE
         break
-      elsif Keybinds.press?(:use)
+      elsif Keybinds.trigger(:use)
         if @page == 4
           pbPlayDecisionSE
           pbMoveSelection
@@ -1319,7 +1293,7 @@ class PokemonSummary_Scene
           pbPlayDecisionSE
           dorefresh = pbOptions
         end
-      elsif Keybinds.press?(:up) && @partyindex > 0
+      elsif Keybinds.trigger(:up) && @partyindex > 0
         oldindex = @partyindex
         pbGoToPrevious
         if @partyindex != oldindex
@@ -1327,7 +1301,7 @@ class PokemonSummary_Scene
           @ribbonOffset = 0
           dorefresh = true
         end
-      elsif Keybinds.press?(:down) && @partyindex < @party.length - 1
+      elsif Keybinds.trigger(:down) && @partyindex < @party.length - 1
         oldindex = @partyindex
         pbGoToNext
         if @partyindex != oldindex
@@ -1335,7 +1309,7 @@ class PokemonSummary_Scene
           @ribbonOffset = 0
           dorefresh = true
         end
-      elsif Keybinds.press?(:left) && !@pokemon.egg?
+      elsif Keybinds.trigger(:left) && !@pokemon.egg?
         oldpage = @page
         @page -= 1
         @page = 1 if @page < 1
@@ -1345,7 +1319,7 @@ class PokemonSummary_Scene
           @ribbonOffset = 0
           dorefresh = true
         end
-      elsif Keybinds.press?(:right) && !@pokemon.egg?
+      elsif Keybinds.trigger(:right) && !@pokemon.egg?
         oldpage = @page
         @page += 1
         @page = 1 if @page < 1
@@ -1424,55 +1398,3 @@ def pbChooseMove(pokemon, variableNumber, nameVarNumber)
   end
   $game_map.need_refresh = true if $game_map
 end
-=======
-
-GameData::Habitat.register({
-  :id   => :None,
-  :name => _INTL("None")
-})
-
-GameData::Habitat.register({
-  :id   => :Grassland,
-  :name => _INTL("Grassland")
-})
-
-GameData::Habitat.register({
-  :id   => :Forest,
-  :name => _INTL("Forest")
-})
-
-GameData::Habitat.register({
-  :id   => :WatersEdge,
-  :name => _INTL("Water's Edge")
-})
-
-GameData::Habitat.register({
-  :id   => :Sea,
-  :name => _INTL("Sea")
-})
-
-GameData::Habitat.register({
-  :id   => :Cave,
-  :name => _INTL("Cave")
-})
-
-GameData::Habitat.register({
-  :id   => :Mountain,
-  :name => _INTL("Mountain")
-})
-
-GameData::Habitat.register({
-  :id   => :RoughTerrain,
-  :name => _INTL("Rough Terrain")
-})
-
-GameData::Habitat.register({
-  :id   => :Urban,
-  :name => _INTL("Urban")
-})
-
-GameData::Habitat.register({
-  :id   => :Rare,
-  :name => _INTL("Rare")
-})
->>>>>>> Stashed changes

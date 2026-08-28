@@ -154,7 +154,7 @@ class Battle::Scene
     2.times do |side|
       baseX, baseY = Battle::Scene.pbBattlerPosition(side)
       if side == 0   # Player's base
-        base = pbAddSprite("base_#{side}", baseX, baseY + 36, playerBase, @viewport)
+        base = pbAddSprite("base_#{side}", baseX, baseY + 72, playerBase, @viewport)
       else           # Enemy's base
         base = pbAddSprite("base_#{side}", baseX, baseY, enemyBase, @viewport)
       end

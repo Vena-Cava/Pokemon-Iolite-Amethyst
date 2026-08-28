@@ -408,7 +408,7 @@ class PokemonMart_Scene
           refreshed_after_busy = true
         end
       end
-      if Keybinds.press?(:use) || Keybinds.press?(:back)
+      if Keybinds.trigger(:use) || Keybinds.trigger(:back)
         cw.resume if cw.busy?
       end
       return if refreshed_after_busy && System.uptime - timer_start >= 1.5
@@ -433,7 +433,7 @@ class PokemonMart_Scene
         yielded = true
       end
       pbRefresh if !cw.busy? && wasbusy
-      if Keybinds.press?(:use) || Keybinds.press?(:back)
+      if Keybinds.trigger(:use) || Keybinds.trigger(:back)
         if cw.resume && !cw.busy?
           @sprites["helpwindow"].visible = false
           break
@@ -461,12 +461,12 @@ class PokemonMart_Scene
       Input.update
       cw.update
       self.update
-      if Keybinds.press?(:back) && dw.resume && !dw.busy?
+      if Keybinds.trigger(:back) && dw.resume && !dw.busy?
         cw.dispose
         @sprites["helpwindow"].visible = false
         return false
       end
-      if Keybinds.press?(:use) && dw.resume && !dw.busy?
+      if Keybinds.trigger(:use) && dw.resume && !dw.busy?
         cw.dispose
         @sprites["helpwindow"].visible = false
         return (cw.index == 0)
@@ -524,10 +524,10 @@ class PokemonMart_Scene
             numwindow.text = _INTL("x{1}<r>$ {2}", curnumber, (curnumber * itemprice).to_s_formatted)
             pbPlayCursorSE
           end
-        elsif Keybinds.press?(:use)
+        elsif Keybinds.trigger(:use)
           ret = curnumber
           break
-        elsif Keybinds.press?(:back)
+        elsif Keybinds.trigger(:back)
           pbPlayCancelSE
           ret = 0
           break
@@ -549,10 +549,10 @@ class PokemonMart_Scene
         olditem = itemwindow.item
         self.update
         pbRefresh if itemwindow.item != olditem
-        if Keybinds.press?(:back)
+        if Keybinds.trigger(:back)
           pbPlayCloseMenuSE
           return nil
-        elsif Keybinds.press?(:use)
+        elsif Keybinds.trigger(:use)
           if itemwindow.index < @stock.length
             pbRefresh
             return @stock[itemwindow.index]

@@ -1025,62 +1025,6 @@ Name = Rocket Boss
 Gender = Male
 BaseMoney = 100
 #-------------------------------
-[LEADER_Blaine]
-Name = Gym Leader
-Gender = Male
-BaseMoney = 100
-BattleBGM = Pokemon Iolite and Amethyst - Battle! Vs Gym Leader
-VictoryBGM = Battle victory leader
-#-------------------------------
-[LEADER_Brock]
-Name = Gym Leader
-Gender = Male
-BaseMoney = 100
-BattleBGM = Battle Gym Leader
-VictoryBGM = Battle victory leader
-#-------------------------------
-[LEADER_Erika]
-Name = Gym Leader
-Gender = Female
-BaseMoney = 100
-BattleBGM = Battle Gym Leader
-VictoryBGM = Battle victory leader
-#-------------------------------
-[LEADER_Giovanni]
-Name = Gym Leader
-Gender = Male
-BaseMoney = 100
-BattleBGM = Battle Gym Leader
-VictoryBGM = Battle victory leader
-#-------------------------------
-[LEADER_Koga]
-Name = Gym Leader
-Gender = Male
-BaseMoney = 100
-BattleBGM = Battle Gym Leader
-VictoryBGM = Battle victory leader
-#-------------------------------
-[LEADER_Misty]
-Name = Gym Leader
-Gender = Female
-BaseMoney = 100
-BattleBGM = Battle Gym Leader
-VictoryBGM = Battle victory leader
-#-------------------------------
-[LEADER_Sabrina]
-Name = Gym Leader
-Gender = Female
-BaseMoney = 100
-BattleBGM = Battle Gym Leader
-VictoryBGM = Battle victory leader
-#-------------------------------
-[LEADER_Surge]
-Name = Gym Leader
-Gender = Male
-BaseMoney = 100
-BattleBGM = Battle Gym Leader
-VictoryBGM = Battle victory leader
-#-------------------------------
 [ELITEFOUR_Agatha]
 Name = Elite Four
 Gender = Female

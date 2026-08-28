@@ -256,7 +256,7 @@ class Battle::Scene
         break if yield pbFightMenu_Confirm(battler, specialAction, cw)
         needFullRefresh = true
         needRefresh = true
-      elsif Keybinds.trigger?(:back)
+      elsif Keybinds.press?(:back)
         break if yield pbFightMenu_Cancel(battler, specialAction, cw)
         needRefresh = true
       elsif Keybinds.trigger?(:action)
@@ -393,6 +393,7 @@ class Battle
       pbDeluxeTriggers(i, nil, "RoundStartAttack", 1 + @turnCount) if !b.fainted?
       b.turnCount += 1 if !b.fainted?
       @successStates[i].clear
+
       if @choices[i][0] != :UseMove && @choices[i][0] != :Shift && @choices[i][0] != :SwitchOut
         b.effects[PBEffects::DestinyBond] = false
         b.effects[PBEffects::Grudge]      = false

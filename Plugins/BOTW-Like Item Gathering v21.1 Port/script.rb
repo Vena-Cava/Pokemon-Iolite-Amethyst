@@ -16,8 +16,14 @@ MenuHandlers.add(:options_menu, :botw_item_pickup, {
   "type"        => EnumOption,
   "parameters"  => [_INTL("Default"), _INTL("Instant")],
   "description" => _INTL("Choose whether a message should appear when picking up items."),
-  "get_proc"    => proc { next $game_switches[FAST_PICK_ITEM_SWITCH] ? 1 : 0 },
-  "set_proc"    => proc { |value, _scene| $game_switches[FAST_PICK_ITEM_SWITCH] = value == 1 }
+  "get_proc"    => proc {
+    next 0 if !$game_switches
+    next $game_switches[FAST_PICK_ITEM_SWITCH] ? 1 : 0
+  },
+  "set_proc"    => proc { |value, _scene|
+    next if !$game_switches
+    $game_switches[FAST_PICK_ITEM_SWITCH] = value == 1
+  }
 })
 
 MenuHandlers.add(:options_menu, :botw_berry_harvest, {
@@ -26,8 +32,14 @@ MenuHandlers.add(:options_menu, :botw_berry_harvest, {
   "type"        => EnumOption,
   "parameters"  => [_INTL("Default"), _INTL("Instant")],
   "description" => _INTL("Choose whether a message should appear when harvesting berries."),
-  "get_proc"    => proc { next $game_switches[FAST_PICK_BERRY_SWITCH] ? 1 : 0 },
-  "set_proc"    => proc { |value, _scene| $game_switches[FAST_PICK_BERRY_SWITCH] = value == 1 }
+  "get_proc"    => proc {
+    next 0 if !$game_switches
+    next $game_switches[FAST_PICK_BERRY_SWITCH] ? 1 : 0
+  },
+  "set_proc"    => proc { |value, _scene|
+    next if !$game_switches
+    $game_switches[FAST_PICK_BERRY_SWITCH] = value == 1
+  }
 })
 
 #━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━

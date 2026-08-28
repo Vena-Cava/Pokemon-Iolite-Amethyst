@@ -1,0 +1,1082 @@
+#===============================================================================
+# Tournament Trainers - Kanto sample
+#===============================================================================
+
+[LEADER_Brock,Brock,1]
+WinText = The best offense is a good defense! That's my way of doing things!
+LoseText = Your Pokémon's powerful attacks overcame my rock-hard resistance... You're stronger than I expected...
+MegaRule = EXACTLY_ONE
+Theme = SAND
+Items = MEGARING
+Pokemon = TYRANITAR,50
+Lead = true
+Build
+    Role = LEAD
+    Ability = SANDSTREAM
+    Item = LEFTOVERS
+    Nature = CAREFUL
+    Moves = KNOCKOFF,HEAVYSLAM,THUNDERWAVE,STEALTHROCK
+    EV = 252,0,16,0,0,244
+Build
+    Role = LEAD
+	Mega = true
+    Ability = SANDSTREAM
+    Item = TYRANITARITE
+    Nature = ADAMANT
+    Moves = KNOCKOFF,STONEEDGE,LOWKICK,ICEPUNCH
+    EV = 0,252,0,252,0,8
+Pokemon = ONIX,50
+Build
+    Ability = ROCKHEAD
+    Item = CHOICEBAND
+    Nature = IMPISH
+    Moves = HEADSMASH,HIGHHORSEPOWER,EXPLOSION,BODYPRESS
+    EV = 0,252,252,8,0,0
+Build
+    Ability = STURDY
+    Item = EVIOLITE
+    Nature = IMPISH
+    Moves = CURSE,DRAGONTAIL,STEALTHROCK,BODYPRESS
+    EV = 8,0,252,252,0,0
+Pokemon = ARCANINE,50
+Build
+    Form = 1
+    Ability = ROCKHEAD
+    Item = CHOICEBAND
+    Nature = JOLLY
+    Moves = FLAREBLITZ,HEADSMASH,EXTREMESPEED,CLOSECOMBAT
+    EV = 0,252,0,252,0,8
+Build
+    Form = 1
+    Ability = ROCKHEAD
+    Item = CHOICESCARF
+    Nature = JOLLY
+    Moves = FLAREBLITZ,HEADSMASH,WILDCHARGE,CLOSECOMBAT
+    EV = 0,252,8,252,0,0
+Pokemon = KABUTOPS,50
+Build
+    Ability = WEAKARMOR
+    Item = CHOICESCARF
+    Nature = JOLLY
+    Moves = FLIPTURN,STONEEDGE,LIQUIDATION,KNOCKOFF
+    EV = 0,252,0,252,0,8
+Build
+    Ability = WEAKARMOR
+    Item = CHOICEBAND
+    Nature = JOLLY
+    Moves = FLIPTURN,STONEEDGE,LIQUIDATION,RAPIDSPIN
+    EV = 0,252,0,252,0,8
+Pokemon = GARGANACL,50
+Build
+    Ability = PURIFYINGSALT
+    Item = HEAVYDUTYBOOTS
+    Nature = IMPISH
+    Moves = SALTCURE,IRONDEFENSE,BODYPRESS,RECOVER
+    EV = 252,0,252,0,0,8
+Build
+    PreferredFormat = DOUBLE
+    Ability = PURIFYINGSALT
+    Item = LEFTOVERS
+    Nature = CAREFUL
+    Moves = CURSE,SALTCURE,EARTHQUAKE,RECOVER
+    EV = 252,0,52,0,0,208
+Pokemon = AERODACTYL,50
+Build
+    Ability = ROCKHEAD
+    Item = LIFEORB
+    Nature = ADAMANT
+    Moves = HEADSMASH,BRAVEBIRD,DRAGONDANCE,ROOST
+    EV = 252,252,0,0,0,8
+Build
+    Mega = true
+    PreferredFormat = DOUBLE
+    Ability = PRESSURE
+    Item = AERODACTYLITE
+    Nature = ADAMANT
+    Moves = ROCKSLIDE,EARTHQUAKE,TAILWIND,ROOST
+    EV = 0,252,0,252,0,8
+
+[LEADER_Misty,Misty,1]
+WinText = See! This is the Water-type toughness I was talking about!
+LoseText = You really are strong... I'll admit that you are skilled...
+MegaRule = EXACTLY_ONE
+Theme = RAIN
+Items = MEGARING
+Pokemon = QUAGSIRE,50
+Build
+    Ability = UNAWARE
+    Item = HEAVYDUTYBOOTS
+    Nature = IMPISH
+    Moves = STEALTHROCK,EARTHQUAKE,RECOVER,COUNTER
+    EV = 252,0,252,0,0,8
+Build
+    Ability = UNAWARE
+    Item = LEFTOVERS
+    Nature = IMPISH
+    Moves = SPIKES,EARTHQUAKE,RECOVER,TOXIC
+    EV = 252,8,252,0,0,0
+Pokemon = GYARADOS,50
+Build
+    Format = SINGLE
+    Ability = MOXIE
+    Item = LOADEDDICE
+    Nature = ADAMANT
+    Moves = DRAGONDANCE,WATERFALL,SCALESHOT,SUBSTITUTE
+    EV = 0,252,0,252,0,8
+Build
+    Mega = true
+    Ability = INTIMIDATE
+    Item = GYARADOSITE
+    Nature = JOLLY
+    Moves = DRAGONDANCE,WATERFALL,EARTHQUAKE,ICEFANG
+    EV = 4,252,4,252,0,0
+Pokemon = SLOWBRO,50
+Build
+    PreferredFormat = DOUBLE
+    Ability = REGENERATOR
+    Item = HEAVYDUTYBOOTS
+    Nature = BOLD
+    Moves = SURF,FUTURESIGHT,TELEPORT,CALMMIND
+    EV = 252,0,252,0,0,8
+Build
+    Mega = true
+    Ability = REGENERATOR
+    Item = SLOWBRONITE
+    Nature = BOLD
+    Moves = SCALD,IRONDEFENSE,SLACKOFF,BODYPRESS
+    EV = 252,0,216,0,0,44
+Pokemon = LAPRAS,50
+Build
+    Ability = WATERABSORB
+    Item = HEAVYDUTYBOOTS
+    Nature = MODEST
+    Moves = FREEZEDRY,HYDROPUMP,ALLURINGVOICE,ICEBEAM
+    EV = 0,0,200,60,252,0
+Build
+    Ability = WATERABSORB
+    Item = LOADEDDICE
+    Nature = JOLLY
+    Moves = DRAGONDANCE,ICICLESPEAR,LIQUIDATION,EARTHQUAKE
+    EV = 0,252,8,252,0,0
+Pokemon = JELLICENT,50
+Build
+    Gender = male
+    Ability = CURSEDBODY
+    Item = LEFTOVERS
+    Nature = BOLD
+    Moves = SCALD,TAUNT,RECOVER,HEX
+    EV = 252,0,252,8,0,0
+Build
+    PreferredFormat = DOUBLE
+    Gender = female
+    Ability = CURSEDBODY
+    Item = CHOICESPECS
+    Nature = MODEST
+    Moves = WATERSPOUT,SHADOWBALL,TRICK,SURF
+    EV = 0,0,0,252,252,8
+Pokemon = STARMIE,50
+Build
+    PreferredFormat = DOUBLE
+    Ability = ILLUMINATE
+    Item = LIFEORB
+    Nature = TIMID
+    Moves = SURF,ICEBEAM,THUNDERBOLT,RECOVER
+    EV = 0,0,0,252,252,8
+Build
+    Mega = true
+    Ability = ILLUMINATE
+    Item = STARMINITE
+    Nature = ADAMANT
+    Moves = LIQUIDATION,ZENHEADBUTT,FLIPTURN,AQUAJET
+    EV = 0,252,0,252,0,8
+
+[LEADER_Surge,Lt. Surge,1]
+IntroText_Round1 = The name's Lt. Surge! When it comes to Electric-type Pokémon, I'm number one!
+IntroText_Round2 = The name's Lt. Surge! When it comes to Electric-type Pokémon, I'm number one! I'm gonna zap your Pokémon!
+IntroText_Round3 = The name's Lt. Surge! When it comes to Electric-type Pokémon, I'm number one! I'm gonna zap your Pokémon!
+IntroText_Round4 = The name's Lt. Surge! When it comes to Electric-type Pokémon, I'm number one! I'm gonna zap your Pokémon!
+IntroText_Round5 = The name's Lt. Surge! When it comes to Electric-type Pokémon, I'm number one! I'm gonna zap your Pokémon!
+IntroText_Finals = The name's Lt. Surge! When it comes to Electric-type Pokémon, I'm number one! You've got guts to challenge me! I'm gonna zap you!
+WinText = Oh yeah! I'm strong!
+LoseText = Arrrgh! You are strong!
+AfterWinText = Oh yeah! When it comes to Electric-type Pokémon, I'm number one in the world!
+AfterLoseText = Even my electric tricks lost. You're excellent! Keep goin' like lightning!
+MegaRule = EXACTLY_ONE
+Theme = ELECTRICTERRAIN
+Items = MEGARING
+Pokemon = RAICHU,50
+Required = true
+Build
+	Mega = true
+    Ability = STATIC
+    Item = RAICHUNITEX
+    Nature = JOLLY
+    Moves = VOLTTACKLE,KNOCKOFF,TRAILBLAZE,DRAINPUNCH
+    EV = 8,252,0,252,0,0
+Build
+	Mega = true
+    Ability = STATIC
+    Item = RAICHUNITEX
+    Nature = TIMID
+    Moves = ZAPCANNON,FOCUSBLAST,SURF,SUBSTITUTE
+    EV = 8,0,0,252,252,0
+Build
+    Ability = LIGHTNINGROD
+    Item = LIFEORB
+    Nature = TIMID
+    Moves = THUNDERBOLT,NASTYPLOT,SURF,FOCUSBLAST
+    EV = 0,0,0,252,252,8
+Pokemon = ELECTRODE,50
+Build
+    Form = 1
+    PreferredFormat = DOUBLE
+    Ability = SOUNDPROOF
+    Item = BIGROOT
+    Nature = TIMID
+    Moves = CHLOROBLAST,DISCHARGE,VOLTSWITCH,GIGADRAIN
+    EV = 8,0,0,252,252,0
+Build
+    Form = 1
+    Ability = AFTERMATH
+    Item = LIFEORB
+    Nature = TIMID
+    Moves = THUNDERBOLT,LEAFSTORM,VOLTSWITCH,FOULPLAY
+    EV = 8,0,0,252,252,0
+Pokemon = MAGNEZONE,50
+Build
+    PreferredFormat = DOUBLE
+    Ability = MAGNETPULL
+    Item = AIRBALLOON
+    Nature = TIMID
+    Moves = IRONDEFENSE,BODYPRESS,MAGLEVSWITCH,DISCHARGE
+    EV = 8,0,252,252,0,0
+Build
+    Ability = MAGNETPULL
+    Item = CHOICESPECS
+    Nature = MODEST
+    Moves = THUNDERBOLT,FLASHCANNON,MAGLEVSWITCH,BODYPRESS
+    EV = 0,0,8,252,252,0
+Pokemon = ELECTIVIRE,50
+Build
+    PreferredFormat = DOUBLE
+    Ability = MUSCLESTIM
+    Item = LIFEORB
+    Nature = ADAMANT
+    Moves = LIGHTNINGLASH,DARKESTLARIAT,ICEPUNCH,STOMPINGTANTRUM
+    EV = 0,252,0,252,0,8
+Pokemon = JOLTEON,50
+Build
+    Ability = VOLTABSORB
+    Item = HEAVYDUTYBOOTS
+    Nature = TIMID
+    Moves = CALMMIND,THUNDERBOLT,VOLTSWITCH,SHADOWBALL
+    EV = 0,0,0,252,252,8
+Build
+    Ability = VOLTABSORB
+    Item = CHOICESPECS
+    Nature = TIMID
+    Moves = THUNDERBOLT,VOLTSWITCH,ALLURINGVOICE,SHADOWBALL
+    EV = 0,0,0,252,252,8
+Pokemon = AMPHAROS,50
+Build
+    PreferredFormat = DOUBLE
+    Ability = STATIC
+    Item = LIGHTCLAY
+    Nature = BOLD
+    Moves = LIGHTSCREEN,REFLECT,DISCHARGE,COTTONGUARD
+    EV = 8,0,252,0,0,252
+Build
+    Mega = true
+    Ability = STATIC
+    Item = AMPHAROSITE
+    Nature = MODEST
+    Moves = THUNDERBOLT,DRAGONPULSE,TAILGLOW,VOLTSWITCH
+    EV = 132,0,0,128,252,0
+Pokemon = MANECTRIC,50
+Build
+    Ability = LIGHTNINGROD
+    Item = CHOICESPECS
+    Nature = TIMID
+    Moves = THUNDERBOLT,VOLTSWITCH,OVERHEAT,SWITCHEROO
+    EV = 0,0,0,252,252,8
+Build
+    Mega = true
+    Ability = LIGHTNINGROD
+    Item = MANECTITE
+    Nature = TIMID
+    Moves = THUNDERBOLT,VOLTSWITCH,OVERHEAT,TOXIC
+    EV = 0,0,0,252,252,8
+Pokemon = LANTURN,50
+Build
+    Ability = VOLTABSORB
+    Item = LEFTOVERS
+    Nature = CALM
+    Moves = SCALD,VOLTSWITCH,REST,SLEEPTALK
+    EV = 220,0,0,40,0,252
+Pokemon = VIKAVOLT,50
+Build
+    Ability = LEVITATE
+    Item = HEAVYDUTYBOOTS
+    Nature = BOLD
+    Moves = STICKYWEB,VOLTSWITCH,BUGBUZZ,ENERGYBALL
+    EV = 252,0,252,0,0,8
+Build
+    Lead = true
+    Role = LEAD
+    Ability = LEVITATE
+    Item = FOCUSSASH
+    Nature = MODEST
+    Moves = STICKYWEB,THUNDERBOLT,BUGBUZZ,ENERGYBALL
+    EV = 0,0,8,252,252,0
+
+[LEADER_Erika,Erika,1]
+WinText = I was afraid I would doze off...
+LoseText = Oh my! Looks like I underestimated you...
+MegaRule = EXACTLY_ONE
+Theme = SAND
+Items = MEGARING
+Pokemon = TYRANITAR,50
+Lead = true
+Build
+    Role = LEAD
+    Ability = SANDSTREAM
+    Item = LEFTOVERS
+    Nature = CAREFUL
+    Moves = KNOCKOFF,HEAVYSLAM,THUNDERWAVE,STEALTHROCK
+    EV = 252,0,16,0,244,0
+Build
+    Role = LEAD
+	Mega = true
+    Ability = SANDSTREAM
+    Item = TYRANITARITE
+    Nature = ADAMANT
+    Moves = KNOCKOFF,STONEEDGE,LOWKICK,ICEPUNCH
+    EV = 0,252,0,0,8,252
+Pokemon = ONIX,50
+Build
+    Ability = ROCKHEAD
+    Item = CHOICEBAND
+    Nature = IMPISH
+    Moves = HEADSMASH,HIGHHORSEPOWER,EXPLOSION,BODYPRESS
+    EV = 0,252,252,0,0,8
+Build
+    Ability = STURDY
+    Item = EVIOLITE
+    Nature = IMPISH
+    Moves = CURSE,DRAGONTAIL,STEALTHROCK,BODYPRESS
+    EV = 8,0,252,0,0,252
+Pokemon = ARCANINE,50
+Build
+    Form = 1
+    Ability = ROCKHEAD
+    Item = CHOICEBAND
+    Nature = JOLLY
+    Moves = FLAREBLITZ,HEADSMASH,EXTREMESPEED,CLOSECOMBAT
+    EV = 0,252,0,0,8,252
+Build
+    Form = 1
+    Ability = ROCKHEAD
+    Item = CHOICESCARF
+    Nature = JOLLY
+    Moves = FLAREBLITZ,HEADSMASH,WILDCHARGE,CLOSECOMBAT
+    EV = 0,252,8,0,0,252
+Pokemon = KABUTOPS,50
+Build
+    Ability = WEAKARMOR
+    Item = CHOICESCARF
+    Nature = JOLLY
+    Moves = FLIPTURN,STONEEDGE,LIQUIDATION,KNOCKOFF
+    EV = 0,252,0,0,8,252
+Build
+    Ability = WEAKARMOR
+    Item = CHOICEBAND
+    Nature = JOLLY
+    Moves = FLIPTURN,STONEEDGE,LIQUIDATION,RAPIDSPIN
+    EV = 0,252,0,0,8,252
+Pokemon = GARGANACL,50
+Build
+    Ability = PURIFYINGSALT
+    Item = HEAVYDUTYBOOTS
+    Nature = IMPISH
+    Moves = SALTCURE,IRONDEFENSE,BODYPRESS,RECOVER
+    EV = 252,0,252,0,8,0
+Build
+    PreferredFormat = DOUBLE
+    Ability = PURIFYINGSALT
+    Item = LEFTOVERS
+    Nature = CAREFUL
+    Moves = CURSE,SALTCURE,EARTHQUAKE,RECOVER
+    EV = 252,0,52,0,208,0
+Pokemon = AERODACTYL,50
+Build
+    Ability = ROCKHEAD
+    Item = LIFEORB
+    Nature = ADAMANT
+    Moves = HEADSMASH,BRAVEBIRD,DRAGONDANCE,ROOST
+    EV = 252,252,0,0,8,0
+Build
+    Mega = true
+    PreferredFormat = DOUBLE
+    Ability = PRESSURE
+    Item = AERODACTYLITE
+    Nature = ADAMANT
+    Moves = ROCKSLIDE,EARTHQUAKE,TAILWIND,ROOST
+    EV = 0,252,0,0,8,252
+
+[LEADER_Sabrina,Sabrina,1]
+WinText = Just as I foresaw...
+LoseText = Was the future I saw...wrong?
+MegaRule = EXACTLY_ONE
+Theme = SAND
+Items = MEGARING
+Pokemon = TYRANITAR,50
+Lead = true
+Build
+    Role = LEAD
+    Ability = SANDSTREAM
+    Item = LEFTOVERS
+    Nature = CAREFUL
+    Moves = KNOCKOFF,HEAVYSLAM,THUNDERWAVE,STEALTHROCK
+    EV = 252,0,16,0,244,0
+Build
+    Role = LEAD
+	Mega = true
+    Ability = SANDSTREAM
+    Item = TYRANITARITE
+    Nature = ADAMANT
+    Moves = KNOCKOFF,STONEEDGE,LOWKICK,ICEPUNCH
+    EV = 0,252,0,0,8,252
+Pokemon = ONIX,50
+Build
+    Ability = ROCKHEAD
+    Item = CHOICEBAND
+    Nature = IMPISH
+    Moves = HEADSMASH,HIGHHORSEPOWER,EXPLOSION,BODYPRESS
+    EV = 0,252,252,0,0,8
+Build
+    Ability = STURDY
+    Item = EVIOLITE
+    Nature = IMPISH
+    Moves = CURSE,DRAGONTAIL,STEALTHROCK,BODYPRESS
+    EV = 8,0,252,0,0,252
+Pokemon = ARCANINE,50
+Build
+    Form = 1
+    Ability = ROCKHEAD
+    Item = CHOICEBAND
+    Nature = JOLLY
+    Moves = FLAREBLITZ,HEADSMASH,EXTREMESPEED,CLOSECOMBAT
+    EV = 0,252,0,0,8,252
+Build
+    Form = 1
+    Ability = ROCKHEAD
+    Item = CHOICESCARF
+    Nature = JOLLY
+    Moves = FLAREBLITZ,HEADSMASH,WILDCHARGE,CLOSECOMBAT
+    EV = 0,252,8,0,0,252
+Pokemon = KABUTOPS,50
+Build
+    Ability = WEAKARMOR
+    Item = CHOICESCARF
+    Nature = JOLLY
+    Moves = FLIPTURN,STONEEDGE,LIQUIDATION,KNOCKOFF
+    EV = 0,252,0,0,8,252
+Build
+    Ability = WEAKARMOR
+    Item = CHOICEBAND
+    Nature = JOLLY
+    Moves = FLIPTURN,STONEEDGE,LIQUIDATION,RAPIDSPIN
+    EV = 0,252,0,0,8,252
+Pokemon = GARGANACL,50
+Build
+    Ability = PURIFYINGSALT
+    Item = HEAVYDUTYBOOTS
+    Nature = IMPISH
+    Moves = SALTCURE,IRONDEFENSE,BODYPRESS,RECOVER
+    EV = 252,0,252,0,8,0
+Build
+    PreferredFormat = DOUBLE
+    Ability = PURIFYINGSALT
+    Item = LEFTOVERS
+    Nature = CAREFUL
+    Moves = CURSE,SALTCURE,EARTHQUAKE,RECOVER
+    EV = 252,0,52,0,208,0
+Pokemon = AERODACTYL,50
+Build
+    Ability = ROCKHEAD
+    Item = LIFEORB
+    Nature = ADAMANT
+    Moves = HEADSMASH,BRAVEBIRD,DRAGONDANCE,ROOST
+    EV = 252,252,0,0,8,0
+Build
+    Mega = true
+    PreferredFormat = DOUBLE
+    Ability = PRESSURE
+    Item = AERODACTYLITE
+    Nature = ADAMANT
+    Moves = ROCKSLIDE,EARTHQUAKE,TAILWIND,ROOST
+    EV = 0,252,0,0,8,252
+
+[LEADER_Koga,Koga,1]
+WinText = You have lost.
+LoseText = Ah! You've proven your worth!
+MegaRule = EXACTLY_ONE
+Theme = SAND
+Items = MEGARING
+Pokemon = TYRANITAR,50
+Lead = true
+Build
+    Role = LEAD
+    Ability = SANDSTREAM
+    Item = LEFTOVERS
+    Nature = CAREFUL
+    Moves = KNOCKOFF,HEAVYSLAM,THUNDERWAVE,STEALTHROCK
+    EV = 252,0,16,0,244,0
+Build
+    Role = LEAD
+	Mega = true
+    Ability = SANDSTREAM
+    Item = TYRANITARITE
+    Nature = ADAMANT
+    Moves = KNOCKOFF,STONEEDGE,LOWKICK,ICEPUNCH
+    EV = 0,252,0,0,8,252
+Pokemon = ONIX,50
+Build
+    Ability = ROCKHEAD
+    Item = CHOICEBAND
+    Nature = IMPISH
+    Moves = HEADSMASH,HIGHHORSEPOWER,EXPLOSION,BODYPRESS
+    EV = 0,252,252,0,0,8
+Build
+    Ability = STURDY
+    Item = EVIOLITE
+    Nature = IMPISH
+    Moves = CURSE,DRAGONTAIL,STEALTHROCK,BODYPRESS
+    EV = 8,0,252,0,0,252
+Pokemon = ARCANINE,50
+Build
+    Form = 1
+    Ability = ROCKHEAD
+    Item = CHOICEBAND
+    Nature = JOLLY
+    Moves = FLAREBLITZ,HEADSMASH,EXTREMESPEED,CLOSECOMBAT
+    EV = 0,252,0,0,8,252
+Build
+    Form = 1
+    Ability = ROCKHEAD
+    Item = CHOICESCARF
+    Nature = JOLLY
+    Moves = FLAREBLITZ,HEADSMASH,WILDCHARGE,CLOSECOMBAT
+    EV = 0,252,8,0,0,252
+Pokemon = KABUTOPS,50
+Build
+    Ability = WEAKARMOR
+    Item = CHOICESCARF
+    Nature = JOLLY
+    Moves = FLIPTURN,STONEEDGE,LIQUIDATION,KNOCKOFF
+    EV = 0,252,0,0,8,252
+Build
+    Ability = WEAKARMOR
+    Item = CHOICEBAND
+    Nature = JOLLY
+    Moves = FLIPTURN,STONEEDGE,LIQUIDATION,RAPIDSPIN
+    EV = 0,252,0,0,8,252
+Pokemon = GARGANACL,50
+Build
+    Ability = PURIFYINGSALT
+    Item = HEAVYDUTYBOOTS
+    Nature = IMPISH
+    Moves = SALTCURE,IRONDEFENSE,BODYPRESS,RECOVER
+    EV = 252,0,252,0,8,0
+Build
+    PreferredFormat = DOUBLE
+    Ability = PURIFYINGSALT
+    Item = LEFTOVERS
+    Nature = CAREFUL
+    Moves = CURSE,SALTCURE,EARTHQUAKE,RECOVER
+    EV = 252,0,52,0,208,0
+Pokemon = AERODACTYL,50
+Build
+    Ability = ROCKHEAD
+    Item = LIFEORB
+    Nature = ADAMANT
+    Moves = HEADSMASH,BRAVEBIRD,DRAGONDANCE,ROOST
+    EV = 252,252,0,0,8,0
+Build
+    Mega = true
+    PreferredFormat = DOUBLE
+    Ability = PRESSURE
+    Item = AERODACTYLITE
+    Nature = ADAMANT
+    Moves = ROCKSLIDE,EARTHQUAKE,TAILWIND,ROOST
+    EV = 0,252,0,0,8,252
+
+[LEADER_Blaine,Blaine,1]
+WinText = Whoa hey! I'm a raging inferno!
+LoseText = How could this be?! My spirit has not been defeated!
+MegaRule = EXACTLY_ONE
+Theme = SAND
+Items = MEGARING
+Pokemon = TYRANITAR,50
+Lead = true
+Build
+    Role = LEAD
+    Ability = SANDSTREAM
+    Item = LEFTOVERS
+    Nature = CAREFUL
+    Moves = KNOCKOFF,HEAVYSLAM,THUNDERWAVE,STEALTHROCK
+    EV = 252,0,16,0,244,0
+Build
+    Role = LEAD
+	Mega = true
+    Ability = SANDSTREAM
+    Item = TYRANITARITE
+    Nature = ADAMANT
+    Moves = KNOCKOFF,STONEEDGE,LOWKICK,ICEPUNCH
+    EV = 0,252,0,0,8,252
+Pokemon = ONIX,50
+Build
+    Ability = ROCKHEAD
+    Item = CHOICEBAND
+    Nature = IMPISH
+    Moves = HEADSMASH,HIGHHORSEPOWER,EXPLOSION,BODYPRESS
+    EV = 0,252,252,0,0,8
+Build
+    Ability = STURDY
+    Item = EVIOLITE
+    Nature = IMPISH
+    Moves = CURSE,DRAGONTAIL,STEALTHROCK,BODYPRESS
+    EV = 8,0,252,0,0,252
+Pokemon = ARCANINE,50
+Build
+    Form = 1
+    Ability = ROCKHEAD
+    Item = CHOICEBAND
+    Nature = JOLLY
+    Moves = FLAREBLITZ,HEADSMASH,EXTREMESPEED,CLOSECOMBAT
+    EV = 0,252,0,0,8,252
+Build
+    Form = 1
+    Ability = ROCKHEAD
+    Item = CHOICESCARF
+    Nature = JOLLY
+    Moves = FLAREBLITZ,HEADSMASH,WILDCHARGE,CLOSECOMBAT
+    EV = 0,252,8,0,0,252
+Pokemon = KABUTOPS,50
+Build
+    Ability = WEAKARMOR
+    Item = CHOICESCARF
+    Nature = JOLLY
+    Moves = FLIPTURN,STONEEDGE,LIQUIDATION,KNOCKOFF
+    EV = 0,252,0,0,8,252
+Build
+    Ability = WEAKARMOR
+    Item = CHOICEBAND
+    Nature = JOLLY
+    Moves = FLIPTURN,STONEEDGE,LIQUIDATION,RAPIDSPIN
+    EV = 0,252,0,0,8,252
+Pokemon = GARGANACL,50
+Build
+    Ability = PURIFYINGSALT
+    Item = HEAVYDUTYBOOTS
+    Nature = IMPISH
+    Moves = SALTCURE,IRONDEFENSE,BODYPRESS,RECOVER
+    EV = 252,0,252,0,8,0
+Build
+    PreferredFormat = DOUBLE
+    Ability = PURIFYINGSALT
+    Item = LEFTOVERS
+    Nature = CAREFUL
+    Moves = CURSE,SALTCURE,EARTHQUAKE,RECOVER
+    EV = 252,0,52,0,208,0
+Pokemon = AERODACTYL,50
+Build
+    Ability = ROCKHEAD
+    Item = LIFEORB
+    Nature = ADAMANT
+    Moves = HEADSMASH,BRAVEBIRD,DRAGONDANCE,ROOST
+    EV = 252,252,0,0,8,0
+Build
+    Mega = true
+    PreferredFormat = DOUBLE
+    Ability = PRESSURE
+    Item = AERODACTYLITE
+    Nature = ADAMANT
+    Moves = ROCKSLIDE,EARTHQUAKE,TAILWIND,ROOST
+    EV = 0,252,0,0,8,252
+
+[LEADER_Giovanni,Giovanni,1]
+WinText = Ha! That was a truly intense fight!
+LoseText = What? Me, lose?!
+MegaRule = EXACTLY_ONE
+Theme = SAND
+Items = MEGARING
+Pokemon = TYRANITAR,50
+Lead = true
+Build
+    Role = LEAD
+    Ability = SANDSTREAM
+    Item = LEFTOVERS
+    Nature = CAREFUL
+    Moves = KNOCKOFF,HEAVYSLAM,THUNDERWAVE,STEALTHROCK
+    EV = 252,0,16,0,244,0
+Build
+    Role = LEAD
+	Mega = true
+    Ability = SANDSTREAM
+    Item = TYRANITARITE
+    Nature = ADAMANT
+    Moves = KNOCKOFF,STONEEDGE,LOWKICK,ICEPUNCH
+    EV = 0,252,0,0,8,252
+Pokemon = ONIX,50
+Build
+    Ability = ROCKHEAD
+    Item = CHOICEBAND
+    Nature = IMPISH
+    Moves = HEADSMASH,HIGHHORSEPOWER,EXPLOSION,BODYPRESS
+    EV = 0,252,252,0,0,8
+Build
+    Ability = STURDY
+    Item = EVIOLITE
+    Nature = IMPISH
+    Moves = CURSE,DRAGONTAIL,STEALTHROCK,BODYPRESS
+    EV = 8,0,252,0,0,252
+Pokemon = ARCANINE,50
+Build
+    Form = 1
+    Ability = ROCKHEAD
+    Item = CHOICEBAND
+    Nature = JOLLY
+    Moves = FLAREBLITZ,HEADSMASH,EXTREMESPEED,CLOSECOMBAT
+    EV = 0,252,0,0,8,252
+Build
+    Form = 1
+    Ability = ROCKHEAD
+    Item = CHOICESCARF
+    Nature = JOLLY
+    Moves = FLAREBLITZ,HEADSMASH,WILDCHARGE,CLOSECOMBAT
+    EV = 0,252,8,0,0,252
+Pokemon = KABUTOPS,50
+Build
+    Ability = WEAKARMOR
+    Item = CHOICESCARF
+    Nature = JOLLY
+    Moves = FLIPTURN,STONEEDGE,LIQUIDATION,KNOCKOFF
+    EV = 0,252,0,0,8,252
+Build
+    Ability = WEAKARMOR
+    Item = CHOICEBAND
+    Nature = JOLLY
+    Moves = FLIPTURN,STONEEDGE,LIQUIDATION,RAPIDSPIN
+    EV = 0,252,0,0,8,252
+Pokemon = GARGANACL,50
+Build
+    Ability = PURIFYINGSALT
+    Item = HEAVYDUTYBOOTS
+    Nature = IMPISH
+    Moves = SALTCURE,IRONDEFENSE,BODYPRESS,RECOVER
+    EV = 252,0,252,0,8,0
+Build
+    PreferredFormat = DOUBLE
+    Ability = PURIFYINGSALT
+    Item = LEFTOVERS
+    Nature = CAREFUL
+    Moves = CURSE,SALTCURE,EARTHQUAKE,RECOVER
+    EV = 252,0,52,0,208,0
+Pokemon = AERODACTYL,50
+Build
+    Ability = ROCKHEAD
+    Item = LIFEORB
+    Nature = ADAMANT
+    Moves = HEADSMASH,BRAVEBIRD,DRAGONDANCE,ROOST
+    EV = 252,252,0,0,8,0
+Build
+    Mega = true
+    PreferredFormat = DOUBLE
+    Ability = PRESSURE
+    Item = AERODACTYLITE
+    Nature = ADAMANT
+    Moves = ROCKSLIDE,EARTHQUAKE,TAILWIND,ROOST
+    EV = 0,252,0,0,8,252
+
+[LEADER_Janine,Janine,1]
+WinText = I'm Janine! Remember this name!
+LoseText = You've got a great battle technique!
+MegaRule = EXACTLY_ONE
+Theme = SAND
+Items = MEGARING
+Pokemon = TYRANITAR,50
+Lead = true
+Build
+    Role = LEAD
+    Ability = SANDSTREAM
+    Item = LEFTOVERS
+    Nature = CAREFUL
+    Moves = KNOCKOFF,HEAVYSLAM,THUNDERWAVE,STEALTHROCK
+    EV = 252,0,16,0,244,0
+Build
+    Role = LEAD
+	Mega = true
+    Ability = SANDSTREAM
+    Item = TYRANITARITE
+    Nature = ADAMANT
+    Moves = KNOCKOFF,STONEEDGE,LOWKICK,ICEPUNCH
+    EV = 0,252,0,0,8,252
+Pokemon = ONIX,50
+Build
+    Ability = ROCKHEAD
+    Item = CHOICEBAND
+    Nature = IMPISH
+    Moves = HEADSMASH,HIGHHORSEPOWER,EXPLOSION,BODYPRESS
+    EV = 0,252,252,0,0,8
+Build
+    Ability = STURDY
+    Item = EVIOLITE
+    Nature = IMPISH
+    Moves = CURSE,DRAGONTAIL,STEALTHROCK,BODYPRESS
+    EV = 8,0,252,0,0,252
+Pokemon = ARCANINE,50
+Build
+    Form = 1
+    Ability = ROCKHEAD
+    Item = CHOICEBAND
+    Nature = JOLLY
+    Moves = FLAREBLITZ,HEADSMASH,EXTREMESPEED,CLOSECOMBAT
+    EV = 0,252,0,0,8,252
+Build
+    Form = 1
+    Ability = ROCKHEAD
+    Item = CHOICESCARF
+    Nature = JOLLY
+    Moves = FLAREBLITZ,HEADSMASH,WILDCHARGE,CLOSECOMBAT
+    EV = 0,252,8,0,0,252
+Pokemon = KABUTOPS,50
+Build
+    Ability = WEAKARMOR
+    Item = CHOICESCARF
+    Nature = JOLLY
+    Moves = FLIPTURN,STONEEDGE,LIQUIDATION,KNOCKOFF
+    EV = 0,252,0,0,8,252
+Build
+    Ability = WEAKARMOR
+    Item = CHOICEBAND
+    Nature = JOLLY
+    Moves = FLIPTURN,STONEEDGE,LIQUIDATION,RAPIDSPIN
+    EV = 0,252,0,0,8,252
+Pokemon = GARGANACL,50
+Build
+    Ability = PURIFYINGSALT
+    Item = HEAVYDUTYBOOTS
+    Nature = IMPISH
+    Moves = SALTCURE,IRONDEFENSE,BODYPRESS,RECOVER
+    EV = 252,0,252,0,8,0
+Build
+    PreferredFormat = DOUBLE
+    Ability = PURIFYINGSALT
+    Item = LEFTOVERS
+    Nature = CAREFUL
+    Moves = CURSE,SALTCURE,EARTHQUAKE,RECOVER
+    EV = 252,0,52,0,208,0
+Pokemon = AERODACTYL,50
+Build
+    Ability = ROCKHEAD
+    Item = LIFEORB
+    Nature = ADAMANT
+    Moves = HEADSMASH,BRAVEBIRD,DRAGONDANCE,ROOST
+    EV = 252,252,0,0,8,0
+Build
+    Mega = true
+    PreferredFormat = DOUBLE
+    Ability = PRESSURE
+    Item = AERODACTYLITE
+    Nature = ADAMANT
+    Moves = ROCKSLIDE,EARTHQUAKE,TAILWIND,ROOST
+    EV = 0,252,0,0,8,252
+
+[LEADER_Blue,Blue,1]
+WinText = This is what I, Kanto's top-level Trainer, can really do!
+LoseText = OK! You're pretty good!
+MegaRule = EXACTLY_ONE
+Theme = SAND
+Items = MEGARING
+Pokemon = TYRANITAR,50
+Lead = true
+Build
+    Role = LEAD
+    Ability = SANDSTREAM
+    Item = LEFTOVERS
+    Nature = CAREFUL
+    Moves = KNOCKOFF,HEAVYSLAM,THUNDERWAVE,STEALTHROCK
+    EV = 252,0,16,0,244,0
+Build
+    Role = LEAD
+	Mega = true
+    Ability = SANDSTREAM
+    Item = TYRANITARITE
+    Nature = ADAMANT
+    Moves = KNOCKOFF,STONEEDGE,LOWKICK,ICEPUNCH
+    EV = 0,252,0,0,8,252
+Pokemon = ONIX,50
+Build
+    Ability = ROCKHEAD
+    Item = CHOICEBAND
+    Nature = IMPISH
+    Moves = HEADSMASH,HIGHHORSEPOWER,EXPLOSION,BODYPRESS
+    EV = 0,252,252,0,0,8
+Build
+    Ability = STURDY
+    Item = EVIOLITE
+    Nature = IMPISH
+    Moves = CURSE,DRAGONTAIL,STEALTHROCK,BODYPRESS
+    EV = 8,0,252,0,0,252
+Pokemon = ARCANINE,50
+Build
+    Form = 1
+    Ability = ROCKHEAD
+    Item = CHOICEBAND
+    Nature = JOLLY
+    Moves = FLAREBLITZ,HEADSMASH,EXTREMESPEED,CLOSECOMBAT
+    EV = 0,252,0,0,8,252
+Build
+    Form = 1
+    Ability = ROCKHEAD
+    Item = CHOICESCARF
+    Nature = JOLLY
+    Moves = FLAREBLITZ,HEADSMASH,WILDCHARGE,CLOSECOMBAT
+    EV = 0,252,8,0,0,252
+Pokemon = KABUTOPS,50
+Build
+    Ability = WEAKARMOR
+    Item = CHOICESCARF
+    Nature = JOLLY
+    Moves = FLIPTURN,STONEEDGE,LIQUIDATION,KNOCKOFF
+    EV = 0,252,0,0,8,252
+Build
+    Ability = WEAKARMOR
+    Item = CHOICEBAND
+    Nature = JOLLY
+    Moves = FLIPTURN,STONEEDGE,LIQUIDATION,RAPIDSPIN
+    EV = 0,252,0,0,8,252
+Pokemon = GARGANACL,50
+Build
+    Ability = PURIFYINGSALT
+    Item = HEAVYDUTYBOOTS
+    Nature = IMPISH
+    Moves = SALTCURE,IRONDEFENSE,BODYPRESS,RECOVER
+    EV = 252,0,252,0,8,0
+Build
+    PreferredFormat = DOUBLE
+    Ability = PURIFYINGSALT
+    Item = LEFTOVERS
+    Nature = CAREFUL
+    Moves = CURSE,SALTCURE,EARTHQUAKE,RECOVER
+    EV = 252,0,52,0,208,0
+Pokemon = AERODACTYL,50
+Build
+    Ability = ROCKHEAD
+    Item = LIFEORB
+    Nature = ADAMANT
+    Moves = HEADSMASH,BRAVEBIRD,DRAGONDANCE,ROOST
+    EV = 252,252,0,0,8,0
+Build
+    Mega = true
+    PreferredFormat = DOUBLE
+    Ability = PRESSURE
+    Item = AERODACTYLITE
+    Nature = ADAMANT
+    Moves = ROCKSLIDE,EARTHQUAKE,TAILWIND,ROOST
+    EV = 0,252,0,0,8,252
+
+[CHAMPION_Blue,Blue,1]
+WinText = This is what I, Kanto's top-level Trainer, can really do!
+LoseText = How did I lose? You really are the real deal!
+MegaRule = EXACTLY_ONE
+Theme = SAND
+Items = MEGARING
+Pokemon = TYRANITAR,50
+Lead = true
+Build
+    Role = LEAD
+    Ability = SANDSTREAM
+    Item = LEFTOVERS
+    Nature = CAREFUL
+    Moves = KNOCKOFF,HEAVYSLAM,THUNDERWAVE,STEALTHROCK
+    EV = 252,0,16,0,244,0
+Build
+    Role = LEAD
+	Mega = true
+    Ability = SANDSTREAM
+    Item = TYRANITARITE
+    Nature = ADAMANT
+    Moves = KNOCKOFF,STONEEDGE,LOWKICK,ICEPUNCH
+    EV = 0,252,0,0,8,252
+Pokemon = ONIX,50
+Build
+    Ability = ROCKHEAD
+    Item = CHOICEBAND
+    Nature = IMPISH
+    Moves = HEADSMASH,HIGHHORSEPOWER,EXPLOSION,BODYPRESS
+    EV = 0,252,252,0,0,8
+Build
+    Ability = STURDY
+    Item = EVIOLITE
+    Nature = IMPISH
+    Moves = CURSE,DRAGONTAIL,STEALTHROCK,BODYPRESS
+    EV = 8,0,252,0,0,252
+Pokemon = ARCANINE,50
+Build
+    Form = 1
+    Ability = ROCKHEAD
+    Item = CHOICEBAND
+    Nature = JOLLY
+    Moves = FLAREBLITZ,HEADSMASH,EXTREMESPEED,CLOSECOMBAT
+    EV = 0,252,0,0,8,252
+Build
+    Form = 1
+    Ability = ROCKHEAD
+    Item = CHOICESCARF
+    Nature = JOLLY
+    Moves = FLAREBLITZ,HEADSMASH,WILDCHARGE,CLOSECOMBAT
+    EV = 0,252,8,0,0,252
+Pokemon = KABUTOPS,50
+Build
+    Ability = WEAKARMOR
+    Item = CHOICESCARF
+    Nature = JOLLY
+    Moves = FLIPTURN,STONEEDGE,LIQUIDATION,KNOCKOFF
+    EV = 0,252,0,0,8,252
+Build
+    Ability = WEAKARMOR
+    Item = CHOICEBAND
+    Nature = JOLLY
+    Moves = FLIPTURN,STONEEDGE,LIQUIDATION,RAPIDSPIN
+    EV = 0,252,0,0,8,252
+Pokemon = GARGANACL,50
+Build
+    Ability = PURIFYINGSALT
+    Item = HEAVYDUTYBOOTS
+    Nature = IMPISH
+    Moves = SALTCURE,IRONDEFENSE,BODYPRESS,RECOVER
+    EV = 252,0,252,0,8,0
+Build
+    PreferredFormat = DOUBLE
+    Ability = PURIFYINGSALT
+    Item = LEFTOVERS
+    Nature = CAREFUL
+    Moves = CURSE,SALTCURE,EARTHQUAKE,RECOVER
+    EV = 252,0,52,0,208,0
+Pokemon = AERODACTYL,50
+Build
+    Ability = ROCKHEAD
+    Item = LIFEORB
+    Nature = ADAMANT
+    Moves = HEADSMASH,BRAVEBIRD,DRAGONDANCE,ROOST
+    EV = 252,252,0,0,8,0
+Build
+    Mega = true
+    PreferredFormat = DOUBLE
+    Ability = PRESSURE
+    Item = AERODACTYLITE
+    Nature = ADAMANT
+    Moves = ROCKSLIDE,EARTHQUAKE,TAILWIND,ROOST
+    EV = 0,252,0,0,8,252

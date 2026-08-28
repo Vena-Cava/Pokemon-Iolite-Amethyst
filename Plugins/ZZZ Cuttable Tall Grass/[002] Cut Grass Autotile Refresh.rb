@@ -9,7 +9,6 @@ module CuttableTallGrass
 	# XXX
 	# XCX
 	# XXXisolated
-	# +
 
 	# One Connection ==================================
 
@@ -17,25 +16,21 @@ module CuttableTallGrass
 	# XOX
 	# XCX
 	# XXXup only
-	# +
 	
 	8=>45,
 	# XXX
 	# OCX
 	# XXXleft only
-	# +
 
 	16=>43,
 	# XXX
 	# XCO
 	# XXXright only
-	# +
 
 	64=>42, 
 	# XXX
 	# XCX
 	# XOXdown only
-	# +
 	
 	# Two Connections ==================================
 	
@@ -43,37 +38,31 @@ module CuttableTallGrass
 	# XOX
 	# OCX
 	# XXXup + left
-	# +
 	
 	18=>41, 
 	# XOX
 	# XCO
 	# XXXup + right
-	# +
 
 	24=>33,
 	# XXX
 	# OCO
 	# XXXleft + right only
-	# +
 	
 	66=>32,
 	# XOX
 	# XCX
 	# XOX up + down
-	# +
 	
 	72=>37, 
 	# XXX
 	# OCX
 	# XOXleft + down
-	# +
 
 	80=>35, 
 	# XXX
 	# XCO
 	# XOXright + down
-	# +
 	
 	# Full Corners ==================================
 	
@@ -81,25 +70,21 @@ module CuttableTallGrass
 	# OOX
 	# OCX
 	# XXXup + left + upper-left
-	# +
 	
 	22=>40,
 	# XOO
 	# XCO
 	# XXXup + right + upper-right
-	# +
 
 	104=>36,
 	# XXX
 	# OCX
 	# OOXleft + down + lower-left
-	# +
 
 	208=>34,
 	# XXX
 	# XCO
 	# XOOright + down + lower-right
-	# +
 	
 	# Three Connections ==================================
 	
@@ -107,25 +92,21 @@ module CuttableTallGrass
 	# XOX
 	# OCO
 	# XXXup + left + right
-	# +
 	
 	74=>27, 
 	# XOX
 	# OCX
 	# XOXup + left + down
-	# +
 	
 	82=>19,
 	# XOX
 	# XCO
 	# XOXup + right + down
-	# +
 	
 	88=>23,
 	# XXX
 	# OCO
 	# XOXleft + right + down
-	# +
 	
 	# Full Corners and One Connection ==================================
 	
@@ -133,49 +114,41 @@ module CuttableTallGrass
 	# OOX
 	# OCO
 	# XXXup + left + right + upper-left
-	# +
 	
 	30=>29, 
 	# XOO
 	# OCO
 	# XXXup + left + right + upper-right
-	# +
 	
 	75=>25,
 	# OOX
 	# OCX
 	# XOXup + left + down + upper-left
-	# +
 	
 	86=>18, 
 	# XOO
 	# XCO
 	# XOXup + right + down + upper-right
-	# +
 	
 	106=>26,
 	# XOX
 	# OCX
 	# OOXup + left + down + lower-left
-	# +
 
 	120=>21,
 	# XXX
 	# OCO
 	# OOXleft + right + down + lower-left
-	# +
 	
 	210=>17,
 	# XOX
 	# XCO
 	# XOOup + right + down + lower-right
-	# +
 
 	216=>22,
 	# XXX
 	# OCO
 	# XOOleft + right + down + lower-right
-	# +
 	
 	# Full Corners and Two Connections ==================================
 	
@@ -183,25 +156,21 @@ module CuttableTallGrass
 	# OOX
 	# OCO
 	# XOXup + left + right + down + upper-left
-	# +
 	
 	94=>13, 
 	# XOO
 	# OCO
 	# XOXup + left + right + down + upper-right
-	# +
 	
 	122=>7,
 	# XOX
 	# OCO
 	# OOXup + left + right + down + lower-left
-	# +
 	
 	218=>11, 
 	# XOX
 	# OCO
 	# XOOup + left + right + down + lower-right
-	# +
 	
 	# Four Connections ==================================
 
@@ -209,7 +178,6 @@ module CuttableTallGrass
 	# XOX
 	# OCO
 	# XOXup + left + right + down
-	# +
 	
 	# Edges ==================================
 	
@@ -217,25 +185,21 @@ module CuttableTallGrass
 	# OOO
 	# OCO
 	# XXXup + left + right + both upper corners
-	# +
 	
 	107=>24,
 	# OOX
 	# OCX
 	# OOXup + left + down + upper-left + lower-left
-	# +
 	
 	214=>16,
 	# XOO
 	# XCO
 	# XOOup + right + down + upper-right + lower-right
-	# +
 
 	248=>20,
 	# XXX
 	# OCO
 	# OOOleft + right + down + both lower corners
-	# +
 	
 	# Edge and One Connection ==================================
 	
@@ -243,25 +207,21 @@ module CuttableTallGrass
 	# OOO
 	# OCO
 	# XOXup + left + right + down + both upper corners
-	# +
 	
 	222=>9, 
 	# XOO
 	# OCO
 	# XOOup + left + right + down + upper-right + lower-right
-	# +
 	
 	250=>3, 
 	# XOX
 	# OCO
 	# OOOup + left + right + down + both lower corners
-	# +
 	
 	123=>6, 
 	# OOX
 	# OCO
 	# OOXup + left + right + down + upper-left + lower-left
-	# +
 	
 	# Two Empty Corners ==================================
 	
@@ -269,13 +229,11 @@ module CuttableTallGrass
 	# OOX
 	# OCO
 	# XOOup + left + right + down + upper-left + lower-right
-	# +
 	
 	126=>5, 
 	# XOO
 	# OCO
 	# OOXup + left + right + down + upper-right + lower-left
-	# +
 	
 	# Inner Corners ==================================
 	
@@ -283,25 +241,21 @@ module CuttableTallGrass
 	# OOO
 	# OCO
 	# OOXup + left + right + down + upper corners + lower-left
-	# +
 	
 	223=>8, 
 	# OOO
 	# OCO
 	# XOOup + left + right + down + upper corners + lower-right
-	# +
 	
 	251=>2, 
 	# OOX
 	# OCO
 	# OOOup + left + right + down + upper-left + lower corners
-	# +
 	
 	254=>1, 
 	# XOO
 	# OCO
 	# OOOup + left + right + down + upper-right + lower corners
-	# +
 	
 	# Fully Surrounded ==================================
 	
@@ -309,7 +263,6 @@ module CuttableTallGrass
 	# OOO
 	# OCO
 	# OOOfully surrounded
-	# +
   }
 
 

@@ -234,3 +234,13 @@ Description = Even when the sunlight has not turned harsh, the Pokémon can use 
 Name = Spicy Spray
 ShortDesc = Burns attackers when the Pokémon is hit by an attack.
 Description = When the Pokémon takes damage from a move, it burns the attacker.
+#-------------------------------
+[EELEVATE]
+Name = Eelevate
+ShortDesc = The Pokémon is immune to Ground-type moves. It also boosts its highest stat each time it knocks out a Pokémon.
+Description = The Pokémon floats off the ground, making it immune to Ground-type moves, as well as the Spikes, Toxic Spikes, and Sticky Web statuses. When the Pokémon knocks out a target with an attack, its highest stat is boosted by 1 stage.
+#-------------------------------
+[FIREMANE]
+Name = Fire Mane
+ShortDesc = Boosts the power of Fire-type moves.
+Description = The Pokémon's blazing fiery mane boosts the power of its Fire-type attacks by 50%.

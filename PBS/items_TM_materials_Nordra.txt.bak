@@ -1,0 +1,393 @@
+﻿# See the documentation on the wiki to learn how to edit this file.
+#-------------------------------
+[FLORAWNPETAL]
+Name = Florawn Petal
+NamePlural = Florawn Petals
+Pocket = 10
+Price = 100
+Flags = TMMaterial
+Description = Material accidentally dropped by a Pokémon. It can be used to synthesize TMs.
+#-------------------------------
+[SMOKIDDWOOL]
+Name = Smokidd Wool
+NamePlural = Smokidd Wool
+Pocket = 10
+Price = 100
+Flags = TMMaterial
+Description = Material accidentally dropped by a Pokémon. It can be used to synthesize TMs.
+#-------------------------------
+[BRAKKUBFUR]
+Name = Brakkub Fur
+NamePlural = Brakkub Fur
+Pocket = 10
+Price = 100
+Flags = TMMaterial
+Description = Material accidentally dropped by a Pokémon. It can be used to synthesize TMs.
+#-------------------------------
+[RATTOSSKFUR]
+Name = Rattossk Fur
+NamePlural = Rattossk Fur
+Pocket = 10
+Price = 30
+Flags = TMMaterial
+Description = Material accidentally dropped by a Pokémon. It can be used to synthesize TMs.
+#-------------------------------
+[MAGGLOFLUID]
+Name = Magglo Fluid
+NamePlural = Magglo Fluid
+Pocket = 10
+Price = 30
+Flags = TMMaterial
+Description = Material accidentally dropped by a Pokémon. It can be used to synthesize TMs.
+#-------------------------------
+[FOXFUR]
+Name = Fox Fur
+NamePlural = Fox Fur
+Pocket = 10
+Price = 30
+Flags = TMMaterial
+Description = Material accidentally dropped by a Pokémon. It can be used to synthesize TMs.
+#-------------------------------
+[SNOWLDOWN]
+Name = Snowl Down
+NamePlural = Snowl Down	
+Pocket = 10
+Price = 40
+Flags = TMMaterial
+Description = Material accidentally dropped by a Pokémon. It can be used to synthesize TMs.
+#-------------------------------
+[KAFFEANBEAN]
+Name = Kaffean Bean
+NamePlural = Kaffean Beans
+Pocket = 10
+Price = 40
+Flags = TMMaterial
+Description = Material accidentally dropped by a Pokémon. It can be used to synthesize TMs.
+#-------------------------------
+[RUSAGIRUFUR]
+Name = Rusagiru Fur
+NamePlural = Rusagiru Fur
+Pocket = 10
+Price = 50
+Flags = TMMaterial
+Description = Material accidentally dropped by a Pokémon. It can be used to synthesize TMs.
+#-------------------------------
+[PALMONSCALES]
+Name = Palmon Scales
+NamePlural = Palmon Scales
+Pocket = 10
+Price = 40
+Flags = TMMaterial
+Description = Material accidentally dropped by a Pokémon. It can be used to synthesize TMs.
+#-------------------------------
+[SOULBOTEPLANK]
+Name = Soulbote Plank
+NamePlural = Soulbote Planks
+Pocket = 10
+Price = 50
+Flags = TMMaterial
+Description = Material accidentally dropped by a Pokémon. It can be used to synthesize TMs.
+#-------------------------------
+[SKANDASKIN]
+Name = Skanda Skin
+NamePlural = Skanda Skins
+Pocket = 10
+Price = 50
+Flags = TMMaterial
+Description = Material accidentally dropped by a Pokémon. It can be used to synthesize TMs.
+#-------------------------------
+[VARGSVASPORES]
+Name = Vargsva Spores
+NamePlural = Vargsva Spores
+Pocket = 10
+Price = 40
+Flags = TMMaterial
+Description = Material accidentally dropped by a Pokémon. It can be used to synthesize TMs.
+#-------------------------------
+[DWETTLEMUCUS]
+Name = Dwettle Mucus
+NamePlural = Dwettle Mucus
+Pocket = 10
+Price = 60
+Flags = TMMaterial
+Description = Material accidentally dropped by a Pokémon. It can be used to synthesize TMs.
+#-------------------------------
+[OBSIDIOUSFRAGMENT]
+Name = Obsidious Fragment
+NamePlural = Obsidious Fragments
+Pocket = 10
+Price = 60
+Flags = TMMaterial
+Description = Material accidentally dropped by a Pokémon. It can be used to synthesize TMs.
+#-------------------------------
+[WARBLURTARNISH]
+Name = Warblur Tarnish
+NamePlural = Warblur Tarnish
+Pocket = 10
+Price = 60
+Flags = TMMaterial
+Description = Material accidentally dropped by a Pokémon. It can be used to synthesize TMs.
+#-------------------------------
+[STACKEMPLASTC]
+Name = Stackem Plastic
+NamePlural = Stackem Plastic
+Pocket = 10
+Price = 40
+Flags = TMMaterial
+Description = Material accidentally dropped by a Pokémon. It can be used to synthesize TMs.
+#-------------------------------
+[TERRANTULATHREAD]
+Name = Terrantula Thread
+NamePlural = Terrantula Threads
+Pocket = 10
+Price = 20
+Flags = TMMaterial
+Description = Material accidentally dropped by a Pokémon. It can be used to synthesize TMs.
+#-------------------------------
+[LILITORALGREASE]
+Name = Lilitoral Grease
+NamePlural = Lilitoral Grease
+Pocket = 10
+Price = 40
+Flags = TMMaterial
+Description = Material accidentally dropped by a Pokémon. It can be used to synthesize TMs.
+#-------------------------------
+[MELAVALAMPWAX]
+Name = Melavalamp Wax
+NamePlural = Melavalamp Wax
+Pocket = 10
+Price = 60
+Flags = TMMaterial
+Description = Material accidentally dropped by a Pokémon. It can be used to synthesize TMs.
+#-------------------------------
+[BRYGENTHROLLBOIL]
+Name = Brygenthroll Boil
+NamePlural = Brygenthroll Boils
+Pocket = 10
+Price = 50
+Flags = TMMaterial
+Description = Material accidentally dropped by a Pokémon. It can be used to synthesize TMs.
+#-------------------------------
+[IGLOOZEGOO]
+Name = Iglooze Goo
+NamePlural = Iglooze Goo
+Pocket = 10
+Price = 40
+Flags = TMMaterial
+Description = Material accidentally dropped by a Pokémon. It can be used to synthesize TMs.
+#-------------------------------
+[CHEMIXFLUID]
+Name = Chemix Fluid
+NamePlural = Chemix Fluid
+Pocket = 10
+Price = 50
+Flags = TMMaterial
+Description = Material accidentally dropped by a Pokémon. It can be used to synthesize TMs.
+#-------------------------------
+[STENCHICFUME]
+Name = Stenchic Fume
+NamePlural = Stenchic Fumes
+Pocket = 10
+Price = 40
+Flags = TMMaterial
+Description = Material accidentally dropped by a Pokémon. It can be used to synthesize TMs.
+#-------------------------------
+[QUARTZAPFRAGMENT]
+Name = Quartzap Fragment
+NamePlural = Quartzap Fragments
+Pocket = 10
+Price = 60
+Flags = TMMaterial
+Description = Material accidentally dropped by a Pokémon. It can be used to synthesize TMs.
+#-------------------------------
+[TRISPECTRASPIRIT]
+Name = Trispectra Spirit
+NamePlural = Trispectra Spirits
+Pocket = 10
+Price = 60
+Flags = TMMaterial
+Description = Material accidentally dropped by a Pokémon. It can be used to synthesize TMs.
+#-------------------------------
+[ROOKICESWEAT]
+Name = Rookice Sweat
+NamePlural = Rookice Sweat
+Pocket = 10
+Price = 40
+Flags = TMMaterial
+Description = Material accidentally dropped by a Pokémon. It can be used to synthesize TMs.
+#-------------------------------
+[KATATSUCLAW]
+Name = Katatsu Claw
+NamePlural = Katatsu Claws
+Pocket = 10
+Price = 70
+Flags = TMMaterial
+Description = Material accidentally dropped by a Pokémon. It can be used to synthesize TMs.
+#-------------------------------
+[PILLINKSTERGITE]
+Name = Pillinks Tergite
+NamePlural = Pillinks Tergites
+Pocket = 10
+Price = 60
+Flags = TMMaterial
+Description = Material accidentally dropped by a Pokémon. It can be used to synthesize TMs.
+#-------------------------------
+[SALAMANDRMUCUS]
+Name = Salamandr Mucus
+NamePlural = Salamandr Mucus
+Pocket = 10
+Price = 100
+Flags = TMMaterial
+Description = Material accidentally dropped by a Pokémon. It can be used to synthesize TMs.
+#-------------------------------
+[FIZZINIBUBBLES]
+Name = Fizzini Bubbles
+NamePlural = Fizzini Bubbles
+Pocket = 10
+Price = 60
+Flags = TMMaterial
+Description = Material accidentally dropped by a Pokémon. It can be used to synthesize TMs.
+#-------------------------------
+[MAGSALOTLSLIME]
+Name = Magsalotl Slime
+NamePlural = Magsalotl Slime
+Pocket = 10
+Price = 70
+Flags = TMMaterial
+Description = Material accidentally dropped by a Pokémon. It can be used to synthesize TMs.
+#-------------------------------
+[BINDAKITBANDAGE]
+Name = Bindakit Bandage
+NamePlural = Bindakit Bandages
+Pocket = 10
+Price = 50
+Flags = TMMaterial
+Description = Material accidentally dropped by a Pokémon. It can be used to synthesize TMs.
+#-------------------------------
+[MUGGOTHONEY]
+Name = Muggot Honey
+NamePlural = Muggot Honey
+Pocket = 10
+Price = 50
+Flags = TMMaterial
+Description = Material accidentally dropped by a Pokémon. It can be used to synthesize TMs.
+#-------------------------------
+[MIMBLHORN]
+Name = Mimbl Horn
+NamePlural = Mimbl Horns
+Pocket = 10
+Price = 50
+Flags = TMMaterial
+Description = Material accidentally dropped by a Pokémon. It can be used to synthesize TMs.
+#-------------------------------
+[BUTTERFAEPOWDER]
+Name = Butterfae Powder
+NamePlural = Butterfae Powder
+Pocket = 10
+Price = 80
+Flags = TMMaterial
+Description = Material accidentally dropped by a Pokémon. It can be used to synthesize TMs.
+#-------------------------------
+[SHELLYSLIME]
+Name = Shelly Slime
+NamePlural = Shelly Slime
+Pocket = 10
+Price = 50
+Flags = TMMaterial
+Description = Material accidentally dropped by a Pokémon. It can be used to synthesize TMs.
+#-------------------------------
+[CHIDUCKEYSTUFFING]
+Name = Chiduckey Stuffing
+NamePlural = Chiduckey Stuffing
+Pocket = 10
+Price = 50
+Flags = TMMaterial
+Description = Material accidentally dropped by a Pokémon. It can be used to synthesize TMs.
+#-------------------------------
+[TANNPLARCHHORN]
+Name = Tannplarch Horn
+NamePlural = Tannplarch Horns
+Pocket = 10
+Price = 40
+Flags = TMMaterial
+Description = Material accidentally dropped by a Pokémon. It can be used to synthesize TMs.
+#-------------------------------
+[AZTECHTARNISH]
+Name = Aztech Tarnish
+NamePlural = Aztech Tarnish
+Pocket = 10
+Price = 60
+Flags = TMMaterial
+Description = Material accidentally dropped by a Pokémon. It can be used to synthesize TMs.
+#-------------------------------
+[BAMBURALSHOOT]
+Name = Bambural Shoot
+NamePlural = Bambural Shoots
+Pocket = 10
+Price = 50
+Flags = TMMaterial
+Description = Material accidentally dropped by a Pokémon. It can be used to synthesize TMs.
+#-------------------------------
+[CERABRAWLNEURON]
+Name = Cerebrawl Neuron
+NamePlural = Cerebrawl Neurons
+Pocket = 10
+Price = 80
+Flags = TMMaterial
+Description = Material accidentally dropped by a Pokémon. It can be used to synthesize TMs.
+#-------------------------------
+[GIMMIFOOLCOIN]
+Name = Gimmifool Coin
+NamePlural = Gimmifool Coins
+Pocket = 10
+Price = 0
+Description = An item that accidentally dropped by a Pokémon. It seems that Gimmifool treasure and hoard these.
+#-------------------------------
+[ARACHNEISHELL]
+Name = Arachnei Shell
+NamePlural = Arachnei Shells
+Pocket = 10
+Price = 50
+Flags = TMMaterial
+Description = Material accidentally dropped by a Pokémon. It can be used to synthesize TMs.
+#-------------------------------
+[PRIMAMPFUR]
+Name = Primamp Fur
+NamePlural = Primamp Fur
+Pocket = 10
+Price = 80
+Flags = TMMaterial
+Description = Material accidentally dropped by a Pokémon. It can be used to synthesize TMs.
+#-------------------------------
+[MUDMUTTMUD]
+Name = Mudmutt Mud
+NamePlural = Mudmutt Mud
+Pocket = 10
+Price = 80
+Flags = TMMaterial
+Description = Material accidentally dropped by a Pokémon. It can be used to synthesize TMs.
+#-------------------------------
+[LARVISECTSHELL]
+Name = Larvisect Shell
+NamePlural = Larvisect Shells
+Pocket = 10
+Price = 100
+Flags = TMMaterial
+Description = Material accidentally dropped by a Pokémon. It can be used to synthesize TMs.
+#-------------------------------
+[FROSSPRITESNOW]
+Name = Frossprite Snow
+NamePlural = Frossprite Snow
+Pocket = 10
+Price = 100
+Flags = TMMaterial
+Description = Material accidentally dropped by a Pokémon. It can be used to synthesize TMs.
+#-------------------------------
+[JOLTLINGSCALES]
+Name = Joltling Scales
+NamePlural = Joltling Scales
+Pocket = 10
+Price = 100
+Flags = TMMaterial
+Description = Material accidentally dropped by a Pokémon. It can be used to synthesize TMs.
+#-------------------------------

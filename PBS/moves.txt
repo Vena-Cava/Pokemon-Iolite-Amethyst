@@ -5008,7 +5008,7 @@ Accuracy = 95
 TotalPP = 10
 Target = NearOther
 FunctionCode = LowerTargetDefense1
-Flags = Contact,CanProtect,CanMirrorMove
+Flags = Contact,CanProtect,CanMirrorMove,Slicing
 EffectChance = 50
 Description = The user slashes the target with hard and sharp claws. It may also lower the target's Defense.
 #-------------------------------
@@ -8280,7 +8280,7 @@ Accuracy = 95
 TotalPP = 35
 Target = NearOther
 FunctionCode = RaiseUserAttack1
-Flags = Contact,CanProtect,CanMirrorMove
+Flags = Contact,CanProtect,CanMirrorMove,Slicing
 EffectChance = 10
 Description = The target is raked with steel claws. It may also raise the user's Attack stat.
 #-------------------------------

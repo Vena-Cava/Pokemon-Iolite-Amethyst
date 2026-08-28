@@ -28,6 +28,7 @@ BackSprite = 0,0
 FrontSprite = 0,0
 ShadowX = 0
 ShadowSize = 4
+DmaxBackSprite = 10,44
 DmaxFrontSprite = 0,9
 #-------------------------------
 [PIKACHU,17]
@@ -107,6 +108,7 @@ BackSprite = 0,0
 FrontSprite = -1,5
 ShadowX = -1
 ShadowSize = 4
+DmaxFrontSprite = -3,20
 #-------------------------------
 [CINDERACE,1]
 BackSprite = 0,0
@@ -178,6 +180,7 @@ BackSprite = 0,0
 FrontSprite = -4,10
 ShadowX = 0
 ShadowSize = 4
+DmaxBackSprite = 2,0
 DmaxFrontSprite = -9,17
 #-------------------------------
 [TOXTRICITY,3]
@@ -185,6 +188,7 @@ BackSprite = 0,0
 FrontSprite = -4,10
 ShadowX = 0
 ShadowSize = 4
+DmaxBackSprite = 2,0
 DmaxFrontSprite = -9,17
 #-------------------------------
 [CENTISKORCH,1]
@@ -214,6 +218,7 @@ BackSprite = 0,0
 FrontSprite = 0,4
 ShadowX = 0
 ShadowSize = 4
+DmaxBackSprite = 10,52
 DmaxFrontSprite = 0,6
 #-------------------------------
 [COPPERAJAH,1]

@@ -1,0 +1,28 @@
+# See the documentation on the wiki to learn how to edit this file.
+#-------------------------------
+
+#-------------------------------
+[IRONEDGE]
+Name = Iron Edge
+Types = DRAGON,GROUND
+BaseStats = 86,156,100,108,60,80
+Abilities = QUARKDRIVE
+GenderRatio = Genderless
+IoPokedex = This futuristic machine was originally designed to plough farmland. It can change the shape of its tail to resemble almost any tool.
+AmPokedex = This Pokémon resembles an unusual machine from a weird magazine depicting a dystopian future where humans and pokémon live in harmony.
+Category = Paradox
+GrowthRate = Slow
+BaseExp = 285
+EVs = ATTACK,3
+CatchRate = 10
+Happiness = 0
+HiddenAbilities = SERRATEDEDGE
+Moves = TACKLE
+EggGroups = Undiscovered
+HatchCycles = 50
+Height = 2.0
+Weight = 208.4
+Color = Yellow
+Shape = BipedalTail
+Habitat = RoughTerrain
+RaidRanks = 6
