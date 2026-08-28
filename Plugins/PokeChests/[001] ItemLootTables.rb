@@ -203,7 +203,23 @@ def pbLootTable(table, chance = 100, boost_mode = nil, pokemon = nil)
              :very_rare
            end
 
-  rarity = LootTables.boost_rarity(rarity) if LootTables.boosted_by?(boost_mode, pokemon)
+  ability_boosted = LootTables.boosted_by?(boost_mode, pokemon)
+  rarity = LootTables.boost_rarity(rarity) if ability_boosted
+
+  luck_boost = MealPowers.luck_rarity_boost
+  luck_boost.times do
+    rarity = LootTables.boost_rarity(rarity)
+  end
+
+  if MealPowers::DEBUG && luck_boost > 0
+    puts "========================================"
+    puts "LUCK POWER LOOT DEBUG"
+    puts "Luck Power Lv: #{MealPowers.level(:LUCK)}"
+    puts "Luck Rarity Boost: +#{luck_boost} Tier#{luck_boost == 1 ? "" : "s"}"
+    puts "Boosting Ability Active?: #{ability_boosted}"
+    puts "Final Rarity: #{rarity}"
+    puts "========================================"
+  end
 
   items = table[rarity]
   return false if !items || items.empty?
