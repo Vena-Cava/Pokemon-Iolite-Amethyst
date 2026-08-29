@@ -357,4 +357,668 @@ The Bag was filled with 1 of each item.
 \bWell all right then, I'll take it. Thank you.
 \bThat is, I don't think we'll ever find another...
 \bNo, no, I'm sure we'll find another one. I'm definitely sure of it!
+[0;34mVMS: Integrated Server stopped[0mGPU Cache Max: 32768
+-------------------------------------------------------------------------------
+Pokemon Amethyst Output Window
+-------------------------------------------------------------------------------
+If you can see this window, you are running the game in Debug Mode. This means
+that you're either playing a debug version of the game, or you're playing from
+within XPX Engine.
+
+Closing this window will close the game. If you want to get rid of this window,
+run the program from the Shell, or download a release version of the game.
+-------------------------------------------------------------------------------
+Debug Output:
+-------------------------------------------------------------------------------
+
+[0;33m*** Checking plugins ***[0m
+
+[0;33m  -> [0mCompiling plugin scripts...[0;32mdone[0m
+[0;33m  -> [0mLoaded plugin: [0;35mv21.1 Hotfixes[0m (ver. 1.0.9)
+[0;1;33mWARNING: Plugin 'rainefallUtils' may not be compatible with Essentials v21.1. Trying to load anyway.[0m
+[0;33m  -> [0mLoaded plugin: [0;35mrainefallUtils[0m (ver. 1.2)
+[0;33m  -> [0mLoaded plugin: [0;35mGeneration 9 Pack[0m (ver. 3.3.2)
+[0;33m  -> [0mLoaded plugin: [0;35mModular UI Scenes[0m (ver. 2.0.9)
+[0;1;33mWARNING: Plugin 'Bag Screen w/int. Party' may not be compatible with Essentials v21.1. Trying to load anyway.[0m
+[0;33m  -> [0mLoaded plugin: [0;35mBag Screen w/int. Party[0m (ver. 2.5.0)
+[0;33m  -> [0mLoaded plugin: [0;35m[MUI] Pokedex Data Page[0m (ver. 2.0.1)
+[0;33m  -> [0mLoaded plugin: [0;35m[MUI] Enhanced Pokemon UI[0m (ver. 1.0.6)
+[0;33m  -> [0mLoaded plugin: [0;35mDeluxe Battle Kit[0m (ver. 1.2.9)
+[0;33m  -> [0mLoaded plugin: [0;35m[MUI] Improved Mementos[0m (ver. 1.0.4)
+[0;33m  -> [0mLoaded plugin: [0;35m[DBK] Terastallization[0m (ver. 1.1.5)
+[0;33m  -> [0mLoaded plugin: [0;35m[DBK] Dynamax[0m (ver. 1.1.3)
+[0;33m  -> [0mLoaded plugin: [0;35m[DBK] Z-Power[0m (ver. 1.1.1)
+[0;33m  -> [0mLoaded plugin: [0;35mCuttable Tall Grass[0m (ver. 1.0)
+[0;33m  -> [0mLoaded plugin: [0;35mWild Item Drops[0m (ver. 1.0)
+[0;1;33mWARNING: Plugin 'Voltseon's Pause Menu' may not be compatible with Essentials v21.1. Trying to load anyway.[0m
+[0;33m  -> [0mLoaded plugin: [0;35mVoltseon's Pause Menu[0m (ver. 2.1)
+[0;1;33mWARNING: Usage of deprecated method "safeExists?(f)" or its alias.
+The method is slated to be removed in Essentials v22.
+Use "FileTest.exist?(f)" instead.[0m
+[0;33m  -> [0mLoaded plugin: [0;35mVoltseon's Multiplayer Solution[0m (ver. 2.2.0)
+[0;33m  -> [0mLoaded plugin: [0;35mPokeChests[0m (ver. 1.0)
+[0;33m  -> [0mLoaded plugin: [0;35mTDW Debug List Search[0m (ver. 1.2)
+[0;1;33mWARNING: Plugin 'Swdfm Utilities' may not be compatible with Essentials v21.1. Trying to load anyway.[0m
+[0;33m  -> [0mLoaded plugin: [0;35mSwdfm Utilities[0m (ver. 2024.12.27)
+[0;33m  -> [0mLoaded plugin: [0;35mLuka's Scripting Utilities[0m (ver. 3.3.2)
+[0;33m  -> [0mLoaded plugin: [0;35mVena's Meal Powers[0m (ver. 1.0)
+[0;33m  -> [0mLoaded plugin: [0;35mMore Pokedex Page : Size Comparison[0m (ver. 2.0.1)
+[0;33m  -> [0mLoaded plugin: [0;35mModular Messages[0m (ver. 2024.12.27)
+[0;33m  -> [0mLoaded plugin: [0;35mMarin's Side Stairs[0m (ver. 1.0)
+[0;1;33mWARNING: Plugin 'Marin's Scripting Utilities' may not be compatible with Essentials v21.1. Trying to load anyway.[0m
+[0;33m  -> [0mLoaded plugin: [0;35mMarin's Scripting Utilities[0m (ver. 2.0)
+[0;1;33mWARNING: Plugin 'Marin's Map Exporter' may not be compatible with Essentials v21.1. Trying to load anyway.[0m
+[0;33m  -> [0mLoaded plugin: [0;35mMarin's Map Exporter[0m (ver. 2.1)
+[0;33m  -> [0mLoaded plugin: [0;35mModern Quest System + UI[0m (ver. 1.1.0)
+[0;33m  -> [0mLoaded plugin: [0;35mPWT System (E21)[0m (ver. 1.0.5)
+[0;33m  -> [0mLoaded plugin: [0;35mLin's Weather System[0m (ver. 1.4.0)
+[0;33m  -> [0mLoaded plugin: [0;35mItem Crafting UI Plus[0m (ver. 3.0.0)
+[0;33m  -> [0mLoaded plugin: [0;35mI&A New Game Advanced[0m (ver. 1.0.0)
+[0;33m  -> [0mLoaded plugin: [0;35m[DBK] Raid Battles[0m (ver. 1.0)
+[0;33m  -> [0mLoaded plugin: [0;35m[DBK] Enhanced Battle UI[0m (ver. 2.0.9)
+[0;33m  -> [0mLoaded plugin: [0;35mI&A UI[0m (ver. 1.0)
+[0;1;33mWARNING: Plugin 'DiegoWTs Starter Selection' may not be compatible with Essentials v21.1. Trying to load anyway.[0m
+[0;33m  -> [0mLoaded plugin: [0;35mDiegoWTs Starter Selection[0m (ver. 1.3.0)
+[0;33m  -> [0mLoaded plugin: [0;35mDelta Speed Up[0m (ver. 1.2)
+[0;33m  -> [0mLoaded plugin: [0;35mCinematic Item Receive[0m (ver. 1.0.)
+[0;33m  -> [0mLoaded plugin: [0;35mBetter Bitmaps[0m (ver. 1.1)
+[0;33m  -> [0mLoaded plugin: [0;35mI&A Mechanics[0m (ver. 1.0)
+[0;33m  -> [0mLoaded plugin: [0;35mBOTW-Like Item Gathering v21.1 port[0m (ver. 1.3)
+[0;33m  -> [0mLoaded plugin: [0;35mArcky's Utilities[0m (ver. 1.1.0)
+[0;33m  -> [0mLoaded plugin: [0;35mArcky's Region Map[0m (ver. 3.3.0)
+[0;32m  -> [0m[0;32mSuccessfully loaded 42 plugin(s)[0m
+
+[0;33m*** Checking game data ***[0m
+
+[0;33m  -> [0mGame data was not compiled
+
+It's a sand castle. Would you like to kick it over?
+[0;1;33mWARNING: Usage of deprecated method "safeExists?(f)" or its alias.
+The method is slated to be removed in Essentials v22.
+Use "FileTest.exist?(f)" instead.[0m
+How many minutes should the Meal Powers last?
+Set the level for this power.
+Meal Powers applied.
+It's a sand castle. Would you like to kick it over?
+Vena kicked over the sand castle!
+It's a sand castle. Would you like to kick it over?
+Vena kicked over the sand castle!
+It's a sand castle. Would you like to kick it over?
+Vena kicked over the sand castle!
+It's a Chest. Open it?
+\me[Key item get]You found an \c[1]Escape Rope\c[0]!\wtnp[40]
+You put the Escape Rope in\nyour Bag's <icon=bagPocket8>\c[1]Key Items\c[0] pocket.
+\me[Key item get]You found an \c[1]Escape Rope\c[0]!\wtnp[40]
+You put the Escape Rope in\nyour Bag's <icon=bagPocket8>\c[1]Key Items\c[0] pocket.
+UNSCALED 98.068443 * 1.5 - 1
+UNSCALED 98.401583 * 2 - 2
+UNSCALED 98.952477 * 4 - 3
+UNSCALED 99.38545699999999 * 8 - 4
+\me[Key item get]You found an \c[1]Escape Rope\c[0]!\wtnp[40]
+You put the Escape Rope in\nyour Bag's <icon=bagPocket8>\c[1]Key Items\c[0] pocket.
+\me[Key item get]You found an \c[1]Escape Rope\c[0]!\wtnp[40]
+You put the Escape Rope in\nyour Bag's <icon=bagPocket8>\c[1]Key Items\c[0] pocket.
+\me[Key item get]You found an \c[1]Escape Rope\c[0]!\wtnp[40]
+You put the Escape Rope in\nyour Bag's <icon=bagPocket8>\c[1]Key Items\c[0] pocket.
+It's a Chest. Open it?
+\me[Item get]You found 2 \c[1]Revives\c[0]!\wtnp[40]
+You put the Revives in\nyour Bag's <icon=bagPocket2>\c[1]Medicine\c[0] pocket.
+\me[Item get]You found a \c[1]Big Nugget\c[0]!\wtnp[40]
+You put the Big Nugget in\nyour Bag's <icon=bagPocket1>\c[1]Items\c[0] pocket.
+\me[Item get]You found 2 \c[1]Revives\c[0]!\wtnp[40]
+You put the Revives in\nyour Bag's <icon=bagPocket2>\c[1]Medicine\c[0] pocket.
+\me[Item get]You found a \c[1]Big Nugget\c[0]!\wtnp[40]
+You put the Big Nugget in\nyour Bag's <icon=bagPocket1>\c[1]Items\c[0] pocket.
+\me[Item get]You found 2 \c[1]Nuggets\c[0]!\wtnp[40]
+You put the Nuggets in\nyour Bag's <icon=bagPocket1>\c[1]Items\c[0] pocket.
+It's a Chest. Open it?
+\me[Item get]You found 2 \c[1]Quick Balls\c[0]!\wtnp[40]
+You put the Quick Balls in\nyour Bag's <icon=bagPocket3>\c[1]Poké Balls\c[0] pocket.
+\me[Item get]You found 2 \c[1]Max Potions\c[0]!\wtnp[40]
+You put the Max Potions in\nyour Bag's <icon=bagPocket2>\c[1]Medicine\c[0] pocket.
+\me[Item get]You found 2 \c[1]Quick Balls\c[0]!\wtnp[40]
+You put the Quick Balls in\nyour Bag's <icon=bagPocket3>\c[1]Poké Balls\c[0] pocket.
+\me[Item get]You found 4 \c[1]Timer Balls\c[0]!\wtnp[40]
+You put the Timer Balls in\nyour Bag's <icon=bagPocket3>\c[1]Poké Balls\c[0] pocket.
+\me[Item get]You found 3 \c[1]Max Potions\c[0]!\wtnp[40]
+You put the Max Potions in\nyour Bag's <icon=bagPocket2>\c[1]Medicine\c[0] pocket.
+It's a Chest. Open it?
+\me[Machine get]You found 2 \c[1]TM185s Lunge\c[0]!\wtnp[70]
+You put the TM185s in\nyour Bag's <icon=bagPocket4>\c[1]TMs & HMs\c[0] pocket.
+\me[Machine get]You found 2 \c[1]TM161s Trick Room\c[0]!\wtnp[70]
+You put the TM161s in\nyour Bag's <icon=bagPocket4>\c[1]TMs & HMs\c[0] pocket.
+\me[Machine get]You found \c[1]TM160 Hurricane\c[0]!\wtnp[70]
+You put the TM160 in\nyour Bag's <icon=bagPocket4>\c[1]TMs & HMs\c[0] pocket.
+\me[Machine get]You found \c[1]TM051 Sandstorm\c[0]!\wtnp[70]
+You put the TM051 in\nyour Bag's <icon=bagPocket4>\c[1]TMs & HMs\c[0] pocket.
+\me[Machine get]You found \c[1]TM048 Volt Switch\c[0]!\wtnp[70]
+You put the TM048 in\nyour Bag's <icon=bagPocket4>\c[1]TMs & HMs\c[0] pocket.
+It's a strange chest. Open it?
+Regular battle anim
+Before regular push fade
+\me[Item get]You found 18 \c[1]Gimmighoul Coins\c[0]!\wtnp[40]
+You put the Gimmighoul Coins in\nyour Bag's <icon=bagPocket10>\c[1]TM Materials\c[0] pocket.
+It's a strange chest. Open it?
+Regular battle anim
+Before regular push fade
+\me[Item get]You found a \c[1]Heart Scale\c[0]!\wtnp[40]
+You put the Heart Scale in\nyour Bag's <icon=bagPocket1>\c[1]Items\c[0] pocket.
+It's a sand castle. Would you like to kick it over?
+Vena kicked over the sand castle!
 [0;34mVMS: Integrated Server stopped[0m
+[0;34mVMS: Not connected to a server[0m
+[0;34mVMS: Integrated Server stopped[0m
+[0;34mVMS: Not connected to a server[0m
+GPU Cache Max: 32768
+-------------------------------------------------------------------------------
+Pokemon Amethyst Output Window
+-------------------------------------------------------------------------------
+If you can see this window, you are running the game in Debug Mode. This means
+that you're either playing a debug version of the game, or you're playing from
+within XPX Engine.
+
+Closing this window will close the game. If you want to get rid of this window,
+run the program from the Shell, or download a release version of the game.
+-------------------------------------------------------------------------------
+Debug Output:
+-------------------------------------------------------------------------------
+
+[0;33m*** Checking plugins ***[0m
+
+[0;33m  -> [0mPlugins were not compiled
+[0;33m  -> [0mLoaded plugin: [0;35mv21.1 Hotfixes[0m (ver. 1.0.9)
+[0;1;33mWARNING: Plugin 'rainefallUtils' may not be compatible with Essentials v21.1. Trying to load anyway.[0m
+[0;33m  -> [0mLoaded plugin: [0;35mrainefallUtils[0m (ver. 1.2)
+[0;33m  -> [0mLoaded plugin: [0;35mGeneration 9 Pack[0m (ver. 3.3.2)
+[0;33m  -> [0mLoaded plugin: [0;35mModular UI Scenes[0m (ver. 2.0.9)
+[0;1;33mWARNING: Plugin 'Bag Screen w/int. Party' may not be compatible with Essentials v21.1. Trying to load anyway.[0m
+[0;33m  -> [0mLoaded plugin: [0;35mBag Screen w/int. Party[0m (ver. 2.5.0)
+[0;33m  -> [0mLoaded plugin: [0;35m[MUI] Pokedex Data Page[0m (ver. 2.0.1)
+[0;33m  -> [0mLoaded plugin: [0;35m[MUI] Enhanced Pokemon UI[0m (ver. 1.0.6)
+[0;33m  -> [0mLoaded plugin: [0;35mDeluxe Battle Kit[0m (ver. 1.2.9)
+[0;33m  -> [0mLoaded plugin: [0;35m[MUI] Improved Mementos[0m (ver. 1.0.4)
+[0;33m  -> [0mLoaded plugin: [0;35m[DBK] Terastallization[0m (ver. 1.1.5)
+[0;33m  -> [0mLoaded plugin: [0;35m[DBK] Dynamax[0m (ver. 1.1.3)
+[0;33m  -> [0mLoaded plugin: [0;35m[DBK] Z-Power[0m (ver. 1.1.1)
+[0;33m  -> [0mLoaded plugin: [0;35mCuttable Tall Grass[0m (ver. 1.0)
+[0;33m  -> [0mLoaded plugin: [0;35mWild Item Drops[0m (ver. 1.0)
+[0;1;33mWARNING: Plugin 'Voltseon's Pause Menu' may not be compatible with Essentials v21.1. Trying to load anyway.[0m
+[0;33m  -> [0mLoaded plugin: [0;35mVoltseon's Pause Menu[0m (ver. 2.1)
+[0;1;33mWARNING: Usage of deprecated method "safeExists?(f)" or its alias.
+The method is slated to be removed in Essentials v22.
+Use "FileTest.exist?(f)" instead.[0m
+[0;33m  -> [0mLoaded plugin: [0;35mVoltseon's Multiplayer Solution[0m (ver. 2.2.0)
+[0;33m  -> [0mLoaded plugin: [0;35mPokeChests[0m (ver. 1.0)
+[0;33m  -> [0mLoaded plugin: [0;35mTDW Debug List Search[0m (ver. 1.2)
+[0;1;33mWARNING: Plugin 'Swdfm Utilities' may not be compatible with Essentials v21.1. Trying to load anyway.[0m
+[0;33m  -> [0mLoaded plugin: [0;35mSwdfm Utilities[0m (ver. 2024.12.27)
+[0;33m  -> [0mLoaded plugin: [0;35mLuka's Scripting Utilities[0m (ver. 3.3.2)
+[0;33m  -> [0mLoaded plugin: [0;35mVena's Meal Powers[0m (ver. 1.0)
+[0;33m  -> [0mLoaded plugin: [0;35mMore Pokedex Page : Size Comparison[0m (ver. 2.0.1)
+[0;33m  -> [0mLoaded plugin: [0;35mModular Messages[0m (ver. 2024.12.27)
+[0;33m  -> [0mLoaded plugin: [0;35mMarin's Side Stairs[0m (ver. 1.0)
+[0;1;33mWARNING: Plugin 'Marin's Scripting Utilities' may not be compatible with Essentials v21.1. Trying to load anyway.[0m
+[0;33m  -> [0mLoaded plugin: [0;35mMarin's Scripting Utilities[0m (ver. 2.0)
+[0;1;33mWARNING: Plugin 'Marin's Map Exporter' may not be compatible with Essentials v21.1. Trying to load anyway.[0m
+[0;33m  -> [0mLoaded plugin: [0;35mMarin's Map Exporter[0m (ver. 2.1)
+[0;33m  -> [0mLoaded plugin: [0;35mModern Quest System + UI[0m (ver. 1.1.0)
+[0;33m  -> [0mLoaded plugin: [0;35mPWT System (E21)[0m (ver. 1.0.5)
+[0;33m  -> [0mLoaded plugin: [0;35mLin's Weather System[0m (ver. 1.4.0)
+[0;33m  -> [0mLoaded plugin: [0;35mItem Crafting UI Plus[0m (ver. 3.0.0)
+[0;33m  -> [0mLoaded plugin: [0;35mI&A New Game Advanced[0m (ver. 1.0.0)
+[0;33m  -> [0mLoaded plugin: [0;35m[DBK] Raid Battles[0m (ver. 1.0)
+[0;33m  -> [0mLoaded plugin: [0;35m[DBK] Enhanced Battle UI[0m (ver. 2.0.9)
+[0;33m  -> [0mLoaded plugin: [0;35mI&A UI[0m (ver. 1.0)
+[0;1;33mWARNING: Plugin 'DiegoWTs Starter Selection' may not be compatible with Essentials v21.1. Trying to load anyway.[0m
+[0;33m  -> [0mLoaded plugin: [0;35mDiegoWTs Starter Selection[0m (ver. 1.3.0)
+[0;33m  -> [0mLoaded plugin: [0;35mDelta Speed Up[0m (ver. 1.2)
+[0;33m  -> [0mLoaded plugin: [0;35mCinematic Item Receive[0m (ver. 1.0.)
+[0;33m  -> [0mLoaded plugin: [0;35mBetter Bitmaps[0m (ver. 1.1)
+[0;33m  -> [0mLoaded plugin: [0;35mI&A Mechanics[0m (ver. 1.0)
+[0;33m  -> [0mLoaded plugin: [0;35mBOTW-Like Item Gathering v21.1 port[0m (ver. 1.3)
+[0;33m  -> [0mLoaded plugin: [0;35mArcky's Utilities[0m (ver. 1.1.0)
+[0;33m  -> [0mLoaded plugin: [0;35mArcky's Region Map[0m (ver. 3.3.0)
+[0;32m  -> [0m[0;32mSuccessfully loaded 42 plugin(s)[0m
+
+[0;33m*** Checking game data ***[0m
+
+[0;33m  -> [0mGame data was not compiled
+
+[0;1;33mWARNING: Usage of deprecated method "safeExists?(f)" or its alias.
+The method is slated to be removed in Essentials v22.
+Use "FileTest.exist?(f)" instead.[0m
+Gave Running Shoes.
+How many minutes should the Meal Powers last?
+Meal Powers applied.
+How many minutes should the Meal Powers last?
+Set the level for this power.
+Meal Powers applied.
+Search for what?
+It's a sand castle. Would you like to kick it over?
+Vena kicked over the sand castle!
+It's a Chest. Open it?
+\me[Item get]You found 2 \c[1]Ultra Balls\c[0]!\wtnp[40]
+You put the Ultra Balls in\nyour Bag's <icon=bagPocket3>\c[1]Poké Balls\c[0] pocket.
+\me[Item get]You found a \c[1]Big Pearl\c[0]!\wtnp[40]
+You put the Big Pearl in\nyour Bag's <icon=bagPocket1>\c[1]Items\c[0] pocket.
+\me[Item get]You found a \c[1]Big Pearl\c[0]!\wtnp[40]
+You put the Big Pearl in\nyour Bag's <icon=bagPocket1>\c[1]Items\c[0] pocket.
+\me[Item get]You found a \c[1]Big Pearl\c[0]!\wtnp[40]
+You put the Big Pearl in\nyour Bag's <icon=bagPocket1>\c[1]Items\c[0] pocket.
+\me[Item get]You found a \c[1]Pearl\c[0]!\wtnp[40]
+You put the Pearl in\nyour Bag's <icon=bagPocket1>\c[1]Items\c[0] pocket.
+[0;1;33mWARNING: Usage of deprecated method "safeExists?(f)" or its alias.
+The method is slated to be removed in Essentials v22.
+Use "FileTest.exist?(f)" instead.[0m
+How many minutes should the Meal Powers last?
+Set the level for this power.
+Meal Powers applied.
+It's a Chest. Open it?
+\me[Item get]You found 3 \c[1]Quick Balls\c[0]!\wtnp[40]
+You put the Quick Balls in\nyour Bag's <icon=bagPocket3>\c[1]Poké Balls\c[0] pocket.
+\me[Item get]You found 2 \c[1]Nuggets\c[0]!\wtnp[40]
+You put the Nuggets in\nyour Bag's <icon=bagPocket1>\c[1]Items\c[0] pocket.
+\me[Item get]You found a \c[1]Max Revive\c[0]!\wtnp[40]
+You put the Max Revive in\nyour Bag's <icon=bagPocket2>\c[1]Medicine\c[0] pocket.
+\me[Item get]You found 4 \c[1]Dusk Balls\c[0]!\wtnp[40]
+You put the Dusk Balls in\nyour Bag's <icon=bagPocket3>\c[1]Poké Balls\c[0] pocket.
+\me[Item get]You found a \c[1]Max Revive\c[0]!\wtnp[40]
+You put the Max Revive in\nyour Bag's <icon=bagPocket2>\c[1]Medicine\c[0] pocket.
+[0;1;33mWARNING: Usage of deprecated method "safeExists?(f)" or its alias.
+The method is slated to be removed in Essentials v22.
+Use "FileTest.exist?(f)" instead.[0m
+How many minutes should the Meal Powers last?
+Set the level for this power.
+Meal Powers applied.
+It's a Chest. Open it?
+\me[Item get]You found a \c[1]Friend Ball\c[0]!\wtnp[40]
+You put the Friend Ball in\nyour Bag's <icon=bagPocket3>\c[1]Poké Balls\c[0] pocket.
+\me[Item get]You found a \c[1]Safari Ball\c[0]!\wtnp[40]
+You put the Safari Ball in\nyour Bag's <icon=bagPocket3>\c[1]Poké Balls\c[0] pocket.
+\me[Item get]You found a \c[1]Level Ball\c[0]!\wtnp[40]
+You put the Level Ball in\nyour Bag's <icon=bagPocket3>\c[1]Poké Balls\c[0] pocket.
+\me[Item get]You found a \c[1]Friend Ball\c[0]!\wtnp[40]
+You put the Friend Ball in\nyour Bag's <icon=bagPocket3>\c[1]Poké Balls\c[0] pocket.
+\me[Item get]You found a \c[1]Fast Ball\c[0]!\wtnp[40]
+You put the Fast Ball in\nyour Bag's <icon=bagPocket3>\c[1]Poké Balls\c[0] pocket.
+[0;34mVMS: Integrated Server stopped[0m
+[0;34mVMS: Not connected to a server[0m
+[0;34mVMS: Integrated Server stopped[0m
+[0;34mVMS: Not connected to a server[0m
+GPU Cache Max: 32768
+-------------------------------------------------------------------------------
+Pokemon Amethyst Output Window
+-------------------------------------------------------------------------------
+If you can see this window, you are running the game in Debug Mode. This means
+that you're either playing a debug version of the game, or you're playing from
+within XPX Engine.
+
+Closing this window will close the game. If you want to get rid of this window,
+run the program from the Shell, or download a release version of the game.
+-------------------------------------------------------------------------------
+Debug Output:
+-------------------------------------------------------------------------------
+
+[0;33m*** Checking plugins ***[0m
+
+[0;33m  -> [0mCompiling plugin scripts...[0;32mdone[0m
+[0;33m  -> [0mLoaded plugin: [0;35mv21.1 Hotfixes[0m (ver. 1.0.9)
+[0;1;33mWARNING: Plugin 'rainefallUtils' may not be compatible with Essentials v21.1. Trying to load anyway.[0m
+[0;33m  -> [0mLoaded plugin: [0;35mrainefallUtils[0m (ver. 1.2)
+[0;33m  -> [0mLoaded plugin: [0;35mGeneration 9 Pack[0m (ver. 3.3.2)
+[0;33m  -> [0mLoaded plugin: [0;35mModular UI Scenes[0m (ver. 2.0.9)
+[0;1;33mWARNING: Plugin 'Bag Screen w/int. Party' may not be compatible with Essentials v21.1. Trying to load anyway.[0m
+[0;33m  -> [0mLoaded plugin: [0;35mBag Screen w/int. Party[0m (ver. 2.5.0)
+[0;33m  -> [0mLoaded plugin: [0;35m[MUI] Pokedex Data Page[0m (ver. 2.0.1)
+[0;33m  -> [0mLoaded plugin: [0;35m[MUI] Enhanced Pokemon UI[0m (ver. 1.0.6)
+[0;33m  -> [0mLoaded plugin: [0;35mDeluxe Battle Kit[0m (ver. 1.2.9)
+[0;33m  -> [0mLoaded plugin: [0;35m[MUI] Improved Mementos[0m (ver. 1.0.4)
+[0;33m  -> [0mLoaded plugin: [0;35m[DBK] Terastallization[0m (ver. 1.1.5)
+[0;33m  -> [0mLoaded plugin: [0;35m[DBK] Dynamax[0m (ver. 1.1.3)
+[0;33m  -> [0mLoaded plugin: [0;35m[DBK] Z-Power[0m (ver. 1.1.1)
+[0;33m  -> [0mLoaded plugin: [0;35mCuttable Tall Grass[0m (ver. 1.0)
+[0;33m  -> [0mLoaded plugin: [0;35mWild Item Drops[0m (ver. 1.0)
+[0;1;33mWARNING: Plugin 'Voltseon's Pause Menu' may not be compatible with Essentials v21.1. Trying to load anyway.[0m
+[0;33m  -> [0mLoaded plugin: [0;35mVoltseon's Pause Menu[0m (ver. 2.1)
+[0;1;33mWARNING: Usage of deprecated method "safeExists?(f)" or its alias.
+The method is slated to be removed in Essentials v22.
+Use "FileTest.exist?(f)" instead.[0m
+[0;33m  -> [0mLoaded plugin: [0;35mVoltseon's Multiplayer Solution[0m (ver. 2.2.0)
+[0;33m  -> [0mLoaded plugin: [0;35mPokeChests[0m (ver. 1.0)
+[0;33m  -> [0mLoaded plugin: [0;35mTDW Debug List Search[0m (ver. 1.2)
+[0;1;33mWARNING: Plugin 'Swdfm Utilities' may not be compatible with Essentials v21.1. Trying to load anyway.[0m
+[0;33m  -> [0mLoaded plugin: [0;35mSwdfm Utilities[0m (ver. 2024.12.27)
+[0;33m  -> [0mLoaded plugin: [0;35mLuka's Scripting Utilities[0m (ver. 3.3.2)
+[0;33m  -> [0mLoaded plugin: [0;35mVena's Meal Powers[0m (ver. 1.0)
+[0;33m  -> [0mLoaded plugin: [0;35mMore Pokedex Page : Size Comparison[0m (ver. 2.0.1)
+[0;33m  -> [0mLoaded plugin: [0;35mModular Messages[0m (ver. 2024.12.27)
+[0;33m  -> [0mLoaded plugin: [0;35mMarin's Side Stairs[0m (ver. 1.0)
+[0;1;33mWARNING: Plugin 'Marin's Scripting Utilities' may not be compatible with Essentials v21.1. Trying to load anyway.[0m
+[0;33m  -> [0mLoaded plugin: [0;35mMarin's Scripting Utilities[0m (ver. 2.0)
+[0;1;33mWARNING: Plugin 'Marin's Map Exporter' may not be compatible with Essentials v21.1. Trying to load anyway.[0m
+[0;33m  -> [0mLoaded plugin: [0;35mMarin's Map Exporter[0m (ver. 2.1)
+[0;33m  -> [0mLoaded plugin: [0;35mModern Quest System + UI[0m (ver. 1.1.0)
+[0;33m  -> [0mLoaded plugin: [0;35mPWT System (E21)[0m (ver. 1.0.5)
+[0;33m  -> [0mLoaded plugin: [0;35mLin's Weather System[0m (ver. 1.4.0)
+[0;33m  -> [0mLoaded plugin: [0;35mItem Crafting UI Plus[0m (ver. 3.0.0)
+[0;33m  -> [0mLoaded plugin: [0;35mI&A New Game Advanced[0m (ver. 1.0.0)
+[0;33m  -> [0mLoaded plugin: [0;35m[DBK] Raid Battles[0m (ver. 1.0)
+[0;33m  -> [0mLoaded plugin: [0;35m[DBK] Enhanced Battle UI[0m (ver. 2.0.9)
+[0;33m  -> [0mLoaded plugin: [0;35mI&A UI[0m (ver. 1.0)
+[0;1;33mWARNING: Plugin 'DiegoWTs Starter Selection' may not be compatible with Essentials v21.1. Trying to load anyway.[0m
+[0;33m  -> [0mLoaded plugin: [0;35mDiegoWTs Starter Selection[0m (ver. 1.3.0)
+[0;33m  -> [0mLoaded plugin: [0;35mDelta Speed Up[0m (ver. 1.2)
+[0;33m  -> [0mLoaded plugin: [0;35mCinematic Item Receive[0m (ver. 1.0.)
+[0;33m  -> [0mLoaded plugin: [0;35mBetter Bitmaps[0m (ver. 1.1)
+[0;33m  -> [0mLoaded plugin: [0;35mI&A Mechanics[0m (ver. 1.0)
+[0;33m  -> [0mLoaded plugin: [0;35mBOTW-Like Item Gathering v21.1 port[0m (ver. 1.3)
+[0;33m  -> [0mLoaded plugin: [0;35mArcky's Utilities[0m (ver. 1.1.0)
+[0;33m  -> [0mLoaded plugin: [0;35mArcky's Region Map[0m (ver. 3.3.0)
+[0;32m  -> [0m[0;32mSuccessfully loaded 42 plugin(s)[0m
+
+[0;33m*** Checking game data ***[0m
+
+[0;33m  -> [0mGame data was not compiled
+
+[0;1;33mWARNING: Usage of deprecated method "safeExists?(f)" or its alias.
+The method is slated to be removed in Essentials v22.
+Use "FileTest.exist?(f)" instead.[0m
+Gave Running Shoes.
+Would you like to save the game?
+{:difficulty=>1, :nuzlocke=>false, :prof_oak_challenge=>false, :inverse=>false, :level_caps=>false, :no_bag_items_battle=>false, :nuzlocke_options=>{:faint_rule=>0, :dupes_clause=>false, :shiny_clause=>false, :nickname_clause=>false, :hm_clause=>false, :lose_condition=>1, :lose_result=>2, :pokecenter_limit=>-1}}
+\se[]Vena saved the game.\me[GUI save game]\wtnp[20]
+[0;1;33mWARNING: Usage of deprecated method "safeExists?(f)" or its alias.
+The method is slated to be removed in Essentials v22.
+Use "FileTest.exist?(f)" instead.[0m
+How many minutes should the Meal Powers last?
+Set the level for this power.
+Set the level for this power.
+Meal Powers applied.
+It's a Chest. Open it?
+\me[Item get]You found a \c[1]Super Potion\c[0]!\wtnp[40]
+You put the Super Potion in\nyour Bag's <icon=bagPocket2>\c[1]Medicine\c[0] pocket.
+\me[Item get]You found 2 \c[1]Paralyze Heals\c[0]!\wtnp[40]
+You put the Paralyze Heals in\nyour Bag's <icon=bagPocket2>\c[1]Medicine\c[0] pocket.
+\me[Item get]You found a \c[1]Repel\c[0]!\wtnp[40]
+You put the Repel in\nyour Bag's <icon=bagPocket1>\c[1]Items\c[0] pocket.
+\me[Item get]You found an \c[1]Antidote\c[0]!\wtnp[40]
+You put the Antidote in\nyour Bag's <icon=bagPocket2>\c[1]Medicine\c[0] pocket.
+\me[Item get]You found an \c[1]Antidote\c[0]!\wtnp[40]
+You put the Antidote in\nyour Bag's <icon=bagPocket2>\c[1]Medicine\c[0] pocket.
+\me[Item get]You found a \c[1]Potion\c[0]!\wtnp[40]
+You put the Potion in\nyour Bag's <icon=bagPocket2>\c[1]Medicine\c[0] pocket.
+[0;1;33mWARNING: Usage of deprecated method "safeExists?(f)" or its alias.
+The method is slated to be removed in Essentials v22.
+Use "FileTest.exist?(f)" instead.[0m
+How many minutes should the Meal Powers last?
+Set the level for this power.
+Meal Powers applied.
+It's a Chest. Open it?
+\me[Item get]You found 2 \c[1]Revives\c[0]!\wtnp[40]
+You put the Revives in\nyour Bag's <icon=bagPocket2>\c[1]Medicine\c[0] pocket.
+\me[Item get]You found a \c[1]Revive\c[0]!\wtnp[40]
+You put the Revive in\nyour Bag's <icon=bagPocket2>\c[1]Medicine\c[0] pocket.
+\me[Item get]You found 3 \c[1]Repels\c[0]!\wtnp[40]
+You put the Repels in\nyour Bag's <icon=bagPocket1>\c[1]Items\c[0] pocket.
+\me[Item get]You found a \c[1]Full Heal\c[0]!\wtnp[40]
+You put the Full Heal in\nyour Bag's <icon=bagPocket2>\c[1]Medicine\c[0] pocket.
+\me[Item get]You found 2 \c[1]Max Repels\c[0]!\wtnp[40]
+You put the Max Repels in\nyour Bag's <icon=bagPocket1>\c[1]Items\c[0] pocket.
+\me[Item get]You found 3 \c[1]Super Potions\c[0]!\wtnp[40]
+You put the Super Potions in\nyour Bag's <icon=bagPocket2>\c[1]Medicine\c[0] pocket.
+\me[Item get]You found 3 \c[1]Great Balls\c[0]!\wtnp[40]
+You put the Great Balls in\nyour Bag's <icon=bagPocket3>\c[1]Poké Balls\c[0] pocket.
+[0;1;33mWARNING: Usage of deprecated method "safeExists?(f)" or its alias.
+The method is slated to be removed in Essentials v22.
+Use "FileTest.exist?(f)" instead.[0m
+How many minutes should the Meal Powers last?
+Set the level for this power.
+Meal Powers applied.
+It's a Chest. Open it?
+\me[Item get]You found 2 \c[1]Max Repels\c[0]!\wtnp[40]
+You put the Max Repels in\nyour Bag's <icon=bagPocket1>\c[1]Items\c[0] pocket.
+\me[Item get]You found 2 \c[1]Revives\c[0]!\wtnp[40]
+You put the Revives in\nyour Bag's <icon=bagPocket2>\c[1]Medicine\c[0] pocket.
+\me[Item get]You found 3 \c[1]Hyper Potions\c[0]!\wtnp[40]
+You put the Hyper Potions in\nyour Bag's <icon=bagPocket2>\c[1]Medicine\c[0] pocket.
+\me[Item get]You found 2 \c[1]Revives\c[0]!\wtnp[40]
+You put the Revives in\nyour Bag's <icon=bagPocket2>\c[1]Medicine\c[0] pocket.
+\me[Item get]You found a \c[1]Max Repel\c[0]!\wtnp[40]
+You put the Max Repel in\nyour Bag's <icon=bagPocket1>\c[1]Items\c[0] pocket.
+\me[Item get]You found a \c[1]Dream Ball\c[0]!\wtnp[40]
+You put the Dream Ball in\nyour Bag's <icon=bagPocket3>\c[1]Poké Balls\c[0] pocket.
+\me[Item get]You found 3 \c[1]Max Repels\c[0]!\wtnp[40]
+You put the Max Repels in\nyour Bag's <icon=bagPocket1>\c[1]Items\c[0] pocket.
+\me[Item get]You found 5 \c[1]Dusk Balls\c[0]!\wtnp[40]
+You put the Dusk Balls in\nyour Bag's <icon=bagPocket3>\c[1]Poké Balls\c[0] pocket.
+\me[Item get]You found a \c[1]Comet Shard\c[0]!\wtnp[40]
+You put the Comet Shard in\nyour Bag's <icon=bagPocket1>\c[1]Items\c[0] pocket.
+\me[Item get]You found 2 \c[1]Hyper Potions\c[0]!\wtnp[40]
+You put the Hyper Potions in\nyour Bag's <icon=bagPocket2>\c[1]Medicine\c[0] pocket.
+[0;34mVMS: Integrated Server stopped[0m
+[0;34mVMS: Not connected to a server[0m
+[0;34mVMS: Integrated Server stopped[0m
+[0;34mVMS: Not connected to a server[0m
+GPU Cache Max: 32768
+-------------------------------------------------------------------------------
+Pokemon Amethyst Output Window
+-------------------------------------------------------------------------------
+If you can see this window, you are running the game in Debug Mode. This means
+that you're either playing a debug version of the game, or you're playing from
+within XPX Engine.
+
+Closing this window will close the game. If you want to get rid of this window,
+run the program from the Shell, or download a release version of the game.
+-------------------------------------------------------------------------------
+Debug Output:
+-------------------------------------------------------------------------------
+
+[0;33m*** Checking plugins ***[0m
+
+[0;33m  -> [0mPlugins were not compiled
+[0;33m  -> [0mLoaded plugin: [0;35mv21.1 Hotfixes[0m (ver. 1.0.9)
+[0;1;33mWARNING: Plugin 'rainefallUtils' may not be compatible with Essentials v21.1. Trying to load anyway.[0m
+[0;33m  -> [0mLoaded plugin: [0;35mrainefallUtils[0m (ver. 1.2)
+[0;33m  -> [0mLoaded plugin: [0;35mGeneration 9 Pack[0m (ver. 3.3.2)
+[0;33m  -> [0mLoaded plugin: [0;35mModular UI Scenes[0m (ver. 2.0.9)
+[0;1;33mWARNING: Plugin 'Bag Screen w/int. Party' may not be compatible with Essentials v21.1. Trying to load anyway.[0m
+[0;33m  -> [0mLoaded plugin: [0;35mBag Screen w/int. Party[0m (ver. 2.5.0)
+[0;33m  -> [0mLoaded plugin: [0;35m[MUI] Pokedex Data Page[0m (ver. 2.0.1)
+[0;33m  -> [0mLoaded plugin: [0;35m[MUI] Enhanced Pokemon UI[0m (ver. 1.0.6)
+[0;33m  -> [0mLoaded plugin: [0;35mDeluxe Battle Kit[0m (ver. 1.2.9)
+[0;33m  -> [0mLoaded plugin: [0;35m[MUI] Improved Mementos[0m (ver. 1.0.4)
+[0;33m  -> [0mLoaded plugin: [0;35m[DBK] Terastallization[0m (ver. 1.1.5)
+[0;33m  -> [0mLoaded plugin: [0;35m[DBK] Dynamax[0m (ver. 1.1.3)
+[0;33m  -> [0mLoaded plugin: [0;35m[DBK] Z-Power[0m (ver. 1.1.1)
+[0;33m  -> [0mLoaded plugin: [0;35mCuttable Tall Grass[0m (ver. 1.0)
+[0;33m  -> [0mLoaded plugin: [0;35mWild Item Drops[0m (ver. 1.0)
+[0;1;33mWARNING: Plugin 'Voltseon's Pause Menu' may not be compatible with Essentials v21.1. Trying to load anyway.[0m
+[0;33m  -> [0mLoaded plugin: [0;35mVoltseon's Pause Menu[0m (ver. 2.1)
+[0;1;33mWARNING: Usage of deprecated method "safeExists?(f)" or its alias.
+The method is slated to be removed in Essentials v22.
+Use "FileTest.exist?(f)" instead.[0m
+[0;33m  -> [0mLoaded plugin: [0;35mVoltseon's Multiplayer Solution[0m (ver. 2.2.0)
+[0;33m  -> [0mLoaded plugin: [0;35mPokeChests[0m (ver. 1.0)
+[0;33m  -> [0mLoaded plugin: [0;35mTDW Debug List Search[0m (ver. 1.2)
+[0;1;33mWARNING: Plugin 'Swdfm Utilities' may not be compatible with Essentials v21.1. Trying to load anyway.[0m
+[0;33m  -> [0mLoaded plugin: [0;35mSwdfm Utilities[0m (ver. 2024.12.27)
+[0;33m  -> [0mLoaded plugin: [0;35mLuka's Scripting Utilities[0m (ver. 3.3.2)
+[0;33m  -> [0mLoaded plugin: [0;35mVena's Meal Powers[0m (ver. 1.0)
+[0;33m  -> [0mLoaded plugin: [0;35mMore Pokedex Page : Size Comparison[0m (ver. 2.0.1)
+[0;33m  -> [0mLoaded plugin: [0;35mModular Messages[0m (ver. 2024.12.27)
+[0;33m  -> [0mLoaded plugin: [0;35mMarin's Side Stairs[0m (ver. 1.0)
+[0;1;33mWARNING: Plugin 'Marin's Scripting Utilities' may not be compatible with Essentials v21.1. Trying to load anyway.[0m
+[0;33m  -> [0mLoaded plugin: [0;35mMarin's Scripting Utilities[0m (ver. 2.0)
+[0;1;33mWARNING: Plugin 'Marin's Map Exporter' may not be compatible with Essentials v21.1. Trying to load anyway.[0m
+[0;33m  -> [0mLoaded plugin: [0;35mMarin's Map Exporter[0m (ver. 2.1)
+[0;33m  -> [0mLoaded plugin: [0;35mModern Quest System + UI[0m (ver. 1.1.0)
+[0;33m  -> [0mLoaded plugin: [0;35mPWT System (E21)[0m (ver. 1.0.5)
+[0;33m  -> [0mLoaded plugin: [0;35mLin's Weather System[0m (ver. 1.4.0)
+[0;33m  -> [0mLoaded plugin: [0;35mItem Crafting UI Plus[0m (ver. 3.0.0)
+[0;33m  -> [0mLoaded plugin: [0;35mI&A New Game Advanced[0m (ver. 1.0.0)
+[0;33m  -> [0mLoaded plugin: [0;35m[DBK] Raid Battles[0m (ver. 1.0)
+[0;33m  -> [0mLoaded plugin: [0;35m[DBK] Enhanced Battle UI[0m (ver. 2.0.9)
+[0;33m  -> [0mLoaded plugin: [0;35mI&A UI[0m (ver. 1.0)
+[0;1;33mWARNING: Plugin 'DiegoWTs Starter Selection' may not be compatible with Essentials v21.1. Trying to load anyway.[0m
+[0;33m  -> [0mLoaded plugin: [0;35mDiegoWTs Starter Selection[0m (ver. 1.3.0)
+[0;33m  -> [0mLoaded plugin: [0;35mDelta Speed Up[0m (ver. 1.2)
+[0;33m  -> [0mLoaded plugin: [0;35mCinematic Item Receive[0m (ver. 1.0.)
+[0;33m  -> [0mLoaded plugin: [0;35mBetter Bitmaps[0m (ver. 1.1)
+[0;33m  -> [0mLoaded plugin: [0;35mI&A Mechanics[0m (ver. 1.0)
+[0;33m  -> [0mLoaded plugin: [0;35mBOTW-Like Item Gathering v21.1 port[0m (ver. 1.3)
+[0;33m  -> [0mLoaded plugin: [0;35mArcky's Utilities[0m (ver. 1.1.0)
+[0;33m  -> [0mLoaded plugin: [0;35mArcky's Region Map[0m (ver. 3.3.0)
+[0;32m  -> [0m[0;32mSuccessfully loaded 42 plugin(s)[0m
+
+[0;33m*** Checking game data ***[0m
+
+[0;33m  -> [0mGame data was not compiled
+
+[0;1;33mWARNING: Usage of deprecated method "safeExists?(f)" or its alias.
+The method is slated to be removed in Essentials v22.
+Use "FileTest.exist?(f)" instead.[0m
+How many minutes should the Meal Powers last?
+Set the level for this power.
+Set the level for this power.
+Meal Powers applied.
+It's a Chest. Open it?
+UNSCALED 45.839442000000005 * 1.5 - 1
+UNSCALED 46.257166 * 2 - 2
+UNSCALED 46.664317000000004 * 4 - 3
+UNSCALED 47.20893 * 8 - 4
+\me[Item get]You found a \c[1]Beast Ball\c[0]!\wtnp[40]
+You put the Beast Ball in\nyour Bag's <icon=bagPocket3>\c[1]Poké Balls\c[0] pocket.
+\me[Item get]You found a \c[1]Heavy Ball\c[0]!\wtnp[40]
+You put the Heavy Ball in\nyour Bag's <icon=bagPocket3>\c[1]Poké Balls\c[0] pocket.
+\me[Item get]You found a \c[1]Friend Ball\c[0]!\wtnp[40]
+You put the Friend Ball in\nyour Bag's <icon=bagPocket3>\c[1]Poké Balls\c[0] pocket.
+\me[Item get]You found a \c[1]Big Nugget\c[0]!\wtnp[40]
+You put the Big Nugget in\nyour Bag's <icon=bagPocket1>\c[1]Items\c[0] pocket.
+\me[Item get]You found a \c[1]Friend Ball\c[0]!\wtnp[40]
+You put the Friend Ball in\nyour Bag's <icon=bagPocket3>\c[1]Poké Balls\c[0] pocket.
+\me[Item get]You found a \c[1]Safari Ball\c[0]!\wtnp[40]
+You put the Safari Ball in\nyour Bag's <icon=bagPocket3>\c[1]Poké Balls\c[0] pocket.
+[0;34mVMS: Integrated Server stopped[0m
+[0;34mVMS: Not connected to a server[0m
+[0;34mVMS: Integrated Server stopped[0m
+[0;34mVMS: Not connected to a server[0m
+GPU Cache Max: 32768
+-------------------------------------------------------------------------------
+Pokemon Amethyst Output Window
+-------------------------------------------------------------------------------
+If you can see this window, you are running the game in Debug Mode. This means
+that you're either playing a debug version of the game, or you're playing from
+within XPX Engine.
+
+Closing this window will close the game. If you want to get rid of this window,
+run the program from the Shell, or download a release version of the game.
+-------------------------------------------------------------------------------
+Debug Output:
+-------------------------------------------------------------------------------
+
+[0;33m*** Checking plugins ***[0m
+
+[0;33m  -> [0mPlugins were not compiled
+[0;33m  -> [0mLoaded plugin: [0;35mv21.1 Hotfixes[0m (ver. 1.0.9)
+[0;1;33mWARNING: Plugin 'rainefallUtils' may not be compatible with Essentials v21.1. Trying to load anyway.[0m
+[0;33m  -> [0mLoaded plugin: [0;35mrainefallUtils[0m (ver. 1.2)
+[0;33m  -> [0mLoaded plugin: [0;35mGeneration 9 Pack[0m (ver. 3.3.2)
+[0;33m  -> [0mLoaded plugin: [0;35mModular UI Scenes[0m (ver. 2.0.9)
+[0;1;33mWARNING: Plugin 'Bag Screen w/int. Party' may not be compatible with Essentials v21.1. Trying to load anyway.[0m
+[0;33m  -> [0mLoaded plugin: [0;35mBag Screen w/int. Party[0m (ver. 2.5.0)
+[0;33m  -> [0mLoaded plugin: [0;35m[MUI] Pokedex Data Page[0m (ver. 2.0.1)
+[0;33m  -> [0mLoaded plugin: [0;35m[MUI] Enhanced Pokemon UI[0m (ver. 1.0.6)
+[0;33m  -> [0mLoaded plugin: [0;35mDeluxe Battle Kit[0m (ver. 1.2.9)
+[0;33m  -> [0mLoaded plugin: [0;35m[MUI] Improved Mementos[0m (ver. 1.0.4)
+[0;33m  -> [0mLoaded plugin: [0;35m[DBK] Terastallization[0m (ver. 1.1.5)
+[0;33m  -> [0mLoaded plugin: [0;35m[DBK] Dynamax[0m (ver. 1.1.3)
+[0;33m  -> [0mLoaded plugin: [0;35m[DBK] Z-Power[0m (ver. 1.1.1)
+[0;33m  -> [0mLoaded plugin: [0;35mCuttable Tall Grass[0m (ver. 1.0)
+[0;33m  -> [0mLoaded plugin: [0;35mWild Item Drops[0m (ver. 1.0)
+[0;1;33mWARNING: Plugin 'Voltseon's Pause Menu' may not be compatible with Essentials v21.1. Trying to load anyway.[0m
+[0;33m  -> [0mLoaded plugin: [0;35mVoltseon's Pause Menu[0m (ver. 2.1)
+[0;1;33mWARNING: Usage of deprecated method "safeExists?(f)" or its alias.
+The method is slated to be removed in Essentials v22.
+Use "FileTest.exist?(f)" instead.[0m
+[0;33m  -> [0mLoaded plugin: [0;35mVoltseon's Multiplayer Solution[0m (ver. 2.2.0)
+[0;33m  -> [0mLoaded plugin: [0;35mPokeChests[0m (ver. 1.0)
+[0;33m  -> [0mLoaded plugin: [0;35mTDW Debug List Search[0m (ver. 1.2)
+[0;1;33mWARNING: Plugin 'Swdfm Utilities' may not be compatible with Essentials v21.1. Trying to load anyway.[0m
+[0;33m  -> [0mLoaded plugin: [0;35mSwdfm Utilities[0m (ver. 2024.12.27)
+[0;33m  -> [0mLoaded plugin: [0;35mLuka's Scripting Utilities[0m (ver. 3.3.2)
+[0;33m  -> [0mLoaded plugin: [0;35mVena's Meal Powers[0m (ver. 1.0)
+[0;33m  -> [0mLoaded plugin: [0;35mMore Pokedex Page : Size Comparison[0m (ver. 2.0.1)
+[0;33m  -> [0mLoaded plugin: [0;35mModular Messages[0m (ver. 2024.12.27)
+[0;33m  -> [0mLoaded plugin: [0;35mMarin's Side Stairs[0m (ver. 1.0)
+[0;1;33mWARNING: Plugin 'Marin's Scripting Utilities' may not be compatible with Essentials v21.1. Trying to load anyway.[0m
+[0;33m  -> [0mLoaded plugin: [0;35mMarin's Scripting Utilities[0m (ver. 2.0)
+[0;1;33mWARNING: Plugin 'Marin's Map Exporter' may not be compatible with Essentials v21.1. Trying to load anyway.[0m
+[0;33m  -> [0mLoaded plugin: [0;35mMarin's Map Exporter[0m (ver. 2.1)
+[0;33m  -> [0mLoaded plugin: [0;35mModern Quest System + UI[0m (ver. 1.1.0)
+[0;33m  -> [0mLoaded plugin: [0;35mPWT System (E21)[0m (ver. 1.0.5)
+[0;33m  -> [0mLoaded plugin: [0;35mLin's Weather System[0m (ver. 1.4.0)
+[0;33m  -> [0mLoaded plugin: [0;35mItem Crafting UI Plus[0m (ver. 3.0.0)
+[0;33m  -> [0mLoaded plugin: [0;35mI&A New Game Advanced[0m (ver. 1.0.0)
+[0;33m  -> [0mLoaded plugin: [0;35m[DBK] Raid Battles[0m (ver. 1.0)
+[0;33m  -> [0mLoaded plugin: [0;35m[DBK] Enhanced Battle UI[0m (ver. 2.0.9)
+[0;33m  -> [0mLoaded plugin: [0;35mI&A UI[0m (ver. 1.0)
+[0;1;33mWARNING: Plugin 'DiegoWTs Starter Selection' may not be compatible with Essentials v21.1. Trying to load anyway.[0m
+[0;33m  -> [0mLoaded plugin: [0;35mDiegoWTs Starter Selection[0m (ver. 1.3.0)
+[0;33m  -> [0mLoaded plugin: [0;35mDelta Speed Up[0m (ver. 1.2)
+[0;33m  -> [0mLoaded plugin: [0;35mCinematic Item Receive[0m (ver. 1.0.)
+[0;33m  -> [0mLoaded plugin: [0;35mBetter Bitmaps[0m (ver. 1.1)
+[0;33m  -> [0mLoaded plugin: [0;35mI&A Mechanics[0m (ver. 1.0)
+[0;33m  -> [0mLoaded plugin: [0;35mBOTW-Like Item Gathering v21.1 port[0m (ver. 1.3)
+[0;33m  -> [0mLoaded plugin: [0;35mArcky's Utilities[0m (ver. 1.1.0)
+[0;33m  -> [0mLoaded plugin: [0;35mArcky's Region Map[0m (ver. 3.3.0)
+[0;32m  -> [0m[0;32mSuccessfully loaded 42 plugin(s)[0m
+
+[0;33m*** Checking game data ***[0m
+
+[0;33m  -> [0mGame data was not compiled
+
+[0;1;33mWARNING: Usage of deprecated method "safeExists?(f)" or its alias.
+The method is slated to be removed in Essentials v22.
+Use "FileTest.exist?(f)" instead.[0m
+[0;1;33mWARNING: Usage of deprecated method "safeExists?(f)" or its alias.
+The method is slated to be removed in Essentials v22.
+Use "FileTest.exist?(f)" instead.[0m
+How many minutes should the Meal Powers last?
+Set the level for this power.
+Set the level for this power.
+Meal Powers applied.
+Would you like to save the game?
+{:difficulty=>1, :nuzlocke=>false, :prof_oak_challenge=>false, :inverse=>false, :level_caps=>false, :no_bag_items_battle=>false, :nuzlocke_options=>{:faint_rule=>0, :dupes_clause=>false, :shiny_clause=>false, :nickname_clause=>false, :hm_clause=>false, :lose_condition=>1, :lose_result=>2, :pokecenter_limit=>-1}}
+\se[]Vena saved the game.\me[GUI save game]\wtnp[20]
+It's a Chest. Open it?
+\me[Item get]You found a \c[1]Level Ball\c[0]!\wtnp[40]
+UNSCALED 43.302827 * 1.5 - 1
+You put the Level Ball in\nyour Bag's <icon=bagPocket3>\c[1]Poké Balls\c[0] pocket.
+UNSCALED 43.602829 * 2 - 2
+UNSCALED 44.021544 * 4 - 3
+UNSCALED 46.254941 * 8 - 4
+\me[Item get]You found 2 \c[1]Big Nuggets\c[0]!\wtnp[40]
+You put the Big Nuggets in\nyour Bag's <icon=bagPocket1>\c[1]Items\c[0] pocket.
+\me[Item get]You found an \c[1]Ability Patch\c[0]!\wtnp[40]
+You put the Ability Patch in\nyour Bag's <icon=bagPocket2>\c[1]Medicine\c[0] pocket.
+\me[Item get]You found a \c[1]Heavy Ball\c[0]!\wtnp[40]
+You put the Heavy Ball in\nyour Bag's <icon=bagPocket3>\c[1]Poké Balls\c[0] pocket.
+\me[Item get]You found a \c[1]Friend Ball\c[0]!\wtnp[40]
+You put the Friend Ball in\nyour Bag's <icon=bagPocket3>\c[1]Poké Balls\c[0] pocket.
+\me[Item get]You found a \c[1]Heavy Ball\c[0]!\wtnp[40]
+You put the Heavy Ball in\nyour Bag's <icon=bagPocket3>\c[1]Poké Balls\c[0] pocket.
+\me[Item get]You found a \c[1]Moon Ball\c[0]!\wtnp[40]
+You put the Moon Ball in\nyour Bag's <icon=bagPocket3>\c[1]Poké Balls\c[0] pocket.
+\me[Item get]You found an \c[1]Ability Patch\c[0]!\wtnp[40]
+You put the Ability Patch in\nyour Bag's <icon=bagPocket2>\c[1]Medicine\c[0] pocket.
+\me[Item get]You found a \c[1]Fast Ball\c[0]!\wtnp[40]
+You put the Fast Ball in\nyour Bag's <icon=bagPocket3>\c[1]Poké Balls\c[0] pocket.
+\me[Item get]You found a \c[1]Heavy Ball\c[0]!\wtnp[40]
+You put the Heavy Ball in\nyour Bag's <icon=bagPocket3>\c[1]Poké Balls\c[0] pocket.
+\rCheck out these Pokémon I caught nearby!
+Regular battle anim
+Before regular push fade
+[0;34mVMS: Integrated Server stopped[0m
+[0;34mVMS: Not connected to a server[0m
+[0;34mVMS: Integrated Server stopped[0m
+[0;34mVMS: Not connected to a server[0m

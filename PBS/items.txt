@@ -5521,3 +5521,20 @@ Pocket = 1
 Price = 10
 Flags = Fling_30
 Description = Throw one into certain Pokémon Dens, and it may lure a rare wild Dynamaxed Pokémon.
+#-------------------------------
+[BOTTLECAP]
+Name = Bottle Cap
+NamePlural = Bottle Caps
+Pocket = 1
+Price = 10
+Flags = Fling_30
+Description = A lovely silver bottle cap. Certain people are delighted to be given one of these.
+#-------------------------------
+[GOLDBOTTLECAP]
+Name = Gold Bottle Cap
+NamePlural = Gold Bottle Caps
+Pocket = 1
+Price = 10
+Flags = Fling_30
+Description = A lovely gold bottle cap, which is even rarer than a regular silver one. Certain people are delighted to be given one of these.
+#-------------------------------

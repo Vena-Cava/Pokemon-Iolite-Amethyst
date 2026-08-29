@@ -188,9 +188,11 @@ PokeChestTMTable = {
   end
 end
 
-def pbLootTable(table, chance = 100, boost_mode = nil, pokemon = nil)
+#===============================================================================
+# Rolls and awards one item from a loot table.
+#===============================================================================
+def pbLootTableItem(table, boost_mode = nil, pokemon = nil)
   return false if !table
-  return false if rand(100) >= chance
 
   rarity_roll = rand(100)
   rarity = if rarity_roll < 60
@@ -231,4 +233,44 @@ def pbLootTable(table, chance = 100, boost_mode = nil, pokemon = nil)
   quantity = rand(min_qty..max_qty)
 
   return pbItemBall(item, quantity)
-end	
+end
+
+#===============================================================================
+# Attempts a loot-table drop.
+# Big Haul Power can award one additional independent item after a successful
+# primary loot roll.
+#===============================================================================
+def pbLootTable(table, chance = 100, boost_mode = nil, pokemon = nil)
+  return false if !table
+  return false if rand(100) >= chance
+
+  # Award the normal loot item first.
+  result = pbLootTableItem(table, boost_mode, pokemon)
+
+  # Big Haul only applies if the normal loot roll successfully produced an item.
+  if result
+    big_haul_level = MealPowers.level(:BIGHAUL)
+    big_haul_chance = MealPowers.big_haul_chance
+
+    if big_haul_level > 0
+      big_haul_roll = rand(100)
+      bonus_awarded = big_haul_roll < big_haul_chance
+
+      if MealPowers::DEBUG
+        puts "========================================"
+        puts "BIG HAUL POWER LOOT DEBUG"
+        puts "Big Haul Power Lv: #{big_haul_level}"
+        puts "Bonus Item Chance: #{big_haul_chance}%"
+        puts "Roll: #{big_haul_roll}"
+        puts "Bonus Item?: #{bonus_awarded}"
+        puts "========================================"
+      end
+
+      if bonus_awarded
+        pbLootTableItem(table, boost_mode, pokemon)
+      end
+    end
+  end
+
+  return result
+end
