@@ -1022,3 +1022,169 @@ Before regular push fade
 [0;34mVMS: Not connected to a server[0m
 [0;34mVMS: Integrated Server stopped[0m
 [0;34mVMS: Not connected to a server[0m
+GPU Cache Max: 32768
+-------------------------------------------------------------------------------
+Pokemon Amethyst Output Window
+-------------------------------------------------------------------------------
+If you can see this window, you are running the game in Debug Mode. This means
+that you're either playing a debug version of the game, or you're playing from
+within XPX Engine.
+
+Closing this window will close the game. If you want to get rid of this window,
+run the program from the Shell, or download a release version of the game.
+-------------------------------------------------------------------------------
+Debug Output:
+-------------------------------------------------------------------------------
+
+[0;33m*** Checking plugins ***[0m
+
+[0;33m  -> [0mCompiling plugin scripts...[0;32mdone[0m
+[0;33m  -> [0mLoaded plugin: [0;35mv21.1 Hotfixes[0m (ver. 1.0.9)
+[0;1;33mWARNING: Plugin 'rainefallUtils' may not be compatible with Essentials v21.1. Trying to load anyway.[0m
+[0;33m  -> [0mLoaded plugin: [0;35mrainefallUtils[0m (ver. 1.2)
+[0;33m  -> [0mLoaded plugin: [0;35mGeneration 9 Pack[0m (ver. 3.3.2)
+[0;33m  -> [0mLoaded plugin: [0;35mModular UI Scenes[0m (ver. 2.0.9)
+[0;1;33mWARNING: Plugin 'Bag Screen w/int. Party' may not be compatible with Essentials v21.1. Trying to load anyway.[0m
+[0;33m  -> [0mLoaded plugin: [0;35mBag Screen w/int. Party[0m (ver. 2.5.0)
+[0;33m  -> [0mLoaded plugin: [0;35m[MUI] Pokedex Data Page[0m (ver. 2.0.1)
+[0;33m  -> [0mLoaded plugin: [0;35m[MUI] Enhanced Pokemon UI[0m (ver. 1.0.6)
+[0;33m  -> [0mLoaded plugin: [0;35mDeluxe Battle Kit[0m (ver. 1.2.9)
+[0;33m  -> [0mLoaded plugin: [0;35m[MUI] Improved Mementos[0m (ver. 1.0.4)
+[0;33m  -> [0mLoaded plugin: [0;35m[DBK] Terastallization[0m (ver. 1.1.5)
+[0;33m  -> [0mLoaded plugin: [0;35m[DBK] Dynamax[0m (ver. 1.1.3)
+[0;33m  -> [0mLoaded plugin: [0;35m[DBK] Z-Power[0m (ver. 1.1.1)
+[0;33m  -> [0mLoaded plugin: [0;35mCuttable Tall Grass[0m (ver. 1.0)
+[0;33m  -> [0mLoaded plugin: [0;35mWild Item Drops[0m (ver. 1.0)
+[0;1;33mWARNING: Plugin 'Voltseon's Pause Menu' may not be compatible with Essentials v21.1. Trying to load anyway.[0m
+[0;33m  -> [0mLoaded plugin: [0;35mVoltseon's Pause Menu[0m (ver. 2.1)
+[0;1;33mWARNING: Usage of deprecated method "safeExists?(f)" or its alias.
+The method is slated to be removed in Essentials v22.
+Use "FileTest.exist?(f)" instead.[0m
+[0;33m  -> [0mLoaded plugin: [0;35mVoltseon's Multiplayer Solution[0m (ver. 2.2.0)
+[0;33m  -> [0mLoaded plugin: [0;35mPokeChests[0m (ver. 1.0)
+[0;33m  -> [0mLoaded plugin: [0;35mTDW Debug List Search[0m (ver. 1.2)
+[0;1;33mWARNING: Plugin 'Swdfm Utilities' may not be compatible with Essentials v21.1. Trying to load anyway.[0m
+[0;33m  -> [0mLoaded plugin: [0;35mSwdfm Utilities[0m (ver. 2024.12.27)
+[0;33m  -> [0mLoaded plugin: [0;35mLuka's Scripting Utilities[0m (ver. 3.3.2)
+[0;33m  -> [0mLoaded plugin: [0;35mVena's Meal Powers[0m (ver. 1.0)
+[0;33m  -> [0mLoaded plugin: [0;35mMore Pokedex Page : Size Comparison[0m (ver. 2.0.1)
+[0;33m  -> [0mLoaded plugin: [0;35mModular Messages[0m (ver. 2024.12.27)
+[0;33m  -> [0mLoaded plugin: [0;35mMarin's Side Stairs[0m (ver. 1.0)
+[0;1;33mWARNING: Plugin 'Marin's Scripting Utilities' may not be compatible with Essentials v21.1. Trying to load anyway.[0m
+[0;33m  -> [0mLoaded plugin: [0;35mMarin's Scripting Utilities[0m (ver. 2.0)
+[0;1;33mWARNING: Plugin 'Marin's Map Exporter' may not be compatible with Essentials v21.1. Trying to load anyway.[0m
+[0;33m  -> [0mLoaded plugin: [0;35mMarin's Map Exporter[0m (ver. 2.1)
+[0;33m  -> [0mLoaded plugin: [0;35mModern Quest System + UI[0m (ver. 1.1.0)
+[0;33m  -> [0mLoaded plugin: [0;35mPWT System (E21)[0m (ver. 1.0.5)
+[0;33m  -> [0mLoaded plugin: [0;35mLin's Weather System[0m (ver. 1.4.0)
+[0;33m  -> [0mLoaded plugin: [0;35mItem Crafting UI Plus[0m (ver. 3.0.0)
+[0;33m  -> [0mLoaded plugin: [0;35mI&A New Game Advanced[0m (ver. 1.0.0)
+[0;33m  -> [0mLoaded plugin: [0;35m[DBK] Raid Battles[0m (ver. 1.0)
+[0;33m  -> [0mLoaded plugin: [0;35m[DBK] Enhanced Battle UI[0m (ver. 2.0.9)
+[0;33m  -> [0mLoaded plugin: [0;35mI&A UI[0m (ver. 1.0)
+[0;1;33mWARNING: Plugin 'DiegoWTs Starter Selection' may not be compatible with Essentials v21.1. Trying to load anyway.[0m
+[0;33m  -> [0mLoaded plugin: [0;35mDiegoWTs Starter Selection[0m (ver. 1.3.0)
+[0;33m  -> [0mLoaded plugin: [0;35mDelta Speed Up[0m (ver. 1.2)
+[0;33m  -> [0mLoaded plugin: [0;35mCinematic Item Receive[0m (ver. 1.0.)
+[0;33m  -> [0mLoaded plugin: [0;35mBetter Bitmaps[0m (ver. 1.1)
+[0;33m  -> [0mLoaded plugin: [0;35mI&A Mechanics[0m (ver. 1.0)
+[0;33m  -> [0mLoaded plugin: [0;35mBOTW-Like Item Gathering v21.1 port[0m (ver. 1.3)
+[0;33m  -> [0mLoaded plugin: [0;35mArcky's Utilities[0m (ver. 1.1.0)
+[0;33m  -> [0mLoaded plugin: [0;35mArcky's Region Map[0m (ver. 3.3.0)
+[0;32m  -> [0m[0;32mSuccessfully loaded 42 plugin(s)[0m
+
+[0;33m*** Checking game data ***[0m
+
+[0;33m  -> [0mGame data was not compiled
+
+[0;1;33mWARNING: Usage of deprecated method "safeExists?(f)" or its alias.
+The method is slated to be removed in Essentials v22.
+Use "FileTest.exist?(f)" instead.[0m
+How many minutes should the Meal Powers last?
+Set the level for this power.
+Meal Powers applied.
+Regular battle anim
+Before regular push fade
+Regular battle anim
+Before regular push fade
+Regular battle anim
+Before regular push fade
+[0;1;33mWARNING: Usage of deprecated method "safeExists?(f)" or its alias.
+The method is slated to be removed in Essentials v22.
+Use "FileTest.exist?(f)" instead.[0m
+Would you like to save the game?
+{:difficulty=>1, :nuzlocke=>false, :prof_oak_challenge=>false, :inverse=>false, :level_caps=>false, :no_bag_items_battle=>false, :nuzlocke_options=>{:faint_rule=>0, :dupes_clause=>false, :shiny_clause=>false, :nickname_clause=>false, :hm_clause=>false, :lose_condition=>1, :lose_result=>2, :pokecenter_limit=>-1}}
+\se[]Vena saved the game.\me[GUI save game]\wtnp[20]
+Regular battle anim
+Before regular push fade
+[0;1;33mWARNING: Usage of deprecated method "safeExists?(f)" or its alias.
+The method is slated to be removed in Essentials v22.
+Use "FileTest.exist?(f)" instead.[0m
+How many minutes should the Meal Powers last?
+Set the level for this power.
+Meal Powers applied.
+Regular battle anim
+Before regular push fade
+Regular battle anim
+Before regular push fade
+Regular battle anim
+Before regular push fade
+Regular battle anim
+Before regular push fade
+Regular battle anim
+Before regular push fade
+Regular battle anim
+Before regular push fade
+Regular battle anim
+Before regular push fade
+UNSCALED 380.36267499999997 * 1.5 - 1
+UNSCALED 381.444295 * 2 - 2
+Regular battle anim
+Before regular push fade
+Regular battle anim
+Before regular push fade
+Regular battle anim
+Before regular push fade
+Regular battle anim
+Before regular push fade
+[0;1;33mWARNING: Usage of deprecated method "safeExists?(f)" or its alias.
+The method is slated to be removed in Essentials v22.
+Use "FileTest.exist?(f)" instead.[0m
+How many minutes should the Meal Powers last?
+Set the level for this power.
+Set the level for this power.
+Meal Powers applied.
+Regular battle anim
+Before regular push fade
+[0;1;33mWARNING: Usage of deprecated method "safeExists?(f)" or its alias.
+The method is slated to be removed in Essentials v22.
+Use "FileTest.exist?(f)" instead.[0m
+How many minutes should the Meal Powers last?
+Set the level for this power.
+Meal Powers applied.
+Regular battle anim
+Before regular push fade
+Regular battle anim
+Before regular push fade
+Regular battle anim
+Before regular push fade
+Regular battle anim
+Before regular push fade
+Regular battle anim
+Before regular push fade
+[0;1;33mWARNING: Usage of deprecated method "safeExists?(f)" or its alias.
+The method is slated to be removed in Essentials v22.
+Use "FileTest.exist?(f)" instead.[0m
+How many minutes should the Meal Powers last?
+Set the level for this power.
+Meal Powers applied.
+Regular battle anim
+Before regular push fade
+Regular battle anim
+Before regular push fade
+Regular battle anim
+Before regular push fade
+[0;34mVMS: Integrated Server stopped[0m
+[0;34mVMS: Not connected to a server[0m
+[0;34mVMS: Integrated Server stopped[0m
+[0;34mVMS: Not connected to a server[0m

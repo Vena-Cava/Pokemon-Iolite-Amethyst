@@ -105,6 +105,11 @@ class Battle::Battler
     @battle.pbDisplay(_INTL("{1} dropped {2}{3} x{4}</c3>!", pbThis, colour_tag, name, added))
     @battle.pbDisplay(_INTL("You put the {1} in\nyour Bag's <icon=bagPocket{2}>{3}{4}</c3> pocket.",
       name, pocket, colour_tag, PokemonBag.pocket_names[pocket - 1]))
+
+    # Item Drop Meal Power
+    if respond_to?(:meal_power_try_bonus_item_drop, true)
+      meal_power_try_bonus_item_drop(items)
+    end
   end
 
   private
