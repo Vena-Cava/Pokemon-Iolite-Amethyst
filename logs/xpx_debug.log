@@ -1,79 +1,32 @@
-=== XPX Debug Log 2026-09-02 18:14:47 +0100 ===
+=== XPX Debug Log 2026-09-02 18:16:23 +0100 ===
 Ruby: 3.1.3 Platform: x64-mingw32
 GAME_ROOT : C:/Users/Vena/Documents/folders/RPGMaker/Pokemon IA XPX
 MAPS_DIR  : C:/Users/Vena/Documents/folders/RPGMaker/Pokemon IA XPX/Data/maps
 LOG_PATH  : C:/Users/Vena/Documents/folders/RPGMaker/Pokemon IA XPX/logs/xpx_debug.log
 $0        : -e
-[18:14:47] Boot started. MAPS_DIR=C:/Users/Vena/Documents/folders/RPGMaker/Pokemon IA XPX/Data/maps
-[18:14:47] Ruby: 3.1.3, JSON available: YES
-[18:14:47] Platform: x64-mingw32, encoding default_external=UTF-8, default_internal=UTF-8
-[18:14:47] === Runtime file inventory ===
-[18:14:47]   Game.exe: 29110999 bytes, mtime=2026-06-02 12:28:44
-[18:14:47]   MapMaker.dll: 57477 bytes, mtime=2026-06-02 11:23:15
-[18:14:47]   MapMaker.exe: 131072 bytes, mtime=2026-06-02 11:23:15
-[18:14:47]   RGSS102E.dll: 778752 bytes, mtime=2026-06-02 11:23:15
-[18:14:47]   RGSS104E.dll: 758272 bytes, mtime=2024-03-07 16:17:40
-[18:14:47]   animmaker.exe: 10240 bytes, mtime=2026-06-02 11:23:15
-[18:14:47]   extendtext.exe: 4640 bytes, mtime=2026-06-02 11:23:15
-[18:14:47]   x64-msvcrt-ruby310.dll: 10240557 bytes, mtime=2026-06-02 12:28:44
-[18:14:47]   zlib1.dll: 128488 bytes, mtime=2026-06-02 12:29:08
-[18:14:47] System.rxdata: 4658 bytes, mtime=2026-08-28 23:47:55
-[18:14:47] System.rxdata @start_map_id=1 @start_x=9 @start_y=7
-[18:14:47] Indexed 112 maps
-[18:14:47] Map dict cache pre-warmed: 112 maps, 0 failed, 404ms
-[18:14:47] Autotile DB: 50 entries loaded from XPX_AutotileDatabase.xpxdata
-[18:14:48] load_data patched
-[18:14:48] data_maps guard installed
-[18:14:48] pbRgssExists? patched
-[18:14:48] compiler safety patched
-[18:14:48] Start map 1 has 4 events: 1:Intro(Action), 2:Quick start intro(Action), 3:EV003(Action), 4:Intro(Autorun)
-[18:14:48] Autorun events on start map: 4:Intro
-[18:14:48] Boot complete
-[18:14:48] Bitmap#draw_text crisp-text wrapper installed
-[18:14:48] XPX Move to Location installed.
-[18:14:48] TilesetBitmaps patched for XPX extras-shift remap
-[18:14:48] AutotileBitmaps patched for is_water_type override (true/false)
-[18:14:50] Slow frame: 138ms in Scene_DebugIntro (n=1/200) dt=ol:0/sh:0/pt:48 dt_ms=2 tr_ms=0 gu_ms=0 mm_cache=0 gc=27/993298
-[18:14:55] Slow frame: 157ms in Scene_DebugIntro (n=2/200) dt=ol:0/sh:0/pt:64 dt_ms=3 tr_ms=0 gu_ms=0 mm_cache=0 gc=28/1081246
-[18:14:57] DOOR name="CafeDoor" id=27 active_page=1/2 walkout_trigger=3 sw1=22("s:tsOff?(\"A\")") switchIsOn=true tsA=false onEvent=false tempSwitches={}
-[18:14:57] DOOR name="CentralHouseDoor" id=33 active_page=1/2 walkout_trigger=3 sw1=22("s:tsOff?(\"A\")") switchIsOn=true tsA=false onEvent=false tempSwitches={}
-[18:14:57] DOOR name="LowerLeftHouseSmallDoor" id=28 active_page=1/2 walkout_trigger=3 sw1=22("s:tsOff?(\"A\")") switchIsOn=true tsA=false onEvent=false tempSwitches={}
-[18:14:57] DOOR name="LowerRightHouseSmallDoor" id=29 active_page=1/2 walkout_trigger=3 sw1=22("s:tsOff?(\"A\")") switchIsOn=true tsA=false onEvent=false tempSwitches={}
-[18:14:57] DOOR name="PCenterDoor" id=2 active_page=1/2 walkout_trigger=3 sw1=22("s:tsOff?(\"A\")") switchIsOn=true tsA=false onEvent=false tempSwitches={}
-[18:14:57] DOOR name="MartDoor" id=14 active_page=1/2 walkout_trigger=3 sw1=22("s:tsOff?(\"A\")") switchIsOn=true tsA=false onEvent=false tempSwitches={}
-[18:14:57] DOOR name="PCenterDoor" id=12 active_page=1/2 walkout_trigger=3 sw1=22("s:tsOff?(\"A\")") switchIsOn=true tsA=false onEvent=false tempSwitches={}
-[18:14:57] DOOR name="PMartDoor" id=13 active_page=1/2 walkout_trigger=3 sw1=22("s:tsOff?(\"A\")") switchIsOn=true tsA=false onEvent=false tempSwitches={}
-[18:14:57] DOOR name="GymDoor" id=14 active_page=1/2 walkout_trigger=3 sw1=22("s:tsOff?(\"A\")") switchIsOn=true tsA=false onEvent=false tempSwitches={}
-[18:14:57] DOOR name="CafeDoor" id=20 active_page=1/2 walkout_trigger=3 sw1=22("s:tsOff?(\"A\")") switchIsOn=true tsA=false onEvent=false tempSwitches={}
-[18:14:57] Slow frame: 668ms in Scene_Map (n=3/200) dt=ol:0/sh:0/pt:0 dt_ms=0 tr_ms=22 gu_ms=18 mm_cache=0 gc=28/1329347
-[18:14:58] Slow frame: 89ms in Scene_Map (n=4/200) dt=ol:0/sh:0/pt:61 dt_ms=3 tr_ms=0 gu_ms=0 mm_cache=0 gc=28/1425290
-[18:15:01] Slow frame: 213ms in Scene_Map (n=5/200) dt=ol:0/sh:0/pt:380 dt_ms=10 tr_ms=0 gu_ms=37 mm_cache=0 gc=30/642583
-[18:15:01] Slow frame: 47ms in Scene_Map (n=6/200) dt=ol:0/sh:0/pt:0 dt_ms=0 tr_ms=0 gu_ms=47 mm_cache=0 gc=30/660649
-[18:15:01] Slow frame: 37ms in Scene_Map (n=7/200) dt=ol:0/sh:0/pt:0 dt_ms=0 tr_ms=0 gu_ms=36 mm_cache=0 gc=30/669052
-[18:15:02] Slow frame: 32ms in Scene_Map (n=8/200) dt=ol:0/sh:0/pt:260 dt_ms=8 tr_ms=0 gu_ms=0 mm_cache=0 gc=30/680711
-[18:15:02] Slow frame: 35ms in Scene_Map (n=9/200) dt=ol:0/sh:0/pt:0 dt_ms=0 tr_ms=0 gu_ms=35 mm_cache=0 gc=30/692290
-[18:15:03] Slow frame: 38ms in Scene_Map (n=10/200) dt=ol:0/sh:0/pt:0 dt_ms=0 tr_ms=0 gu_ms=38 mm_cache=0 gc=30/707666
-[18:15:03] Slow frame: 31ms in Scene_Map (n=11/200) dt=ol:0/sh:0/pt:256 dt_ms=7 tr_ms=0 gu_ms=0 mm_cache=0 gc=30/716467
-[18:15:03] Slow frame: 31ms in Scene_Map (n=12/200) dt=ol:0/sh:0/pt:36 dt_ms=1 tr_ms=0 gu_ms=7 mm_cache=0 gc=30/728096
-[18:15:07] Slow frame: 75ms in Scene_Map (n=13/200) dt=ol:0/sh:0/pt:144 dt_ms=4 tr_ms=0 gu_ms=49 mm_cache=0 gc=30/769408
-[18:15:09] Slow frame: 38ms in Scene_Map (n=14/200) dt=ol:0/sh:0/pt:48 dt_ms=1 tr_ms=0 gu_ms=35 mm_cache=0 gc=30/803086
-[18:15:10] Slow frame: 58ms in Scene_Map (n=15/200) dt=ol:0/sh:0/pt:144 dt_ms=3 tr_ms=0 gu_ms=33 mm_cache=0 gc=30/819422
-[18:15:14] Slow frame: 61ms in Scene_Map (n=16/200) dt=ol:0/sh:0/pt:144 dt_ms=4 tr_ms=0 gu_ms=36 mm_cache=0 gc=30/860685
-[18:15:17] Slow frame: 43ms in Scene_Map (n=17/200) dt=ol:0/sh:0/pt:0 dt_ms=0 tr_ms=0 gu_ms=0 mm_cache=0 gc=30/894815
-[18:15:18] Slow frame: 89ms in Scene_Map (n=18/200) dt=ol:0/sh:0/pt:0 dt_ms=0 tr_ms=0 gu_ms=0 mm_cache=0 gc=31/627292
-[18:15:20] Slow frame: 32ms in Scene_Map (n=19/200) dt=ol:0/sh:0/pt:0 dt_ms=0 tr_ms=0 gu_ms=1 mm_cache=0 gc=31/822693
-[18:15:22] Slow frame: 160ms in Scene_Map (n=20/200) dt=ol:0/sh:0/pt:12 dt_ms=0 tr_ms=1 gu_ms=0 mm_cache=0 gc=32/645341
-[18:15:28] Slow frame: 32ms in Scene_Map (n=21/200) dt=ol:0/sh:0/pt:0 dt_ms=0 tr_ms=0 gu_ms=0 mm_cache=0 gc=32/685909
-[18:15:28] Slow frame: 64ms in Scene_Map (n=22/200) dt=ol:0/sh:0/pt:0 dt_ms=0 tr_ms=0 gu_ms=0 mm_cache=0 gc=32/686401
-[18:15:29] Slow frame: 51ms in Scene_Map (n=23/200) dt=ol:0/sh:0/pt:18 dt_ms=0 tr_ms=0 gu_ms=0 mm_cache=0 gc=32/693851
-[18:15:30] Slow frame: 70ms in Scene_Map (n=24/200) dt=ol:0/sh:0/pt:0 dt_ms=0 tr_ms=0 gu_ms=0 mm_cache=0 gc=32/695404
-[18:15:35] Slow frame: 67ms in Scene_Map (n=25/200) dt=ol:0/sh:0/pt:0 dt_ms=0 tr_ms=0 gu_ms=0 mm_cache=0 gc=32/733927
-[18:15:36] Slow frame: 86ms in Scene_Map (n=26/200) dt=ol:0/sh:0/pt:0 dt_ms=0 tr_ms=16 gu_ms=2 mm_cache=0 gc=32/795703
-[18:15:40] Slow frame: 33ms in Scene_Map (n=27/200) dt=ol:0/sh:0/pt:0 dt_ms=0 tr_ms=2 gu_ms=1 mm_cache=0 gc=32/1111610
-[18:15:42] Slow frame: 147ms in Scene_Map (n=28/200) dt=ol:0/sh:0/pt:12 dt_ms=0 tr_ms=0 gu_ms=0 mm_cache=0 gc=33/644506
-[18:15:50] Slow frame: 34ms in Scene_Map (n=29/200) dt=ol:0/sh:0/pt:0 dt_ms=0 tr_ms=0 gu_ms=1 mm_cache=0 gc=33/691583
-[18:15:56] Slow frame: 82ms in Scene_Map (n=30/200) dt=ol:0/sh:0/pt:0 dt_ms=0 tr_ms=15 gu_ms=1 mm_cache=0 gc=33/789226
-[18:15:57] Slow frame: 37ms in Scene_Map (n=31/200) dt=ol:0/sh:0/pt:61 dt_ms=2 tr_ms=0 gu_ms=0 mm_cache=0 gc=33/897157
-[18:15:57] Slow frame: 31ms in Scene_Map (n=32/200) dt=ol:0/sh:0/pt:61 dt_ms=1 tr_ms=0 gu_ms=0 mm_cache=0 gc=33/915103
-[18:15:59] Slow frame: 82ms in Scene_Map (n=33/200) dt=ol:0/sh:0/pt:288 dt_ms=6 tr_ms=0 gu_ms=1 mm_cache=0 gc=33/1091228
-[18:16:00] Slow frame: 80ms in Scene_Map (n=34/200) dt=ol:0/sh:0/pt:0 dt_ms=0 tr_ms=0 gu_ms=1 mm_cache=0 gc=33/1166461
+[18:16:23] Boot started. MAPS_DIR=C:/Users/Vena/Documents/folders/RPGMaker/Pokemon IA XPX/Data/maps
+[18:16:23] Ruby: 3.1.3, JSON available: YES
+[18:16:23] Platform: x64-mingw32, encoding default_external=UTF-8, default_internal=UTF-8
+[18:16:23] === Runtime file inventory ===
+[18:16:23]   Game.exe: 29110999 bytes, mtime=2026-06-02 12:28:44
+[18:16:23]   MapMaker.dll: 57477 bytes, mtime=2026-06-02 11:23:15
+[18:16:23]   MapMaker.exe: 131072 bytes, mtime=2026-06-02 11:23:15
+[18:16:23]   RGSS102E.dll: 778752 bytes, mtime=2026-06-02 11:23:15
+[18:16:23]   RGSS104E.dll: 758272 bytes, mtime=2024-03-07 16:17:40
+[18:16:23]   animmaker.exe: 10240 bytes, mtime=2026-06-02 11:23:15
+[18:16:23]   extendtext.exe: 4640 bytes, mtime=2026-06-02 11:23:15
+[18:16:23]   x64-msvcrt-ruby310.dll: 10240557 bytes, mtime=2026-06-02 12:28:44
+[18:16:23]   zlib1.dll: 128488 bytes, mtime=2026-06-02 12:29:08
+[18:16:23] System.rxdata: 4658 bytes, mtime=2026-08-28 23:47:55
+[18:16:23] System.rxdata @start_map_id=1 @start_x=9 @start_y=7
+[18:16:23] Indexed 112 maps
+[18:16:24] Map dict cache pre-warmed: 112 maps, 0 failed, 424ms
+[18:16:24] Autotile DB: 50 entries loaded from XPX_AutotileDatabase.xpxdata
+[18:16:24] load_data patched
+[18:16:24] data_maps guard installed
+[18:16:24] pbRgssExists? patched
+[18:16:24] compiler safety patched
+[18:16:24] Start map 1 has 4 events: 1:Intro(Action), 2:Quick start intro(Action), 3:EV003(Action), 4:Intro(Autorun)
+[18:16:24] Autorun events on start map: 4:Intro
+[18:16:24] Boot complete
+[18:16:24] Bitmap#draw_text crisp-text wrapper installed
