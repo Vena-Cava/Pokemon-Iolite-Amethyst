@@ -60,11 +60,24 @@ end
 
 def pbApplyWildMarks(pokemon)
   mark = nil
-  mark_attempts = 1
-  mark_attempts += 2 if $bag.has?(:MARKCHARM)
+
+  #---------------------------------------------------------------------------
+  # Calculate number of Mark attempts.
+  #---------------------------------------------------------------------------
+  base_attempts       = 1
+  mark_charm_attempts = $bag.has?(:MARKCHARM) ? 2 : 0
+  title_attempts      = MealPowers.title_extra_rolls
+
+  mark_attempts = base_attempts + mark_charm_attempts + title_attempts
+
   ratio = Settings::BASE_MARK_GENERATION_RATIO
+  attempts_used = 0
+
   mark_attempts.times do |i|
     break if mark
+
+    attempts_used += 1
+
     if rand(ratio * 20) == 0
       mark = :RAREMARK             # Checks for Rare Mark.
     elsif rand(ratio * 2) == 0
@@ -75,7 +88,7 @@ def pbApplyWildMarks(pokemon)
       mark = pbGetWeatherMark      # Checks for Weather Mark based on the weather of the current map.
     elsif rand(ratio) == 0
       mark = pbGetTimeMark         # Checks for Time Mark based on the current time of day.
-    elsif rand(ratio / 2).floor == 0 && $game_temp.encounter_type && 
+    elsif rand(ratio / 2).floor == 0 && $game_temp.encounter_type &&
           GameData::EncounterType.get($game_temp.encounter_type).type == :fishing
       mark = :FISHINGMARK          # Checks for Fishing Mark if a fishing encounter.
     elsif $game_temp.used_sweet_scent && rand(ratio / 2).floor == 0
@@ -84,6 +97,22 @@ def pbApplyWildMarks(pokemon)
       mark = :DESTINYMARK          # Checks for Destiny Mark if it's the player's birthday.
     end
   end
+
+  if MealPowers::DEBUG && MealPowers.level(:TITLE) > 0
+    puts "========================================"
+    puts "TITLE POWER DEBUG"
+    puts "Pokémon: #{pokemon.name}"
+    puts "Species: #{pokemon.species}"
+    puts "Title Power Lv: #{MealPowers.level(:TITLE)}"
+    puts "Base Mark Rolls: #{base_attempts}"
+    puts "Mark Charm Extra Rolls: #{mark_charm_attempts}"
+    puts "Title Power Extra Rolls: #{title_attempts}"
+    puts "Total Possible Mark Rolls: #{mark_attempts}"
+    puts "Mark Rolls Used: #{attempts_used}"
+    puts "Generated Mark: #{mark || "None"}"
+    puts "========================================"
+  end
+
   pokemon.giveMemento(mark) if mark
 end
 

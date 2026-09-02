@@ -164,6 +164,52 @@ def pbGenerateRaidRewards(pokemon, style = :Basic, rank = nil, loot = nil, weath
       rewards.push([loot, 1])
     end
   end
+
+  #-----------------------------------------------------------------------------
+  # Raid Reward Meal Power.
+  #
+  # Each additional roll generates one complete reward entry using the same
+  # kinds of items and quantities available from this raid.
+  #-----------------------------------------------------------------------------
+  raid_reward_rolls = MealPowers.raid_reward_extra_rolls
+  meal_power_rewards = []
+
+  raid_reward_rolls.times do
+    reward = MealPowers.generate_raid_reward_roll(
+      pokemon,
+      style,
+      rank,
+      weather,
+      terrain,
+      environ
+    )
+
+    next if !reward
+
+    rewards.push(reward)
+    meal_power_rewards.push(reward)
+  end
+
+  if MealPowers::DEBUG && raid_reward_rolls > 0
+    puts "========================================"
+    puts "RAID REWARD POWER DEBUG"
+    puts "Pokémon: #{pokemon.name}"
+    puts "Species: #{pokemon.species}"
+    puts "Raid Style: #{style}"
+    puts "Raid Rank: #{rank}"
+    puts "Raid Reward Power Lv: #{MealPowers.level(:RAIDREWARD)}"
+    puts "Additional Reward Rolls: #{raid_reward_rolls}"
+
+    meal_power_rewards.each_with_index do |reward, i|
+      item = reward[0]
+      qty  = reward[1]
+
+      puts "Bonus Roll #{i + 1}: #{GameData::Item.get(item).name} x#{qty}"
+    end
+
+    puts "========================================"
+  end
+
   #-----------------------------------------------------------------------------
   # Finalizes all rewards.
   #-----------------------------------------------------------------------------
