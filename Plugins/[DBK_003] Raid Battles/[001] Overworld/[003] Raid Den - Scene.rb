@@ -438,25 +438,34 @@ class RaidScene
       Graphics.update
       Input.update
       pbUpdate
-	  if Keybinds.repeat?(:up) || Keybinds.repeat?(:down) ||
-	     Keybinds.repeat?(:jumpup) || Keybinds.repeat?(:jumpdown)
-		next if @sprites["itemwindow"].commands.empty?
-	    itemidx = @sprites["itemwindow"].index
-		itemdesc = GameData::Item.get(rewards[itemidx][0]).description
-		@sprites["itemtext"].text = itemdesc
-		@sprites["itemicon"].item = rewards[itemidx][0]
-	  elsif Keybinds.trigger?(:use)
-	    next if @sprites["itemwindow"].commands.empty?
-		pbSEPlay("GUI party switch")
-	    if @sprites["itemtext"].visible
-		  @sprites["itemtext"].visible = false
-		  @sprites["itemicon"].visible = false
-		  @sprites["itembox"].bitmap.clear
-		else
-		  @sprites["itemtext"].visible = true
-		  @sprites["itemicon"].visible = true
-		  pbDrawImagePositions(@sprites["itembox"].bitmap, itembg)
-		end
+      # Keep the item preview synced with the currently highlighted reward.
+      if @sprites["itemtext"].visible && !@sprites["itemwindow"].commands.empty?
+        itemidx = @sprites["itemwindow"].index
+        item = rewards[itemidx][0]
+
+        @sprites["itemtext"].text = GameData::Item.get(item).description
+        @sprites["itemicon"].item = item
+      end
+	  if Keybinds.trigger?(:use)
+        next if @sprites["itemwindow"].commands.empty?
+        pbSEPlay("GUI party switch")
+
+        if @sprites["itemtext"].visible
+          @sprites["itemtext"].visible = false
+          @sprites["itemicon"].visible = false
+          @sprites["itembox"].bitmap.clear
+        else
+          # Refresh the preview using the currently selected reward.
+          itemidx = @sprites["itemwindow"].index
+          item = rewards[itemidx][0]
+
+          @sprites["itemtext"].text = GameData::Item.get(item).description
+          @sprites["itemicon"].item = item
+
+          @sprites["itemtext"].visible = true
+          @sprites["itemicon"].visible = true
+          pbDrawImagePositions(@sprites["itembox"].bitmap, itembg)
+        end
       elsif Keybinds.trigger?(:back)
         pbSEPlay("GUI menu close")
         Input.update
