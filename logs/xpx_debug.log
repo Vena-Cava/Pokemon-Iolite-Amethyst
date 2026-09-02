@@ -1,32 +1,22 @@
-=== XPX Debug Log 2026-09-02 18:16:23 +0100 ===
+=== XPX Debug Log 2026-09-02 18:17:41 +0100 ===
 Ruby: 3.1.3 Platform: x64-mingw32
 GAME_ROOT : C:/Users/Vena/Documents/folders/RPGMaker/Pokemon IA XPX
 MAPS_DIR  : C:/Users/Vena/Documents/folders/RPGMaker/Pokemon IA XPX/Data/maps
 LOG_PATH  : C:/Users/Vena/Documents/folders/RPGMaker/Pokemon IA XPX/logs/xpx_debug.log
 $0        : -e
-[18:16:23] Boot started. MAPS_DIR=C:/Users/Vena/Documents/folders/RPGMaker/Pokemon IA XPX/Data/maps
-[18:16:23] Ruby: 3.1.3, JSON available: YES
-[18:16:23] Platform: x64-mingw32, encoding default_external=UTF-8, default_internal=UTF-8
-[18:16:23] === Runtime file inventory ===
-[18:16:23]   Game.exe: 29110999 bytes, mtime=2026-06-02 12:28:44
-[18:16:23]   MapMaker.dll: 57477 bytes, mtime=2026-06-02 11:23:15
-[18:16:23]   MapMaker.exe: 131072 bytes, mtime=2026-06-02 11:23:15
-[18:16:23]   RGSS102E.dll: 778752 bytes, mtime=2026-06-02 11:23:15
-[18:16:23]   RGSS104E.dll: 758272 bytes, mtime=2024-03-07 16:17:40
-[18:16:23]   animmaker.exe: 10240 bytes, mtime=2026-06-02 11:23:15
-[18:16:23]   extendtext.exe: 4640 bytes, mtime=2026-06-02 11:23:15
-[18:16:23]   x64-msvcrt-ruby310.dll: 10240557 bytes, mtime=2026-06-02 12:28:44
-[18:16:23]   zlib1.dll: 128488 bytes, mtime=2026-06-02 12:29:08
-[18:16:23] System.rxdata: 4658 bytes, mtime=2026-08-28 23:47:55
-[18:16:23] System.rxdata @start_map_id=1 @start_x=9 @start_y=7
-[18:16:23] Indexed 112 maps
-[18:16:24] Map dict cache pre-warmed: 112 maps, 0 failed, 424ms
-[18:16:24] Autotile DB: 50 entries loaded from XPX_AutotileDatabase.xpxdata
-[18:16:24] load_data patched
-[18:16:24] data_maps guard installed
-[18:16:24] pbRgssExists? patched
-[18:16:24] compiler safety patched
-[18:16:24] Start map 1 has 4 events: 1:Intro(Action), 2:Quick start intro(Action), 3:EV003(Action), 4:Intro(Autorun)
-[18:16:24] Autorun events on start map: 4:Intro
-[18:16:24] Boot complete
-[18:16:24] Bitmap#draw_text crisp-text wrapper installed
+[18:17:41] Boot started. MAPS_DIR=C:/Users/Vena/Documents/folders/RPGMaker/Pokemon IA XPX/Data/maps
+[18:17:41] Ruby: 3.1.3, JSON available: YES
+[18:17:41] Platform: x64-mingw32, encoding default_external=UTF-8, default_internal=UTF-8
+[18:17:41] === Runtime file inventory ===
+[18:17:41]   Game.exe: 29110999 bytes, mtime=2026-06-02 12:28:44
+[18:17:41]   MapMaker.dll: 57477 bytes, mtime=2026-06-02 11:23:15
+[18:17:41]   MapMaker.exe: 131072 bytes, mtime=2026-06-02 11:23:15
+[18:17:41]   RGSS102E.dll: 778752 bytes, mtime=2026-06-02 11:23:15
+[18:17:41]   RGSS104E.dll: 758272 bytes, mtime=2024-03-07 16:17:40
+[18:17:41]   animmaker.exe: 10240 bytes, mtime=2026-06-02 11:23:15
+[18:17:41]   extendtext.exe: 4640 bytes, mtime=2026-06-02 11:23:15
+[18:17:41]   x64-msvcrt-ruby310.dll: 10240557 bytes, mtime=2026-06-02 12:28:44
+[18:17:41]   zlib1.dll: 128488 bytes, mtime=2026-06-02 12:29:08
+[18:17:41] System.rxdata: 4658 bytes, mtime=2026-08-28 23:47:55
+[18:17:41] System.rxdata @start_map_id=1 @start_x=9 @start_y=7
+[18:17:41] Indexed 112 maps

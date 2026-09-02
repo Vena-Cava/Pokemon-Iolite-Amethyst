@@ -1,1 +1,5 @@
-=== XPX Audio Debug 2026-09-02 18:16:24 +0100 ===
+=== XPX Audio Debug 2026-09-02 18:17:04 +0100 ===
+pbSEPlay in Object: String=String
+pbBGMPlay in Object: String=String
+pbBGMPlay in Object: RPG::AudioFile=RPG::AudioFile
+pbSEPlay in Object: String=String
