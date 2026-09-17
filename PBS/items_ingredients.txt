@@ -1,0 +1,1744 @@
+# Cooking Ingredients generated from the Ingredients spreadsheet.
+# Pocket 11 = Cooking Ingredients.
+#-------------------------------
+[ICINGSUGAR]
+Name = Icing Sugar
+NamePlural = Icing Sugar
+PortionName = bag of Icing Sugar
+PortionNamePlural = bags of Icing Sugar
+Pocket = 11
+Price = 130
+Flags = Ingredient
+Description = A very sweet, finely powdered ingredient. Its soft texture makes it perfect for dusting desserts or mixing into smooth, sugary toppings.
+#-------------------------------
+[BARBECUESAUCE]
+Name = Barbecue Sauce
+NamePlural = Barbecue Sauce
+PortionName = bottle of Barbecue Sauce
+PortionNamePlural = bottles of Barbecue Sauce
+Pocket = 11
+Price = 250
+Flags = Ingredient
+Description = A very sweet and salty condiment with a smoky flavor. It pairs especially well with meat and gives grilled dishes a satisfying richness.
+#-------------------------------
+[CHILISAUCE]
+Name = Chili Sauce
+NamePlural = Chili Sauce
+PortionName = bottle of Chili Sauce
+PortionNamePlural = bottles of Chili Sauce
+Pocket = 11
+Price = 320
+Flags = Ingredient
+Description = A condiment with a very spicy kick. It's thanks to Scovillain that this sauce gets its signature mouth-tingling burn.
+#-------------------------------
+[CURRYPOWDER]
+Name = Curry Powder
+NamePlural = Curry Powder
+PortionName = jar of Curry Powder
+PortionNamePlural = jars of Curry Powder
+Pocket = 11
+Price = 450
+Flags = Ingredient
+Description = A very spicy condiment. Just watch out—use too much of this potent seasoning, and it'll cancel out the other flavors.
+#-------------------------------
+[GARLICSAUCE]
+Name = Garlic Sauce
+NamePlural = Garlic Sauce
+PortionName = bottle of Garlic Sauce
+PortionNamePlural = bottles of Garlic Sauce
+Pocket = 11
+Price = 280
+Flags = Ingredient
+Description = A strongly flavored condiment with a sharp, savory aroma. Just a little can make breads, meats, and vegetables much more fragrant.
+#-------------------------------
+[HORSERADISH]
+Name = Horseradish
+NamePlural = Horseradish
+PortionName = jar of Horseradish
+PortionNamePlural = jars of Horseradish
+Pocket = 11
+Price = 410
+Flags = Ingredient
+Description = A very spicy condiment. Its distinctive sharp sizzle in your sinuses makes it a good match for rich fillings.
+#-------------------------------
+[PEPPER]
+Name = Pepper
+NamePlural = Pepper
+PortionName = jar of Pepper
+PortionNamePlural = jars of Pepper
+Pocket = 11
+Price = 100
+Flags = Ingredient
+Description = A seasoning packing very spicy flavor. It goes nicely with oilier foods and works especially well when you add just a pinch for a hint of flavor.
+#-------------------------------
+[SALT]
+Name = Salt
+NamePlural = Salt
+PortionName = Salt Shaker
+PortionNamePlural = Salt Shakers
+Pocket = 11
+Price = 90
+Flags = Ingredient
+Description = A very salty seasoning, unsurprisingly. People quite like the grains of salt that can be gathered from the footprints of particularly jagged Naclstack.
+#-------------------------------
+[VINEGAR]
+Name = Vinegar
+NamePlural = Vinegar
+PortionName = bottle of Vinegar
+PortionNamePlural = bottles of Vinegar
+Pocket = 11
+Price = 300
+Flags = Ingredient
+Description = A very sour condiment. Vinegars derived from Bunchkin are popular in Niphos. Highly effective when used to add just a light note of flavor.
+#-------------------------------
+[WASABI]
+Name = Wasabi
+NamePlural = Wasabi
+PortionName = jar of Wasabi
+PortionNamePlural = jars of Wasabi
+Pocket = 11
+Price = 330
+Flags = Ingredient
+Description = This very spicy condiment seems close to horseradish at first, but you'll find that it has a superb flavor all its own.
+#-------------------------------
+[KETCHUP]
+Name = Ketchup
+NamePlural = Ketchup
+PortionName = bottle of Ketchup
+PortionNamePlural = bottles of Ketchup
+Pocket = 11
+Price = 110
+Flags = Ingredient
+Description = A condiment with very salty and tart flavor. While a number of other ingredients go into its signature flavor, the noble tomato is its heart and soul.
+#-------------------------------
+[MAYONNAISE]
+Name = Mayonnaise
+NamePlural = Mayonnaise
+PortionName = bottle of Mayonnaise
+PortionNamePlural = bottles of Mayonnaise
+Pocket = 11
+Price = 120
+Flags = Ingredient
+Description = A condiment that packs a very tart punch yet pairs well with various ingredients.
+#-------------------------------
+[MUSTARD]
+Name = Mustard
+NamePlural = Mustard
+PortionName = bottle of Mustard
+PortionNamePlural = bottles of Mustard
+Pocket = 11
+Price = 130
+Flags = Ingredient
+Description = A very spicy condiment that's indispensable when bread is on the table. It pairs tremendously with ketchup.
+#-------------------------------
+[PESTO]
+Name = Pesto
+NamePlural = Pesto
+PortionName = jar of Pesto
+PortionNamePlural = jars of Pesto
+Pocket = 11
+Price = 420
+Flags = Ingredient
+Description = A rich condiment made with fragrant herbs, oil, and nuts. Its fresh, salty and bitter flavor goes especially well with pasta and bread.
+#-------------------------------
+[MISO]
+Name = Miso
+NamePlural = Miso
+PortionName = jar of Miso
+PortionNamePlural = jars of Miso
+Pocket = 11
+Price = 240
+Flags = Ingredient
+Description = An aggressively salty condiment made through long term fermentation. It's used as the base ingredient for several soups.
+#-------------------------------
+[SOYSAUCE]
+Name = Soy Sauce
+NamePlural = Soy Sauce
+PortionName = bottle of Soy Sauce
+PortionNamePlural = bottles of Soy Sauce
+Pocket = 11
+Price = 180
+Flags = Ingredient
+Description = A very salty condiment made through fermentation. Even a small splash can add a remarkable depth of flavor to rice, noodles, and vegetable
+#-------------------------------
+[BUTTER]
+Name = Butter
+NamePlural = Butter
+PortionName = stick of Butter
+PortionNamePlural = sticks of Butter
+Pocket = 11
+Price = 250
+Flags = Ingredient
+Description = A condiment that unites salty and sweet and also packs a richness that makes bread a delight to eat. The finest butter products are made of 100 percent Moomoo Milk.
+#-------------------------------
+[LEMONJUICE]
+Name = Lemon Juice
+NamePlural = Lemon Juice
+PortionName = bottle of Lemon Juice
+PortionNamePlural = bottles of Lemon Juice
+Pocket = 11
+Price = 180
+Flags = Ingredient
+Description = A very sour condiment with a bright, refreshing aroma. A quick squeeze can lighten up rich dishes or bring out the flavor of seafood.
+#-------------------------------
+[PARMESAN]
+Name = Parmesan
+NamePlural = Parmesan
+PortionName = block of Parmesan
+PortionNamePlural = blocks of Parmesan
+Pocket = 11
+Price = 450
+Flags = Ingredient
+Description = A hard, salty cheese with a rich flavor. It's usually grated over a dish, where even a little can make the whole meal taste more substantial.
+#-------------------------------
+[OLIVEOIL]
+Name = Olive Oil
+NamePlural = Olive Oil
+PortionName = bottle of Olive Oil
+PortionNamePlural = bottles of Olive Oil
+Pocket = 11
+Price = 300
+Flags = Ingredient
+Description = A condiment offering faint notes of sour and bitter flavors. The most prized varieties are the ones Smoliv love the smell of—such oils' quality is assured.
+#-------------------------------
+[YOGURT]
+Name = Yogurt
+NamePlural = Yogurt
+PortionName = cup of Yogurt
+PortionNamePlural = cups of Yogurt
+Pocket = 11
+Price = 140
+Flags = Ingredient
+Description = A condiment that's very sweet and very sour. It goes especially well with fruit and is easy to incorporate into a dish.
+#-------------------------------
+[CHOCOLATESPREAD]
+Name = Chocolate Spread
+NamePlural = Chocolate Spread
+PortionName = jar of Chocolate Spread
+PortionNamePlural = jars of Chocolate Spread
+Pocket = 11
+Price = 300
+Flags = Ingredient
+Description = A very sweet, smooth condiment made for spreading generously. It's especially popular with bread, fruit, and anyone with a serious sweet tooth.
+#-------------------------------
+[JAM]
+Name = Jam
+NamePlural = Jam
+PortionName = jar of Jam
+PortionNamePlural = jars of Jam
+Pocket = 11
+Price = 120
+Flags = Ingredient
+Description = A condiment that's very sweet and likewise very sour. Take care when adding it to dishes, as the sweet side can overwhelm.
+#-------------------------------
+[MARMALADE]
+Name = Marmalade
+NamePlural = Marmalade
+PortionName = jar of Marmalade
+PortionNamePlural = jars of Marmalade
+Pocket = 11
+Price = 260
+Flags = Ingredient
+Description = A condiment with sour and bitter notes. It's surprisingly useful, as it makes a nice counterpoint to oilier foods.
+#-------------------------------
+[WHIPPEDCREAM]
+Name = Whipped Cream
+NamePlural = Whipped Cream
+PortionName = can of Whipped Cream
+PortionNamePlural = cans of Whipped Cream
+Pocket = 11
+Price = 200
+Flags = Ingredient
+Description = A very sweet condiment. Folks seem to love the varieties that really let the sweetness sing.
+#-------------------------------
+[CREAMCHEESE]
+Name = Cream Cheese
+NamePlural = Cream Cheese
+PortionName = tub of Cream Cheese
+PortionNamePlural = tubs of Cream Cheese
+Pocket = 11
+Price = 280
+Flags = Ingredient
+Description = A condiment offering very sweet and very tart flavor. It goes well with more ingredients than you'd expect, making it a convenient go-to.
+#-------------------------------
+[SWEETCOMBEEHONEY]
+Name = Sweet Combee Honey
+NamePlural = Sweet Combee Honey
+PortionName = jar of Sweet Combee Honey
+PortionNamePlural = jars of Sweet Combee Honey
+Pocket = 11
+Price = 500
+Flags = Ingredient
+Description = A very sweet syrup gathered from Combee colonies. Its rich floral flavor makes it prized for desserts, drinks, and anything that could use a little extra sweetness.
+#-------------------------------
+[PEANUTBUTTER]
+Name = Peanut Butter
+NamePlural = Peanut Butter
+PortionName = jar of Peanut Butter
+PortionNamePlural = jars of Peanut Butter
+Pocket = 11
+Price = 300
+Flags = Ingredient
+Description = A very sweet condiment. People seem to favor the sweet varieties over the unsweetened.
+#-------------------------------
+[SWEETHERBAMYSTICA]
+Name = Sweet Herba Mystica
+NamePlural = Sweet Herba Mystica
+PortionName = sprig of Sweet Herba Mystica
+PortionNamePlural = sprigs of Sweet Herba Mystica
+Pocket = 11
+Price = 0
+Flags = Ingredient
+Description = A legendary condiment told of only in books. Word has it that one taste of its sweet flavor stimulates the digestive system and cures a lack of appetite.
+#-------------------------------
+[SOURHERBAMYSTICA]
+Name = Sour Herba Mystica
+NamePlural = Sour Herba Mystica
+PortionName = sprig of Sour Herba Mystica
+PortionNamePlural = sprigs of Sour Herba Mystica
+Pocket = 11
+Price = 0
+Flags = Ingredient
+Description = This surpassingly sour condiment is said to be super effective in helping the eater recover from exhaustion. Only a scant few people know it exists.
+#-------------------------------
+[SALTYHERBAMYSTICA]
+Name = Salty Herba Mystica
+NamePlural = Salty Herba Mystica
+PortionName = sprig of Salty Herba Mystica
+PortionNamePlural = sprigs of Salty Herba Mystica
+Pocket = 11
+Price = 0
+Flags = Ingredient
+Description = One of the condiments spoken of as legends. Its mellow saltiness is said to be tremendously effective when it comes to promoting health.
+#-------------------------------
+[BITTERHERBAMYSTICA]
+Name = Bitter Herba Mystica
+NamePlural = Bitter Herba Mystica
+PortionName = sprig of Bitter Herba Mystica
+PortionNamePlural = sprigs of Bitter Herba Mystica
+Pocket = 11
+Price = 0
+Flags = Ingredient
+Description = A legendary condiment with a deeply bitter taste. It's said to dramatically bolster a body's immune defenses, though that hasn't been proven.
+#-------------------------------
+[SPICYHERBAMYSTICA]
+Name = Spicy Herba Mystica
+NamePlural = Spicy Herba Mystica
+PortionName = sprig of Spicy Herba Mystica
+PortionNamePlural = sprigs of Spicy Herba Mystica
+Pocket = 11
+Price = 0
+Flags = Ingredient
+Description = The legendary condiment said to have the mightiest of all spicy flavors. It's said that a single bite will kick the metabolism into high gear immediately.
+#-------------------------------
+[SWEETGIGANTAMIX]
+Name = Sweet Gigantamix
+NamePlural = Sweet Gigantamix
+PortionName = Sweet Gigantamix shaker
+PortionNamePlural = Sweet Gigantamix shakers
+Pocket = 11
+Price = 0
+Flags = Ingredient
+Description = A legendary condiment with a gigantic flavor. Word has it that one taste of its sweet flavor stimulates the digestive system and cures a lack of appetite.
+#-------------------------------
+[SOURGIGANTAMIX]
+Name = Sour Gigantamix
+NamePlural = Sour Gigantamix
+PortionName = Sour Gigantamix shaker
+PortionNamePlural = Sour Gigantamix shakers
+Pocket = 11
+Price = 0
+Flags = Ingredient
+Description = This surpassingly sour spice mix is said to be super effective in helping the eater recover from exhaustion. It is said to embiggen the spirit.
+#-------------------------------
+[SALTYGIGANTAMIX]
+Name = Salty Gigantamix
+NamePlural = Salty Gigantamix
+PortionName = Salty Gigantamix shaker
+PortionNamePlural = Salty Gigantamix shakers
+Pocket = 11
+Price = 0
+Flags = Ingredient
+Description = This particular herb and spice mix has a massive flavor profile. Its mellow saltiness is said to be tremendously effective when it comes to promoting health.
+#-------------------------------
+[BITTERGIGANTAMIX]
+Name = Bitter Gigantamix
+NamePlural = Bitter Gigantamix
+PortionName = Bitter Gigantamix shaker
+PortionNamePlural = Bitter Gigantamix shakers
+Pocket = 11
+Price = 0
+Flags = Ingredient
+Description = A legendary condiment with a deeply bitter taste. It's said to dramatically bolster a body's immune defenses, giving them a huge resistance to illness.
+#-------------------------------
+[SPICYGIGANTAMIX]
+Name = Spicy Gigantamix
+NamePlural = Spicy Gigantamix
+PortionName = Spicy Gigantamix shaker
+PortionNamePlural = Spicy Gigantamix shakers
+Pocket = 11
+Price = 0
+Flags = Ingredient
+Description = The legendary condiment said to have the mightiest of all spicy flavors. It's said that a single bite will kick the metabolism into high gear immediately.
+#-------------------------------
+[SWEETULTRASAUCE]
+Name = Sweet Ultra Sauce
+NamePlural = Sweet Ultra Sauce
+PortionName = bottle of Sweet Ultra Sauce
+PortionNamePlural = bottles of Sweet Ultra Sauce
+Pocket = 11
+Price = 0
+Flags = Ingredient
+Description = A legendary condiment of otherworldy tastes. Word has it that one lick of its sweet flavor stimulates the digestive system and cures a lack of appetite.
+#-------------------------------
+[SOURULTRASAUCE]
+Name = Sour Ultra Sauce
+NamePlural = Sour Ultra Sauce
+PortionName = bottle of Sour Ultra Sauce
+PortionNamePlural = bottles of Sour Ultra Sauce
+Pocket = 11
+Price = 0
+Flags = Ingredient
+Description = This surpassingly sour sauce is said to be super effective in helping the eater recover from exhaustion. It will make your lips look like a swirling wormhole.
+#-------------------------------
+[SALTYULTRASAUCE]
+Name = Salty Ultra Sauce
+NamePlural = Salty Ultra Sauce
+PortionName = bottle of Salty Ultra Sauce
+PortionNamePlural = bottles of Salty Ultra Sauce
+Pocket = 11
+Price = 0
+Flags = Ingredient
+Description = A sauce said to be concocted in another dimension. Its mellow saltiness is said to be tremendously effective when it comes to promoting health.
+#-------------------------------
+[BITTERULTRASAUCE]
+Name = Bitter Ultra Sauce
+NamePlural = Bitter Ultra Sauce
+PortionName = bottle of Bitter Ultra Sauce
+PortionNamePlural = bottles of Bitter Ultra Sauce
+Pocket = 11
+Price = 0
+Flags = Ingredient
+Description = A legendary condiment with a deeply bitter taste. It's said to dramatically bolster a body's immune defenses, even from otherworldly illnesses.
+#-------------------------------
+[SPICYULTRASAUCE]
+Name = Spicy Ultra Sauce
+NamePlural = Spicy Ultra Sauce
+PortionName = bottle of Spicy Ultra Sauce
+PortionNamePlural = bottles of Spicy Ultra Sauce
+Pocket = 11
+Price = 0
+Flags = Ingredient
+Description = The legendary condiment said to have the mightiest of all spicy flavors. It's said that a single bite will kick the metabolism into high gear immediately.
+#-------------------------------
+[EPICENOIRE]
+Name = Épice Noire
+NamePlural = Épice Noire
+PortionName = jar of Épice Noire
+PortionNamePlural = jars of Épice Noire
+Pocket = 11
+Price = 0
+Flags = Ingredient
+Description = A mysterious spice that is highly valued among members of Lumiose City's Rust Syndicate. A sprinkle of it elevates the flavor of any dish so sublimely you'll feel as if you're dreaming.
+#-------------------------------
+[HOENNIANSALT]
+Name = Hoennian Salt
+NamePlural = Hoennian Salt
+PortionName = packet of Hoennian Salt
+PortionNamePlural = packets of Hoennian Salt
+Pocket = 11
+Price = 0
+Flags = Ingredient
+Description = A coarse salt that can only be harvested in small amounts in the Hoenn region. A tiny pinch will impart a wondrous depth of flavor.
+#-------------------------------
+[ARBOLIVAOIL]
+Name = Arboliva Oil
+NamePlural = Arboliva Oil
+PortionName = bottle of Arboliva Oil
+PortionNamePlural = bottles of Arboliva Oil
+Pocket = 11
+Price = 0
+Flags = Ingredient
+Description = The oil produced by Paldea's Arboliva is said to be so delicious you'll feel as if you've gone to heaven after tasting it.
+#-------------------------------
+[POPPINGCANDY]
+Name = Popping Candy
+NamePlural = Popping Candy
+PortionName = bag of Popping Candy
+PortionNamePlural = bags of Popping Candy
+Pocket = 11
+Price = 0
+Flags = Ingredient
+Description = A popular candy among children. It pops in your mouth as if it's exploding, so you can enjoy a shocking experience while eating it.
+#-------------------------------
+[BAKINGPOWDER]
+Name = Baking Powder
+NamePlural = Baking Powder
+PortionName = can of Baking Powder
+PortionNamePlural = cans of Baking Powder
+Pocket = 11
+Price = 120
+Flags = Ingredient
+Description = A fine powder used to help baked foods rise. It doesn't contribute much flavor of its own, but cakes and pastries would be much flatter without it.
+#-------------------------------
+[BAKINGSODA]
+Name = Baking Soda
+NamePlural = Baking Soda
+PortionName = box of Baking Soda
+PortionNamePlural = boxes of Baking Soda
+Pocket = 11
+Price = 100
+Flags = Ingredient
+Description = A useful baking ingredient that reacts strongly with acidic foods. When used carefully, it helps doughs and batters become wonderfully light.
+#-------------------------------
+[YEAST]
+Name = Yeast
+NamePlural = Yeast
+PortionName = bag of Yeast
+PortionNamePlural = bags of Yeast
+Pocket = 11
+Price = 100
+Flags = Ingredient
+Description = A bacterial leavener used in traditional baking. It's a little bit on the bitter side, with a pinch of sweetness.
+#-------------------------------
+[ALMONDS]
+Name = Almonds
+NamePlural = Almonds
+PortionName = bag of Almonds
+PortionNamePlural = bags of Almonds
+Pocket = 11
+Price = 300
+Flags = Ingredient
+Description = A mildly sweet nut with a pleasant crunch. They're equally at home in savory dishes and desserts.
+#-------------------------------
+[HAZELNUTS]
+Name = Hazelnuts
+NamePlural = Hazelnuts
+PortionName = bag of Hazelnuts
+PortionNamePlural = bags of Hazelnuts
+Pocket = 11
+Price = 280
+Flags = Ingredient
+Description = A sweet and slightly bitter nut with a rich aroma. Roasting them makes their distinctive flavor even stronger.
+#-------------------------------
+[BREADCRUMBS]
+Name = Breadcrumbs
+NamePlural = Breadcrumbs
+PortionName = tub of Breadcrumbs
+PortionNamePlural = tubs of Breadcrumbs
+Pocket = 11
+Price = 120
+Flags = Ingredient
+Description = Small crumbs of dried bread with a mild flavor. They can give fried foods a satisfying crunch or help hold softer ingredients together.
+#-------------------------------
+[CORNSTARCH]
+Name = Cornstarch
+NamePlural = Cornstarch
+PortionName = bag of Cornstarch
+PortionNamePlural = bags of Cornstarch
+Pocket = 11
+Price = 170
+Flags = Ingredient
+Description = A fine, mildly sweet flour made from corn. It's particularly useful for thickening sauces without adding too much flavor of its own.
+#-------------------------------
+[WHITEFLOUR]
+Name = White Flour
+NamePlural = White Flour
+PortionName = bag of White Flour
+PortionNamePlural = bags of White Flour
+Pocket = 11
+Price = 150
+Flags = Ingredient
+Description = A mild ingredient ground into a fine powder. It's a staple of baking and forms the foundation of breads, cakes, pastries, and plenty more besides.
+#-------------------------------
+[OATS]
+Name = Oats
+NamePlural = Oats
+PortionName = bag of Oats
+PortionNamePlural = bags of Oats
+Pocket = 11
+Price = 140
+Flags = Ingredient
+Description = A mildly sweet grain with a hearty texture. They're most commonly cooked into warm breakfasts or baked into something a little sweeter.
+#-------------------------------
+[CHOCOLATECHIPS]
+Name = Chocolate Chips
+NamePlural = Chocolate Chips
+PortionName = bag of Chocolate Chips
+PortionNamePlural = bags of Chocolate Chips
+Pocket = 11
+Price = 280
+Flags = Ingredient
+Description = Small pieces of very sweet chocolate. Their convenient size makes them perfect for scattering through batters and desserts.
+#-------------------------------
+[COCOAPOWDER]
+Name = Cocoa Powder
+NamePlural = Cocoa Powder
+PortionName = can of Cocoa Powder
+PortionNamePlural = cans of Cocoa Powder
+Pocket = 11
+Price = 250
+Flags = Ingredient
+Description = A bitter chocolate ingredient with an intense aroma. Mixing it with sweeter ingredients brings out the rich chocolate flavor it's famous for.
+#-------------------------------
+[CONDENSEDMILK]
+Name = Condensed Milk
+NamePlural = Condensed Milk
+PortionName = can of Condensed Milk
+PortionNamePlural = cans of Condensed Milk
+Pocket = 11
+Price = 180
+Flags = Ingredient
+Description = A thick and extremely sweet milk ingredient. Its richness makes it particularly well suited to desserts and creamy drinks.
+#-------------------------------
+[BROWNSUGAR]
+Name = Brown Sugar
+NamePlural = Brown Sugar
+PortionName = bag of Brown Sugar
+PortionNamePlural = bags of Brown Sugar
+Pocket = 11
+Price = 130
+Flags = Ingredient
+Description = A very sweet sugar with a deeper, richer flavor than the ordinary kind. It lends baked foods a pleasant hint of caramel.
+#-------------------------------
+[SUGAR]
+Name = Sugar
+NamePlural = Sugar
+PortionName = bag of Sugar
+PortionNamePlural = bags of Sugar
+Pocket = 11
+Price = 100
+Flags = Ingredient
+Description = A very sweet ingredient used in countless recipes. A little can balance other flavors, while a lot can turn almost anything into a dessert.
+#-------------------------------
+[VANILLA]
+Name = Vanilla
+NamePlural = Vanilla
+PortionName = Vanilla Bean
+PortionNamePlural = Vanilla Beans
+Pocket = 11
+Price = 500
+Flags = Ingredient
+Description = A wonderfully fragrant ingredient with a gentle sweetness. It's often used in desserts to make their other sweet flavors feel even richer.
+#-------------------------------
+[SILLYSTUFFULHAM]
+Name = Silly Stufful Ham
+NamePlural = Silly Stufful Ham
+PortionName = slice of Silly Stufful Ham
+PortionNamePlural = slices of Silly Stufful Ham
+Pocket = 11
+Price = 180
+Flags = Ingredient
+Description = An ingredient that's somewhat salty. It's a reconstructed deli ham made of 66% Oinkologne pork, shaped to look like Stufful.
+#-------------------------------
+[POTATOSALAD]
+Name = Potato Salad
+NamePlural = Potato Salad
+PortionName = tub of Potato Salad
+PortionNamePlural = tubs of Potato Salad
+Pocket = 11
+Price = 110
+Flags = Ingredient
+Description = This very tart ingredient—a soft salad that's all about potatoes—pairs tremendously well with meat.
+#-------------------------------
+[POTATOTORTILLA]
+Name = Potato Tortilla
+NamePlural = Potato Tortillas
+Pocket = 11
+Price = 250
+Flags = Ingredient
+Description = A very salty ingredient and a popular dish. It's undeniably filling.
+#-------------------------------
+[APPLE]
+Name = Apple
+NamePlural = Apples
+Pocket = 11
+Price = 130
+Flags = Ingredient
+Description = This very sweet fruit is used in the cooking of various different meals.
+#-------------------------------
+[BANANA]
+Name = Banana
+NamePlural = Bananas
+Pocket = 11
+Price = 80
+Flags = Ingredient
+Description = A very sweet ingredient. This go-to fruit is sweet and rich, and it's beloved by many Pokémon.
+#-------------------------------
+[REDGRAPES]
+Name = Red Grapes
+NamePlural = Red Grapes
+PortionName = bunch of Red Grapes
+PortionNamePlural = bunches of Red Grapes
+Pocket = 11
+Price = 160
+Flags = Ingredient
+Description = A sweet fruit with a slight tartness and plenty of juice. Their deep color also makes them an attractive addition to fruit dishes.
+#-------------------------------
+[WHITEGRAPES]
+Name = White Grapes
+NamePlural = White Grapes
+PortionName = bunch of White Grapes
+PortionNamePlural = bunches of White Grapes
+Pocket = 11
+Price = 160
+Flags = Ingredient
+Description = A sweet and refreshing fruit with a mild tart edge. Their crisp bite makes them easy to enjoy on their own or alongside richer ingredients.
+#-------------------------------
+[KIWI]
+Name = Kiwi
+NamePlural = Kiwis
+Pocket = 11
+Price = 180
+Flags = Ingredient
+Description = A very tart ingredient that has a light touch of sweetness as well. It goes well with rich ingredients.
+#-------------------------------
+[MELON]
+Name = Melon
+NamePlural = Melons
+Pocket = 11
+Price = 230
+Flags = Ingredient
+Description = A very sweet fruit with soft, juicy flesh. Chilling it makes for an especially refreshing treat.
+#-------------------------------
+[ORANGE]
+Name = Orange
+NamePlural = Oranges
+Pocket = 11
+Price = 150
+Flags = Ingredient
+Description = A fruit that's equal parts sweet and sour and bursting with juice. Its bright citrus flavor can freshen up all kinds of dishes.
+#-------------------------------
+[PINEAPPLE]
+Name = Pineapple
+NamePlural = Pineapples
+Pocket = 11
+Price = 250
+Flags = Ingredient
+Description = This very tart ingredient is a fruit of southern lands, and its color and texture are a thrill. It's been cut into chunks to be easily manageable.
+#-------------------------------
+[STRAWBERRY]
+Name = Strawberry
+NamePlural = Strawberries
+Pocket = 11
+Price = 140
+Flags = Ingredient
+Description = A very tart and sweet ingredient, popular for its ability to make a dessert visually striking.
+#-------------------------------
+[ARTICHOKE]
+Name = Artichoke
+NamePlural = Artichokes
+Pocket = 11
+Price = 280
+Flags = Ingredient
+Description = A vegetable with a noticeable bitterness and a surprisingly tender heart. Getting to the best part takes a little work, but many insist it's worth it.
+#-------------------------------
+[ASPARAGUS]
+Name = Asparagus
+NamePlural = Asparagus
+PortionName = bundle of Asparagus
+PortionNamePlural = bundles of Asparagus
+Pocket = 11
+Price = 260
+Flags = Ingredient
+Description = A slightly bitter vegetable with tender tips and a satisfying snap. Its distinctive flavor becomes milder and richer when cooked.
+#-------------------------------
+[EGGPLANT]
+Name = Eggplant
+NamePlural = Eggplants
+Pocket = 11
+Price = 180
+Flags = Ingredient
+Description = A mildly bitter vegetable with soft flesh that readily absorbs other flavors. It's particularly satisfying when cooked until tender.
+#-------------------------------
+[AVOCADO]
+Name = Avocado
+NamePlural = Avocados
+Pocket = 11
+Price = 180
+Flags = Ingredient
+Description = An ingredient with sweet notes—though its flavor is very mild. The avocado's richness, however, makes it satisfying to eat.
+#-------------------------------
+[BEANSPROUTS]
+Name = Bean Sprouts
+NamePlural = Bean Sprouts
+PortionName = bag of Bean Sprouts
+PortionNamePlural = bags of Bean Sprouts
+Pocket = 11
+Price = 100
+Flags = Ingredient
+Description = A crisp ingredient with a very mild flavor. They're often added near the end of cooking so they keep their characteristic crunch.
+#-------------------------------
+[BEETROOT]
+Name = Beetroot
+NamePlural = Beetroots
+Pocket = 11
+Price = 150
+Flags = Ingredient
+Description = A deeply colored root vegetable with an earthy sweetness. Be careful when preparing it—its juice has a habit of turning everything purple.
+#-------------------------------
+[GREENBELLPEPPER]
+Name = Green Bell Pepper
+NamePlural = Green Bell Peppers
+Pocket = 11
+Price = 230
+Flags = Ingredient
+Description = An ingredient with some bitterness. When sliced, it adds a nice accent to a dish.
+#-------------------------------
+[REDBELLPEPPER]
+Name = Red Bell Pepper
+NamePlural = Red Bell Peppers
+Pocket = 11
+Price = 240
+Flags = Ingredient
+Description = An ingredient with some bitterness—but its bitter notes and overall flavor are pleasantly mild compared to its green cousin.
+#-------------------------------
+[YELLOWBELLPEPPER]
+Name = Yellow Bell Pepper
+NamePlural = Yellow Bell Peppers
+Pocket = 11
+Price = 240
+Flags = Ingredient
+Description = An ingredient with some bitterness. It's not much different from its red counterpart in flavor, but mixing the colors makes a feast for the eyes.
+#-------------------------------
+[BROCCOLI]
+Name = Broccoli
+NamePlural = Broccoli
+PortionName = head of Broccoli
+PortionNamePlural = heads of Broccoli
+Pocket = 11
+Price = 160
+Flags = Ingredient
+Description = A slightly bitter Brassica made up of countless tightly packed florets. It's just as good at soaking up sauces as it is at dividing opinions.
+#-------------------------------
+[CABBAGE]
+Name = Cabbage
+NamePlural = Cabbage
+PortionName = head of Cabbage
+PortionNamePlural = heads of Cabbage
+Pocket = 11
+Price = 130
+Flags = Ingredient
+Description = A mildly bitter Brassica known for its large leaves. It's a common leafy green found on many dinner plates.
+#-------------------------------
+[CARROT]
+Name = Carrot
+NamePlural = Carrots
+Pocket = 11
+Price = 120
+Flags = Ingredient
+Description = A crunchy vegetable with a noticeable natural sweetness. Cooking it softens both its texture and flavor, making it useful in all kinds of hearty dishes.
+#-------------------------------
+[CAULIFLOWER]
+Name = Cauliflower
+NamePlural = Cauliflower
+PortionName = head of Cauliflower
+PortionNamePlural = heads of Cauliflower
+Pocket = 11
+Price = 170
+Flags = Ingredient
+Description = A mildly bitter Brassica with tightly packed white florets. Its gentle flavor means it happily takes on whatever seasonings it's cooked with.
+#-------------------------------
+[CELERY]
+Name = Celery
+NamePlural = Celery
+PortionName = bunch of Celery
+PortionNamePlural = bunches of Celery
+Pocket = 11
+Price = 120
+Flags = Ingredient
+Description = A crisp and somewhat bitter vegetable with a distinctive fresh aroma. Its stalks add a satisfying crunch when eaten raw.
+#-------------------------------
+[ZUCCHINI]
+Name = Zucchini
+NamePlural = Zucchinis
+Pocket = 11
+Price = 140
+Flags = Ingredient
+Description = A mild vegetable with just a touch of bitterness. Its soft flesh absorbs the flavors around it exceptionally well when cooked.
+#-------------------------------
+[CUCUMBER]
+Name = Cucumber
+NamePlural = Cucumbers
+Pocket = 11
+Price = 130
+Flags = Ingredient
+Description = A tart and bitter ingredient. Using it together with rich-tasting ingredients in a dish will really make the most of a cucumber's fresh-veggie aroma.
+#-------------------------------
+[EDAMAME]
+Name = Edamame
+NamePlural = Edamame
+PortionName = bag of Edamame
+PortionNamePlural = bags of Edamame
+Pocket = 11
+Price = 190
+Flags = Ingredient
+Description = Young beans with a mild sweetness and pleasantly firm bite. They're commonly served simply so their fresh flavor can speak for itself.
+#-------------------------------
+[FENNEL]
+Name = Fennel
+NamePlural = Fennels
+Pocket = 11
+Price = 210
+Flags = Ingredient
+Description = A crisp vegetable with a sweet aroma unlike most others. Its unusual fragrance is often compared to liquorice.
+#-------------------------------
+[GINGER]
+Name = Ginger
+NamePlural = Ginger
+PortionName = Ginger Root
+PortionNamePlural = Ginger Roots
+Pocket = 11
+Price = 180
+Flags = Ingredient
+Description = A common spice, known for being primarily hot, with some bitterness. It's used in a wide variety of food and drinks.
+#-------------------------------
+[GREENBEANS]
+Name = Green Beans
+NamePlural = Green Beans
+PortionName = bag of Green Beans
+PortionNamePlural = bags of Green Beans
+Pocket = 11
+Price = 130
+Flags = Ingredient
+Description = A mildly sweet vegetable with a fresh snap when properly cooked. Leaving them on the heat too long can quickly rob them of that crunch.
+#-------------------------------
+[JALAPENO]
+Name = Jalapeño
+NamePlural = Jalapeños
+PortionName = bag of Jalapeños
+PortionNamePlural = bags of Jalapeños
+Pocket = 11
+Price = 220
+Flags = Ingredient
+Description = A very spicy ingredient—so spicy as to leave no room for ambivalence about it. You either like it or you don't.
+#-------------------------------
+[LARGELEEK]
+Name = Large Leek
+NamePlural = Large Leeks
+Pocket = 11
+Price = 200
+Flags = Ingredient
+Description = One of the many ingredients that can be used for cooking. Whether this is the kind of vegetable stalk that Farfetch'd like is unknown.
+#-------------------------------
+[LETTUCE]
+Name = Lettuce
+NamePlural = Lettuce
+PortionName = head of Lettuce
+PortionNamePlural = heads of Lettuce
+Pocket = 11
+Price = 90
+Flags = Ingredient
+Description = This bitter-tasting ingredient is simple and straightforward—just add it to all kinds of other ingredients for a delightfully crunchy time.
+#-------------------------------
+[OLIVES]
+Name = Olives
+NamePlural = Olives
+PortionName = jar of Olives
+PortionNamePlural = jars of Olives
+Pocket = 11
+Price = 120
+Flags = Ingredient
+Description = A small fruit with a strong salty and bitter flavor. Its intensity makes even a few pieces enough to leave their mark on a dish.
+#-------------------------------
+[ONION]
+Name = Onion
+NamePlural = Onions
+Pocket = 11
+Price = 130
+Flags = Ingredient
+Description = This spicy veggie is indispensable to many dishes. It goes well with rich ingredients.
+#-------------------------------
+[REDONION]
+Name = Red Onion
+NamePlural = Red Onions
+Pocket = 11
+Price = 230
+Flags = Ingredient
+Description = An ingredient with some sweetness to it. Its spiciness and fragrance are milder than those of other onions, making it a pleasant bite.
+#-------------------------------
+[SPRINGONION]
+Name = Spring Onion
+NamePlural = Spring Onions
+Pocket = 11
+Price = 130
+Flags = Ingredient
+Description = A crisp ingredient with a mild onion flavor. Both its green and white portions can be used to add a fresh bite without overpowering a dish.
+#-------------------------------
+[PEAS]
+Name = Peas
+NamePlural = Peas
+PortionName = bag of Peas
+PortionNamePlural = bags of Peas
+Pocket = 11
+Price = 110
+Flags = Ingredient
+Description = Tiny vegetables with a pleasant natural sweetness. Their small size makes them easy to scatter through all sorts of dishes.
+#-------------------------------
+[POTATO]
+Name = Potato
+NamePlural = Potatoes
+Pocket = 11
+Price = 100
+Flags = Ingredient
+Description = A lightly sweet base ingredient used in many dishes. It has a soft yet starchy inside.
+#-------------------------------
+[SWEETPOTATO]
+Name = Sweet Potato
+NamePlural = Sweet Potatoes
+Pocket = 11
+Price = 180
+Flags = Ingredient
+Description = A starchy ingredient with a much stronger sweetness than an ordinary potato. Its soft flesh becomes especially rich when cooked.
+#-------------------------------
+[PUMPKIN]
+Name = Pumpkin
+NamePlural = Pumpkins
+Pocket = 11
+Price = 180
+Flags = Ingredient
+Description = A mildly sweet ingredient with soft, dense flesh. It's equally at home in warming savory dishes and rich desserts.
+#-------------------------------
+[RADISH]
+Name = Radish
+NamePlural = Radishes
+Pocket = 11
+Price = 110
+Flags = Ingredient
+Description = A crisp root vegetable with a surprisingly spicy bite. Slicing it thinly adds both crunch and a sharp accent to a dish.
+#-------------------------------
+[SPINACH]
+Name = Spinach
+NamePlural = Spinach
+PortionName = bag of Spinach
+PortionNamePlural = bags of Spinach
+Pocket = 11
+Price = 150
+Flags = Ingredient
+Description = A leafy vegetable with a mild bitterness. It wilts dramatically when heated, so what looks like far too much can quickly become just enough.
+#-------------------------------
+[TOMATO]
+Name = Tomato
+NamePlural = Tomatoes
+Pocket = 11
+Price = 100
+Flags = Ingredient
+Description = This very tart ingredient has a lot of savory elements to it, making it popular with many Pokémon.
+#-------------------------------
+[CHERRYTOMATOES]
+Name = Cherry Tomatoes
+NamePlural = Cherry Tomatoes
+PortionName = pack of Cherry Tomatoes
+PortionNamePlural = packs of Cherry Tomatoes
+Pocket = 11
+Price = 120
+Flags = Ingredient
+Description = A very tart ingredient. Some varieties are also very sweet, and these are prized above all others.
+#-------------------------------
+[TURNIP]
+Name = Turnip
+NamePlural = Turnips
+Pocket = 11
+Price = 120
+Flags = Ingredient
+Description = A sturdy root vegetable with a mildly sweet and bitter flavor. Cooking it thoroughly softens both its texture and its sharper notes.
+#-------------------------------
+[BREAD]
+Name = Bread
+NamePlural = Bread
+PortionName = loaf of Bread
+PortionNamePlural = loaves of Bread
+Pocket = 11
+Price = 120
+Flags = Ingredient
+Description = A staple food with a mild sweetness, baked from a simple dough. It's the foundation of countless meals—and sometimes the plate holding them together.
+#-------------------------------
+[EGG]
+Name = Egg
+NamePlural = Eggs
+Pocket = 11
+Price = 80
+Flags = Ingredient
+Description = An ingredient with a touch of saltiness. It's full of nutrients and can be enjoyed with all sorts of seasonings.
+#-------------------------------
+[CHIKALISKEGG]
+Name = Chikalisk Egg
+NamePlural = Chikalisk Eggs
+Pocket = 11
+Price = 500
+Flags = Ingredient
+Description = An egg with an overwhelmingly pungent aroma that only grows stronger with age. Most assume it's gone bad, but devotees insist that's precisely when it's at its best.
+#-------------------------------
+[DAIRYMILK]
+Name = Dairy Milk
+NamePlural = Dairy Milk
+PortionName = bottle of Dairy Milk
+PortionNamePlural = bottles of Dairy Milk
+Pocket = 11
+Price = 100
+Flags = Ingredient
+Description = A smooth ingredient with a gentle sweetness and creamy flavor. It can be enjoyed as it is or used to give countless dishes extra richness.
+#-------------------------------
+[CHEDDAR]
+Name = Cheddar
+NamePlural = Cheddar
+PortionName = block of Cheddar
+PortionNamePlural = blocks of Cheddar
+Pocket = 11
+Price = 250
+Flags = Ingredient
+Description = A firm cheese with a rich, salty flavor that becomes especially satisfying when melted. It pairs wonderfully with bread, meat, and potatoes.
+#-------------------------------
+[MOOMOOCHEESE]
+Name = Moomoo Cheese
+NamePlural = Moomoo Cheese
+PortionName = wheel of Moomoo Cheese
+PortionNamePlural = wheels of Moomoo Cheese
+Pocket = 11
+Price = 250
+Flags = Ingredient
+Description = A soft cheese from the pastures of Kalos. It can really give a dish some richness.
+#-------------------------------
+[UNOVANCHEESE]
+Name = Unovan Cheese
+NamePlural = Unovan Cheese
+PortionName = slice of Unovan Cheese
+PortionNamePlural = slices of Unovan Cheese
+Pocket = 11
+Price = 120
+Flags = Ingredient
+Description = A somewhat salty slice of emulsified cheddar combined with milkfat. Some cheese purists consider it a pale imitation of the real thing.
+#-------------------------------
+[PICKLE]
+Name = Pickle
+NamePlural = Pickles
+Pocket = 11
+Price = 130
+Flags = Ingredient
+Description = This very sour ingredient is made by pickling veggies in a flavorful brine made from spices and vinegar.
+#-------------------------------
+[BASIL]
+Name = Basil
+NamePlural = Basil
+PortionName = sprig of Basil
+PortionNamePlural = sprigs of Basil
+Pocket = 11
+Price = 280
+Flags = Ingredient
+Description = A very bitter ingredient that's quite versatile, as herbs go. It's fragrant and goes well with tomatoes.
+#-------------------------------
+[WATERCRESS]
+Name = Watercress
+NamePlural = Watercress
+PortionName = sprig of Watercress
+PortionNamePlural = sprigs of Watercress
+Pocket = 11
+Price = 270
+Flags = Ingredient
+Description = A very bitter ingredient that stands out among veggies for its quirky flavor. People tend to either like it or not like it—they rarely sit on the fence.
+#-------------------------------
+[WILDGARLIC]
+Name = Wild Garlic
+NamePlural = Wild Garlic
+PortionName = sprig of Wild Garlic
+PortionNamePlural = sprigs of Wild Garlic
+Pocket = 11
+Price = 180
+Flags = Ingredient
+Description = A very pungent herb with the unmistakable aroma of garlic. Its leaves provide plenty of flavor without needing to dig up a single bulb.
+#-------------------------------
+[MINT]
+Name = Mint
+NamePlural = Mint
+PortionName = sprig of Mint
+PortionNamePlural = sprigs of Mint
+Pocket = 11
+Price = 160
+Flags = Ingredient
+Description = A rather bitter herb that is used to flavour many different kind of dishes. Its fresh taste is sure to give any dish a kick.
+#-------------------------------
+[PUNGENTROOT]
+Name = Pungent Root
+NamePlural = Pungent Roots
+Pocket = 11
+Price = 300
+Flags = Ingredient
+Description = A big and stinky vegetable. Though carelessly picked, these herbs can add a fragrant accent to a dish.
+#-------------------------------
+[RICE]
+Name = Rice
+NamePlural = Rice
+PortionName = bag of Rice
+PortionNamePlural = bags of Rice
+Pocket = 11
+Price = 280
+Flags = Ingredient
+Description = An ingredient with a touch of sweetness. Cooked rice is a common base for many dishes around the world, from Galarian Curries to Johtonian Sushi.
+#-------------------------------
+[ALMONDMILK]
+Name = Almond Milk
+NamePlural = Almond Milk
+PortionName = carton of Almond Milk
+PortionNamePlural = cartons of Almond Milk
+Pocket = 11
+Price = 200
+Flags = Ingredient
+Description = A smooth, lightly sweet drink made from almonds. Its distinctive nutty flavor makes it a popular alternative to dairy milk.
+#-------------------------------
+[COCONUTMILK]
+Name = Coconut Milk
+NamePlural = Coconut Milk
+PortionName = carton of Coconut Milk
+PortionNamePlural = cartons of Coconut Milk
+Pocket = 11
+Price = 250
+Flags = Ingredient
+Description = A rich and very sweet liquid extracted from coconuts. Its creamy tropical flavor works surprisingly well in both desserts and savory dishes.
+#-------------------------------
+[CORN]
+Name = Corn
+NamePlural = Corn
+PortionName = ear of Corn
+PortionNamePlural = ears of Corn
+Pocket = 11
+Price = 120
+Flags = Ingredient
+Description = A very sweet grain whose kernels burst pleasantly when bitten. It can be boiled, roasted, ground into flour, or simply scattered through a dish.
+#-------------------------------
+[BUTTONMUSHROOM]
+Name = Button Mushroom
+NamePlural = Button Mushrooms
+Pocket = 11
+Price = 100
+Flags = Ingredient
+Description = A lightly bitter mushroom, among the most common on store shelves. They generally go with most dishes, being good for frying and stewing alike.
+#-------------------------------
+[KINGCLOYSTERMUSHROOM]
+Name = King Cloyster Mushroom
+NamePlural = King Cloyster Mushrooms
+Pocket = 11
+Price = 240
+Flags = Ingredient
+Description = A large mushroom with a mild flavor and satisfyingly meaty texture. Its thick stem holds up especially well when grilled or cooked in hearty dishes.
+#-------------------------------
+[PORCINIMUSHROOM]
+Name = Porcini Mushroom
+NamePlural = Porcini Mushrooms
+Pocket = 11
+Price = 300
+Flags = Ingredient
+Description = A richly flavored mushroom prized for its deep, earthy aroma. Even a small amount can give a dish an unmistakably woodland character.
+#-------------------------------
+[PORTOBELLOMUSHROOM]
+Name = Portobello Mushroom
+NamePlural = Portobello Mushrooms
+Pocket = 11
+Price = 200
+Flags = Ingredient
+Description = A large, mature mushroom with a rich flavor and meaty texture. Its broad cap makes it especially satisfying when grilled whole.
+#-------------------------------
+[SHIITAKEMUSHROOM]
+Name = Shiitake Mushroom
+NamePlural = Shiitake Mushrooms
+Pocket = 11
+Price = 180
+Flags = Ingredient
+Description = A deeply savory mushroom with a distinctive earthy aroma. Cooking it brings out an especially rich flavor.
+#-------------------------------
+[CHESTNUTS]
+Name = Chestnuts
+NamePlural = Chestnuts
+PortionName = bag of Chestnuts
+PortionNamePlural = bags of Chestnuts
+Pocket = 11
+Price = 160
+Flags = Ingredient
+Description = Mildly sweet nuts with a soft, starchy texture when cooked. Roasting them brings out a warm aroma that's particularly welcome in cold weather.
+#-------------------------------
+[WALNUTS]
+Name = Walnuts
+NamePlural = Walnuts
+PortionName = bag of Walnuts
+PortionNamePlural = bags of Walnuts
+Pocket = 11
+Price = 220
+Flags = Ingredient
+Description = Rich nuts with a noticeable bitter edge. Their uneven crunch and strong flavor make them especially good at standing out in sweeter dishes.
+#-------------------------------
+[TRUFFLE]
+Name = Truffle
+NamePlural = Truffles
+Pocket = 11
+Price = 1500
+Flags = Ingredient
+Description = An exceptionally fragrant fungus that grows hidden underground. Its powerful earthy flavor and rarity make it one of the most prized ingredients around.
+#-------------------------------
+[ROSEMARY]
+Name = Rosemary
+NamePlural = Rosemary
+PortionName = sprig of Rosemary
+PortionNamePlural = sprigs of Rosemary
+Pocket = 11
+Price = 180
+Flags = Ingredient
+Description = A strongly fragrant herb with a noticeable bitterness. Its needle-like leaves pair particularly well with roasted foods.
+#-------------------------------
+[THYME]
+Name = Thyme
+NamePlural = Thyme
+PortionName = sprig of Thyme
+PortionNamePlural = sprigs of Thyme
+Pocket = 11
+Price = 160
+Flags = Ingredient
+Description = A fragrant herb with a mild bitterness and earthy flavor. Its tiny leaves may not look like much, but a little goes a surprisingly long way.
+#-------------------------------
+[CLAUNCHERTAIL]
+Name = Clauncher Tail
+NamePlural = Clauncher Tails
+Pocket = 11
+Price = 450
+Flags = Ingredient
+Description = A salt-sweet tail from a Clauncher that has been autotomised. It's one of the most prevalent seafood platter items, and goes well with many dips.
+#-------------------------------
+[BARRASKEWDAFILLET]
+Name = Barraskewda Fillet
+NamePlural = Barraskewda Fillets
+Pocket = 11
+Price = 400
+Flags = Ingredient
+Description = Quite a salty ingredient that imitates the taste of a Barraskewda. Often grilled and served with a sweet glaze.
+#-------------------------------
+[BASCULINFILLET]
+Name = Basculin Fillet
+NamePlural = Basculin Fillets
+Pocket = 11
+Price = 300
+Flags = Ingredient
+Description = A hard-going yet flaky ingredient that has equally salty and bitter flavours. It's typically battered or grilled.
+#-------------------------------
+[OCTILLERYARM]
+Name = Octillery Arm
+NamePlural = Octillery Arms
+Pocket = 11
+Price = 400
+Flags = Ingredient
+Description = A salty ingredient that's commonly fried and served with various sauces. It's quite chewy and a bit firm.
+#-------------------------------
+[FRIEDFILLET]
+Name = Fried Fillet
+NamePlural = Fried Fillets
+Pocket = 11
+Price = 360
+Flags = Ingredient
+Description = When used in a dish, this very salty and bitter ingredient is at its best paired with sour seasonings.
+#-------------------------------
+[SMOKEDFILLET]
+Name = Smoked Fillet
+NamePlural = Smoked Fillets
+Pocket = 11
+Price = 330
+Flags = Ingredient
+Description = A very salty and bitter ingredient with that unmistakable smoky flavor. It pairs exceptionally well with veggies.
+#-------------------------------
+[SMOKEDPALMON]
+Name = Smoked Palmon
+NamePlural = Smoked Palmon
+PortionName = fillet of Smoked Palmon
+PortionNamePlural = fillets of Smoked Palmon
+Pocket = 11
+Price = 400
+Flags = Ingredient
+Description = A rich and salty fillet of Palmon preserved by smoking. Its oily flesh readily takes on the smoky aroma, making it especially flavorful even when served cold.
+#-------------------------------
+[MAGIKARPROE]
+Name = Magikarp Roe
+NamePlural = Magikarp Roe
+PortionName = jar of Magikarp Roe
+PortionNamePlural = jars of Magikarp Roe
+Pocket = 11
+Price = 250
+Flags = Ingredient
+Description = A salty roe harvested from caught Magikarp. Cheaper than Milotic Caviar, it lacks the prestige.
+#-------------------------------
+[MILOTICCAVIAR]
+Name = Milotic Caviar
+NamePlural = Milotic Caviar
+PortionName = jar of Milotic Caviar
+PortionNamePlural = jars of Milotic Caviar
+Pocket = 11
+Price = 2500
+Flags = Ingredient
+Description = A salty, highly prized roe, taken from mature Milotic. While already dear, its price has appreciated due to the scarcity of caviar farms.
+#-------------------------------
+[KLAWFSTICK]
+Name = Klawf Stick
+NamePlural = Klawf Sticks
+Pocket = 11
+Price = 500
+Flags = Ingredient
+Description = A very sweet and salty ingredient. It's a nutritious processed food made with a concentrate derived from shed Klawf shells.
+#-------------------------------
+[KRABBYSTICKS]
+Name = Krabby sticks
+NamePlural = Krabby sticks
+PortionName = pack of Krabby sticks
+PortionNamePlural = packs of Krabby sticks
+Pocket = 11
+Price = 180
+Flags = Ingredient
+Description = A sweet and salty stick of imitation meat that's flavored to taste like a Krabby. It's commonly found on seafood platters.
+#-------------------------------
+[TUNAPASTE]
+Name = Tuna Paste
+NamePlural = Tuna Paste
+PortionName = jar of Tuna Paste
+PortionNamePlural = jars of Tuna Paste
+Pocket = 11
+Price = 260
+Flags = Ingredient
+Description = A salty fish paste with a soft, spreadable texture. It's an easy way to add a rich seafood flavor without overwhelming a dish.
+#-------------------------------
+[VELUZASASHIMI]
+Name = Veluza Sashimi
+NamePlural = Veluza Sashimi
+PortionName = slice of Veluza Sashimi
+PortionNamePlural = slices of Veluza Sashimi
+Pocket = 11
+Price = 500
+Flags = Ingredient
+Description = A quarter of a Veluza's body, with a salt-sweet taste. They regrow their fillets frequently in the wild.
+#-------------------------------
+[SEAWEED]
+Name = Seaweed
+NamePlural = Seaweed
+PortionName = bundle of Seaweed
+PortionNamePlural = bundles of Seaweed
+Pocket = 11
+Price = 120
+Flags = Ingredient
+Description = A salty ingredient harvested from the sea. Its distinctive savory flavor makes it an indispensable companion to rice in many Johtonian dishes.
+#-------------------------------
+[WISHIWASHICAN]
+Name = Wishiwashi Can
+NamePlural = Wishiwashi Cans
+Pocket = 11
+Price = 200
+Flags = Ingredient
+Description = A tin packed tightly with small Wishiwashi preserved in oil. They're intensely salty and surprisingly rich for such tiny Pokémon.
+#-------------------------------
+[BIRDBREAST]
+Name = Bird Breast
+NamePlural = Bird Breasts
+Pocket = 11
+Price = 300
+Flags = Ingredient
+Description = A mild piece of lean meat that readily takes on the flavor of whatever it's cooked with. Its versatility makes it useful in countless dishes.
+#-------------------------------
+[BIRDLEG]
+Name = Bird Leg
+NamePlural = Bird Legs
+Pocket = 11
+Price = 250
+Flags = Ingredient
+Description = A rich and juicy cut of meat with more flavor than the breast. Cooking it slowly makes the meat especially tender.
+#-------------------------------
+[HAMBURGER]
+Name = Hamburger
+NamePlural = Hamburgers
+Pocket = 11
+Price = 380
+Flags = Ingredient
+Description = This very salty ingredient is the thing to add if you want to make your dish truly filling.
+#-------------------------------
+[MINCEDMEAT]
+Name = Minced Meat
+NamePlural = Minced Meat
+PortionName = pack of Minced Meat
+PortionNamePlural = packs of Minced Meat
+Pocket = 11
+Price = 280
+Flags = Ingredient
+Description = Finely chopped meat with a rich, savory flavor. Its loose texture makes it easy to shape, fry, or mix throughout a dish.
+#-------------------------------
+[HERBEDSAUSAGE]
+Name = Herbed Sausage
+NamePlural = Herbed Sausages
+Pocket = 11
+Price = 400
+Flags = Ingredient
+Description = A very salty and bitter ingredient. The balance between the potent saltiness and the herbs' bitterness make this sausage a pleasure.
+#-------------------------------
+[LECHONKCHOP]
+Name = Lechonk Chop
+NamePlural = Lechonk Chops
+Pocket = 11
+Price = 350
+Flags = Ingredient
+Description = A sweet ingredient preserved with salt. It's rich in fat and has a very strong odor that many cannot stomach.
+#-------------------------------
+[STEAK]
+Name = Steak
+NamePlural = Steaks
+Pocket = 11
+Price = 500
+Flags = Ingredient
+Description = A thick cut of meat with a rich, savory flavor. Cooking it over intense heat gives the outside a delicious crust while keeping the inside tender.
+#-------------------------------
+[BACON]
+Name = Bacon
+NamePlural = Bacon
+PortionName = slice of Bacon
+PortionNamePlural = slices of Bacon
+Pocket = 11
+Price = 150
+Flags = Ingredient
+Description = This very salty ingredient has been cooked just shy of charred, making it burst with fragrance and tasty flavor.
+#-------------------------------
+[CHORIZO]
+Name = Chorizo
+NamePlural = Chorizos
+Pocket = 11
+Price = 150
+Flags = Ingredient
+Description = A very salty and spicy ingredient. This type of sausage has particularly robust salty flavor, and the spicier varieties are extra popular.
+#-------------------------------
+[HAM]
+Name = Ham
+NamePlural = Ham
+PortionName = slice of Ham
+PortionNamePlural = slices of Ham
+Pocket = 11
+Price = 170
+Flags = Ingredient
+Description = A very salty ingredient—and that very saltiness is what makes it such a nice companion to veggies.
+#-------------------------------
+[JERKY]
+Name = Jerky
+NamePlural = Jerky
+PortionName = pouch of Jerky
+PortionNamePlural = pouches of Jerky
+Pocket = 11
+Price = 300
+Flags = Ingredient
+Description = Very salty meat that's been dried to make it last. Its chewy texture and concentrated flavor make it a handy food for long journeys.
+#-------------------------------
+[PEPPERONI]
+Name = Pepperoni
+NamePlural = Pepperoni
+PortionName = pack of Pepperoni
+PortionNamePlural = packs of Pepperoni
+Pocket = 11
+Price = 220
+Flags = Ingredient
+Description = A salty and spicy cured meat usually cut into thin slices. Its strong flavor becomes especially rich and fragrant when heated.
+#-------------------------------
+[PROSCIUTTO]
+Name = Prosciutto
+NamePlural = Prosciutto
+PortionName = slice of Prosciutto
+PortionNamePlural = slices of Prosciutto
+Pocket = 11
+Price = 200
+Flags = Ingredient
+Description = This ingredient is very salty like regular ham, but the difference is prosciutto is not cooked after it is cured, giving it a fun freshness.
+#-------------------------------
+[SALAMI]
+Name = Salami
+NamePlural = Salami
+PortionName = pack of Salami
+PortionNamePlural = packs of Salami
+Pocket = 11
+Price = 250
+Flags = Ingredient
+Description = A very salty cured meat with a firm texture. Thin slices provide plenty of flavor without needing much of it.
+#-------------------------------
+[MEATBALLS]
+Name = Meatballs
+NamePlural = Meatballs
+PortionName = portion of Meatballs
+PortionNamePlural = portions of Meatballs
+Pocket = 11
+Price = 300
+Flags = Ingredient
+Description = Balls of seasoned minced meat that are browned before serving. Their rich flavor makes them especially satisfying with sauces and pasta.
+#-------------------------------
+[ROASTMEAT]
+Name = Roast Meat
+NamePlural = Roast Meat
+PortionName = cut of Roast Meat
+PortionNamePlural = cuts of Roast Meat
+Pocket = 11
+Price = 400
+Flags = Ingredient
+Description = A hearty cut of meat slowly cooked until browned on the outside and tender within. Its rich juices make it particularly filling.
+#-------------------------------
+[SMOKEPOKETAIL]
+Name = Smoke-Poke Tail
+NamePlural = Smoke-Poke Tails
+Pocket = 11
+Price = 2200
+Flags = Ingredient
+Description = A very sweet and salty piece of smoked meat harvested from unsuspecting Slowpoke. Don't worry, when a Slowpoke's tail falls off, it grows back quickly.
+#-------------------------------
+[BAMBURALSHOOT]
+Name = Bambural Shoot
+NamePlural = Bambural Shoots
+Pocket = 11
+Price = 220
+Flags = Ingredient
+Description = An equally sweet and bitter ingredient, harvested before it grows to inedibility. It's easily farmed due to its rapid growth rate.
+#-------------------------------
+[CEREAL]
+Name = Cereal
+NamePlural = Cereal
+PortionName = box of Cereal
+PortionNamePlural = boxes of Cereal
+Pocket = 11
+Price = 180
+Flags = Ingredient
+Description = A lightly sweet mixture of toasted grains made for a quick meal. Pouring milk over it is by far the most popular way to enjoy it.
+#-------------------------------
+[COUSCOUS]
+Name = Couscous
+NamePlural = Couscous
+PortionName = bag of Couscous
+PortionNamePlural = bags of Couscous
+Pocket = 11
+Price = 180
+Flags = Ingredient
+Description = Tiny grains made from wheat with a mild flavor and fluffy texture. They eagerly soak up the flavors of whatever they're served alongside.
+#-------------------------------
+[QUINOA]
+Name = Quinoa
+NamePlural = Quinoa
+PortionName = bag of Quinoa
+PortionNamePlural = bags of Quinoa
+Pocket = 11
+Price = 280
+Flags = Ingredient
+Description = Small seeds with a mild, slightly nutty flavor. When cooked, they become fluffy while retaining a pleasant little bite.
+#-------------------------------
+[CHICKPEAS]
+Name = Chickpeas
+NamePlural = Chickpeas
+PortionName = bag of Chickpeas
+PortionNamePlural = bags of Chickpeas
+Pocket = 11
+Price = 130
+Flags = Ingredient
+Description = Mildly nutty legumes with a soft, hearty texture. They're filling enough to form the foundation of a meal all by themselves.
+#-------------------------------
+[LENTILS]
+Name = Lentils
+NamePlural = Lentils
+PortionName = bag of Lentils
+PortionNamePlural = bags of Lentils
+Pocket = 11
+Price = 120
+Flags = Ingredient
+Description = Small legumes with an earthy flavor that soften considerably when cooked. They're especially at home in warming soups, curries, and stews.
+#-------------------------------
+[BEANS]
+Name = Beans
+NamePlural = Beans
+PortionName = can of Beans
+PortionNamePlural = cans of Beans
+Pocket = 11
+Price = 120
+Flags = Ingredient
+Description = Beans preserved in a rich tomato sauce and packed into a convenient can. Heating them up makes for a simple meal, especially when there's bread nearby.
+#-------------------------------
+[TOFU]
+Name = Tofu
+NamePlural = Tofu
+PortionName = block of Tofu
+PortionNamePlural = blocks of Tofu
+Pocket = 11
+Price = 260
+Flags = Ingredient
+Description = A meat substitute with a touch of sweetness. It's typically used as a base ingredient in meals it's used in.
+#-------------------------------
+[NOODLES]
+Name = Noodles
+NamePlural = Noodles
+PortionName = block of Noodles
+PortionNamePlural = blocks of Noodles
+Pocket = 11
+Price = 280
+Flags = Ingredient
+Description = A nice salty ingredient. It's usually boiled in hot water with different spices and stocks to flavour the noodles.
+#-------------------------------
+[PASTA]
+Name = Pasta
+NamePlural = Pasta
+PortionName = pack of Pasta
+PortionNamePlural = packs of Pasta
+Pocket = 11
+Price = 200
+Flags = Ingredient
+Description = A mild wheat ingredient made in countless different shapes. Boil it until tender, add a good sauce, and you've already got the beginnings of a meal.
+#-------------------------------
+[SPRINGROLLWRAPPER]
+Name = Spring Roll Wrapper
+NamePlural = Spring Roll Wrappers
+Pocket = 11
+Price = 160
+Flags = Ingredient
+Description = A thin sheet of dough made for wrapping savory fillings. Frying it transforms the delicate wrapper into a wonderfully crisp shell.
+#-------------------------------
+[STOCKCUBE]
+Name = Stock Cube
+NamePlural = Stock Cubes
+Pocket = 11
+Price = 100
+Flags = Ingredient
+Description = A salty, gelatinised cube used as the core of soups, stews and broths. While made for long storage, it's rather rich.
+#-------------------------------
+[PEANUTS]
+Name = Peanuts
+NamePlural = Peanuts
+PortionName = bag of Peanuts
+PortionNamePlural = bags of Peanuts
+Pocket = 11
+Price = 120
+Flags = Ingredient
+Description = Small nuts with a rich, slightly sweet flavor. Roasting them gives them an especially satisfying crunch and aroma.
+#-------------------------------
+[PINENUTS]
+Name = Pine Nuts
+NamePlural = Pine Nuts
+PortionName = bag of Pine Nuts
+PortionNamePlural = bags of Pine Nuts
+Pocket = 11
+Price = 350
+Flags = Ingredient
+Description = Small nuts with a rich, slightly sweet flavor. Roasting them gives them an especially satisfying crunch and aroma.
+#-------------------------------
+[FOOLSCHOCOLATEBAR]
+Name = Fool's Chocolate Bar
+NamePlural = Fool's Chocolate Bars
+Pocket = 11
+Price = 500
+Flags = Ingredient
+Description = An exceptionally rich and dense chocolate bar made from pieces shed by Fooldengo. Its golden wrapper may look expensive, but the chocolate inside is the real treasure.
+#-------------------------------
+[FERMENTALWINE]
+Name = Fermental Wine
+NamePlural = Fermental Wine
+PortionName = bottle of Fermental Wine
+PortionNamePlural = bottles of Fermental Wine
+Pocket = 11
+Price = 0
+Flags = Ingredient
+Description = The wine produced by a well-aged Fermental from Niphos is said to be so strong that you can only drink it in small sips. It also has the ability to see the flavors you're tasting when you consume it.
+#-------------------------------
+[KAFFIENDBEANS]
+Name = Kaffiend Beans
+NamePlural = Kaffiend Beans
+PortionName = bag of Kaffiend Beans
+PortionNamePlural = bags of Kaffiend Beans
+Pocket = 11
+Price = 0
+Flags = Ingredient
+Description = Beans harvested from the body of a Kaffiend. Their extraordinarily intense bitterness and aroma can produce coffee strong enough to keep even the sleepiest Pokémon wide awake.

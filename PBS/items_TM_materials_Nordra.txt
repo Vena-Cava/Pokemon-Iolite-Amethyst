@@ -320,9 +320,9 @@ Price = 60
 Flags = TMMaterial
 Description = Material accidentally dropped by a Pokémon. It can be used to synthesize TMs.
 #-------------------------------
-[BAMBURALSHOOT]
-Name = Bambural Shoot
-NamePlural = Bambural Shoots
+[BAMBURALSEED]
+Name = Bambural Seed
+NamePlural = Bambural Seeds
 Pocket = 10
 Price = 50
 Flags = TMMaterial

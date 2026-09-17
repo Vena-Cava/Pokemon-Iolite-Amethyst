@@ -244,3 +244,8 @@ Description = The Pokémon floats off the ground, making it immune to Ground-typ
 Name = Fire Mane
 ShortDesc = Boosts the power of Fire-type moves.
 Description = The Pokémon's blazing fiery mane boosts the power of its Fire-type attacks by 50%.
+#-------------------------------
+[AURAGUARD]
+Name = Aura Guard
+ShortDesc = A
+Description = A

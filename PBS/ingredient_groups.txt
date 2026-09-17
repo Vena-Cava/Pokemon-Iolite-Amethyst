@@ -1,0 +1,312 @@
+# See the documentation on the wiki to learn how to edit this file.
+#-------------------------------
+[SWEET_RAID_CONDIMENTS]
+Name = Sweet Raid Condiments
+SlotType = Condiment
+Items = SWEETGIGANTAMIX,SWEETHERBAMYSTICA,SWEETULTRASAUCE
+#-------------------------------
+[SALTY_RAID_CONDIMENTS]
+Name = Salty Raid Condiments
+SlotType = Condiment
+Items = SALTYGIGANTAMIX,SALTYHERBAMYSTICA,SALTYULTRASAUCE
+#-------------------------------
+[SOUR_RAID_CONDIMENTS]
+Name = Sour Raid Condiments
+SlotType = Condiment
+Items = SOURGIGANTAMIX,SOURHERBAMYSTICA,SOURULTRASAUCE
+#-------------------------------
+[BITTER_RAID_CONDIMENTS]
+Name = Bitter Raid Condiments
+SlotType = Condiment
+Items = BITTERGIGANTAMIX,BITTERHERBAMYSTICA,BITTERULTRASAUCE
+#-------------------------------
+[SPICY_RAID_CONDIMENTS]
+Name = Spicy Raid Condiments
+SlotType = Condiment
+Items = SPICYGIGANTAMIX,SPICYHERBAMYSTICA,SPICYULTRASAUCE
+#-------------------------------
+[CAKE_FRUIT]
+Name = Cake Fruit
+SlotType = Ingredient
+Items = BANANA,STRAWBERRY,APPLE,KIWI,PINEAPPLE,MELON,ORANGE,REDGRAPES,WHITEGRAPES
+#-------------------------------
+[FRUIT_SPREADS]
+Name = Fruit Spreads
+SlotType = Condiment
+Items = JAM,MARMALADE
+#-------------------------------
+[COLOR_SUGARS]
+Name = Color Sugars
+SlotType = Ingredient
+Items = SUGAR,BROWNSUGAR
+#-------------------------------
+[MILKS]
+Name = Milks
+SlotType = Ingredient
+Items = DAIRYMILK,COCONUTMILK,ALMONDMILK,CONDENSEDMILK
+#-------------------------------
+[SOLID_CHOCOLATE]
+Name = Solid Chocolate
+SlotType = Ingredient
+Items = CHOCOLATECHIPS,FOOLSCHOCOLATEBAR
+#-------------------------------
+[POURABLE_MILKS]
+Name = Pourable Milks
+SlotType = Ingredient
+Items = DAIRYMILK,COCONUTMILK,ALMONDMILK
+#-------------------------------
+[SUSHI_FILLING]
+Name = Sushi Filling
+SlotType = Ingredient
+Items = SMOKEDPALMON,TUNAPASTE,KRABBYSTICKS,KLAWFSTICK,CUCUMBER,AVOCADO,BIRDBREAST,GREENBELLPEPPER,REDBELLPEPPER,YELLOWBELLPEPPER,CARROT
+#-------------------------------
+[SUSHI_CONDIMENTS]
+Name = Sushi Condiments
+SlotType = Condiment
+Items = MAYONNAISE,SALT,SOYSAUCE
+#-------------------------------
+[PIZZA_CHEESE]
+Name = Pizza Cheese
+SlotType = Ingredient
+Items = MOOMOOCHEESE,CHEDDAR
+#-------------------------------
+[PIZZA_MEAT]
+Name = Pizza Meat
+SlotType = Ingredient
+Items = SILLYSTUFFULHAM,HERBEDSAUSAGE,MINCEDMEAT,BACON,HAM,PROSCIUTTO,CHORIZO,MEATBALLS,SALAMI,PEPPERONI
+#-------------------------------
+[PIZZA_SEAFOOD]
+Name = Pizza Seafood
+SlotType = Ingredient
+Items = CLAUNCHERTAIL,OCTILLERYARM,KRABBYSTICKS,SMOKEDPALMON,WISHIWASHICAN
+#-------------------------------
+[PIZZA_VEGETABLE]
+Name = Pizza Vegetable
+SlotType = Ingredient
+Items = ONION,REDONION,SPRINGONION,GREENBELLPEPPER,REDBELLPEPPER,YELLOWBELLPEPPER,OLIVES,JALAPENO,BUTTONMUSHROOM,PORTOBELLOMUSHROOM,EGGPLANT,ARTICHOKE,BROCCOLI,ZUCCHINI,SPINACH
+#-------------------------------
+[COOKING_MUSHROOMS]
+Name = Cooking Mushrooms
+SlotType = Ingredient
+Items = BUTTONMUSHROOM,SHIITAKEMUSHROOM,PORCINIMUSHROOM,KINGCLOYSTERMUSHROOM,PORTOBELLOMUSHROOM
+#-------------------------------
+[CURRY_MEAT]
+Name = Curry Meat
+SlotType = Ingredient
+Items = STEAK,MINCEDMEAT,LECHONKCHOP,BIRDLEG,BIRDBREAST,HERBEDSAUSAGE,MEATBALLS,ROASTMEAT
+#-------------------------------
+[CURRY_SEAFOOD]
+Name = Curry Seafood
+SlotType = Ingredient
+Items = BARRASKEWDAFILLET,BASCULINFILLET,CLAUNCHERTAIL,OCTILLERYARM,SMOKEDPALMON
+#-------------------------------
+[CURRY_VEGETABLE]
+Name = Curry Vegetable
+SlotType = Ingredient
+Items = ONION,REDONION,GREENBELLPEPPER,REDBELLPEPPER,YELLOWBELLPEPPER,POTATO,SWEETPOTATO,CARROT,CORN,CHICKPEAS,LARGELEEK,CAULIFLOWER,PEAS,SPINACH,EGGPLANT,ZUCCHINI
+#-------------------------------
+[SALAD_GREENS]
+Name = Salad Greens
+SlotType = Ingredient
+Items = LETTUCE,WATERCRESS,SPINACH
+#-------------------------------
+[SALAD_VEGETABLE]
+Name = Salad Vegetable
+SlotType = Ingredient
+Items = TOMATO,CHERRYTOMATOES,CUCUMBER,ONION,REDONION,SPRINGONION,GREENBELLPEPPER,REDBELLPEPPER,YELLOWBELLPEPPER,AVOCADO,OLIVES,CARROT,CORN,BEETROOT,CABBAGE,CELERY,ZUCCHINI,EDAMAME,PEAS,RADISH,SPINACH
+#-------------------------------
+[SALAD_FRUIT]
+Name = Salad Fruit
+SlotType = Ingredient
+Items = APPLE,BANANA,STRAWBERRY,KIWI,PINEAPPLE,MELON,ORANGE,REDGRAPES,WHITEGRAPES
+#-------------------------------
+[SOUP_VEGETABLE]
+Name = Soup Vegetable
+SlotType = Ingredient
+Items = TOMATO,ONION,REDONION,SPRINGONION,LARGELEEK,POTATO,SWEETPOTATO,CARROT,CORN,CABBAGE,CAULIFLOWER,CELERY,PEAS,PUMPKIN,SPINACH,TURNIP
+#-------------------------------
+[STEW_VEGETABLE]
+Name = Stew Vegetable
+SlotType = Ingredient
+Items = ONION,REDONION,LARGELEEK,POTATO,SWEETPOTATO,CARROT,CORN,CABBAGE,CAULIFLOWER,CELERY,GREENBEANS,PEAS,PUMPKIN,TURNIP
+#-------------------------------
+[ROOT_VEGETABLES]
+Name = Root Vegetables
+SlotType = Ingredient
+Items = POTATO,SWEETPOTATO,CARROT,BEETROOT,RADISH,TURNIP,PUNGENTROOT
+#-------------------------------
+[SANDWICH_MEAT]
+Name = Sandwich Meat
+SlotType = Ingredient
+Items = SILLYSTUFFULHAM,BACON,HAM,PROSCIUTTO,CHORIZO,SALAMI,PEPPERONI,BIRDBREAST,ROASTMEAT,JERKY
+#-------------------------------
+[SANDWICH_SEAFOOD]
+Name = Sandwich Seafood
+SlotType = Ingredient
+Items = TUNAPASTE,KRABBYSTICKS,KLAWFSTICK,SMOKEDFILLET,FRIEDFILLET,SMOKEDPALMON
+#-------------------------------
+[SANDWICH_VEGETABLE]
+Name = Sandwich Vegetable
+SlotType = Ingredient
+Items = LETTUCE,TOMATO,CHERRYTOMATOES,CUCUMBER,ONION,REDONION,SPRINGONION,GREENBELLPEPPER,REDBELLPEPPER,YELLOWBELLPEPPER,AVOCADO,OLIVES,PICKLE,WATERCRESS,SPINACH,RADISH
+#-------------------------------
+[OMELETTE_FILLING]
+Name = Omelette Filling
+SlotType = Ingredient
+Items = UNOVANCHEESE,MOOMOOCHEESE,CHEDDAR,SILLYSTUFFULHAM,BACON,HAM,BIRDBREAST,TOMATO,ONION,REDONION,SPRINGONION,GREENBELLPEPPER,REDBELLPEPPER,YELLOWBELLPEPPER,BUTTONMUSHROOM,SHIITAKEMUSHROOM,PORTOBELLOMUSHROOM,SPINACH,ZUCCHINI
+#-------------------------------
+[RICE_BOWL_MEAT]
+Name = Rice Bowl Meat
+SlotType = Ingredient
+Items = STEAK,MINCEDMEAT,LECHONKCHOP,BIRDBREAST,HERBEDSAUSAGE,MEATBALLS,ROASTMEAT
+#-------------------------------
+[RICE_BOWL_SEAFOOD]
+Name = Rice Bowl Seafood
+SlotType = Ingredient
+Items = BARRASKEWDAFILLET,BASCULINFILLET,CLAUNCHERTAIL,OCTILLERYARM,VELUZASASHIMI,KRABBYSTICKS,SMOKEDPALMON
+#-------------------------------
+[RICE_BOWL_VEGETABLE]
+Name = Rice Bowl Vegetable
+SlotType = Ingredient
+Items = ONION,REDONION,SPRINGONION,GREENBELLPEPPER,REDBELLPEPPER,YELLOWBELLPEPPER,CARROT,CORN,LARGELEEK,BUTTONMUSHROOM,SHIITAKEMUSHROOM,BROCCOLI,CABBAGE,EDAMAME,PEAS,SPINACH
+#-------------------------------
+[FISH_FILLET]
+Name = Fish Fillet
+SlotType = Ingredient
+Items = BARRASKEWDAFILLET,BASCULINFILLET,SMOKEDFILLET,FRIEDFILLET,SMOKEDPALMON
+#-------------------------------
+[NUTS]
+Name = Nuts
+SlotType = Ingredient
+Items = HAZELNUTS,ALMONDS,CHESTNUTS,WALNUTS,PEANUTS,PINENUTS
+#-------------------------------
+[PIZZA_RAID_CONDIMENTS]
+Name = Pizza Raid Condiments
+SlotType = Condiment
+Items = SALTYGIGANTAMIX,SALTYHERBAMYSTICA,SALTYULTRASAUCE,ARBOLIVAOIL
+#-------------------------------
+[OLIVE_OILS]
+Name = Olive Oils
+SlotType = Condiment
+Items = OLIVEOIL,ARBOLIVAOIL
+#-------------------------------
+[SCRAMBLED_EGG_SAUCES]
+Name = Scrambled Egg Sauces
+SlotType = Condiment
+Items = CHILISAUCE,KETCHUP,SOYSAUCE
+#-------------------------------
+[LUMPIA_FILLING]
+Name = Lumpia Filling
+SlotType = Ingredient
+Items = LECHONKCHOP,BIRDBREAST,MINCEDMEAT,CLAUNCHERTAIL,ONION,REDONION,SPRINGONION,WILDGARLIC,CARROT,CABBAGE
+#-------------------------------
+[VISCOUS_MILKS]
+Name = Viscous Milks
+SlotType = Ingredient
+Items = DAIRYMILK,COCONUTMILK,ALMONDMILK
+#-------------------------------
+[CHEESES]
+Name = Cheeses
+SlotType = Ingredient
+Items = CHEDDAR,MOOMOOCHEESE,UNOVANCHEESE
+#-------------------------------
+[DELI_MEATS]
+Name = Deli Meats
+SlotType = Ingredient
+Items = SILLYSTUFFULHAM,BACON,CHORIZO,HAM,JERKY,PEPPERONI,PROSCIUTTO,SALAMI
+#-------------------------------
+[COOKING_HERBS]
+Name = Cooking Herbs
+SlotType = Ingredient
+Items = BASIL,MINT,ROSEMARY,THYME
+#-------------------------------
+[PULSES_AND_LEGUMES]
+Name = Pulses & Legumes
+SlotType = Ingredient
+Items = CHICKPEAS,LENTILS,BEANS,EDAMAME,PEAS,GREENBEANS,TOFU
+#-------------------------------
+[GRAINS_AND_CEREALS]
+Name = Grains & Cereals
+SlotType = Ingredient
+Items = OATS,RICE,CEREAL,COUSCOUS,QUINOA
+#-------------------------------
+[PASTA_AND_NOODLES]
+Name = Pasta & Noodles
+SlotType = Ingredient
+Items = PASTA,NOODLES
+#-------------------------------
+[BAKING_LEAVENERS]
+Name = Baking Leaveners
+SlotType = Ingredient
+Items = BAKINGPOWDER,BAKINGSODA,YEAST
+#-------------------------------
+[ROE_AND_CAVIAR]
+Name = Roe & Caviar
+SlotType = Ingredient
+Items = MAGIKARPROE,MILOTICCAVIAR
+#-------------------------------
+[SEAFOOD_STICKS]
+Name = Seafood Sticks
+SlotType = Ingredient
+Items = KLAWFSTICK,KRABBYSTICKS
+#-------------------------------
+[CURRY_FILLING]
+Name = Curry Filling
+SlotType = Ingredient
+Items = ONION,REDONION,GREENBELLPEPPER,REDBELLPEPPER,YELLOWBELLPEPPER,POTATO,SWEETPOTATO,CARROT,CORN,CHICKPEAS,LARGELEEK,CAULIFLOWER,PEAS,SPINACH,EGGPLANT,ZUCCHINI,STEAK,MINCEDMEAT,LECHONKCHOP,BIRDLEG,BIRDBREAST,HERBEDSAUSAGE,MEATBALLS,ROASTMEAT,BARRASKEWDAFILLET,BASCULINFILLET,CLAUNCHERTAIL,OCTILLERYARM,SMOKEDPALMON
+#-------------------------------
+[CURRY_RAID_CONDIMENTS]
+Name = Curry Raid Condiments
+SlotType = Condiment
+Items = SPICYGIGANTAMIX,SPICYHERBAMYSTICA,SPICYULTRASAUCE,EPICENOIRE
+#-------------------------------
+[SEAFOOD_CURRY_RAID_CONDIMENTS]
+Name = Seafood Curry Raid Condiments
+SlotType = Condiment
+Items = SPICYGIGANTAMIX,SPICYHERBAMYSTICA,SPICYULTRASAUCE,EPICENOIRE,HOENNIANSALT
+#-------------------------------
+[SALTS]
+Name = Salts
+SlotType = Condiment
+Items = SALT,HOENNIANSALT
+#-------------------------------
+[PASTA_AROMATIC]
+Name = Pasta Aromatic
+SlotType = Ingredient
+Items = ONION,REDONION,SPRINGONION,WILDGARLIC
+#-------------------------------
+[PASTA_SEAFOOD]
+Name = Pasta Seafood
+SlotType = Ingredient
+Items = BARRASKEWDAFILLET,BASCULINFILLET,CLAUNCHERTAIL,OCTILLERYARM,SMOKEDPALMON,KRABBYSTICKS,KLAWFSTICK,WISHIWASHICAN
+#-------------------------------
+[PASTA_RAID_CONDIMENTS]
+Name = Pasta Raid Condiments
+SlotType = Condiment
+Items = SALTYGIGANTAMIX,SALTYHERBAMYSTICA,SALTYULTRASAUCE,ARBOLIVAOIL
+#-------------------------------
+[SEAFOOD_PASTA_RAID_CONDIMENTS]
+Name = Seafood Pasta Raid Condiments
+SlotType = Condiment
+Items = SALTYGIGANTAMIX,SALTYHERBAMYSTICA,SALTYULTRASAUCE,ARBOLIVAOIL,HOENNIANSALT
+#-------------------------------
+[SALAD_SEAFOOD]
+Name = Salad Seafood
+SlotType = Ingredient
+Items = BARRASKEWDAFILLET,BASCULINFILLET,CLAUNCHERTAIL,OCTILLERYARM,SMOKEDPALMON,KRABBYSTICKS,KLAWFSTICK,VELUZASASHIMI,WISHIWASHICAN
+#-------------------------------
+[SALAD_RAID_CONDIMENTS]
+Name = Salad Raid Condiments
+SlotType = Condiment
+Items = SALTYGIGANTAMIX,SALTYHERBAMYSTICA,SALTYULTRASAUCE,SOURGIGANTAMIX,SOURHERBAMYSTICA,SOURULTRASAUCE,ARBOLIVAOIL
+#-------------------------------
+[SEAFOOD_SALAD_RAID_CONDIMENTS]
+Name = Seafood Salad Raid Condiments
+SlotType = Condiment
+Items = SALTYGIGANTAMIX,SALTYHERBAMYSTICA,SALTYULTRASAUCE,SOURGIGANTAMIX,SOURHERBAMYSTICA,SOURULTRASAUCE,ARBOLIVAOIL,HOENNIANSALT
+#-------------------------------
+[FRUIT_SALAD_RAID_CONDIMENTS]
+Name = Fruit Salad Raid Condiments
+SlotType = Condiment
+Items = SWEETGIGANTAMIX,SWEETHERBAMYSTICA,SWEETULTRASAUCE,SOURGIGANTAMIX,SOURHERBAMYSTICA,SOURULTRASAUCE
+#-------------------------------

@@ -1,0 +1,1301 @@
+# Cooking metadata generated from the Ingredients spreadsheet.
+#-------------------------------
+[ICINGSUGAR]
+Category = Condiment
+Flavours = Sweet,6
+Powers = TEENSY,21,FRIENDSHIP,12,HATCHING,7,HUMUNGO,-5
+Types = ICE,7,FAIRY,7
+Stats = SPEED,12,SPECIAL_ATTACK,12
+#-------------------------------
+[BARBECUESAUCE]
+Category = Condiment
+Flavours = Sweet,12,Salty,16,Sour,8,Spicy,4
+Powers = HUMUNGO,12,RAIDOFFENSE,12,EXP,7
+Types = FIRE,4,GROUND,4,ROCK,4
+Stats = ATTACK,12,HP,12
+#-------------------------------
+[CHILISAUCE]
+Category = Condiment
+Flavours = Sweet,8,Salty,12,Sour,8,Spicy,20
+Powers = RAIDOFFENSE,21,ENCOUNTER,12,STRENGTH,7,REPEL,-3
+Types = WATER,2,GRASS,2
+Stats = ATTACK,12,SPEED,12
+#-------------------------------
+[CURRYPOWDER]
+Category = Condiment
+Flavours = Sweet,4,Salty,4,Sour,4,Bitter,12,Spicy,30
+Powers = ENCOUNTER,21,RAIDOFFENSE,12,STRENGTH,7,REPEL,-3
+Types = BUG,2,GHOST,2,STEEL,2,FIRE,2,WATER,2,GRASS,2
+Stats = SPECIAL_ATTACK,12,ATTACK,12,SPEED,7
+#-------------------------------
+[GARLICSAUCE]
+Category = Condiment
+Flavours = Sweet,4,Salty,12,Sour,8,Spicy,8
+Powers = REPEL,21,RAIDDEFENSE,7,ABILITY,7,ENCOUNTER,-5
+Types = GHOST,4,DARK,4,FAIRY,4
+Stats = SPECIAL_DEFENSE,12,DEFENSE,7
+#-------------------------------
+[HORSERADISH]
+Category = Condiment
+Flavours = Sweet,4,Spicy,16
+Powers = REPEL,21,STRENGTH,12,ABILITY,7,ENCOUNTER,-5
+Types = NORMAL,2,FIGHTING,2,FLYING,2,POISON,2,GROUND,2,ROCK,2
+Stats = ATTACK,21,SPEED,7
+#-------------------------------
+[PEPPER]
+Category = Condiment
+Flavours = Salty,4,Bitter,8,Spicy,16
+Powers = ENCOUNTER,12,RAIDOFFENSE,12,ABILITY,7,REPEL,-3
+Types = ICE,2,DRAGON,2
+Stats = SPEED,12,ATTACK,7
+#-------------------------------
+[SALT]
+Category = Condiment
+Flavours = Salty,20,Bitter,4
+Powers = HUMUNGO,12,FISHING,12,RAIDDEFENSE,7,TEENSY,-3
+Types = ELECTRIC,2,PSYCHIC,2
+Stats = DEFENSE,21,HP,7
+#-------------------------------
+[VINEGAR]
+Category = Condiment
+Flavours = Sweet,4,Sour,20,Bitter,4
+Powers = REPEL,12,ITEMDROP,7,LUCK,7,ENCOUNTER,-3
+Types = PSYCHIC,4,DRAGON,4,FAIRY,4
+Stats = SPECIAL_DEFENSE,12,SPEED,7,SPECIAL_ATTACK,7
+#-------------------------------
+[WASABI]
+Category = Condiment
+Flavours = Sweet,4,Salty,4,Spicy,20
+Powers = RAIDOFFENSE,21,ENCOUNTER,12,FISHING,7
+Types = ELECTRIC,2,PSYCHIC,2,ICE,2,DRAGON,2,DARK,2,FAIRY,2
+Stats = SPEED,21,ATTACK,12
+#-------------------------------
+[KETCHUP]
+Category = Condiment
+Flavours = Sweet,8,Salty,16,Sour,16
+Powers = CATCHING,12,FRIENDSHIP,7,ENCOUNTER,4
+Types = FLYING,2,POISON,2
+Stats = SPEED,7,SPECIAL_ATTACK,7
+#-------------------------------
+[MAYONNAISE]
+Category = Condiment
+Flavours = Sweet,8,Sour,20
+Powers = HATCHING,12,DAYCARE,7,FRIENDSHIP,7
+Types = NORMAL,2,FIGHTING,2
+Stats = HP,12,SPECIAL_DEFENSE,7
+#-------------------------------
+[MUSTARD]
+Category = Condiment
+Flavours = Sweet,4,Salty,8,Sour,8,Spicy,16
+Powers = RAIDOFFENSE,12,ENCOUNTER,7,STRENGTH,7
+Types = GROUND,2,ROCK,2
+Stats = ATTACK,12,SPEED,7
+#-------------------------------
+[PESTO]
+Category = Condiment
+Flavours = Salty,12,Sour,4,Bitter,12
+Powers = BASEPOINT,12,ABILITY,12,ENCOUNTER,7
+Types = GRASS,4,BUG,4,FLYING,4
+Stats = SPECIAL_DEFENSE,12,DEFENSE,7,SPECIAL_ATTACK,7
+#-------------------------------
+[MISO]
+Category = Condiment
+Flavours = Sweet,4,Salty,20,Bitter,8
+Powers = RAIDDEFENSE,12,FRIENDSHIP,7,STRENGTH,7
+Types = GRASS,4,PSYCHIC,4,GROUND,4
+Stats = SPECIAL_DEFENSE,12,HP,7
+#-------------------------------
+[SOYSAUCE]
+Category = Condiment
+Flavours = Salty,20,Bitter,4
+Powers = EXP,12,BIGHAUL,12,HUMUNGO,7
+Types = WATER,4,STEEL,4,DARK,4
+Stats = HP,12,ATTACK,7
+#-------------------------------
+[BUTTER]
+Category = Condiment
+Flavours = Sweet,12,Salty,12
+Powers = HATCHING,12,DAYCARE,12,FRIENDSHIP,7
+Types = BUG,2,GHOST,2
+Stats = HP,12,DEFENSE,7
+#-------------------------------
+[LEMONJUICE]
+Category = Condiment
+Flavours = Sweet,6,Sour,12,Bitter,1
+Powers = CATCHING,12,RAIDSPEED,7,ABILITY,7
+Types = ELECTRIC,7,GRASS,7,FAIRY,7
+Stats = SPEED,12,SPECIAL_ATTACK,7
+#-------------------------------
+[PARMESAN]
+Category = Condiment
+Flavours = Salty,16,Sour,4,Bitter,8
+Powers = EXP,12,HUMUNGO,7,RAIDDEFENSE,7
+Types = NORMAL,4,ROCK,4,STEEL,4
+Stats = DEFENSE,12,HP,7
+#-------------------------------
+[OLIVEOIL]
+Category = Condiment
+Flavours = Sweet,4,Sour,20,Bitter,4
+Powers = ITEMDROP,12,LUCK,7,BASEPOINT,4
+Types = GHOST,4,FIRE,4,GRASS,4
+Stats = SPECIAL_DEFENSE,12,SPEED,7
+#-------------------------------
+[YOGURT]
+Category = Condiment
+Flavours = Sweet,16,Sour,16
+Powers = DAYCARE,12,FRIENDSHIP,12,HATCHING,7
+Types = DARK,2,FAIRY,2
+Stats = HP,12,SPECIAL_DEFENSE,12
+#-------------------------------
+[CHOCOLATESPREAD]
+Category = Condiment
+Flavours = Sweet,20,Bitter,4
+Powers = FRIENDSHIP,12,RAIDSPEED,12,TEENSY,7
+Types = DARK,4,PSYCHIC,4,FAIRY,4
+Stats = SPECIAL_ATTACK,12,SPEED,12
+#-------------------------------
+[JAM]
+Category = Condiment
+Flavours = Sweet,16,Salty,4,Sour,16
+Powers = FRIENDSHIP,12,CATCHING,12,TEENSY,7
+Types = ELECTRIC,4,ICE,4,DARK,4
+Stats = SPECIAL_ATTACK,12,SPEED,7
+#-------------------------------
+[MARMALADE]
+Category = Condiment
+Flavours = Sweet,12,Salty,4,Sour,16,Bitter,20
+Powers = CATCHING,12,LUCK,12,TITLE,4
+Types = FIGHTING,4,POISON,4,ROCK,4
+Stats = SPECIAL_ATTACK,12,SPECIAL_DEFENSE,7
+#-------------------------------
+[WHIPPEDCREAM]
+Category = Condiment
+Flavours = Sweet,20
+Powers = FRIENDSHIP,12,TEENSY,12,HATCHING,7,HUMUNGO,-3
+Types = NORMAL,4,FLYING,4,GROUND,4
+Stats = SPECIAL_ATTACK,12,HP,7
+#-------------------------------
+[CREAMCHEESE]
+Category = Condiment
+Flavours = Sweet,12,Salty,12,Sour,12
+Powers = DAYCARE,12,HATCHING,12,FRIENDSHIP,7
+Types = BUG,4,STEEL,4,WATER,4
+Stats = HP,12,SPECIAL_DEFENSE,12
+#-------------------------------
+[SWEETCOMBEEHONEY]
+Category = Condiment
+Flavours = Sweet,20
+Powers = DAYCARE,21,FRIENDSHIP,12,CATCHING,7
+Types = BUG,4,GRASS,4,FAIRY,4
+Stats = SPECIAL_ATTACK,12,SPEED,7
+#-------------------------------
+[PEANUTBUTTER]
+Category = Condiment
+Flavours = Sweet,16,Salty,12
+Powers = STRENGTH,12,BASEPOINT,12,EXP,7
+Types = STEEL,2,FIRE,2
+Stats = ATTACK,12,DEFENSE,12
+#-------------------------------
+[SWEETHERBAMYSTICA]
+Category = Condiment
+Flavours = Sweet,500
+Powers = TITLE,1000,SPARKLING,1000
+Types = NORMAL,250,FIGHTING,250,FLYING,250,POISON,250,GROUND,250,ROCK,250,BUG,250,GHOST,250,STEEL,250,FIRE,250,WATER,250,GRASS,250,ELECTRIC,250,PSYCHIC,250,ICE,250,DRAGON,250,DARK,250,FAIRY,250
+Stats = HP,500,ATTACK,500,DEFENSE,500,SPECIAL_ATTACK,500,SPECIAL_DEFENSE,500,SPEED,500
+#-------------------------------
+[SOURHERBAMYSTICA]
+Category = Condiment
+Flavours = Sour,500
+Powers = TITLE,1000,SPARKLING,1000
+Types = NORMAL,250,FIGHTING,250,FLYING,250,POISON,250,GROUND,250,ROCK,250,BUG,250,GHOST,250,STEEL,250,FIRE,250,WATER,250,GRASS,250,ELECTRIC,250,PSYCHIC,250,ICE,250,DRAGON,250,DARK,250,FAIRY,250
+Stats = HP,500,ATTACK,500,DEFENSE,500,SPECIAL_ATTACK,500,SPECIAL_DEFENSE,500,SPEED,500
+#-------------------------------
+[SALTYHERBAMYSTICA]
+Category = Condiment
+Flavours = Salty,500
+Powers = TITLE,1000,SPARKLING,1000
+Types = NORMAL,250,FIGHTING,250,FLYING,250,POISON,250,GROUND,250,ROCK,250,BUG,250,GHOST,250,STEEL,250,FIRE,250,WATER,250,GRASS,250,ELECTRIC,250,PSYCHIC,250,ICE,250,DRAGON,250,DARK,250,FAIRY,250
+Stats = HP,500,ATTACK,500,DEFENSE,500,SPECIAL_ATTACK,500,SPECIAL_DEFENSE,500,SPEED,500
+#-------------------------------
+[BITTERHERBAMYSTICA]
+Category = Condiment
+Flavours = Bitter,500
+Powers = TITLE,1000,SPARKLING,1000
+Types = NORMAL,250,FIGHTING,250,FLYING,250,POISON,250,GROUND,250,ROCK,250,BUG,250,GHOST,250,STEEL,250,FIRE,250,WATER,250,GRASS,250,ELECTRIC,250,PSYCHIC,250,ICE,250,DRAGON,250,DARK,250,FAIRY,250
+Stats = HP,500,ATTACK,500,DEFENSE,500,SPECIAL_ATTACK,500,SPECIAL_DEFENSE,500,SPEED,500
+#-------------------------------
+[SPICYHERBAMYSTICA]
+Category = Condiment
+Flavours = Spicy,500
+Powers = TITLE,1000,SPARKLING,1000
+Types = NORMAL,250,FIGHTING,250,FLYING,250,POISON,250,GROUND,250,ROCK,250,BUG,250,GHOST,250,STEEL,250,FIRE,250,WATER,250,GRASS,250,ELECTRIC,250,PSYCHIC,250,ICE,250,DRAGON,250,DARK,250,FAIRY,250
+Stats = HP,500,ATTACK,500,DEFENSE,500,SPECIAL_ATTACK,500,SPECIAL_DEFENSE,500,SPEED,500
+#-------------------------------
+[SWEETGIGANTAMIX]
+Category = Condiment
+Flavours = Sweet,500
+Powers = TITLE,1000,SPARKLING,1000
+Types = NORMAL,250,FIGHTING,250,FLYING,250,POISON,250,GROUND,250,ROCK,250,BUG,250,GHOST,250,STEEL,250,FIRE,250,WATER,250,GRASS,250,ELECTRIC,250,PSYCHIC,250,ICE,250,DRAGON,250,DARK,250,FAIRY,250
+Stats = HP,500,ATTACK,500,DEFENSE,500,SPECIAL_ATTACK,500,SPECIAL_DEFENSE,500,SPEED,500
+#-------------------------------
+[SOURGIGANTAMIX]
+Category = Condiment
+Flavours = Sour,500
+Powers = TITLE,1000,SPARKLING,1000
+Types = NORMAL,250,FIGHTING,250,FLYING,250,POISON,250,GROUND,250,ROCK,250,BUG,250,GHOST,250,STEEL,250,FIRE,250,WATER,250,GRASS,250,ELECTRIC,250,PSYCHIC,250,ICE,250,DRAGON,250,DARK,250,FAIRY,250
+Stats = HP,500,ATTACK,500,DEFENSE,500,SPECIAL_ATTACK,500,SPECIAL_DEFENSE,500,SPEED,500
+#-------------------------------
+[SALTYGIGANTAMIX]
+Category = Condiment
+Flavours = Salty,500
+Powers = TITLE,1000,SPARKLING,1000
+Types = NORMAL,250,FIGHTING,250,FLYING,250,POISON,250,GROUND,250,ROCK,250,BUG,250,GHOST,250,STEEL,250,FIRE,250,WATER,250,GRASS,250,ELECTRIC,250,PSYCHIC,250,ICE,250,DRAGON,250,DARK,250,FAIRY,250
+Stats = HP,500,ATTACK,500,DEFENSE,500,SPECIAL_ATTACK,500,SPECIAL_DEFENSE,500,SPEED,500
+#-------------------------------
+[BITTERGIGANTAMIX]
+Category = Condiment
+Flavours = Bitter,500
+Powers = TITLE,1000,SPARKLING,1000
+Types = NORMAL,250,FIGHTING,250,FLYING,250,POISON,250,GROUND,250,ROCK,250,BUG,250,GHOST,250,STEEL,250,FIRE,250,WATER,250,GRASS,250,ELECTRIC,250,PSYCHIC,250,ICE,250,DRAGON,250,DARK,250,FAIRY,250
+Stats = HP,500,ATTACK,500,DEFENSE,500,SPECIAL_ATTACK,500,SPECIAL_DEFENSE,500,SPEED,500
+#-------------------------------
+[SPICYGIGANTAMIX]
+Category = Condiment
+Flavours = Spicy,500
+Powers = TITLE,1000,SPARKLING,1000
+Types = NORMAL,250,FIGHTING,250,FLYING,250,POISON,250,GROUND,250,ROCK,250,BUG,250,GHOST,250,STEEL,250,FIRE,250,WATER,250,GRASS,250,ELECTRIC,250,PSYCHIC,250,ICE,250,DRAGON,250,DARK,250,FAIRY,250
+Stats = HP,500,ATTACK,500,DEFENSE,500,SPECIAL_ATTACK,500,SPECIAL_DEFENSE,500,SPEED,500
+#-------------------------------
+[SWEETULTRASAUCE]
+Category = Condiment
+Flavours = Sweet,500
+Powers = TITLE,1000,SPARKLING,1000
+Types = NORMAL,250,FIGHTING,250,FLYING,250,POISON,250,GROUND,250,ROCK,250,BUG,250,GHOST,250,STEEL,250,FIRE,250,WATER,250,GRASS,250,ELECTRIC,250,PSYCHIC,250,ICE,250,DRAGON,250,DARK,250,FAIRY,250
+Stats = HP,500,ATTACK,500,DEFENSE,500,SPECIAL_ATTACK,500,SPECIAL_DEFENSE,500,SPEED,500
+#-------------------------------
+[SOURULTRASAUCE]
+Category = Condiment
+Flavours = Sour,500
+Powers = TITLE,1000,SPARKLING,1000
+Types = NORMAL,250,FIGHTING,250,FLYING,250,POISON,250,GROUND,250,ROCK,250,BUG,250,GHOST,250,STEEL,250,FIRE,250,WATER,250,GRASS,250,ELECTRIC,250,PSYCHIC,250,ICE,250,DRAGON,250,DARK,250,FAIRY,250
+Stats = HP,500,ATTACK,500,DEFENSE,500,SPECIAL_ATTACK,500,SPECIAL_DEFENSE,500,SPEED,500
+#-------------------------------
+[SALTYULTRASAUCE]
+Category = Condiment
+Flavours = Salty,500
+Powers = TITLE,1000,SPARKLING,1000
+Types = NORMAL,250,FIGHTING,250,FLYING,250,POISON,250,GROUND,250,ROCK,250,BUG,250,GHOST,250,STEEL,250,FIRE,250,WATER,250,GRASS,250,ELECTRIC,250,PSYCHIC,250,ICE,250,DRAGON,250,DARK,250,FAIRY,250
+Stats = HP,500,ATTACK,500,DEFENSE,500,SPECIAL_ATTACK,500,SPECIAL_DEFENSE,500,SPEED,500
+#-------------------------------
+[BITTERULTRASAUCE]
+Category = Condiment
+Flavours = Bitter,500
+Powers = TITLE,1000,SPARKLING,1000
+Types = NORMAL,250,FIGHTING,250,FLYING,250,POISON,250,GROUND,250,ROCK,250,BUG,250,GHOST,250,STEEL,250,FIRE,250,WATER,250,GRASS,250,ELECTRIC,250,PSYCHIC,250,ICE,250,DRAGON,250,DARK,250,FAIRY,250
+Stats = HP,500,ATTACK,500,DEFENSE,500,SPECIAL_ATTACK,500,SPECIAL_DEFENSE,500,SPEED,500
+#-------------------------------
+[SPICYULTRASAUCE]
+Category = Condiment
+Flavours = Spicy,500
+Powers = TITLE,1000,SPARKLING,1000
+Types = NORMAL,250,FIGHTING,250,FLYING,250,POISON,250,GROUND,250,ROCK,250,BUG,250,GHOST,250,STEEL,250,FIRE,250,WATER,250,GRASS,250,ELECTRIC,250,PSYCHIC,250,ICE,250,DRAGON,250,DARK,250,FAIRY,250
+Stats = HP,500,ATTACK,500,DEFENSE,500,SPECIAL_ATTACK,500,SPECIAL_DEFENSE,500,SPEED,500
+#-------------------------------
+[EPICENOIRE]
+Category = Condiment
+Flavours = Spicy,500
+Powers = MONEY,1000,BARGAINING,1000
+Types = DARK,1000,PSYCHIC,1000
+Stats = SPECIAL_ATTACK,1000,SPEED,1000
+#-------------------------------
+[HOENNIANSALT]
+Category = Condiment
+Flavours = Salty,500
+Powers = HUMUNGO,1000,FISHING,1000,FISHITEM,1000,TEENSY,-1000
+Types = GROUND,1000,FIRE,1000,WATER,1000
+Stats = HP,1000,ATTACK,1000,DEFENSE,1000,SPECIAL_ATTACK,1000,SPECIAL_DEFENSE,1000
+#-------------------------------
+[ARBOLIVAOIL]
+Category = Condiment
+Flavours = Sour,500,Bitter,500
+Powers = ABILITY,1000,BASEPOINT,1000,STRENGTH,1000
+Types = NORMAL,1000,GRASS,1000,FLYING,1000,DRAGON,1000
+Stats = ATTACK,1000,SPECIAL_ATTACK,1000,SPEED,1000
+#-------------------------------
+[POPPINGCANDY]
+Category = Condiment
+Flavours = Sweet,500
+Powers = RAIDSPEED,1000,CATCHING,1000,FRIENDSHIP,1000
+Types = ELECTRIC,1000,FAIRY,1000
+Stats = ATTACK,1000,SPEED,1000
+#-------------------------------
+[BAKINGPOWDER]
+Category = Ingredient
+Flavours = Salty,1,Bitter,3
+Powers = HATCHING,12,RAIDSPEED,7,DAYCARE,4
+Types = FLYING,6
+Stats = SPEED,7
+#-------------------------------
+[BAKINGSODA]
+Category = Ingredient
+Flavours = Salty,2,Bitter,4
+Powers = HATCHING,12,REPEL,7,RAIDDEFENSE,4
+Types = ROCK,6
+Stats = DEFENSE,7
+#-------------------------------
+[YEAST]
+Category = Ingredient
+Flavours = Sweet,1,Bitter,2
+Powers = HATCHING,21,DAYCARE,12,EXP,7
+Types = BUG,6
+Stats = HP,12,SPECIAL_DEFENSE,7
+#-------------------------------
+[ALMONDS]
+Category = Ingredient
+Flavours = Sweet,2,Bitter,2
+Powers = STRENGTH,12,BASEPOINT,12,EXP,7
+Types = GRASS,7,FIGHTING,7
+Stats = ATTACK,12,DEFENSE,12
+#-------------------------------
+[HAZELNUTS]
+Category = Ingredient
+Flavours = Sweet,3,Bitter,2
+Powers = BASEPOINT,12,STRENGTH,12,FRIENDSHIP,7
+Types = GRASS,7,PSYCHIC,7
+Stats = DEFENSE,12,SPECIAL_DEFENSE,7,SPECIAL_ATTACK,7
+#-------------------------------
+[BREADCRUMBS]
+Category = Ingredient
+Flavours = Sweet,2,Salty,1
+Powers = EXP,12,HUMUNGO,7,BIGHAUL,4
+Types = NORMAL,6,FLYING,6
+Stats = HP,7,DEFENSE,4
+#-------------------------------
+[CORNSTARCH]
+Category = Ingredient
+Flavours = Sweet,2
+Powers = HATCHING,12,HUMUNGO,7,RAIDDEFENSE,4
+Types = GROUND,6
+Stats = DEFENSE,7,HP,7
+#-------------------------------
+[WHITEFLOUR]
+Category = Ingredient
+Flavours = Sweet,2
+Powers = HATCHING,12,DAYCARE,7,EXP,4
+Types = NORMAL,6
+Stats = HP,7
+#-------------------------------
+[OATS]
+Category = Ingredient
+Flavours = Sweet,2,Bitter,1
+Powers = EXP,12,RAIDDEFENSE,12,HUMUNGO,7
+Types = NORMAL,7,GRASS,7
+Stats = HP,12,DEFENSE,12
+#-------------------------------
+[CHOCOLATECHIPS]
+Category = Ingredient
+Flavours = Sweet,6,Bitter,1
+Powers = FRIENDSHIP,12,RAIDSPEED,12,TEENSY,7
+Types = DARK,7,FAIRY,7
+Stats = SPECIAL_ATTACK,12,SPEED,7
+#-------------------------------
+[COCOAPOWDER]
+Category = Ingredient
+Flavours = Bitter,6
+Powers = ABILITY,12,STRENGTH,7,RAIDOFFENSE,7
+Types = DARK,7
+Stats = SPECIAL_ATTACK,12,SPECIAL_DEFENSE,7
+#-------------------------------
+[CONDENSEDMILK]
+Category = Ingredient
+Flavours = Sweet,6
+Powers = DAYCARE,21,FRIENDSHIP,12,HATCHING,7
+Types = FAIRY,7,ICE,7
+Stats = HP,12,SPECIAL_DEFENSE,12
+#-------------------------------
+[BROWNSUGAR]
+Category = Ingredient
+Flavours = Sweet,6
+Powers = RAIDSPEED,12,FRIENDSHIP,12,HATCHING,7
+Types = GROUND,7,FAIRY,7
+Stats = SPEED,12,SPECIAL_ATTACK,7
+#-------------------------------
+[SUGAR]
+Category = Ingredient
+Flavours = Sweet,20
+Powers = RAIDSPEED,21,TEENSY,12,FRIENDSHIP,7,HUMUNGO,-5
+Types = FAIRY,4,NORMAL,4,PSYCHIC,4
+Stats = SPEED,21,SPECIAL_ATTACK,12
+#-------------------------------
+[VANILLA]
+Category = Ingredient
+Flavours = Sweet,5,Bitter,1
+Powers = FRIENDSHIP,21,TITLE,7,DAYCARE,7
+Types = FAIRY,7,PSYCHIC,7,GRASS,7
+Stats = SPECIAL_ATTACK,12,SPECIAL_DEFENSE,7
+#-------------------------------
+[SILLYSTUFFULHAM]
+Category = Ingredient
+Flavours = Sweet,2,Salty,4
+Powers = FRIENDSHIP,12,CATCHING,7,EXP,7
+Types = NORMAL,12,FIGHTING,12,FAIRY,6
+Stats = HP,7,SPECIAL_DEFENSE,7
+#-------------------------------
+[POTATOSALAD]
+Category = Ingredient
+Flavours = Sweet,2,Salty,3,Sour,4,Bitter,1
+Powers = RAIDDEFENSE,12,EXP,7,BIGHAUL,7
+Types = BUG,30,GHOST,30,STEEL,30,DRAGON,30,DARK,30,FAIRY,30
+Stats = HP,12,DEFENSE,7
+#-------------------------------
+[POTATOTORTILLA]
+Category = Ingredient
+Flavours = Sweet,3,Salty,4,Sour,1,Bitter,3,Spicy,1
+Powers = EXP,12,HUMUNGO,12,RAIDDEFENSE,7
+Types = FIGHTING,20,POISON,20,ROCK,20,GHOST,20,FIRE,20,GRASS,20,PSYCHIC,20,DRAGON,20,FAIRY,20
+Stats = HP,12,ATTACK,7,DEFENSE,7
+#-------------------------------
+[APPLE]
+Category = Ingredient
+Flavours = Sweet,4,Sour,3,Bitter,1
+Powers = FRIENDSHIP,12,CATCHING,7,HATCHING,4
+Types = FLYING,7,STEEL,7,ICE,7
+Stats = HP,12,SPECIAL_DEFENSE,7
+#-------------------------------
+[BANANA]
+Category = Ingredient
+Flavours = Sweet,4,Sour,1
+Powers = FRIENDSHIP,12,RAIDSPEED,12,CATCHING,7
+Types = NORMAL,7,BUG,7,ELECTRIC,7
+Stats = SPEED,12,HP,7
+#-------------------------------
+[REDGRAPES]
+Category = Ingredient
+Flavours = Sweet,5,Sour,2
+Powers = FRIENDSHIP,12,MONEY,7,RAIDOFFENSE,4
+Types = FIRE,7,PSYCHIC,7,DRAGON,7
+Stats = SPECIAL_ATTACK,12,ATTACK,7
+#-------------------------------
+[WHITEGRAPES]
+Category = Ingredient
+Flavours = Sweet,4,Sour,3
+Powers = FRIENDSHIP,12,TITLE,7,RAIDSPEED,4
+Types = ICE,7,FLYING,7,FAIRY,7
+Stats = SPECIAL_ATTACK,12,SPECIAL_DEFENSE,7
+#-------------------------------
+[KIWI]
+Category = Ingredient
+Flavours = Sweet,2,Sour,5,Bitter,1
+Powers = CATCHING,12,RAIDSPEED,7,ABILITY,7
+Types = POISON,7,FIRE,7,DRAGON,7
+Stats = SPEED,12,SPECIAL_ATTACK,7
+#-------------------------------
+[MELON]
+Category = Ingredient
+Flavours = Sweet,5,Bitter,1
+Powers = FRIENDSHIP,12,DAYCARE,7,TEENSY,7
+Types = WATER,7,GRASS,7,FAIRY,7
+Stats = HP,12,SPECIAL_DEFENSE,7,SPECIAL_ATTACK,7
+#-------------------------------
+[ORANGE]
+Category = Ingredient
+Flavours = Sweet,4,Sour,4
+Powers = CATCHING,12,FRIENDSHIP,12,RAIDSPEED,7
+Types = FIRE,7,ELECTRIC,7,FAIRY,7
+Stats = SPECIAL_ATTACK,12,SPEED,7
+#-------------------------------
+[PINEAPPLE]
+Category = Ingredient
+Flavours = Sweet,3,Sour,5,Bitter,1
+Powers = ENCOUNTER,12,CATCHING,7,RAIDSPEED,7
+Types = GROUND,7,WATER,7,DARK,7
+Stats = ATTACK,7,SPEED,12
+#-------------------------------
+[STRAWBERRY]
+Category = Ingredient
+Flavours = Sweet,4,Sour,4
+Powers = CATCHING,12,FRIENDSHIP,12,TEENSY,7
+Types = FIGHTING,7,GHOST,7,PSYCHIC,7
+Stats = SPECIAL_ATTACK,12,SPEED,7
+#-------------------------------
+[ARTICHOKE]
+Category = Ingredient
+Flavours = Sweet,1,Bitter,5
+Powers = ABILITY,12,RAIDDEFENSE,12,LUCK,7
+Types = GRASS,12,STEEL,7
+Stats = SPECIAL_DEFENSE,12,DEFENSE,7
+#-------------------------------
+[ASPARAGUS]
+Category = Ingredient
+Flavours = Sweet,1,Bitter,4
+Powers = ABILITY,12,BASEPOINT,12,TEENSY,7
+Types = GRASS,12,FLYING,7
+Stats = SPEED,12,SPECIAL_DEFENSE,7
+#-------------------------------
+[EGGPLANT]
+Category = Ingredient
+Flavours = Sweet,1,Bitter,4
+Powers = STRENGTH,12,RAIDDEFENSE,12,REPEL,7
+Types = GRASS,7,POISON,7,DARK,7
+Stats = SPECIAL_DEFENSE,12,SPECIAL_ATTACK,7
+#-------------------------------
+[AVOCADO]
+Category = Ingredient
+Flavours = Sweet,3,Sour,1
+Powers = RAIDDEFENSE,12,BASEPOINT,12,FRIENDSHIP,7
+Types = DRAGON,6
+Stats = DEFENSE,21,SPECIAL_DEFENSE,12
+#-------------------------------
+[BEANSPROUTS]
+Category = Ingredient
+Flavours = Sweet,2,Bitter,1
+Powers = RAIDSPEED,12,TEENSY,12,FRIENDSHIP,7
+Types = GRASS,12
+Stats = SPEED,12,HP,7
+#-------------------------------
+[BEETROOT]
+Category = Ingredient
+Flavours = Sweet,4,Bitter,2
+Powers = STRENGTH,12,BASEPOINT,12,HUMUNGO,7
+Types = GRASS,7,GROUND,7,PSYCHIC,7
+Stats = ATTACK,12,HP,7
+#-------------------------------
+[GREENBELLPEPPER]
+Category = Ingredient
+Flavours = Sweet,1,Sour,1,Bitter,5
+Powers = BASEPOINT,12,ABILITY,7,REPEL,7
+Types = POISON,6
+Stats = SPECIAL_DEFENSE,12,DEFENSE,7
+#-------------------------------
+[REDBELLPEPPER]
+Category = Ingredient
+Flavours = Sweet,1,Sour,1,Bitter,3
+Powers = RAIDOFFENSE,12,STRENGTH,7,ENCOUNTER,7
+Types = FIRE,6
+Stats = ATTACK,12,SPEED,7
+#-------------------------------
+[YELLOWBELLPEPPER]
+Category = Ingredient
+Flavours = Sweet,1,Sour,1,Bitter,3
+Powers = RAIDSPEED,12,ABILITY,7,ENCOUNTER,7
+Types = ELECTRIC,6
+Stats = SPEED,12,SPECIAL_ATTACK,7
+#-------------------------------
+[BROCCOLI]
+Category = Ingredient
+Flavours = Sweet,1,Bitter,3
+Powers = BASEPOINT,12,RAIDDEFENSE,12,STRENGTH,7
+Types = GRASS,12,FIGHTING,7
+Stats = DEFENSE,12,SPECIAL_DEFENSE,7
+#-------------------------------
+[CABBAGE]
+Category = Ingredient
+Flavours = Sweet,2,Bitter,2
+Powers = RAIDDEFENSE,12,HUMUNGO,7,BIGHAUL,7
+Types = GRASS,12,BUG,7
+Stats = DEFENSE,12,HP,12
+#-------------------------------
+[CARROT]
+Category = Ingredient
+Flavours = Sweet,3,Bitter,1
+Powers = BASEPOINT,12,FRIENDSHIP,7,STRENGTH,7
+Types = GRASS,7,GROUND,7
+Stats = HP,7,SPEED,7
+#-------------------------------
+[CAULIFLOWER]
+Category = Ingredient
+Flavours = Sweet,2,Bitter,2
+Powers = RAIDDEFENSE,12,BASEPOINT,12,FRIENDSHIP,7
+Types = GRASS,7,ICE,7
+Stats = DEFENSE,12,HP,7
+#-------------------------------
+[CELERY]
+Category = Ingredient
+Flavours = Salty,1,Bitter,4
+Powers = RAIDDEFENSE,12,REPEL,7,TEENSY,7
+Types = GRASS,7,WATER,7
+Stats = SPECIAL_DEFENSE,12,SPEED,7
+#-------------------------------
+[ZUCCHINI]
+Category = Ingredient
+Flavours = Sweet,2,Bitter,1
+Powers = FRIENDSHIP,12,TEENSY,12,BASEPOINT,7
+Types = GRASS,7,WATER,7
+Stats = HP,12,SPEED,7
+#-------------------------------
+[CUCUMBER]
+Category = Ingredient
+Flavours = Sour,1,Bitter,1
+Powers = TEENSY,12,RAIDSPEED,7,BASEPOINT,4
+Types = WATER,6
+Stats = SPEED,7,SPECIAL_DEFENSE,7
+#-------------------------------
+[EDAMAME]
+Category = Ingredient
+Flavours = Sweet,3,Salty,1
+Powers = BASEPOINT,12,STRENGTH,12,FRIENDSHIP,7
+Types = GRASS,12,FIGHTING,7
+Stats = DEFENSE,12,ATTACK,7
+#-------------------------------
+[FENNEL]
+Category = Ingredient
+Flavours = Sweet,2,Bitter,3
+Powers = ABILITY,12,FRIENDSHIP,7,FISHING,7
+Types = GRASS,7,WATER,7
+Stats = SPECIAL_DEFENSE,12,SPECIAL_ATTACK,7
+#-------------------------------
+[GINGER]
+Category = Ingredient
+Flavours = Sweet,1,Bitter,2,Spicy,4
+Powers = RAIDOFFENSE,12,STRENGTH,12,ABILITY,7
+Types = FIRE,7,GRASS,7,FIGHTING,7
+Stats = ATTACK,12,SPEED,7
+#-------------------------------
+[GREENBEANS]
+Category = Ingredient
+Flavours = Sweet,2,Bitter,2
+Powers = BASEPOINT,12,STRENGTH,12,RAIDDEFENSE,7
+Types = GRASS,12,FIGHTING,7
+Stats = DEFENSE,12,ATTACK,7
+#-------------------------------
+[JALAPENO]
+Category = Ingredient
+Flavours = Sour,2,Spicy,5
+Powers = RAIDOFFENSE,21,STRENGTH,12,ENCOUNTER,7,REPEL,-3
+Types = ROCK,7,GRASS,7,FAIRY,7
+Stats = SPEED,21,ATTACK,12
+#-------------------------------
+[LARGELEEK]
+Category = Ingredient
+Flavours = Sweet,2,Bitter,2,Spicy,2
+Powers = STRENGTH,12,BASEPOINT,7,ABILITY,7
+Types = GRASS,7,FIGHTING,7
+Stats = ATTACK,12,DEFENSE,7
+#-------------------------------
+[LETTUCE]
+Category = Ingredient
+Flavours = Sweet,1,Bitter,2
+Powers = ENCOUNTER,12,BASEPOINT,7,TEENSY,4
+Types = GRASS,6
+Stats = SPECIAL_DEFENSE,7
+#-------------------------------
+[OLIVES]
+Category = Ingredient
+Flavours = Salty,3,Sour,1,Bitter,3
+Powers = BIGHAUL,12,ITEMDROP,7,LUCK,4
+Types = GRASS,6
+Stats = SPECIAL_DEFENSE,7,DEFENSE,7
+#-------------------------------
+[ONION]
+Category = Ingredient
+Flavours = Sweet,2,Bitter,1,Spicy,3
+Powers = ABILITY,12,STRENGTH,7,REPEL,7
+Types = PSYCHIC,6
+Stats = ATTACK,7,SPECIAL_ATTACK,7
+#-------------------------------
+[REDONION]
+Category = Ingredient
+Flavours = Sweet,3,Bitter,1
+Powers = ABILITY,12,LUCK,7,REPEL,4
+Types = GHOST,6
+Stats = SPECIAL_ATTACK,12,SPECIAL_DEFENSE,7
+#-------------------------------
+[SPRINGONION]
+Category = Ingredient
+Flavours = Sweet,1,Bitter,2,Spicy,2
+Powers = RAIDSPEED,12,ABILITY,7,FRIENDSHIP,7
+Types = GRASS,12,FLYING,7
+Stats = SPEED,12,SPECIAL_ATTACK,7
+#-------------------------------
+[PEAS]
+Category = Ingredient
+Flavours = Sweet,4
+Powers = FRIENDSHIP,12,BASEPOINT,12,EXP,7
+Types = GRASS,12
+Stats = SPEED,12,HP,7
+#-------------------------------
+[POTATO]
+Category = Ingredient
+Flavours = Sweet,2
+Powers = HUMUNGO,12,EXP,12,RAIDDEFENSE,7,TEENSY,-3
+Types = GROUND,6
+Stats = HP,12,DEFENSE,7
+#-------------------------------
+[SWEETPOTATO]
+Category = Ingredient
+Flavours = Sweet,5
+Powers = HUMUNGO,12,EXP,12,FRIENDSHIP,7
+Types = GROUND,12,GRASS,7
+Stats = HP,12,DEFENSE,12
+#-------------------------------
+[PUMPKIN]
+Category = Ingredient
+Flavours = Sweet,4,Bitter,2
+Powers = HUMUNGO,12,RAIDDEFENSE,12,HATCHING,7
+Types = GHOST,7,GRASS,7,GROUND,7
+Stats = HP,12,DEFENSE,12
+#-------------------------------
+[RADISH]
+Category = Ingredient
+Flavours = Bitter,2,Spicy,3
+Powers = RAIDSPEED,12,REPEL,7,ITEMDROP,7
+Types = GRASS,7,GROUND,7
+Stats = SPEED,12,ATTACK,7
+#-------------------------------
+[SPINACH]
+Category = Ingredient
+Flavours = Sweet,1,Bitter,4
+Powers = BASEPOINT,12,STRENGTH,7,ABILITY,7
+Types = GRASS,12,POISON,7
+Stats = SPECIAL_DEFENSE,12,DEFENSE,7
+#-------------------------------
+[TOMATO]
+Category = Ingredient
+Flavours = Sweet,2,Sour,4,Bitter,1
+Powers = CATCHING,12,ENCOUNTER,7,FRIENDSHIP,4
+Types = FAIRY,6
+Stats = SPECIAL_ATTACK,7,HP,4
+#-------------------------------
+[CHERRYTOMATOES]
+Category = Ingredient
+Flavours = Sweet,3,Sour,5,Bitter,1
+Powers = CATCHING,12,TEENSY,7,FRIENDSHIP,7
+Types = BUG,6
+Stats = SPECIAL_ATTACK,7,SPEED,7
+#-------------------------------
+[TURNIP]
+Category = Ingredient
+Flavours = Sweet,2,Bitter,3
+Powers = RAIDDEFENSE,12,STRENGTH,7,REPEL,7
+Types = GROUND,12,GRASS,7
+Stats = DEFENSE,12,HP,7
+#-------------------------------
+[BREAD]
+Category = Ingredient
+Flavours = Sweet,3,Salty,1
+Powers = EXP,12,HUMUNGO,12,HATCHING,7
+Types = NORMAL,12,GROUND,12,GRASS,12
+Stats = HP,12,DEFENSE,7
+#-------------------------------
+[EGG]
+Category = Ingredient
+Flavours = Sweet,1,Salty,2,Bitter,1
+Powers = HATCHING,21,DAYCARE,12,FRIENDSHIP,7,EXP,-3
+Types = FLYING,12,ROCK,12,STEEL,12,GRASS,12,ICE,12,FAIRY,12
+Stats = HP,21,SPECIAL_DEFENSE,7
+#-------------------------------
+[CHIKALISKEGG]
+Category = Ingredient
+Flavours = Sweet,1,Salty,2,Bitter,1
+Powers = STRENGTH,21,HATCHING,21,ABILITY,12,DAYCARE,7
+Types = DRAGON,18,POISON,18
+Stats = ATTACK,21,SPECIAL_ATTACK,21,HP,7
+#-------------------------------
+[DAIRYMILK]
+Category = Ingredient
+Flavours = Sweet,4
+Powers = DAYCARE,21,FRIENDSHIP,12,HATCHING,7
+Types = NORMAL,12,FAIRY,12,ICE,12
+Stats = HP,21,SPECIAL_DEFENSE,12
+#-------------------------------
+[CHEDDAR]
+Category = Ingredient
+Flavours = Salty,5,Sour,2
+Powers = EXP,12,HUMUNGO,12,STRENGTH,7
+Types = NORMAL,7,ROCK,7
+Stats = DEFENSE,12,HP,7
+#-------------------------------
+[MOOMOOCHEESE]
+Category = Ingredient
+Flavours = Sweet,2,Salty,4
+Powers = FRIENDSHIP,12,RAIDDEFENSE,12,HUMUNGO,7
+Types = NORMAL,12
+Stats = HP,12,DEFENSE,12
+#-------------------------------
+[UNOVANCHEESE]
+Category = Ingredient
+Flavours = Sweet,1,Salty,3
+Powers = EXP,12,FRIENDSHIP,7,RAIDDEFENSE,7
+Types = NORMAL,5,FIGHTING,5,FLYING,5,POISON,5,GROUND,5,ROCK,5,BUG,5,GHOST,5,STEEL,5,FIRE,5,WATER,5,GRASS,5,ELECTRIC,5,PSYCHIC,5,ICE,5,DRAGON,5,DARK,5,FAIRY,5
+Stats = DEFENSE,7,SPECIAL_DEFENSE,7
+#-------------------------------
+[PICKLE]
+Category = Ingredient
+Flavours = Sweet,1,Sour,4,Bitter,2
+Powers = REPEL,12,ITEMDROP,7,LUCK,7
+Types = FIGHTING,6
+Stats = SPECIAL_DEFENSE,7,SPEED,4
+#-------------------------------
+[BASIL]
+Category = Ingredient
+Flavours = Salty,1,Sour,1,Bitter,4
+Powers = ABILITY,12,ENCOUNTER,7,LUCK,7
+Types = FIRE,1,WATER,1,GRASS,1,ELECTRIC,1,PSYCHIC,1,ICE,1,DRAGON,1,DARK,1,FAIRY,1
+Stats = SPECIAL_ATTACK,12,SPECIAL_DEFENSE,7
+#-------------------------------
+[WATERCRESS]
+Category = Ingredient
+Flavours = Salty,1,Sour,2,Bitter,5,Spicy,1
+Powers = BASEPOINT,12,ABILITY,12,REPEL,7
+Types = NORMAL,1,FIGHTING,1,FLYING,1,POISON,1,GROUND,1,ROCK,1,BUG,1,GHOST,1,STEEL,1
+Stats = SPECIAL_DEFENSE,12,SPEED,7
+#-------------------------------
+[WILDGARLIC]
+Category = Ingredient
+Flavours = Bitter,2,Spicy,4
+Powers = REPEL,21,ABILITY,12,STRENGTH,7,ENCOUNTER,-5
+Types = GRASS,7,GHOST,7
+Stats = SPECIAL_DEFENSE,12,ATTACK,7
+#-------------------------------
+[MINT]
+Category = Ingredient
+Flavours = Sweet,1,Bitter,4
+Powers = RAIDSPEED,12,TEENSY,12,FRIENDSHIP,7
+Types = GRASS,7,ICE,7
+Stats = SPEED,12,SPECIAL_DEFENSE,12
+#-------------------------------
+[PUNGENTROOT]
+Category = Ingredient
+Flavours = Bitter,2,Spicy,5
+Powers = STRENGTH,21,REPEL,12,RAIDOFFENSE,7
+Types = GROUND,7,DARK,7,FIGHTING,7
+Stats = ATTACK,21,DEFENSE,7
+#-------------------------------
+[RICE]
+Category = Ingredient
+Flavours = Sweet,3,Sour,1
+Powers = EXP,21,RAIDDEFENSE,12,HUMUNGO,7
+Types = NORMAL,30,FIGHTING,30,FLYING,30,FIRE,30,WATER,30,GRASS,30
+Stats = HP,21,DEFENSE,12
+#-------------------------------
+[ALMONDMILK]
+Category = Ingredient
+Flavours = Sweet,4
+Powers = DAYCARE,12,FRIENDSHIP,12,HATCHING,7
+Types = GRASS,7,PSYCHIC,7
+Stats = SPECIAL_DEFENSE,12,HP,7,SPECIAL_ATTACK,7
+#-------------------------------
+[COCONUTMILK]
+Category = Ingredient
+Flavours = Sweet,4
+Powers = DAYCARE,12,FRIENDSHIP,12,RAIDDEFENSE,7
+Types = WATER,7,GRASS,7
+Stats = HP,12,SPECIAL_DEFENSE,12,SPECIAL_ATTACK,7
+#-------------------------------
+[CORN]
+Category = Ingredient
+Flavours = Sweet,4
+Powers = EXP,12,HUMUNGO,7,FRIENDSHIP,7
+Types = GRASS,7,GROUND,7
+Stats = HP,12,DEFENSE,7
+#-------------------------------
+[BUTTONMUSHROOM]
+Category = Ingredient
+Flavours = Sweet,1,Bitter,2
+Powers = LUCK,12,ITEMDROP,7,ABILITY,4
+Types = GRASS,6,POISON,6
+Stats = SPECIAL_DEFENSE,12
+#-------------------------------
+[KINGCLOYSTERMUSHROOM]
+Category = Ingredient
+Flavours = Sweet,2,Salty,1,Bitter,2
+Powers = BIGHAUL,12,LUCK,7,ITEMDROP,7
+Types = WATER,7,GRASS,7
+Stats = HP,12,SPECIAL_DEFENSE,7,SPECIAL_ATTACK,7
+#-------------------------------
+[PORCINIMUSHROOM]
+Category = Ingredient
+Flavours = Sweet,1,Salty,2,Bitter,4
+Powers = LUCK,21,ITEMDROP,12,ABILITY,7
+Types = GRASS,7,GROUND,7
+Stats = SPECIAL_DEFENSE,21,DEFENSE,7
+#-------------------------------
+[PORTOBELLOMUSHROOM]
+Category = Ingredient
+Flavours = Salty,2,Bitter,3
+Powers = ITEMDROP,12,ABILITY,12,LUCK,7
+Types = GRASS,7,DARK,7
+Stats = DEFENSE,12,SPECIAL_DEFENSE,12
+#-------------------------------
+[SHIITAKEMUSHROOM]
+Category = Ingredient
+Flavours = Salty,2,Bitter,3
+Powers = ABILITY,12,LUCK,12,ITEMDROP,7
+Types = GRASS,7,GHOST,7
+Stats = SPECIAL_DEFENSE,12,SPECIAL_ATTACK,7
+#-------------------------------
+[CHESTNUTS]
+Category = Ingredient
+Flavours = Sweet,4,Bitter,1
+Powers = STRENGTH,12,BASEPOINT,7,HUMUNGO,7
+Types = GRASS,7,ROCK,7
+Stats = DEFENSE,12,ATTACK,7
+#-------------------------------
+[WALNUTS]
+Category = Ingredient
+Flavours = Sweet,1,Bitter,4
+Powers = STRENGTH,12,ABILITY,12,BASEPOINT,7
+Types = GRASS,7,PSYCHIC,7
+Stats = SPECIAL_DEFENSE,12,DEFENSE,12
+#-------------------------------
+[TRUFFLE]
+Category = Ingredient
+Flavours = Salty,2,Bitter,6
+Powers = LUCK,21,BARGAINING,12,TITLE,12,MONEY,7
+Types = GROUND,20,GRASS,20,FAIRY,20
+Stats = SPECIAL_ATTACK,21,SPECIAL_DEFENSE,12
+#-------------------------------
+[ROSEMARY]
+Category = Ingredient
+Flavours = Bitter,4,Spicy,2
+Powers = ABILITY,12,STRENGTH,7,REPEL,7
+Types = GRASS,7,FIRE,7
+Stats = SPECIAL_ATTACK,12,SPECIAL_DEFENSE,7
+#-------------------------------
+[THYME]
+Category = Ingredient
+Flavours = Bitter,4,Spicy,1
+Powers = ABILITY,12,LUCK,7,REPEL,7
+Types = GRASS,7,PSYCHIC,7
+Stats = SPECIAL_DEFENSE,12,SPECIAL_ATTACK,7
+#-------------------------------
+[CLAUNCHERTAIL]
+Category = Ingredient
+Flavours = Sweet,3,Salty,4
+Powers = FISHITEM,21,FISHING,12,BIGHAUL,7
+Types = WATER,12,STEEL,12
+Stats = SPECIAL_ATTACK,21,DEFENSE,7
+#-------------------------------
+[BARRASKEWDAFILLET]
+Category = Ingredient
+Flavours = Salty,4,Bitter,2
+Powers = FISHING,21,FISHITEM,12,ENCOUNTER,7
+Types = WATER,12,FIGHTING,12
+Stats = SPEED,21,ATTACK,12
+#-------------------------------
+[BASCULINFILLET]
+Category = Ingredient
+Flavours = Salty,3,Bitter,3
+Powers = FISHING,21,ITEMDROP,12,ABILITY,7
+Types = WATER,12,GHOST,12
+Stats = ATTACK,12,SPEED,12
+#-------------------------------
+[OCTILLERYARM]
+Category = Ingredient
+Flavours = Sweet,2,Salty,4
+Powers = FISHING,12,FISHITEM,12,STRENGTH,7
+Types = WATER,12,PSYCHIC,12
+Stats = SPECIAL_ATTACK,12,ATTACK,7
+#-------------------------------
+[FRIEDFILLET]
+Category = Ingredient
+Flavours = Sweet,2,Salty,3,Bitter,3
+Powers = FISHITEM,12,EXP,12,BIGHAUL,7
+Types = NORMAL,20,FLYING,20,GROUND,20,BUG,20,STEEL,20,WATER,20,ELECTRIC,20,ICE,20,DARK,20
+Stats = ATTACK,12,HP,7
+#-------------------------------
+[SMOKEDFILLET]
+Category = Ingredient
+Flavours = Sweet,1,Salty,3,Sour,2,Bitter,3
+Powers = FISHING,12,ITEMDROP,12,BIGHAUL,7
+Types = DARK,6
+Stats = ATTACK,7,SPECIAL_DEFENSE,7
+#-------------------------------
+[SMOKEDPALMON]
+Category = Ingredient
+Flavours = Sweet,1,Salty,5,Bitter,3
+Powers = FISHING,12,ITEMDROP,12,BIGHAUL,7,EXP,4
+Types = WATER,12,DARK,12
+Stats = ATTACK,12,SPEED,7
+#-------------------------------
+[MAGIKARPROE]
+Category = Ingredient
+Flavours = Salty,5,Bitter,1
+Powers = FISHING,12,DAYCARE,12,FISHITEM,7
+Types = WATER,7,DRAGON,7
+Stats = SPEED,12,HP,7
+#-------------------------------
+[MILOTICCAVIAR]
+Category = Ingredient
+Flavours = Salty,6,Bitter,1
+Powers = TITLE,21,BARGAINING,21,SPARKLING,12,MONEY,12
+Types = WATER,20,FAIRY,20,DRAGON,20
+Stats = SPECIAL_DEFENSE,21,SPECIAL_ATTACK,21
+#-------------------------------
+[KLAWFSTICK]
+Category = Ingredient
+Flavours = Sweet,4,Salty,4
+Powers = FISHITEM,12,BIGHAUL,12,ITEMDROP,7
+Types = ICE,6
+Stats = DEFENSE,21,ATTACK,7
+#-------------------------------
+[KRABBYSTICKS]
+Category = Ingredient
+Flavours = Sweet,3,Salty,4
+Powers = FISHITEM,12,BIGHAUL,7,FRIENDSHIP,7
+Types = WATER,7,STEEL,7
+Stats = ATTACK,12,DEFENSE,12
+#-------------------------------
+[TUNAPASTE]
+Category = Ingredient
+Flavours = Salty,16,Sour,4,Bitter,4
+Powers = FISHING,12,FISHITEM,12,ITEMDROP,7
+Types = WATER,4,ICE,4,FLYING,4
+Stats = ATTACK,7,SPEED,7
+#-------------------------------
+[VELUZASASHIMI]
+Category = Ingredient
+Flavours = Sweet,2,Salty,3,Sour,1
+Powers = FISHING,12,ABILITY,12,RAIDSPEED,7
+Types = WATER,12,PSYCHIC,12
+Stats = ATTACK,12,SPEED,7,SPECIAL_ATTACK,7
+#-------------------------------
+[SEAWEED]
+Category = Ingredient
+Flavours = Salty,4,Bitter,3
+Powers = FISHING,12,BASEPOINT,12,ITEMDROP,7
+Types = WATER,7,GRASS,7
+Stats = SPECIAL_DEFENSE,12,DEFENSE,7,SPECIAL_ATTACK,7
+#-------------------------------
+[WISHIWASHICAN]
+Category = Ingredient
+Flavours = Salty,5,Sour,1,Bitter,2
+Powers = BIGHAUL,21,FISHITEM,12,ITEMDROP,7
+Types = WATER,12,STEEL,12
+Stats = DEFENSE,12,SPECIAL_DEFENSE,12,ATTACK,7
+#-------------------------------
+[BIRDBREAST]
+Category = Ingredient
+Flavours = Sweet,2,Salty,2
+Powers = STRENGTH,12,BASEPOINT,12,EXP,7
+Types = FLYING,12,NORMAL,12
+Stats = ATTACK,12,SPECIAL_DEFENSE,7
+#-------------------------------
+[BIRDLEG]
+Category = Ingredient
+Flavours = Sweet,2,Salty,3,Bitter,2
+Powers = STRENGTH,12,RAIDOFFENSE,12,EXP,7
+Types = FLYING,12,FIGHTING,12
+Stats = ATTACK,12,SPEED,12
+#-------------------------------
+[HAMBURGER]
+Category = Ingredient
+Flavours = Sweet,6,Salty,12,Bitter,9
+Powers = HUMUNGO,21,EXP,12,STRENGTH,7,TEENSY,-5
+Types = STEEL,18
+Stats = HP,21,ATTACK,12,DEFENSE,7
+#-------------------------------
+[MINCEDMEAT]
+Category = Ingredient
+Flavours = Sweet,2,Salty,3,Bitter,2
+Powers = EXP,12,STRENGTH,12,HUMUNGO,7
+Types = NORMAL,7,FIGHTING,7
+Stats = ATTACK,12,HP,7
+#-------------------------------
+[HERBEDSAUSAGE]
+Category = Ingredient
+Flavours = Sweet,1,Salty,4,Bitter,4
+Powers = STRENGTH,12,EXP,12,ABILITY,7
+Types = FIGHTING,12,GROUND,12,GHOST,12,WATER,12,PSYCHIC,12,DARK,12
+Stats = ATTACK,12,SPECIAL_DEFENSE,7
+#-------------------------------
+[LECHONKCHOP]
+Category = Ingredient
+Flavours = Sweet,2,Salty,3
+Powers = HUMUNGO,12,EXP,12,MONEY,7
+Types = NORMAL,12,GROUND,12
+Stats = HP,12,DEFENSE,7
+#-------------------------------
+[STEAK]
+Category = Ingredient
+Flavours = Sweet,2,Salty,4,Bitter,3
+Powers = HUMUNGO,21,STRENGTH,12,EXP,7,TEENSY,-5
+Types = FIGHTING,12,FIRE,12
+Stats = ATTACK,21,HP,12
+#-------------------------------
+[BACON]
+Category = Ingredient
+Flavours = Sweet,1,Salty,5,Sour,1,Bitter,4
+Powers = HUMUNGO,12,BIGHAUL,7,EXP,7
+Types = ROCK,6
+Stats = HP,12,ATTACK,7
+#-------------------------------
+[CHORIZO]
+Category = Ingredient
+Flavours = Salty,4,Bitter,2,Spicy,4
+Powers = RAIDOFFENSE,21,STRENGTH,12,HUMUNGO,7
+Types = NORMAL,12,POISON,12,BUG,12,FIRE,12,ELECTRIC,12,DRAGON,12
+Stats = ATTACK,21,SPEED,12
+#-------------------------------
+[HAM]
+Category = Ingredient
+Flavours = Sweet,1,Salty,5
+Powers = HUMUNGO,12,EXP,12,FRIENDSHIP,4
+Types = GROUND,6
+Stats = HP,12,DEFENSE,7
+#-------------------------------
+[JERKY]
+Category = Ingredient
+Flavours = Sweet,1,Salty,6,Bitter,3
+Powers = BIGHAUL,12,EXP,12,HUMUNGO,7
+Types = GROUND,12,DARK,12
+Stats = ATTACK,12,DEFENSE,21
+#-------------------------------
+[PEPPERONI]
+Category = Ingredient
+Flavours = Salty,5,Bitter,2,Spicy,4
+Powers = RAIDOFFENSE,12,HUMUNGO,12,STRENGTH,7
+Types = FIRE,12,POISON,12
+Stats = ATTACK,12,SPEED,12
+#-------------------------------
+[PROSCIUTTO]
+Category = Ingredient
+Flavours = Sweet,2,Salty,4,Sour,1
+Powers = MONEY,12,EXP,7,TITLE,4
+Types = FLYING,6
+Stats = SPEED,7,ATTACK,7
+#-------------------------------
+[SALAMI]
+Category = Ingredient
+Flavours = Salty,5,Sour,1,Bitter,2
+Powers = BIGHAUL,12,ITEMDROP,7,EXP,7
+Types = NORMAL,7,POISON,7
+Stats = ATTACK,12,DEFENSE,7
+#-------------------------------
+[MEATBALLS]
+Category = Ingredient
+Flavours = Sweet,2,Salty,4,Bitter,2
+Powers = HUMUNGO,12,EXP,12,BIGHAUL,7
+Types = NORMAL,7,GROUND,7,FIGHTING,7
+Stats = HP,12,ATTACK,12
+#-------------------------------
+[ROASTMEAT]
+Category = Ingredient
+Flavours = Sweet,2,Salty,4,Bitter,3
+Powers = STRENGTH,21,EXP,12,HUMUNGO,7
+Types = FIRE,12,FIGHTING,12
+Stats = ATTACK,21,HP,12
+#-------------------------------
+[SMOKEPOKETAIL]
+Category = Ingredient
+Flavours = Sweet,4,Salty,3
+Powers = TITLE,21,MONEY,21,HUMUNGO,12,BARGAINING,12
+Types = PSYCHIC,20,WATER,20,NORMAL,20
+Stats = HP,21,SPECIAL_DEFENSE,21,SPECIAL_ATTACK,7
+#-------------------------------
+[BAMBURALSHOOT]
+Category = Ingredient
+Flavours = Sweet,2,Bitter,2
+Powers = TEENSY,12,RAIDSPEED,12,BASEPOINT,7
+Types = GRASS,7,STEEL,7
+Stats = SPEED,12,DEFENSE,7
+#-------------------------------
+[CEREAL]
+Category = Ingredient
+Flavours = Sweet,4,Salty,1
+Powers = RAIDSPEED,12,EXP,12,FRIENDSHIP,7
+Types = NORMAL,7,ELECTRIC,7
+Stats = SPEED,12,HP,7
+#-------------------------------
+[COUSCOUS]
+Category = Ingredient
+Flavours = Sweet,2
+Powers = EXP,12,RAIDDEFENSE,7,HUMUNGO,7
+Types = GROUND,7,NORMAL,7
+Stats = HP,12,DEFENSE,7
+#-------------------------------
+[QUINOA]
+Category = Ingredient
+Flavours = Sweet,1,Bitter,2
+Powers = BASEPOINT,21,STRENGTH,12,EXP,7
+Types = GRASS,7,PSYCHIC,7
+Stats = DEFENSE,12,SPECIAL_DEFENSE,12
+#-------------------------------
+[CHICKPEAS]
+Category = Ingredient
+Flavours = Sweet,2,Bitter,1
+Powers = BASEPOINT,12,STRENGTH,12,HUMUNGO,7
+Types = GRASS,7,FIGHTING,7
+Stats = DEFENSE,12,ATTACK,7
+#-------------------------------
+[LENTILS]
+Category = Ingredient
+Flavours = Sweet,1,Bitter,2
+Powers = BASEPOINT,12,STRENGTH,12,RAIDDEFENSE,7
+Types = GRASS,7,FIGHTING,7
+Stats = DEFENSE,12,SPECIAL_DEFENSE,12
+#-------------------------------
+[BEANS]
+Category = Ingredient
+Flavours = Sweet,2,Salty,2
+Powers = HUMUNGO,12,RAIDDEFENSE,12,BIGHAUL,7
+Types = GRASS,7,GROUND,7
+Stats = HP,12,DEFENSE,12
+#-------------------------------
+[TOFU]
+Category = Ingredient
+Flavours = Sweet,3
+Powers = BASEPOINT,12,STRENGTH,7,FRIENDSHIP,7
+Types = NORMAL,6
+Stats = SPECIAL_DEFENSE,12,DEFENSE,7,SPECIAL_ATTACK,7
+#-------------------------------
+[NOODLES]
+Category = Ingredient
+Flavours = Salty,4
+Powers = EXP,21,RAIDSPEED,7,HUMUNGO,7
+Types = POISON,30,GROUND,30,ROCK,30,ELECTRIC,30,PSYCHIC,30,ICE,30
+Stats = HP,12,SPEED,7
+#-------------------------------
+[PASTA]
+Category = Ingredient
+Flavours = Sweet,3
+Powers = EXP,21,HUMUNGO,12,RAIDDEFENSE,7
+Types = NORMAL,7,GROUND,7
+Stats = HP,21,DEFENSE,7
+#-------------------------------
+[SPRINGROLLWRAPPER]
+Category = Ingredient
+Flavours = Sweet,2
+Powers = EXP,12,RAIDSPEED,7,HUMUNGO,4
+Types = NORMAL,6,FLYING,6
+Stats = SPEED,7,HP,7
+#-------------------------------
+[STOCKCUBE]
+Category = Ingredient
+Flavours = Salty,6,Bitter,2
+Powers = RAIDDEFENSE,12,BIGHAUL,12,EXP,7
+Types = NORMAL,6,WATER,6
+Stats = HP,12,DEFENSE,7
+#-------------------------------
+[PEANUTS]
+Category = Ingredient
+Flavours = Sweet,2,Salty,1,Bitter,2
+Powers = STRENGTH,12,BASEPOINT,12,EXP,7
+Types = GRASS,7,FIGHTING,7
+Stats = ATTACK,12,DEFENSE,12
+#-------------------------------
+[PINENUTS]
+Category = Ingredient
+Flavours = Sweet,3,Bitter,1
+Powers = BASEPOINT,12,ABILITY,7,FRIENDSHIP,7
+Types = GRASS,7,FLYING,7
+Stats = SPECIAL_DEFENSE,12,SPEED,7,SPECIAL_ATTACK,7
+#-------------------------------
+[FOOLSCHOCOLATEBAR]
+Category = Ingredient
+Flavours = Sweet,12,Salty,4
+Powers = MONEY,21,BARGAINING,12
+Types = FAIRY,12,ICE,12
+Stats = ATTACK,12,DEFENSE,7,SPECIAL_DEFENSE,7
+#-------------------------------
+[FERMENTALWINE]
+Category = Ingredient
+Flavours = Sweet,500,Sour,500,Bitter,500
+Types = GRASS,1000,PSYCHIC,1000,POISON,1000
+Stats = SPECIAL_ATTACK,1000,SPECIAL_DEFENSE,1000
+#-------------------------------
+[KAFFIENDBEANS]
+Category = Ingredient
+Flavours = Sweet,500,Bitter,500
+Types = GRASS,1000,DARK,1000,ELECTRIC,1000
+Stats = ATTACK,1000,SPEED,1000

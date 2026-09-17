@@ -3884,3 +3884,2585 @@ Before regular push fade
 [0;34mVMS: Not connected to a server[0m
 [0;34mVMS: Integrated Server stopped[0m
 [0;34mVMS: Not connected to a server[0m
+GPU Cache Max: 32768
+-------------------------------------------------------------------------------
+Pokemon Amethyst Output Window
+-------------------------------------------------------------------------------
+If you can see this window, you are running the game in Debug Mode. This means
+that you're either playing a debug version of the game, or you're playing from
+within XPX Engine.
+
+Closing this window will close the game. If you want to get rid of this window,
+run the program from the Shell, or download a release version of the game.
+-------------------------------------------------------------------------------
+Debug Output:
+-------------------------------------------------------------------------------
+
+[0;33m*** Checking plugins ***[0m
+
+[0;33m  -> [0mCompiling plugin scripts...[0;32mdone[0m
+[0;33m  -> [0mLoaded plugin: [0;35mv21.1 Hotfixes[0m (ver. 1.0.9)
+[0;1;33mWARNING: Plugin 'rainefallUtils' may not be compatible with Essentials v21.1. Trying to load anyway.[0m
+[0;33m  -> [0mLoaded plugin: [0;35mrainefallUtils[0m (ver. 1.2)
+[0;33m  -> [0mLoaded plugin: [0;35mGeneration 9 Pack[0m (ver. 3.3.2)
+[0;33m  -> [0mLoaded plugin: [0;35mModular UI Scenes[0m (ver. 2.0.9)
+[0;1;33mWARNING: Plugin 'Bag Screen w/int. Party' may not be compatible with Essentials v21.1. Trying to load anyway.[0m
+[0;33m  -> [0mLoaded plugin: [0;35mBag Screen w/int. Party[0m (ver. 2.5.0)
+[0;33m  -> [0mLoaded plugin: [0;35m[MUI] Pokedex Data Page[0m (ver. 2.0.1)
+[0;33m  -> [0mLoaded plugin: [0;35m[MUI] Enhanced Pokemon UI[0m (ver. 1.0.6)
+[0;33m  -> [0mLoaded plugin: [0;35mDeluxe Battle Kit[0m (ver. 1.2.9)
+[0;33m  -> [0mLoaded plugin: [0;35m[MUI] Improved Mementos[0m (ver. 1.0.4)
+[0;33m  -> [0mLoaded plugin: [0;35m[DBK] Terastallization[0m (ver. 1.1.5)
+[0;33m  -> [0mLoaded plugin: [0;35m[DBK] Dynamax[0m (ver. 1.1.3)
+[0;33m  -> [0mLoaded plugin: [0;35m[DBK] Z-Power[0m (ver. 1.1.1)
+[0;33m  -> [0mLoaded plugin: [0;35mCuttable Tall Grass[0m (ver. 1.0)
+[0;33m  -> [0mLoaded plugin: [0;35mWild Item Drops[0m (ver. 1.0)
+[0;1;33mWARNING: Plugin 'Voltseon's Pause Menu' may not be compatible with Essentials v21.1. Trying to load anyway.[0m
+[0;33m  -> [0mLoaded plugin: [0;35mVoltseon's Pause Menu[0m (ver. 2.1)
+[0;1;33mWARNING: Usage of deprecated method "safeExists?(f)" or its alias.
+The method is slated to be removed in Essentials v22.
+Use "FileTest.exist?(f)" instead.[0m
+[0;33m  -> [0mLoaded plugin: [0;35mVoltseon's Multiplayer Solution[0m (ver. 2.2.0)
+[0;33m  -> [0mLoaded plugin: [0;35mPokeChests[0m (ver. 1.0)
+[0;33m  -> [0mLoaded plugin: [0;35mTDW Debug List Search[0m (ver. 1.2)
+[0;1;33mWARNING: Plugin 'Swdfm Utilities' may not be compatible with Essentials v21.1. Trying to load anyway.[0m
+[0;33m  -> [0mLoaded plugin: [0;35mSwdfm Utilities[0m (ver. 2024.12.27)
+[0;33m  -> [0mLoaded plugin: [0;35mLuka's Scripting Utilities[0m (ver. 3.3.2)
+[0;33m  -> [0mLoaded plugin: [0;35mVena's Meal Powers[0m (ver. 1.0)
+[0;33m  -> [0mLoaded plugin: [0;35mMore Pokedex Page : Size Comparison[0m (ver. 2.0.1)
+[0;33m  -> [0mLoaded plugin: [0;35mModular Messages[0m (ver. 2024.12.27)
+[0;33m  -> [0mLoaded plugin: [0;35mMarin's Side Stairs[0m (ver. 1.0)
+[0;1;33mWARNING: Plugin 'Marin's Scripting Utilities' may not be compatible with Essentials v21.1. Trying to load anyway.[0m
+[0;33m  -> [0mLoaded plugin: [0;35mMarin's Scripting Utilities[0m (ver. 2.0)
+[0;1;33mWARNING: Plugin 'Marin's Map Exporter' may not be compatible with Essentials v21.1. Trying to load anyway.[0m
+[0;33m  -> [0mLoaded plugin: [0;35mMarin's Map Exporter[0m (ver. 2.1)
+[0;33m  -> [0mLoaded plugin: [0;35mModern Quest System + UI[0m (ver. 1.1.0)
+[0;33m  -> [0mLoaded plugin: [0;35mPWT System (E21)[0m (ver. 1.0.5)
+[0;33m  -> [0mLoaded plugin: [0;35mLin's Weather System[0m (ver. 1.4.0)
+[0;33m  -> [0mLoaded plugin: [0;35mItem Crafting UI Plus[0m (ver. 3.0.0)
+[0;33m  -> [0mLoaded plugin: [0;35mI&A New Game Advanced[0m (ver. 1.0.0)
+[0;33m  -> [0mLoaded plugin: [0;35m[DBK] Raid Battles[0m (ver. 1.0)
+[0;33m  -> [0mLoaded plugin: [0;35m[DBK] Enhanced Battle UI[0m (ver. 2.0.9)
+[0;33m  -> [0mLoaded plugin: [0;35mI&A - Cooking System[0m (ver. 0.1.0)
+[0;33m  -> [0mLoaded plugin: [0;35mI&A UI[0m (ver. 1.0)
+[0;1;33mWARNING: Plugin 'DiegoWTs Starter Selection' may not be compatible with Essentials v21.1. Trying to load anyway.[0m
+[0;33m  -> [0mLoaded plugin: [0;35mDiegoWTs Starter Selection[0m (ver. 1.3.0)
+[0;33m  -> [0mLoaded plugin: [0;35mDelta Speed Up[0m (ver. 1.2)
+[0;33m  -> [0mLoaded plugin: [0;35mCinematic Item Receive[0m (ver. 1.0.)
+[0;33m  -> [0mLoaded plugin: [0;35mBetter Bitmaps[0m (ver. 1.1)
+[0;33m  -> [0mLoaded plugin: [0;35mI&A Mechanics[0m (ver. 1.0)
+[0;33m  -> [0mLoaded plugin: [0;35mBOTW-Like Item Gathering v21.1 port[0m (ver. 1.3)
+[0;33m  -> [0mLoaded plugin: [0;35mArcky's Utilities[0m (ver. 1.1.0)
+[0;33m  -> [0mLoaded plugin: [0;35mArcky's Region Map[0m (ver. 3.3.0)
+[0;32m  -> [0m[0;32mSuccessfully loaded 43 plugin(s)[0m
+
+[0;33m*** Checking game data ***[0m
+
+[0;33m  -> [0mGame data was not compiled
+
+[0;34mVMS: Integrated Server stopped[0m
+[0;34mVMS: Not connected to a server[0m
+[0;34mVMS: Integrated Server stopped[0m
+[0;34mVMS: Not connected to a server[0m
+GPU Cache Max: 32768
+-------------------------------------------------------------------------------
+Pokemon Amethyst Output Window
+-------------------------------------------------------------------------------
+If you can see this window, you are running the game in Debug Mode. This means
+that you're either playing a debug version of the game, or you're playing from
+within XPX Engine.
+
+Closing this window will close the game. If you want to get rid of this window,
+run the program from the Shell, or download a release version of the game.
+-------------------------------------------------------------------------------
+Debug Output:
+-------------------------------------------------------------------------------
+
+[0;33m*** Checking plugins ***[0m
+
+[0;33m  -> [0mCompiling plugin scripts...[0;32mdone[0m
+[0;33m  -> [0mLoaded plugin: [0;35mv21.1 Hotfixes[0m (ver. 1.0.9)
+[0;1;33mWARNING: Plugin 'rainefallUtils' may not be compatible with Essentials v21.1. Trying to load anyway.[0m
+[0;33m  -> [0mLoaded plugin: [0;35mrainefallUtils[0m (ver. 1.2)
+[0;33m  -> [0mLoaded plugin: [0;35mGeneration 9 Pack[0m (ver. 3.3.2)
+[0;33m  -> [0mLoaded plugin: [0;35mModular UI Scenes[0m (ver. 2.0.9)
+[0;1;33mWARNING: Plugin 'Bag Screen w/int. Party' may not be compatible with Essentials v21.1. Trying to load anyway.[0m
+[0;33m  -> [0mLoaded plugin: [0;35mBag Screen w/int. Party[0m (ver. 2.5.0)
+[0;33m  -> [0mLoaded plugin: [0;35m[MUI] Pokedex Data Page[0m (ver. 2.0.1)
+[0;33m  -> [0mLoaded plugin: [0;35m[MUI] Enhanced Pokemon UI[0m (ver. 1.0.6)
+[0;33m  -> [0mLoaded plugin: [0;35mDeluxe Battle Kit[0m (ver. 1.2.9)
+[0;33m  -> [0mLoaded plugin: [0;35m[MUI] Improved Mementos[0m (ver. 1.0.4)
+[0;33m  -> [0mLoaded plugin: [0;35m[DBK] Terastallization[0m (ver. 1.1.5)
+[0;33m  -> [0mLoaded plugin: [0;35m[DBK] Dynamax[0m (ver. 1.1.3)
+[0;33m  -> [0mLoaded plugin: [0;35m[DBK] Z-Power[0m (ver. 1.1.1)
+[0;33m  -> [0mLoaded plugin: [0;35mCuttable Tall Grass[0m (ver. 1.0)
+[0;33m  -> [0mLoaded plugin: [0;35mWild Item Drops[0m (ver. 1.0)
+[0;1;33mWARNING: Plugin 'Voltseon's Pause Menu' may not be compatible with Essentials v21.1. Trying to load anyway.[0m
+[0;33m  -> [0mLoaded plugin: [0;35mVoltseon's Pause Menu[0m (ver. 2.1)
+[0;1;33mWARNING: Usage of deprecated method "safeExists?(f)" or its alias.
+The method is slated to be removed in Essentials v22.
+Use "FileTest.exist?(f)" instead.[0m
+[0;33m  -> [0mLoaded plugin: [0;35mVoltseon's Multiplayer Solution[0m (ver. 2.2.0)
+[0;33m  -> [0mLoaded plugin: [0;35mPokeChests[0m (ver. 1.0)
+[0;33m  -> [0mLoaded plugin: [0;35mTDW Debug List Search[0m (ver. 1.2)
+[0;1;33mWARNING: Plugin 'Swdfm Utilities' may not be compatible with Essentials v21.1. Trying to load anyway.[0m
+[0;33m  -> [0mLoaded plugin: [0;35mSwdfm Utilities[0m (ver. 2024.12.27)
+[0;33m  -> [0mLoaded plugin: [0;35mLuka's Scripting Utilities[0m (ver. 3.3.2)
+[0;33m  -> [0mLoaded plugin: [0;35mVena's Meal Powers[0m (ver. 1.0)
+[0;33m  -> [0mLoaded plugin: [0;35mMore Pokedex Page : Size Comparison[0m (ver. 2.0.1)
+[0;33m  -> [0mLoaded plugin: [0;35mModular Messages[0m (ver. 2024.12.27)
+[0;33m  -> [0mLoaded plugin: [0;35mMarin's Side Stairs[0m (ver. 1.0)
+[0;1;33mWARNING: Plugin 'Marin's Scripting Utilities' may not be compatible with Essentials v21.1. Trying to load anyway.[0m
+[0;33m  -> [0mLoaded plugin: [0;35mMarin's Scripting Utilities[0m (ver. 2.0)
+[0;1;33mWARNING: Plugin 'Marin's Map Exporter' may not be compatible with Essentials v21.1. Trying to load anyway.[0m
+[0;33m  -> [0mLoaded plugin: [0;35mMarin's Map Exporter[0m (ver. 2.1)
+[0;33m  -> [0mLoaded plugin: [0;35mModern Quest System + UI[0m (ver. 1.1.0)
+[0;33m  -> [0mLoaded plugin: [0;35mPWT System (E21)[0m (ver. 1.0.5)
+[0;33m  -> [0mLoaded plugin: [0;35mLin's Weather System[0m (ver. 1.4.0)
+[0;33m  -> [0mLoaded plugin: [0;35mItem Crafting UI Plus[0m (ver. 3.0.0)
+[0;33m  -> [0mLoaded plugin: [0;35mI&A New Game Advanced[0m (ver. 1.0.0)
+[0;33m  -> [0mLoaded plugin: [0;35m[DBK] Raid Battles[0m (ver. 1.0)
+[0;33m  -> [0mLoaded plugin: [0;35m[DBK] Enhanced Battle UI[0m (ver. 2.0.9)
+[0;33m  -> [0mLoaded plugin: [0;35mI&A - Cooking System[0m (ver. 0.1.0)
+[0;33m  -> [0mLoaded plugin: [0;35mI&A UI[0m (ver. 1.0)
+[0;1;33mWARNING: Plugin 'DiegoWTs Starter Selection' may not be compatible with Essentials v21.1. Trying to load anyway.[0m
+[0;33m  -> [0mLoaded plugin: [0;35mDiegoWTs Starter Selection[0m (ver. 1.3.0)
+[0;33m  -> [0mLoaded plugin: [0;35mDelta Speed Up[0m (ver. 1.2)
+[0;33m  -> [0mLoaded plugin: [0;35mCinematic Item Receive[0m (ver. 1.0.)
+[0;33m  -> [0mLoaded plugin: [0;35mBetter Bitmaps[0m (ver. 1.1)
+[0;33m  -> [0mLoaded plugin: [0;35mI&A Mechanics[0m (ver. 1.0)
+[0;33m  -> [0mLoaded plugin: [0;35mBOTW-Like Item Gathering v21.1 port[0m (ver. 1.3)
+[0;33m  -> [0mLoaded plugin: [0;35mArcky's Utilities[0m (ver. 1.1.0)
+[0;33m  -> [0mLoaded plugin: [0;35mArcky's Region Map[0m (ver. 3.3.0)
+[0;32m  -> [0m[0;32mSuccessfully loaded 43 plugin(s)[0m
+
+[0;33m*** Checking game data ***[0m
+
+[0;33m  -> [0mCompiling PBS file [0;36mtown_map.txt[0m....[0;32mdone[0m
+[0;33m  -> [0mCompiling PBS file [0;36mmap_connections.txt[0m...[0;32mdone[0m
+[0;33m  -> [0mCompiling PBS file [0;36mtypes.txt[0m....[0;32mdone[0m
+[0;33m  -> [0mCompiling PBS file [0;36mtypes_stellar.txt[0m....[0;32mdone[0m
+[0;33m  -> [0mCompiling PBS file [0;36mabilities.txt[0m......[0;32mdone[0m
+[0;33m  -> [0mCompiling PBS file [0;36mabilities_1_Gen_9_Pack.txt[0m....[0;32mdone[0m
+[0;33m  -> [0mCompiling PBS file [0;36mabilities_2_IA.txt[0m.....[0;32mdone[0m
+[0;33m  -> [0mCompiling PBS file [0;36mmoves.txt[0m...........[0;32mdone[0m
+[0;33m  -> [0mCompiling PBS file [0;36mmoves_Gen_9_Pack.txt[0m....[0;32mdone[0m
+[0;33m  -> [0mCompiling PBS file [0;36mmoves_dynamax.txt[0m....[0;32mdone[0m
+[0;33m  -> [0mCompiling PBS file [0;36mmoves_iolite_amethyst.txt[0m....[0;32mdone[0m
+[0;33m  -> [0mCompiling PBS file [0;36mmoves_max_ia.txt[0m....[0;32mdone[0m
+[0;33m  -> [0mCompiling PBS file [0;36mmoves_terastal.txt[0m....[0;32mdone[0m
+[0;33m  -> [0mCompiling PBS file [0;36mmoves_zpower.txt[0m....[0;32mdone[0m
+[0;33m  -> [0mCompiling PBS file [0;36mitems.txt[0m..........[0;32mdone[0m
+[0;33m  -> [0mCompiling PBS file [0;36mitems_Gen_9_Pack.txt[0m.....[0;32mdone[0m
+[0;33m  -> [0mCompiling PBS file [0;36mitems_Gen_9_Pack_TM.txt[0m......[0;32mdone[0m
+[0;33m  -> [0mCompiling PBS file [0;36mitems_TM_materials.txt[0m........[0;32mdone[0m
+[0;33m  -> [0mCompiling PBS file [0;36mitems_TM_materials_Niphos.txt[0m....[0;32mdone[0m
+[0;33m  -> [0mCompiling PBS file [0;36mitems_TM_materials_Nordra.txt[0m....[0;32mdone[0m
+[0;33m  -> [0mCompiling PBS file [0;36mitems_dynamax.txt[0m....[0;32mdone[0m
+[0;33m  -> [0mCompiling PBS file [0;36mitems_iolite_amethyst.txt[0m....[0;32mdone[0m
+[0;33m  -> [0mCompiling PBS file [0;36mitems_mark_charm.txt[0m....[0;32mdone[0m
+[0;33m  -> [0mCompiling PBS file [0;36mitems_raid_bait.txt[0m....[0;32mdone[0m
+[0;33m  -> [0mCompiling PBS file [0;36mitems_terastal.txt[0m....[0;32mdone[0m
+[0;33m  -> [0mCompiling PBS file [0;36mitems_zpower.txt[0m....[0;32mdone[0m
+[0;33m  -> [0mCompiling PBS file [0;36mberry_plants.txt[0m....[0;32mdone[0m
+[0;33m  -> [0mCompiling PBS file [0;36mpokemon.txt[0m............[0;32mdone[0m
+[0;33m  -> [0mCompiling PBS file [0;36mpokemon_base_1_Gen_9_Pack.txt[0m.....[0;32mdone[0m
+[0;33m  -> [0mCompiling PBS file [0;36mpokemon_base_2_nordra.txt[0m....[0;32mdone[0m
+[0;33m  -> [0mCompiling PBS file [0;36mpokemon_base_3_niphos.txt[0m....[0;32mdone[0m
+[0;33m  -> [0mCompiling PBS file [0;36mpokemon_base_5_maisla.txt[0m....[0;32mdone[0m
+[0;33m  -> [0mCompiling PBS file [0;36mpokemon_forms.txt[0m.......[0;32mdone[0m
+[0;33m  -> [0mCompiling PBS file [0;36mpokemon_forms_Fake.txt[0m....[0;32mdone[0m
+[0;33m  -> [0mCompiling PBS file [0;36mpokemon_forms_Gen_9_Pack.txt[0m.....[0;32mdone[0m
+[0;33m  -> [0mCompiling PBS file [0;36mpokemon_forms_gmax.txt[0m....[0;32mdone[0m
+[0;33m  -> [0mCompiling PBS file [0;36mpokemon_forms_pikachu_caps.txt[0m....[0;32mdone[0m
+[0;33m  -> [0mCompiling PBS file [0;36mpokemon_metrics.txt[0m..............[0;32mdone[0m
+[0;33m  -> [0mCompiling PBS file [0;36mpokemon_metrics_Gen_9_Pack.txt[0m......[0;32mdone[0m
+[0;33m  -> [0mCompiling PBS file [0;36mpokemon_metrics_gmax.txt[0m....[0;32mdone[0m
+[0;33m  -> [0mCompiling PBS file [0;36mpokemon_metrics_ia.txt[0m....[0;32mdone[0m
+[0;33m  -> [0mCompiling PBS file [0;36mregional_dexes.txt[0m...[0;32mdone[0m
+[0;33m  -> [0mCompiling PBS file [0;36mribbons.txt[0m.....[0;32mdone[0m
+[0;33m  -> [0mCompiling PBS file [0;36mencounters.txt[0m......[0;32mdone[0m
+[0;33m  -> [0mCompiling PBS file [0;36mencounters_Niphos.txt[0m.....[0;32mdone[0m
+[0;33m  -> [0mCompiling PBS file [0;36mencounters_Nordra.txt[0m....[0;32mdone[0m
+[0;33m  -> [0mCompiling PBS file [0;36mtrainer_types.txt[0m......[0;32mdone[0m
+[0;33m  -> [0mCompiling PBS file [0;36mtrainer_types_iolite_amethyst.txt[0m....[0;32mdone[0m
+[0;33m  -> [0mCompiling PBS file [0;36mtrainer_types_tournament.txt[0m....[0;32mdone[0m
+[0;33m  -> [0mCompiling PBS file [0;36mtrainers.txt[0m.....[0;32mdone[0m
+[0;33m  -> [0mCompiling PBS file [0;36mtrainers_amethyst.txt[0m.....[0;32mdone[0m
+[0;33m  -> [0mCompiling PBS file [0;36mtrainers_iolite.txt[0m...[0;32mdone[0m
+[0;33m  -> [0mCompiling PBS file [0;36mtrainers_quartz.txt[0m....[0;32mdone[0m
+[0;33m  -> [0mCompiling PBS file [0;36mbattle_facility_lists.txt[0m........[0;32mdone[0m
+[0;33m  -> [0mCompiling PBS file [0;36mmetadata.txt[0m....[0;32mdone[0m
+[0;33m  -> [0mCompiling PBS file [0;36mmap_metadata.txt[0m....[0;32mdone[0m
+[0;33m  -> [0mCompiling PBS file [0;36mdungeon_tilesets.txt[0m....[0;32mdone[0m
+[0;33m  -> [0mCompiling PBS file [0;36mdungeon_parameters.txt[0m....[0;32mdone[0m
+[0;33m  -> [0mCompiling PBS file [0;36mphone.txt[0m....[0;32mdone[0m
+[0;33m  -> [0mCompiling PBS file [0;36mrecipes.txt[0m....[0;32mdone[0m
+[0;33m  -> [0mCompiling PBS file [0;36madventure_maps.txt[0m....[0;32mdone[0m
+[0;33m  -> [0mCompiling animations...................[0;32mdone[0m
+[0;33m  -> [0mProcessing 112 maps.....[0;32mdone[0m
+[0;33m  -> [0mProcessing common events...[0;32mdone[0m
+[0;33m  -> [0mSaving messages...[0;32mdone[0m
+[0;32m  -> [0m[0;32mSuccessfully compiled all game data[0m
+
+[0;1;33mWARNING: Usage of deprecated method "safeExists?(f)" or its alias.
+The method is slated to be removed in Essentials v22.
+Use "FileTest.exist?(f)" instead.[0mGPU Cache Max: 32768
+-------------------------------------------------------------------------------
+Pokemon Amethyst Output Window
+-------------------------------------------------------------------------------
+If you can see this window, you are running the game in Debug Mode. This means
+that you're either playing a debug version of the game, or you're playing from
+within XPX Engine.
+
+Closing this window will close the game. If you want to get rid of this window,
+run the program from the Shell, or download a release version of the game.
+-------------------------------------------------------------------------------
+Debug Output:
+-------------------------------------------------------------------------------
+
+[0;33m*** Checking plugins ***[0m
+
+[0;33m  -> [0mPlugins were not compiled
+[0;33m  -> [0mLoaded plugin: [0;35mv21.1 Hotfixes[0m (ver. 1.0.9)
+[0;1;33mWARNING: Plugin 'rainefallUtils' may not be compatible with Essentials v21.1. Trying to load anyway.[0m
+[0;33m  -> [0mLoaded plugin: [0;35mrainefallUtils[0m (ver. 1.2)
+[0;33m  -> [0mLoaded plugin: [0;35mGeneration 9 Pack[0m (ver. 3.3.2)
+[0;33m  -> [0mLoaded plugin: [0;35mModular UI Scenes[0m (ver. 2.0.9)
+[0;1;33mWARNING: Plugin 'Bag Screen w/int. Party' may not be compatible with Essentials v21.1. Trying to load anyway.[0m
+[0;33m  -> [0mLoaded plugin: [0;35mBag Screen w/int. Party[0m (ver. 2.5.0)
+[0;33m  -> [0mLoaded plugin: [0;35m[MUI] Pokedex Data Page[0m (ver. 2.0.1)
+[0;33m  -> [0mLoaded plugin: [0;35m[MUI] Enhanced Pokemon UI[0m (ver. 1.0.6)
+[0;33m  -> [0mLoaded plugin: [0;35mDeluxe Battle Kit[0m (ver. 1.2.9)
+[0;33m  -> [0mLoaded plugin: [0;35m[MUI] Improved Mementos[0m (ver. 1.0.4)
+[0;33m  -> [0mLoaded plugin: [0;35m[DBK] Terastallization[0m (ver. 1.1.5)
+[0;33m  -> [0mLoaded plugin: [0;35m[DBK] Dynamax[0m (ver. 1.1.3)
+[0;33m  -> [0mLoaded plugin: [0;35m[DBK] Z-Power[0m (ver. 1.1.1)
+[0;33m  -> [0mLoaded plugin: [0;35mCuttable Tall Grass[0m (ver. 1.0)
+[0;33m  -> [0mLoaded plugin: [0;35mWild Item Drops[0m (ver. 1.0)
+[0;1;33mWARNING: Plugin 'Voltseon's Pause Menu' may not be compatible with Essentials v21.1. Trying to load anyway.[0m
+[0;33m  -> [0mLoaded plugin: [0;35mVoltseon's Pause Menu[0m (ver. 2.1)
+[0;1;33mWARNING: Usage of deprecated method "safeExists?(f)" or its alias.
+The method is slated to be removed in Essentials v22.
+Use "FileTest.exist?(f)" instead.[0m
+[0;33m  -> [0mLoaded plugin: [0;35mVoltseon's Multiplayer Solution[0m (ver. 2.2.0)
+[0;33m  -> [0mLoaded plugin: [0;35mPokeChests[0m (ver. 1.0)
+[0;33m  -> [0mLoaded plugin: [0;35mTDW Debug List Search[0m (ver. 1.2)
+[0;1;33mWARNING: Plugin 'Swdfm Utilities' may not be compatible with Essentials v21.1. Trying to load anyway.[0m
+[0;33m  -> [0mLoaded plugin: [0;35mSwdfm Utilities[0m (ver. 2024.12.27)
+[0;33m  -> [0mLoaded plugin: [0;35mLuka's Scripting Utilities[0m (ver. 3.3.2)
+[0;33m  -> [0mLoaded plugin: [0;35mVena's Meal Powers[0m (ver. 1.0)
+[0;33m  -> [0mLoaded plugin: [0;35mMore Pokedex Page : Size Comparison[0m (ver. 2.0.1)
+[0;33m  -> [0mLoaded plugin: [0;35mModular Messages[0m (ver. 2024.12.27)
+[0;33m  -> [0mLoaded plugin: [0;35mMarin's Side Stairs[0m (ver. 1.0)
+[0;1;33mWARNING: Plugin 'Marin's Scripting Utilities' may not be compatible with Essentials v21.1. Trying to load anyway.[0m
+[0;33m  -> [0mLoaded plugin: [0;35mMarin's Scripting Utilities[0m (ver. 2.0)
+[0;1;33mWARNING: Plugin 'Marin's Map Exporter' may not be compatible with Essentials v21.1. Trying to load anyway.[0m
+[0;33m  -> [0mLoaded plugin: [0;35mMarin's Map Exporter[0m (ver. 2.1)
+[0;33m  -> [0mLoaded plugin: [0;35mModern Quest System + UI[0m (ver. 1.1.0)
+[0;33m  -> [0mLoaded plugin: [0;35mPWT System (E21)[0m (ver. 1.0.5)
+[0;33m  -> [0mLoaded plugin: [0;35mLin's Weather System[0m (ver. 1.4.0)
+[0;33m  -> [0mLoaded plugin: [0;35mItem Crafting UI Plus[0m (ver. 3.0.0)
+[0;33m  -> [0mLoaded plugin: [0;35mI&A New Game Advanced[0m (ver. 1.0.0)
+[0;33m  -> [0mLoaded plugin: [0;35m[DBK] Raid Battles[0m (ver. 1.0)
+[0;33m  -> [0mLoaded plugin: [0;35m[DBK] Enhanced Battle UI[0m (ver. 2.0.9)
+[0;33m  -> [0mLoaded plugin: [0;35mI&A - Cooking System[0m (ver. 0.1.0)
+[0;33m  -> [0mLoaded plugin: [0;35mI&A UI[0m (ver. 1.0)
+[0;1;33mWARNING: Plugin 'DiegoWTs Starter Selection' may not be compatible with Essentials v21.1. Trying to load anyway.[0m
+[0;33m  -> [0mLoaded plugin: [0;35mDiegoWTs Starter Selection[0m (ver. 1.3.0)
+[0;33m  -> [0mLoaded plugin: [0;35mDelta Speed Up[0m (ver. 1.2)
+[0;33m  -> [0mLoaded plugin: [0;35mCinematic Item Receive[0m (ver. 1.0.)
+[0;33m  -> [0mLoaded plugin: [0;35mBetter Bitmaps[0m (ver. 1.1)
+[0;33m  -> [0mLoaded plugin: [0;35mI&A Mechanics[0m (ver. 1.0)
+[0;33m  -> [0mLoaded plugin: [0;35mBOTW-Like Item Gathering v21.1 port[0m (ver. 1.3)
+[0;33m  -> [0mLoaded plugin: [0;35mArcky's Utilities[0m (ver. 1.1.0)
+[0;33m  -> [0mLoaded plugin: [0;35mArcky's Region Map[0m (ver. 3.3.0)
+[0;32m  -> [0m[0;32mSuccessfully loaded 43 plugin(s)[0m
+
+[0;33m*** Checking game data ***[0m
+
+[0;33m  -> [0mGame data was not compiled
+
+[0;1;33mWARNING: Usage of deprecated method "safeExists?(f)" or its alias.
+The method is slated to be removed in Essentials v22.
+Use "FileTest.exist?(f)" instead.[0m
+Search for what?
+The Bag was cleared.
+Choose the number of items.
+The Bag was filled with 1 of each item.
+You set up the Cooking Set.
+What would you like to do?
+The cooking menu hasn't been implemented yet.
+[0;1;33mWARNING: Usage of deprecated method "safeExists?(f)" or its alias.
+The method is slated to be removed in Essentials v22.
+Use "FileTest.exist?(f)" instead.[0m
+You set up the Cooking Set.
+What would you like to do?
+The cooking menu hasn't been implemented yet.
+You set up the Cooking Set.
+What would you like to do?
+[0;1;33mWARNING: Usage of deprecated method "safeExists?(f)" or its alias.
+The method is slated to be removed in Essentials v22.
+Use "FileTest.exist?(f)" instead.[0m
+[0;1;33mWARNING: Usage of deprecated method "safeExists?(f)" or its alias.
+The method is slated to be removed in Essentials v22.
+Use "FileTest.exist?(f)" instead.[0m
+Would you like to save the game?
+{:difficulty=>1, :nuzlocke=>false, :prof_oak_challenge=>false, :inverse=>false, :level_caps=>false, :no_bag_items_battle=>false, :nuzlocke_options=>{:faint_rule=>0, :dupes_clause=>false, :shiny_clause=>false, :nickname_clause=>false, :hm_clause=>false, :lose_condition=>1, :lose_result=>2, :pokecenter_limit=>-1}}
+\se[]Vena saved the game.\me[GUI save game]\wtnp[20]
+[0;34mVMS: Integrated Server stopped[0m
+[0;34mVMS: Not connected to a server[0m
+[0;34mVMS: Integrated Server stopped[0m
+[0;34mVMS: Not connected to a server[0m
+GPU Cache Max: 32768
+-------------------------------------------------------------------------------
+Pokemon Amethyst Output Window
+-------------------------------------------------------------------------------
+If you can see this window, you are running the game in Debug Mode. This means
+that you're either playing a debug version of the game, or you're playing from
+within XPX Engine.
+
+Closing this window will close the game. If you want to get rid of this window,
+run the program from the Shell, or download a release version of the game.
+-------------------------------------------------------------------------------
+Debug Output:
+-------------------------------------------------------------------------------
+
+[0;33m*** Checking plugins ***[0m
+
+[0;33m  -> [0mCompiling plugin scripts...[0;32mdone[0m
+[0;33m  -> [0mLoaded plugin: [0;35mv21.1 Hotfixes[0m (ver. 1.0.9)
+[0;1;33mWARNING: Plugin 'rainefallUtils' may not be compatible with Essentials v21.1. Trying to load anyway.[0m
+[0;33m  -> [0mLoaded plugin: [0;35mrainefallUtils[0m (ver. 1.2)
+[0;33m  -> [0mLoaded plugin: [0;35mGeneration 9 Pack[0m (ver. 3.3.2)
+[0;33m  -> [0mLoaded plugin: [0;35mModular UI Scenes[0m (ver. 2.0.9)
+[0;1;33mWARNING: Plugin 'Bag Screen w/int. Party' may not be compatible with Essentials v21.1. Trying to load anyway.[0m
+[0;33m  -> [0mLoaded plugin: [0;35mBag Screen w/int. Party[0m (ver. 2.5.0)
+[0;33m  -> [0mLoaded plugin: [0;35m[MUI] Pokedex Data Page[0m (ver. 2.0.1)
+[0;33m  -> [0mLoaded plugin: [0;35m[MUI] Enhanced Pokemon UI[0m (ver. 1.0.6)
+[0;33m  -> [0mLoaded plugin: [0;35mDeluxe Battle Kit[0m (ver. 1.2.9)
+[0;33m  -> [0mLoaded plugin: [0;35m[MUI] Improved Mementos[0m (ver. 1.0.4)
+[0;33m  -> [0mLoaded plugin: [0;35m[DBK] Terastallization[0m (ver. 1.1.5)
+[0;33m  -> [0mLoaded plugin: [0;35m[DBK] Dynamax[0m (ver. 1.1.3)
+[0;33m  -> [0mLoaded plugin: [0;35m[DBK] Z-Power[0m (ver. 1.1.1)
+[0;33m  -> [0mLoaded plugin: [0;35mCuttable Tall Grass[0m (ver. 1.0)
+[0;33m  -> [0mLoaded plugin: [0;35mWild Item Drops[0m (ver. 1.0)
+[0;1;33mWARNING: Plugin 'Voltseon's Pause Menu' may not be compatible with Essentials v21.1. Trying to load anyway.[0m
+[0;33m  -> [0mLoaded plugin: [0;35mVoltseon's Pause Menu[0m (ver. 2.1)
+[0;1;33mWARNING: Usage of deprecated method "safeExists?(f)" or its alias.
+The method is slated to be removed in Essentials v22.
+Use "FileTest.exist?(f)" instead.[0m
+[0;33m  -> [0mLoaded plugin: [0;35mVoltseon's Multiplayer Solution[0m (ver. 2.2.0)
+[0;33m  -> [0mLoaded plugin: [0;35mPokeChests[0m (ver. 1.0)
+[0;33m  -> [0mLoaded plugin: [0;35mTDW Debug List Search[0m (ver. 1.2)
+[0;1;33mWARNING: Plugin 'Swdfm Utilities' may not be compatible with Essentials v21.1. Trying to load anyway.[0m
+[0;33m  -> [0mLoaded plugin: [0;35mSwdfm Utilities[0m (ver. 2024.12.27)
+[0;33m  -> [0mLoaded plugin: [0;35mLuka's Scripting Utilities[0m (ver. 3.3.2)
+[0;33m  -> [0mLoaded plugin: [0;35mVena's Meal Powers[0m (ver. 1.0)
+[0;33m  -> [0mLoaded plugin: [0;35mMore Pokedex Page : Size Comparison[0m (ver. 2.0.1)
+[0;33m  -> [0mLoaded plugin: [0;35mModular Messages[0m (ver. 2024.12.27)
+[0;33m  -> [0mLoaded plugin: [0;35mMarin's Side Stairs[0m (ver. 1.0)
+[0;1;33mWARNING: Plugin 'Marin's Scripting Utilities' may not be compatible with Essentials v21.1. Trying to load anyway.[0m
+[0;33m  -> [0mLoaded plugin: [0;35mMarin's Scripting Utilities[0m (ver. 2.0)
+[0;1;33mWARNING: Plugin 'Marin's Map Exporter' may not be compatible with Essentials v21.1. Trying to load anyway.[0m
+[0;33m  -> [0mLoaded plugin: [0;35mMarin's Map Exporter[0m (ver. 2.1)
+[0;33m  -> [0mLoaded plugin: [0;35mModern Quest System + UI[0m (ver. 1.1.0)
+[0;33m  -> [0mLoaded plugin: [0;35mPWT System (E21)[0m (ver. 1.0.5)
+[0;33m  -> [0mLoaded plugin: [0;35mLin's Weather System[0m (ver. 1.4.0)
+[0;33m  -> [0mLoaded plugin: [0;35mItem Crafting UI Plus[0m (ver. 3.0.0)
+[0;33m  -> [0mLoaded plugin: [0;35mI&A New Game Advanced[0m (ver. 1.0.0)
+[0;33m  -> [0mLoaded plugin: [0;35m[DBK] Raid Battles[0m (ver. 1.0)
+[0;33m  -> [0mLoaded plugin: [0;35m[DBK] Enhanced Battle UI[0m (ver. 2.0.9)
+[0;33m  -> [0mLoaded plugin: [0;35mI&A - Cooking System[0m (ver. 0.1.0)
+[0;33m  -> [0mLoaded plugin: [0;35mI&A UI[0m (ver. 1.0)
+[0;1;33mWARNING: Plugin 'DiegoWTs Starter Selection' may not be compatible with Essentials v21.1. Trying to load anyway.[0m
+[0;33m  -> [0mLoaded plugin: [0;35mDiegoWTs Starter Selection[0m (ver. 1.3.0)
+[0;33m  -> [0mLoaded plugin: [0;35mDelta Speed Up[0m (ver. 1.2)
+[0;33m  -> [0mLoaded plugin: [0;35mCinematic Item Receive[0m (ver. 1.0.)
+[0;33m  -> [0mLoaded plugin: [0;35mBetter Bitmaps[0m (ver. 1.1)
+[0;33m  -> [0mLoaded plugin: [0;35mI&A Mechanics[0m (ver. 1.0)
+[0;33m  -> [0mLoaded plugin: [0;35mBOTW-Like Item Gathering v21.1 port[0m (ver. 1.3)
+[0;33m  -> [0mLoaded plugin: [0;35mArcky's Utilities[0m (ver. 1.1.0)
+[0;33m  -> [0mLoaded plugin: [0;35mArcky's Region Map[0m (ver. 3.3.0)
+[0;32m  -> [0m[0;32mSuccessfully loaded 43 plugin(s)[0m
+
+[0;33m*** Checking game data ***[0m
+
+[0;33m  -> [0mCompiling PBS file [0;36mtown_map.txt[0m....[0;32mdone[0m
+[0;33m  -> [0mCompiling PBS file [0;36mmap_connections.txt[0m...[0;32mdone[0m
+[0;33m  -> [0mCompiling PBS file [0;36mtypes.txt[0m....[0;32mdone[0m
+[0;33m  -> [0mCompiling PBS file [0;36mtypes_stellar.txt[0m....[0;32mdone[0m
+[0;33m  -> [0mCompiling PBS file [0;36mabilities.txt[0m......[0;32mdone[0m
+[0;33m  -> [0mCompiling PBS file [0;36mabilities_1_Gen_9_Pack.txt[0m....[0;32mdone[0m
+[0;33m  -> [0mCompiling PBS file [0;36mabilities_2_IA.txt[0m.....[0;32mdone[0m
+[0;33m  -> [0mCompiling PBS file [0;36mmoves.txt[0m...........[0;32mdone[0m
+[0;33m  -> [0mCompiling PBS file [0;36mmoves_Gen_9_Pack.txt[0m....[0;32mdone[0m
+[0;33m  -> [0mCompiling PBS file [0;36mmoves_dynamax.txt[0m....[0;32mdone[0m
+[0;33m  -> [0mCompiling PBS file [0;36mmoves_iolite_amethyst.txt[0m....[0;32mdone[0m
+[0;33m  -> [0mCompiling PBS file [0;36mmoves_max_ia.txt[0m....[0;32mdone[0m
+[0;33m  -> [0mCompiling PBS file [0;36mmoves_terastal.txt[0m....[0;32mdone[0m
+[0;33m  -> [0mCompiling PBS file [0;36mmoves_zpower.txt[0m....[0;32mdone[0m
+[0;33m  -> [0mCompiling PBS file [0;36mitems.txt[0m..........[0;32mdone[0m
+[0;33m  -> [0mCompiling PBS file [0;36mitems_Gen_9_Pack.txt[0m.....[0;32mdone[0m
+[0;33m  -> [0mCompiling PBS file [0;36mitems_Gen_9_Pack_TM.txt[0m......[0;32mdone[0m
+[0;33m  -> [0mCompiling PBS file [0;36mitems_TM_materials.txt[0m........[0;32mdone[0m
+[0;33m  -> [0mCompiling PBS file [0;36mitems_TM_materials_Niphos.txt[0m....[0;32mdone[0m
+[0;33m  -> [0mCompiling PBS file [0;36mitems_TM_materials_Nordra.txt[0m....[0;32mdone[0m
+[0;33m  -> [0mCompiling PBS file [0;36mitems_dynamax.txt[0m....[0;32mdone[0m
+[0;33m  -> [0mCompiling PBS file [0;36mitems_ingredients.txt[0m....[0;32mdone[0m
+[0;33m  -> [0mCompiling PBS file [0;36mitems_iolite_amethyst.txt[0m....[0;32mdone[0m
+[0;33m  -> [0mCompiling PBS file [0;36mitems_mark_charm.txt[0m....[0;32mdone[0m
+[0;33m  -> [0mCompiling PBS file [0;36mitems_raid_bait.txt[0m....[0;32mdone[0m
+[0;33m  -> [0mCompiling PBS file [0;36mitems_terastal.txt[0m....[0;32mdone[0m
+[0;33m  -> [0mCompiling PBS file [0;36mitems_zpower.txt[0m....[0;32mdone[0m
+[0;33m  -> [0mCompiling PBS file [0;36mberry_plants.txt[0m....[0;32mdone[0m
+[0;33m  -> [0mCompiling PBS file [0;36mpokemon.txt[0m............[0;32mdone[0m
+[0;33m  -> [0mCompiling PBS file [0;36mpokemon_base_1_Gen_9_Pack.txt[0m.....[0;32mdone[0m
+[0;33m  -> [0mCompiling PBS file [0;36mpokemon_base_2_nordra.txt[0m....[0;32mdone[0m
+[0;33m  -> [0mCompiling PBS file [0;36mpokemon_base_3_niphos.txt[0m....[0;32mdone[0m
+[0;33m  -> [0mCompiling PBS file [0;36mpokemon_base_5_maisla.txt[0m....[0;32mdone[0m
+[0;33m  -> [0mCompiling PBS file [0;36mpokemon_forms.txt[0m.......[0;32mdone[0m
+[0;33m  -> [0mCompiling PBS file [0;36mpokemon_forms_Fake.txt[0m....[0;32mdone[0m
+[0;33m  -> [0mCompiling PBS file [0;36mpokemon_forms_Gen_9_Pack.txt[0m.....[0;32mdone[0m
+[0;33m  -> [0mCompiling PBS file [0;36mpokemon_forms_gmax.txt[0m....[0;32mdone[0m
+[0;33m  -> [0mCompiling PBS file [0;36mpokemon_forms_pikachu_caps.txt[0m....[0;32mdone[0m
+[0;33m  -> [0mCompiling PBS file [0;36mpokemon_metrics.txt[0m..............[0;32mdone[0m
+[0;33m  -> [0mCompiling PBS file [0;36mpokemon_metrics_Gen_9_Pack.txt[0m......[0;32mdone[0m
+[0;33m  -> [0mCompiling PBS file [0;36mpokemon_metrics_gmax.txt[0m....[0;32mdone[0m
+[0;33m  -> [0mCompiling PBS file [0;36mpokemon_metrics_ia.txt[0m....[0;32mdone[0m
+[0;33m  -> [0mCompiling PBS file [0;36mregional_dexes.txt[0m...[0;32mdone[0m
+[0;33m  -> [0mCompiling PBS file [0;36mribbons.txt[0m.....[0;32mdone[0m
+[0;33m  -> [0mCompiling PBS file [0;36mencounters.txt[0m......[0;32mdone[0m
+[0;33m  -> [0mCompiling PBS file [0;36mencounters_Niphos.txt[0m.....[0;32mdone[0m
+[0;33m  -> [0mCompiling PBS file [0;36mencounters_Nordra.txt[0m....[0;32mdone[0m
+[0;33m  -> [0mCompiling PBS file [0;36mtrainer_types.txt[0m......[0;32mdone[0m
+[0;33m  -> [0mCompiling PBS file [0;36mtrainer_types_iolite_amethyst.txt[0m....[0;32mdone[0m
+[0;33m  -> [0mCompiling PBS file [0;36mtrainer_types_tournament.txt[0m....[0;32mdone[0m
+[0;33m  -> [0mCompiling PBS file [0;36mtrainers.txt[0m.....[0;32mdone[0m
+[0;33m  -> [0mCompiling PBS file [0;36mtrainers_amethyst.txt[0m.....[0;32mdone[0m
+[0;33m  -> [0mCompiling PBS file [0;36mtrainers_iolite.txt[0m...[0;32mdone[0m
+[0;33m  -> [0mCompiling PBS file [0;36mtrainers_quartz.txt[0m....[0;32mdone[0m
+[0;33m  -> [0mCompiling PBS file [0;36mbattle_facility_lists.txt[0m........[0;32mdone[0m
+[0;33m  -> [0mCompiling PBS file [0;36mmetadata.txt[0m....[0;32mdone[0m
+[0;33m  -> [0mCompiling PBS file [0;36mmap_metadata.txt[0m....[0;32mdone[0m
+[0;33m  -> [0mCompiling PBS file [0;36mdungeon_tilesets.txt[0m....[0;32mdone[0m
+[0;33m  -> [0mCompiling PBS file [0;36mdungeon_parameters.txt[0m....[0;32mdone[0m
+[0;33m  -> [0mCompiling PBS file [0;36mphone.txt[0m....[0;32mdone[0m
+[0;33m  -> [0mCompiling PBS file [0;36mrecipes.txt[0m....[0;32mdone[0m
+[0;33m  -> [0mCompiling PBS file [0;36madventure_maps.txt[0m....[0;32mdone[0m
+[0;33m  -> [0mCompiling PBS file [0;36mingredients.txt[0m....[0;32mdone[0m
+[0;33m  -> [0mCompiling animations...................[0;32mdone[0m
+[0;33m  -> [0mProcessing 112 maps.....[0;32mdone[0m
+[0;33m  -> [0mProcessing common events...[0;32mdone[0m
+[0;33m  -> [0mSaving messages...[0;32mdone[0m
+[0;32m  -> [0m[0;32mSuccessfully compiled all game data[0m
+
+[0;1;33mWARNING: Usage of deprecated method "safeExists?(f)" or its alias.
+The method is slated to be removed in Essentials v22.
+Use "FileTest.exist?(f)" instead.[0m
+[0;1;33mWARNING: Usage of deprecated method "safeExists?(f)" or its alias.
+The method is slated to be removed in Essentials v22.
+Use "FileTest.exist?(f)" instead.[0m
+Choose the number of items.
+The Bag was cleared.
+Choose the number of items.
+The Bag was filled with 1 of each item.
+[0;34mVMS: Integrated Server stopped[0m
+[0;34mVMS: Not connected to a server[0m
+[0;34mVMS: Integrated Server stopped[0m
+[0;34mVMS: Not connected to a server[0m
+GPU Cache Max: 32768
+-------------------------------------------------------------------------------
+Pokemon Amethyst Output Window
+-------------------------------------------------------------------------------
+If you can see this window, you are running the game in Debug Mode. This means
+that you're either playing a debug version of the game, or you're playing from
+within XPX Engine.
+
+Closing this window will close the game. If you want to get rid of this window,
+run the program from the Shell, or download a release version of the game.
+-------------------------------------------------------------------------------
+Debug Output:
+-------------------------------------------------------------------------------
+
+[0;33m*** Checking plugins ***[0m
+
+[0;33m  -> [0mCompiling plugin scripts...[0;32mdone[0m
+[0;33m  -> [0mLoaded plugin: [0;35mv21.1 Hotfixes[0m (ver. 1.0.9)
+[0;1;33mWARNING: Plugin 'rainefallUtils' may not be compatible with Essentials v21.1. Trying to load anyway.[0m
+[0;33m  -> [0mLoaded plugin: [0;35mrainefallUtils[0m (ver. 1.2)
+[0;33m  -> [0mLoaded plugin: [0;35mGeneration 9 Pack[0m (ver. 3.3.2)
+[0;33m  -> [0mLoaded plugin: [0;35mModular UI Scenes[0m (ver. 2.0.9)
+[0;1;33mWARNING: Plugin 'Bag Screen w/int. Party' may not be compatible with Essentials v21.1. Trying to load anyway.[0m
+[0;33m  -> [0mLoaded plugin: [0;35mBag Screen w/int. Party[0m (ver. 2.5.0)
+[0;33m  -> [0mLoaded plugin: [0;35m[MUI] Pokedex Data Page[0m (ver. 2.0.1)
+[0;33m  -> [0mLoaded plugin: [0;35m[MUI] Enhanced Pokemon UI[0m (ver. 1.0.6)
+[0;33m  -> [0mLoaded plugin: [0;35mDeluxe Battle Kit[0m (ver. 1.2.9)
+[0;33m  -> [0mLoaded plugin: [0;35m[MUI] Improved Mementos[0m (ver. 1.0.4)
+[0;33m  -> [0mLoaded plugin: [0;35m[DBK] Terastallization[0m (ver. 1.1.5)
+[0;33m  -> [0mLoaded plugin: [0;35m[DBK] Dynamax[0m (ver. 1.1.3)
+[0;33m  -> [0mLoaded plugin: [0;35m[DBK] Z-Power[0m (ver. 1.1.1)
+[0;33m  -> [0mLoaded plugin: [0;35mCuttable Tall Grass[0m (ver. 1.0)
+[0;33m  -> [0mLoaded plugin: [0;35mWild Item Drops[0m (ver. 1.0)
+[0;1;33mWARNING: Plugin 'Voltseon's Pause Menu' may not be compatible with Essentials v21.1. Trying to load anyway.[0m
+[0;33m  -> [0mLoaded plugin: [0;35mVoltseon's Pause Menu[0m (ver. 2.1)
+[0;1;33mWARNING: Usage of deprecated method "safeExists?(f)" or its alias.
+The method is slated to be removed in Essentials v22.
+Use "FileTest.exist?(f)" instead.[0m
+[0;33m  -> [0mLoaded plugin: [0;35mVoltseon's Multiplayer Solution[0m (ver. 2.2.0)
+[0;33m  -> [0mLoaded plugin: [0;35mPokeChests[0m (ver. 1.0)
+[0;33m  -> [0mLoaded plugin: [0;35mTDW Debug List Search[0m (ver. 1.2)
+[0;1;33mWARNING: Plugin 'Swdfm Utilities' may not be compatible with Essentials v21.1. Trying to load anyway.[0m
+[0;33m  -> [0mLoaded plugin: [0;35mSwdfm Utilities[0m (ver. 2024.12.27)
+[0;33m  -> [0mLoaded plugin: [0;35mLuka's Scripting Utilities[0m (ver. 3.3.2)
+[0;33m  -> [0mLoaded plugin: [0;35mVena's Meal Powers[0m (ver. 1.0)
+[0;33m  -> [0mLoaded plugin: [0;35mMore Pokedex Page : Size Comparison[0m (ver. 2.0.1)
+[0;33m  -> [0mLoaded plugin: [0;35mModular Messages[0m (ver. 2024.12.27)
+[0;33m  -> [0mLoaded plugin: [0;35mMarin's Side Stairs[0m (ver. 1.0)
+[0;1;33mWARNING: Plugin 'Marin's Scripting Utilities' may not be compatible with Essentials v21.1. Trying to load anyway.[0m
+[0;33m  -> [0mLoaded plugin: [0;35mMarin's Scripting Utilities[0m (ver. 2.0)
+[0;1;33mWARNING: Plugin 'Marin's Map Exporter' may not be compatible with Essentials v21.1. Trying to load anyway.[0m
+[0;33m  -> [0mLoaded plugin: [0;35mMarin's Map Exporter[0m (ver. 2.1)
+[0;33m  -> [0mLoaded plugin: [0;35mModern Quest System + UI[0m (ver. 1.1.0)
+[0;33m  -> [0mLoaded plugin: [0;35mPWT System (E21)[0m (ver. 1.0.5)
+[0;33m  -> [0mLoaded plugin: [0;35mLin's Weather System[0m (ver. 1.4.0)
+[0;33m  -> [0mLoaded plugin: [0;35mItem Crafting UI Plus[0m (ver. 3.0.0)
+[0;33m  -> [0mLoaded plugin: [0;35mI&A New Game Advanced[0m (ver. 1.0.0)
+[0;33m  -> [0mLoaded plugin: [0;35m[DBK] Raid Battles[0m (ver. 1.0)
+[0;33m  -> [0mLoaded plugin: [0;35m[DBK] Enhanced Battle UI[0m (ver. 2.0.9)
+[0;33m  -> [0mLoaded plugin: [0;35mI&A - Cooking System[0m (ver. 0.1.0)
+[0;33m  -> [0mLoaded plugin: [0;35mI&A UI[0m (ver. 1.0)
+[0;1;33mWARNING: Plugin 'DiegoWTs Starter Selection' may not be compatible with Essentials v21.1. Trying to load anyway.[0m
+[0;33m  -> [0mLoaded plugin: [0;35mDiegoWTs Starter Selection[0m (ver. 1.3.0)
+[0;33m  -> [0mLoaded plugin: [0;35mDelta Speed Up[0m (ver. 1.2)
+[0;33m  -> [0mLoaded plugin: [0;35mCinematic Item Receive[0m (ver. 1.0.)
+[0;33m  -> [0mLoaded plugin: [0;35mBetter Bitmaps[0m (ver. 1.1)
+[0;33m  -> [0mLoaded plugin: [0;35mI&A Mechanics[0m (ver. 1.0)
+[0;33m  -> [0mLoaded plugin: [0;35mBOTW-Like Item Gathering v21.1 port[0m (ver. 1.3)
+[0;33m  -> [0mLoaded plugin: [0;35mArcky's Utilities[0m (ver. 1.1.0)
+[0;33m  -> [0mLoaded plugin: [0;35mArcky's Region Map[0m (ver. 3.3.0)
+[0;32m  -> [0m[0;32mSuccessfully loaded 43 plugin(s)[0m
+
+[0;33m*** Checking game data ***[0m
+
+[0;33m  -> [0mCompiling PBS file [0;36mtown_map.txt[0m....[0;32mdone[0m
+[0;33m  -> [0mCompiling PBS file [0;36mmap_connections.txt[0m...[0;32mdone[0m
+[0;33m  -> [0mCompiling PBS file [0;36mtypes.txt[0m....[0;32mdone[0m
+[0;33m  -> [0mCompiling PBS file [0;36mtypes_stellar.txt[0m....[0;32mdone[0m
+[0;33m  -> [0mCompiling PBS file [0;36mabilities.txt[0m......[0;32mdone[0m
+[0;33m  -> [0mCompiling PBS file [0;36mabilities_1_Gen_9_Pack.txt[0m....[0;32mdone[0m
+[0;33m  -> [0mCompiling PBS file [0;36mabilities_2_IA.txt[0m.....[0;32mdone[0m
+[0;33m  -> [0mCompiling PBS file [0;36mmoves.txt[0m...........[0;32mdone[0m
+[0;33m  -> [0mCompiling PBS file [0;36mmoves_Gen_9_Pack.txt[0m....[0;32mdone[0m
+[0;33m  -> [0mCompiling PBS file [0;36mmoves_dynamax.txt[0m....[0;32mdone[0m
+[0;33m  -> [0mCompiling PBS file [0;36mmoves_iolite_amethyst.txt[0m....[0;32mdone[0m
+[0;33m  -> [0mCompiling PBS file [0;36mmoves_max_ia.txt[0m....[0;32mdone[0m
+[0;33m  -> [0mCompiling PBS file [0;36mmoves_terastal.txt[0m....[0;32mdone[0m
+[0;33m  -> [0mCompiling PBS file [0;36mmoves_zpower.txt[0m....[0;32mdone[0m
+[0;33m  -> [0mCompiling PBS file [0;36mitems.txt[0m..........[0;32mdone[0m
+[0;33m  -> [0mCompiling PBS file [0;36mitems_Gen_9_Pack.txt[0m.....[0;32mdone[0m
+[0;33m  -> [0mCompiling PBS file [0;36mitems_Gen_9_Pack_TM.txt[0m......[0;32mdone[0m
+[0;33m  -> [0mCompiling PBS file [0;36mitems_TM_materials.txt[0m........[0;32mdone[0m
+[0;33m  -> [0mCompiling PBS file [0;36mitems_TM_materials_Niphos.txt[0m....[0;32mdone[0m
+[0;33m  -> [0mCompiling PBS file [0;36mitems_TM_materials_Nordra.txt[0m....[0;32mdone[0m
+[0;33m  -> [0mCompiling PBS file [0;36mitems_dynamax.txt[0m....[0;32mdone[0m
+[0;33m  -> [0mCompiling PBS file [0;36mitems_ingredients.txt[0m....[0;32mdone[0m
+[0;33m  -> [0mCompiling PBS file [0;36mitems_iolite_amethyst.txt[0m....[0;32mdone[0m
+[0;33m  -> [0mCompiling PBS file [0;36mitems_mark_charm.txt[0m....[0;32mdone[0m
+[0;33m  -> [0mCompiling PBS file [0;36mitems_raid_bait.txt[0m....[0;32mdone[0m
+[0;33m  -> [0mCompiling PBS file [0;36mitems_terastal.txt[0m....[0;32mdone[0m
+[0;33m  -> [0mCompiling PBS file [0;36mitems_zpower.txt[0m....[0;32mdone[0m
+[0;33m  -> [0mCompiling PBS file [0;36mberry_plants.txt[0m....[0;32mdone[0m
+[0;33m  -> [0mCompiling PBS file [0;36mpokemon.txt[0m............[0;32mdone[0m
+[0;33m  -> [0mCompiling PBS file [0;36mpokemon_base_1_Gen_9_Pack.txt[0m.....[0;32mdone[0m
+[0;33m  -> [0mCompiling PBS file [0;36mpokemon_base_2_nordra.txt[0m....[0;32mdone[0m
+[0;33m  -> [0mCompiling PBS file [0;36mpokemon_base_3_niphos.txt[0m....[0;32mdone[0m
+[0;33m  -> [0mCompiling PBS file [0;36mpokemon_base_5_maisla.txt[0m....[0;32mdone[0m
+[0;33m  -> [0mCompiling PBS file [0;36mpokemon_forms.txt[0m.......[0;32mdone[0m
+[0;33m  -> [0mCompiling PBS file [0;36mpokemon_forms_Fake.txt[0m....[0;32mdone[0m
+[0;33m  -> [0mCompiling PBS file [0;36mpokemon_forms_Gen_9_Pack.txt[0m.....[0;32mdone[0m
+[0;33m  -> [0mCompiling PBS file [0;36mpokemon_forms_gmax.txt[0m....[0;32mdone[0m
+[0;33m  -> [0mCompiling PBS file [0;36mpokemon_forms_pikachu_caps.txt[0m....[0;32mdone[0m
+[0;33m  -> [0mCompiling PBS file [0;36mpokemon_metrics.txt[0m..............[0;32mdone[0m
+[0;33m  -> [0mCompiling PBS file [0;36mpokemon_metrics_Gen_9_Pack.txt[0m......[0;32mdone[0m
+[0;33m  -> [0mCompiling PBS file [0;36mpokemon_metrics_gmax.txt[0m....[0;32mdone[0m
+[0;33m  -> [0mCompiling PBS file [0;36mpokemon_metrics_ia.txt[0m....[0;32mdone[0m
+[0;33m  -> [0mCompiling PBS file [0;36mregional_dexes.txt[0m...[0;32mdone[0m
+[0;33m  -> [0mCompiling PBS file [0;36mribbons.txt[0m.....[0;32mdone[0m
+[0;33m  -> [0mCompiling PBS file [0;36mencounters.txt[0m......[0;32mdone[0m
+[0;33m  -> [0mCompiling PBS file [0;36mencounters_Niphos.txt[0m.....[0;32mdone[0m
+[0;33m  -> [0mCompiling PBS file [0;36mencounters_Nordra.txt[0m....[0;32mdone[0m
+[0;33m  -> [0mCompiling PBS file [0;36mtrainer_types.txt[0m......[0;32mdone[0m
+[0;33m  -> [0mCompiling PBS file [0;36mtrainer_types_iolite_amethyst.txt[0m....[0;32mdone[0m
+[0;33m  -> [0mCompiling PBS file [0;36mtrainer_types_tournament.txt[0m....[0;32mdone[0m
+[0;33m  -> [0mCompiling PBS file [0;36mtrainers.txt[0m.....[0;32mdone[0m
+[0;33m  -> [0mCompiling PBS file [0;36mtrainers_amethyst.txt[0m.....[0;32mdone[0m
+[0;33m  -> [0mCompiling PBS file [0;36mtrainers_iolite.txt[0m...[0;32mdone[0m
+[0;33m  -> [0mCompiling PBS file [0;36mtrainers_quartz.txt[0m....[0;32mdone[0m
+[0;33m  -> [0mCompiling PBS file [0;36mbattle_facility_lists.txt[0m........[0;32mdone[0m
+[0;33m  -> [0mCompiling PBS file [0;36mmetadata.txt[0m....[0;32mdone[0m
+[0;33m  -> [0mCompiling PBS file [0;36mmap_metadata.txt[0m....[0;32mdone[0m
+[0;33m  -> [0mCompiling PBS file [0;36mdungeon_tilesets.txt[0m....[0;32mdone[0m
+[0;33m  -> [0mCompiling PBS file [0;36mdungeon_parameters.txt[0m....[0;32mdone[0m
+[0;33m  -> [0mCompiling PBS file [0;36mphone.txt[0m....[0;32mdone[0m
+[0;33m  -> [0mCompiling PBS file [0;36mrecipes.txt[0m....[0;32mdone[0m
+[0;33m  -> [0mCompiling PBS file [0;36madventure_maps.txt[0m....[0;32mdone[0m
+[0;33m  -> [0mCompiling PBS file [0;36mingredients.txt[0m....[0;32mdone[0m
+[0;33m  -> [0mCompiling animations...................[0;32mdone[0m
+[0;33m  -> [0mProcessing 112 maps.....[0;32mdone[0m
+[0;33m  -> [0mProcessing common events...[0;32mdone[0m
+[0;33m  -> [0mSaving messages...[0;32mdone[0m
+[0;32m  -> [0m[0;32mSuccessfully compiled all game data[0m
+
+[0;1;33mWARNING: Usage of deprecated method "safeExists?(f)" or its alias.
+The method is slated to be removed in Essentials v22.
+Use "FileTest.exist?(f)" instead.[0m
+[0;34mVMS: Integrated Server stopped[0m
+[0;34mVMS: Not connected to a server[0m
+[0;34mVMS: Integrated Server stopped[0m
+[0;34mVMS: Not connected to a server[0m
+GPU Cache Max: 32768
+-------------------------------------------------------------------------------
+Pokemon Amethyst Output Window
+-------------------------------------------------------------------------------
+If you can see this window, you are running the game in Debug Mode. This means
+that you're either playing a debug version of the game, or you're playing from
+within XPX Engine.
+
+Closing this window will close the game. If you want to get rid of this window,
+run the program from the Shell, or download a release version of the game.
+-------------------------------------------------------------------------------
+Debug Output:
+-------------------------------------------------------------------------------
+
+[0;33m*** Checking plugins ***[0m
+
+[0;33m  -> [0mCompiling plugin scripts...[0;32mdone[0m
+[0;33m  -> [0mLoaded plugin: [0;35mv21.1 Hotfixes[0m (ver. 1.0.9)
+[0;1;33mWARNING: Plugin 'rainefallUtils' may not be compatible with Essentials v21.1. Trying to load anyway.[0m
+[0;33m  -> [0mLoaded plugin: [0;35mrainefallUtils[0m (ver. 1.2)
+[0;33m  -> [0mLoaded plugin: [0;35mGeneration 9 Pack[0m (ver. 3.3.2)
+[0;33m  -> [0mLoaded plugin: [0;35mModular UI Scenes[0m (ver. 2.0.9)
+[0;1;33mWARNING: Plugin 'Bag Screen w/int. Party' may not be compatible with Essentials v21.1. Trying to load anyway.[0m
+[0;33m  -> [0mLoaded plugin: [0;35mBag Screen w/int. Party[0m (ver. 2.5.0)
+[0;33m  -> [0mLoaded plugin: [0;35m[MUI] Pokedex Data Page[0m (ver. 2.0.1)
+[0;33m  -> [0mLoaded plugin: [0;35m[MUI] Enhanced Pokemon UI[0m (ver. 1.0.6)
+[0;33m  -> [0mLoaded plugin: [0;35mDeluxe Battle Kit[0m (ver. 1.2.9)
+[0;33m  -> [0mLoaded plugin: [0;35m[MUI] Improved Mementos[0m (ver. 1.0.4)
+[0;33m  -> [0mLoaded plugin: [0;35m[DBK] Terastallization[0m (ver. 1.1.5)
+[0;33m  -> [0mLoaded plugin: [0;35m[DBK] Dynamax[0m (ver. 1.1.3)
+[0;33m  -> [0mLoaded plugin: [0;35m[DBK] Z-Power[0m (ver. 1.1.1)
+[0;33m  -> [0mLoaded plugin: [0;35mCuttable Tall Grass[0m (ver. 1.0)
+[0;33m  -> [0mLoaded plugin: [0;35mWild Item Drops[0m (ver. 1.0)
+[0;1;33mWARNING: Plugin 'Voltseon's Pause Menu' may not be compatible with Essentials v21.1. Trying to load anyway.[0m
+[0;33m  -> [0mLoaded plugin: [0;35mVoltseon's Pause Menu[0m (ver. 2.1)
+[0;1;33mWARNING: Usage of deprecated method "safeExists?(f)" or its alias.
+The method is slated to be removed in Essentials v22.
+Use "FileTest.exist?(f)" instead.[0m
+[0;33m  -> [0mLoaded plugin: [0;35mVoltseon's Multiplayer Solution[0m (ver. 2.2.0)
+[0;33m  -> [0mLoaded plugin: [0;35mPokeChests[0m (ver. 1.0)
+[0;33m  -> [0mLoaded plugin: [0;35mTDW Debug List Search[0m (ver. 1.2)
+[0;1;33mWARNING: Plugin 'Swdfm Utilities' may not be compatible with Essentials v21.1. Trying to load anyway.[0m
+[0;33m  -> [0mLoaded plugin: [0;35mSwdfm Utilities[0m (ver. 2024.12.27)
+[0;33m  -> [0mLoaded plugin: [0;35mLuka's Scripting Utilities[0m (ver. 3.3.2)
+[0;33m  -> [0mLoaded plugin: [0;35mVena's Meal Powers[0m (ver. 1.0)
+[0;33m  -> [0mLoaded plugin: [0;35mMore Pokedex Page : Size Comparison[0m (ver. 2.0.1)
+[0;33m  -> [0mLoaded plugin: [0;35mModular Messages[0m (ver. 2024.12.27)
+[0;33m  -> [0mLoaded plugin: [0;35mMarin's Side Stairs[0m (ver. 1.0)
+[0;1;33mWARNING: Plugin 'Marin's Scripting Utilities' may not be compatible with Essentials v21.1. Trying to load anyway.[0m
+[0;33m  -> [0mLoaded plugin: [0;35mMarin's Scripting Utilities[0m (ver. 2.0)
+[0;1;33mWARNING: Plugin 'Marin's Map Exporter' may not be compatible with Essentials v21.1. Trying to load anyway.[0m
+[0;33m  -> [0mLoaded plugin: [0;35mMarin's Map Exporter[0m (ver. 2.1)
+[0;33m  -> [0mLoaded plugin: [0;35mModern Quest System + UI[0m (ver. 1.1.0)
+[0;33m  -> [0mLoaded plugin: [0;35mPWT System (E21)[0m (ver. 1.0.5)
+[0;33m  -> [0mLoaded plugin: [0;35mLin's Weather System[0m (ver. 1.4.0)
+[0;33m  -> [0mLoaded plugin: [0;35mItem Crafting UI Plus[0m (ver. 3.0.0)
+[0;33m  -> [0mLoaded plugin: [0;35mI&A New Game Advanced[0m (ver. 1.0.0)
+[0;33m  -> [0mLoaded plugin: [0;35m[DBK] Raid Battles[0m (ver. 1.0)
+[0;33m  -> [0mLoaded plugin: [0;35m[DBK] Enhanced Battle UI[0m (ver. 2.0.9)
+[0;33m  -> [0mLoaded plugin: [0;35mI&A - Cooking System[0m (ver. 0.1.0)
+[0;33m  -> [0mLoaded plugin: [0;35mI&A UI[0m (ver. 1.0)
+[0;1;33mWARNING: Plugin 'DiegoWTs Starter Selection' may not be compatible with Essentials v21.1. Trying to load anyway.[0m
+[0;33m  -> [0mLoaded plugin: [0;35mDiegoWTs Starter Selection[0m (ver. 1.3.0)
+[0;33m  -> [0mLoaded plugin: [0;35mDelta Speed Up[0m (ver. 1.2)
+[0;33m  -> [0mLoaded plugin: [0;35mCinematic Item Receive[0m (ver. 1.0.)
+[0;33m  -> [0mLoaded plugin: [0;35mBetter Bitmaps[0m (ver. 1.1)
+[0;33m  -> [0mLoaded plugin: [0;35mI&A Mechanics[0m (ver. 1.0)
+[0;33m  -> [0mLoaded plugin: [0;35mBOTW-Like Item Gathering v21.1 port[0m (ver. 1.3)
+[0;33m  -> [0mLoaded plugin: [0;35mArcky's Utilities[0m (ver. 1.1.0)
+[0;33m  -> [0mLoaded plugin: [0;35mArcky's Region Map[0m (ver. 3.3.0)
+[0;32m  -> [0m[0;32mSuccessfully loaded 43 plugin(s)[0m
+
+[0;33m*** Checking game data ***[0m
+
+[0;33m  -> [0mCompiling PBS file [0;36mtown_map.txt[0m....[0;32mdone[0m
+[0;33m  -> [0mCompiling PBS file [0;36mmap_connections.txt[0m...[0;32mdone[0m
+[0;33m  -> [0mCompiling PBS file [0;36mtypes.txt[0m....[0;32mdone[0m
+[0;33m  -> [0mCompiling PBS file [0;36mtypes_stellar.txt[0m....[0;32mdone[0m
+[0;33m  -> [0mCompiling PBS file [0;36mabilities.txt[0m......[0;32mdone[0m
+[0;33m  -> [0mCompiling PBS file [0;36mabilities_1_Gen_9_Pack.txt[0m....[0;32mdone[0m
+[0;33m  -> [0mCompiling PBS file [0;36mabilities_2_IA.txt[0m.....[0;32mdone[0m
+[0;33m  -> [0mCompiling PBS file [0;36mmoves.txt[0m...........[0;32mdone[0m
+[0;33m  -> [0mCompiling PBS file [0;36mmoves_Gen_9_Pack.txt[0m....[0;32mdone[0m
+[0;33m  -> [0mCompiling PBS file [0;36mmoves_dynamax.txt[0m....[0;32mdone[0m
+[0;33m  -> [0mCompiling PBS file [0;36mmoves_iolite_amethyst.txt[0m....[0;32mdone[0m
+[0;33m  -> [0mCompiling PBS file [0;36mmoves_max_ia.txt[0m....[0;32mdone[0m
+[0;33m  -> [0mCompiling PBS file [0;36mmoves_terastal.txt[0m....[0;32mdone[0m
+[0;33m  -> [0mCompiling PBS file [0;36mmoves_zpower.txt[0m....[0;32mdone[0m
+[0;33m  -> [0mCompiling PBS file [0;36mitems.txt[0m..........[0;32mdone[0m
+[0;33m  -> [0mCompiling PBS file [0;36mitems_Gen_9_Pack.txt[0m.....[0;32mdone[0m
+[0;33m  -> [0mCompiling PBS file [0;36mitems_Gen_9_Pack_TM.txt[0m......[0;32mdone[0m
+[0;33m  -> [0mCompiling PBS file [0;36mitems_TM_materials.txt[0m........[0;32mdone[0m
+[0;33m  -> [0mCompiling PBS file [0;36mitems_TM_materials_Niphos.txt[0m....[0;32mdone[0m
+[0;33m  -> [0mCompiling PBS file [0;36mitems_TM_materials_Nordra.txt[0m....[0;32mdone[0m
+[0;33m  -> [0mCompiling PBS file [0;36mitems_dynamax.txt[0m....[0;32mdone[0m
+[0;33m  -> [0mCompiling PBS file [0;36mitems_ingredients.txt[0m....[0;32mdone[0m
+[0;33m  -> [0mCompiling PBS file [0;36mitems_iolite_amethyst.txt[0m....[0;32mdone[0m
+[0;33m  -> [0mCompiling PBS file [0;36mitems_mark_charm.txt[0m....[0;32mdone[0m
+[0;33m  -> [0mCompiling PBS file [0;36mitems_raid_bait.txt[0m....[0;32mdone[0m
+[0;33m  -> [0mCompiling PBS file [0;36mitems_terastal.txt[0m....[0;32mdone[0m
+[0;33m  -> [0mCompiling PBS file [0;36mitems_zpower.txt[0m....[0;32mdone[0m
+[0;33m  -> [0mCompiling PBS file [0;36mberry_plants.txt[0m....[0;32mdone[0m
+[0;33m  -> [0mCompiling PBS file [0;36mpokemon.txt[0m............[0;32mdone[0m
+[0;33m  -> [0mCompiling PBS file [0;36mpokemon_base_1_Gen_9_Pack.txt[0m.....[0;32mdone[0m
+[0;33m  -> [0mCompiling PBS file [0;36mpokemon_base_2_nordra.txt[0m....[0;32mdone[0m
+[0;33m  -> [0mCompiling PBS file [0;36mpokemon_base_3_niphos.txt[0m....[0;32mdone[0m
+[0;33m  -> [0mCompiling PBS file [0;36mpokemon_base_5_maisla.txt[0m....[0;32mdone[0m
+[0;33m  -> [0mCompiling PBS file [0;36mpokemon_forms.txt[0m.......[0;32mdone[0m
+[0;33m  -> [0mCompiling PBS file [0;36mpokemon_forms_Fake.txt[0m....[0;32mdone[0m
+[0;33m  -> [0mCompiling PBS file [0;36mpokemon_forms_Gen_9_Pack.txt[0m.....[0;32mdone[0m
+[0;33m  -> [0mCompiling PBS file [0;36mpokemon_forms_gmax.txt[0m....[0;32mdone[0m
+[0;33m  -> [0mCompiling PBS file [0;36mpokemon_forms_pikachu_caps.txt[0m....[0;32mdone[0m
+[0;33m  -> [0mCompiling PBS file [0;36mpokemon_metrics.txt[0m..............[0;32mdone[0m
+[0;33m  -> [0mCompiling PBS file [0;36mpokemon_metrics_Gen_9_Pack.txt[0m......[0;32mdone[0m
+[0;33m  -> [0mCompiling PBS file [0;36mpokemon_metrics_gmax.txt[0m....[0;32mdone[0m
+[0;33m  -> [0mCompiling PBS file [0;36mpokemon_metrics_ia.txt[0m....[0;32mdone[0m
+[0;33m  -> [0mCompiling PBS file [0;36mregional_dexes.txt[0m...[0;32mdone[0m
+[0;33m  -> [0mCompiling PBS file [0;36mribbons.txt[0m.....[0;32mdone[0m
+[0;33m  -> [0mCompiling PBS file [0;36mencounters.txt[0m......[0;32mdone[0m
+[0;33m  -> [0mCompiling PBS file [0;36mencounters_Niphos.txt[0m.....[0;32mdone[0m
+[0;33m  -> [0mCompiling PBS file [0;36mencounters_Nordra.txt[0m....[0;32mdone[0m
+[0;33m  -> [0mCompiling PBS file [0;36mtrainer_types.txt[0m......[0;32mdone[0m
+[0;33m  -> [0mCompiling PBS file [0;36mtrainer_types_iolite_amethyst.txt[0m....[0;32mdone[0m
+[0;33m  -> [0mCompiling PBS file [0;36mtrainer_types_tournament.txt[0m....[0;32mdone[0m
+[0;33m  -> [0mCompiling PBS file [0;36mtrainers.txt[0m.....[0;32mdone[0m
+[0;33m  -> [0mCompiling PBS file [0;36mtrainers_amethyst.txt[0m.....[0;32mdone[0m
+[0;33m  -> [0mCompiling PBS file [0;36mtrainers_iolite.txt[0m...[0;32mdone[0m
+[0;33m  -> [0mCompiling PBS file [0;36mtrainers_quartz.txt[0m....[0;32mdone[0m
+[0;33m  -> [0mCompiling PBS file [0;36mbattle_facility_lists.txt[0m........[0;32mdone[0m
+[0;33m  -> [0mCompiling PBS file [0;36mmetadata.txt[0m....[0;32mdone[0m
+[0;33m  -> [0mCompiling PBS file [0;36mmap_metadata.txt[0m....[0;32mdone[0m
+[0;33m  -> [0mCompiling PBS file [0;36mdungeon_tilesets.txt[0m....[0;32mdone[0m
+[0;33m  -> [0mCompiling PBS file [0;36mdungeon_parameters.txt[0m....[0;32mdone[0m
+[0;33m  -> [0mCompiling PBS file [0;36mphone.txt[0m....[0;32mdone[0m
+[0;33m  -> [0mCompiling PBS file [0;36mrecipes.txt[0m....[0;32mdone[0m
+[0;33m  -> [0mCompiling PBS file [0;36madventure_maps.txt[0m....[0;32mdone[0m
+[0;33m  -> [0mCompiling PBS file [0;36mingredients.txt[0m....[0;32mdone[0m
+[0;33m  -> [0mCompiling animations...................[0;32mdone[0m
+[0;33m  -> [0mProcessing 112 maps.....[0;32mdone[0m
+[0;33m  -> [0mProcessing common events...[0;32mdone[0m
+[0;33m  -> [0mSaving messages...[0;32mdone[0m
+[0;32m  -> [0m[0;32mSuccessfully compiled all game data[0m
+
+[0;1;33mWARNING: Usage of deprecated method "safeExists?(f)" or its alias.
+The method is slated to be removed in Essentials v22.
+Use "FileTest.exist?(f)" instead.[0m
+Apple
+Category: INGREDIENT
+Flavours:
+SWEET: 4, SOUR: 3, BITTER: 1
+Meal Powers:
+FRIENDSHIP: 12, CATCHING: 7, HATCHING: 4
+Types:
+FLYING: 7, STEEL: 7, ICE: 7
+Stats:
+HP: 12, SPECIAL_DEFENSE: 7
+Salt
+Category: CONDIMENT
+Flavours:
+SALTY: 20, BITTER: 4
+Meal Powers:
+HUMUNGO: 12, FISHING: 12, RAIDDEFENSE: 7, TEENSY: -3
+Types:
+ELECTRIC: 2, PSYCHIC: 2
+Stats:
+DEFENSE: 21, HP: 7
+[0;34mVMS: Integrated Server stopped[0m
+[0;34mVMS: Not connected to a server[0m
+[0;34mVMS: Integrated Server stopped[0m
+[0;34mVMS: Not connected to a server[0m
+GPU Cache Max: 32768
+-------------------------------------------------------------------------------
+Pokemon Amethyst Output Window
+-------------------------------------------------------------------------------
+If you can see this window, you are running the game in Debug Mode. This means
+that you're either playing a debug version of the game, or you're playing from
+within XPX Engine.
+
+Closing this window will close the game. If you want to get rid of this window,
+run the program from the Shell, or download a release version of the game.
+-------------------------------------------------------------------------------
+Debug Output:
+-------------------------------------------------------------------------------
+
+[0;33m*** Checking plugins ***[0m
+
+[0;33m  -> [0mCompiling plugin scripts...[0;32mdone[0m
+[0;33m  -> [0mLoaded plugin: [0;35mv21.1 Hotfixes[0m (ver. 1.0.9)
+[0;1;33mWARNING: Plugin 'rainefallUtils' may not be compatible with Essentials v21.1. Trying to load anyway.[0m
+[0;33m  -> [0mLoaded plugin: [0;35mrainefallUtils[0m (ver. 1.2)
+[0;33m  -> [0mLoaded plugin: [0;35mGeneration 9 Pack[0m (ver. 3.3.2)
+[0;33m  -> [0mLoaded plugin: [0;35mModular UI Scenes[0m (ver. 2.0.9)
+[0;1;33mWARNING: Plugin 'Bag Screen w/int. Party' may not be compatible with Essentials v21.1. Trying to load anyway.[0m
+[0;33m  -> [0mLoaded plugin: [0;35mBag Screen w/int. Party[0m (ver. 2.5.0)
+[0;33m  -> [0mLoaded plugin: [0;35m[MUI] Pokedex Data Page[0m (ver. 2.0.1)
+[0;33m  -> [0mLoaded plugin: [0;35m[MUI] Enhanced Pokemon UI[0m (ver. 1.0.6)
+[0;33m  -> [0mLoaded plugin: [0;35mDeluxe Battle Kit[0m (ver. 1.2.9)
+[0;33m  -> [0mLoaded plugin: [0;35m[MUI] Improved Mementos[0m (ver. 1.0.4)
+[0;33m  -> [0mLoaded plugin: [0;35m[DBK] Terastallization[0m (ver. 1.1.5)
+[0;33m  -> [0mLoaded plugin: [0;35m[DBK] Dynamax[0m (ver. 1.1.3)
+[0;33m  -> [0mLoaded plugin: [0;35m[DBK] Z-Power[0m (ver. 1.1.1)
+[0;33m  -> [0mLoaded plugin: [0;35mCuttable Tall Grass[0m (ver. 1.0)
+[0;33m  -> [0mLoaded plugin: [0;35mWild Item Drops[0m (ver. 1.0)
+[0;1;33mWARNING: Plugin 'Voltseon's Pause Menu' may not be compatible with Essentials v21.1. Trying to load anyway.[0m
+[0;33m  -> [0mLoaded plugin: [0;35mVoltseon's Pause Menu[0m (ver. 2.1)
+[0;1;33mWARNING: Usage of deprecated method "safeExists?(f)" or its alias.
+The method is slated to be removed in Essentials v22.
+Use "FileTest.exist?(f)" instead.[0m
+[0;33m  -> [0mLoaded plugin: [0;35mVoltseon's Multiplayer Solution[0m (ver. 2.2.0)
+[0;33m  -> [0mLoaded plugin: [0;35mPokeChests[0m (ver. 1.0)
+[0;33m  -> [0mLoaded plugin: [0;35mTDW Debug List Search[0m (ver. 1.2)
+[0;1;33mWARNING: Plugin 'Swdfm Utilities' may not be compatible with Essentials v21.1. Trying to load anyway.[0m
+[0;33m  -> [0mLoaded plugin: [0;35mSwdfm Utilities[0m (ver. 2024.12.27)
+[0;33m  -> [0mLoaded plugin: [0;35mLuka's Scripting Utilities[0m (ver. 3.3.2)
+[0;33m  -> [0mLoaded plugin: [0;35mVena's Meal Powers[0m (ver. 1.0)
+[0;33m  -> [0mLoaded plugin: [0;35mMore Pokedex Page : Size Comparison[0m (ver. 2.0.1)
+[0;33m  -> [0mLoaded plugin: [0;35mModular Messages[0m (ver. 2024.12.27)
+[0;33m  -> [0mLoaded plugin: [0;35mMarin's Side Stairs[0m (ver. 1.0)
+[0;1;33mWARNING: Plugin 'Marin's Scripting Utilities' may not be compatible with Essentials v21.1. Trying to load anyway.[0m
+[0;33m  -> [0mLoaded plugin: [0;35mMarin's Scripting Utilities[0m (ver. 2.0)
+[0;1;33mWARNING: Plugin 'Marin's Map Exporter' may not be compatible with Essentials v21.1. Trying to load anyway.[0m
+[0;33m  -> [0mLoaded plugin: [0;35mMarin's Map Exporter[0m (ver. 2.1)
+[0;33m  -> [0mLoaded plugin: [0;35mModern Quest System + UI[0m (ver. 1.1.0)
+[0;33m  -> [0mLoaded plugin: [0;35mPWT System (E21)[0m (ver. 1.0.5)
+[0;33m  -> [0mLoaded plugin: [0;35mLin's Weather System[0m (ver. 1.4.0)
+[0;33m  -> [0mLoaded plugin: [0;35mItem Crafting UI Plus[0m (ver. 3.0.0)
+[0;33m  -> [0mLoaded plugin: [0;35mI&A New Game Advanced[0m (ver. 1.0.0)
+[0;33m  -> [0mLoaded plugin: [0;35m[DBK] Raid Battles[0m (ver. 1.0)
+[0;33m  -> [0mLoaded plugin: [0;35m[DBK] Enhanced Battle UI[0m (ver. 2.0.9)
+[0;33m  -> [0mLoaded plugin: [0;35mI&A - Cooking System[0m (ver. 0.1.0)
+[0;33m  -> [0mLoaded plugin: [0;35mI&A UI[0m (ver. 1.0)
+[0;1;33mWARNING: Plugin 'DiegoWTs Starter Selection' may not be compatible with Essentials v21.1. Trying to load anyway.[0m
+[0;33m  -> [0mLoaded plugin: [0;35mDiegoWTs Starter Selection[0m (ver. 1.3.0)
+[0;33m  -> [0mLoaded plugin: [0;35mDelta Speed Up[0m (ver. 1.2)
+[0;33m  -> [0mLoaded plugin: [0;35mCinematic Item Receive[0m (ver. 1.0.)
+[0;33m  -> [0mLoaded plugin: [0;35mBetter Bitmaps[0m (ver. 1.1)
+[0;33m  -> [0mLoaded plugin: [0;35mI&A Mechanics[0m (ver. 1.0)
+[0;33m  -> [0mLoaded plugin: [0;35mBOTW-Like Item Gathering v21.1 port[0m (ver. 1.3)
+[0;33m  -> [0mLoaded plugin: [0;35mArcky's Utilities[0m (ver. 1.1.0)
+[0;33m  -> [0mLoaded plugin: [0;35mArcky's Region Map[0m (ver. 3.3.0)
+[0;32m  -> [0m[0;32mSuccessfully loaded 43 plugin(s)[0m
+
+[0;33m*** Checking game data ***[0m
+
+[0;33m  -> [0mCompiling PBS file [0;36mtown_map.txt[0m....[0;32mdone[0m
+[0;33m  -> [0mCompiling PBS file [0;36mmap_connections.txt[0m...[0;32mdone[0m
+[0;33m  -> [0mCompiling PBS file [0;36mtypes.txt[0m....[0;32mdone[0m
+[0;33m  -> [0mCompiling PBS file [0;36mtypes_stellar.txt[0m....[0;32mdone[0m
+[0;33m  -> [0mCompiling PBS file [0;36mabilities.txt[0m......[0;32mdone[0m
+[0;33m  -> [0mCompiling PBS file [0;36mabilities_1_Gen_9_Pack.txt[0m....[0;32mdone[0m
+[0;33m  -> [0mCompiling PBS file [0;36mabilities_2_IA.txt[0m.....[0;32mdone[0m
+[0;33m  -> [0mCompiling PBS file [0;36mmoves.txt[0m...........[0;32mdone[0m
+[0;33m  -> [0mCompiling PBS file [0;36mmoves_Gen_9_Pack.txt[0m....[0;32mdone[0m
+[0;33m  -> [0mCompiling PBS file [0;36mmoves_dynamax.txt[0m....[0;32mdone[0m
+[0;33m  -> [0mCompiling PBS file [0;36mmoves_iolite_amethyst.txt[0m....[0;32mdone[0m
+[0;33m  -> [0mCompiling PBS file [0;36mmoves_max_ia.txt[0m....[0;32mdone[0m
+[0;33m  -> [0mCompiling PBS file [0;36mmoves_terastal.txt[0m....[0;32mdone[0m
+[0;33m  -> [0mCompiling PBS file [0;36mmoves_zpower.txt[0m....[0;32mdone[0m
+[0;33m  -> [0mCompiling PBS file [0;36mitems.txt[0m..........[0;32mdone[0m
+[0;33m  -> [0mCompiling PBS file [0;36mitems_Gen_9_Pack.txt[0m.....[0;32mdone[0m
+[0;33m  -> [0mCompiling PBS file [0;36mitems_Gen_9_Pack_TM.txt[0m......[0;32mdone[0m
+[0;33m  -> [0mCompiling PBS file [0;36mitems_TM_materials.txt[0m........[0;32mdone[0m
+[0;33m  -> [0mCompiling PBS file [0;36mitems_TM_materials_Niphos.txt[0m....[0;32mdone[0m
+[0;33m  -> [0mCompiling PBS file [0;36mitems_TM_materials_Nordra.txt[0m....[0;32mdone[0m
+[0;33m  -> [0mCompiling PBS file [0;36mitems_dynamax.txt[0m....[0;32mdone[0m
+[0;33m  -> [0mCompiling PBS file [0;36mitems_ingredients.txt[0m....[0;32mdone[0m
+[0;33m  -> [0mCompiling PBS file [0;36mitems_iolite_amethyst.txt[0m....[0;32mdone[0m
+[0;33m  -> [0mCompiling PBS file [0;36mitems_mark_charm.txt[0m....[0;32mdone[0m
+[0;33m  -> [0mCompiling PBS file [0;36mitems_raid_bait.txt[0m....[0;32mdone[0m
+[0;33m  -> [0mCompiling PBS file [0;36mitems_terastal.txt[0m....[0;32mdone[0m
+[0;33m  -> [0mCompiling PBS file [0;36mitems_zpower.txt[0m....[0;32mdone[0m
+[0;33m  -> [0mCompiling PBS file [0;36mberry_plants.txt[0m....[0;32mdone[0m
+[0;33m  -> [0mCompiling PBS file [0;36mpokemon.txt[0m............[0;32mdone[0m
+[0;33m  -> [0mCompiling PBS file [0;36mpokemon_base_1_Gen_9_Pack.txt[0m.....[0;32mdone[0m
+[0;33m  -> [0mCompiling PBS file [0;36mpokemon_base_2_nordra.txt[0m....[0;32mdone[0m
+[0;33m  -> [0mCompiling PBS file [0;36mpokemon_base_3_niphos.txt[0m....[0;32mdone[0m
+[0;33m  -> [0mCompiling PBS file [0;36mpokemon_base_5_maisla.txt[0m....[0;32mdone[0m
+[0;33m  -> [0mCompiling PBS file [0;36mpokemon_forms.txt[0m.......[0;32mdone[0m
+[0;33m  -> [0mCompiling PBS file [0;36mpokemon_forms_Fake.txt[0m....[0;32mdone[0m
+[0;33m  -> [0mCompiling PBS file [0;36mpokemon_forms_Gen_9_Pack.txt[0m.....[0;32mdone[0m
+[0;33m  -> [0mCompiling PBS file [0;36mpokemon_forms_gmax.txt[0m....[0;32mdone[0m
+[0;33m  -> [0mCompiling PBS file [0;36mpokemon_forms_pikachu_caps.txt[0m....[0;32mdone[0m
+[0;33m  -> [0mCompiling PBS file [0;36mpokemon_metrics.txt[0m..............[0;32mdone[0m
+[0;33m  -> [0mCompiling PBS file [0;36mpokemon_metrics_Gen_9_Pack.txt[0m......[0;32mdone[0m
+[0;33m  -> [0mCompiling PBS file [0;36mpokemon_metrics_gmax.txt[0m....[0;32mdone[0m
+[0;33m  -> [0mCompiling PBS file [0;36mpokemon_metrics_ia.txt[0m....[0;32mdone[0m
+[0;33m  -> [0mCompiling PBS file [0;36mregional_dexes.txt[0m...[0;32mdone[0m
+[0;33m  -> [0mCompiling PBS file [0;36mribbons.txt[0m.....[0;32mdone[0m
+[0;33m  -> [0mCompiling PBS file [0;36mencounters.txt[0m......[0;32mdone[0m
+[0;33m  -> [0mCompiling PBS file [0;36mencounters_Niphos.txt[0m.....[0;32mdone[0m
+[0;33m  -> [0mCompiling PBS file [0;36mencounters_Nordra.txt[0m....[0;32mdone[0m
+[0;33m  -> [0mCompiling PBS file [0;36mtrainer_types.txt[0m......[0;32mdone[0m
+[0;33m  -> [0mCompiling PBS file [0;36mtrainer_types_iolite_amethyst.txt[0m....[0;32mdone[0m
+[0;33m  -> [0mCompiling PBS file [0;36mtrainer_types_tournament.txt[0m....[0;32mdone[0m
+[0;33m  -> [0mCompiling PBS file [0;36mtrainers.txt[0m.....[0;32mdone[0m
+[0;33m  -> [0mCompiling PBS file [0;36mtrainers_amethyst.txt[0m.....[0;32mdone[0m
+[0;33m  -> [0mCompiling PBS file [0;36mtrainers_iolite.txt[0m...[0;32mdone[0m
+[0;33m  -> [0mCompiling PBS file [0;36mtrainers_quartz.txt[0m....[0;32mdone[0m
+[0;33m  -> [0mCompiling PBS file [0;36mbattle_facility_lists.txt[0m........[0;32mdone[0m
+[0;33m  -> [0mCompiling PBS file [0;36mmetadata.txt[0m....[0;32mdone[0m
+[0;33m  -> [0mCompiling PBS file [0;36mmap_metadata.txt[0m....[0;32mdone[0m
+[0;33m  -> [0mCompiling PBS file [0;36mdungeon_tilesets.txt[0m....[0;32mdone[0m
+[0;33m  -> [0mCompiling PBS file [0;36mdungeon_parameters.txt[0m....[0;32mdone[0m
+[0;33m  -> [0mCompiling PBS file [0;36mphone.txt[0m....[0;32mdone[0m
+[0;33m  -> [0mCompiling PBS file [0;36mrecipes.txt[0m....[0;32mdone[0m
+[0;33m  -> [0mCompiling PBS file [0;36madventure_maps.txt[0m....[0;32mdone[0m
+[0;33m  -> [0mCompiling PBS file [0;36mingredients.txt[0m....[0;32mdone[0m
+[0;33m  -> [0mCompiling PBS file [0;36mingredient_groups.txt[0m....[0;32mdone[0m
+[0;33m  -> [0mCompiling animations...................[0;32mdone[0m
+[0;33m  -> [0mProcessing 112 maps.....[0;32mdone[0m
+[0;33m  -> [0mProcessing common events...[0;32mdone[0m
+[0;33m  -> [0mSaving messages...[0;32mdone[0m
+[0;32m  -> [0m[0;32mSuccessfully compiled all game data[0m
+
+[0;1;33mWARNING: Usage of deprecated method "safeExists?(f)" or its alias.
+The method is slated to be removed in Essentials v22.
+Use "FileTest.exist?(f)" instead.[0m
+Choose an Ingredient Group.
+Test Seasonings
+ID: TEST_SEASONINGS
+Slot Type: CONDIMENT
+Members: 2
+Members:
+Salt, Pepper
+Choose an Ingredient Group.
+Sweet Fruit
+ID: SWEET_FRUIT
+Slot Type: INGREDIENT
+Members: 3
+Members:
+Apple, Banana, Orange
+Choose an Ingredient Group.
+[0;34mVMS: Integrated Server stopped[0m
+[0;34mVMS: Not connected to a server[0m
+[0;34mVMS: Integrated Server stopped[0m
+[0;34mVMS: Not connected to a server[0m
+GPU Cache Max: 32768
+-------------------------------------------------------------------------------
+Pokemon Amethyst Output Window
+-------------------------------------------------------------------------------
+If you can see this window, you are running the game in Debug Mode. This means
+that you're either playing a debug version of the game, or you're playing from
+within XPX Engine.
+
+Closing this window will close the game. If you want to get rid of this window,
+run the program from the Shell, or download a release version of the game.
+-------------------------------------------------------------------------------
+Debug Output:
+-------------------------------------------------------------------------------
+
+[0;33m*** Checking plugins ***[0m
+
+[0;33m  -> [0mCompiling plugin scripts...[0;32mdone[0m
+[0;33m  -> [0mLoaded plugin: [0;35mv21.1 Hotfixes[0m (ver. 1.0.9)
+[0;1;33mWARNING: Plugin 'rainefallUtils' may not be compatible with Essentials v21.1. Trying to load anyway.[0m
+[0;33m  -> [0mLoaded plugin: [0;35mrainefallUtils[0m (ver. 1.2)
+[0;33m  -> [0mLoaded plugin: [0;35mGeneration 9 Pack[0m (ver. 3.3.2)
+[0;33m  -> [0mLoaded plugin: [0;35mModular UI Scenes[0m (ver. 2.0.9)
+[0;1;33mWARNING: Plugin 'Bag Screen w/int. Party' may not be compatible with Essentials v21.1. Trying to load anyway.[0m
+[0;33m  -> [0mLoaded plugin: [0;35mBag Screen w/int. Party[0m (ver. 2.5.0)
+[0;33m  -> [0mLoaded plugin: [0;35m[MUI] Pokedex Data Page[0m (ver. 2.0.1)
+[0;33m  -> [0mLoaded plugin: [0;35m[MUI] Enhanced Pokemon UI[0m (ver. 1.0.6)
+[0;33m  -> [0mLoaded plugin: [0;35mDeluxe Battle Kit[0m (ver. 1.2.9)
+[0;33m  -> [0mLoaded plugin: [0;35m[MUI] Improved Mementos[0m (ver. 1.0.4)
+[0;33m  -> [0mLoaded plugin: [0;35m[DBK] Terastallization[0m (ver. 1.1.5)
+[0;33m  -> [0mLoaded plugin: [0;35m[DBK] Dynamax[0m (ver. 1.1.3)
+[0;33m  -> [0mLoaded plugin: [0;35m[DBK] Z-Power[0m (ver. 1.1.1)
+[0;33m  -> [0mLoaded plugin: [0;35mCuttable Tall Grass[0m (ver. 1.0)
+[0;33m  -> [0mLoaded plugin: [0;35mWild Item Drops[0m (ver. 1.0)
+[0;1;33mWARNING: Plugin 'Voltseon's Pause Menu' may not be compatible with Essentials v21.1. Trying to load anyway.[0m
+[0;33m  -> [0mLoaded plugin: [0;35mVoltseon's Pause Menu[0m (ver. 2.1)
+[0;1;33mWARNING: Usage of deprecated method "safeExists?(f)" or its alias.
+The method is slated to be removed in Essentials v22.
+Use "FileTest.exist?(f)" instead.[0m
+[0;33m  -> [0mLoaded plugin: [0;35mVoltseon's Multiplayer Solution[0m (ver. 2.2.0)
+[0;33m  -> [0mLoaded plugin: [0;35mPokeChests[0m (ver. 1.0)
+[0;33m  -> [0mLoaded plugin: [0;35mTDW Debug List Search[0m (ver. 1.2)
+[0;1;33mWARNING: Plugin 'Swdfm Utilities' may not be compatible with Essentials v21.1. Trying to load anyway.[0m
+[0;33m  -> [0mLoaded plugin: [0;35mSwdfm Utilities[0m (ver. 2024.12.27)
+[0;33m  -> [0mLoaded plugin: [0;35mLuka's Scripting Utilities[0m (ver. 3.3.2)
+[0;33m  -> [0mLoaded plugin: [0;35mVena's Meal Powers[0m (ver. 1.0)
+[0;33m  -> [0mLoaded plugin: [0;35mMore Pokedex Page : Size Comparison[0m (ver. 2.0.1)
+[0;33m  -> [0mLoaded plugin: [0;35mModular Messages[0m (ver. 2024.12.27)
+[0;33m  -> [0mLoaded plugin: [0;35mMarin's Side Stairs[0m (ver. 1.0)
+[0;1;33mWARNING: Plugin 'Marin's Scripting Utilities' may not be compatible with Essentials v21.1. Trying to load anyway.[0m
+[0;33m  -> [0mLoaded plugin: [0;35mMarin's Scripting Utilities[0m (ver. 2.0)
+[0;1;33mWARNING: Plugin 'Marin's Map Exporter' may not be compatible with Essentials v21.1. Trying to load anyway.[0m
+[0;33m  -> [0mLoaded plugin: [0;35mMarin's Map Exporter[0m (ver. 2.1)
+[0;33m  -> [0mLoaded plugin: [0;35mModern Quest System + UI[0m (ver. 1.1.0)
+[0;33m  -> [0mLoaded plugin: [0;35mPWT System (E21)[0m (ver. 1.0.5)
+[0;33m  -> [0mLoaded plugin: [0;35mLin's Weather System[0m (ver. 1.4.0)
+[0;33m  -> [0mLoaded plugin: [0;35mItem Crafting UI Plus[0m (ver. 3.0.0)
+[0;33m  -> [0mLoaded plugin: [0;35mI&A New Game Advanced[0m (ver. 1.0.0)
+[0;33m  -> [0mLoaded plugin: [0;35m[DBK] Raid Battles[0m (ver. 1.0)
+[0;33m  -> [0mLoaded plugin: [0;35m[DBK] Enhanced Battle UI[0m (ver. 2.0.9)
+[0;33m  -> [0mLoaded plugin: [0;35mI&A - Cooking System[0m (ver. 0.1.0)
+[0;33m  -> [0mLoaded plugin: [0;35mI&A UI[0m (ver. 1.0)
+[0;1;33mWARNING: Plugin 'DiegoWTs Starter Selection' may not be compatible with Essentials v21.1. Trying to load anyway.[0m
+[0;33m  -> [0mLoaded plugin: [0;35mDiegoWTs Starter Selection[0m (ver. 1.3.0)
+[0;33m  -> [0mLoaded plugin: [0;35mDelta Speed Up[0m (ver. 1.2)
+[0;33m  -> [0mLoaded plugin: [0;35mCinematic Item Receive[0m (ver. 1.0.)
+[0;33m  -> [0mLoaded plugin: [0;35mBetter Bitmaps[0m (ver. 1.1)
+[0;33m  -> [0mLoaded plugin: [0;35mI&A Mechanics[0m (ver. 1.0)
+[0;33m  -> [0mLoaded plugin: [0;35mBOTW-Like Item Gathering v21.1 port[0m (ver. 1.3)
+[0;33m  -> [0mLoaded plugin: [0;35mArcky's Utilities[0m (ver. 1.1.0)
+[0;33m  -> [0mLoaded plugin: [0;35mArcky's Region Map[0m (ver. 3.3.0)
+[0;32m  -> [0m[0;32mSuccessfully loaded 43 plugin(s)[0m
+
+[0;33m*** Checking game data ***[0m
+
+[0;33m  -> [0mCompiling PBS file [0;36mtown_map.txt[0m....[0;32mdone[0m
+[0;33m  -> [0mCompiling PBS file [0;36mmap_connections.txt[0m...[0;32mdone[0m
+[0;33m  -> [0mCompiling PBS file [0;36mtypes.txt[0m....[0;32mdone[0m
+[0;33m  -> [0mCompiling PBS file [0;36mtypes_stellar.txt[0m....[0;32mdone[0m
+[0;33m  -> [0mCompiling PBS file [0;36mabilities.txt[0m......[0;32mdone[0m
+[0;33m  -> [0mCompiling PBS file [0;36mabilities_1_Gen_9_Pack.txt[0m....[0;32mdone[0m
+[0;33m  -> [0mCompiling PBS file [0;36mabilities_2_IA.txt[0m.....[0;32mdone[0m
+[0;33m  -> [0mCompiling PBS file [0;36mmoves.txt[0m...........[0;32mdone[0m
+[0;33m  -> [0mCompiling PBS file [0;36mmoves_Gen_9_Pack.txt[0m....[0;32mdone[0m
+[0;33m  -> [0mCompiling PBS file [0;36mmoves_dynamax.txt[0m....[0;32mdone[0m
+[0;33m  -> [0mCompiling PBS file [0;36mmoves_iolite_amethyst.txt[0m....[0;32mdone[0m
+[0;33m  -> [0mCompiling PBS file [0;36mmoves_max_ia.txt[0m....[0;32mdone[0m
+[0;33m  -> [0mCompiling PBS file [0;36mmoves_terastal.txt[0m....[0;32mdone[0m
+[0;33m  -> [0mCompiling PBS file [0;36mmoves_zpower.txt[0m....[0;32mdone[0m
+[0;33m  -> [0mCompiling PBS file [0;36mitems.txt[0m..........[0;32mdone[0m
+[0;33m  -> [0mCompiling PBS file [0;36mitems_Gen_9_Pack.txt[0m.....[0;32mdone[0m
+[0;33m  -> [0mCompiling PBS file [0;36mitems_Gen_9_Pack_TM.txt[0m......[0;32mdone[0m
+[0;33m  -> [0mCompiling PBS file [0;36mitems_TM_materials.txt[0m........[0;32mdone[0m
+[0;33m  -> [0mCompiling PBS file [0;36mitems_TM_materials_Niphos.txt[0m....[0;32mdone[0m
+[0;33m  -> [0mCompiling PBS file [0;36mitems_TM_materials_Nordra.txt[0m....[0;32mdone[0m
+[0;33m  -> [0mCompiling PBS file [0;36mitems_dynamax.txt[0m....[0;32mdone[0m
+[0;33m  -> [0mCompiling PBS file [0;36mitems_ingredients.txt[0m....[0;32mdone[0m
+[0;33m  -> [0mCompiling PBS file [0;36mitems_iolite_amethyst.txt[0m....[0;32mdone[0m
+[0;33m  -> [0mCompiling PBS file [0;36mitems_mark_charm.txt[0m....[0;32mdone[0m
+[0;33m  -> [0mCompiling PBS file [0;36mitems_raid_bait.txt[0m....[0;32mdone[0m
+[0;33m  -> [0mCompiling PBS file [0;36mitems_terastal.txt[0m....[0;32mdone[0m
+[0;33m  -> [0mCompiling PBS file [0;36mitems_zpower.txt[0m....[0;32mdone[0m
+[0;33m  -> [0mCompiling PBS file [0;36mberry_plants.txt[0m....[0;32mdone[0m
+[0;33m  -> [0mCompiling PBS file [0;36mpokemon.txt[0m............[0;32mdone[0m
+[0;33m  -> [0mCompiling PBS file [0;36mpokemon_base_1_Gen_9_Pack.txt[0m.....[0;32mdone[0m
+[0;33m  -> [0mCompiling PBS file [0;36mpokemon_base_2_nordra.txt[0m....[0;32mdone[0m
+[0;33m  -> [0mCompiling PBS file [0;36mpokemon_base_3_niphos.txt[0m....[0;32mdone[0m
+[0;33m  -> [0mCompiling PBS file [0;36mpokemon_base_5_maisla.txt[0m....[0;32mdone[0m
+[0;33m  -> [0mCompiling PBS file [0;36mpokemon_forms.txt[0m.......[0;32mdone[0m
+[0;33m  -> [0mCompiling PBS file [0;36mpokemon_forms_Fake.txt[0m....[0;32mdone[0m
+[0;33m  -> [0mCompiling PBS file [0;36mpokemon_forms_Gen_9_Pack.txt[0m.....[0;32mdone[0m
+[0;33m  -> [0mCompiling PBS file [0;36mpokemon_forms_gmax.txt[0m....[0;32mdone[0m
+[0;33m  -> [0mCompiling PBS file [0;36mpokemon_forms_pikachu_caps.txt[0m....[0;32mdone[0m
+[0;33m  -> [0mCompiling PBS file [0;36mpokemon_metrics.txt[0m..............[0;32mdone[0m
+[0;33m  -> [0mCompiling PBS file [0;36mpokemon_metrics_Gen_9_Pack.txt[0m......[0;32mdone[0m
+[0;33m  -> [0mCompiling PBS file [0;36mpokemon_metrics_gmax.txt[0m....[0;32mdone[0m
+[0;33m  -> [0mCompiling PBS file [0;36mpokemon_metrics_ia.txt[0m....[0;32mdone[0m
+[0;33m  -> [0mCompiling PBS file [0;36mregional_dexes.txt[0m...[0;32mdone[0m
+[0;33m  -> [0mCompiling PBS file [0;36mribbons.txt[0m.....[0;32mdone[0m
+[0;33m  -> [0mCompiling PBS file [0;36mencounters.txt[0m......[0;32mdone[0m
+[0;33m  -> [0mCompiling PBS file [0;36mencounters_Niphos.txt[0m.....[0;32mdone[0m
+[0;33m  -> [0mCompiling PBS file [0;36mencounters_Nordra.txt[0m....[0;32mdone[0m
+[0;33m  -> [0mCompiling PBS file [0;36mtrainer_types.txt[0m......[0;32mdone[0m
+[0;33m  -> [0mCompiling PBS file [0;36mtrainer_types_iolite_amethyst.txt[0m....[0;32mdone[0m
+[0;33m  -> [0mCompiling PBS file [0;36mtrainer_types_tournament.txt[0m....[0;32mdone[0m
+[0;33m  -> [0mCompiling PBS file [0;36mtrainers.txt[0m.....[0;32mdone[0m
+[0;33m  -> [0mCompiling PBS file [0;36mtrainers_amethyst.txt[0m.....[0;32mdone[0m
+[0;33m  -> [0mCompiling PBS file [0;36mtrainers_iolite.txt[0m...[0;32mdone[0m
+[0;33m  -> [0mCompiling PBS file [0;36mtrainers_quartz.txt[0m....[0;32mdone[0m
+[0;33m  -> [0mCompiling PBS file [0;36mbattle_facility_lists.txt[0m........[0;32mdone[0m
+[0;33m  -> [0mCompiling PBS file [0;36mmetadata.txt[0m....[0;32mdone[0m
+[0;33m  -> [0mCompiling PBS file [0;36mmap_metadata.txt[0m....[0;32mdone[0m
+[0;33m  -> [0mCompiling PBS file [0;36mdungeon_tilesets.txt[0m....[0;32mdone[0m
+[0;33m  -> [0mCompiling PBS file [0;36mdungeon_parameters.txt[0m....[0;32mdone[0m
+[0;33m  -> [0mCompiling PBS file [0;36mphone.txt[0m....[0;32mdone[0m
+[0;33m  -> [0mCompiling PBS file [0;36mrecipes.txt[0m....[0;32mdone[0m
+[0;33m  -> [0mCompiling PBS file [0;36madventure_maps.txt[0m....[0;32mdone[0m
+[0;33m  -> [0mCompiling PBS file [0;36mingredients.txt[0m....[0;32mdone[0m
+[0;33m  -> [0mCompiling PBS file [0;36mingredient_groups.txt[0m....[0;34mVMS: Integrated Server stopped[0m
+[0;34mVMS: Not connected to a server[0m
+GPU Cache Max: 32768
+-------------------------------------------------------------------------------
+Pokemon Amethyst Output Window
+-------------------------------------------------------------------------------
+If you can see this window, you are running the game in Debug Mode. This means
+that you're either playing a debug version of the game, or you're playing from
+within XPX Engine.
+
+Closing this window will close the game. If you want to get rid of this window,
+run the program from the Shell, or download a release version of the game.
+-------------------------------------------------------------------------------
+Debug Output:
+-------------------------------------------------------------------------------
+
+[0;33m*** Checking plugins ***[0m
+
+[0;33m  -> [0mCompiling plugin scripts...[0;32mdone[0m
+[0;33m  -> [0mLoaded plugin: [0;35mv21.1 Hotfixes[0m (ver. 1.0.9)
+[0;1;33mWARNING: Plugin 'rainefallUtils' may not be compatible with Essentials v21.1. Trying to load anyway.[0m
+[0;33m  -> [0mLoaded plugin: [0;35mrainefallUtils[0m (ver. 1.2)
+[0;33m  -> [0mLoaded plugin: [0;35mGeneration 9 Pack[0m (ver. 3.3.2)
+[0;33m  -> [0mLoaded plugin: [0;35mModular UI Scenes[0m (ver. 2.0.9)
+[0;1;33mWARNING: Plugin 'Bag Screen w/int. Party' may not be compatible with Essentials v21.1. Trying to load anyway.[0m
+[0;33m  -> [0mLoaded plugin: [0;35mBag Screen w/int. Party[0m (ver. 2.5.0)
+[0;33m  -> [0mLoaded plugin: [0;35m[MUI] Pokedex Data Page[0m (ver. 2.0.1)
+[0;33m  -> [0mLoaded plugin: [0;35m[MUI] Enhanced Pokemon UI[0m (ver. 1.0.6)
+[0;33m  -> [0mLoaded plugin: [0;35mDeluxe Battle Kit[0m (ver. 1.2.9)
+[0;33m  -> [0mLoaded plugin: [0;35m[MUI] Improved Mementos[0m (ver. 1.0.4)
+[0;33m  -> [0mLoaded plugin: [0;35m[DBK] Terastallization[0m (ver. 1.1.5)
+[0;33m  -> [0mLoaded plugin: [0;35m[DBK] Dynamax[0m (ver. 1.1.3)
+[0;33m  -> [0mLoaded plugin: [0;35m[DBK] Z-Power[0m (ver. 1.1.1)
+[0;33m  -> [0mLoaded plugin: [0;35mCuttable Tall Grass[0m (ver. 1.0)
+[0;33m  -> [0mLoaded plugin: [0;35mWild Item Drops[0m (ver. 1.0)
+[0;1;33mWARNING: Plugin 'Voltseon's Pause Menu' may not be compatible with Essentials v21.1. Trying to load anyway.[0m
+[0;33m  -> [0mLoaded plugin: [0;35mVoltseon's Pause Menu[0m (ver. 2.1)
+[0;1;33mWARNING: Usage of deprecated method "safeExists?(f)" or its alias.
+The method is slated to be removed in Essentials v22.
+Use "FileTest.exist?(f)" instead.[0m
+[0;33m  -> [0mLoaded plugin: [0;35mVoltseon's Multiplayer Solution[0m (ver. 2.2.0)
+[0;33m  -> [0mLoaded plugin: [0;35mPokeChests[0m (ver. 1.0)
+[0;33m  -> [0mLoaded plugin: [0;35mTDW Debug List Search[0m (ver. 1.2)
+[0;1;33mWARNING: Plugin 'Swdfm Utilities' may not be compatible with Essentials v21.1. Trying to load anyway.[0m
+[0;33m  -> [0mLoaded plugin: [0;35mSwdfm Utilities[0m (ver. 2024.12.27)
+[0;33m  -> [0mLoaded plugin: [0;35mLuka's Scripting Utilities[0m (ver. 3.3.2)
+[0;33m  -> [0mLoaded plugin: [0;35mVena's Meal Powers[0m (ver. 1.0)
+[0;33m  -> [0mLoaded plugin: [0;35mMore Pokedex Page : Size Comparison[0m (ver. 2.0.1)
+[0;33m  -> [0mLoaded plugin: [0;35mModular Messages[0m (ver. 2024.12.27)
+[0;33m  -> [0mLoaded plugin: [0;35mMarin's Side Stairs[0m (ver. 1.0)
+[0;1;33mWARNING: Plugin 'Marin's Scripting Utilities' may not be compatible with Essentials v21.1. Trying to load anyway.[0m
+[0;33m  -> [0mLoaded plugin: [0;35mMarin's Scripting Utilities[0m (ver. 2.0)
+[0;1;33mWARNING: Plugin 'Marin's Map Exporter' may not be compatible with Essentials v21.1. Trying to load anyway.[0m
+[0;33m  -> [0mLoaded plugin: [0;35mMarin's Map Exporter[0m (ver. 2.1)
+[0;33m  -> [0mLoaded plugin: [0;35mModern Quest System + UI[0m (ver. 1.1.0)
+[0;33m  -> [0mLoaded plugin: [0;35mPWT System (E21)[0m (ver. 1.0.5)
+[0;33m  -> [0mLoaded plugin: [0;35mLin's Weather System[0m (ver. 1.4.0)
+[0;33m  -> [0mLoaded plugin: [0;35mItem Crafting UI Plus[0m (ver. 3.0.0)
+[0;33m  -> [0mLoaded plugin: [0;35mI&A New Game Advanced[0m (ver. 1.0.0)
+[0;33m  -> [0mLoaded plugin: [0;35m[DBK] Raid Battles[0m (ver. 1.0)
+[0;33m  -> [0mLoaded plugin: [0;35m[DBK] Enhanced Battle UI[0m (ver. 2.0.9)
+[0;33m  -> [0mLoaded plugin: [0;35mI&A - Cooking System[0m (ver. 0.1.0)
+[0;33m  -> [0mLoaded plugin: [0;35mI&A UI[0m (ver. 1.0)
+[0;1;33mWARNING: Plugin 'DiegoWTs Starter Selection' may not be compatible with Essentials v21.1. Trying to load anyway.[0m
+[0;33m  -> [0mLoaded plugin: [0;35mDiegoWTs Starter Selection[0m (ver. 1.3.0)
+[0;33m  -> [0mLoaded plugin: [0;35mDelta Speed Up[0m (ver. 1.2)
+[0;33m  -> [0mLoaded plugin: [0;35mCinematic Item Receive[0m (ver. 1.0.)
+[0;33m  -> [0mLoaded plugin: [0;35mBetter Bitmaps[0m (ver. 1.1)
+[0;33m  -> [0mLoaded plugin: [0;35mI&A Mechanics[0m (ver. 1.0)
+[0;33m  -> [0mLoaded plugin: [0;35mBOTW-Like Item Gathering v21.1 port[0m (ver. 1.3)
+[0;33m  -> [0mLoaded plugin: [0;35mArcky's Utilities[0m (ver. 1.1.0)
+[0;33m  -> [0mLoaded plugin: [0;35mArcky's Region Map[0m (ver. 3.3.0)
+[0;32m  -> [0m[0;32mSuccessfully loaded 43 plugin(s)[0m
+
+[0;33m*** Checking game data ***[0m
+
+[0;33m  -> [0mCompiling PBS file [0;36mtown_map.txt[0m....[0;32mdone[0m
+[0;33m  -> [0mCompiling PBS file [0;36mmap_connections.txt[0m...[0;32mdone[0m
+[0;33m  -> [0mCompiling PBS file [0;36mtypes.txt[0m....[0;32mdone[0m
+[0;33m  -> [0mCompiling PBS file [0;36mtypes_stellar.txt[0m....[0;32mdone[0m
+[0;33m  -> [0mCompiling PBS file [0;36mabilities.txt[0m......[0;32mdone[0m
+[0;33m  -> [0mCompiling PBS file [0;36mabilities_1_Gen_9_Pack.txt[0m....[0;32mdone[0m
+[0;33m  -> [0mCompiling PBS file [0;36mabilities_2_IA.txt[0m.....[0;32mdone[0m
+[0;33m  -> [0mCompiling PBS file [0;36mmoves.txt[0m...........[0;32mdone[0m
+[0;33m  -> [0mCompiling PBS file [0;36mmoves_Gen_9_Pack.txt[0m....[0;32mdone[0m
+[0;33m  -> [0mCompiling PBS file [0;36mmoves_dynamax.txt[0m....[0;32mdone[0m
+[0;33m  -> [0mCompiling PBS file [0;36mmoves_iolite_amethyst.txt[0m....[0;32mdone[0m
+[0;33m  -> [0mCompiling PBS file [0;36mmoves_max_ia.txt[0m....[0;32mdone[0m
+[0;33m  -> [0mCompiling PBS file [0;36mmoves_terastal.txt[0m....[0;32mdone[0m
+[0;33m  -> [0mCompiling PBS file [0;36mmoves_zpower.txt[0m....[0;32mdone[0m
+[0;33m  -> [0mCompiling PBS file [0;36mitems.txt[0m..........[0;32mdone[0m
+[0;33m  -> [0mCompiling PBS file [0;36mitems_Gen_9_Pack.txt[0m.....[0;32mdone[0m
+[0;33m  -> [0mCompiling PBS file [0;36mitems_Gen_9_Pack_TM.txt[0m......[0;32mdone[0m
+[0;33m  -> [0mCompiling PBS file [0;36mitems_TM_materials.txt[0m........[0;32mdone[0m
+[0;33m  -> [0mCompiling PBS file [0;36mitems_TM_materials_Niphos.txt[0m....[0;32mdone[0m
+[0;33m  -> [0mCompiling PBS file [0;36mitems_TM_materials_Nordra.txt[0m....[0;32mdone[0m
+[0;33m  -> [0mCompiling PBS file [0;36mitems_dynamax.txt[0m....[0;32mdone[0m
+[0;33m  -> [0mCompiling PBS file [0;36mitems_ingredients.txt[0m....[0;34mVMS: Integrated Server stopped[0m
+[0;34mVMS: Not connected to a server[0m
+GPU Cache Max: 32768
+-------------------------------------------------------------------------------
+Pokemon Amethyst Output Window
+-------------------------------------------------------------------------------
+If you can see this window, you are running the game in Debug Mode. This means
+that you're either playing a debug version of the game, or you're playing from
+within XPX Engine.
+
+Closing this window will close the game. If you want to get rid of this window,
+run the program from the Shell, or download a release version of the game.
+-------------------------------------------------------------------------------
+Debug Output:
+-------------------------------------------------------------------------------
+
+[0;33m*** Checking plugins ***[0m
+
+[0;33m  -> [0mCompiling plugin scripts...[0;32mdone[0m
+[0;33m  -> [0mLoaded plugin: [0;35mv21.1 Hotfixes[0m (ver. 1.0.9)
+[0;1;33mWARNING: Plugin 'rainefallUtils' may not be compatible with Essentials v21.1. Trying to load anyway.[0m
+[0;33m  -> [0mLoaded plugin: [0;35mrainefallUtils[0m (ver. 1.2)
+[0;33m  -> [0mLoaded plugin: [0;35mGeneration 9 Pack[0m (ver. 3.3.2)
+[0;33m  -> [0mLoaded plugin: [0;35mModular UI Scenes[0m (ver. 2.0.9)
+[0;1;33mWARNING: Plugin 'Bag Screen w/int. Party' may not be compatible with Essentials v21.1. Trying to load anyway.[0m
+[0;33m  -> [0mLoaded plugin: [0;35mBag Screen w/int. Party[0m (ver. 2.5.0)
+[0;33m  -> [0mLoaded plugin: [0;35m[MUI] Pokedex Data Page[0m (ver. 2.0.1)
+[0;33m  -> [0mLoaded plugin: [0;35m[MUI] Enhanced Pokemon UI[0m (ver. 1.0.6)
+[0;33m  -> [0mLoaded plugin: [0;35mDeluxe Battle Kit[0m (ver. 1.2.9)
+[0;33m  -> [0mLoaded plugin: [0;35m[MUI] Improved Mementos[0m (ver. 1.0.4)
+[0;33m  -> [0mLoaded plugin: [0;35m[DBK] Terastallization[0m (ver. 1.1.5)
+[0;33m  -> [0mLoaded plugin: [0;35m[DBK] Dynamax[0m (ver. 1.1.3)
+[0;33m  -> [0mLoaded plugin: [0;35m[DBK] Z-Power[0m (ver. 1.1.1)
+[0;33m  -> [0mLoaded plugin: [0;35mCuttable Tall Grass[0m (ver. 1.0)
+[0;33m  -> [0mLoaded plugin: [0;35mWild Item Drops[0m (ver. 1.0)
+[0;1;33mWARNING: Plugin 'Voltseon's Pause Menu' may not be compatible with Essentials v21.1. Trying to load anyway.[0m
+[0;33m  -> [0mLoaded plugin: [0;35mVoltseon's Pause Menu[0m (ver. 2.1)
+[0;1;33mWARNING: Usage of deprecated method "safeExists?(f)" or its alias.
+The method is slated to be removed in Essentials v22.
+Use "FileTest.exist?(f)" instead.[0m
+[0;33m  -> [0mLoaded plugin: [0;35mVoltseon's Multiplayer Solution[0m (ver. 2.2.0)
+[0;33m  -> [0mLoaded plugin: [0;35mPokeChests[0m (ver. 1.0)
+[0;33m  -> [0mLoaded plugin: [0;35mTDW Debug List Search[0m (ver. 1.2)
+[0;1;33mWARNING: Plugin 'Swdfm Utilities' may not be compatible with Essentials v21.1. Trying to load anyway.[0m
+[0;33m  -> [0mLoaded plugin: [0;35mSwdfm Utilities[0m (ver. 2024.12.27)
+[0;33m  -> [0mLoaded plugin: [0;35mLuka's Scripting Utilities[0m (ver. 3.3.2)
+[0;33m  -> [0mLoaded plugin: [0;35mVena's Meal Powers[0m (ver. 1.0)
+[0;33m  -> [0mLoaded plugin: [0;35mMore Pokedex Page : Size Comparison[0m (ver. 2.0.1)
+[0;33m  -> [0mLoaded plugin: [0;35mModular Messages[0m (ver. 2024.12.27)
+[0;33m  -> [0mLoaded plugin: [0;35mMarin's Side Stairs[0m (ver. 1.0)
+[0;1;33mWARNING: Plugin 'Marin's Scripting Utilities' may not be compatible with Essentials v21.1. Trying to load anyway.[0m
+[0;33m  -> [0mLoaded plugin: [0;35mMarin's Scripting Utilities[0m (ver. 2.0)
+[0;1;33mWARNING: Plugin 'Marin's Map Exporter' may not be compatible with Essentials v21.1. Trying to load anyway.[0m
+[0;33m  -> [0mLoaded plugin: [0;35mMarin's Map Exporter[0m (ver. 2.1)
+[0;33m  -> [0mLoaded plugin: [0;35mModern Quest System + UI[0m (ver. 1.1.0)
+[0;33m  -> [0mLoaded plugin: [0;35mPWT System (E21)[0m (ver. 1.0.5)
+[0;33m  -> [0mLoaded plugin: [0;35mLin's Weather System[0m (ver. 1.4.0)
+[0;33m  -> [0mLoaded plugin: [0;35mItem Crafting UI Plus[0m (ver. 3.0.0)
+[0;33m  -> [0mLoaded plugin: [0;35mI&A New Game Advanced[0m (ver. 1.0.0)
+[0;33m  -> [0mLoaded plugin: [0;35m[DBK] Raid Battles[0m (ver. 1.0)
+[0;33m  -> [0mLoaded plugin: [0;35m[DBK] Enhanced Battle UI[0m (ver. 2.0.9)
+[0;33m  -> [0mLoaded plugin: [0;35mI&A - Cooking System[0m (ver. 0.1.0)
+[0;33m  -> [0mLoaded plugin: [0;35mI&A UI[0m (ver. 1.0)
+[0;1;33mWARNING: Plugin 'DiegoWTs Starter Selection' may not be compatible with Essentials v21.1. Trying to load anyway.[0m
+[0;33m  -> [0mLoaded plugin: [0;35mDiegoWTs Starter Selection[0m (ver. 1.3.0)
+[0;33m  -> [0mLoaded plugin: [0;35mDelta Speed Up[0m (ver. 1.2)
+[0;33m  -> [0mLoaded plugin: [0;35mCinematic Item Receive[0m (ver. 1.0.)
+[0;33m  -> [0mLoaded plugin: [0;35mBetter Bitmaps[0m (ver. 1.1)
+[0;33m  -> [0mLoaded plugin: [0;35mI&A Mechanics[0m (ver. 1.0)
+[0;33m  -> [0mLoaded plugin: [0;35mBOTW-Like Item Gathering v21.1 port[0m (ver. 1.3)
+[0;33m  -> [0mLoaded plugin: [0;35mArcky's Utilities[0m (ver. 1.1.0)
+[0;33m  -> [0mLoaded plugin: [0;35mArcky's Region Map[0m (ver. 3.3.0)
+[0;32m  -> [0m[0;32mSuccessfully loaded 43 plugin(s)[0m
+
+[0;33m*** Checking game data ***[0m
+
+[0;33m  -> [0mCompiling PBS file [0;36mtown_map.txt[0m....[0;32mdone[0m
+[0;33m  -> [0mCompiling PBS file [0;36mmap_connections.txt[0m...[0;32mdone[0m
+[0;33m  -> [0mCompiling PBS file [0;36mtypes.txt[0m....[0;32mdone[0m
+[0;33m  -> [0mCompiling PBS file [0;36mtypes_stellar.txt[0m....[0;32mdone[0m
+[0;33m  -> [0mCompiling PBS file [0;36mabilities.txt[0m......[0;32mdone[0m
+[0;33m  -> [0mCompiling PBS file [0;36mabilities_1_Gen_9_Pack.txt[0m....[0;32mdone[0m
+[0;33m  -> [0mCompiling PBS file [0;36mabilities_2_IA.txt[0m.....[0;32mdone[0m
+[0;33m  -> [0mCompiling PBS file [0;36mmoves.txt[0m...........[0;32mdone[0m
+[0;33m  -> [0mCompiling PBS file [0;36mmoves_Gen_9_Pack.txt[0m....[0;32mdone[0m
+[0;33m  -> [0mCompiling PBS file [0;36mmoves_dynamax.txt[0m....[0;32mdone[0m
+[0;33m  -> [0mCompiling PBS file [0;36mmoves_iolite_amethyst.txt[0m....[0;32mdone[0m
+[0;33m  -> [0mCompiling PBS file [0;36mmoves_max_ia.txt[0m....[0;32mdone[0m
+[0;33m  -> [0mCompiling PBS file [0;36mmoves_terastal.txt[0m....[0;32mdone[0m
+[0;33m  -> [0mCompiling PBS file [0;36mmoves_zpower.txt[0m....[0;32mdone[0m
+[0;33m  -> [0mCompiling PBS file [0;36mitems.txt[0m..........[0;32mdone[0m
+[0;33m  -> [0mCompiling PBS file [0;36mitems_Gen_9_Pack.txt[0m.....[0;32mdone[0m
+[0;33m  -> [0mCompiling PBS file [0;36mitems_Gen_9_Pack_TM.txt[0m......[0;32mdone[0m
+[0;33m  -> [0mCompiling PBS file [0;36mitems_TM_materials.txt[0m........[0;32mdone[0m
+[0;33m  -> [0mCompiling PBS file [0;36mitems_TM_materials_Niphos.txt[0m....[0;32mdone[0m
+[0;33m  -> [0mCompiling PBS file [0;36mitems_TM_materials_Nordra.txt[0m....[0;32mdone[0m
+[0;33m  -> [0mCompiling PBS file [0;36mitems_dynamax.txt[0m....[0;32mdone[0m
+[0;33m  -> [0mCompiling PBS file [0;36mitems_ingredients.txt[0m....[0;34mVMS: Integrated Server stopped[0m
+[0;34mVMS: Not connected to a server[0m
+GPU Cache Max: 32768
+-------------------------------------------------------------------------------
+Pokemon Amethyst Output Window
+-------------------------------------------------------------------------------
+If you can see this window, you are running the game in Debug Mode. This means
+that you're either playing a debug version of the game, or you're playing from
+within XPX Engine.
+
+Closing this window will close the game. If you want to get rid of this window,
+run the program from the Shell, or download a release version of the game.
+-------------------------------------------------------------------------------
+Debug Output:
+-------------------------------------------------------------------------------
+
+[0;33m*** Checking plugins ***[0m
+
+[0;33m  -> [0mPlugins were not compiled
+[0;33m  -> [0mLoaded plugin: [0;35mv21.1 Hotfixes[0m (ver. 1.0.9)
+[0;1;33mWARNING: Plugin 'rainefallUtils' may not be compatible with Essentials v21.1. Trying to load anyway.[0m
+[0;33m  -> [0mLoaded plugin: [0;35mrainefallUtils[0m (ver. 1.2)
+[0;33m  -> [0mLoaded plugin: [0;35mGeneration 9 Pack[0m (ver. 3.3.2)
+[0;33m  -> [0mLoaded plugin: [0;35mModular UI Scenes[0m (ver. 2.0.9)
+[0;1;33mWARNING: Plugin 'Bag Screen w/int. Party' may not be compatible with Essentials v21.1. Trying to load anyway.[0m
+[0;33m  -> [0mLoaded plugin: [0;35mBag Screen w/int. Party[0m (ver. 2.5.0)
+[0;33m  -> [0mLoaded plugin: [0;35m[MUI] Pokedex Data Page[0m (ver. 2.0.1)
+[0;33m  -> [0mLoaded plugin: [0;35m[MUI] Enhanced Pokemon UI[0m (ver. 1.0.6)
+[0;33m  -> [0mLoaded plugin: [0;35mDeluxe Battle Kit[0m (ver. 1.2.9)
+[0;33m  -> [0mLoaded plugin: [0;35m[MUI] Improved Mementos[0m (ver. 1.0.4)
+[0;33m  -> [0mLoaded plugin: [0;35m[DBK] Terastallization[0m (ver. 1.1.5)
+[0;33m  -> [0mLoaded plugin: [0;35m[DBK] Dynamax[0m (ver. 1.1.3)
+[0;33m  -> [0mLoaded plugin: [0;35m[DBK] Z-Power[0m (ver. 1.1.1)
+[0;33m  -> [0mLoaded plugin: [0;35mCuttable Tall Grass[0m (ver. 1.0)
+[0;33m  -> [0mLoaded plugin: [0;35mWild Item Drops[0m (ver. 1.0)
+[0;1;33mWARNING: Plugin 'Voltseon's Pause Menu' may not be compatible with Essentials v21.1. Trying to load anyway.[0m
+[0;33m  -> [0mLoaded plugin: [0;35mVoltseon's Pause Menu[0m (ver. 2.1)
+[0;1;33mWARNING: Usage of deprecated method "safeExists?(f)" or its alias.
+The method is slated to be removed in Essentials v22.
+Use "FileTest.exist?(f)" instead.[0m
+[0;33m  -> [0mLoaded plugin: [0;35mVoltseon's Multiplayer Solution[0m (ver. 2.2.0)
+[0;33m  -> [0mLoaded plugin: [0;35mPokeChests[0m (ver. 1.0)
+[0;33m  -> [0mLoaded plugin: [0;35mTDW Debug List Search[0m (ver. 1.2)
+[0;1;33mWARNING: Plugin 'Swdfm Utilities' may not be compatible with Essentials v21.1. Trying to load anyway.[0m
+[0;33m  -> [0mLoaded plugin: [0;35mSwdfm Utilities[0m (ver. 2024.12.27)
+[0;33m  -> [0mLoaded plugin: [0;35mLuka's Scripting Utilities[0m (ver. 3.3.2)
+[0;33m  -> [0mLoaded plugin: [0;35mVena's Meal Powers[0m (ver. 1.0)
+[0;33m  -> [0mLoaded plugin: [0;35mMore Pokedex Page : Size Comparison[0m (ver. 2.0.1)
+[0;33m  -> [0mLoaded plugin: [0;35mModular Messages[0m (ver. 2024.12.27)
+[0;33m  -> [0mLoaded plugin: [0;35mMarin's Side Stairs[0m (ver. 1.0)
+[0;1;33mWARNING: Plugin 'Marin's Scripting Utilities' may not be compatible with Essentials v21.1. Trying to load anyway.[0m
+[0;33m  -> [0mLoaded plugin: [0;35mMarin's Scripting Utilities[0m (ver. 2.0)
+[0;1;33mWARNING: Plugin 'Marin's Map Exporter' may not be compatible with Essentials v21.1. Trying to load anyway.[0m
+[0;33m  -> [0mLoaded plugin: [0;35mMarin's Map Exporter[0m (ver. 2.1)
+[0;33m  -> [0mLoaded plugin: [0;35mModern Quest System + UI[0m (ver. 1.1.0)
+[0;33m  -> [0mLoaded plugin: [0;35mPWT System (E21)[0m (ver. 1.0.5)
+[0;33m  -> [0mLoaded plugin: [0;35mLin's Weather System[0m (ver. 1.4.0)
+[0;33m  -> [0mLoaded plugin: [0;35mItem Crafting UI Plus[0m (ver. 3.0.0)
+[0;33m  -> [0mLoaded plugin: [0;35mI&A New Game Advanced[0m (ver. 1.0.0)
+[0;33m  -> [0mLoaded plugin: [0;35m[DBK] Raid Battles[0m (ver. 1.0)
+[0;33m  -> [0mLoaded plugin: [0;35m[DBK] Enhanced Battle UI[0m (ver. 2.0.9)
+[0;33m  -> [0mLoaded plugin: [0;35mI&A - Cooking System[0m (ver. 0.1.0)
+[0;33m  -> [0mLoaded plugin: [0;35mI&A UI[0m (ver. 1.0)
+[0;1;33mWARNING: Plugin 'DiegoWTs Starter Selection' may not be compatible with Essentials v21.1. Trying to load anyway.[0m
+[0;33m  -> [0mLoaded plugin: [0;35mDiegoWTs Starter Selection[0m (ver. 1.3.0)
+[0;33m  -> [0mLoaded plugin: [0;35mDelta Speed Up[0m (ver. 1.2)
+[0;33m  -> [0mLoaded plugin: [0;35mCinematic Item Receive[0m (ver. 1.0.)
+[0;33m  -> [0mLoaded plugin: [0;35mBetter Bitmaps[0m (ver. 1.1)
+[0;33m  -> [0mLoaded plugin: [0;35mI&A Mechanics[0m (ver. 1.0)
+[0;33m  -> [0mLoaded plugin: [0;35mBOTW-Like Item Gathering v21.1 port[0m (ver. 1.3)
+[0;33m  -> [0mLoaded plugin: [0;35mArcky's Utilities[0m (ver. 1.1.0)
+[0;33m  -> [0mLoaded plugin: [0;35mArcky's Region Map[0m (ver. 3.3.0)
+[0;32m  -> [0m[0;32mSuccessfully loaded 43 plugin(s)[0m
+
+[0;33m*** Checking game data ***[0m
+
+[0;33m  -> [0mCompiling PBS file [0;36mtown_map.txt[0m....[0;32mdone[0m
+[0;33m  -> [0mCompiling PBS file [0;36mmap_connections.txt[0m...[0;32mdone[0m
+[0;33m  -> [0mCompiling PBS file [0;36mtypes.txt[0m....[0;32mdone[0m
+[0;33m  -> [0mCompiling PBS file [0;36mtypes_stellar.txt[0m....[0;32mdone[0m
+[0;33m  -> [0mCompiling PBS file [0;36mabilities.txt[0m......[0;32mdone[0m
+[0;33m  -> [0mCompiling PBS file [0;36mabilities_1_Gen_9_Pack.txt[0m....[0;32mdone[0m
+[0;33m  -> [0mCompiling PBS file [0;36mabilities_2_IA.txt[0m.....[0;32mdone[0m
+[0;33m  -> [0mCompiling PBS file [0;36mmoves.txt[0m...........[0;32mdone[0m
+[0;33m  -> [0mCompiling PBS file [0;36mmoves_Gen_9_Pack.txt[0m....[0;32mdone[0m
+[0;33m  -> [0mCompiling PBS file [0;36mmoves_dynamax.txt[0m....[0;32mdone[0m
+[0;33m  -> [0mCompiling PBS file [0;36mmoves_iolite_amethyst.txt[0m....[0;32mdone[0m
+[0;33m  -> [0mCompiling PBS file [0;36mmoves_max_ia.txt[0m....[0;32mdone[0m
+[0;33m  -> [0mCompiling PBS file [0;36mmoves_terastal.txt[0m....[0;32mdone[0m
+[0;33m  -> [0mCompiling PBS file [0;36mmoves_zpower.txt[0m....[0;32mdone[0m
+[0;33m  -> [0mCompiling PBS file [0;36mitems.txt[0m..........[0;32mdone[0m
+[0;33m  -> [0mCompiling PBS file [0;36mitems_Gen_9_Pack.txt[0m.....[0;32mdone[0m
+[0;33m  -> [0mCompiling PBS file [0;36mitems_Gen_9_Pack_TM.txt[0m......[0;32mdone[0m
+[0;33m  -> [0mCompiling PBS file [0;36mitems_TM_materials.txt[0m........[0;32mdone[0m
+[0;33m  -> [0mCompiling PBS file [0;36mitems_TM_materials_Niphos.txt[0m....[0;32mdone[0m
+[0;33m  -> [0mCompiling PBS file [0;36mitems_TM_materials_Nordra.txt[0m....[0;32mdone[0m
+[0;33m  -> [0mCompiling PBS file [0;36mitems_dynamax.txt[0m....[0;32mdone[0m
+[0;33m  -> [0mCompiling PBS file [0;36mitems_ingredients.txt[0m.....[0;34mVMS: Integrated Server stopped[0m
+[0;34mVMS: Not connected to a server[0m
+GPU Cache Max: 32768
+-------------------------------------------------------------------------------
+Pokemon Amethyst Output Window
+-------------------------------------------------------------------------------
+If you can see this window, you are running the game in Debug Mode. This means
+that you're either playing a debug version of the game, or you're playing from
+within XPX Engine.
+
+Closing this window will close the game. If you want to get rid of this window,
+run the program from the Shell, or download a release version of the game.
+-------------------------------------------------------------------------------
+Debug Output:
+-------------------------------------------------------------------------------
+
+[0;33m*** Checking plugins ***[0m
+
+[0;33m  -> [0mCompiling plugin scripts...[0;32mdone[0m
+[0;33m  -> [0mLoaded plugin: [0;35mv21.1 Hotfixes[0m (ver. 1.0.9)
+[0;1;33mWARNING: Plugin 'rainefallUtils' may not be compatible with Essentials v21.1. Trying to load anyway.[0m
+[0;33m  -> [0mLoaded plugin: [0;35mrainefallUtils[0m (ver. 1.2)
+[0;33m  -> [0mLoaded plugin: [0;35mGeneration 9 Pack[0m (ver. 3.3.2)
+[0;33m  -> [0mLoaded plugin: [0;35mModular UI Scenes[0m (ver. 2.0.9)
+[0;1;33mWARNING: Plugin 'Bag Screen w/int. Party' may not be compatible with Essentials v21.1. Trying to load anyway.[0m
+[0;33m  -> [0mLoaded plugin: [0;35mBag Screen w/int. Party[0m (ver. 2.5.0)
+[0;33m  -> [0mLoaded plugin: [0;35m[MUI] Pokedex Data Page[0m (ver. 2.0.1)
+[0;33m  -> [0mLoaded plugin: [0;35m[MUI] Enhanced Pokemon UI[0m (ver. 1.0.6)
+[0;33m  -> [0mLoaded plugin: [0;35mDeluxe Battle Kit[0m (ver. 1.2.9)
+[0;33m  -> [0mLoaded plugin: [0;35m[MUI] Improved Mementos[0m (ver. 1.0.4)
+[0;33m  -> [0mLoaded plugin: [0;35m[DBK] Terastallization[0m (ver. 1.1.5)
+[0;33m  -> [0mLoaded plugin: [0;35m[DBK] Dynamax[0m (ver. 1.1.3)
+[0;33m  -> [0mLoaded plugin: [0;35m[DBK] Z-Power[0m (ver. 1.1.1)
+[0;33m  -> [0mLoaded plugin: [0;35mCuttable Tall Grass[0m (ver. 1.0)
+[0;33m  -> [0mLoaded plugin: [0;35mWild Item Drops[0m (ver. 1.0)
+[0;1;33mWARNING: Plugin 'Voltseon's Pause Menu' may not be compatible with Essentials v21.1. Trying to load anyway.[0m
+[0;33m  -> [0mLoaded plugin: [0;35mVoltseon's Pause Menu[0m (ver. 2.1)
+[0;1;33mWARNING: Usage of deprecated method "safeExists?(f)" or its alias.
+The method is slated to be removed in Essentials v22.
+Use "FileTest.exist?(f)" instead.[0m
+[0;33m  -> [0mLoaded plugin: [0;35mVoltseon's Multiplayer Solution[0m (ver. 2.2.0)
+[0;33m  -> [0mLoaded plugin: [0;35mPokeChests[0m (ver. 1.0)
+[0;33m  -> [0mLoaded plugin: [0;35mTDW Debug List Search[0m (ver. 1.2)
+[0;1;33mWARNING: Plugin 'Swdfm Utilities' may not be compatible with Essentials v21.1. Trying to load anyway.[0m
+[0;33m  -> [0mLoaded plugin: [0;35mSwdfm Utilities[0m (ver. 2024.12.27)
+[0;33m  -> [0mLoaded plugin: [0;35mLuka's Scripting Utilities[0m (ver. 3.3.2)
+[0;33m  -> [0mLoaded plugin: [0;35mVena's Meal Powers[0m (ver. 1.0)
+[0;33m  -> [0mLoaded plugin: [0;35mMore Pokedex Page : Size Comparison[0m (ver. 2.0.1)
+[0;33m  -> [0mLoaded plugin: [0;35mModular Messages[0m (ver. 2024.12.27)
+[0;33m  -> [0mLoaded plugin: [0;35mMarin's Side Stairs[0m (ver. 1.0)
+[0;1;33mWARNING: Plugin 'Marin's Scripting Utilities' may not be compatible with Essentials v21.1. Trying to load anyway.[0m
+[0;33m  -> [0mLoaded plugin: [0;35mMarin's Scripting Utilities[0m (ver. 2.0)
+[0;1;33mWARNING: Plugin 'Marin's Map Exporter' may not be compatible with Essentials v21.1. Trying to load anyway.[0m
+[0;33m  -> [0mLoaded plugin: [0;35mMarin's Map Exporter[0m (ver. 2.1)
+[0;33m  -> [0mLoaded plugin: [0;35mModern Quest System + UI[0m (ver. 1.1.0)
+[0;33m  -> [0mLoaded plugin: [0;35mPWT System (E21)[0m (ver. 1.0.5)
+[0;33m  -> [0mLoaded plugin: [0;35mLin's Weather System[0m (ver. 1.4.0)
+[0;33m  -> [0mLoaded plugin: [0;35mItem Crafting UI Plus[0m (ver. 3.0.0)
+[0;33m  -> [0mLoaded plugin: [0;35mI&A New Game Advanced[0m (ver. 1.0.0)
+[0;33m  -> [0mLoaded plugin: [0;35m[DBK] Raid Battles[0m (ver. 1.0)
+[0;33m  -> [0mLoaded plugin: [0;35m[DBK] Enhanced Battle UI[0m (ver. 2.0.9)
+[0;33m  -> [0mLoaded plugin: [0;35mI&A - Cooking System[0m (ver. 0.1.0)
+[0;33m  -> [0mLoaded plugin: [0;35mI&A UI[0m (ver. 1.0)
+[0;1;33mWARNING: Plugin 'DiegoWTs Starter Selection' may not be compatible with Essentials v21.1. Trying to load anyway.[0m
+[0;33m  -> [0mLoaded plugin: [0;35mDiegoWTs Starter Selection[0m (ver. 1.3.0)
+[0;33m  -> [0mLoaded plugin: [0;35mDelta Speed Up[0m (ver. 1.2)
+[0;33m  -> [0mLoaded plugin: [0;35mCinematic Item Receive[0m (ver. 1.0.)
+[0;33m  -> [0mLoaded plugin: [0;35mBetter Bitmaps[0m (ver. 1.1)
+[0;33m  -> [0mLoaded plugin: [0;35mI&A Mechanics[0m (ver. 1.0)
+[0;33m  -> [0mLoaded plugin: [0;35mBOTW-Like Item Gathering v21.1 port[0m (ver. 1.3)
+[0;33m  -> [0mLoaded plugin: [0;35mArcky's Utilities[0m (ver. 1.1.0)
+[0;33m  -> [0mLoaded plugin: [0;35mArcky's Region Map[0m (ver. 3.3.0)
+[0;32m  -> [0m[0;32mSuccessfully loaded 43 plugin(s)[0m
+
+[0;33m*** Checking game data ***[0m
+
+[0;33m  -> [0mCompiling PBS file [0;36mtown_map.txt[0m....[0;32mdone[0m
+[0;33m  -> [0mCompiling PBS file [0;36mmap_connections.txt[0m...[0;32mdone[0m
+[0;33m  -> [0mCompiling PBS file [0;36mtypes.txt[0m....[0;32mdone[0m
+[0;33m  -> [0mCompiling PBS file [0;36mtypes_stellar.txt[0m....[0;32mdone[0m
+[0;33m  -> [0mCompiling PBS file [0;36mabilities.txt[0m......[0;32mdone[0m
+[0;33m  -> [0mCompiling PBS file [0;36mabilities_1_Gen_9_Pack.txt[0m....[0;32mdone[0m
+[0;33m  -> [0mCompiling PBS file [0;36mabilities_2_IA.txt[0m.....[0;32mdone[0m
+[0;33m  -> [0mCompiling PBS file [0;36mmoves.txt[0m...........[0;32mdone[0m
+[0;33m  -> [0mCompiling PBS file [0;36mmoves_Gen_9_Pack.txt[0m....[0;32mdone[0m
+[0;33m  -> [0mCompiling PBS file [0;36mmoves_dynamax.txt[0m....[0;32mdone[0m
+[0;33m  -> [0mCompiling PBS file [0;36mmoves_iolite_amethyst.txt[0m....[0;32mdone[0m
+[0;33m  -> [0mCompiling PBS file [0;36mmoves_max_ia.txt[0m....[0;32mdone[0m
+[0;33m  -> [0mCompiling PBS file [0;36mmoves_terastal.txt[0m....[0;32mdone[0m
+[0;33m  -> [0mCompiling PBS file [0;36mmoves_zpower.txt[0m....[0;32mdone[0m
+[0;33m  -> [0mCompiling PBS file [0;36mitems.txt[0m..........[0;32mdone[0m
+[0;33m  -> [0mCompiling PBS file [0;36mitems_Gen_9_Pack.txt[0m.....[0;32mdone[0m
+[0;33m  -> [0mCompiling PBS file [0;36mitems_Gen_9_Pack_TM.txt[0m......[0;32mdone[0m
+[0;33m  -> [0mCompiling PBS file [0;36mitems_TM_materials.txt[0m........[0;32mdone[0m
+[0;33m  -> [0mCompiling PBS file [0;36mitems_TM_materials_Niphos.txt[0m....[0;32mdone[0m
+[0;33m  -> [0mCompiling PBS file [0;36mitems_TM_materials_Nordra.txt[0m....[0;32mdone[0m
+[0;33m  -> [0mCompiling PBS file [0;36mitems_dynamax.txt[0m....[0;32mdone[0m
+[0;33m  -> [0mCompiling PBS file [0;36mitems_ingredients.txt[0m.....[0;32mdone[0m
+[0;33m  -> [0mCompiling PBS file [0;36mitems_iolite_amethyst.txt[0m....[0;32mdone[0m
+[0;33m  -> [0mCompiling PBS file [0;36mitems_mark_charm.txt[0m....[0;32mdone[0m
+[0;33m  -> [0mCompiling PBS file [0;36mitems_raid_bait.txt[0m....[0;32mdone[0m
+[0;33m  -> [0mCompiling PBS file [0;36mitems_terastal.txt[0m....[0;32mdone[0m
+[0;33m  -> [0mCompiling PBS file [0;36mitems_zpower.txt[0m....[0;32mdone[0m
+[0;33m  -> [0mCompiling PBS file [0;36mberry_plants.txt[0m....[0;32mdone[0m
+[0;33m  -> [0mCompiling PBS file [0;36mpokemon.txt[0m............[0;32mdone[0m
+[0;33m  -> [0mCompiling PBS file [0;36mpokemon_base_1_Gen_9_Pack.txt[0m.....[0;32mdone[0m
+[0;33m  -> [0mCompiling PBS file [0;36mpokemon_base_2_nordra.txt[0m....[0;32mdone[0m
+[0;33m  -> [0mCompiling PBS file [0;36mpokemon_base_3_niphos.txt[0m....[0;32mdone[0m
+[0;33m  -> [0mCompiling PBS file [0;36mpokemon_base_5_maisla.txt[0m....[0;32mdone[0m
+[0;33m  -> [0mCompiling PBS file [0;36mpokemon_forms.txt[0m.......[0;32mdone[0m
+[0;33m  -> [0mCompiling PBS file [0;36mpokemon_forms_Fake.txt[0m....[0;32mdone[0m
+[0;33m  -> [0mCompiling PBS file [0;36mpokemon_forms_Gen_9_Pack.txt[0m.....[0;32mdone[0m
+[0;33m  -> [0mCompiling PBS file [0;36mpokemon_forms_gmax.txt[0m....[0;32mdone[0m
+[0;33m  -> [0mCompiling PBS file [0;36mpokemon_forms_pikachu_caps.txt[0m....[0;32mdone[0m
+[0;33m  -> [0mCompiling PBS file [0;36mpokemon_metrics.txt[0m..............[0;32mdone[0m
+[0;33m  -> [0mCompiling PBS file [0;36mpokemon_metrics_Gen_9_Pack.txt[0m......[0;32mdone[0m
+[0;33m  -> [0mCompiling PBS file [0;36mpokemon_metrics_gmax.txt[0m....[0;32mdone[0m
+[0;33m  -> [0mCompiling PBS file [0;36mpokemon_metrics_ia.txt[0m....[0;32mdone[0m
+[0;33m  -> [0mCompiling PBS file [0;36mregional_dexes.txt[0m...[0;32mdone[0m
+[0;33m  -> [0mCompiling PBS file [0;36mribbons.txt[0m.....[0;32mdone[0m
+[0;33m  -> [0mCompiling PBS file [0;36mencounters.txt[0m......[0;32mdone[0m
+[0;33m  -> [0mCompiling PBS file [0;36mencounters_Niphos.txt[0m.....[0;32mdone[0m
+[0;33m  -> [0mCompiling PBS file [0;36mencounters_Nordra.txt[0m....[0;32mdone[0m
+[0;33m  -> [0mCompiling PBS file [0;36mtrainer_types.txt[0m......[0;32mdone[0m
+[0;33m  -> [0mCompiling PBS file [0;36mtrainer_types_iolite_amethyst.txt[0m....[0;32mdone[0m
+[0;33m  -> [0mCompiling PBS file [0;36mtrainer_types_tournament.txt[0m....[0;32mdone[0m
+[0;33m  -> [0mCompiling PBS file [0;36mtrainers.txt[0m.....[0;32mdone[0m
+[0;33m  -> [0mCompiling PBS file [0;36mtrainers_amethyst.txt[0m.....[0;32mdone[0m
+[0;33m  -> [0mCompiling PBS file [0;36mtrainers_iolite.txt[0m...[0;32mdone[0m
+[0;33m  -> [0mCompiling PBS file [0;36mtrainers_quartz.txt[0m....[0;32mdone[0m
+[0;33m  -> [0mCompiling PBS file [0;36mbattle_facility_lists.txt[0m........[0;32mdone[0m
+[0;33m  -> [0mCompiling PBS file [0;36mmetadata.txt[0m....[0;32mdone[0m
+[0;33m  -> [0mCompiling PBS file [0;36mmap_metadata.txt[0m....[0;32mdone[0m
+[0;33m  -> [0mCompiling PBS file [0;36mdungeon_tilesets.txt[0m....[0;32mdone[0m
+[0;33m  -> [0mCompiling PBS file [0;36mdungeon_parameters.txt[0m....[0;32mdone[0m
+[0;33m  -> [0mCompiling PBS file [0;36mphone.txt[0m....[0;32mdone[0m
+[0;33m  -> [0mCompiling PBS file [0;36mrecipes.txt[0m....[0;32mdone[0m
+[0;33m  -> [0mCompiling PBS file [0;36madventure_maps.txt[0m....[0;32mdone[0m
+[0;33m  -> [0mCompiling PBS file [0;36mingredients.txt[0m.....[0;32mdone[0m
+[0;33m  -> [0mCompiling PBS file [0;36mingredient_groups.txt[0m....[0;32mdone[0m
+[0;34mVMS: Integrated Server stopped[0m
+[0;34mVMS: Not connected to a server[0m
+GPU Cache Max: 32768
+-------------------------------------------------------------------------------
+Pokemon Amethyst Output Window
+-------------------------------------------------------------------------------
+If you can see this window, you are running the game in Debug Mode. This means
+that you're either playing a debug version of the game, or you're playing from
+within XPX Engine.
+
+Closing this window will close the game. If you want to get rid of this window,
+run the program from the Shell, or download a release version of the game.
+-------------------------------------------------------------------------------
+Debug Output:
+-------------------------------------------------------------------------------
+
+[0;33m*** Checking plugins ***[0m
+
+[0;33m  -> [0mCompiling plugin scripts...[0;32mdone[0m
+[0;33m  -> [0mLoaded plugin: [0;35mv21.1 Hotfixes[0m (ver. 1.0.9)
+[0;1;33mWARNING: Plugin 'rainefallUtils' may not be compatible with Essentials v21.1. Trying to load anyway.[0m
+[0;33m  -> [0mLoaded plugin: [0;35mrainefallUtils[0m (ver. 1.2)
+[0;33m  -> [0mLoaded plugin: [0;35mGeneration 9 Pack[0m (ver. 3.3.2)
+[0;33m  -> [0mLoaded plugin: [0;35mModular UI Scenes[0m (ver. 2.0.9)
+[0;1;33mWARNING: Plugin 'Bag Screen w/int. Party' may not be compatible with Essentials v21.1. Trying to load anyway.[0m
+[0;33m  -> [0mLoaded plugin: [0;35mBag Screen w/int. Party[0m (ver. 2.5.0)
+[0;33m  -> [0mLoaded plugin: [0;35m[MUI] Pokedex Data Page[0m (ver. 2.0.1)
+[0;33m  -> [0mLoaded plugin: [0;35m[MUI] Enhanced Pokemon UI[0m (ver. 1.0.6)
+[0;33m  -> [0mLoaded plugin: [0;35mDeluxe Battle Kit[0m (ver. 1.2.9)
+[0;33m  -> [0mLoaded plugin: [0;35m[MUI] Improved Mementos[0m (ver. 1.0.4)
+[0;33m  -> [0mLoaded plugin: [0;35m[DBK] Terastallization[0m (ver. 1.1.5)
+[0;33m  -> [0mLoaded plugin: [0;35m[DBK] Dynamax[0m (ver. 1.1.3)
+[0;33m  -> [0mLoaded plugin: [0;35m[DBK] Z-Power[0m (ver. 1.1.1)
+[0;33m  -> [0mLoaded plugin: [0;35mCuttable Tall Grass[0m (ver. 1.0)
+[0;33m  -> [0mLoaded plugin: [0;35mWild Item Drops[0m (ver. 1.0)
+[0;1;33mWARNING: Plugin 'Voltseon's Pause Menu' may not be compatible with Essentials v21.1. Trying to load anyway.[0m
+[0;33m  -> [0mLoaded plugin: [0;35mVoltseon's Pause Menu[0m (ver. 2.1)
+[0;1;33mWARNING: Usage of deprecated method "safeExists?(f)" or its alias.
+The method is slated to be removed in Essentials v22.
+Use "FileTest.exist?(f)" instead.[0m
+[0;33m  -> [0mLoaded plugin: [0;35mVoltseon's Multiplayer Solution[0m (ver. 2.2.0)
+[0;33m  -> [0mLoaded plugin: [0;35mPokeChests[0m (ver. 1.0)
+[0;33m  -> [0mLoaded plugin: [0;35mTDW Debug List Search[0m (ver. 1.2)
+[0;1;33mWARNING: Plugin 'Swdfm Utilities' may not be compatible with Essentials v21.1. Trying to load anyway.[0m
+[0;33m  -> [0mLoaded plugin: [0;35mSwdfm Utilities[0m (ver. 2024.12.27)
+[0;33m  -> [0mLoaded plugin: [0;35mLuka's Scripting Utilities[0m (ver. 3.3.2)
+[0;33m  -> [0mLoaded plugin: [0;35mVena's Meal Powers[0m (ver. 1.0)
+[0;33m  -> [0mLoaded plugin: [0;35mMore Pokedex Page : Size Comparison[0m (ver. 2.0.1)
+[0;33m  -> [0mLoaded plugin: [0;35mModular Messages[0m (ver. 2024.12.27)
+[0;33m  -> [0mLoaded plugin: [0;35mMarin's Side Stairs[0m (ver. 1.0)
+[0;1;33mWARNING: Plugin 'Marin's Scripting Utilities' may not be compatible with Essentials v21.1. Trying to load anyway.[0m
+[0;33m  -> [0mLoaded plugin: [0;35mMarin's Scripting Utilities[0m (ver. 2.0)
+[0;1;33mWARNING: Plugin 'Marin's Map Exporter' may not be compatible with Essentials v21.1. Trying to load anyway.[0m
+[0;33m  -> [0mLoaded plugin: [0;35mMarin's Map Exporter[0m (ver. 2.1)
+[0;33m  -> [0mLoaded plugin: [0;35mModern Quest System + UI[0m (ver. 1.1.0)
+[0;33m  -> [0mLoaded plugin: [0;35mPWT System (E21)[0m (ver. 1.0.5)
+[0;33m  -> [0mLoaded plugin: [0;35mLin's Weather System[0m (ver. 1.4.0)
+[0;33m  -> [0mLoaded plugin: [0;35mItem Crafting UI Plus[0m (ver. 3.0.0)
+[0;33m  -> [0mLoaded plugin: [0;35mI&A New Game Advanced[0m (ver. 1.0.0)
+[0;33m  -> [0mLoaded plugin: [0;35m[DBK] Raid Battles[0m (ver. 1.0)
+[0;33m  -> [0mLoaded plugin: [0;35m[DBK] Enhanced Battle UI[0m (ver. 2.0.9)
+[0;33m  -> [0mLoaded plugin: [0;35mI&A - Cooking System[0m (ver. 0.1.0)
+[0;33m  -> [0mLoaded plugin: [0;35mI&A UI[0m (ver. 1.0)
+[0;1;33mWARNING: Plugin 'DiegoWTs Starter Selection' may not be compatible with Essentials v21.1. Trying to load anyway.[0m
+[0;33m  -> [0mLoaded plugin: [0;35mDiegoWTs Starter Selection[0m (ver. 1.3.0)
+[0;33m  -> [0mLoaded plugin: [0;35mDelta Speed Up[0m (ver. 1.2)
+[0;33m  -> [0mLoaded plugin: [0;35mCinematic Item Receive[0m (ver. 1.0.)
+[0;33m  -> [0mLoaded plugin: [0;35mBetter Bitmaps[0m (ver. 1.1)
+[0;33m  -> [0mLoaded plugin: [0;35mI&A Mechanics[0m (ver. 1.0)
+[0;33m  -> [0mLoaded plugin: [0;35mBOTW-Like Item Gathering v21.1 port[0m (ver. 1.3)
+[0;33m  -> [0mLoaded plugin: [0;35mArcky's Utilities[0m (ver. 1.1.0)
+[0;33m  -> [0mLoaded plugin: [0;35mArcky's Region Map[0m (ver. 3.3.0)
+[0;32m  -> [0m[0;32mSuccessfully loaded 43 plugin(s)[0m
+
+[0;33m*** Checking game data ***[0m
+
+[0;33m  -> [0mCompiling PBS file [0;36mtown_map.txt[0m....[0;32mdone[0m
+[0;33m  -> [0mCompiling PBS file [0;36mmap_connections.txt[0m...[0;32mdone[0m
+[0;33m  -> [0mCompiling PBS file [0;36mtypes.txt[0m....[0;32mdone[0m
+[0;33m  -> [0mCompiling PBS file [0;36mtypes_stellar.txt[0m....[0;32mdone[0m
+[0;33m  -> [0mCompiling PBS file [0;36mabilities.txt[0m......[0;32mdone[0m
+[0;33m  -> [0mCompiling PBS file [0;36mabilities_1_Gen_9_Pack.txt[0m....[0;32mdone[0m
+[0;33m  -> [0mCompiling PBS file [0;36mabilities_2_IA.txt[0m.....[0;32mdone[0m
+[0;33m  -> [0mCompiling PBS file [0;36mmoves.txt[0m...........[0;32mdone[0m
+[0;33m  -> [0mCompiling PBS file [0;36mmoves_Gen_9_Pack.txt[0m....[0;32mdone[0m
+[0;33m  -> [0mCompiling PBS file [0;36mmoves_dynamax.txt[0m....[0;32mdone[0m
+[0;33m  -> [0mCompiling PBS file [0;36mmoves_iolite_amethyst.txt[0m....[0;32mdone[0m
+[0;33m  -> [0mCompiling PBS file [0;36mmoves_max_ia.txt[0m....[0;32mdone[0m
+[0;33m  -> [0mCompiling PBS file [0;36mmoves_terastal.txt[0m....[0;32mdone[0m
+[0;33m  -> [0mCompiling PBS file [0;36mmoves_zpower.txt[0m....[0;32mdone[0m
+[0;33m  -> [0mCompiling PBS file [0;36mitems.txt[0m..........[0;32mdone[0m
+[0;33m  -> [0mCompiling PBS file [0;36mitems_Gen_9_Pack.txt[0m.....[0;32mdone[0m
+[0;33m  -> [0mCompiling PBS file [0;36mitems_Gen_9_Pack_TM.txt[0m......[0;32mdone[0m
+[0;33m  -> [0mCompiling PBS file [0;36mitems_TM_materials.txt[0m........[0;32mdone[0m
+[0;33m  -> [0mCompiling PBS file [0;36mitems_TM_materials_Niphos.txt[0m....[0;32mdone[0m
+[0;33m  -> [0mCompiling PBS file [0;36mitems_TM_materials_Nordra.txt[0m....[0;32mdone[0m
+[0;33m  -> [0mCompiling PBS file [0;36mitems_dynamax.txt[0m....[0;32mdone[0m
+[0;33m  -> [0mCompiling PBS file [0;36mitems_ingredients.txt[0m.....[0;32mdone[0m
+[0;33m  -> [0mCompiling PBS file [0;36mitems_iolite_amethyst.txt[0m....[0;32mdone[0m
+[0;33m  -> [0mCompiling PBS file [0;36mitems_mark_charm.txt[0m....[0;32mdone[0m
+[0;33m  -> [0mCompiling PBS file [0;36mitems_raid_bait.txt[0m....[0;32mdone[0m
+[0;33m  -> [0mCompiling PBS file [0;36mitems_terastal.txt[0m....[0;32mdone[0m
+[0;33m  -> [0mCompiling PBS file [0;36mitems_zpower.txt[0m....[0;32mdone[0m
+[0;33m  -> [0mCompiling PBS file [0;36mberry_plants.txt[0m....[0;32mdone[0m
+[0;33m  -> [0mCompiling PBS file [0;36mpokemon.txt[0m............[0;32mdone[0m
+[0;33m  -> [0mCompiling PBS file [0;36mpokemon_base_1_Gen_9_Pack.txt[0m.....[0;32mdone[0m
+[0;33m  -> [0mCompiling PBS file [0;36mpokemon_base_2_nordra.txt[0m....[0;32mdone[0m
+[0;33m  -> [0mCompiling PBS file [0;36mpokemon_base_3_niphos.txt[0m....[0;32mdone[0m
+[0;33m  -> [0mCompiling PBS file [0;36mpokemon_base_5_maisla.txt[0m....[0;32mdone[0m
+[0;33m  -> [0mCompiling PBS file [0;36mpokemon_forms.txt[0m.......[0;32mdone[0m
+[0;33m  -> [0mCompiling PBS file [0;36mpokemon_forms_Fake.txt[0m....[0;32mdone[0m
+[0;33m  -> [0mCompiling PBS file [0;36mpokemon_forms_Gen_9_Pack.txt[0m.....[0;32mdone[0m
+[0;33m  -> [0mCompiling PBS file [0;36mpokemon_forms_gmax.txt[0m....[0;32mdone[0m
+[0;33m  -> [0mCompiling PBS file [0;36mpokemon_forms_pikachu_caps.txt[0m....[0;32mdone[0m
+[0;33m  -> [0mCompiling PBS file [0;36mpokemon_metrics.txt[0m..............[0;32mdone[0m
+[0;33m  -> [0mCompiling PBS file [0;36mpokemon_metrics_Gen_9_Pack.txt[0m......[0;32mdone[0m
+[0;33m  -> [0mCompiling PBS file [0;36mpokemon_metrics_gmax.txt[0m....[0;32mdone[0m
+[0;33m  -> [0mCompiling PBS file [0;36mpokemon_metrics_ia.txt[0m....[0;32mdone[0m
+[0;33m  -> [0mCompiling PBS file [0;36mregional_dexes.txt[0m...[0;32mdone[0m
+[0;33m  -> [0mCompiling PBS file [0;36mribbons.txt[0m.....[0;32mdone[0m
+[0;33m  -> [0mCompiling PBS file [0;36mencounters.txt[0m......[0;32mdone[0m
+[0;33m  -> [0mCompiling PBS file [0;36mencounters_Niphos.txt[0m.....[0;32mdone[0m
+[0;33m  -> [0mCompiling PBS file [0;36mencounters_Nordra.txt[0m....[0;32mdone[0m
+[0;33m  -> [0mCompiling PBS file [0;36mtrainer_types.txt[0m......[0;32mdone[0m
+[0;33m  -> [0mCompiling PBS file [0;36mtrainer_types_iolite_amethyst.txt[0m....[0;32mdone[0m
+[0;33m  -> [0mCompiling PBS file [0;36mtrainer_types_tournament.txt[0m....[0;32mdone[0m
+[0;33m  -> [0mCompiling PBS file [0;36mtrainers.txt[0m.....[0;32mdone[0m
+[0;33m  -> [0mCompiling PBS file [0;36mtrainers_amethyst.txt[0m.....[0;32mdone[0m
+[0;33m  -> [0mCompiling PBS file [0;36mtrainers_iolite.txt[0m...[0;32mdone[0m
+[0;33m  -> [0mCompiling PBS file [0;36mtrainers_quartz.txt[0m....[0;32mdone[0m
+[0;33m  -> [0mCompiling PBS file [0;36mbattle_facility_lists.txt[0m........[0;32mdone[0m
+[0;33m  -> [0mCompiling PBS file [0;36mmetadata.txt[0m....[0;32mdone[0m
+[0;33m  -> [0mCompiling PBS file [0;36mmap_metadata.txt[0m....[0;32mdone[0m
+[0;33m  -> [0mCompiling PBS file [0;36mdungeon_tilesets.txt[0m....[0;32mdone[0m
+[0;33m  -> [0mCompiling PBS file [0;36mdungeon_parameters.txt[0m....[0;32mdone[0m
+[0;33m  -> [0mCompiling PBS file [0;36mphone.txt[0m....[0;32mdone[0m
+[0;33m  -> [0mCompiling PBS file [0;36mrecipes.txt[0m....[0;34mVMS: Integrated Server stopped[0m
+[0;34mVMS: Not connected to a server[0m
+GPU Cache Max: 32768
+-------------------------------------------------------------------------------
+Pokemon Amethyst Output Window
+-------------------------------------------------------------------------------
+If you can see this window, you are running the game in Debug Mode. This means
+that you're either playing a debug version of the game, or you're playing from
+within XPX Engine.
+
+Closing this window will close the game. If you want to get rid of this window,
+run the program from the Shell, or download a release version of the game.
+-------------------------------------------------------------------------------
+Debug Output:
+-------------------------------------------------------------------------------
+
+[0;33m*** Checking plugins ***[0m
+
+[0;33m  -> [0mCompiling plugin scripts...[0;32mdone[0m
+[0;33m  -> [0mLoaded plugin: [0;35mv21.1 Hotfixes[0m (ver. 1.0.9)
+[0;1;33mWARNING: Plugin 'rainefallUtils' may not be compatible with Essentials v21.1. Trying to load anyway.[0m
+[0;33m  -> [0mLoaded plugin: [0;35mrainefallUtils[0m (ver. 1.2)
+[0;33m  -> [0mLoaded plugin: [0;35mGeneration 9 Pack[0m (ver. 3.3.2)
+[0;33m  -> [0mLoaded plugin: [0;35mModular UI Scenes[0m (ver. 2.0.9)
+[0;1;33mWARNING: Plugin 'Bag Screen w/int. Party' may not be compatible with Essentials v21.1. Trying to load anyway.[0m
+[0;33m  -> [0mLoaded plugin: [0;35mBag Screen w/int. Party[0m (ver. 2.5.0)
+[0;33m  -> [0mLoaded plugin: [0;35m[MUI] Pokedex Data Page[0m (ver. 2.0.1)
+[0;33m  -> [0mLoaded plugin: [0;35m[MUI] Enhanced Pokemon UI[0m (ver. 1.0.6)
+[0;33m  -> [0mLoaded plugin: [0;35mDeluxe Battle Kit[0m (ver. 1.2.9)
+[0;33m  -> [0mLoaded plugin: [0;35m[MUI] Improved Mementos[0m (ver. 1.0.4)
+[0;33m  -> [0mLoaded plugin: [0;35m[DBK] Terastallization[0m (ver. 1.1.5)
+[0;33m  -> [0mLoaded plugin: [0;35m[DBK] Dynamax[0m (ver. 1.1.3)
+[0;33m  -> [0mLoaded plugin: [0;35m[DBK] Z-Power[0m (ver. 1.1.1)
+[0;33m  -> [0mLoaded plugin: [0;35mCuttable Tall Grass[0m (ver. 1.0)
+[0;33m  -> [0mLoaded plugin: [0;35mWild Item Drops[0m (ver. 1.0)
+[0;1;33mWARNING: Plugin 'Voltseon's Pause Menu' may not be compatible with Essentials v21.1. Trying to load anyway.[0m
+[0;33m  -> [0mLoaded plugin: [0;35mVoltseon's Pause Menu[0m (ver. 2.1)
+[0;1;33mWARNING: Usage of deprecated method "safeExists?(f)" or its alias.
+The method is slated to be removed in Essentials v22.
+Use "FileTest.exist?(f)" instead.[0m
+[0;33m  -> [0mLoaded plugin: [0;35mVoltseon's Multiplayer Solution[0m (ver. 2.2.0)
+[0;33m  -> [0mLoaded plugin: [0;35mPokeChests[0m (ver. 1.0)
+[0;33m  -> [0mLoaded plugin: [0;35mTDW Debug List Search[0m (ver. 1.2)
+[0;1;33mWARNING: Plugin 'Swdfm Utilities' may not be compatible with Essentials v21.1. Trying to load anyway.[0m
+[0;33m  -> [0mLoaded plugin: [0;35mSwdfm Utilities[0m (ver. 2024.12.27)
+[0;33m  -> [0mLoaded plugin: [0;35mLuka's Scripting Utilities[0m (ver. 3.3.2)
+[0;33m  -> [0mLoaded plugin: [0;35mVena's Meal Powers[0m (ver. 1.0)
+[0;33m  -> [0mLoaded plugin: [0;35mMore Pokedex Page : Size Comparison[0m (ver. 2.0.1)
+[0;33m  -> [0mLoaded plugin: [0;35mModular Messages[0m (ver. 2024.12.27)
+[0;33m  -> [0mLoaded plugin: [0;35mMarin's Side Stairs[0m (ver. 1.0)
+[0;1;33mWARNING: Plugin 'Marin's Scripting Utilities' may not be compatible with Essentials v21.1. Trying to load anyway.[0m
+[0;33m  -> [0mLoaded plugin: [0;35mMarin's Scripting Utilities[0m (ver. 2.0)
+[0;1;33mWARNING: Plugin 'Marin's Map Exporter' may not be compatible with Essentials v21.1. Trying to load anyway.[0m
+[0;33m  -> [0mLoaded plugin: [0;35mMarin's Map Exporter[0m (ver. 2.1)
+[0;33m  -> [0mLoaded plugin: [0;35mModern Quest System + UI[0m (ver. 1.1.0)
+[0;33m  -> [0mLoaded plugin: [0;35mPWT System (E21)[0m (ver. 1.0.5)
+[0;33m  -> [0mLoaded plugin: [0;35mLin's Weather System[0m (ver. 1.4.0)
+[0;33m  -> [0mLoaded plugin: [0;35mItem Crafting UI Plus[0m (ver. 3.0.0)
+[0;33m  -> [0mLoaded plugin: [0;35mI&A New Game Advanced[0m (ver. 1.0.0)
+[0;33m  -> [0mLoaded plugin: [0;35m[DBK] Raid Battles[0m (ver. 1.0)
+[0;33m  -> [0mLoaded plugin: [0;35m[DBK] Enhanced Battle UI[0m (ver. 2.0.9)
+[0;33m  -> [0mLoaded plugin: [0;35mI&A - Cooking System[0m (ver. 0.1.0)
+[0;33m  -> [0mLoaded plugin: [0;35mI&A UI[0m (ver. 1.0)
+[0;1;33mWARNING: Plugin 'DiegoWTs Starter Selection' may not be compatible with Essentials v21.1. Trying to load anyway.[0m
+[0;33m  -> [0mLoaded plugin: [0;35mDiegoWTs Starter Selection[0m (ver. 1.3.0)
+[0;33m  -> [0mLoaded plugin: [0;35mDelta Speed Up[0m (ver. 1.2)
+[0;33m  -> [0mLoaded plugin: [0;35mCinematic Item Receive[0m (ver. 1.0.)
+[0;33m  -> [0mLoaded plugin: [0;35mBetter Bitmaps[0m (ver. 1.1)
+[0;33m  -> [0mLoaded plugin: [0;35mI&A Mechanics[0m (ver. 1.0)
+[0;33m  -> [0mLoaded plugin: [0;35mBOTW-Like Item Gathering v21.1 port[0m (ver. 1.3)
+[0;33m  -> [0mLoaded plugin: [0;35mArcky's Utilities[0m (ver. 1.1.0)
+[0;33m  -> [0mLoaded plugin: [0;35mArcky's Region Map[0m (ver. 3.3.0)
+[0;32m  -> [0m[0;32mSuccessfully loaded 43 plugin(s)[0m
+
+[0;33m*** Checking game data ***[0m
+
+[0;33m  -> [0mCompiling PBS file [0;36mtown_map.txt[0m....[0;32mdone[0m
+[0;33m  -> [0mCompiling PBS file [0;36mmap_connections.txt[0m...[0;32mdone[0m
+[0;33m  -> [0mCompiling PBS file [0;36mtypes.txt[0m....[0;32mdone[0m
+[0;33m  -> [0mCompiling PBS file [0;36mtypes_stellar.txt[0m....[0;32mdone[0m
+[0;33m  -> [0mCompiling PBS file [0;36mabilities.txt[0m......[0;32mdone[0m
+[0;33m  -> [0mCompiling PBS file [0;36mabilities_1_Gen_9_Pack.txt[0m....[0;32mdone[0m
+[0;33m  -> [0mCompiling PBS file [0;36mabilities_2_IA.txt[0m.....[0;32mdone[0m
+[0;33m  -> [0mCompiling PBS file [0;36mmoves.txt[0m...........[0;32mdone[0m
+[0;33m  -> [0mCompiling PBS file [0;36mmoves_Gen_9_Pack.txt[0m....[0;32mdone[0m
+[0;33m  -> [0mCompiling PBS file [0;36mmoves_dynamax.txt[0m....[0;32mdone[0m
+[0;33m  -> [0mCompiling PBS file [0;36mmoves_iolite_amethyst.txt[0m....[0;32mdone[0m
+[0;33m  -> [0mCompiling PBS file [0;36mmoves_max_ia.txt[0m....[0;32mdone[0m
+[0;33m  -> [0mCompiling PBS file [0;36mmoves_terastal.txt[0m....[0;32mdone[0m
+[0;33m  -> [0mCompiling PBS file [0;36mmoves_zpower.txt[0m....[0;32mdone[0m
+[0;33m  -> [0mCompiling PBS file [0;36mitems.txt[0m..........[0;32mdone[0m
+[0;33m  -> [0mCompiling PBS file [0;36mitems_Gen_9_Pack.txt[0m.....[0;32mdone[0m
+[0;33m  -> [0mCompiling PBS file [0;36mitems_Gen_9_Pack_TM.txt[0m......[0;32mdone[0m
+[0;33m  -> [0mCompiling PBS file [0;36mitems_TM_materials.txt[0m........[0;32mdone[0m
+[0;33m  -> [0mCompiling PBS file [0;36mitems_TM_materials_Niphos.txt[0m....[0;32mdone[0m
+[0;33m  -> [0mCompiling PBS file [0;36mitems_TM_materials_Nordra.txt[0m....[0;32mdone[0m
+[0;33m  -> [0mCompiling PBS file [0;36mitems_dynamax.txt[0m....[0;32mdone[0m
+[0;33m  -> [0mCompiling PBS file [0;36mitems_ingredients.txt[0m.....[0;32mdone[0m
+[0;33m  -> [0mCompiling PBS file [0;36mitems_iolite_amethyst.txt[0m....[0;32mdone[0m
+[0;33m  -> [0mCompiling PBS file [0;36mitems_mark_charm.txt[0m....[0;32mdone[0m
+[0;33m  -> [0mCompiling PBS file [0;36mitems_raid_bait.txt[0m....[0;32mdone[0m
+[0;33m  -> [0mCompiling PBS file [0;36mitems_terastal.txt[0m....[0;32mdone[0m
+[0;33m  -> [0mCompiling PBS file [0;36mitems_zpower.txt[0m....[0;32mdone[0m
+[0;33m  -> [0mCompiling PBS file [0;36mberry_plants.txt[0m....[0;32mdone[0m
+[0;33m  -> [0mCompiling PBS file [0;36mpokemon.txt[0m............[0;32mdone[0m
+[0;33m  -> [0mCompiling PBS file [0;36mpokemon_base_1_Gen_9_Pack.txt[0m.....[0;32mdone[0m
+[0;33m  -> [0mCompiling PBS file [0;36mpokemon_base_2_nordra.txt[0m....[0;32mdone[0m
+[0;33m  -> [0mCompiling PBS file [0;36mpokemon_base_3_niphos.txt[0m....[0;32mdone[0m
+[0;33m  -> [0mCompiling PBS file [0;36mpokemon_base_5_maisla.txt[0m....[0;32mdone[0m
+[0;33m  -> [0mCompiling PBS file [0;36mpokemon_forms.txt[0m.......[0;32mdone[0m
+[0;33m  -> [0mCompiling PBS file [0;36mpokemon_forms_Fake.txt[0m....[0;32mdone[0m
+[0;33m  -> [0mCompiling PBS file [0;36mpokemon_forms_Gen_9_Pack.txt[0m.....[0;32mdone[0m
+[0;33m  -> [0mCompiling PBS file [0;36mpokemon_forms_gmax.txt[0m....[0;32mdone[0m
+[0;33m  -> [0mCompiling PBS file [0;36mpokemon_forms_pikachu_caps.txt[0m....[0;32mdone[0m
+[0;33m  -> [0mCompiling PBS file [0;36mpokemon_metrics.txt[0m..............[0;32mdone[0m
+[0;33m  -> [0mCompiling PBS file [0;36mpokemon_metrics_Gen_9_Pack.txt[0m......[0;32mdone[0m
+[0;33m  -> [0mCompiling PBS file [0;36mpokemon_metrics_gmax.txt[0m....[0;32mdone[0m
+[0;33m  -> [0mCompiling PBS file [0;36mpokemon_metrics_ia.txt[0m....[0;32mdone[0m
+[0;33m  -> [0mCompiling PBS file [0;36mregional_dexes.txt[0m...[0;32mdone[0m
+[0;33m  -> [0mCompiling PBS file [0;36mribbons.txt[0m.....[0;32mdone[0m
+[0;33m  -> [0mCompiling PBS file [0;36mencounters.txt[0m......[0;32mdone[0m
+[0;33m  -> [0mCompiling PBS file [0;36mencounters_Niphos.txt[0m.....[0;32mdone[0m
+[0;33m  -> [0mCompiling PBS file [0;36mencounters_Nordra.txt[0m....[0;32mdone[0m
+[0;33m  -> [0mCompiling PBS file [0;36mtrainer_types.txt[0m......[0;32mdone[0m
+[0;33m  -> [0mCompiling PBS file [0;36mtrainer_types_iolite_amethyst.txt[0m....[0;32mdone[0m
+[0;33m  -> [0mCompiling PBS file [0;36mtrainer_types_tournament.txt[0m....[0;32mdone[0m
+[0;33m  -> [0mCompiling PBS file [0;36mtrainers.txt[0m.....[0;32mdone[0m
+[0;33m  -> [0mCompiling PBS file [0;36mtrainers_amethyst.txt[0m.....[0;32mdone[0m
+[0;33m  -> [0mCompiling PBS file [0;36mtrainers_iolite.txt[0m...[0;32mdone[0m
+[0;33m  -> [0mCompiling PBS file [0;36mtrainers_quartz.txt[0m....[0;32mdone[0m
+[0;33m  -> [0mCompiling PBS file [0;36mbattle_facility_lists.txt[0m........[0;32mdone[0m
+[0;33m  -> [0mCompiling PBS file [0;36mmetadata.txt[0m....[0;32mdone[0m
+[0;33m  -> [0mCompiling PBS file [0;36mmap_metadata.txt[0m....[0;32mdone[0m
+[0;33m  -> [0mCompiling PBS file [0;36mdungeon_tilesets.txt[0m....[0;32mdone[0m
+[0;33m  -> [0mCompiling PBS file [0;36mdungeon_parameters.txt[0m....[0;32mdone[0m
+[0;33m  -> [0mCompiling PBS file [0;36mphone.txt[0m....[0;32mdone[0m
+[0;33m  -> [0mCompiling PBS file [0;36mrecipes.txt[0m....[0;32mdone[0m
+[0;33m  -> [0mCompiling PBS file [0;36madventure_maps.txt[0m....[0;32mdone[0m
+[0;33m  -> [0mCompiling PBS file [0;36mingredients.txt[0m.....[0;32mdone[0m
+[0;33m  -> [0mCompiling PBS file [0;36mingredient_groups.txt[0m....[0;32mdone[0m
+[0;33m  -> [0mCompiling PBS file [0;36mcooking_recipes.txt[0m....[0;34mVMS: Integrated Server stopped[0m
+[0;34mVMS: Not connected to a server[0m
+GPU Cache Max: 32768
+-------------------------------------------------------------------------------
+Pokemon Amethyst Output Window
+-------------------------------------------------------------------------------
+If you can see this window, you are running the game in Debug Mode. This means
+that you're either playing a debug version of the game, or you're playing from
+within XPX Engine.
+
+Closing this window will close the game. If you want to get rid of this window,
+run the program from the Shell, or download a release version of the game.
+-------------------------------------------------------------------------------
+Debug Output:
+-------------------------------------------------------------------------------
+
+[0;33m*** Checking plugins ***[0m
+
+[0;33m  -> [0mCompiling plugin scripts...[0;32mdone[0m
+[0;33m  -> [0mLoaded plugin: [0;35mv21.1 Hotfixes[0m (ver. 1.0.9)
+[0;1;33mWARNING: Plugin 'rainefallUtils' may not be compatible with Essentials v21.1. Trying to load anyway.[0m
+[0;33m  -> [0mLoaded plugin: [0;35mrainefallUtils[0m (ver. 1.2)
+[0;33m  -> [0mLoaded plugin: [0;35mGeneration 9 Pack[0m (ver. 3.3.2)
+[0;33m  -> [0mLoaded plugin: [0;35mModular UI Scenes[0m (ver. 2.0.9)
+[0;1;33mWARNING: Plugin 'Bag Screen w/int. Party' may not be compatible with Essentials v21.1. Trying to load anyway.[0m
+[0;33m  -> [0mLoaded plugin: [0;35mBag Screen w/int. Party[0m (ver. 2.5.0)
+[0;33m  -> [0mLoaded plugin: [0;35m[MUI] Pokedex Data Page[0m (ver. 2.0.1)
+[0;33m  -> [0mLoaded plugin: [0;35m[MUI] Enhanced Pokemon UI[0m (ver. 1.0.6)
+[0;33m  -> [0mLoaded plugin: [0;35mDeluxe Battle Kit[0m (ver. 1.2.9)
+[0;33m  -> [0mLoaded plugin: [0;35m[MUI] Improved Mementos[0m (ver. 1.0.4)
+[0;33m  -> [0mLoaded plugin: [0;35m[DBK] Terastallization[0m (ver. 1.1.5)
+[0;33m  -> [0mLoaded plugin: [0;35m[DBK] Dynamax[0m (ver. 1.1.3)
+[0;33m  -> [0mLoaded plugin: [0;35m[DBK] Z-Power[0m (ver. 1.1.1)
+[0;33m  -> [0mLoaded plugin: [0;35mCuttable Tall Grass[0m (ver. 1.0)
+[0;33m  -> [0mLoaded plugin: [0;35mWild Item Drops[0m (ver. 1.0)
+[0;1;33mWARNING: Plugin 'Voltseon's Pause Menu' may not be compatible with Essentials v21.1. Trying to load anyway.[0m
+[0;33m  -> [0mLoaded plugin: [0;35mVoltseon's Pause Menu[0m (ver. 2.1)
+[0;1;33mWARNING: Usage of deprecated method "safeExists?(f)" or its alias.
+The method is slated to be removed in Essentials v22.
+Use "FileTest.exist?(f)" instead.[0m
+[0;33m  -> [0mLoaded plugin: [0;35mVoltseon's Multiplayer Solution[0m (ver. 2.2.0)
+[0;33m  -> [0mLoaded plugin: [0;35mPokeChests[0m (ver. 1.0)
+[0;33m  -> [0mLoaded plugin: [0;35mTDW Debug List Search[0m (ver. 1.2)
+[0;1;33mWARNING: Plugin 'Swdfm Utilities' may not be compatible with Essentials v21.1. Trying to load anyway.[0m
+[0;33m  -> [0mLoaded plugin: [0;35mSwdfm Utilities[0m (ver. 2024.12.27)
+[0;33m  -> [0mLoaded plugin: [0;35mLuka's Scripting Utilities[0m (ver. 3.3.2)
+[0;33m  -> [0mLoaded plugin: [0;35mVena's Meal Powers[0m (ver. 1.0)
+[0;33m  -> [0mLoaded plugin: [0;35mMore Pokedex Page : Size Comparison[0m (ver. 2.0.1)
+[0;33m  -> [0mLoaded plugin: [0;35mModular Messages[0m (ver. 2024.12.27)
+[0;33m  -> [0mLoaded plugin: [0;35mMarin's Side Stairs[0m (ver. 1.0)
+[0;1;33mWARNING: Plugin 'Marin's Scripting Utilities' may not be compatible with Essentials v21.1. Trying to load anyway.[0m
+[0;33m  -> [0mLoaded plugin: [0;35mMarin's Scripting Utilities[0m (ver. 2.0)
+[0;1;33mWARNING: Plugin 'Marin's Map Exporter' may not be compatible with Essentials v21.1. Trying to load anyway.[0m
+[0;33m  -> [0mLoaded plugin: [0;35mMarin's Map Exporter[0m (ver. 2.1)
+[0;33m  -> [0mLoaded plugin: [0;35mModern Quest System + UI[0m (ver. 1.1.0)
+[0;33m  -> [0mLoaded plugin: [0;35mPWT System (E21)[0m (ver. 1.0.5)
+[0;33m  -> [0mLoaded plugin: [0;35mLin's Weather System[0m (ver. 1.4.0)
+[0;33m  -> [0mLoaded plugin: [0;35mItem Crafting UI Plus[0m (ver. 3.0.0)
+[0;33m  -> [0mLoaded plugin: [0;35mI&A New Game Advanced[0m (ver. 1.0.0)
+[0;33m  -> [0mLoaded plugin: [0;35m[DBK] Raid Battles[0m (ver. 1.0)
+[0;33m  -> [0mLoaded plugin: [0;35m[DBK] Enhanced Battle UI[0m (ver. 2.0.9)
+[0;33m  -> [0mLoaded plugin: [0;35mI&A - Cooking System[0m (ver. 0.1.0)
+[0;33m  -> [0mLoaded plugin: [0;35mI&A UI[0m (ver. 1.0)
+[0;1;33mWARNING: Plugin 'DiegoWTs Starter Selection' may not be compatible with Essentials v21.1. Trying to load anyway.[0m
+[0;33m  -> [0mLoaded plugin: [0;35mDiegoWTs Starter Selection[0m (ver. 1.3.0)
+[0;33m  -> [0mLoaded plugin: [0;35mDelta Speed Up[0m (ver. 1.2)
+[0;33m  -> [0mLoaded plugin: [0;35mCinematic Item Receive[0m (ver. 1.0.)
+[0;33m  -> [0mLoaded plugin: [0;35mBetter Bitmaps[0m (ver. 1.1)
+[0;33m  -> [0mLoaded plugin: [0;35mI&A Mechanics[0m (ver. 1.0)
+[0;33m  -> [0mLoaded plugin: [0;35mBOTW-Like Item Gathering v21.1 port[0m (ver. 1.3)
+[0;33m  -> [0mLoaded plugin: [0;35mArcky's Utilities[0m (ver. 1.1.0)
+[0;33m  -> [0mLoaded plugin: [0;35mArcky's Region Map[0m (ver. 3.3.0)
+[0;32m  -> [0m[0;32mSuccessfully loaded 43 plugin(s)[0m
+
+[0;33m*** Checking game data ***[0m
+
+[0;33m  -> [0mCompiling PBS file [0;36mtown_map.txt[0m....[0;32mdone[0m
+[0;33m  -> [0mCompiling PBS file [0;36mmap_connections.txt[0m...[0;32mdone[0m
+[0;33m  -> [0mCompiling PBS file [0;36mtypes.txt[0m....[0;32mdone[0m
+[0;33m  -> [0mCompiling PBS file [0;36mtypes_stellar.txt[0m....[0;32mdone[0m
+[0;33m  -> [0mCompiling PBS file [0;36mabilities.txt[0m......[0;32mdone[0m
+[0;33m  -> [0mCompiling PBS file [0;36mabilities_1_Gen_9_Pack.txt[0m....[0;32mdone[0m
+[0;33m  -> [0mCompiling PBS file [0;36mabilities_2_IA.txt[0m.....[0;32mdone[0m
+[0;33m  -> [0mCompiling PBS file [0;36mmoves.txt[0m...........[0;32mdone[0m
+[0;33m  -> [0mCompiling PBS file [0;36mmoves_Gen_9_Pack.txt[0m....[0;32mdone[0m
+[0;33m  -> [0mCompiling PBS file [0;36mmoves_dynamax.txt[0m....[0;32mdone[0m
+[0;33m  -> [0mCompiling PBS file [0;36mmoves_iolite_amethyst.txt[0m....[0;32mdone[0m
+[0;33m  -> [0mCompiling PBS file [0;36mmoves_max_ia.txt[0m....[0;32mdone[0m
+[0;33m  -> [0mCompiling PBS file [0;36mmoves_terastal.txt[0m....[0;32mdone[0m
+[0;33m  -> [0mCompiling PBS file [0;36mmoves_zpower.txt[0m....[0;32mdone[0m
+[0;33m  -> [0mCompiling PBS file [0;36mitems.txt[0m..........[0;32mdone[0m
+[0;33m  -> [0mCompiling PBS file [0;36mitems_Gen_9_Pack.txt[0m.....[0;32mdone[0m
+[0;33m  -> [0mCompiling PBS file [0;36mitems_Gen_9_Pack_TM.txt[0m......[0;32mdone[0m
+[0;33m  -> [0mCompiling PBS file [0;36mitems_TM_materials.txt[0m........[0;32mdone[0m
+[0;33m  -> [0mCompiling PBS file [0;36mitems_TM_materials_Niphos.txt[0m....[0;32mdone[0m
+[0;33m  -> [0mCompiling PBS file [0;36mitems_TM_materials_Nordra.txt[0m....[0;32mdone[0m
+[0;33m  -> [0mCompiling PBS file [0;36mitems_dynamax.txt[0m....[0;32mdone[0m
+[0;33m  -> [0mCompiling PBS file [0;36mitems_ingredients.txt[0m.....[0;32mdone[0m
+[0;33m  -> [0mCompiling PBS file [0;36mitems_iolite_amethyst.txt[0m....[0;32mdone[0m
+[0;33m  -> [0mCompiling PBS file [0;36mitems_mark_charm.txt[0m....[0;32mdone[0m
+[0;33m  -> [0mCompiling PBS file [0;36mitems_raid_bait.txt[0m....[0;32mdone[0m
+[0;33m  -> [0mCompiling PBS file [0;36mitems_terastal.txt[0m....[0;32mdone[0m
+[0;33m  -> [0mCompiling PBS file [0;36mitems_zpower.txt[0m....[0;32mdone[0m
+[0;33m  -> [0mCompiling PBS file [0;36mberry_plants.txt[0m....[0;32mdone[0m
+[0;33m  -> [0mCompiling PBS file [0;36mpokemon.txt[0m............[0;32mdone[0m
+[0;33m  -> [0mCompiling PBS file [0;36mpokemon_base_1_Gen_9_Pack.txt[0m.....[0;32mdone[0m
+[0;33m  -> [0mCompiling PBS file [0;36mpokemon_base_2_nordra.txt[0m....[0;32mdone[0m
+[0;33m  -> [0mCompiling PBS file [0;36mpokemon_base_3_niphos.txt[0m....[0;32mdone[0m
+[0;33m  -> [0mCompiling PBS file [0;36mpokemon_base_5_maisla.txt[0m....[0;32mdone[0m
+[0;33m  -> [0mCompiling PBS file [0;36mpokemon_forms.txt[0m.......[0;32mdone[0m
+[0;33m  -> [0mCompiling PBS file [0;36mpokemon_forms_Fake.txt[0m....[0;32mdone[0m
+[0;33m  -> [0mCompiling PBS file [0;36mpokemon_forms_Gen_9_Pack.txt[0m.....[0;32mdone[0m
+[0;33m  -> [0mCompiling PBS file [0;36mpokemon_forms_gmax.txt[0m....[0;32mdone[0m
+[0;33m  -> [0mCompiling PBS file [0;36mpokemon_forms_pikachu_caps.txt[0m....[0;32mdone[0m
+[0;33m  -> [0mCompiling PBS file [0;36mpokemon_metrics.txt[0m..............[0;32mdone[0m
+[0;33m  -> [0mCompiling PBS file [0;36mpokemon_metrics_Gen_9_Pack.txt[0m......[0;32mdone[0m
+[0;33m  -> [0mCompiling PBS file [0;36mpokemon_metrics_gmax.txt[0m....[0;32mdone[0m
+[0;33m  -> [0mCompiling PBS file [0;36mpokemon_metrics_ia.txt[0m....[0;32mdone[0m
+[0;33m  -> [0mCompiling PBS file [0;36mregional_dexes.txt[0m...[0;32mdone[0m
+[0;33m  -> [0mCompiling PBS file [0;36mribbons.txt[0m.....[0;32mdone[0m
+[0;33m  -> [0mCompiling PBS file [0;36mencounters.txt[0m......[0;32mdone[0m
+[0;33m  -> [0mCompiling PBS file [0;36mencounters_Niphos.txt[0m.....[0;32mdone[0m
+[0;33m  -> [0mCompiling PBS file [0;36mencounters_Nordra.txt[0m....[0;32mdone[0m
+[0;33m  -> [0mCompiling PBS file [0;36mtrainer_types.txt[0m......[0;32mdone[0m
+[0;33m  -> [0mCompiling PBS file [0;36mtrainer_types_iolite_amethyst.txt[0m....[0;32mdone[0m
+[0;33m  -> [0mCompiling PBS file [0;36mtrainer_types_tournament.txt[0m....[0;32mdone[0m
+[0;33m  -> [0mCompiling PBS file [0;36mtrainers.txt[0m.....[0;32mdone[0m
+[0;33m  -> [0mCompiling PBS file [0;36mtrainers_amethyst.txt[0m.....[0;32mdone[0m
+[0;33m  -> [0mCompiling PBS file [0;36mtrainers_iolite.txt[0m...[0;32mdone[0m
+[0;33m  -> [0mCompiling PBS file [0;36mtrainers_quartz.txt[0m....[0;32mdone[0m
+[0;33m  -> [0mCompiling PBS file [0;36mbattle_facility_lists.txt[0m........[0;32mdone[0m
+[0;33m  -> [0mCompiling PBS file [0;36mmetadata.txt[0m....[0;32mdone[0m
+[0;33m  -> [0mCompiling PBS file [0;36mmap_metadata.txt[0m....[0;32mdone[0m
+[0;33m  -> [0mCompiling PBS file [0;36mdungeon_tilesets.txt[0m....[0;32mdone[0m
+[0;33m  -> [0mCompiling PBS file [0;36mdungeon_parameters.txt[0m....[0;32mdone[0m
+[0;33m  -> [0mCompiling PBS file [0;36mphone.txt[0m....[0;32mdone[0m
+[0;33m  -> [0mCompiling PBS file [0;36mrecipes.txt[0m....[0;32mdone[0m
+[0;33m  -> [0mCompiling PBS file [0;36madventure_maps.txt[0m....[0;32mdone[0m
+[0;33m  -> [0mCompiling PBS file [0;36mingredients.txt[0m.....[0;32mdone[0m
+[0;33m  -> [0mCompiling PBS file [0;36mingredient_groups.txt[0m....[0;32mdone[0m
+[0;33m  -> [0mCompiling PBS file [0;36mcooking_recipes.txt[0m....[0;32mdone[0m
+[0;33m  -> [0mCompiling animations...................[0;32mdone[0m
+[0;33m  -> [0mProcessing 112 maps.....[0;32mdone[0m
+[0;33m  -> [0mProcessing common events...[0;32mdone[0m
+[0;33m  -> [0mSaving messages...[0;32mdone[0m
+[0;32m  -> [0m[0;32mSuccessfully compiled all game data[0m
+
+[0;34mVMS: Integrated Server stopped[0m
+[0;34mVMS: Not connected to a server[0m
+[0;34mVMS: Integrated Server stopped[0m
+[0;34mVMS: Not connected to a server[0m
+GPU Cache Max: 32768
+-------------------------------------------------------------------------------
+Pokemon Amethyst Output Window
+-------------------------------------------------------------------------------
+If you can see this window, you are running the game in Debug Mode. This means
+that you're either playing a debug version of the game, or you're playing from
+within XPX Engine.
+
+Closing this window will close the game. If you want to get rid of this window,
+run the program from the Shell, or download a release version of the game.
+-------------------------------------------------------------------------------
+Debug Output:
+-------------------------------------------------------------------------------
+
+[0;33m*** Checking plugins ***[0m
+
+[0;33m  -> [0mCompiling plugin scripts...[0;32mdone[0m
+[0;33m  -> [0mLoaded plugin: [0;35mv21.1 Hotfixes[0m (ver. 1.0.9)
+[0;1;33mWARNING: Plugin 'rainefallUtils' may not be compatible with Essentials v21.1. Trying to load anyway.[0m
+[0;33m  -> [0mLoaded plugin: [0;35mrainefallUtils[0m (ver. 1.2)
+[0;33m  -> [0mLoaded plugin: [0;35mGeneration 9 Pack[0m (ver. 3.3.2)
+[0;33m  -> [0mLoaded plugin: [0;35mModular UI Scenes[0m (ver. 2.0.9)
+[0;1;33mWARNING: Plugin 'Bag Screen w/int. Party' may not be compatible with Essentials v21.1. Trying to load anyway.[0m
+[0;33m  -> [0mLoaded plugin: [0;35mBag Screen w/int. Party[0m (ver. 2.5.0)
+[0;33m  -> [0mLoaded plugin: [0;35m[MUI] Pokedex Data Page[0m (ver. 2.0.1)
+[0;33m  -> [0mLoaded plugin: [0;35m[MUI] Enhanced Pokemon UI[0m (ver. 1.0.6)
+[0;33m  -> [0mLoaded plugin: [0;35mDeluxe Battle Kit[0m (ver. 1.2.9)
+[0;33m  -> [0mLoaded plugin: [0;35m[MUI] Improved Mementos[0m (ver. 1.0.4)
+[0;33m  -> [0mLoaded plugin: [0;35m[DBK] Terastallization[0m (ver. 1.1.5)
+[0;33m  -> [0mLoaded plugin: [0;35m[DBK] Dynamax[0m (ver. 1.1.3)
+[0;33m  -> [0mLoaded plugin: [0;35m[DBK] Z-Power[0m (ver. 1.1.1)
+[0;33m  -> [0mLoaded plugin: [0;35mCuttable Tall Grass[0m (ver. 1.0)
+[0;33m  -> [0mLoaded plugin: [0;35mWild Item Drops[0m (ver. 1.0)
+[0;1;33mWARNING: Plugin 'Voltseon's Pause Menu' may not be compatible with Essentials v21.1. Trying to load anyway.[0m
+[0;33m  -> [0mLoaded plugin: [0;35mVoltseon's Pause Menu[0m (ver. 2.1)
+[0;1;33mWARNING: Usage of deprecated method "safeExists?(f)" or its alias.
+The method is slated to be removed in Essentials v22.
+Use "FileTest.exist?(f)" instead.[0m
+[0;33m  -> [0mLoaded plugin: [0;35mVoltseon's Multiplayer Solution[0m (ver. 2.2.0)
+[0;33m  -> [0mLoaded plugin: [0;35mPokeChests[0m (ver. 1.0)
+[0;33m  -> [0mLoaded plugin: [0;35mTDW Debug List Search[0m (ver. 1.2)
+[0;1;33mWARNING: Plugin 'Swdfm Utilities' may not be compatible with Essentials v21.1. Trying to load anyway.[0m
+[0;33m  -> [0mLoaded plugin: [0;35mSwdfm Utilities[0m (ver. 2024.12.27)
+[0;33m  -> [0mLoaded plugin: [0;35mLuka's Scripting Utilities[0m (ver. 3.3.2)
+[0;33m  -> [0mLoaded plugin: [0;35mVena's Meal Powers[0m (ver. 1.0)
+[0;33m  -> [0mLoaded plugin: [0;35mMore Pokedex Page : Size Comparison[0m (ver. 2.0.1)
+[0;33m  -> [0mLoaded plugin: [0;35mModular Messages[0m (ver. 2024.12.27)
+[0;33m  -> [0mLoaded plugin: [0;35mMarin's Side Stairs[0m (ver. 1.0)
+[0;1;33mWARNING: Plugin 'Marin's Scripting Utilities' may not be compatible with Essentials v21.1. Trying to load anyway.[0m
+[0;33m  -> [0mLoaded plugin: [0;35mMarin's Scripting Utilities[0m (ver. 2.0)
+[0;1;33mWARNING: Plugin 'Marin's Map Exporter' may not be compatible with Essentials v21.1. Trying to load anyway.[0m
+[0;33m  -> [0mLoaded plugin: [0;35mMarin's Map Exporter[0m (ver. 2.1)
+[0;33m  -> [0mLoaded plugin: [0;35mModern Quest System + UI[0m (ver. 1.1.0)
+[0;33m  -> [0mLoaded plugin: [0;35mPWT System (E21)[0m (ver. 1.0.5)
+[0;33m  -> [0mLoaded plugin: [0;35mLin's Weather System[0m (ver. 1.4.0)
+[0;33m  -> [0mLoaded plugin: [0;35mItem Crafting UI Plus[0m (ver. 3.0.0)
+[0;33m  -> [0mLoaded plugin: [0;35mI&A New Game Advanced[0m (ver. 1.0.0)
+[0;33m  -> [0mLoaded plugin: [0;35m[DBK] Raid Battles[0m (ver. 1.0)
+[0;33m  -> [0mLoaded plugin: [0;35m[DBK] Enhanced Battle UI[0m (ver. 2.0.9)
+[0;33m  -> [0mLoaded plugin: [0;35mI&A - Cooking System[0m (ver. 0.1.0)
+[0;33m  -> [0mLoaded plugin: [0;35mI&A UI[0m (ver. 1.0)
+[0;1;33mWARNING: Plugin 'DiegoWTs Starter Selection' may not be compatible with Essentials v21.1. Trying to load anyway.[0m
+[0;33m  -> [0mLoaded plugin: [0;35mDiegoWTs Starter Selection[0m (ver. 1.3.0)
+[0;33m  -> [0mLoaded plugin: [0;35mDelta Speed Up[0m (ver. 1.2)
+[0;33m  -> [0mLoaded plugin: [0;35mCinematic Item Receive[0m (ver. 1.0.)
+[0;33m  -> [0mLoaded plugin: [0;35mBetter Bitmaps[0m (ver. 1.1)
+[0;33m  -> [0mLoaded plugin: [0;35mI&A Mechanics[0m (ver. 1.0)
+[0;33m  -> [0mLoaded plugin: [0;35mBOTW-Like Item Gathering v21.1 port[0m (ver. 1.3)
+[0;33m  -> [0mLoaded plugin: [0;35mArcky's Utilities[0m (ver. 1.1.0)
+[0;33m  -> [0mLoaded plugin: [0;35mArcky's Region Map[0m (ver. 3.3.0)
+[0;32m  -> [0m[0;32mSuccessfully loaded 43 plugin(s)[0m
+
+[0;33m*** Checking game data ***[0m
+
+[0;33m  -> [0mCompiling PBS file [0;36mtown_map.txt[0m....[0;32mdone[0m
+[0;33m  -> [0mCompiling PBS file [0;36mmap_connections.txt[0m...[0;32mdone[0m
+[0;33m  -> [0mCompiling PBS file [0;36mtypes.txt[0m....[0;32mdone[0m
+[0;33m  -> [0mCompiling PBS file [0;36mtypes_stellar.txt[0m....[0;32mdone[0m
+[0;33m  -> [0mCompiling PBS file [0;36mabilities.txt[0m......[0;32mdone[0m
+[0;33m  -> [0mCompiling PBS file [0;36mabilities_1_Gen_9_Pack.txt[0m....[0;32mdone[0m
+[0;33m  -> [0mCompiling PBS file [0;36mabilities_2_IA.txt[0m.....[0;32mdone[0m
+[0;33m  -> [0mCompiling PBS file [0;36mmoves.txt[0m...........[0;32mdone[0m
+[0;33m  -> [0mCompiling PBS file [0;36mmoves_Gen_9_Pack.txt[0m....[0;32mdone[0m
+[0;33m  -> [0mCompiling PBS file [0;36mmoves_dynamax.txt[0m....[0;32mdone[0m
+[0;33m  -> [0mCompiling PBS file [0;36mmoves_iolite_amethyst.txt[0m....[0;32mdone[0m
+[0;33m  -> [0mCompiling PBS file [0;36mmoves_max_ia.txt[0m....[0;32mdone[0m
+[0;33m  -> [0mCompiling PBS file [0;36mmoves_terastal.txt[0m....[0;32mdone[0m
+[0;33m  -> [0mCompiling PBS file [0;36mmoves_zpower.txt[0m....[0;32mdone[0m
+[0;33m  -> [0mCompiling PBS file [0;36mitems.txt[0m..........[0;32mdone[0m
+[0;33m  -> [0mCompiling PBS file [0;36mitems_Gen_9_Pack.txt[0m.....[0;32mdone[0m
+[0;33m  -> [0mCompiling PBS file [0;36mitems_Gen_9_Pack_TM.txt[0m......[0;32mdone[0m
+[0;33m  -> [0mCompiling PBS file [0;36mitems_TM_materials.txt[0m........[0;32mdone[0m
+[0;33m  -> [0mCompiling PBS file [0;36mitems_TM_materials_Niphos.txt[0m....[0;32mdone[0m
+[0;33m  -> [0mCompiling PBS file [0;36mitems_TM_materials_Nordra.txt[0m....[0;32mdone[0m
+[0;33m  -> [0mCompiling PBS file [0;36mitems_dynamax.txt[0m....[0;32mdone[0m
+[0;33m  -> [0mCompiling PBS file [0;36mitems_ingredients.txt[0m.....[0;32mdone[0m
+[0;33m  -> [0mCompiling PBS file [0;36mitems_iolite_amethyst.txt[0m....[0;32mdone[0m
+[0;33m  -> [0mCompiling PBS file [0;36mitems_mark_charm.txt[0m....[0;32mdone[0m
+[0;33m  -> [0mCompiling PBS file [0;36mitems_raid_bait.txt[0m....[0;32mdone[0m
+[0;33m  -> [0mCompiling PBS file [0;36mitems_terastal.txt[0m....[0;32mdone[0m
+[0;33m  -> [0mCompiling PBS file [0;36mitems_zpower.txt[0m....[0;32mdone[0m
+[0;33m  -> [0mCompiling PBS file [0;36mberry_plants.txt[0m....[0;32mdone[0m
+[0;33m  -> [0mCompiling PBS file [0;36mpokemon.txt[0m............[0;32mdone[0m
+[0;33m  -> [0mCompiling PBS file [0;36mpokemon_base_1_Gen_9_Pack.txt[0m.....[0;32mdone[0m
+[0;33m  -> [0mCompiling PBS file [0;36mpokemon_base_2_nordra.txt[0m....[0;32mdone[0m
+[0;33m  -> [0mCompiling PBS file [0;36mpokemon_base_3_niphos.txt[0m....[0;32mdone[0m
+[0;33m  -> [0mCompiling PBS file [0;36mpokemon_base_5_maisla.txt[0m....[0;32mdone[0m
+[0;33m  -> [0mCompiling PBS file [0;36mpokemon_forms.txt[0m.......[0;32mdone[0m
+[0;33m  -> [0mCompiling PBS file [0;36mpokemon_forms_Fake.txt[0m....[0;32mdone[0m
+[0;33m  -> [0mCompiling PBS file [0;36mpokemon_forms_Gen_9_Pack.txt[0m.....[0;32mdone[0m
+[0;33m  -> [0mCompiling PBS file [0;36mpokemon_forms_gmax.txt[0m....[0;32mdone[0m
+[0;33m  -> [0mCompiling PBS file [0;36mpokemon_forms_pikachu_caps.txt[0m....[0;32mdone[0m
+[0;33m  -> [0mCompiling PBS file [0;36mpokemon_metrics.txt[0m..............[0;32mdone[0m
+[0;33m  -> [0mCompiling PBS file [0;36mpokemon_metrics_Gen_9_Pack.txt[0m......[0;32mdone[0m
+[0;33m  -> [0mCompiling PBS file [0;36mpokemon_metrics_gmax.txt[0m....[0;32mdone[0m
+[0;33m  -> [0mCompiling PBS file [0;36mpokemon_metrics_ia.txt[0m....[0;32mdone[0m
+[0;33m  -> [0mCompiling PBS file [0;36mregional_dexes.txt[0m...[0;32mdone[0m
+[0;33m  -> [0mCompiling PBS file [0;36mribbons.txt[0m.....[0;32mdone[0m
+[0;33m  -> [0mCompiling PBS file [0;36mencounters.txt[0m......[0;32mdone[0m
+[0;33m  -> [0mCompiling PBS file [0;36mencounters_Niphos.txt[0m.....[0;32mdone[0m
+[0;33m  -> [0mCompiling PBS file [0;36mencounters_Nordra.txt[0m....[0;32mdone[0m
+[0;33m  -> [0mCompiling PBS file [0;36mtrainer_types.txt[0m......[0;32mdone[0m
+[0;33m  -> [0mCompiling PBS file [0;36mtrainer_types_iolite_amethyst.txt[0m....[0;32mdone[0m
+[0;33m  -> [0mCompiling PBS file [0;36mtrainer_types_tournament.txt[0m....[0;32mdone[0m
+[0;33m  -> [0mCompiling PBS file [0;36mtrainers.txt[0m.....[0;32mdone[0m
+[0;33m  -> [0mCompiling PBS file [0;36mtrainers_amethyst.txt[0m.....[0;32mdone[0m
+[0;33m  -> [0mCompiling PBS file [0;36mtrainers_iolite.txt[0m...[0;32mdone[0m
+[0;33m  -> [0mCompiling PBS file [0;36mtrainers_quartz.txt[0m....[0;32mdone[0m
+[0;33m  -> [0mCompiling PBS file [0;36mbattle_facility_lists.txt[0m........[0;32mdone[0m
+[0;33m  -> [0mCompiling PBS file [0;36mmetadata.txt[0m....[0;32mdone[0m
+[0;33m  -> [0mCompiling PBS file [0;36mmap_metadata.txt[0m....[0;32mdone[0m
+[0;33m  -> [0mCompiling PBS file [0;36mdungeon_tilesets.txt[0m....[0;32mdone[0m
+[0;33m  -> [0mCompiling PBS file [0;36mdungeon_parameters.txt[0m....[0;32mdone[0m
+[0;33m  -> [0mCompiling PBS file [0;36mphone.txt[0m....[0;32mdone[0m
+[0;33m  -> [0mCompiling PBS file [0;36mrecipes.txt[0m....[0;32mdone[0m
+[0;33m  -> [0mCompiling PBS file [0;36madventure_maps.txt[0m....[0;32mdone[0m
+[0;33m  -> [0mCompiling PBS file [0;36mingredients.txt[0m.....[0;32mdone[0m
+[0;33m  -> [0mCompiling PBS file [0;36mingredient_groups.txt[0m....[0;32mdone[0m
+[0;33m  -> [0mCompiling PBS file [0;36mcooking_recipes.txt[0m....[0;32mdone[0m
+[0;33m  -> [0mCompiling animations...................[0;32mdone[0m
+[0;33m  -> [0mProcessing 112 maps.....[0;32mdone[0m
+[0;33m  -> [0mProcessing common events...[0;32mdone[0m
+[0;33m  -> [0mSaving messages...[0;32mdone[0m
+[0;32m  -> [0m[0;32mSuccessfully compiled all game data[0m
+
+[0;1;33mWARNING: Usage of deprecated method "safeExists?(f)" or its alias.
+The method is slated to be removed in Essentials v22.
+Use "FileTest.exist?(f)" instead.[0m
+Choose a Cooking Recipe.
+Cheesy Pizza
+ID: CHEESYPIZZA
+Family: CHEESY_PIZZA
+Tier: BASE
+Category: MAINCOURSE
+Default Recipe: No
+Unlock Method: None
+Sprite: None
+Required Ingredients (3):
+Item: White Flour [WHITEFLOUR]
+Item: Tomato [TOMATO]
+Group: Pizza Cheese [PIZZA_CHEESE]
+Optional Ingredients (2):
+Item: Yeast [YEAST]
+Group: Pizza Cheese [PIZZA_CHEESE]
+Required Condiments (0):
+None
+Optional Condiments (2):
+Group: Salts [SALTS]
+Item: Garlic Sauce [GARLICSAUCE]
+Choose a Cooking Recipe.
+Ultra Cheesy Pizza
+ID: ULTRACHEESYPIZZA
+Family: CHEESY_PIZZA
+Tier: ULTRA
+Category: MAINCOURSE
+Default Recipe: No
+Unlock Method: CREATIVEMODE
+Sprite: None
+Required Ingredients (4):
+Item: White Flour [WHITEFLOUR]
+Item: Tomato [TOMATO]
+Group: Pizza Cheese [PIZZA_CHEESE]
+Group: Pizza Cheese [PIZZA_CHEESE]
+Optional Ingredients (1):
+Item: Yeast [YEAST]
+Required Condiments (2):
+Group: Olive Oils [OLIVE_OILS]
+Group: Salts [SALTS]
+Optional Condiments (1):
+Item: Garlic Sauce [GARLICSAUCE]
+Choose a Cooking Recipe.
+[0;34mVMS: Integrated Server stopped[0m
+[0;34mVMS: Not connected to a server[0m
+[0;34mVMS: Integrated Server stopped[0m
+[0;34mVMS: Not connected to a server[0m
+GPU Cache Max: 32768
+-------------------------------------------------------------------------------
+Pokemon Amethyst Output Window
+-------------------------------------------------------------------------------
+If you can see this window, you are running the game in Debug Mode. This means
+that you're either playing a debug version of the game, or you're playing from
+within XPX Engine.
+
+Closing this window will close the game. If you want to get rid of this window,
+run the program from the Shell, or download a release version of the game.
+-------------------------------------------------------------------------------
+Debug Output:
+-------------------------------------------------------------------------------
+
+[0;33m*** Checking plugins ***[0m
+
+[0;33m  -> [0mCompiling plugin scripts...[0;32mdone[0m
+[0;33m  -> [0mLoaded plugin: [0;35mv21.1 Hotfixes[0m (ver. 1.0.9)
+[0;1;33mWARNING: Plugin 'rainefallUtils' may not be compatible with Essentials v21.1. Trying to load anyway.[0m
+[0;33m  -> [0mLoaded plugin: [0;35mrainefallUtils[0m (ver. 1.2)
+[0;33m  -> [0mLoaded plugin: [0;35mGeneration 9 Pack[0m (ver. 3.3.2)
+[0;33m  -> [0mLoaded plugin: [0;35mModular UI Scenes[0m (ver. 2.0.9)
+[0;1;33mWARNING: Plugin 'Bag Screen w/int. Party' may not be compatible with Essentials v21.1. Trying to load anyway.[0m
+[0;33m  -> [0mLoaded plugin: [0;35mBag Screen w/int. Party[0m (ver. 2.5.0)
+[0;33m  -> [0mLoaded plugin: [0;35m[MUI] Pokedex Data Page[0m (ver. 2.0.1)
+[0;33m  -> [0mLoaded plugin: [0;35m[MUI] Enhanced Pokemon UI[0m (ver. 1.0.6)
+[0;33m  -> [0mLoaded plugin: [0;35mDeluxe Battle Kit[0m (ver. 1.2.9)
+[0;33m  -> [0mLoaded plugin: [0;35m[MUI] Improved Mementos[0m (ver. 1.0.4)
+[0;33m  -> [0mLoaded plugin: [0;35m[DBK] Terastallization[0m (ver. 1.1.5)
+[0;33m  -> [0mLoaded plugin: [0;35m[DBK] Dynamax[0m (ver. 1.1.3)
+[0;33m  -> [0mLoaded plugin: [0;35m[DBK] Z-Power[0m (ver. 1.1.1)
+[0;33m  -> [0mLoaded plugin: [0;35mCuttable Tall Grass[0m (ver. 1.0)
+[0;33m  -> [0mLoaded plugin: [0;35mWild Item Drops[0m (ver. 1.0)
+[0;1;33mWARNING: Plugin 'Voltseon's Pause Menu' may not be compatible with Essentials v21.1. Trying to load anyway.[0m
+[0;33m  -> [0mLoaded plugin: [0;35mVoltseon's Pause Menu[0m (ver. 2.1)
+[0;1;33mWARNING: Usage of deprecated method "safeExists?(f)" or its alias.
+The method is slated to be removed in Essentials v22.
+Use "FileTest.exist?(f)" instead.[0m
+[0;33m  -> [0mLoaded plugin: [0;35mVoltseon's Multiplayer Solution[0m (ver. 2.2.0)
+[0;33m  -> [0mLoaded plugin: [0;35mPokeChests[0m (ver. 1.0)
+[0;33m  -> [0mLoaded plugin: [0;35mTDW Debug List Search[0m (ver. 1.2)
+[0;1;33mWARNING: Plugin 'Swdfm Utilities' may not be compatible with Essentials v21.1. Trying to load anyway.[0m
+[0;33m  -> [0mLoaded plugin: [0;35mSwdfm Utilities[0m (ver. 2024.12.27)
+[0;33m  -> [0mLoaded plugin: [0;35mLuka's Scripting Utilities[0m (ver. 3.3.2)
+[0;33m  -> [0mLoaded plugin: [0;35mVena's Meal Powers[0m (ver. 1.0)
+[0;33m  -> [0mLoaded plugin: [0;35mMore Pokedex Page : Size Comparison[0m (ver. 2.0.1)
+[0;33m  -> [0mLoaded plugin: [0;35mModular Messages[0m (ver. 2024.12.27)
+[0;33m  -> [0mLoaded plugin: [0;35mMarin's Side Stairs[0m (ver. 1.0)
+[0;1;33mWARNING: Plugin 'Marin's Scripting Utilities' may not be compatible with Essentials v21.1. Trying to load anyway.[0m
+[0;33m  -> [0mLoaded plugin: [0;35mMarin's Scripting Utilities[0m (ver. 2.0)
+[0;1;33mWARNING: Plugin 'Marin's Map Exporter' may not be compatible with Essentials v21.1. Trying to load anyway.[0m
+[0;33m  -> [0mLoaded plugin: [0;35mMarin's Map Exporter[0m (ver. 2.1)
+[0;33m  -> [0mLoaded plugin: [0;35mModern Quest System + UI[0m (ver. 1.1.0)
+[0;33m  -> [0mLoaded plugin: [0;35mPWT System (E21)[0m (ver. 1.0.5)
+[0;33m  -> [0mLoaded plugin: [0;35mLin's Weather System[0m (ver. 1.4.0)
+[0;33m  -> [0mLoaded plugin: [0;35mItem Crafting UI Plus[0m (ver. 3.0.0)
+[0;33m  -> [0mLoaded plugin: [0;35mI&A New Game Advanced[0m (ver. 1.0.0)
+[0;33m  -> [0mLoaded plugin: [0;35m[DBK] Raid Battles[0m (ver. 1.0)
+[0;33m  -> [0mLoaded plugin: [0;35m[DBK] Enhanced Battle UI[0m (ver. 2.0.9)
+[0;33m  -> [0mLoaded plugin: [0;35mI&A - Cooking System[0m (ver. 0.1.0)
+[0;33m  -> [0mLoaded plugin: [0;35mI&A UI[0m (ver. 1.0)
+[0;1;33mWARNING: Plugin 'DiegoWTs Starter Selection' may not be compatible with Essentials v21.1. Trying to load anyway.[0m
+[0;33m  -> [0mLoaded plugin: [0;35mDiegoWTs Starter Selection[0m (ver. 1.3.0)
+[0;33m  -> [0mLoaded plugin: [0;35mDelta Speed Up[0m (ver. 1.2)
+[0;33m  -> [0mLoaded plugin: [0;35mCinematic Item Receive[0m (ver. 1.0.)
+[0;33m  -> [0mLoaded plugin: [0;35mBetter Bitmaps[0m (ver. 1.1)
+[0;33m  -> [0mLoaded plugin: [0;35mI&A Mechanics[0m (ver. 1.0)
+[0;33m  -> [0mLoaded plugin: [0;35mBOTW-Like Item Gathering v21.1 port[0m (ver. 1.3)
+[0;33m  -> [0mLoaded plugin: [0;35mArcky's Utilities[0m (ver. 1.1.0)
+[0;33m  -> [0mLoaded plugin: [0;35mArcky's Region Map[0m (ver. 3.3.0)
+[0;32m  -> [0m[0;32mSuccessfully loaded 43 plugin(s)[0m
+
+[0;33m*** Checking game data ***[0m
+
+[0;33m  -> [0mGame data was not compiled
+
+[0;1;33mWARNING: Usage of deprecated method "safeExists?(f)" or its alias.
+The method is slated to be removed in Essentials v22.
+Use "FileTest.exist?(f)" instead.[0m
+Test Items:
+Cheese: Moomoo Cheese
+Olive Oil: Olive Oil
+Salt: Salt
+Raid Condiment: Salty Gigantamix
+Test 1/6: PASS
+
+Base requirements
+Expected: CHEESYPIZZA
+Actual: CHEESYPIZZA
+Test 2/6: PASS
+
+Great requirements
+Expected: GREATCHEESYPIZZA
+Actual: GREATCHEESYPIZZA
+Test 3/6: PASS
+
+Great + extra Cheese
+Expected: GREATCHEESYPIZZA
+Actual: GREATCHEESYPIZZA
+Test 4/6: PASS
+
+Great + Salt
+Expected: GREATCHEESYPIZZA
+Actual: GREATCHEESYPIZZA
+Test 5/6: PASS
+
+Great + Cheese + Salt
+Expected: ULTRACHEESYPIZZA
+Actual: ULTRACHEESYPIZZA
+Test 6/6: PASS
+
+Ultra + Raid Condiment
+Expected: MASTERCHEESYPIZZA
+Actual: MASTERCHEESYPIZZA
+Recipe Matcher Tests Complete.
+
+Passed: 6/6
+Failed: 0/6
+Test Items:
+Cheese: Moomoo Cheese
+Olive Oil: Olive Oil
+Salt: Salt
+Raid Condiment: Salty Gigantamix
+[0;34mVMS: Integrated Server stopped[0m
+[0;34mVMS: Not connected to a server[0m
+[0;34mVMS: Integrated Server stopped[0m
+[0;34mVMS: Not connected to a server[0m
+GPU Cache Max: 32768
+-------------------------------------------------------------------------------
+Pokemon Amethyst Output Window
+-------------------------------------------------------------------------------
+If you can see this window, you are running the game in Debug Mode. This means
+that you're either playing a debug version of the game, or you're playing from
+within XPX Engine.
+
+Closing this window will close the game. If you want to get rid of this window,
+run the program from the Shell, or download a release version of the game.
+-------------------------------------------------------------------------------
+Debug Output:
+-------------------------------------------------------------------------------
+
+[0;33m*** Checking plugins ***[0m
+
+[0;33m  -> [0mCompiling plugin scripts...[0;32mdone[0m
+[0;33m  -> [0mLoaded plugin: [0;35mv21.1 Hotfixes[0m (ver. 1.0.9)
+[0;1;33mWARNING: Plugin 'rainefallUtils' may not be compatible with Essentials v21.1. Trying to load anyway.[0m
+[0;33m  -> [0mLoaded plugin: [0;35mrainefallUtils[0m (ver. 1.2)
+[0;33m  -> [0mLoaded plugin: [0;35mGeneration 9 Pack[0m (ver. 3.3.2)
+[0;33m  -> [0mLoaded plugin: [0;35mModular UI Scenes[0m (ver. 2.0.9)
+[0;1;33mWARNING: Plugin 'Bag Screen w/int. Party' may not be compatible with Essentials v21.1. Trying to load anyway.[0m
+[0;33m  -> [0mLoaded plugin: [0;35mBag Screen w/int. Party[0m (ver. 2.5.0)
+[0;33m  -> [0mLoaded plugin: [0;35m[MUI] Pokedex Data Page[0m (ver. 2.0.1)
+[0;33m  -> [0mLoaded plugin: [0;35m[MUI] Enhanced Pokemon UI[0m (ver. 1.0.6)
+[0;33m  -> [0mLoaded plugin: [0;35mDeluxe Battle Kit[0m (ver. 1.2.9)
+[0;33m  -> [0mLoaded plugin: [0;35m[MUI] Improved Mementos[0m (ver. 1.0.4)
+[0;33m  -> [0mLoaded plugin: [0;35m[DBK] Terastallization[0m (ver. 1.1.5)
+[0;33m  -> [0mLoaded plugin: [0;35m[DBK] Dynamax[0m (ver. 1.1.3)
+[0;33m  -> [0mLoaded plugin: [0;35m[DBK] Z-Power[0m (ver. 1.1.1)
+[0;33m  -> [0mLoaded plugin: [0;35mCuttable Tall Grass[0m (ver. 1.0)
+[0;33m  -> [0mLoaded plugin: [0;35mWild Item Drops[0m (ver. 1.0)
+[0;1;33mWARNING: Plugin 'Voltseon's Pause Menu' may not be compatible with Essentials v21.1. Trying to load anyway.[0m
+[0;33m  -> [0mLoaded plugin: [0;35mVoltseon's Pause Menu[0m (ver. 2.1)
+[0;1;33mWARNING: Usage of deprecated method "safeExists?(f)" or its alias.
+The method is slated to be removed in Essentials v22.
+Use "FileTest.exist?(f)" instead.[0m
+[0;33m  -> [0mLoaded plugin: [0;35mVoltseon's Multiplayer Solution[0m (ver. 2.2.0)
+[0;33m  -> [0mLoaded plugin: [0;35mPokeChests[0m (ver. 1.0)
+[0;33m  -> [0mLoaded plugin: [0;35mTDW Debug List Search[0m (ver. 1.2)
+[0;1;33mWARNING: Plugin 'Swdfm Utilities' may not be compatible with Essentials v21.1. Trying to load anyway.[0m
+[0;33m  -> [0mLoaded plugin: [0;35mSwdfm Utilities[0m (ver. 2024.12.27)
+[0;33m  -> [0mLoaded plugin: [0;35mLuka's Scripting Utilities[0m (ver. 3.3.2)
+[0;33m  -> [0mLoaded plugin: [0;35mVena's Meal Powers[0m (ver. 1.0)
+[0;33m  -> [0mLoaded plugin: [0;35mMore Pokedex Page : Size Comparison[0m (ver. 2.0.1)
+[0;33m  -> [0mLoaded plugin: [0;35mModular Messages[0m (ver. 2024.12.27)
+[0;33m  -> [0mLoaded plugin: [0;35mMarin's Side Stairs[0m (ver. 1.0)
+[0;1;33mWARNING: Plugin 'Marin's Scripting Utilities' may not be compatible with Essentials v21.1. Trying to load anyway.[0m
+[0;33m  -> [0mLoaded plugin: [0;35mMarin's Scripting Utilities[0m (ver. 2.0)
+[0;1;33mWARNING: Plugin 'Marin's Map Exporter' may not be compatible with Essentials v21.1. Trying to load anyway.[0m
+[0;33m  -> [0mLoaded plugin: [0;35mMarin's Map Exporter[0m (ver. 2.1)
+[0;33m  -> [0mLoaded plugin: [0;35mModern Quest System + UI[0m (ver. 1.1.0)
+[0;33m  -> [0mLoaded plugin: [0;35mPWT System (E21)[0m (ver. 1.0.5)
+[0;33m  -> [0mLoaded plugin: [0;35mLin's Weather System[0m (ver. 1.4.0)
+[0;33m  -> [0mLoaded plugin: [0;35mItem Crafting UI Plus[0m (ver. 3.0.0)
+[0;33m  -> [0mLoaded plugin: [0;35mI&A New Game Advanced[0m (ver. 1.0.0)
+[0;33m  -> [0mLoaded plugin: [0;35m[DBK] Raid Battles[0m (ver. 1.0)
+[0;33m  -> [0mLoaded plugin: [0;35m[DBK] Enhanced Battle UI[0m (ver. 2.0.9)
+[0;33m  -> [0mLoaded plugin: [0;35mI&A - Cooking System[0m (ver. 0.1.0)
+[0;33m  -> [0mLoaded plugin: [0;35mI&A UI[0m (ver. 1.0)
+[0;1;33mWARNING: Plugin 'DiegoWTs Starter Selection' may not be compatible with Essentials v21.1. Trying to load anyway.[0m
+[0;33m  -> [0mLoaded plugin: [0;35mDiegoWTs Starter Selection[0m (ver. 1.3.0)
+[0;33m  -> [0mLoaded plugin: [0;35mDelta Speed Up[0m (ver. 1.2)
+[0;33m  -> [0mLoaded plugin: [0;35mCinematic Item Receive[0m (ver. 1.0.)
+[0;33m  -> [0mLoaded plugin: [0;35mBetter Bitmaps[0m (ver. 1.1)
+[0;33m  -> [0mLoaded plugin: [0;35mI&A Mechanics[0m (ver. 1.0)
+[0;33m  -> [0mLoaded plugin: [0;35mBOTW-Like Item Gathering v21.1 port[0m (ver. 1.3)
+[0;33m  -> [0mLoaded plugin: [0;35mArcky's Utilities[0m (ver. 1.1.0)
+[0;33m  -> [0mLoaded plugin: [0;35mArcky's Region Map[0m (ver. 3.3.0)
+[0;32m  -> [0m[0;32mSuccessfully loaded 43 plugin(s)[0m
+
+[0;33m*** Checking game data ***[0m
+
+[0;33m  -> [0mGame data was not compiled
+
+[0;1;33mWARNING: Usage of deprecated method "safeExists?(f)" or its alias.
+The method is slated to be removed in Essentials v22.
+Use "FileTest.exist?(f)" instead.[0m
+Recipe Knowledge Test
+No recipes are currently known.
+Recipe Knowledge Test
+Newly learned:
+CHEESYPIZZA
+Recipe Knowledge Test
+Newly learned:
+GREATCHEESYPIZZA
+ULTRACHEESYPIZZA
+Recipe Knowledge Test
+Known Recipes (3):
+Cheesy Pizza [CHEESYPIZZA]
+Great Cheesy Pizza [GREATCHEESYPIZZA]
+Ultra Cheesy Pizza [ULTRACHEESYPIZZA]
+Recipe Knowledge Test
+Newly discovered:
+MASTERCHEESYPIZZA
+Recipe Knowledge Test
+Known Recipes (4):
+Cheesy Pizza [CHEESYPIZZA]
+Great Cheesy Pizza [GREATCHEESYPIZZA]
+Ultra Cheesy Pizza [ULTRACHEESYPIZZA]
+Master Cheesy Pizza [MASTERCHEESYPIZZA]
+Recipe Knowledge Test
+Forgotten:
+CHEESYPIZZA
+GREATCHEESYPIZZA
+ULTRACHEESYPIZZA
+MASTERCHEESYPIZZA
+Recipe Knowledge Test
+No recipes are currently known.
+Recipe Knowledge Test
+Newly discovered:
+CHEESYPIZZA
+GREATCHEESYPIZZA
+ULTRACHEESYPIZZA
+MASTERCHEESYPIZZA
+Recipe Knowledge Test
+Forgot 4 stored recipe(s).
+Recipe Knowledge Test
+Forgot 0 stored recipe(s).
+Recipe Knowledge Test
+Forgot 0 stored recipe(s).
+Recipe Knowledge Test
+Forgot 0 stored recipe(s).
+Recipe Knowledge Test
+Choose a Cooking Recipe to learn.
+Learned:
+Cheesy Pizza
+Great Cheesy Pizza
+Ultra Cheesy Pizza
+Would you like to save the game?
+{:difficulty=>1, :nuzlocke=>false, :prof_oak_challenge=>false, :inverse=>false, :level_caps=>false, :no_bag_items_battle=>false, :nuzlocke_options=>{:faint_rule=>0, :dupes_clause=>false, :shiny_clause=>false, :nickname_clause=>false, :hm_clause=>false, :lose_condition=>1, :lose_result=>2, :pokecenter_limit=>-1}}
+\se[]Vena saved the game.\me[GUI save game]\wtnp[20]
+[0;34mVMS: Integrated Server stopped[0m
+[0;34mVMS: Not connected to a server[0m
+[0;34mVMS: Integrated Server stopped[0m
+[0;34mVMS: Not connected to a server[0m
+GPU Cache Max: 32768
+-------------------------------------------------------------------------------
+Pokemon Amethyst Output Window
+-------------------------------------------------------------------------------
+If you can see this window, you are running the game in Debug Mode. This means
+that you're either playing a debug version of the game, or you're playing from
+within XPX Engine.
+
+Closing this window will close the game. If you want to get rid of this window,
+run the program from the Shell, or download a release version of the game.
+-------------------------------------------------------------------------------
+Debug Output:
+-------------------------------------------------------------------------------
+
+[0;33m*** Checking plugins ***[0m
+
+[0;33m  -> [0mCompiling plugin scripts...[0;32mdone[0m
+[0;33m  -> [0mLoaded plugin: [0;35mv21.1 Hotfixes[0m (ver. 1.0.9)
+[0;1;33mWARNING: Plugin 'rainefallUtils' may not be compatible with Essentials v21.1. Trying to load anyway.[0m
+[0;33m  -> [0mLoaded plugin: [0;35mrainefallUtils[0m (ver. 1.2)
+[0;33m  -> [0mLoaded plugin: [0;35mGeneration 9 Pack[0m (ver. 3.3.2)
+[0;33m  -> [0mLoaded plugin: [0;35mModular UI Scenes[0m (ver. 2.0.9)
+[0;1;33mWARNING: Plugin 'Bag Screen w/int. Party' may not be compatible with Essentials v21.1. Trying to load anyway.[0m
+[0;33m  -> [0mLoaded plugin: [0;35mBag Screen w/int. Party[0m (ver. 2.5.0)
+[0;33m  -> [0mLoaded plugin: [0;35m[MUI] Pokedex Data Page[0m (ver. 2.0.1)
+[0;33m  -> [0mLoaded plugin: [0;35m[MUI] Enhanced Pokemon UI[0m (ver. 1.0.6)
+[0;33m  -> [0mLoaded plugin: [0;35mDeluxe Battle Kit[0m (ver. 1.2.9)
+[0;33m  -> [0mLoaded plugin: [0;35m[MUI] Improved Mementos[0m (ver. 1.0.4)
+[0;33m  -> [0mLoaded plugin: [0;35m[DBK] Terastallization[0m (ver. 1.1.5)
+[0;33m  -> [0mLoaded plugin: [0;35m[DBK] Dynamax[0m (ver. 1.1.3)
+[0;33m  -> [0mLoaded plugin: [0;35m[DBK] Z-Power[0m (ver. 1.1.1)
+[0;33m  -> [0mLoaded plugin: [0;35mCuttable Tall Grass[0m (ver. 1.0)
+[0;33m  -> [0mLoaded plugin: [0;35mWild Item Drops[0m (ver. 1.0)
+[0;1;33mWARNING: Plugin 'Voltseon's Pause Menu' may not be compatible with Essentials v21.1. Trying to load anyway.[0m
+[0;33m  -> [0mLoaded plugin: [0;35mVoltseon's Pause Menu[0m (ver. 2.1)
+[0;1;33mWARNING: Usage of deprecated method "safeExists?(f)" or its alias.
+The method is slated to be removed in Essentials v22.
+Use "FileTest.exist?(f)" instead.[0m
+[0;33m  -> [0mLoaded plugin: [0;35mVoltseon's Multiplayer Solution[0m (ver. 2.2.0)
+[0;33m  -> [0mLoaded plugin: [0;35mPokeChests[0m (ver. 1.0)
+[0;33m  -> [0mLoaded plugin: [0;35mTDW Debug List Search[0m (ver. 1.2)
+[0;1;33mWARNING: Plugin 'Swdfm Utilities' may not be compatible with Essentials v21.1. Trying to load anyway.[0m
+[0;33m  -> [0mLoaded plugin: [0;35mSwdfm Utilities[0m (ver. 2024.12.27)
+[0;33m  -> [0mLoaded plugin: [0;35mLuka's Scripting Utilities[0m (ver. 3.3.2)
+[0;33m  -> [0mLoaded plugin: [0;35mVena's Meal Powers[0m (ver. 1.0)
+[0;33m  -> [0mLoaded plugin: [0;35mMore Pokedex Page : Size Comparison[0m (ver. 2.0.1)
+[0;33m  -> [0mLoaded plugin: [0;35mModular Messages[0m (ver. 2024.12.27)
+[0;33m  -> [0mLoaded plugin: [0;35mMarin's Side Stairs[0m (ver. 1.0)
+[0;1;33mWARNING: Plugin 'Marin's Scripting Utilities' may not be compatible with Essentials v21.1. Trying to load anyway.[0m
+[0;33m  -> [0mLoaded plugin: [0;35mMarin's Scripting Utilities[0m (ver. 2.0)
+[0;1;33mWARNING: Plugin 'Marin's Map Exporter' may not be compatible with Essentials v21.1. Trying to load anyway.[0m
+[0;33m  -> [0mLoaded plugin: [0;35mMarin's Map Exporter[0m (ver. 2.1)
+[0;33m  -> [0mLoaded plugin: [0;35mModern Quest System + UI[0m (ver. 1.1.0)
+[0;33m  -> [0mLoaded plugin: [0;35mPWT System (E21)[0m (ver. 1.0.5)
+[0;33m  -> [0mLoaded plugin: [0;35mLin's Weather System[0m (ver. 1.4.0)
+[0;33m  -> [0mLoaded plugin: [0;35mItem Crafting UI Plus[0m (ver. 3.0.0)
+[0;33m  -> [0mLoaded plugin: [0;35mI&A New Game Advanced[0m (ver. 1.0.0)
+[0;33m  -> [0mLoaded plugin: [0;35m[DBK] Raid Battles[0m (ver. 1.0)
+[0;33m  -> [0mLoaded plugin: [0;35m[DBK] Enhanced Battle UI[0m (ver. 2.0.9)
+[0;33m  -> [0mLoaded plugin: [0;35mI&A - Cooking System[0m (ver. 0.1.0)
+[0;33m  -> [0mLoaded plugin: [0;35mI&A UI[0m (ver. 1.0)
+[0;1;33mWARNING: Plugin 'DiegoWTs Starter Selection' may not be compatible with Essentials v21.1. Trying to load anyway.[0m
+[0;33m  -> [0mLoaded plugin: [0;35mDiegoWTs Starter Selection[0m (ver. 1.3.0)
+[0;33m  -> [0mLoaded plugin: [0;35mDelta Speed Up[0m (ver. 1.2)
+[0;33m  -> [0mLoaded plugin: [0;35mCinematic Item Receive[0m (ver. 1.0.)
+[0;33m  -> [0mLoaded plugin: [0;35mBetter Bitmaps[0m (ver. 1.1)
+[0;33m  -> [0mLoaded plugin: [0;35mI&A Mechanics[0m (ver. 1.0)
+[0;33m  -> [0mLoaded plugin: [0;35mBOTW-Like Item Gathering v21.1 port[0m (ver. 1.3)
+[0;33m  -> [0mLoaded plugin: [0;35mArcky's Utilities[0m (ver. 1.1.0)
+[0;33m  -> [0mLoaded plugin: [0;35mArcky's Region Map[0m (ver. 3.3.0)
+[0;32m  -> [0m[0;32mSuccessfully loaded 43 plugin(s)[0m
+
+[0;33m*** Checking game data ***[0m
+
+[0;33m  -> [0mCompiling PBS file [0;36mtown_map.txt[0m....[0;32mdone[0m
+[0;33m  -> [0mCompiling PBS file [0;36mmap_connections.txt[0m...[0;32mdone[0m
+[0;33m  -> [0mCompiling PBS file [0;36mtypes.txt[0m....[0;32mdone[0m
+[0;33m  -> [0mCompiling PBS file [0;36mtypes_stellar.txt[0m....[0;32mdone[0m
+[0;33m  -> [0mCompiling PBS file [0;36mabilities.txt[0m......[0;32mdone[0m
+[0;33m  -> [0mCompiling PBS file [0;36mabilities_1_Gen_9_Pack.txt[0m....[0;32mdone[0m
+[0;33m  -> [0mCompiling PBS file [0;36mabilities_2_IA.txt[0m.....[0;32mdone[0m
+[0;33m  -> [0mCompiling PBS file [0;36mmoves.txt[0m...........[0;32mdone[0m
+[0;33m  -> [0mCompiling PBS file [0;36mmoves_Gen_9_Pack.txt[0m....[0;32mdone[0m
+[0;33m  -> [0mCompiling PBS file [0;36mmoves_dynamax.txt[0m....[0;32mdone[0m
+[0;33m  -> [0mCompiling PBS file [0;36mmoves_iolite_amethyst.txt[0m....[0;32mdone[0m
+[0;33m  -> [0mCompiling PBS file [0;36mmoves_max_ia.txt[0m....[0;32mdone[0m
+[0;33m  -> [0mCompiling PBS file [0;36mmoves_terastal.txt[0m....[0;32mdone[0m
+[0;33m  -> [0mCompiling PBS file [0;36mmoves_zpower.txt[0m....[0;32mdone[0m
+[0;33m  -> [0mCompiling PBS file [0;36mitems.txt[0m..........[0;32mdone[0m
+[0;33m  -> [0mCompiling PBS file [0;36mitems_Gen_9_Pack.txt[0m.....[0;32mdone[0m
+[0;33m  -> [0mCompiling PBS file [0;36mitems_Gen_9_Pack_TM.txt[0m......[0;32mdone[0m
+[0;33m  -> [0mCompiling PBS file [0;36mitems_TM_materials.txt[0m........[0;32mdone[0m
+[0;33m  -> [0mCompiling PBS file [0;36mitems_TM_materials_Niphos.txt[0m....[0;32mdone[0m
+[0;33m  -> [0mCompiling PBS file [0;36mitems_TM_materials_Nordra.txt[0m....[0;32mdone[0m
+[0;33m  -> [0mCompiling PBS file [0;36mitems_dynamax.txt[0m....[0;32mdone[0m
+[0;33m  -> [0mCompiling PBS file [0;36mitems_ingredients.txt[0m.....[0;32mdone[0m
+[0;33m  -> [0mCompiling PBS file [0;36mitems_iolite_amethyst.txt[0m....[0;32mdone[0m
+[0;33m  -> [0mCompiling PBS file [0;36mitems_mark_charm.txt[0m....[0;32mdone[0m
+[0;33m  -> [0mCompiling PBS file [0;36mitems_raid_bait.txt[0m....[0;32mdone[0m
+[0;33m  -> [0mCompiling PBS file [0;36mitems_terastal.txt[0m....[0;32mdone[0m
+[0;33m  -> [0mCompiling PBS file [0;36mitems_zpower.txt[0m....[0;32mdone[0m
+[0;33m  -> [0mCompiling PBS file [0;36mberry_plants.txt[0m....[0;32mdone[0m
+[0;33m  -> [0mCompiling PBS file [0;36mpokemon.txt[0m............[0;32mdone[0m
+[0;33m  -> [0mCompiling PBS file [0;36mpokemon_base_1_Gen_9_Pack.txt[0m.....[0;32mdone[0m
+[0;33m  -> [0mCompiling PBS file [0;36mpokemon_base_2_nordra.txt[0m....[0;32mdone[0m
+[0;33m  -> [0mCompiling PBS file [0;36mpokemon_base_3_niphos.txt[0m....[0;32mdone[0m
+[0;33m  -> [0mCompiling PBS file [0;36mpokemon_base_5_maisla.txt[0m....[0;32mdone[0m
+[0;33m  -> [0mCompiling PBS file [0;36mpokemon_forms.txt[0m.......[0;32mdone[0m
+[0;33m  -> [0mCompiling PBS file [0;36mpokemon_forms_Fake.txt[0m....[0;32mdone[0m
+[0;33m  -> [0mCompiling PBS file [0;36mpokemon_forms_Gen_9_Pack.txt[0m.....[0;32mdone[0m
+[0;33m  -> [0mCompiling PBS file [0;36mpokemon_forms_gmax.txt[0m....[0;32mdone[0m
+[0;33m  -> [0mCompiling PBS file [0;36mpokemon_forms_pikachu_caps.txt[0m....[0;32mdone[0m
+[0;33m  -> [0mCompiling PBS file [0;36mpokemon_metrics.txt[0m..............[0;32mdone[0m
+[0;33m  -> [0mCompiling PBS file [0;36mpokemon_metrics_Gen_9_Pack.txt[0m......[0;32mdone[0m
+[0;33m  -> [0mCompiling PBS file [0;36mpokemon_metrics_gmax.txt[0m....[0;32mdone[0m
+[0;33m  -> [0mCompiling PBS file [0;36mpokemon_metrics_ia.txt[0m....[0;32mdone[0m
+[0;33m  -> [0mCompiling PBS file [0;36mregional_dexes.txt[0m...[0;32mdone[0m
+[0;33m  -> [0mCompiling PBS file [0;36mribbons.txt[0m.....[0;32mdone[0m
+[0;33m  -> [0mCompiling PBS file [0;36mencounters.txt[0m......[0;32mdone[0m
+[0;33m  -> [0mCompiling PBS file [0;36mencounters_Niphos.txt[0m.....[0;32mdone[0m
+[0;33m  -> [0mCompiling PBS file [0;36mencounters_Nordra.txt[0m....[0;32mdone[0m
+[0;33m  -> [0mCompiling PBS file [0;36mtrainer_types.txt[0m......[0;32mdone[0m
+[0;33m  -> [0mCompiling PBS file [0;36mtrainer_types_iolite_amethyst.txt[0m....[0;32mdone[0m
+[0;33m  -> [0mCompiling PBS file [0;36mtrainer_types_tournament.txt[0m....[0;32mdone[0m
+[0;33m  -> [0mCompiling PBS file [0;36mtrainers.txt[0m.....[0;32mdone[0m
+[0;33m  -> [0mCompiling PBS file [0;36mtrainers_amethyst.txt[0m.....[0;32mdone[0m
+[0;33m  -> [0mCompiling PBS file [0;36mtrainers_iolite.txt[0m...[0;32mdone[0m
+[0;33m  -> [0mCompiling PBS file [0;36mtrainers_quartz.txt[0m....[0;32mdone[0m
+[0;33m  -> [0mCompiling PBS file [0;36mbattle_facility_lists.txt[0m........[0;32mdone[0m
+[0;33m  -> [0mCompiling PBS file [0;36mmetadata.txt[0m....[0;32mdone[0m
+[0;33m  -> [0mCompiling PBS file [0;36mmap_metadata.txt[0m....[0;32mdone[0m
+[0;33m  -> [0mCompiling PBS file [0;36mdungeon_tilesets.txt[0m....[0;32mdone[0m
+[0;33m  -> [0mCompiling PBS file [0;36mdungeon_parameters.txt[0m....[0;32mdone[0m
+[0;33m  -> [0mCompiling PBS file [0;36mphone.txt[0m....[0;32mdone[0m
+[0;33m  -> [0mCompiling PBS file [0;36mrecipes.txt[0m....[0;32mdone[0m
+[0;33m  -> [0mCompiling PBS file [0;36madventure_maps.txt[0m....[0;32mdone[0m
+[0;33m  -> [0mCompiling PBS file [0;36mingredients.txt[0m.....[0;32mdone[0m
+[0;33m  -> [0mCompiling PBS file [0;36mingredient_groups.txt[0m....[0;32mdone[0m
+[0;33m  -> [0mCompiling PBS file [0;36mcooking_recipes.txt[0m....[0;32mdone[0m
+[0;33m  -> [0mCompiling animations...................[0;32mdone[0m
+[0;33m  -> [0mProcessing 112 maps.....[0;32mdone[0m
+[0;33m  -> [0mProcessing common events...[0;32mdone[0m
+[0;33m  -> [0mSaving messages...[0;32mdone[0m
+[0;32m  -> [0m[0;32mSuccessfully compiled all game data[0m
+
+[0;1;33mWARNING: Usage of deprecated method "safeExists?(f)" or its alias.
+The method is slated to be removed in Essentials v22.
+Use "FileTest.exist?(f)" instead.[0m
+Recipe Knowledge Test
+Forgot 3 stored recipe(s).
+Recipe Knowledge Test
+[0;34mVMS: Integrated Server stopped[0m
+[0;34mVMS: Not connected to a server[0m
+[0;34mVMS: Integrated Server stopped[0m
+[0;34mVMS: Not connected to a server[0m

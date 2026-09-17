@@ -311,3 +311,12 @@ Price = 15000
 BPPrice = 25
 Flags = Fling_80
 Description = An item to be held by a Pokémon. These protective boots boosts the power of the holder's kicking moves and prevents direct contact with targets.
+#-------------------------------
+[COOKINGSET]
+Name = Cooking Set
+NamePlural = Cooking Sets
+Pocket = 8
+Price = 0
+FieldUse = Direct
+Flags = KeyItem
+Description = A portable set of cooking tools. It lets you prepare dishes wherever you are.

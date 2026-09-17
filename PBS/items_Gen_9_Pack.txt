@@ -1392,27 +1392,3 @@ Price = 0
 Flags = KeyItem
 Description = The absolute ultimate butter found in Hyperspace Lumiose. With it, you could make higher quality donuts.
 #-------------------------------
-[HOENNIANSALT]
-Name = Hoennian Salt
-NamePlural = Hoennian Salts
-Pocket = 8
-Price = 0
-Flags = KeyItem
-Description = A coarse salt harvested in the Hoenn region. A tiny pinch will impart a wondrous depth of flavor.
-#-------------------------------
-[EPICENOIRE]
-Name = Épice Noire
-NamePlural = Épice Noires
-Pocket = 8
-Price = 0
-Flags = KeyItem
-Description = A mysterious, highly prized spice of the Rust Syndicate that elevates any dish to dreamlike perfection.
-#-------------------------------
-[ARBOLIVAOIL]
-Name = Arboliva Oil
-NamePlural = Arboliva Oils
-Pocket = 8
-Price = 0
-Flags = KeyItem
-Description = Oil from Paldea's Arboliva, said to taste heavenly. How Corbeau obtained it remains a mystery.
-#-------------------------------
