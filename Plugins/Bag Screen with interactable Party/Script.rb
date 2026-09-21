@@ -13,7 +13,7 @@ class SpriteWindow_Selectable < SpriteWindow_Base
     if self.active && @item_max > 0 && @index >= 0 && !@ignore_input && @bag
       if Keybinds.repeat?(:up)
         if @index >= @column_max ||
-           (Keybinds.trigger?(:up) && (@item_max % @column_max) == 0)
+           (@item_max % @column_max) == 0
           oldindex = @index
           @index = (@index - @column_max + @item_max) % @item_max
           if @index != oldindex
@@ -22,7 +22,7 @@ class SpriteWindow_Selectable < SpriteWindow_Base
         end
       elsif Keybinds.repeat?(:down)
         if @index < @item_max - @column_max ||
-           (Keybinds.trigger?(:down) && (@item_max % @column_max) == 0)
+           (@item_max % @column_max) == 0
           oldindex = @index
           @index = (@index + @column_max) % @item_max
           if @index != oldindex
@@ -33,7 +33,7 @@ class SpriteWindow_Selectable < SpriteWindow_Base
     elsif  self.active && @item_max > 0 && @index >= 0 && !@ignore_input
       if Keybinds.repeat?(:up)
         if @index >= @column_max ||
-           (Keybinds.trigger?(:up) && (@item_max % @column_max) == 0)
+           (@item_max % @column_max) == 0
           oldindex = @index
           @index = (@index - @column_max + @item_max) % @item_max
           if @index != oldindex
@@ -43,7 +43,7 @@ class SpriteWindow_Selectable < SpriteWindow_Base
         end
       elsif Keybinds.repeat?(:down)
         if @index < @item_max - @column_max ||
-           (Keybinds.trigger?(:down) && (@item_max % @column_max) == 0)
+           (@item_max % @column_max) == 0
           oldindex = @index
           @index = (@index + @column_max) % @item_max
           if @index != oldindex

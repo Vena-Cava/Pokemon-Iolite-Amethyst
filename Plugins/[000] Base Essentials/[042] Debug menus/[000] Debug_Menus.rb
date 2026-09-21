@@ -114,6 +114,7 @@ def pbDebugMenu(show_all = true)
           commands.currentList = parent[0]
           cmdwindow.commands = commands.list
           cmdwindow.index = parent[1]
+          cmdwindow.refresh
           refresh = true
         else
           ret = -1
@@ -131,6 +132,7 @@ def pbDebugMenu(show_all = true)
       commands.currentList = cmd
       cmdwindow.commands = commands.list
       cmdwindow.index = 0
+      cmdwindow.refresh
       refresh = true
     elsif cmd == :warp
       return if MenuHandlers.call(:debug_menu, cmd, "effect", sprites, viewport)
@@ -229,6 +231,7 @@ module Battle::DebugMixin
             commands.currentList = parent[0]
             cmdwindow.commands = commands.list
             cmdwindow.index = parent[1]
+            cmdwindow.refresh
             refresh = true
           else
             ret = -1
@@ -246,6 +249,7 @@ module Battle::DebugMixin
         commands.currentList = cmd
         cmdwindow.commands = commands.list
         cmdwindow.index = 0
+        cmdwindow.refresh
         refresh = true
       else
         MenuHandlers.call(:battle_debug_menu, cmd, "effect", battle)

@@ -24780,5 +24780,5 @@ Category = King
 IoPokedex = Calyrex is a merciful Pokémon, capable of providing healing and blessings. It reigned over the Galar region in times of yore.
 Generation = 8
 Flags = Legendary
-#-------------------------------
 RaidRanks = 6
+#-------------------------------

@@ -1,11 +1,21 @@
 #===============================================================================
+# Cooking Debug Menu
+#===============================================================================
+
+MenuHandlers.add(:debug_menu, :cooking_menu, {
+  "name"        => _INTL("Cooking options..."),
+  "parent"      => :main,
+  "description" => _INTL("Debug options for the Cooking system.")
+})
+
+#===============================================================================
 # I&A - Cooking System
 # Debug Tools
 #===============================================================================
 
 MenuHandlers.add(:debug_menu, :cooking_ingredient_test, {
   "name"        => _INTL("Test Cooking Ingredient"),
-  "parent"      => :items_menu,
+  "parent"      => :cooking_menu,
   "description" => _INTL("View the cooking data for an Ingredient or Condiment."),
   "effect"      => proc {
     item = pbListScreen(
@@ -77,7 +87,7 @@ MenuHandlers.add(:debug_menu, :cooking_ingredient_test, {
 
 MenuHandlers.add(:debug_menu, :cooking_ingredient_group_test, {
   "name"        => _INTL("Test Ingredient Group"),
-  "parent"      => :items_menu,
+  "parent"      => :cooking_menu,
   "description" => _INTL("View the members of a cooking Ingredient Group."),
   "effect"      => proc {
     groups = []
@@ -102,7 +112,7 @@ MenuHandlers.add(:debug_menu, :cooking_ingredient_group_test, {
     choice = pbMessage(
       _INTL("Choose an Ingredient Group."),
       commands,
-      commands.length - 1
+      -1
     )
 
     next false if choice < 0 || choice >= groups.length
@@ -140,7 +150,7 @@ MenuHandlers.add(:debug_menu, :cooking_ingredient_group_test, {
 
 MenuHandlers.add(:debug_menu, :cooking_recipe_test, {
   "name"        => _INTL("Test Cooking Recipe"),
-  "parent"      => :items_menu,
+  "parent"      => :cooking_menu,
   "description" => _INTL("View the compiled data for a cooking recipe."),
   "effect"      => proc {
     recipes = []
@@ -171,7 +181,7 @@ MenuHandlers.add(:debug_menu, :cooking_recipe_test, {
     choice = pbMessage(
       _INTL("Choose a Cooking Recipe."),
       commands,
-      commands.length - 1
+      -1
     )
 
     next false if choice < 0 || choice >= recipes.length
@@ -266,7 +276,7 @@ MenuHandlers.add(:debug_menu, :cooking_recipe_test, {
 
 MenuHandlers.add(:debug_menu, :cooking_recipe_matcher_test, {
   "name"        => _INTL("Test Recipe Matcher"),
-  "parent"      => :items_menu,
+  "parent"      => :cooking_menu,
   "description" => _INTL("Run automatic tests against the Cooking Recipe matcher."),
   "effect"      => proc {
     #---------------------------------------------------------------------------
@@ -484,7 +494,7 @@ MenuHandlers.add(:debug_menu, :cooking_recipe_matcher_test, {
 
 MenuHandlers.add(:debug_menu, :cooking_recipe_knowledge_test, {
   "name"        => _INTL("Test Recipe Knowledge"),
-  "parent"      => :items_menu,
+  "parent"      => :cooking_menu,
   "description" => _INTL("Test learning and forgetting Cooking Recipes."),
   "effect"      => proc {
     commands = [
@@ -499,15 +509,16 @@ MenuHandlers.add(:debug_menu, :cooking_recipe_knowledge_test, {
     ]
 
     loop do
-            command = pbMessage(
-              _INTL("Recipe Knowledge Test"),
-              commands,
-              commands.length - 1
-            )
+      command = pbMessage(
+        _INTL("Recipe Knowledge Test"),
+        commands,
+        -1
+      )
 
-            # Cancel returns to the parent Debug → Items menu.
-            break if command < 0
-            break if command == 7
+      # Either backing out of the command window or choosing the visible
+      # Cancel command closes this menu.
+      break if command < 0
+      break if command >= commands.length - 1
 
       case command
       when 0
@@ -587,7 +598,7 @@ MenuHandlers.add(:debug_menu, :cooking_recipe_knowledge_test, {
 
 MenuHandlers.add(:debug_menu, :cooking_learn_recipe, {
   "name"        => _INTL("Learn Cooking Recipe"),
-  "parent"      => :items_menu,
+  "parent"      => :cooking_menu,
   "description" => _INTL("Learn any Cooking Recipe."),
   "effect"      => proc {
     recipes = []
@@ -624,7 +635,7 @@ MenuHandlers.add(:debug_menu, :cooking_learn_recipe, {
     choice = pbMessage(
       _INTL("Choose a Cooking Recipe to learn."),
       commands,
-      commands.length - 1
+      -1
     )
 
     next false if choice < 0 || choice >= recipes.length
@@ -660,7 +671,7 @@ MenuHandlers.add(:debug_menu, :cooking_learn_recipe, {
 
 MenuHandlers.add(:debug_menu, :cooking_forget_recipe, {
   "name"        => _INTL("Forget Cooking Recipe"),
-  "parent"      => :items_menu,
+  "parent"      => :cooking_menu,
   "description" => _INTL("Forget a learned Cooking Recipe."),
   "effect"      => proc {
     recipes = Cooking.known_recipes
@@ -682,7 +693,7 @@ MenuHandlers.add(:debug_menu, :cooking_forget_recipe, {
     choice = pbMessage(
       _INTL("Choose a Cooking Recipe to forget."),
       commands,
-      commands.length - 1
+      -1
     )
 
     next false if choice < 0 || choice >= recipes.length
@@ -702,5 +713,141 @@ MenuHandlers.add(:debug_menu, :cooking_forget_recipe, {
     end
 
     next false
+  }
+})
+
+#===============================================================================
+# Test Cooking Selection
+#===============================================================================
+
+MenuHandlers.add(:debug_menu, :cooking_selection_test, {
+  "name"        => _INTL("Test Cooking Selection"),
+  "parent"      => :cooking_menu,
+  "description" => _INTL("Tests Creative Mode ingredient and condiment selection."),
+  "effect"      => proc {
+    selection = Cooking::Selection.new(:CREATIVE)
+
+    loop do
+      stage_name = case selection.stage
+                   when :INGREDIENTS then "Ingredients"
+                   when :CONDIMENTS  then "Condiments"
+                   when :CONFIRM     then "Confirmation"
+                   else selection.stage.to_s
+                   end
+
+      commands = []
+
+      if selection.choosing_ingredients?
+        selection.available_ingredients.each do |item_id|
+          item = GameData::Item.get(item_id)
+          qty  = selection.available_quantity(item_id)
+
+          commands.push(
+            _INTL("{1} x{2}", item.name, qty)
+          )
+        end
+
+        commands.push(_INTL("Next")) if selection.can_continue?
+      elsif selection.choosing_condiments?
+        selection.available_condiments.each do |item_id|
+          item = GameData::Item.get(item_id)
+          qty  = selection.available_quantity(item_id)
+
+          commands.push(
+            _INTL("{1} x{2}", item.name, qty)
+          )
+        end
+
+        commands.push(_INTL("Next")) if selection.can_continue?
+      else
+        commands.push(_INTL("Confirm"))
+      end
+
+      commands.push(_INTL("Back"))
+
+      ingredient_text = selection.selected_ingredients.map do |item_id|
+        GameData::Item.get(item_id).name
+      end
+
+      condiment_text = selection.selected_condiments.map do |item_id|
+        GameData::Item.get(item_id).name
+      end
+
+      message = _INTL(
+        "Stage: {1}\nIngredients ({2}/6): {3}\nCondiments ({4}/4): {5}",
+        stage_name,
+        selection.ingredient_count,
+        ingredient_text.empty? ? "None" : ingredient_text.join(", "),
+        selection.condiment_count,
+        condiment_text.empty? ? "None" : condiment_text.join(", ")
+      )
+
+      command = pbMessage(message, commands, -1)
+
+      # Pressing the physical Cancel/Back button behaves exactly like choosing
+      # the Back command.
+      if command < 0
+        result = selection.back
+        break if result == :EXIT
+        next
+      end
+
+      chosen_text = commands[command]
+
+      #-------------------------------------------------------------------------
+      # Back
+      #-------------------------------------------------------------------------
+      if chosen_text == _INTL("Back")
+        result = selection.back
+        break if result == :EXIT
+        next
+      end
+
+      #-------------------------------------------------------------------------
+      # Next
+      #-------------------------------------------------------------------------
+      if chosen_text == _INTL("Next")
+        selection.next_stage
+        next
+      end
+
+      #-------------------------------------------------------------------------
+      # Confirmation
+      #-------------------------------------------------------------------------
+      if chosen_text == _INTL("Confirm")
+        recipe = selection.matched_recipe
+
+        if recipe
+          pbMessage(
+            _INTL(
+              "The Recipe Matcher identifies this as:\n{1} [{2}]",
+              recipe.name,
+              recipe.id
+            )
+          )
+        else
+          pbMessage(
+            _INTL("This combination doesn't match a Cooking Recipe.")
+          )
+        end
+
+        next
+      end
+
+      #-------------------------------------------------------------------------
+      # An Ingredient/Condiment was selected.
+      #-------------------------------------------------------------------------
+      available_items = if selection.choosing_ingredients?
+                          selection.available_ingredients
+                        else
+                          selection.available_condiments
+                        end
+
+      # The item commands occur before Next/Back, so the command index maps
+      # directly to the available-item array.
+      item_id = available_items[command]
+
+      selection.add(item_id) if item_id
+    end
   }
 })

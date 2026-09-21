@@ -2,6 +2,7 @@
 #-------------------------------
 [CHEESYPIZZA]
 Name = Cheesy Pizza
+Sprite = cheesy_pizza
 Family = CHEESY_PIZZA
 Tier = Base
 Category = MainCourse
@@ -11,6 +12,7 @@ OptionalCondiments = Group:SALTS,Item:GARLICSAUCE
 #-------------------------------
 [GREATCHEESYPIZZA]
 Name = Great Cheesy Pizza
+Sprite = cheesy_pizza
 Family = CHEESY_PIZZA
 Tier = Great
 Category = MainCourse
@@ -22,6 +24,7 @@ OptionalCondiments = Group:SALTS,Item:GARLICSAUCE
 #-------------------------------
 [ULTRACHEESYPIZZA]
 Name = Ultra Cheesy Pizza
+Sprite = cheesy_pizza2
 Family = CHEESY_PIZZA
 Tier = Ultra
 Category = MainCourse
@@ -33,6 +36,7 @@ OptionalCondiments = Item:GARLICSAUCE
 #-------------------------------
 [MASTERCHEESYPIZZA]
 Name = Master Cheesy Pizza
+Sprite = cheesy_pizza2
 Family = CHEESY_PIZZA
 Tier = Master
 Category = MainCourse

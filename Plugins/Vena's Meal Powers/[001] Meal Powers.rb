@@ -343,7 +343,7 @@ end
 
 MenuHandlers.add(:debug_menu, :meal_powers_menu, {
   "name"        => _INTL("Meal Powers..."),
-  "parent"      => :main,
+  "parent"      => :cooking_menu,
   "description" => _INTL("Apply, view, or clear active Meal Powers."),
   "effect"      => proc {
     cmd = 0

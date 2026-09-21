@@ -16,21 +16,24 @@ module Cooking
   def self.open
     pbMessage(_INTL("You set up the Cooking Set."))
 
-    # Temporary placeholder until the cooking UI is implemented.
     commands = [
-      _INTL("Cook a Dish"),
+      _INTL("Recipes"),
+      _INTL("Creative Mode"),
       _INTL("Cancel")
     ]
 
     command = pbMessage(
       _INTL("What would you like to do?"),
       commands,
-      commands.length - 1
+      -1
     )
 
     case command
     when 0
-      pbMessage(_INTL("The cooking menu hasn't been implemented yet."))
+      Cooking.open_recipes
+
+    when 1
+      Cooking.open_creative
     end
 
     return true
