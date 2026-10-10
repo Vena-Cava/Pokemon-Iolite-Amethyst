@@ -39,7 +39,7 @@ PortionNamePlural = jars of Curry Powder
 Pocket = 11
 Price = 450
 Flags = Ingredient
-Description = A very spicy condiment. Just watch out—use too much of this potent seasoning, and it'll cancel out the other flavors.
+Description = A very spicy condiment. Just watch out-use too much of this potent seasoning, and it'll cancel out the other flavors.
 #-------------------------------
 [GARLICSAUCE]
 Name = Garlic Sauce
@@ -199,7 +199,7 @@ PortionNamePlural = bottles of Olive Oil
 Pocket = 11
 Price = 300
 Flags = Ingredient
-Description = A condiment offering faint notes of sour and bitter flavors. The most prized varieties are the ones Smoliv love the smell of—such oils' quality is assured.
+Description = A condiment offering faint notes of sour and bitter flavors. The most prized varieties are the ones Smoliv love the smell of-such oils' quality is assured.
 #-------------------------------
 [YOGURT]
 Name = Yogurt
@@ -639,7 +639,7 @@ PortionNamePlural = tubs of Potato Salad
 Pocket = 11
 Price = 110
 Flags = Ingredient
-Description = This very tart ingredient—a soft salad that's all about potatoes—pairs tremendously well with meat.
+Description = This very tart ingredient-a soft salad that's all about potatoes-pairs tremendously well with meat.
 #-------------------------------
 [POTATOTORTILLA]
 Name = Potato Tortilla
@@ -757,7 +757,7 @@ NamePlural = Avocados
 Pocket = 11
 Price = 180
 Flags = Ingredient
-Description = An ingredient with sweet notes—though its flavor is very mild. The avocado's richness, however, makes it satisfying to eat.
+Description = An ingredient with sweet notes-though its flavor is very mild. The avocado's richness, however, makes it satisfying to eat.
 #-------------------------------
 [BEANSPROUTS]
 Name = Bean Sprouts
@@ -775,7 +775,7 @@ NamePlural = Beetroots
 Pocket = 11
 Price = 150
 Flags = Ingredient
-Description = A deeply colored root vegetable with an earthy sweetness. Be careful when preparing it—its juice has a habit of turning everything purple.
+Description = A deeply colored root vegetable with an earthy sweetness. Be careful when preparing it-its juice has a habit of turning everything purple.
 #-------------------------------
 [GREENBELLPEPPER]
 Name = Green Bell Pepper
@@ -791,7 +791,7 @@ NamePlural = Red Bell Peppers
 Pocket = 11
 Price = 240
 Flags = Ingredient
-Description = An ingredient with some bitterness—but its bitter notes and overall flavor are pleasantly mild compared to its green cousin.
+Description = An ingredient with some bitterness-but its bitter notes and overall flavor are pleasantly mild compared to its green cousin.
 #-------------------------------
 [YELLOWBELLPEPPER]
 Name = Yellow Bell Pepper
@@ -911,7 +911,7 @@ PortionNamePlural = bags of Jalapeños
 Pocket = 11
 Price = 220
 Flags = Ingredient
-Description = A very spicy ingredient—so spicy as to leave no room for ambivalence about it. You either like it or you don't.
+Description = A very spicy ingredient-so spicy as to leave no room for ambivalence about it. You either like it or you don't.
 #-------------------------------
 [LARGELEEK]
 Name = Large Leek
@@ -929,7 +929,7 @@ PortionNamePlural = heads of Lettuce
 Pocket = 11
 Price = 90
 Flags = Ingredient
-Description = This bitter-tasting ingredient is simple and straightforward—just add it to all kinds of other ingredients for a delightfully crunchy time.
+Description = This bitter-tasting ingredient is simple and straightforward-just add it to all kinds of other ingredients for a delightfully crunchy time.
 #-------------------------------
 [OLIVES]
 Name = Olives
@@ -1051,7 +1051,7 @@ PortionNamePlural = loaves of Bread
 Pocket = 11
 Price = 120
 Flags = Ingredient
-Description = A staple food with a mild sweetness, baked from a simple dough. It's the foundation of countless meals—and sometimes the plate holding them together.
+Description = A staple food with a mild sweetness, baked from a simple dough. It's the foundation of countless meals-and sometimes the plate holding them together.
 #-------------------------------
 [EGG]
 Name = Egg
@@ -1067,7 +1067,7 @@ NamePlural = Chikalisk Eggs
 Pocket = 11
 Price = 500
 Flags = Ingredient
-Description = An egg with an overwhelmingly pungent aroma that only grows stronger with age. Most assume it's gone bad, but devotees insist that's precisely when it's at its best.
+Description = An egg with an overwhelmingly pungent aroma that only grows stronger with age. Most assume it's gone bad, but devotees insist that's when it's at its best.
 #-------------------------------
 [DAIRYMILK]
 Name = Dairy Milk
@@ -1135,7 +1135,7 @@ PortionNamePlural = sprigs of Watercress
 Pocket = 11
 Price = 270
 Flags = Ingredient
-Description = A very bitter ingredient that stands out among veggies for its quirky flavor. People tend to either like it or not like it—they rarely sit on the fence.
+Description = A very bitter ingredient that stands out among veggies for its quirky flavor. People tend to either like it or not like it-they rarely sit on the fence.
 #-------------------------------
 [WILDGARLIC]
 Name = Wild Garlic
@@ -1511,7 +1511,7 @@ PortionNamePlural = slices of Ham
 Pocket = 11
 Price = 170
 Flags = Ingredient
-Description = A very salty ingredient—and that very saltiness is what makes it such a nice companion to veggies.
+Description = A very salty ingredient-and that very saltiness is what makes it such a nice companion to veggies.
 #-------------------------------
 [JERKY]
 Name = Jerky

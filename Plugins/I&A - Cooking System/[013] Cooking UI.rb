@@ -347,13 +347,23 @@ module Cooking
     #---------------------------------------------------------------------------
 
     def draw_item_list(overlay)
-      overlay.fill_rect(
+      list_bitmap = AnimatedBitmap.new(
+        "Graphics/UI/Cooking/ingredient_list"
+      )
+
+      overlay.blt(
         LIST_X,
         LIST_Y,
-        LIST_WIDTH,
-        LIST_HEIGHT,
-        Color.new(32, 40, 56)
+        list_bitmap.bitmap,
+        Rect.new(
+          0,
+          0,
+          300,
+          218
+        )
       )
+
+      list_bitmap.dispose
 
       first_row = @top_row
       last_row  = [@top_row + VISIBLE_ROWS - 1, row_count - 1].min
@@ -365,14 +375,14 @@ module Cooking
         item = GameData::Item.get(item_id)
 
         x = LIST_X + 8
-        y = LIST_Y + 8 + ((row - @top_row) * ROW_HEIGHT)
+        y = LIST_Y + 18 + ((row - @top_row) * ROW_HEIGHT)
 
         if row == @index
           overlay.fill_rect(
-            x - 4,
-            y - 2,
-            LIST_WIDTH - 16,
-            ROW_HEIGHT - 2,
+            LIST_X,
+            y - 4,
+            LIST_WIDTH,
+            ROW_HEIGHT,
             Color.new(88, 112, 136)
           )
         end
@@ -476,6 +486,8 @@ module Cooking
       # description_x     = (Graphics.width - (INFO_X + INFO_WIDTH)
       description_width = 368
 
+      pbSetSmallFont(overlay)
+
       drawFormattedTextEx(
         overlay,
         description_x,
@@ -485,6 +497,8 @@ module Cooking
         TEXT_BASE,
         TEXT_SHADOW
       )
+
+      pbSetSystemFont(overlay)
     end
 
     #---------------------------------------------------------------------------
@@ -498,6 +512,7 @@ module Cooking
       # Put Condiments immediately after the six Ingredient slots rather than
       # positioning them independently far to the right.
       condiment_x = ingredient_x + (6 * (slot_size + gap)) + 6
+      pbSetSmallFont(overlay)
 
       # Ingredient label.
       pbDrawTextPositions(
@@ -505,7 +520,7 @@ module Cooking
         [[
           _INTL("Ing. {1}/6", @selection.ingredient_count),
           ingredient_x,
-          TRAY_Y - 24,
+          TRAY_Y - 22,
           :left,
           TEXT_BASE,
           TEXT_SHADOW
@@ -515,12 +530,11 @@ module Cooking
       6.times do |i|
         x = ingredient_x + (i * (slot_size + gap))
 
-        overlay.fill_rect(
+        draw_small_ingredient_box(
+          overlay,
           x,
           TRAY_Y,
-          slot_size,
-          slot_size,
-          Color.new(72, 88, 104)
+          false
         )
 
         item_id = @selection.selected_ingredients[i]
@@ -533,7 +547,7 @@ module Cooking
         [[
           _INTL("Con. {1}/4", @selection.condiment_count),
           condiment_x,
-          TRAY_Y - 24,
+          TRAY_Y - 22,
           :left,
           TEXT_BASE,
           TEXT_SHADOW
@@ -543,17 +557,44 @@ module Cooking
       4.times do |i|
         x = condiment_x + (i * (slot_size + gap))
 
-        overlay.fill_rect(
+        draw_small_ingredient_box(
+          overlay,
           x,
           TRAY_Y,
-          slot_size,
-          slot_size,
-          Color.new(104, 80, 96)
+          true
         )
 
         item_id = @selection.selected_condiments[i]
         draw_tray_item(overlay, item_id, x, TRAY_Y, slot_size) if item_id
       end
+
+      pbSetSystemFont(overlay)
+    end
+
+    #---------------------------------------------------------------------------
+
+    def draw_small_ingredient_box(overlay, x, y, condiment = false)
+      boxes = AnimatedBitmap.new(
+        "Graphics/UI/Cooking/ingredient_box_small"
+      )
+
+      # Frame 0: Ingredient
+      # Frame 1: Condiment
+      source_x = condiment ? 32 : 0
+
+      overlay.blt(
+        x,
+        y,
+        boxes.bitmap,
+        Rect.new(
+          source_x,
+          0,
+          32,
+          32
+        )
+      )
+
+      boxes.dispose
     end
 
     #---------------------------------------------------------------------------
@@ -660,7 +701,8 @@ module Cooking
         draw_confirmation_item_row(
           overlay,
           @selection.selected_ingredients,
-          144
+          144,
+          false
         )
       end
 
@@ -685,14 +727,20 @@ module Cooking
         draw_confirmation_item_row(
           overlay,
           @selection.selected_condiments,
-          250
+          250,
+          true
         )
       end
     end
 
         #---------------------------------------------------------------------------
 
-        def draw_confirmation_item_row(overlay, items, y)
+        def draw_confirmation_item_row(
+          overlay,
+          items,
+          y,
+          condiment = false
+        )
           return if !items || items.empty?
 
           slot_size = 64
@@ -706,12 +754,11 @@ module Cooking
           items.each_with_index do |item_id, i|
             x = start_x + (i * (slot_size + gap))
 
-            overlay.fill_rect(
+            draw_large_ingredient_box(
+              overlay,
               x,
               y,
-              slot_size,
-              slot_size,
-              Color.new(72, 88, 104)
+              condiment
             )
 
             draw_confirmation_item(
@@ -725,6 +772,30 @@ module Cooking
         end
 
         #---------------------------------------------------------------------------
+
+    def draw_large_ingredient_box(overlay, x, y, condiment = false)
+      boxes = AnimatedBitmap.new(
+        "Graphics/UI/Cooking/ingredient_box_large"
+      )
+
+      # Frame 0: 64x64 Ingredient box
+      # Frame 1: 64x64 Condiment box
+      source_x = condiment ? 64 : 0
+
+      overlay.blt(
+        x,
+        y,
+        boxes.bitmap,
+        Rect.new(
+          source_x,
+          0,
+          64,
+          64
+        )
+      )
+
+      boxes.dispose
+    end
 
     def draw_confirmation_item(overlay, item_id, x, y, slot_size)
       icon = AnimatedBitmap.new(GameData::Item.icon_filename(item_id))

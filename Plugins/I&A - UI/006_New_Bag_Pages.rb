@@ -43,11 +43,11 @@ if PluginManager.installed?("Bag Screen w/int. Party")
         path = "Graphics/UI/Bag Screen with Party/icon_pocket_zcrystal"
         @pocketbitmap = AnimatedBitmap.new(path)
         @sprites["pocketicon"].bitmap.clear
-        @sprites["pocketicon"] = BitmapSprite.new(162, 52, @viewport)
-        @sprites["pocketicon"].x = 362
+        @sprites["pocketicon"] = BitmapSprite.new(178, 52, @viewport)
+        @sprites["pocketicon"].x = 506
         @sprites["pocketicon"].y = 0
         @sprites["currentpocket"].setBitmap(path)
-        @sprites["currentpocket"].x = 362
+        @sprites["currentpocket"].x = 506
         @sprites["currentpocket"].src_rect = Rect.new(0, 0, 28, 28)
       end
       pocketAcc = @sprites["itemlist"].pocket - 1

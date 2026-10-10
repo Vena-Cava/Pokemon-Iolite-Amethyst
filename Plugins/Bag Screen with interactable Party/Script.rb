@@ -642,11 +642,11 @@ class PokemonBag_Scene
     rbvar = 0
     
     @sprites["pocketicon"] = BitmapSprite.new(130, 52, @viewport)
-    @sprites["pocketicon"].x = 372
+    @sprites["pocketicon"].x = 516
     @sprites["pocketicon"].y = 0
     @sprites["currentpocket"] = IconSprite.new(0, 0, @viewport)
     @sprites["currentpocket"].setBitmap("Graphics/UI/Bag Screen with Party/icon_pocket")
-    @sprites["currentpocket"].x = 372
+    @sprites["currentpocket"].x = 516
     @sprites["currentpocket"].y = 26
     @sprites["currentpocket"].src_rect = Rect.new(0, 0, 28, 28)
     
@@ -815,7 +815,7 @@ class PokemonBag_Scene
           Rect.new((i - 1) * 28, 56, 28, 28)) # Blocked icons
       end
     end
-    @sprites["currentpocket"].x = 372 + ((pocketAcc) * 14) + pocketX[pocketAcc]
+    @sprites["currentpocket"].x = 516 + ((pocketAcc) * 14) + pocketX[pocketAcc]
     @sprites["currentpocket"].y = 26 - (((pocketAcc) % 2) * 26)
     @sprites["currentpocket"].src_rect = Rect.new((pocketAcc) * 28, 28, 28, 28) # Current pocket icon
     # Refresh stuff
@@ -841,16 +841,16 @@ class PokemonBag_Scene
     # Draw the pocket name
     pbDrawTextPositions(
       overlay,
-      [[PokemonBag.pocket_names[@bag.last_viewed_pocket - 1], 297, 18, :center, POCKETNAMEBASECOLOR, POCKETNAMEOUTLINECOLOR, true, Graphics.width]]
+      [[PokemonBag.pocket_names[@bag.last_viewed_pocket - 1], 345, 18, :center, POCKETNAMEBASECOLOR, POCKETNAMEOUTLINECOLOR, true, Graphics.width]]
     )
     # Draw slider arrows
     showslider = false
     if itemlist.top_row > 0
-      overlay.blt(356, 16, @sliderbitmap.bitmap, Rect.new(0, 0, 36, 38))
+      overlay.blt(528, 16, @sliderbitmap.bitmap, Rect.new(0, 0, 36, 38))
       showslider = true
     end
     if itemlist.top_item + itemlist.page_item_max < itemlist.itemCount
-      overlay.blt(356, 228, @sliderbitmap.bitmap, Rect.new(0, 38, 36, 38))
+      overlay.blt(528, 228, @sliderbitmap.bitmap, Rect.new(0, 38, 36, 38))
       showslider = true
     end
     # Draw slider box
@@ -861,14 +861,14 @@ class PokemonBag_Scene
       boxheight = [boxheight.floor, 38].max
       y = 80
       y += ((sliderheight - boxheight) * itemlist.top_row / (itemlist.row_max - itemlist.page_row_max)).floor
-      overlay.blt(484, y, @sliderbitmap.bitmap, Rect.new(36, 0, 36, 4))
+      overlay.blt(656, y, @sliderbitmap.bitmap, Rect.new(36, 0, 36, 4))
       i = 0
       while i * 16 < boxheight - 4 - 18
         height = [boxheight - 4 - 18 - (i * 16), 16].min
-        overlay.blt(484, y + 4 + (i * 16), @sliderbitmap.bitmap, Rect.new(36, 4, 36, height))
+        overlay.blt(656, y + 4 + (i * 16), @sliderbitmap.bitmap, Rect.new(36, 4, 36, height))
         i += 1
       end
-      overlay.blt(484, y + boxheight - 18, @sliderbitmap.bitmap, Rect.new(36, 20, 36, 18))
+      overlay.blt(656, y + boxheight - 18, @sliderbitmap.bitmap, Rect.new(36, 20, 36, 18))
     end
     # Set the selected item's icon
     @sprites["itemicon"].item = itemlist.item

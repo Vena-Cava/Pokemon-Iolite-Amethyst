@@ -9,6 +9,7 @@ Category = MainCourse
 RequiredIngredients = Item:WHITEFLOUR,Item:TOMATO,Group:PIZZA_CHEESE
 OptionalIngredients = Item:YEAST,Group:PIZZA_CHEESE
 OptionalCondiments = Group:SALTS,Item:GARLICSAUCE
+Description = A simple pizza with just cheese on it. Perfect for those with a plain palette.
 #-------------------------------
 [GREATCHEESYPIZZA]
 Name = Great Cheesy Pizza
@@ -21,6 +22,7 @@ RequiredIngredients = Item:WHITEFLOUR,Item:TOMATO,Group:PIZZA_CHEESE
 OptionalIngredients = Item:YEAST,Group:PIZZA_CHEESE
 RequiredCondiments = Group:OLIVE_OILS
 OptionalCondiments = Group:SALTS,Item:GARLICSAUCE
+Description = The addition of olive oil helps the pizza dough stretch and turn a nice golden brown.
 #-------------------------------
 [ULTRACHEESYPIZZA]
 Name = Ultra Cheesy Pizza
@@ -33,6 +35,7 @@ RequiredIngredients = Item:WHITEFLOUR,Item:TOMATO,Group:PIZZA_CHEESE*2
 OptionalIngredients = Item:YEAST
 RequiredCondiments = Group:OLIVE_OILS,Group:SALTS
 OptionalCondiments = Item:GARLICSAUCE
+Description = Using twice as much cheese really adds to the saltiness of the Pizza. It also makes for a very satisfying pull.
 #-------------------------------
 [MASTERCHEESYPIZZA]
 Name = Master Cheesy Pizza
@@ -45,3 +48,4 @@ RequiredIngredients = Item:WHITEFLOUR,Item:TOMATO,Group:PIZZA_CHEESE*2
 OptionalIngredients = Item:YEAST
 RequiredCondiments = Group:OLIVE_OILS,Group:SALTS,Group:PIZZA_RAID_CONDIMENTS
 OptionalCondiments = Item:GARLICSAUCE
+Description = Extra cheesy, extra salty. This pizza is the perfect dish for anyone who wants a mouthful of salty cheesiness.

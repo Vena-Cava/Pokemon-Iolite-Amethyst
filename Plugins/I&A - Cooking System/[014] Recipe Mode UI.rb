@@ -375,6 +375,29 @@ module Cooking
       return items[@group_cycle_index % items.length]
     end
 
+    def displayed_item_for_recipe_slot(slot, available)
+      items = items_for_slot(slot)
+      return nil if items.empty?
+
+      # Fixed Item slots never cycle.
+      return items[0] if slot_item?(slot)
+
+      # If this particular Group slot can currently be satisfied, only show
+      # valid Group members the player actually owns.
+      #
+      # If it cannot be satisfied, cycle through every valid Group member so
+      # the player can see all of the items that could fill the missing slot.
+      if available
+        owned_items = items.select do |item_id|
+          bag_quantity(item_id) > 0
+        end
+
+        items = owned_items if !owned_items.empty?
+      end
+
+      return items[@group_cycle_index % items.length]
+    end
+
     #===========================================================================
     # Recipe selection / required-slot resolution
     #===========================================================================
@@ -385,27 +408,47 @@ module Cooking
 
       reserved = Hash.new(0)
 
-      selected_ingredients = resolve_required_slots(
+      selected_ingredients = []
+      selected_condiments  = []
+
+      # This holds the ONE Recipe Selection scene used for this entire recipe.
+      # It is created lazily, so recipes which need no Group choices never open it.
+      selection_scene = [nil]
+
+      result = resolve_required_slots(
+        recipe,
         required_ingredients,
-        reserved
+        reserved,
+        selected_ingredients,
+        selected_ingredients,
+        selected_condiments,
+        :INGREDIENT,
+        selection_scene
       )
 
-      return false if !selected_ingredients
+      if !result
+        close_recipe_selection_scene(selection_scene)
+        return false
+      end
 
-      selected_condiments = resolve_required_slots(
+      result = resolve_required_slots(
+        recipe,
         required_condiments,
-        reserved
+        reserved,
+        selected_condiments,
+        selected_ingredients,
+        selected_condiments,
+        :CONDIMENT,
+        selection_scene
       )
 
-      return false if !selected_condiments
+      if !result
+        close_recipe_selection_scene(selection_scene)
+        return false
+      end
 
-      #---------------------------------------------------------------------------
-      # TEMPORARY DEBUG DIAGNOSTIC
-      #
-      # This is intentionally Debug-only. Once optional-slot selection and the
-      # Recipe Mode confirmation screen exist, these resolved items will be passed
-      # directly into that flow instead.
-      #---------------------------------------------------------------------------
+      close_recipe_selection_scene(selection_scene)
+
       if $DEBUG
         ingredient_names = selected_ingredients.map do |item_id|
           GameData::Item.get(item_id).name
@@ -435,6 +478,14 @@ module Cooking
       return true
     end
 
+    def close_recipe_selection_scene(selection_scene)
+      return if !selection_scene
+      return if !selection_scene[0]
+
+      selection_scene[0].pbEndScene
+      selection_scene[0] = nil
+    end
+
     #-------------------------------------------------------------------------------
     # Resolves every required slot in one category.
     #
@@ -449,9 +500,17 @@ module Cooking
     #
     # Returns an Array of concrete item IDs, or nil if the player cancels.
     #-------------------------------------------------------------------------------
-    def resolve_required_slots(slots, reserved)
+    def resolve_required_slots(
+      recipe,
+      slots,
+      reserved,
+      selected,
+      selected_ingredients,
+      selected_condiments,
+      category,
+      selection_scene
+    )
       slots = slots || []
-      selected = []
 
       slots.each_with_index do |slot, index|
         candidates = viable_items_for_required_slot(
@@ -460,37 +519,56 @@ module Cooking
           reserved
         )
 
-        # This shouldn't normally happen because recipe_cookable? was already
-        # checked, but keep the resolver safe if Bag contents somehow change.
+        # This should normally be impossible because recipe_cookable? was checked
+        # first, but keep the resolver safe if Bag contents change.
         if candidates.empty?
           pbPlayBuzzerSE
-          return nil
+          return false
         end
 
         chosen_item = nil
 
         if slot_item?(slot)
-          # A concrete Item slot never needs a choice screen.
+          # Concrete Item slots always resolve automatically.
           chosen_item = candidates[0]
 
         elsif candidates.length == 1
-          # Don't show a pointless one-choice menu for Groups.
+          # Don't open a selection screen if there is only one valid solution.
           chosen_item = candidates[0]
 
         else
-          chosen_item = choose_required_group_item(
-            slot,
-            candidates
-          )
+          if !selection_scene[0]
+            selection_scene[0] = Cooking::RecipeSelectionScene.new(
+              recipe,
+              candidates,
+              selected_ingredients,
+              selected_condiments,
+              category,
+              index
+            )
 
-          return nil if !chosen_item
+            selection_scene[0].pbStartScene
+          else
+            selection_scene[0].set_selection(
+              candidates,
+              selected_ingredients,
+              selected_condiments,
+              category,
+              index
+            )
+          end
+
+          chosen_item = selection_scene[0].pbChoose
+
+          # Back on the graphical selection screen cancels this Recipe attempt.
+          return false if !chosen_item
         end
 
         selected.push(chosen_item)
         reserved[chosen_item] += 1
       end
 
-      return selected
+      return true
     end
 
     #-------------------------------------------------------------------------------
@@ -567,38 +645,6 @@ module Cooking
       end
 
       return false
-    end
-
-    #-------------------------------------------------------------------------------
-    # Lets the player resolve a Group slot when more than one viable item is owned.
-    #-------------------------------------------------------------------------------
-    def choose_required_group_item(slot, candidates)
-      group = GameData::IngredientGroup.try_get(slot_id(slot))
-
-      group_name = if group
-                     group.name
-                   else
-                     _INTL("Ingredient")
-                   end
-
-      commands = candidates.map do |item_id|
-        item = GameData::Item.get(item_id)
-
-        _INTL(
-          "{1}",
-          item.name
-        )
-      end
-
-      command = pbMessage(
-        _INTL("Choose {1}.", group_name),
-        commands,
-        -1
-      )
-
-      return nil if command < 0
-
-      return candidates[command]
     end
 
     #===========================================================================
@@ -964,30 +1010,57 @@ module Cooking
     def draw_recipe_card(overlay, recipe, x, y, selected)
       cookable = recipe_cookable?(recipe)
 
-      card_color = if selected
-                     cookable ? Color.new(88, 112, 136) : Color.new(56, 64, 72)
-                   else
-                     cookable ? Color.new(32, 40, 56) : Color.new(22, 28, 36)
-                   end
+      card_bitmap = AnimatedBitmap.new(
+        "Graphics/UI/Cooking/recipe_card"
+      )
 
-      overlay.fill_rect(
+      opacity = cookable ? 255 : 112
+
+      overlay.blt(
         x,
         y,
-        CARD_WIDTH,
-        CARD_HEIGHT,
-        card_color
+        card_bitmap.bitmap,
+        Rect.new(
+          0,
+          0,
+          200,
+          100
+        ),
+        opacity
       )
+
+      card_bitmap.dispose
+
+      if selected
+        cursor_bitmap = AnimatedBitmap.new(
+          "Graphics/UI/Cooking/cursor_recipe_card"
+        )
+
+        overlay.blt(
+          x - 2,
+          y - 2,
+          cursor_bitmap.bitmap,
+          Rect.new(
+            0,
+            0,
+            204,
+            104
+          )
+        )
+
+        cursor_bitmap.dispose
+      end
 
       draw_recipe_card_icon(
         overlay,
         recipe,
-        x + 8,
+        x + 4,
         y + ((CARD_HEIGHT - MEAL_ICON_SIZE) / 2),
         cookable
       )
 
-      text_x     = x + MEAL_ICON_SIZE + 16
-      text_width = CARD_WIDTH - MEAL_ICON_SIZE - 22
+      text_x     = x + MEAL_ICON_SIZE + 8
+      text_width = CARD_WIDTH - MEAL_ICON_SIZE - 12
 
       pbSetSmallFont(overlay)
 
@@ -1201,9 +1274,14 @@ module Cooking
         ]]
       )
 
-      all_slots = required_slots + optional_slots
+      # Each required recipe slot gets its own visible box.
+      #
+      # All optional definitions are represented by ONE optional box. That box
+      # cycles through every item that is valid for any optional definition.
+      visible_slot_count = required_slots.length
+      visible_slot_count += 1 if !optional_slots.empty?
 
-      if all_slots.empty?
+      if visible_slot_count <= 0
         pbDrawTextPositions(
           overlay,
           [[
@@ -1221,35 +1299,31 @@ module Cooking
       slot_size = SLOT_SIZE
       gap       = SLOT_GAP
 
-      total_width = (all_slots.length * slot_size) +
-                    ((all_slots.length - 1) * gap)
+      total_width = (visible_slot_count * slot_size) +
+                    ((visible_slot_count - 1) * gap)
 
       start_x = INFO_CENTER - (total_width / 2)
       slot_y  = y + 30
 
-      all_slots.each_with_index do |slot, i|
-        optional = i >= required_slots.length
-
-        if optional
-          optional_index = i - required_slots.length
-          available = optional_checks[optional_index]
-          slot_color = Color.new(56, 68, 82)
-        else
-          available = required_checks[i]
-          slot_color = Color.new(72, 88, 104)
-        end
-
+      #---------------------------------------------------------------------------
+      # Required slots
+      #---------------------------------------------------------------------------
+      required_slots.each_with_index do |slot, i|
         x = start_x + (i * (slot_size + gap))
+        available = required_checks[i]
 
-        overlay.fill_rect(
+        draw_small_ingredient_box(
+          overlay,
           x,
           slot_y,
           slot_size,
-          slot_size,
-          slot_color
+          title == _INTL("Condiments")
         )
 
-        item_id = displayed_item_for_slot(slot)
+        item_id = displayed_item_for_recipe_slot(
+          slot,
+          available
+        )
 
         if item_id
           draw_recipe_item_icon(
@@ -1269,6 +1343,101 @@ module Cooking
           available
         )
       end
+
+      #---------------------------------------------------------------------------
+      # Combined Optional slot
+      #---------------------------------------------------------------------------
+      if !optional_slots.empty?
+        x = start_x +
+            (required_slots.length * (slot_size + gap))
+
+        draw_optional_recipe_slot(
+          overlay,
+          optional_slots,
+          x,
+          slot_y,
+          slot_size,
+          title == _INTL("Condiments")
+        )
+      end
+    end
+
+    def draw_small_ingredient_box(
+      overlay,
+      x,
+      y,
+      slot_size,
+      condiment = false
+    )
+      boxes = AnimatedBitmap.new(
+        "Graphics/UI/Cooking/ingredient_box_small"
+      )
+
+      # Frame 0 = Ingredient
+      # Frame 1 = Condiment
+      source_x = condiment ? 32 : 0
+
+      overlay.blt(
+        x,
+        y,
+        boxes.bitmap,
+        Rect.new(
+          source_x,
+          0,
+          32,
+          32
+        )
+      )
+
+      boxes.dispose
+    end
+
+    def optional_items_for_slots(slots)
+      items = []
+
+      slots.each do |slot|
+        items_for_slot(slot).each do |item_id|
+          items.push(item_id) if !items.include?(item_id)
+        end
+      end
+
+      items.sort_by! do |item_id|
+        GameData::Item.get(item_id).name
+      end
+
+      return items
+    end
+
+    def draw_optional_recipe_slot(
+      overlay,
+      optional_slots,
+      x,
+      y,
+      slot_size,
+      condiment = false
+    )
+      draw_small_ingredient_box(
+        overlay,
+        x,
+        y,
+        slot_size,
+        condiment
+      )
+
+      items = optional_items_for_slots(optional_slots)
+      return if items.empty?
+
+      # Optional slots advertise ALL valid possibilities, not merely the ones
+      # currently owned.
+      item_id = items[@group_cycle_index % items.length]
+
+      draw_recipe_item_icon(
+        overlay,
+        item_id,
+        x,
+        y,
+        slot_size
+      )
     end
 
     #---------------------------------------------------------------------------
